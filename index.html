@@ -158,6 +158,7 @@
 
   // a stable key per match so we can mark banker rows in the full list
   const keyOf = r => `${r.match.matchDate}|${r.match.home}|${r.match.away}`;
+  const ord = n => { const s=["th","st","nd","rd"],v=n%100; return n+(s[(v-20)%10]||s[v]||s[0]); };
 
   // ---- which day are we featuring ----
   const allDates = [...new Set(results.map(r=>r.match.matchDate).filter(Boolean))].sort().reverse();
@@ -319,6 +320,11 @@
                 <div><div class="text-xs uppercase tracking-wider text-slate-400 font-semibold">Primary</div><div class="font-semibold">${r.primary}</div></div>
                 <div><div class="text-xs uppercase tracking-wider text-slate-400 font-semibold">Confidence</div><div class="font-semibold">${r.confidence}</div></div>
                 <div><div class="text-xs uppercase tracking-wider text-slate-400 font-semibold">Favourite</div><div class="font-semibold">${r.wdnb.favTeam} (${r.wdnb.favSide})</div></div>
+                ${ (r.match.homeVenueRank!=null && r.match.awayVenueRank!=null && !r.wdnb.tournamentUncomparable)
+                   ? `<div><div class="text-xs uppercase tracking-wider text-slate-400 font-semibold">Venue strength</div><div class="font-semibold">${r.match.home} ${ord(r.match.homeVenueRank)} home · ${r.match.away} ${ord(r.match.awayVenueRank)} away</div></div>`
+                   : (r.wdnb.tournamentUncomparable
+                      ? `<div><div class="text-xs uppercase tracking-wider text-slate-400 font-semibold">Format</div><div class="font-semibold">${r.match.isKnockout?'Knockout — form-based':'Cross-group — form-based'}</div></div>`
+                      : '') }
                 <div><div class="text-xs uppercase tracking-wider text-slate-400 font-semibold">Result</div><div class="font-semibold">${played?`${hg}–${ag} · ${res||'—'}`:'Not played yet'}</div></div>
                 <div class="basis-full text-sm text-slate-400 border-t border-white/10 pt-3">${r.summary}</div>
               </div>
