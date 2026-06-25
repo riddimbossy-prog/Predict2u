@@ -43,6 +43,42 @@
   details>summary::-webkit-details-marker{ display:none; }
   details[open] .chev{ transform:rotate(90deg); }
   .chev{ transition:transform .2s; }
+
+  /* ============ LIGHT THEME ============ */
+  body.light{ background:#f4f5f8; color:#1e293b; }
+  body.light .glass{ background:#ffffff; border:1px solid #e2e8f0; box-shadow:0 1px 3px rgba(0,0,0,.06); }
+  body.light .glass-gold{ background:rgba(212,175,55,.12); border:1px solid rgba(212,175,55,.40); }
+  body.light .glass-amber{ background:rgba(245,165,36,.12); border:1px solid rgba(245,190,80,.45); }
+  /* remap dark utility classes */
+  body.light .bg-slate-900,
+  body.light .bg-slate-900\/90,
+  body.light .bg-slate-900\/40{ background:#ffffff !important; }
+  body.light .bg-slate-800{ background:#eef1f6 !important; }
+  body.light .bg-slate-950\/60{ background:#f8fafc !important; }
+  body.light .bg-white\/10{ background:#eef1f6 !important; }
+  body.light .border-slate-800,
+  body.light .border-slate-700{ border-color:#e2e8f0 !important; }
+  body.light .border-white\/10{ border-color:#e8ecf2 !important; }
+  body.light .text-slate-400,
+  body.light .text-slate-500{ color:#64748b !important; }
+  body.light .text-slate-300{ color:#475569 !important; }
+  body.light .text-slate-600{ color:#94a3b8 !important; }
+  body.light .bar-track{ background:#e2e8f0; }
+  body.light .nav-line{ border-color:#e2e8f0; }
+  /* the big white hero text -> dark ink in light mode */
+  body.light .hero-strong{ color:#1e293b; }
+  body.light .text-white{ color:#1e293b !important; }
+  /* result/verdict chips stay legible on white */
+  body.light .verdict-strong{ background-color:#dcfce7; color:#166534; }
+  body.light .verdict-moderate{ background-color:#fef9c3; color:#854d0e; }
+  body.light .verdict-weak{ background-color:#fee2e2; color:#991b1b; }
+  body.light .result-won{ background-color:#dcfce7; color:#166534; }
+  body.light .result-lost{ background-color:#fee2e2; color:#991b1b; }
+  body.light .result-void{ background-color:#e2e8f0; color:#475569; }
+  body.light .is-banker{ box-shadow:0 0 0 1px rgba(212,175,55,.25); }
+  /* football logo dark seams -> keep dark on the green ball (still fine) */
+  body.light footer{ color:#94a3b8; }
+  .theme-toggle{ cursor:pointer; }
 </style>
 </head>
 <body class="min-h-screen">
@@ -79,7 +115,12 @@
           <span class="text-emerald-400 font-semibold">Live • Rules Engine</span>
         </div>
       </div>
-      <div id="nav-date" class="text-sm text-slate-400 font-medium"></div>
+      <div class="flex items-center gap-x-4">
+        <div id="nav-date" class="text-sm text-slate-400 font-medium"></div>
+        <button id="theme-toggle" class="theme-toggle w-9 h-9 rounded-xl bg-slate-800 border border-slate-700 flex items-center justify-center text-slate-300 hover:text-yellow-400 transition-colors" aria-label="Toggle light/dark theme" title="Toggle theme">
+          <i id="theme-icon" class="fa-solid fa-sun"></i>
+        </button>
+      </div>
     </div>
   </nav>
 
@@ -89,7 +130,7 @@
       <div class="w-6 h-6 bg-emerald-400 rounded-full flex items-center justify-center"><i class="fa-solid fa-check text-[10px] text-slate-950 font-bold"></i></div>
       <span class="text-xs font-bold tracking-[1px] text-emerald-400">PROTECT THE STAKE FIRST</span>
     </div>
-    <h1 class="text-4xl sm:text-6xl font-display font-semibold tracking-tighter leading-none mb-4">
+    <h1 class="hero-strong text-4xl sm:text-6xl font-display font-semibold tracking-tighter leading-none mb-4">
       Today's safest<br><span class="text-yellow-400">football bankers</span>.
     </h1>
     <p class="max-w-lg text-lg sm:text-xl text-slate-400">
@@ -198,6 +239,19 @@
 <script>
   document.getElementById('nav-date').textContent =
     new Date().toLocaleDateString(undefined,{weekday:'long',day:'numeric',month:'long'});
+
+  /* ---------------- THEME TOGGLE (dark default, remembers choice) ---------------- */
+  (function(){
+    const body=document.body, icon=document.getElementById('theme-icon'), btn=document.getElementById('theme-toggle');
+    let saved=null; try{ saved=localStorage.getItem('predicto-theme'); }catch(e){}
+    function setTheme(mode){
+      if(mode==='light'){ body.classList.add('light'); icon.className='fa-solid fa-moon'; }
+      else{ body.classList.remove('light'); icon.className='fa-solid fa-sun'; }
+      try{ localStorage.setItem('predicto-theme',mode); }catch(e){}
+    }
+    setTheme(saved==='light'?'light':'dark');  // dark default
+    btn.addEventListener('click',()=> setTheme(body.classList.contains('light')?'dark':'light'));
+  })();
 
   const MATCHES = window.MATCHES || [];
   const { results } = analyseAll(MATCHES);
