@@ -450,6 +450,20 @@
                    : '' }
                 <div class="basis-full text-sm text-slate-400 border-t border-white/10 pt-3">${r.summary}</div>
               </div>
+              ${ r.match.h2h ? `
+              <div class="mt-3 glass rounded-2xl p-4">
+                <div class="flex items-center gap-x-2 mb-2 text-xs uppercase tracking-wider text-slate-400 font-semibold"><i class="fa-solid fa-clock-rotate-left text-slate-500"></i> Head-to-head · last ${r.match.h2h.played}</div>
+                <div class="flex flex-wrap gap-x-6 gap-y-1 text-sm mb-2">
+                  <span><b>${r.match.home}</b> ${r.match.h2h.homeWins}W</span>
+                  <span>Draws ${r.match.h2h.draws}</span>
+                  <span><b>${r.match.away}</b> ${r.match.h2h.awayWins}W</span>
+                  <span class="text-slate-400">Over 2.5 in ${r.match.h2h.over25}/${r.match.h2h.played}</span>
+                  <span class="text-slate-400">BTTS in ${r.match.h2h.bttsCount}/${r.match.h2h.played}</span>
+                </div>
+                <div class="space-y-1">
+                  ${ r.match.h2h.recent.map(g=>`<div class="text-xs text-slate-400 flex gap-x-2"><span class="text-slate-600 w-20">${g.date}</span><span class="flex-1 truncate">${g.ht} <b class="text-slate-300">${g.hg}–${g.ag}</b> ${g.at}</span></div>`).join('') }
+                </div>
+              </div>` : '' }
             </div>
           </details>`;
       });
