@@ -1,6 +1,6 @@
 /* ============================================================
-   GOLDEN BANKER ENGINE
-   Applies the Final Golden Banker Rules to match data.
+   PREDICTO ENGINE
+   Applies the Final Predicto Rules to match data.
 
    INPUT: an array of match objects (see SCHEMA below).
    OUTPUT: scored matches + the Top 4 Bankers selection.
@@ -252,6 +252,50 @@ function verdictFor(score, strongAt, modAt) {
   return "Weak";
 }
 
+/* ---------------- ODDS VALUE CHECK ----------------
+   Compares the engine's confidence in its pick against the bookmaker's
+   implied probability. Honest by design: most efficiently-priced markets
+   will show "no edge", because bookmaker odds already bake in the margin.
+   Returns null if no odds, else { sidePct, modelPct, verdict, oddsUsed }.
+   --------------------------------------------------------------------- */
+function assessValue(m, primary, confidence, wdnb, over, btts) {
+  const o = m.odds;
+  if (!o || !o.home || !o.away) return null;
+
+  // bookmaker implied probabilities (raw, includes margin)
+  const inv = x => x ? 1 / x : 0;
+  const rawH = inv(o.home), rawD = inv(o.draw), rawA = inv(o.away);
+  const sum = rawH + rawD + rawA;
+  if (sum <= 0) return null;
+  // de-vig (normalise) so probabilities sum to 100% — fairer comparison
+  const pH = rawH / sum, pD = rawD / sum, pA = rawA / sum;
+
+  // implied prob for the SIDE the engine picked
+  let impliedPct = null, oddsUsed = null;
+  if (primary === "Home Win") { impliedPct = pH; oddsUsed = o.home; }
+  else if (primary === "Away Win") { impliedPct = pA; oddsUsed = o.away; }
+  else if (primary === "Home DNB") { impliedPct = pH / (pH + pA); oddsUsed = o.home; } // DNB ~ win given no draw
+  else if (primary === "Away DNB") { impliedPct = pA / (pH + pA); oddsUsed = o.away; }
+  else return null; // over/btts: no 1X2 comparison available here
+
+  // engine's own probability estimate from its score (rough mapping)
+  const score = wdnb.score; // 0..10
+  const modelPct = clamp(0.40 + (score - 5) * 0.06, 0.05, 0.95); // 5->40%, 8->58%, 10->70%
+
+  const edge = modelPct - impliedPct;
+  let verdict;
+  if (edge >= 0.08) verdict = "Possible value";
+  else if (edge >= -0.04) verdict = "Fairly priced";
+  else verdict = "No edge — bookie priced tighter";
+
+  return {
+    sidePct: Math.round(impliedPct * 100),
+    modelPct: Math.round(modelPct * 100),
+    edge: Math.round(edge * 100),
+    verdict, oddsUsed
+  };
+}
+
 /* ---------------- FINAL RECOMMENDATION (Rules 1,9,13) -------- */
 function recommend(m) {
   const over = scoreOver25(m);
@@ -306,7 +350,9 @@ function recommend(m) {
     ? `${wdnb.favTeam} edge — ${primary} is the safest read.`
     : "No clear edge; protect the stake and skip.";
 
-  return { match: m, over, btts, wdnb, primary, confidence, banker, rankWeight, summary };
+  const value = assessValue(m, primary, confidence, wdnb, over, btts);
+
+  return { match: m, over, btts, wdnb, primary, confidence, banker, rankWeight, summary, value };
 }
 
 /* ---------------- SETTLE: grade a pick against a final score ----
