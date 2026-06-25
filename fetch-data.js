@@ -26,6 +26,7 @@ function readConfig() {
     else if (key === "SEASON") cfg.SEASON = val.replace(/[^0-9]/g, "");
     else if (key === "MAX_LEAGUES") cfg.MAX_LEAGUES = parseInt(val.replace(/[^0-9]/g,""),10) || 0;
     else if (key === "ODDS") cfg.ODDS = !/^(false|no|off|0)$/i.test(val.trim());
+    else if (key === "H2H") cfg.H2H = !/^(false|no|off|0)$/i.test(val.trim());
     else if (key === "LEAGUES") {
       if (/^all$/i.test(val.trim())) { cfg.LEAGUES_ALL = true; cfg.LEAGUES = []; }
       else cfg.LEAGUES = val.split(",").map(s => s.trim()).filter(Boolean).map(s => parseInt(s,10)).filter(n=>!isNaN(n));
@@ -237,6 +238,39 @@ const FINISHED = new Set(["FT","AET","PEN"]);
       const sameGroup = !!(homeGroup && awayGroup && homeGroup === awayGroup);
       const roundName = (fx.league && fx.league.round) ? String(fx.league.round) : "";
       const isKnockout = /final|semi|quarter|round of|knockout|1\/|play-?off/i.test(roundName);
+
+      // ---- HEAD-TO-HEAD (optional): last meetings between these two teams ----
+      let h2h = null;
+      if (cfg.H2H !== false) {
+        try {
+          const hid = fx.teams.home.id, aid = fx.teams.away.id;
+          const hr = await apiGet(`/fixtures/headtohead?h2h=${hid}-${aid}&last=6`, cfg.API_KEY); requests++;
+          const games = (hr.response || []).filter(g => FINISHED.has(g.fixture.status.short));
+          if (games.length) {
+            let homeWins=0, awayWins=0, draws=0, over25=0, bttsCount=0;
+            const recent = [];
+            for (const g of games) {
+              const gh=g.goals.home, ga=g.goals.away;
+              if (gh==null||ga==null) continue;
+              const winnerHomeTeamId = g.teams.home.id;
+              // map result to OUR home/away team
+              let res;
+              if (gh===ga) { draws++; res="D"; }
+              else {
+                const winId = gh>ga ? g.teams.home.id : g.teams.away.id;
+                if (winId===hid) { homeWins++; res="H"; } else if (winId===aid) { awayWins++; res="A"; } else res="?";
+              }
+              if (gh+ga>=3) over25++;
+              if (gh>0 && ga>0) bttsCount++;
+              recent.push({ date:(g.fixture.date||"").slice(0,10),
+                ht:g.teams.home.name, at:g.teams.away.name, hg:gh, ag:ga, res });
+            }
+            h2h = { played:games.length, homeWins, awayWins, draws, over25, bttsCount, recent:recent.slice(0,5) };
+          }
+          await sleep(6500);
+        } catch (e) { /* h2h optional */ }
+      }
+
       out.push({
         home: fx.teams.home.name, away: fx.teams.away.name, league: leagueName,
         status: st, kickoff: fx.fixture.date || null, matchDate: date,
@@ -260,6 +294,8 @@ const FINISHED = new Set(["FT","AET","PEN"]);
         round: roundName || null,
         // bookmaker odds (1X2 decimal) if available
         odds: oddsByFixture[fx.fixture.id] || null,
+        // head-to-head summary of recent meetings
+        h2h,
       });
       console.log(`  + ${fx.teams.home.name} vs ${fx.teams.away.name}${played?` (${fx.goals.home}-${fx.goals.away} FT)`:""}  [${leagueName}]${isKnockout?" (KO)":""}`);
     }
