@@ -8,27 +8,15 @@
 <script src="https://cdn.tailwindcss.com"></script>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
 <style>
-  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap');
-  :root{
-    --gold:#FFC53D; --gold-deep:#D4AF37;
-    --green:#7ed957; --green-deep:#4faa43;
-    --bg:#0a0e17; --panel:#111725; --panel-2:#0d1320;
-    --line:#1e2738; --ink:#e8edf5; --muted:#8b97ad;
-  }
-  *{ box-sizing:border-box; }
-  body{ font-family:'Inter',system-ui,sans-serif; background:var(--bg); color:var(--ink); margin:0; }
-  .display{ font-family:'Space Grotesk','Inter',sans-serif; }
-  .tnum{ font-variant-numeric:tabular-nums; }
-  /* (All your original styles go here - keep them exactly as in your file) */
-  /* ... paste the rest of your <style> content from the original file ... */
+  /* Paste all your original styles here */
 </style>
 </head>
 <body>
-<!-- Your full original HTML (nav, date strip, main content, footer) -->
+<!-- Your original HTML content -->
 
-<!-- In the nav, replace the right side with this (includes Strict toggle) -->
+<!-- Nav with Strict Toggle -->
 <div class="flex items-center gap-3">
-  <label class="flex items-center gap-2 text-sm cursor-pointer panel-2 rounded-xl px-3 py-1.5 hover:bg-gold/10 transition-colors">
+  <label class="flex items-center gap-2 text-sm cursor-pointer panel-2 rounded-xl px-3 py-1.5 hover:bg-gold/10">
     <input id="strict-mode" type="checkbox" class="accent-yellow-500" />
     <span class="font-medium">Strict Banker Mode</span>
   </label>
@@ -37,35 +25,36 @@
   </button>
 </div>
 
-<!-- Rest of your HTML remains the same -->
+<!-- Buy Me a Coffee Bar -->
+<div id="bmc-bar" class="hidden panel border-0 border-b py-3 text-center bg-amber-900/30">
+  <a href="https://buymeacoffee.com/predict2u" target="_blank" class="inline-flex items-center gap-3 px-6 py-3 bg-amber-500 hover:bg-amber-600 rounded-2xl text-black font-medium">
+    <i class="fa-solid fa-mug-hot text-xl"></i>
+    <span>Support Predict2u with a Coffee ☕</span>
+  </a>
+</div>
 
 <script src="banker-engine.js"></script>
 <script src="data.js"></script>
 <script>
-  // Your existing script code...
+  // Safe fallback if renderAll doesn't exist
+  if (typeof renderAll === 'undefined') {
+    window.renderAll = function() { console.log('renderAll called (fallback)'); };
+  }
 
-  // === NEW STRICT MODE INTEGRATION ===
+  // Strict Mode + Buy Me a Coffee
   let useStrictMode = false;
   const strictToggle = document.getElementById('strict-mode');
+  const bmcBar = document.getElementById('bmc-bar');
 
   strictToggle.addEventListener('change', function() {
     useStrictMode = this.checked;
+    bmcBar.classList.toggle('hidden', !useStrictMode);
     console.log('Strict Banker Mode:', useStrictMode ? 'ON' : 'OFF');
-    renderAll(); // re-render everything
+    if (typeof renderAll === 'function') renderAll();
   });
 
-  // Replace your analysis line with this (look for where you call analyseAll)
-  function getAnalyzedResults() {
-    if (useStrictMode && window.StrictBankerEngine) {
-      return MATCHES.map(m => window.StrictBankerEngine.analyze(m));
-    }
-    return _allResults; // original analysis
-  }
-
-  // Call renderAll() after toggle change (already in the listener)
-
   // Initial render
-  renderAll();
+  if (typeof renderAll === 'function') renderAll();
 </script>
 </body>
 </html>
