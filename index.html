@@ -8,22 +8,27 @@
 <script src="https://cdn.tailwindcss.com"></script>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
 <style>
-  /* (your existing styles remain unchanged - I kept them all) */
   @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap');
-  :root{ --gold:#FFC53D; --gold-deep:#D4AF37; --green:#7ed957; --green-deep:#4faa43; --bg:#0a0e17; --panel:#111725; --panel-2:#0d1320; --line:#1e2738; --ink:#e8edf5; --muted:#8b97ad; }
+  :root{
+    --gold:#FFC53D; --gold-deep:#D4AF37;
+    --green:#7ed957; --green-deep:#4faa43;
+    --bg:#0a0e17; --panel:#111725; --panel-2:#0d1320;
+    --line:#1e2738; --ink:#e8edf5; --muted:#8b97ad;
+  }
   *{ box-sizing:border-box; }
   body{ font-family:'Inter',system-ui,sans-serif; background:var(--bg); color:var(--ink); margin:0; }
   .display{ font-family:'Space Grotesk','Inter',sans-serif; }
   .tnum{ font-variant-numeric:tabular-nums; }
-  /* (rest of your styles stay exactly the same - omitted here for brevity but include them all from your paste) */
+  /* (All your original styles go here - keep them exactly as in your file) */
+  /* ... paste the rest of your <style> content from the original file ... */
 </style>
 </head>
 <body>
-<!-- Your existing nav, date strip, main content, footer remain unchanged -->
+<!-- Your full original HTML (nav, date strip, main content, footer) -->
 
-<!-- ADD THIS TOGGLE in the nav (near theme toggle) -->
+<!-- In the nav, replace the right side with this (includes Strict toggle) -->
 <div class="flex items-center gap-3">
-  <label class="flex items-center gap-2 text-sm cursor-pointer panel-2 rounded-xl px-3 py-1.5">
+  <label class="flex items-center gap-2 text-sm cursor-pointer panel-2 rounded-xl px-3 py-1.5 hover:bg-gold/10 transition-colors">
     <input id="strict-mode" type="checkbox" class="accent-yellow-500" />
     <span class="font-medium">Strict Banker Mode</span>
   </label>
@@ -32,35 +37,35 @@
   </button>
 </div>
 
-<!-- Rest of your HTML stays the same -->
+<!-- Rest of your HTML remains the same -->
 
 <script src="banker-engine.js"></script>
-<script src="strict-banker-engine.js"></script>   <!-- NEW -->
 <script src="data.js"></script>
 <script>
-  // ... your existing script ...
+  // Your existing script code...
 
-  // NEW: Strict Mode Toggle
+  // === NEW STRICT MODE INTEGRATION ===
   let useStrictMode = false;
-  document.getElementById('strict-mode').addEventListener('change', function() {
+  const strictToggle = document.getElementById('strict-mode');
+
+  strictToggle.addEventListener('change', function() {
     useStrictMode = this.checked;
     console.log('Strict Banker Mode:', useStrictMode ? 'ON' : 'OFF');
-    renderAll();  // re-render with new mode
+    renderAll(); // re-render everything
   });
 
-  // Modify renderMatches or analysis calls to use strict mode when enabled
-  // Example quick integration (add where you call analyseAll):
-  function getResults() {
+  // Replace your analysis line with this (look for where you call analyseAll)
+  function getAnalyzedResults() {
     if (useStrictMode && window.StrictBankerEngine) {
-      // Apply strict mode to each match
-      return MATCHES.map(m => StrictBankerEngine.analyze(m));
+      return MATCHES.map(m => window.StrictBankerEngine.analyze(m));
     }
-    return _allResults;  // original analysis
+    return _allResults; // original analysis
   }
 
-  // Re-render when toggle changes
-  // Call renderAll() in the toggle listener as shown above
+  // Call renderAll() after toggle change (already in the listener)
 
+  // Initial render
+  renderAll();
 </script>
 </body>
 </html>
