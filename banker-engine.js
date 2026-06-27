@@ -125,9 +125,18 @@ function scoreUnder(m) {
   const la = m.leagueAvg;
   if (la && la.reliable && la.goalsPerGame) {
     const below = la.goalsPerGame - totalExp;        // +ve: fewer goals than league norm
-    u25 += clamp(below * 1.6, -2, 2);
-    u35 += clamp(below * 1.2, -1.5, 1.5);
-    if (below >= 0.6) reasons.push(`Below this league's ${la.goalsPerGame} goals/game norm`);
+    // Only reward "below league norm" when the game is ALSO absolutely low-scoring.
+    // Being below a HIGH baseline (e.g. 2.7 in a 3.2 league) is not an Under signal —
+    // 2.7 expected goals is still a coin-flip. Gate the boost on a real low total.
+    if (totalExp <= 2.7) {
+      u25 += clamp(below * 1.6, -2, 2);
+      u35 += clamp(below * 1.2, -1.5, 1.5);
+      if (below >= 0.6) reasons.push(`Below this league's ${la.goalsPerGame} goals/game norm`);
+    } else if (below < 0) {
+      // game projects MORE goals than the league norm -> dampen Under
+      u25 += clamp(below * 1.4, -2, 0);
+      u35 += clamp(below * 1.0, -1.5, 0);
+    }
     u25 = clamp(u25, 0, 10); u35 = clamp(u35, 0, 10);
   }
 
@@ -366,6 +375,59 @@ function assessValue(m, primary, confidence, wdnb, over, btts) {
   };
 }
 
+/* ---------------- SAME-TIER / COIN-FLIP LEAGUE LEAN ----------------
+   For games the engine SKIPS (no result edge — typically same-tier), the
+   GOALS profile still tends to follow the league's character. This derives a
+   goals LEAN from the league's own averages:
+     • high-scoring league  -> Over 1.5 (or BTTS if both attacks lively)
+     • low-scoring league    -> Under 3.5 (or Under 2.5 if very low)
+     • draw-prone + low      -> Under 2.5
+   IMPORTANT: this is a LEAN, not a banker. It is an unproven, league-profile
+   suggestion that the performance tracker should measure before it's trusted.
+   Returns null unless the league average is reliable AND the signal is clear.
+   ------------------------------------------------------------------- */
+function leagueLean(m) {
+  const la = m.leagueAvg;
+  if (!la || !la.reliable || la.goalsPerGame == null) return null; // need trustworthy league data
+
+  const gpg = la.goalsPerGame;
+  const draws = la.drawRate ?? null;
+  // this game's own goal expectation (same blend the scorers use)
+  const homeExp = ((m.homeScoredAtHome ?? 1.3) + (m.awayConcededAway ?? 1.3)) / 2;
+  const awayExp = ((m.awayScoredAway ?? 1.0) + (m.homeConcededAtHome ?? 1.0)) / 2;
+  const totalExp = homeExp + awayExp;
+
+  let market = null, note = "";
+  if (gpg >= 2.9) {
+    // high-scoring league: lean to goals. BTTS if both sides actually score.
+    if ((m.homeScoredAtHome ?? 1) >= 1.1 && (m.awayScoredAway ?? 1) >= 1.0) {
+      market = "BTTS Yes"; note = `High-scoring league (${gpg}/game) — both teams scoring is the league trend.`;
+    } else {
+      market = "Over 1.5"; note = `High-scoring league (${gpg}/game) — goals are the league trend.`;
+    }
+  } else if (gpg <= 2.4) {
+    // low-scoring league: lean Under. Tighter Under if very low / draw-prone.
+    if (gpg <= 2.1 || (draws != null && draws >= 0.30)) {
+      market = "Under 2.5"; note = `Low-scoring${draws>=0.30?' / draw-prone':''} league (${gpg}/game) — tight games are the trend.`;
+    } else {
+      market = "Under 3.5"; note = `Low-scoring league (${gpg}/game) — Under is the league trend.`;
+    }
+  } else {
+    return null; // mid-range league: no clear profile lean
+  }
+
+  // sanity: don't lean Over in a game that itself projects very few goals, or
+  // Under in a game projecting a hatful — the league trend shouldn't override a
+  // strong individual signal pointing the other way.
+  if (market.startsWith("Over") || market === "BTTS Yes") {
+    if (totalExp < 2.0) return null;
+  } else if (market.startsWith("Under")) {
+    if (totalExp > 3.4) return null;
+  }
+
+  return { market, note };
+}
+
 /* ---------------- FINAL RECOMMENDATION (Rules 1,9,13) -------- */
 function recommend(m) {
   const over = scoreOver25(m);
@@ -376,6 +438,16 @@ function recommend(m) {
   let confidence = "Low";
   let banker = false;
   let chosenKind = null;
+
+  // ---- SAME-TIER GATE ----
+  // Same-tier (and same-position) matchups are coin-flips on every market that
+  // matters; per design they must NEVER be bankers. We detect it here so the
+  // qualification logic below can be hard-blocked, leaving only a tracked
+  // league LEAN. Needs both ranks to judge; if a rank is missing we don't gate.
+  const _size = m.tableSize ?? 20;
+  const _homeTier = tierFromRank(m.homePos, _size);
+  const _awayTier = tierFromRank(m.awayPos, _size);
+  const sameTier = (_homeTier != null && _awayTier != null && _homeTier === _awayTier);
 
   // ---- QUALIFYING THRESHOLDS (tuning dials) ----
   // Lowered from 7/8 to 6.5/7.5 to catch more "obvious safe" picks the
@@ -421,7 +493,7 @@ function recommend(m) {
   if (under.score >= UNDER_MIN)      candidates.push({ bet: under.line, weight: under.score, strength: underStrength, kind: "under" });
   if (comboOK)                       candidates.push({ bet: "Over 2.5 + BTTS", weight: (over.score + btts.score) / 2, strength: Math.min(overStrength, bttsStrength), kind: "combo" });
 
-  if (candidates.length) {
+  if (candidates.length && !sameTier) {
     // Default ordering is by normalised strength (fairer than raw score).
     candidates.sort((a, b) => b.strength - a.strength);
 
@@ -461,7 +533,13 @@ function recommend(m) {
   }
 
   // Skip rule (Rule 13): nothing qualified
-  if (!banker) { primary = "Skip"; confidence = "Low"; }
+  let lean = null;
+  if (!banker) {
+    primary = "Skip"; confidence = "Low";
+    // No result/banker edge — but the GOALS profile may follow the league.
+    // Attach a tracked LEAN (not a staked banker) so the tracker can test it.
+    lean = leagueLean(m);
+  }
 
   // a single ranking weight for Top-4 selection (Rule 14)
   let rankWeight = 0;
@@ -487,7 +565,7 @@ function recommend(m) {
 
   const value = assessValue(m, primary, confidence, wdnb, over, btts);
 
-  return { match: m, over, btts, under, wdnb, primary, confidence, banker, rankWeight, summary, value, chosenKind };
+  return { match: m, over, btts, under, wdnb, primary, confidence, banker, rankWeight, summary, value, chosenKind, lean };
 }
 
 /* ---------------- SETTLE: grade a pick against a final score ----
