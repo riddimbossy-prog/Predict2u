@@ -138,6 +138,18 @@
   <div class="max-w-[1200px] mx-auto px-4 sm:px-6 py-2 flex items-center gap-1 overflow-x-auto" id="date-strip"></div>
 </div>
 
+<!-- ===== ENGINE TOGGLE ===== -->
+<div class="panel-2 border-0 border-b" style="border-bottom:1px solid var(--line)">
+  <div class="max-w-[1200px] mx-auto px-4 sm:px-6 py-2 flex items-center gap-3 flex-wrap">
+    <span class="text-xs uppercase tracking-wider font-semibold" style="color:var(--muted)">Engine</span>
+    <div class="inline-flex rounded-xl panel p-0.5" role="tablist">
+      <button id="eng-normal" class="px-3 py-1.5 rounded-lg text-sm font-semibold" style="background:linear-gradient(135deg,var(--gold),#f0d77b);color:#0a0e17">Normal</button>
+      <button id="eng-strict" class="px-3 py-1.5 rounded-lg text-sm font-semibold" style="color:var(--muted)">Strict Bankers</button>
+    </div>
+    <span id="eng-note" class="text-xs" style="color:var(--muted)"></span>
+  </div>
+</div>
+
 <!-- ===== MAIN ===== -->
 <div class="max-w-[1200px] mx-auto px-4 sm:px-6 py-6">
 
@@ -385,6 +397,7 @@ function miniBar(label,m){
 }
 
 function renderMatches(){
+  if(engineMode==='strict'){ renderStrictMatches(); return; }
   const root = document.getElementById('matches-root');
   const rows = byDate[activeDate]||[];
   const empty = document.getElementById('empty-state');
@@ -525,6 +538,118 @@ document.getElementById('filter-bankers').addEventListener('change',applyFilters
 /* ============ LAST UPDATED ============ */
 (function(){
   const ts=window.DATA_UPDATED; if(ts){ const d=new Date(ts); if(!isNaN(d)) document.getElementById('nav-updated').textContent='Updated '+d.toLocaleString(undefined,{day:'numeric',month:'short',hour:'2-digit',minute:'2-digit'}); }
+})();
+
+/* ============ STRICT BANKERS ENGINE TOGGLE ============ */
+let engineMode = 'normal'; // 'normal' | 'strict'
+// Pre-compute strict verdicts for every shown match, keyed like keyOf.
+const strictByKey = {};
+(function(){
+  if (typeof analyseStrict !== 'function') return;
+  const { results: sres } = analyseStrict(results.map(r=>r.match));
+  sres.forEach(sr=>{ strictByKey[`${sr.match.matchDate}|${sr.match.home}|${sr.match.away}`] = sr; });
+})();
+
+const strictChip = mkt =>
+  mkt==='No Bet' ? 'chip-skip' :
+  mkt.includes('DNB') ? 'chip-dnb' :
+  mkt.includes('Win') ? 'chip-green' : 'chip-gold';
+
+function renderStrictMatches(){
+  const root = document.getElementById('matches-root');
+  const rows = byDate[activeDate]||[];
+  const empty = document.getElementById('empty-state');
+  root.innerHTML='';
+  if(!rows.length){ empty.classList.remove('hidden'); return; } else empty.classList.add('hidden');
+
+  // group by league, like normal mode
+  const byLeague = {};
+  rows.forEach(r=>{ if(leagueFilter && r.match.league!==leagueFilter) return; (byLeague[r.match.league]=byLeague[r.match.league]||[]).push(r); });
+
+  let html='';
+  Object.entries(byLeague).forEach(([league,lrows])=>{
+    html += `<details open class="lg-row panel rounded-2xl mb-3 overflow-hidden" data-league="${league.toLowerCase()}">
+      <summary class="px-4 py-3 flex items-center gap-2">
+        <i class="fa-solid fa-lock text-xs text-gold"></i>
+        <span class="font-semibold">${league}</span>
+        <span class="text-xs" style="color:var(--muted)">· ${lrows.length} match${lrows.length>1?'es':''}</span>
+        <i class="fa-solid fa-chevron-down lg-chev ml-auto text-sm" style="color:var(--muted)"></i>
+      </summary>
+      <div style="border-top:1px solid var(--line)">`;
+
+    lrows.forEach(r=>{
+      const sr = strictByKey[keyOf(r)];
+      if(!sr){ return; }
+      const isBet = sr.bet;
+      const t = r.match.kickoff ? new Date(r.match.kickoff).toLocaleTimeString(undefined,{hour:'2-digit',minute:'2-digit'}) : '';
+      const hg=r.match.homeGoals, ag=r.match.awayGoals, played=hg!=null&&ag!=null;
+      const settled = played ? settle(sr.market, hg, ag) : '';
+      const settleTag = settled ? `<span class="px-2 py-0.5 rounded text-[10px] font-bold ${resClass(settled)}">${settled.toUpperCase()}</span>` : '';
+      const score = played ? `<span class="display font-bold tnum">${hg} - ${ag}</span>` : `<span class="text-xs tnum" style="color:var(--muted)">${t||'—'}</span>`;
+
+      html += `<details class="match-item ${isBet?'is-banker-row':''}"
+        data-search="${(r.match.home+' '+r.match.away+' '+r.match.league).toLowerCase().replace(/"/g,'')}"
+        data-market="${sr.market}" data-banker="${isBet?'1':'0'}">
+        <summary class="match-line px-4 py-3 flex items-center gap-3">
+          <div class="w-12 text-center flex-shrink-0">${score}</div>
+          <div class="flex-1 min-w-0">
+            <div class="text-sm font-medium truncate">${r.match.home}</div>
+            <div class="text-sm font-medium truncate">${r.match.away}</div>
+          </div>
+          <div class="flex flex-col items-end gap-1 flex-shrink-0">
+            <span class="text-[9px] font-bold uppercase ${isBet?'text-gold':''}" style="${isBet?'':'color:var(--muted)'}">${isBet?'Strict bet':'No bet'}</span>
+            <span class="px-2.5 py-1 rounded-lg text-xs font-semibold ${strictChip(sr.market)} whitespace-nowrap">${sr.market}</span>
+            ${settleTag}
+          </div>
+          <i class="fa-solid fa-chevron-down chev text-sm" style="color:var(--muted)"></i>
+        </summary>
+        <div class="px-4 pb-4 pt-3" style="border-top:1px solid var(--line);background:var(--panel-2)">
+          <div class="flex flex-wrap gap-x-6 gap-y-2 text-sm panel rounded-xl p-3 mb-2">
+            <div><div class="text-[11px] uppercase tracking-wider font-semibold" style="color:var(--muted)">Tiers</div><div class="font-semibold">${r.match.home} T${sr.homeTier ?? '—'} · ${r.match.away} T${sr.awayTier ?? '—'} (gap ${sr.tierGap ?? '—'})</div></div>
+            <div><div class="text-[11px] uppercase tracking-wider font-semibold" style="color:var(--muted)">Relevant PPG</div><div class="font-semibold">${r.match.home} ${sr.homePPG ?? '—'} home · ${r.match.away} ${sr.awayPPG ?? '—'} away</div></div>
+            <div><div class="text-[11px] uppercase tracking-wider font-semibold" style="color:var(--muted)">Confidence</div><div class="font-semibold">${sr.confidence}/10</div></div>
+            <div><div class="text-[11px] uppercase tracking-wider font-semibold" style="color:var(--muted)">Decision</div><div class="font-semibold ${isBet?'text-green':''}" style="${isBet?'':'color:var(--muted)'}">${isBet?'Bet':'No Bet / Avoid'}</div></div>
+          </div>
+          ${ sr.reasons && sr.reasons.length ? `<div class="panel rounded-xl p-3 mb-2">
+            <div class="text-[11px] uppercase tracking-wider font-semibold mb-1" style="color:var(--muted)">Reasons</div>
+            <ul class="space-y-1 text-sm">${sr.reasons.map(x=>`<li class="flex gap-2"><span class="text-gold">•</span><span>${x}</span></li>`).join('')}</ul>
+          </div>`:'' }
+          ${ sr.blocked && sr.blocked.length ? `<div class="panel rounded-xl p-3 mb-2">
+            <div class="text-[11px] uppercase tracking-wider font-semibold mb-1" style="color:var(--muted)">Blocked markets</div>
+            <ul class="space-y-1 text-sm">${sr.blocked.map(b=>`<li><span class="px-2 py-0.5 rounded text-[10px] font-bold chip-skip">${b.market}</span> <span style="color:var(--muted)">${b.why}</span></li>`).join('')}</ul>
+          </div>`:'' }
+          ${ isBet && sr.humanChecks && sr.humanChecks.length ? `<div class="panel rounded-xl p-3" style="border-color:rgba(245,183,61,.4)">
+            <div class="text-[11px] uppercase tracking-wider font-semibold mb-1" style="color:var(--amber,#f5b73d)"><i class="fa-solid fa-triangle-exclamation"></i> Check before betting</div>
+            <div class="text-xs mb-1" style="color:var(--muted)">The engine can't see these — confirm them yourself first:</div>
+            <div class="flex flex-wrap gap-x-4 gap-y-1 text-sm">${sr.humanChecks.map(c=>`<span style="color:var(--muted)">☐ ${c}</span>`).join('')}</div>
+          </div>`:'' }
+        </div>
+      </details>`;
+    });
+
+    html += `</div></details>`;
+  });
+
+  root.innerHTML = html || `<div class="text-center py-12" style="color:var(--muted)">No matches for this league.</div>`;
+  applyFilters();
+}
+
+(function(){
+  const bn=document.getElementById('eng-normal'), bs=document.getElementById('eng-strict'), note=document.getElementById('eng-note');
+  function setMode(mode){
+    engineMode=mode;
+    const on='background:linear-gradient(135deg,var(--gold),#f0d77b);color:#0a0e17';
+    const off='color:var(--muted)';
+    bn.style.cssText = mode==='normal'?on:off;
+    bs.style.cssText = mode==='strict'?on:off;
+    note.textContent = mode==='strict'
+      ? 'Conservative: rejects most games, one clean market or No Bet. Auto-tiered from the table — confirm red flags yourself.'
+      : '';
+    // top cards + sidebar still reflect the normal engine; only the match list switches.
+    renderMatches();
+  }
+  bn.addEventListener('click',()=>setMode('normal'));
+  bs.addEventListener('click',()=>setMode('strict'));
 })();
 
 /* ============ MASTER RENDER ============ */
