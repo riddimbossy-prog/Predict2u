@@ -71,6 +71,19 @@ function scoreOver25(m) {
 
   let score = clamp((totalExp - 1.5) * 3.2, 0, 10); // ~2.5 total -> ~3.2; 3.6 -> ~6.7; 4.5 -> 9.6
 
+  // LEAGUE CALIBRATION: judge this game's goal expectation against the league's
+  // OWN average, not a global one. In a low-scoring league, beating the baseline
+  // matters more; in a high-scoring league, a big number is just normal. Shifts
+  // the score up/down by how far totalExp sits from the league norm.
+  const la = m.leagueAvg;
+  if (la && la.reliable && la.goalsPerGame) {
+    const delta = totalExp - la.goalsPerGame;        // +ve: more goals than league norm
+    score += clamp(delta * 1.6, -2, 2);              // nudge, capped so it can't dominate
+    if (delta >= 0.6) reasons.push(`Well above this league's ${la.goalsPerGame} goals/game norm`);
+    else if (delta <= -0.6) reasons.push(`Below this league's ${la.goalsPerGame} goals/game norm`);
+    score = clamp(score, 0, 10);
+  }
+
   if ((m.homeConcededAtHome ?? 0) >= 1.6 || (m.awayConcededAway ?? 0) >= 1.8) {
     reasons.push("A defence concedes heavily at this venue");
     score += 1;
@@ -87,6 +100,59 @@ function scoreOver25(m) {
 
   score = clamp(Math.round(score * 10) / 10, 0, 10);
   return { score, verdict: verdictFor(score, 8, 6), reasons, totalExp };
+}
+
+/* ---------------- UNDER SCORING (defensive games) ----------------
+   Mirror of Over: a LOW combined goal expectation makes Under strong.
+   Returns scores for both Under 3.5 (safer) and Under 2.5 (tighter),
+   plus which line is the better pick. Reuses the same venue-goal blend
+   as scoreOver25 so the two are directly comparable.
+   ----------------------------------------------------------------- */
+function scoreUnder(m) {
+  const reasons = [];
+  const homeExp = ((m.homeScoredAtHome ?? 1.3) + (m.awayConcededAway ?? 1.3)) / 2;
+  const awayExp = ((m.awayScoredAway ?? 1.0) + (m.homeConcededAtHome ?? 1.0)) / 2;
+  const totalExp = homeExp + awayExp;
+
+  // Under 2.5 strong when total expectation is well below 2.5; Under 3.5 when below ~3.0.
+  // Map: 2.5 exp -> ~5 for U2.5; 1.8 -> ~8.4; 1.4 -> ~10.   3.5 line is more forgiving.
+  let u25 = clamp((2.6 - totalExp) * 4.0 + 5, 0, 10);
+  let u35 = clamp((3.4 - totalExp) * 3.2 + 5, 0, 10);
+
+  // LEAGUE CALIBRATION: being below the LEAGUE's own goal norm is the real Under
+  // signal. 2.4 goals expected is strong Under in a 3.1-goal league, weak in a
+  // 2.2-goal one. Nudge by distance below the league average when reliable.
+  const la = m.leagueAvg;
+  if (la && la.reliable && la.goalsPerGame) {
+    const below = la.goalsPerGame - totalExp;        // +ve: fewer goals than league norm
+    u25 += clamp(below * 1.6, -2, 2);
+    u35 += clamp(below * 1.2, -1.5, 1.5);
+    if (below >= 0.6) reasons.push(`Below this league's ${la.goalsPerGame} goals/game norm`);
+    u25 = clamp(u25, 0, 10); u35 = clamp(u35, 0, 10);
+  }
+
+  if (totalExp <= 2.0) reasons.push(`Low combined goal expectation (~${totalExp.toFixed(1)}) — defensive profile`);
+  else if (totalExp <= 2.6) reasons.push(`Modest goal expectation (~${totalExp.toFixed(1)})`);
+  else reasons.push(`Goals expectation (~${totalExp.toFixed(1)}) is not low — Under is risky`);
+
+  // both attacks weak strengthens Under further (Rule: tactical/low-scoring)
+  if ((m.homeScoredAtHome ?? 1.5) < 1.1 && (m.awayScoredAway ?? 1.5) < 1.0) {
+    reasons.push("Both attacks are weak");
+    u25 += 1; u35 += 0.6;
+  }
+  // a strong attacker present caps Under (they can break a tight game open)
+  if ((m.homeScoredAtHome ?? 0) >= 2.0 || (m.awayScoredAway ?? 0) >= 1.8) {
+    reasons.push("A strong attack present — Under capped");
+    u25 = Math.min(u25, 5.5); u35 = Math.min(u35, 7);
+  }
+
+  u25 = clamp(Math.round(u25 * 10) / 10, 0, 10);
+  u35 = clamp(Math.round(u35 * 10) / 10, 0, 10);
+  // pick the better Under line: prefer the safer 3.5 unless 2.5 is clearly stronger
+  const bestLine = (u25 >= u35 - 0.5) ? "Under 2.5" : "Under 3.5";
+  const bestScore = bestLine === "Under 2.5" ? u25 : u35;
+  return { score: bestScore, line: bestLine, u25, u35,
+           verdict: verdictFor(bestScore, 8, 6), reasons, totalExp };
 }
 
 /* ---------------- BTTS SCORING (Rule 8) ---------------- */
@@ -204,7 +270,11 @@ function scoreWinDNB(m) {
   // ---- DNB protection logic (Rules 2, 6) ----
   let drawRisk = 0;
   const favDrawRate = homeIsFav ? (m.homeDrawRate ?? 0.25) : (m.awayDrawRate ?? 0.25);
-  if (favDrawRate >= 0.30) { drawRisk += 1; reasons.push("Favourite is draw-heavy"); }
+  // Calibrate "draw-heavy" against the LEAGUE's own draw rate when known: a 30%
+  // draw rate is high in a decisive league but normal in a draw-prone one.
+  const la2 = m.leagueAvg;
+  const drawHeavyBar = (la2 && la2.reliable && la2.drawRate) ? Math.max(0.27, la2.drawRate + 0.05) : 0.30;
+  if (favDrawRate >= drawHeavyBar) { drawRisk += 1; reasons.push("Favourite is draw-heavy for this league"); }
   if (!homeIsFav) { drawRisk += 1; reasons.push("Favourite is away — draw risk higher"); }
   if (!tournamentUncomparable && absPosGap < size * 0.3) drawRisk += 1;
   if (score < 7) drawRisk += 1;
@@ -224,7 +294,7 @@ function scoreWinDNB(m) {
   if (tournamentUncomparable) {
     clearMismatch = score >= 8.5 && Math.abs(formEdge) >= 0.4 && drawRisk <= 2;
   } else {
-    clearMismatch = score >= 7.5 && absPosGap >= size * 0.4 && drawRisk <= 1;
+    clearMismatch = score >= 7.0 && absPosGap >= size * 0.33 && drawRisk <= 2;
   }
   const strongHomeMismatch = homeIsFav && clearMismatch && (m.homeScoredAtHome ?? 0) >= 1.4;
 
@@ -305,30 +375,89 @@ function recommend(m) {
   let primary = "Skip";
   let confidence = "Low";
   let banker = false;
-  const candidates = [];
+  let chosenKind = null;
+
+  // ---- QUALIFYING THRESHOLDS (tuning dials) ----
+  // Lowered from 7/8 to 6.5/7.5 to catch more "obvious safe" picks the
+  // stricter settings were skipping. Raise these back toward 7/8 if you
+  // start seeing too many weak bankers in the performance tracker.
+  const WDNB_BANKER_MIN = 6.5;   // was 7
+  const OVER_BANKER_MIN = 7.5;   // was 8
 
   // Rule 9: combo only if both legs strong
   const comboOK = over.score >= 7 && btts.score >= 7;
 
-  // Qualification (Rule 1)
-  if (wdnb.score >= 7) candidates.push({ bet: wdnb.market, weight: wdnb.score, kind: "wdnb" });
-  if (over.score >= 8) candidates.push({ bet: "Over 2.5", weight: over.score, kind: "over" });
-  if (comboOK) candidates.push({ bet: "Over 2.5 + BTTS", weight: (over.score + btts.score) / 2, kind: "combo" });
+  const under = scoreUnder(m);
+
+  // ---- NORMALISED STRENGTH ----------------------------------------
+  // Each market's raw score means something different, so we can't compare
+  // them directly. Convert to "how far above its own qualifying bar" so a
+  // DNB barely over its 6.5 bar reads as weaker than an Over well clear of
+  // its 7.5 bar. strength = (score - bar) capped at 0; bigger = stronger case.
+  // Standalone goal-market bars are deliberately HIGH (8.0) so an average
+  // game doesn't manufacture a goals banker — that would break the "when
+  // unsure, Skip" discipline. They only qualify on a genuinely strong profile.
+  const BTTS_MIN  = 8.0;
+  const UNDER_MIN = 8.0;
+  const wdnbStrength  = wdnb.score  - WDNB_BANKER_MIN;
+  const overStrength  = over.score  - OVER_BANKER_MIN;
+  const bttsStrength  = btts.score  - BTTS_MIN;
+  const underStrength = under.score - UNDER_MIN;
+
+  // Is the result market (Win/DNB) only weak or marginal? A genuine straight-win
+  // mismatch is left alone; it's the protective DNBs that should yield to a
+  // clearly stronger goal market. "Marginal" = a DNB below 7.5.
+  const isDNB = wdnb.market.includes("DNB");
+  const wdnbMarginal = isDNB && wdnb.score < 7.5;
+  const wdnbWeak = wdnb.score < WDNB_BANKER_MIN;
+
+  // Build qualifying candidates with a comparable "strength" field.
+  // NOTE: BTTS is intentionally NOT a standalone candidate — its scorer
+  // over-rates average games (both ordinary teams "both score"), so a flat
+  // match could masquerade as a BTTS banker. It competes only via the combo.
+  const candidates = [];
+  if (wdnb.score >= WDNB_BANKER_MIN) candidates.push({ bet: wdnb.market, weight: wdnb.score, strength: wdnbStrength, kind: "wdnb" });
+  if (over.score >= OVER_BANKER_MIN) candidates.push({ bet: "Over 2.5", weight: over.score, strength: overStrength, kind: "over" });
+  if (under.score >= UNDER_MIN)      candidates.push({ bet: under.line, weight: under.score, strength: underStrength, kind: "under" });
+  if (comboOK)                       candidates.push({ bet: "Over 2.5 + BTTS", weight: (over.score + btts.score) / 2, strength: Math.min(overStrength, bttsStrength), kind: "combo" });
 
   if (candidates.length) {
-    candidates.sort((a, b) => b.weight - a.weight);
-    primary = candidates[0].bet;
+    // Default ordering is by normalised strength (fairer than raw score).
+    candidates.sort((a, b) => b.strength - a.strength);
+
+    // BEST-MARKET RULE: if the top pick is a weak/marginal DNB, and any GOAL
+    // market has a clearly stronger normalised case, switch to that goal market.
+    let top = candidates[0];
+    if ((wdnbWeak || wdnbMarginal)) {
+      const goalCands = candidates.filter(c => c.kind !== "wdnb");
+      if (goalCands.length) {
+        const bestGoal = goalCands[0]; // already strongest by strength sort
+        // require the goal market to be meaningfully stronger, not a coin-flip tie
+        const topIsDNB = top.kind === "wdnb";
+        if (topIsDNB && bestGoal.strength > top.strength + 0.3) {
+          top = bestGoal;
+        }
+      }
+    }
+
+    primary = top.bet;
     banker = true;
-    // confidence (Rule 15)
-    const top = candidates[0];
+
+    // confidence reflects the chosen market's own clearance above its bar
     if (top.kind === "wdnb") {
       confidence = (wdnb.clearMismatch && wdnb.score >= 8) ? "High"
                  : wdnb.score >= 7 ? "Medium" : "Low";
     } else if (top.kind === "over") {
-      confidence = over.score >= 8.5 ? "High" : "Medium";
+      confidence = over.score >= 8.5 ? "High" : over.score >= 8 ? "Medium" : "Low";
+    } else if (top.kind === "btts") {
+      confidence = btts.score >= 8.5 ? "High" : "Medium";
+    } else if (top.kind === "under") {
+      confidence = under.score >= 8.5 ? "High" : "Medium";
     } else {
       confidence = (over.score >= 7.5 && btts.score >= 7.5) ? "High" : "Medium";
     }
+    // expose which market won, for the UI / summary
+    chosenKind = top.kind;
   }
 
   // Skip rule (Rule 13): nothing qualified
@@ -338,21 +467,27 @@ function recommend(m) {
   let rankWeight = 0;
   if (banker) {
     rankWeight = candidates[0].weight;
-    // Rule 14 ordering bonuses
-    if (primary === "Home Win" && wdnb.clearMismatch) rankWeight += 1.5;       // strong home mismatch
+    if (primary === "Home Win" && wdnb.clearMismatch) rankWeight += 1.5;
     else if (primary.includes("DNB") && wdnb.absPosGap >= (m.tableSize ?? 20) * 0.4) rankWeight += 1.0;
     else if (primary === "Away Win") rankWeight += 0.8;
     else if (primary === "Over 2.5") rankWeight += 0.3;
     if (confidence === "High") rankWeight += 0.6;
   }
 
+  const marketReason = {
+    wdnb: `${wdnb.favTeam} edge — ${primary} is the safest read.`,
+    over: `Goals expected — ${primary} has the strongest case here.`,
+    under: `Low-scoring profile — ${primary} has the strongest case here.`,
+    btts: `Both teams scoring looks the strongest case here.`,
+    combo: `Goals + both-teams-score both look strong.`,
+  };
   const summary = banker
-    ? `${wdnb.favTeam} edge — ${primary} is the safest read.`
+    ? (marketReason[chosenKind] || `${primary} is the strongest read.`)
     : "No clear edge; protect the stake and skip.";
 
   const value = assessValue(m, primary, confidence, wdnb, over, btts);
 
-  return { match: m, over, btts, wdnb, primary, confidence, banker, rankWeight, summary, value };
+  return { match: m, over, btts, under, wdnb, primary, confidence, banker, rankWeight, summary, value, chosenKind };
 }
 
 /* ---------------- SETTLE: grade a pick against a final score ----
@@ -438,6 +573,14 @@ function strictRecommend(m) {
   const humanChecks = []; // red flags no API can verify — human must check
   const block = (mkt, why) => blocked.push({ market: mkt, why });
 
+  // ---- ELITE-ONLY TIGHTENING (tuning dials) ----
+  // The strict engine is deliberately the high-conviction view. These raise
+  // the bar well above the normal board: only very strong, well-separated,
+  // league-beating mismatches survive. Loosen by lowering these if it rejects
+  // everything for too long.
+  const STRICT_CONF_FLOOR = 8;   // was 7 — only 8+ picks count as a strict bet
+  const STRICT_MIN_GAP    = 3;   // was 2 — require a 3-tier chasm, not just 2
+
   const size = m.tableSize ?? 20;
   const homeTier = tierFromRank(m.homePos, size);
   const awayTier = tierFromRank(m.awayPos, size);
@@ -457,7 +600,8 @@ function strictRecommend(m) {
     homePPG: homePPG != null ? Math.round(homePPG * 100) / 100 : null,
     awayPPG: awayPPG != null ? Math.round(awayPPG * 100) / 100 : null,
     market, decision, confidence, reasons, blocked, humanChecks,
-    bet: decision === "Bet" && market !== "No Bet" && confidence >= 7,
+    // ELITE-ONLY: a strict bet now needs confidence >= 8 (was 7).
+    bet: decision === "Bet" && market !== "No Bet" && confidence >= STRICT_CONF_FLOOR,
   });
 
   // ---- need tiers to proceed ----
@@ -501,6 +645,30 @@ function strictRecommend(m) {
     return result("No Bet", "Avoid", 0);
   }
 
+  // ---- ELITE GATE A: require a big tier chasm (gap >= 3), unless an extreme
+  // venue mismatch already proves the separation. Gap-2 games — fine for the
+  // normal board — are rejected here as not elite enough. ----
+  if (gap < STRICT_MIN_GAP && !extremeMismatch) {
+    reasons.push(`Tier gap ${gap} is below the elite minimum of ${STRICT_MIN_GAP}.`);
+    block("All markets", `Strict mode requires a ${STRICT_MIN_GAP}-tier gap (or extreme mismatch).`);
+    return result("No Bet", "Avoid", 0);
+  }
+
+  // ---- ELITE GATE B: league calibration. In a draw-heavy or upset-prone
+  // league (low home-win rate, high draw rate), even a clear favourite is
+  // riskier — so strict mode demands the league itself be favourite-friendly,
+  // or it declines. Only applies when the league's averages are reliable. ----
+  const la = m.leagueAvg;
+  if (la && la.reliable) {
+    const drawProne = la.drawRate != null && la.drawRate >= 0.30;
+    const upsetProne = la.homeWinRate != null && la.homeWinRate < 0.38;
+    if (drawProne && upsetProne) {
+      reasons.push(`This league is draw-heavy (${la.drawRate}) and upset-prone (home wins ${la.homeWinRate}) — strict mode declines.`);
+      block("All markets", "League profile too unpredictable for an elite-only pick.");
+      return result("No Bet", "Avoid", 0);
+    }
+  }
+
   reasons.push(`${strongerName} is the stronger side by tier (gap ${gap}).`);
 
   // ================= STRONGER TEAM HOME =================
@@ -534,7 +702,7 @@ function strictRecommend(m) {
       conf = clamp(conf, 0, 10);
       if (!ppgOk) reasons.push("Home Win blocked by sub-2.5 PPG — protect via DNB.");
       reasons.push(`${m.home} has a positive home profile; ${m.away} inferior but not extreme.`);
-      return result(conf >= 7 ? "Home DNB" : "No Bet", conf >= 7 ? "Bet" : "Avoid", conf);
+      return result(conf >= STRICT_CONF_FLOOR ? "Home DNB" : "No Bet", conf >= STRICT_CONF_FLOOR ? "Bet" : "Avoid", conf);
     }
     return strictGoals(m, { homeGF, homeGA, awayGF, awayGA, reasons, blocked, humanChecks, result });
   }
@@ -575,7 +743,7 @@ function strictRecommend(m) {
     if (!(m.awayMotivation)) conf--;
     conf = clamp(conf, 0, 10);
     reasons.push(`${m.away} stronger away but ${m.home} not weak enough for Away Win — DNB protects.`);
-    return result(conf >= 7 ? "Away DNB" : "No Bet", conf >= 7 ? "Bet" : "Avoid", conf);
+    return result(conf >= STRICT_CONF_FLOOR ? "Away DNB" : "No Bet", conf >= STRICT_CONF_FLOOR ? "Bet" : "Avoid", conf);
   }
 
   // controlled stronger-away game → Under 3.5
