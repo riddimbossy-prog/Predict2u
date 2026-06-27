@@ -35,6 +35,8 @@ function readConfig() {
     else if (key === "SEASON") cfg.SEASON = val.replace(/[^0-9]/g, "");
     else if (key === "MAX_LEAGUES") cfg.MAX_LEAGUES = parseInt(val.replace(/[^0-9]/g,""),10) || 0;
     else if (key === "REQUEST_BUDGET") cfg.REQUEST_BUDGET = parseInt(val.replace(/[^0-9]/g,""),10) || 0;
+    else if (key === "MAX_PROBES") cfg.MAX_PROBES = parseInt(val.replace(/[^0-9]/g,""),10) || 0;
+    else if (key === "SLEEP_MS") cfg.SLEEP_MS = parseInt(val.replace(/[^0-9]/g,""),10) || 0;
     else if (key === "DAYS_BACK") cfg.DAYS_BACK = parseInt(val.replace(/[^0-9]/g,""),10);
     else if (key === "DAYS_FWD") cfg.DAYS_FWD = parseInt(val.replace(/[^0-9]/g,""),10);
     else if (key === "ODDS") cfg.ODDS = !/^(false|no|off|0)$/i.test(val.trim());
@@ -101,6 +103,10 @@ const FINISHED = new Set(["FT","AET","PEN"]);
   if (!cfg.LEAGUES.length && !cfg.LEAGUES_ALL) { console.log("ERROR: add league IDs in config.txt (e.g. LEAGUES=1,39,140) or set LEAGUES=ALL."); process.exit(1); }
 
   const season = cfg.SEASON || String(new Date().getFullYear());
+  // Delay between API calls. Default 1500ms (~40/min) — well within Ultra's
+  // 450/min ceiling while staying clear of burst rejections. Pro users should
+  // keep this higher (e.g. 6500). Tune with SLEEP_MS in config.txt.
+  const SLEEP = (cfg.SLEEP_MS && cfg.SLEEP_MS >= 200) ? cfg.SLEEP_MS : 1500;
   // --- date window (default: yesterday .. +3) ---
   const DAYS_BACK = (cfg.DAYS_BACK != null && !isNaN(cfg.DAYS_BACK)) ? cfg.DAYS_BACK : 1;
   const DAYS_FWD  = (cfg.DAYS_FWD  != null && !isNaN(cfg.DAYS_FWD))  ? cfg.DAYS_FWD  : 3;
@@ -152,7 +158,7 @@ const FINISHED = new Set(["FT","AET","PEN"]);
           if (e.message === "RATE_LIMIT") { console.log("RATE LIMIT — wait a minute and run again."); }
           else if (!firstError) firstError = e.message;
         }
-        await sleep(6500);
+        await sleep(SLEEP);
         if (gotForThisDate) break; // got this date on this season, move to next date
       }
     }
@@ -163,53 +169,85 @@ const FINISHED = new Set(["FT","AET","PEN"]);
     }
   } else {
     // LIST mode: for each league, sweep every date in the window.
-    // CAPS (important for very long league lists):
-    //   MAX_LEAGUES   — stop after this many DISTINCT leagues yield fixtures.
-    //   REQUEST_BUDGET — hard stop if total requests cross this ceiling, so a
-    //                    runaway run can never exhaust your daily API quota.
-    const REQUEST_BUDGET = cfg.REQUEST_BUDGET || 6000; // leave headroom under 7,500/day
+    // CAPS (important for very long league lists, esp. in off-season):
+    //   MAX_LEAGUES    — stop after this many DISTINCT leagues yield fixtures.
+    //   MAX_PROBES     — HARD stop after this many leagues EXAMINED, whether or
+    //                    not they had games. This is the off-season safety net:
+    //                    without it, a 400-id list probes every empty league.
+    //   REQUEST_BUDGET — hard stop if total requests cross this ceiling.
+    const REQUEST_BUDGET = cfg.REQUEST_BUDGET || 6000;
+    const MAX_PROBES = cfg.MAX_PROBES || 120; // leagues examined per run, max
     const leaguesWithFixtures = new Set();
-    let capped = false;
+    let capped = false, probes = 0;
     for (const leagueId of cfg.LEAGUES) {
       if (capped) break;
-      // request-budget guard: stop opening new leagues if we're near the ceiling
       if (requests >= REQUEST_BUDGET) {
         console.log(`Request budget reached (${requests}/${REQUEST_BUDGET}) — stopping early to protect your daily quota.`);
         break;
       }
-      // league cap: once enough distinct leagues have games, stop sweeping more
       if (MAX_LEAGUES && leaguesWithFixtures.size >= MAX_LEAGUES) {
-        console.log(`League cap reached (${MAX_LEAGUES}) — not processing further leagues this run.`);
+        console.log(`League cap reached (${MAX_LEAGUES} with fixtures) — stopping.`);
         break;
       }
-      // pick the season that actually returns fixtures (try current, then prev)
-      // resolved once per league using today's date probe, then reused.
+      if (probes >= MAX_PROBES) {
+        console.log(`Probe limit reached (${MAX_PROBES} leagues examined) — stopping. Off-season: most had no games.`);
+        break;
+      }
+      probes++;
       const seasonsToTry = [...new Set([season, String(parseInt(season,10)-1), String(parseInt(season,10)+1)])];
+
+      // FAST EMPTY-SKIP: probe TODAY on the primary season first. If that one
+      // call returns no games, treat the league as inactive and skip the other
+      // 8 season/date combinations entirely. This is what kills the off-season
+      // time sink (was up to 9 calls per empty league; now just 1).
+      let resolvedSeason = null;
+      try {
+        const probe = await apiGet(`/fixtures?league=${leagueId}&season=${season}&date=${today}`, cfg.API_KEY);
+        requests++;
+        if ((probe.response || []).length) resolvedSeason = season;
+      } catch (e) {
+        if (e.message === "RATE_LIMIT") { console.log("RATE LIMIT — stopping early."); capped = true; break; }
+        if (!firstError) firstError = e.message;
+      }
+      await sleep(SLEEP);
+
+      // If today's primary season was empty, try today on the OTHER seasons once
+      // each (handles season-rollover leagues) — but still just 1 call per season.
+      if (!resolvedSeason) {
+        for (const s of seasonsToTry) {
+          if (s === season) continue;
+          if (requests >= REQUEST_BUDGET) { capped = true; break; }
+          try {
+            const probe = await apiGet(`/fixtures?league=${leagueId}&season=${s}&date=${today}`, cfg.API_KEY);
+            requests++;
+            if ((probe.response || []).length) { resolvedSeason = s; await sleep(SLEEP); break; }
+          } catch (e) { if (!firstError) firstError = e.message; }
+          await sleep(SLEEP);
+        }
+      }
+
+      if (capped) break;
+      if (!resolvedSeason) { console.log(`League ${leagueId}: inactive (no games today) — skipped`); continue; }
+
+      // League is ACTIVE — now sweep the full date window on the resolved season.
       for (const date of DATE_WINDOW) {
         if (requests >= REQUEST_BUDGET) { capped = true; break; }
-        let added = false;
-        for (const s of seasonsToTry) {
-          try {
-            const fxRes = await apiGet(`/fixtures?league=${leagueId}&season=${s}&date=${date}`, cfg.API_KEY);
-            requests++;
-            const arr = fxRes.response || [];
-            if (arr.length) {
-              leagueGroups.push({ id: leagueId, season: s, date, fixtures: arr });
-              leaguesWithFixtures.add(leagueId);
-              added = true;
-            }
-          } catch (e) {
-            if (e.message === "RATE_LIMIT") { console.log("RATE LIMIT — stopping early; raise the gap between runs."); capped = true; break; }
-            if (!firstError) firstError = e.message;
+        try {
+          const fxRes = await apiGet(`/fixtures?league=${leagueId}&season=${resolvedSeason}&date=${date}`, cfg.API_KEY);
+          requests++;
+          const arr = fxRes.response || [];
+          if (arr.length) {
+            leagueGroups.push({ id: leagueId, season: resolvedSeason, date, fixtures: arr });
+            leaguesWithFixtures.add(leagueId);
           }
-          await sleep(6500);
-          if (added) break; // found fixtures for this date+season; next date
+        } catch (e) {
+          if (e.message === "RATE_LIMIT") { console.log("RATE LIMIT — stopping early."); capped = true; break; }
+          if (!firstError) firstError = e.message;
         }
-        if (capped) break;
-        if (!added) console.log(`League ${leagueId} ${date}: no fixtures`);
+        await sleep(SLEEP);
       }
     }
-    if (MAX_LEAGUES) console.log(`LIST mode: ${leaguesWithFixtures.size} league(s) with fixtures processed (cap ${MAX_LEAGUES}).`);
+    console.log(`LIST mode: examined ${probes} league(s), ${leaguesWithFixtures.size} had fixtures (caps: ${MAX_LEAGUES||"∞"} active / ${MAX_PROBES} probed).`);
   }
 
   // -----------------------------------------------------------------
@@ -271,11 +309,11 @@ const FINISHED = new Set(["FT","AET","PEN"]);
         const stRes = await apiGet(`/standings?league=${leagueId}&season=${s}`, cfg.API_KEY); requests++;
         const block = stRes.response && stRes.response[0];
         const got = parseStandingsBlock(block);
-        await sleep(6500);
+        await sleep(SLEEP);
         if (got) { parsed = got; usedSeason = s; break; }
       } catch (e) {
         console.log(`League ${leagueId}: standings season ${s} failed (${e.message})`);
-        await sleep(6500);
+        await sleep(SLEEP);
       }
     }
     const result = parsed
@@ -309,7 +347,7 @@ const FINISHED = new Set(["FT","AET","PEN"]);
         }
         if (vals) oddsByFixture[fid] = vals;
       }
-      await sleep(6500);
+      await sleep(SLEEP);
     } catch (e) { /* odds optional — ignore failures */ }
     oddsCache[cacheKey] = oddsByFixture;
     return oddsByFixture;
@@ -369,7 +407,7 @@ const FINISHED = new Set(["FT","AET","PEN"]);
             }
             h2h = { played:games.length, homeWins, awayWins, draws, over25, bttsCount, recent:recent.slice(0,5) };
           }
-          await sleep(6500);
+          await sleep(SLEEP);
         } catch (e) { /* h2h optional */ }
       }
 
@@ -398,7 +436,7 @@ const FINISHED = new Set(["FT","AET","PEN"]);
       });
       console.log(`  + [${date}] ${fx.teams.home.name} vs ${fx.teams.away.name}${played?` (${fx.goals.home}-${fx.goals.away} FT)`:""}  [${leagueName}]${isKnockout?" (KO)":""}`);
     }
-    await sleep(6500);
+    await sleep(SLEEP);
   }
 
   if (!out.length) {
