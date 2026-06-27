@@ -102,7 +102,15 @@ const FINISHED = new Set(["FT","AET","PEN"]);
   if (!cfg.API_KEY || cfg.API_KEY === placeholder) { console.log("ERROR: set your key first — double-click set-key.bat."); process.exit(1); }
   if (!cfg.LEAGUES.length && !cfg.LEAGUES_ALL) { console.log("ERROR: add league IDs in config.txt (e.g. LEAGUES=1,39,140) or set LEAGUES=ALL."); process.exit(1); }
 
-  const season = cfg.SEASON || String(new Date().getFullYear());
+  // Season must be a valid 4-digit year. If the secret is empty, malformed,
+  // or too short (the API rejects anything under 4 chars), fall back to the
+  // current year so a bad SEASON secret can never break every request.
+  let season = (cfg.SEASON || "").replace(/[^0-9]/g, "");
+  if (season.length !== 4) {
+    const fallback = String(new Date().getFullYear());
+    if (season) console.log(`SEASON "${cfg.SEASON}" is invalid — using ${fallback} instead.`);
+    season = fallback;
+  }
   // Delay between API calls. Default 1500ms (~40/min) — well within Ultra's
   // 450/min ceiling while staying clear of burst rejections. Pro users should
   // keep this higher (e.g. 6500). Tune with SLEEP_MS in config.txt.
