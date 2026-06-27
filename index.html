@@ -31,6 +31,7 @@
   .chip-gold{ background:rgba(255,197,61,.12); border:1px solid rgba(255,197,61,.35); color:var(--gold); }
   .chip-green{ background:rgba(126,217,87,.12); border:1px solid rgba(126,217,87,.35); color:var(--green); }
   .chip-dnb{ background:rgba(129,140,248,.14); border:1px solid rgba(129,140,248,.35); color:#a5b4fc; }
+  .chip-under{ background:rgba(45,212,191,.14); border:1px solid rgba(45,212,191,.4); color:#5eead4; }
   .chip-skip{ background:rgba(139,151,173,.12); border:1px solid rgba(139,151,173,.3); color:var(--muted); }
   .chip-live{ background:rgba(244,63,94,.16); border:1px solid rgba(244,63,94,.4); color:#fb7185; }
 
@@ -83,6 +84,7 @@
   body.light .chip-gold{ background:rgba(184,134,11,.14); border-color:rgba(184,134,11,.4); color:#946c08; }
   body.light .chip-green{ background:rgba(47,158,84,.14); border-color:rgba(47,158,84,.4); color:#1f7a3f; }
   body.light .chip-dnb{ background:rgba(99,102,241,.14); border-color:rgba(99,102,241,.4); color:#4f46e5; }
+  body.light .chip-under{ background:rgba(13,148,136,.14); border-color:rgba(13,148,136,.4); color:#0f766e; }
   body.light .chip-skip{ background:rgba(86,96,118,.12); border-color:rgba(86,96,118,.3); color:#475069; }
   body.light .chip-live{ background:rgba(225,29,72,.12); border-color:rgba(225,29,72,.4); color:#be123c; }
   /* result badges stay vivid */
@@ -199,7 +201,7 @@
         <select id="filter-market" class="panel-2 rounded-xl px-3 py-2 text-sm focus:outline-none" style="color:var(--ink)">
           <option value="">All markets</option>
           <option value="Win">Win</option><option value="DNB">DNB</option>
-          <option value="Over 2.5">Over 2.5</option><option value="BTTS">BTTS</option>
+          <option value="Over 2.5">Over 2.5</option><option value="Under">Under</option><option value="BTTS">BTTS</option>
         </select>
         <label class="flex items-center gap-2 text-sm panel-2 rounded-xl px-3 py-2 cursor-pointer" style="color:var(--ink)">
           <input id="filter-bankers" type="checkbox" class="accent-yellow-500" /> Bankers only
@@ -261,11 +263,12 @@ const results = _allResults.filter(r => r.primary && r.primary !== 'Skip');
 const pill = bet =>
   bet.includes('DNB') ? 'chip-dnb' :
   bet.includes('Win') ? 'chip-green' :
+  bet.includes('Under') ? 'chip-under' :
   (bet.includes('Over')||bet.includes('BTTS')||bet.includes('+')) ? 'chip-gold' : 'chip-skip';
 const resClass = r => r==='Won'?'res-won':r==='Lost'?'res-lost':r==='Void'?'res-void':'';
 const keyOf = r => `${r.match.matchDate}|${r.match.home}|${r.match.away}`;
 const ord = n => { const s=["th","st","nd","rd"],v=n%100; return n+(s[(v-20)%10]||s[v]||s[0]); };
-const marketTag = p => p.includes('DNB')?'DNB':p.includes('Win')?'Win':p.includes('Over')?'Over 2.5':p.includes('BTTS')?'BTTS':p;
+const marketTag = p => p.includes('DNB')?'DNB':p.includes('Win')?'Win':p.includes('Under')?'Under':p.includes('Over')?'Over 2.5':p.includes('BTTS')?'BTTS':p;
 // flag emoji-ish: use country name -> emoji via simple map fallback (flag image service)
 const flagFor = league => {
   // crude league->country guess for the flag; falls back to a globe
@@ -553,7 +556,8 @@ const strictByKey = {};
 const strictChip = mkt =>
   mkt==='No Bet' ? 'chip-skip' :
   mkt.includes('DNB') ? 'chip-dnb' :
-  mkt.includes('Win') ? 'chip-green' : 'chip-gold';
+  mkt.includes('Win') ? 'chip-green' :
+  mkt.includes('Under') ? 'chip-under' : 'chip-gold';
 
 function renderStrictMatches(){
   const root = document.getElementById('matches-root');
@@ -589,7 +593,7 @@ function renderStrictMatches(){
 
       html += `<details class="match-item ${isBet?'is-banker-row':''}"
         data-search="${(r.match.home+' '+r.match.away+' '+r.match.league).toLowerCase().replace(/"/g,'')}"
-        data-market="${sr.market}" data-banker="${isBet?'1':'0'}">
+        data-market="${marketTag(sr.market)}" data-banker="${isBet?'1':'0'}">
         <summary class="match-line px-4 py-3 flex items-center gap-3">
           <div class="w-12 text-center flex-shrink-0">${score}</div>
           <div class="flex-1 min-w-0">
