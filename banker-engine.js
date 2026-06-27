@@ -915,7 +915,68 @@ function analyseStrict(matches) {
   return { results, bets };
 }
 
+/* ============================================================
+   ULTRA-STRICT: STREAK ENGINE (separate path)
+   Fires on STREAK signals alone, independent of the tier engines.
+   HONESTY NOTES baked into the labels:
+   • Win/Loss streaks are REAL — read from actual recent results (form string).
+   • "Scoring/Under trends" are AVG-BASED approximations, NOT true streaks —
+     we don't yet fetch per-game goals, so these are labelled "(trend)" so an
+     inconsistent average is never mistaken for a hot streak.
+   This is the most speculative engine in the app: streaks are weak predictors
+   the bookmaker already prices in. Every output is flagged unproven — TRACK
+   before trusting.
+   ------------------------------------------------------------------- */
+function trailingStreak(form, ch) {
+  if (!form) return 0;
+  const s = String(form).replace(/[^WDL]/gi, "").toUpperCase();
+  let n = 0;
+  for (let i = s.length - 1; i >= 0; i--) { if (s[i] === ch) n++; else break; }
+  return n;
+}
+
+function streakRecommend(m) {
+  const reasons = [];
+  const signals = [];
+  const MIN_STREAK = 4; // ultra-strict: need 4+ in a row (of max 5)
+
+  const hWin = trailingStreak(m.homeForm, "W");
+  const hLoss = trailingStreak(m.homeForm, "L");
+  const aWin = trailingStreak(m.awayForm, "W");
+  const aLoss = trailingStreak(m.awayForm, "L");
+
+  // REAL win/loss streaks (from results)
+  if (hWin >= MIN_STREAK) signals.push({ kind: "winStreak", side: "home", len: hWin,
+    market: "Home Win", real: true, note: `${m.home} won last ${hWin} (real streak)` });
+  if (aWin >= MIN_STREAK) signals.push({ kind: "winStreak", side: "away", len: aWin,
+    market: "Away Win", real: true, note: `${m.away} won last ${aWin} (real streak)` });
+  if (hWin >= MIN_STREAK && aLoss >= MIN_STREAK) reasons.push(`${m.away} also lost last ${aLoss} — reinforcing.`);
+  if (aWin >= MIN_STREAK && hLoss >= MIN_STREAK) reasons.push(`${m.home} also lost last ${hLoss} — reinforcing.`);
+
+  // AVG-BASED goals trends (NOT real streaks — labelled honestly)
+  const bothScoreLots = (m.homeScoredAtHome ?? 0) >= 1.8 && (m.awayScoredAway ?? 0) >= 1.5;
+  const bothTight     = (m.homeScoredAtHome ?? 9) <= 1.0 && (m.awayScoredAway ?? 9) <= 0.9
+                     && (m.homeConcededAtHome ?? 9) <= 1.0 && (m.awayConcededAway ?? 9) <= 1.0;
+  if (bothScoreLots) signals.push({ kind: "goalsTrend", market: "Over 1.5", real: false,
+    note: `Both sides average high scoring (trend, not a streak)` });
+  if (bothTight) signals.push({ kind: "underTrend", market: "Under 2.5", real: false,
+    note: `Both sides average low scoring (trend, not a streak)` });
+
+  // ultra-strict: only a REAL win streak can qualify a bet; trends are shown, never qualify alone
+  const realQualifier = signals.find(s => s.real && s.kind === "winStreak");
+  const qualifies = !!realQualifier;
+  const primary = qualifies ? realQualifier.market : "No Bet";
+  const confidence = qualifies ? clamp(5 + realQualifier.len, 0, 10) : 0;
+
+  return {
+    match: m, engine: "ultra-streak",
+    primary, qualifies, confidence, signals, reasons,
+    bet: qualifies,
+    disclaimer: "Streak-based & unproven — track before trusting.",
+  };
+}
+
 if (typeof module !== "undefined") module.exports = {
   analyseAll, recommend, scoreOver25, scoreBTTS, scoreWinDNB, settle,
-  analyseStrict, strictRecommend, tierFromRank
+  analyseStrict, strictRecommend, tierFromRank, streakRecommend
 };
