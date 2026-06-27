@@ -53,6 +53,7 @@
   .lg-chev{ transition:transform .2s; }
   .match-line:hover{ background:rgba(255,255,255,.02); }
   .is-banker-row{ box-shadow:inset 3px 0 0 var(--gold); }
+  .is-lean-row{ box-shadow:inset 3px 0 0 rgba(45,212,191,.55); }
 
   /* country sidebar */
   .country-item{ display:flex; align-items:center; gap:.6rem; padding:.55rem .7rem; border-radius:.6rem;
@@ -201,10 +202,13 @@
         <select id="filter-market" class="panel-2 rounded-xl px-3 py-2 text-sm focus:outline-none" style="color:var(--ink)">
           <option value="">All markets</option>
           <option value="Win">Win</option><option value="DNB">DNB</option>
-          <option value="Over 2.5">Over 2.5</option><option value="Under">Under</option><option value="BTTS">BTTS</option>
+          <option value="Over 1.5">Over 1.5</option><option value="Over 2.5">Over 2.5</option><option value="Under">Under</option><option value="BTTS">BTTS</option>
         </select>
         <label class="flex items-center gap-2 text-sm panel-2 rounded-xl px-3 py-2 cursor-pointer" style="color:var(--ink)">
           <input id="filter-bankers" type="checkbox" class="accent-yellow-500" /> Bankers only
+        </label>
+        <label class="flex items-center gap-2 text-sm panel-2 rounded-xl px-3 py-2 cursor-pointer" style="color:var(--ink)">
+          <input id="filter-upcoming" type="checkbox" class="accent-yellow-500" /> Upcoming only
         </label>
       </div>
 
@@ -256,8 +260,10 @@
 /* ============ DATA ============ */
 const MATCHES = window.MATCHES || [];
 const { results: _allResults } = analyseAll(MATCHES);
-// Hide skipped matches everywhere — keep only actionable picks.
-const results = _allResults.filter(r => r.primary && r.primary !== 'Skip');
+// Hide skipped matches with no signal — but KEEP skips that carry a league
+// lean (same-tier games whose goals profile follows the league character),
+// so they show as tracked "lean" suggestions distinct from bankers.
+const results = _allResults.filter(r => r.primary && (r.primary !== 'Skip' || r.lean));
 
 /* helpers */
 const pill = bet =>
@@ -268,7 +274,7 @@ const pill = bet =>
 const resClass = r => r==='Won'?'res-won':r==='Lost'?'res-lost':r==='Void'?'res-void':'';
 const keyOf = r => `${r.match.matchDate}|${r.match.home}|${r.match.away}`;
 const ord = n => { const s=["th","st","nd","rd"],v=n%100; return n+(s[(v-20)%10]||s[v]||s[0]); };
-const marketTag = p => p.includes('DNB')?'DNB':p.includes('Win')?'Win':p.includes('Under')?'Under':p.includes('Over')?'Over 2.5':p.includes('BTTS')?'BTTS':p;
+const marketTag = p => p.includes('DNB')?'DNB':p.includes('Win')?'Win':p.includes('Under')?'Under':p.includes('Over 1.5')?'Over 1.5':p.includes('Over')?'Over 2.5':p.includes('BTTS')?'BTTS':p;
 // flag emoji-ish: use country name -> emoji via simple map fallback (flag image service)
 const flagFor = league => {
   // crude league->country guess for the flag; falls back to a globe
@@ -453,7 +459,10 @@ function renderMatches(){
           <div class="odd-cell">${r.match.odds.draw||'-'}</div>
           <div class="odd-cell">${r.match.odds.away||'-'}</div></div>` : `<div class="hidden sm:block w-36"></div>`;
 
-      html += `<details class="match-item ${isB?'is-banker-row':''}" data-search="${(r.match.home+' '+r.match.away+' '+r.match.league).toLowerCase().replace(/"/g,'')}" data-market="${marketTag(r.primary)}" data-banker="${isB?'1':'0'}">
+      const upcoming = !played && !live;
+      const isLean = !isB && r.lean;  // skipped game carrying a league-profile lean
+      const dataMkt = isLean ? marketTag(r.lean.market) : marketTag(r.primary);
+      html += `<details class="match-item ${isB?'is-banker-row':''} ${isLean?'is-lean-row':''}" data-search="${(r.match.home+' '+r.match.away+' '+r.match.league).toLowerCase().replace(/"/g,'')}" data-market="${dataMkt}" data-banker="${isB?'1':'0'}" data-lean="${isLean?'1':'0'}" data-upcoming="${upcoming?'1':'0'}">
         <summary class="match-line px-4 py-3 flex items-center gap-3">
           <div class="w-12 text-center flex-shrink-0">${score}</div>
           <div class="flex-1 min-w-0">
@@ -463,8 +472,9 @@ function renderMatches(){
           ${ live?'<span class="chip-live px-2 py-0.5 rounded text-[10px] font-bold">LIVE</span>':'' }
           ${odds}
           <div class="flex flex-col items-end gap-1 flex-shrink-0 w-24">
-            ${ isB?'<span class="text-[9px] font-bold uppercase text-gold">Banker</span>':'' }
-            <span class="px-2.5 py-1 rounded-lg text-xs font-semibold ${pill(r.primary)} whitespace-nowrap">${r.primary}</span>
+            ${ isB?'<span class="text-[9px] font-bold uppercase text-gold">Banker</span>'
+                 : isLean?'<span class="text-[9px] font-bold uppercase" style="color:var(--muted)">League lean</span>':'' }
+            <span class="px-2.5 py-1 rounded-lg text-xs font-semibold ${isLean?pill(r.lean.market):pill(r.primary)} whitespace-nowrap">${isLean?r.lean.market:r.primary}</span>
             ${rt}
           </div>
           <i class="fa-solid fa-chevron-down chev text-sm" style="color:var(--muted)"></i>
@@ -481,7 +491,7 @@ function renderMatches(){
                ? `<div><div class="text-[11px] uppercase tracking-wider font-semibold" style="color:var(--muted)">Venue</div><div class="font-semibold">${r.match.home} ${ord(r.match.homeVenueRank)} home · ${r.match.away} ${ord(r.match.awayVenueRank)} away</div></div>`
                : (r.wdnb.tournamentUncomparable?`<div><div class="text-[11px] uppercase tracking-wider font-semibold" style="color:var(--muted)">Format</div><div class="font-semibold">${r.match.isKnockout?'Knockout — form-based':'Cross-group — form-based'}</div></div>`:'') }
             ${ r.value?`<div><div class="text-[11px] uppercase tracking-wider font-semibold" style="color:var(--muted)">Odds value</div><div class="font-semibold ${r.value.verdict.includes('value')?'text-green':r.value.verdict.includes('Fairly')?'text-gold':''}">${r.value.verdict} <span style="color:var(--muted)" class="font-normal">· @${r.value.oddsUsed} (${r.value.sidePct}%)</span></div></div>`:'' }
-            <div class="basis-full text-sm" style="color:var(--muted);border-top:1px solid var(--line);padding-top:.6rem">${r.summary}</div>
+            <div class="basis-full text-sm" style="color:var(--muted);border-top:1px solid var(--line);padding-top:.6rem">${ isLean ? `<span style="color:var(--ink)"><i class="fa-solid fa-flag"></i> League lean:</span> ${r.lean.note} <em>(a tracked profile lean, not a staked banker)</em>` : r.summary }</div>
           </div>
           ${ r.match.h2h?`<div class="mt-2 panel rounded-xl p-3">
             <div class="flex items-center gap-2 text-[11px] uppercase tracking-wider font-semibold mb-2" style="color:var(--muted)"><i class="fa-solid fa-clock-rotate-left"></i> Head-to-head · last ${r.match.h2h.played}</div>
@@ -507,9 +517,10 @@ function applyFilters(){
   const q=(document.getElementById('filter-search').value||'').trim().toLowerCase();
   const mk=document.getElementById('filter-market').value;
   const bk=document.getElementById('filter-bankers').checked;
+  const up=document.getElementById('filter-upcoming').checked;
   let any=false;
   document.querySelectorAll('.match-item').forEach(el=>{
-    const show = (!q||el.dataset.search.includes(q)) && (!mk||el.dataset.market===mk) && (!bk||el.dataset.banker==='1');
+    const show = (!q||el.dataset.search.includes(q)) && (!mk||el.dataset.market===mk) && (!bk||el.dataset.banker==='1') && (!up||el.dataset.upcoming==='1');
     el.style.display = show?'':'none'; if(show) any=true;
   });
   document.querySelectorAll('.lg-row').forEach(b=>{
@@ -520,6 +531,7 @@ function applyFilters(){
 }
 ['filter-search','filter-market'].forEach(id=>document.getElementById(id).addEventListener('input',applyFilters));
 document.getElementById('filter-bankers').addEventListener('change',applyFilters);
+document.getElementById('filter-upcoming').addEventListener('change',applyFilters);
 
 /* ============ PERFORMANCE TRACKER (all-time) ============ */
 (function(){
@@ -591,9 +603,10 @@ function renderStrictMatches(){
       const settleTag = settled ? `<span class="px-2 py-0.5 rounded text-[10px] font-bold ${resClass(settled)}">${settled.toUpperCase()}</span>` : '';
       const score = played ? `<span class="display font-bold tnum">${hg} - ${ag}</span>` : `<span class="text-xs tnum" style="color:var(--muted)">${t||'—'}</span>`;
 
+      const upcoming = !played && !(r.match.status && ['1H','2H','HT','ET','LIVE'].includes(r.match.status));
       html += `<details class="match-item ${isBet?'is-banker-row':''}"
         data-search="${(r.match.home+' '+r.match.away+' '+r.match.league).toLowerCase().replace(/"/g,'')}"
-        data-market="${marketTag(sr.market)}" data-banker="${isBet?'1':'0'}">
+        data-market="${marketTag(sr.market)}" data-banker="${isBet?'1':'0'}" data-upcoming="${upcoming?'1':'0'}">
         <summary class="match-line px-4 py-3 flex items-center gap-3">
           <div class="w-12 text-center flex-shrink-0">${score}</div>
           <div class="flex-1 min-w-0">
