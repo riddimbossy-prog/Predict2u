@@ -1,36 +1,31 @@
 name: Update Predicto data
-
-# Runs daily on a schedule, and can be triggered by hand from the
-# "Actions" tab. Fetches fresh match data AND publishes the site to
-# GitHub Pages in the same run, so the live site always matches the data.
+# Runs on a schedule, and can be triggered by hand from the "Actions"
+# tab (or by the cron-job.org pinger). Fetches fresh match data AND
+# publishes the site to GitHub Pages in the same run, so the live site
+# always matches the data.
 on:
   schedule:
     - cron: "0 */2 * * *"    # every 2 hours, on the hour (UTC)
   workflow_dispatch: {}       # manual "Run workflow" button
-
 # Needed to commit data.js AND to deploy GitHub Pages
 permissions:
   contents: write
   pages: write
   id-token: write
-
 # Avoid overlapping Pages deployments
 concurrency:
   group: "pages"
   cancel-in-progress: false
-
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
       - name: Check out the repository
         uses: actions/checkout@v4
-
       - name: Set up Node.js
         uses: actions/setup-node@v4
         with:
           node-version: "20"
-
       - name: Write config.txt from secrets
         run: |
           cat > config.txt <<EOF
@@ -40,11 +35,12 @@ jobs:
           MAX_LEAGUES=${{ secrets.MAX_LEAGUES }}
           ODDS=${{ secrets.ODDS }}
           H2H=${{ secrets.H2H }}
+          DAYS_BACK=${{ secrets.DAYS_BACK }}
+          DAYS_FWD=${{ secrets.DAYS_FWD }}
+          REQUEST_BUDGET=${{ secrets.REQUEST_BUDGET }}
           EOF
-
       - name: Run the fetcher
         run: node fetch-data.js
-
       - name: Commit updated data.js (if it changed)
         run: |
           git config user.name "predicto-bot"
@@ -57,15 +53,12 @@ jobs:
           else
             echo "No data changes today."
           fi
-
       - name: Configure Pages
         uses: actions/configure-pages@v5
-
       - name: Upload site as Pages artifact
         uses: actions/upload-pages-artifact@v3
         with:
           path: "."
-
   deploy:
     needs: build
     runs-on: ubuntu-latest
