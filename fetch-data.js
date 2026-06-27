@@ -219,13 +219,13 @@ const FINISHED = new Set(["FT","AET","PEN"]);
         if (bp!==ap) return bp-ap;
         return gdOf(b.home)-gdOf(a.home);
       });
-      homeSorted.forEach((r,i)=>{ r._homeRank = i+1; r._homePts = (r.home&&r.home.points!=null)?r.home.points:homePtsFromRow(r.home); });
+      homeSorted.forEach((r,i)=>{ r._homeRank = i+1; r._homePts = (r.home&&r.home.points!=null)?r.home.points:homePtsFromRow(r.home); r._homeGames = (r.home&&r.home.played!=null)?r.home.played:null; });
       const awaySorted = [...grp].sort((a,b)=>{
         const ap=(a.away&&a.away.points!=null)?a.away.points:homePtsFromRow(a.away), bp=(b.away&&b.away.points!=null)?b.away.points:homePtsFromRow(b.away);
         if (bp!==ap) return bp-ap;
         return gdOf(b.away)-gdOf(a.away);
       });
-      awaySorted.forEach((r,i)=>{ r._awayRank = i+1; r._awayPts = (r.away&&r.away.points!=null)?r.away.points:homePtsFromRow(r.away); });
+      awaySorted.forEach((r,i)=>{ r._awayRank = i+1; r._awayPts = (r.away&&r.away.points!=null)?r.away.points:homePtsFromRow(r.away); r._awayGames = (r.away&&r.away.played!=null)?r.away.played:null; });
       grp.forEach(r=>{ r._groupSize = grp.length; });
     }
     return { table, tableSize, leagueName: block.league.name, multiGroup };
@@ -365,6 +365,7 @@ const FINISHED = new Set(["FT","AET","PEN"]);
         awayConcededAway: round1(aAway.played ? aAway.goals.against/aAway.played : 1.4),
         homeVenueRank: H._homeRank ?? null, awayVenueRank: A._awayRank ?? null,
         homeVenuePts: H._homePts ?? null, awayVenuePts: A._awayPts ?? null,
+        homeVenueGames: H._homeGames ?? null, awayVenueGames: A._awayGames ?? null,
         venueTableSize: H._groupSize ?? A._groupSize ?? tableSize,
         sameGroup, isKnockout,
         isTournament: multiGroup || isKnockout,
