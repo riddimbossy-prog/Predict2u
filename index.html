@@ -3,33 +3,42 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Predicto • Football Betting Safety System</title>
+<title>Predict2u • Know the Game, Predict Better</title>
 <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 90 90'%3E%3Crect width='90' height='90' rx='20' fill='%23141b2d'/%3E%3Cg transform='translate(20,12)'%3E%3Cpath d='M10 8 L10 70' stroke='%23ffffff' stroke-width='10' stroke-linecap='round' fill='none'/%3E%3Cpath d='M10 13 L30 13 A21 21 0 0 1 30 55 L16 55' stroke='%23ffffff' stroke-width='10' fill='none' stroke-linecap='round'/%3E%3Cpath d='M6 64 L42 26' stroke='%233ec46d' stroke-width='10' stroke-linecap='round' fill='none'/%3E%3Cpolygon points='30,22 48,20 38,38' fill='%233ec46d'/%3E%3C/g%3E%3C/svg%3E" />
 <script src="https://cdn.tailwindcss.com"></script>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
 <style>
   @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap');
   :root{
-    --gold:#FFC53D; --gold-deep:#D4AF37;
+    --gold:#4CAF27; --gold-deep:#3d9020;
+    --brand:#4CAF27; --brand-deep:#3d9020;
+    /* glassmorphism surfaces */
+    --glass:rgba(20,28,42,.55); --glass-2:rgba(14,20,34,.5);
+    --glass-border:rgba(255,255,255,.08);
     --green:#7ed957; --green-deep:#4faa43;
     --bg:#0a0e17; --panel:#111725; --panel-2:#0d1320;
     --line:#1e2738; --ink:#e8edf5; --muted:#8b97ad;
   }
   *{ box-sizing:border-box; }
-  body{ font-family:'Inter',system-ui,sans-serif; background:var(--bg); color:var(--ink); margin:0; }
+  body{ font-family:'Inter',system-ui,sans-serif; background:var(--bg); color:var(--ink); margin:0;
+    background-image:
+      radial-gradient(900px 500px at 12% -5%, rgba(76,175,39,.16), transparent 60%),
+      radial-gradient(800px 600px at 95% 0%, rgba(76,175,39,.08), transparent 55%),
+      radial-gradient(700px 700px at 50% 120%, rgba(76,175,39,.06), transparent 60%);
+    background-attachment:fixed; }
   .display{ font-family:'Space Grotesk','Inter',sans-serif; }
   .tnum{ font-variant-numeric:tabular-nums; }
 
   /* panels */
-  .panel{ background:var(--panel); border:1px solid var(--line); }
-  .panel-2{ background:var(--panel-2); border:1px solid var(--line); }
+  .panel{ background:var(--glass); border:1px solid var(--glass-border); backdrop-filter:blur(14px) saturate(140%); -webkit-backdrop-filter:blur(14px) saturate(140%); }
+  .panel-2{ background:var(--glass-2); border:1px solid var(--glass-border); backdrop-filter:blur(10px) saturate(130%); -webkit-backdrop-filter:blur(10px) saturate(130%); }
 
   /* gold + green accents */
   .text-gold{ color:var(--gold); }
-  .text-green{ color:var(--green); }
-  .bg-gold{ background:linear-gradient(135deg,var(--gold),#f0d77b); color:#0a0e17; }
+  .text-green{ color:var(--brand); }
+  .bg-gold{ background:linear-gradient(135deg,var(--gold),#6fd44a); color:#0a0e17; }
   .chip-gold{ background:rgba(255,197,61,.12); border:1px solid rgba(255,197,61,.35); color:var(--gold); }
-  .chip-green{ background:rgba(126,217,87,.12); border:1px solid rgba(126,217,87,.35); color:var(--green); }
+  .chip-green{ background:rgba(126,217,87,.12); border:1px solid rgba(126,217,87,.35); color:var(--brand); }
   .chip-dnb{ background:rgba(129,140,248,.14); border:1px solid rgba(129,140,248,.35); color:#a5b4fc; }
   .chip-under{ background:rgba(45,212,191,.14); border:1px solid rgba(45,212,191,.4); color:#5eead4; }
   .chip-skip{ background:rgba(139,151,173,.12); border:1px solid rgba(139,151,173,.3); color:var(--muted); }
@@ -39,7 +48,7 @@
   .date-pill{ padding:.5rem .9rem; border-radius:.7rem; font-size:.82rem; font-weight:600; color:var(--muted);
     white-space:nowrap; cursor:pointer; transition:all .15s; border:1px solid transparent; }
   .date-pill:hover{ color:var(--ink); background:var(--panel); }
-  .date-pill.active{ background:linear-gradient(135deg,var(--gold),#f0d77b); color:#0a0e17; border-color:var(--gold); }
+  .date-pill.active{ background:linear-gradient(135deg,var(--gold),#6fd44a); color:#0a0e17; border-color:var(--gold); }
 
   /* result chips */
   .res-won{ background:#14532d; color:#86efac; }
@@ -69,7 +78,7 @@
 
   .odd-cell{ background:var(--panel-2); border:1px solid var(--line); border-radius:.5rem; padding:.35rem .2rem;
     text-align:center; font-size:.8rem; font-weight:600; }
-  .odd-cell.best{ border-color:rgba(126,217,87,.5); color:var(--green); }
+  .odd-cell.best{ border-color:rgba(126,217,87,.5); color:var(--brand); }
 
   details>summary{ list-style:none; } details>summary::-webkit-details-marker{ display:none; }
   .chev{ transition:transform .2s; } details[open]>summary .chev{ transform:rotate(180deg); }
@@ -112,17 +121,24 @@
 <nav class="panel border-0 border-b sticky top-0 z-50" style="border-bottom:1px solid var(--line)">
   <div class="max-w-[1200px] mx-auto px-4 sm:px-6 h-16 flex items-center justify-between gap-4">
     <div class="flex items-center gap-4">
-      <svg height="34" viewBox="0 0 440 120" xmlns="http://www.w3.org/2000/svg" aria-label="Predict2u" style="display:block">
-        <g>
+      <div class="flex items-center gap-3">
+        <img src="logo.png" alt="Predict2u" height="40" style="height:40px;width:auto;display:block"
+             onerror="this.style.display='none';document.getElementById('logo-fallback').style.display='block'" />
+        <svg id="logo-fallback" height="40" viewBox="0 0 90 120" xmlns="http://www.w3.org/2000/svg" aria-label="Predict2u" style="display:none">
           <path d="M26 22 L26 98" stroke="currentColor" stroke-width="13" stroke-linecap="round" fill="none" style="color:var(--ink)"/>
           <path d="M26 28 L50 28 A25 25 0 0 1 50 78 L30 78" stroke="currentColor" stroke-width="13" fill="none" stroke-linecap="round" style="color:var(--ink)"/>
-          <path d="M16 86 L58 44" stroke="currentColor" stroke-width="11" stroke-linecap="round" fill="none" style="color:var(--ink)"/>
-          <polygon points="46,40 64,38 56,56" fill="currentColor" style="color:var(--ink)"/>
-        </g>
-        <text x="92" y="80" font-family="'Space Grotesk',sans-serif" font-weight="700" font-size="62" letter-spacing="-1">
-          <tspan fill="currentColor" style="color:var(--ink)">Predict</tspan><tspan fill="#3ec46d">2u</tspan>
-        </text>
-      </svg>
+          <path d="M16 86 L58 44" stroke="currentColor" stroke-width="11" stroke-linecap="round" fill="none" style="color:var(--brand)"/>
+          <polygon points="46,40 64,38 56,56" fill="currentColor" style="color:var(--brand)"/>
+        </svg>
+        <div class="leading-none">
+          <div style="font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:1.45rem;letter-spacing:-.5px">
+            <span style="color:var(--ink)">Predict</span><span style="color:var(--brand)">2u</span>
+          </div>
+          <div class="hidden sm:block" style="font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:.6rem;letter-spacing:.12em;margin-top:2px">
+            <span style="color:var(--muted)">KNOW THE GAME</span> <span style="color:var(--brand)">PREDICT BETTER</span>
+          </div>
+        </div>
+      </div>
       <div class="hidden md:flex items-center gap-1.5 px-2.5 py-1 rounded-full text-xs font-semibold chip-green">
         <span class="w-1.5 h-1.5 rounded-full bg-current animate-pulse"></span> Rules Engine
       </div>
@@ -146,8 +162,9 @@
   <div class="max-w-[1200px] mx-auto px-4 sm:px-6 py-2 flex items-center gap-3 flex-wrap">
     <span class="text-xs uppercase tracking-wider font-semibold" style="color:var(--muted)">Engine</span>
     <div class="inline-flex rounded-xl panel p-0.5" role="tablist">
-      <button id="eng-normal" class="px-3 py-1.5 rounded-lg text-sm font-semibold" style="background:linear-gradient(135deg,var(--gold),#f0d77b);color:#0a0e17">Normal</button>
+      <button id="eng-normal" class="px-3 py-1.5 rounded-lg text-sm font-semibold" style="background:linear-gradient(135deg,var(--gold),#6fd44a);color:#0a0e17">Normal</button>
       <button id="eng-strict" class="px-3 py-1.5 rounded-lg text-sm font-semibold" style="color:var(--muted)">Strict Bankers</button>
+      <button id="eng-ultra" class="px-3 py-1.5 rounded-lg text-sm font-semibold" style="color:var(--muted)">Ultra · Streaks</button>
     </div>
     <span id="eng-note" class="text-xs" style="color:var(--muted)"></span>
   </div>
@@ -165,7 +182,7 @@
       Today's safest <span class="text-gold">football bankers</span>
     </h1>
     <p class="mt-2 text-sm max-w-2xl" style="color:var(--muted)">
-      Auto-analysed with the Final Predicto Rules — DNB-first protection, strict mismatch criteria, max 4 bankers per league. Not a guarantee; bet only what you can afford to lose. 18+
+      Auto-analysed with the Predict2u Rules — DNB-first protection, strict mismatch criteria, max 4 bankers per league. Not a guarantee; bet only what you can afford to lose. 18+
     </p>
   </div>
 
@@ -241,7 +258,7 @@
 </div>
 
 <footer class="py-8 text-center text-sm" style="color:var(--muted);border-top:1px solid var(--line)">
-  Predicto · heuristic analysis tool · data from your source<br>
+  Predict2u · heuristic analysis tool · data from your source<br>
   Not financial advice. Gamble responsibly. 18+
 </footer>
 
@@ -407,6 +424,7 @@ function miniBar(label,m){
 
 function renderMatches(){
   if(engineMode==='strict'){ renderStrictMatches(); return; }
+  if(engineMode==='ultra'){ renderUltraMatches(); return; }
   const root = document.getElementById('matches-root');
   const rows = byDate[activeDate]||[];
   const empty = document.getElementById('empty-state');
@@ -571,6 +589,50 @@ const strictChip = mkt =>
   mkt.includes('Win') ? 'chip-green' :
   mkt.includes('Under') ? 'chip-under' : 'chip-gold';
 
+function renderUltraMatches(){
+  const host=document.getElementById('matches-root');
+  if (typeof streakRecommend !== 'function'){ host.innerHTML='<div class="p-6 text-center" style="color:var(--muted)">Streak engine unavailable.</div>'; return; }
+  const dayMatches=(byDate[activeDate]||[]);
+  const picks=dayMatches.map(streakRecommend).filter(r=>r.bet);
+  let html='';
+  // prominent disclaimer banner
+  html += `<div class="panel rounded-xl p-3 mb-3 text-sm" style="border:1px solid rgba(245,158,11,.4);background:rgba(245,158,11,.08)">
+    <strong style="color:#f59e0b"><i class="fa-solid fa-triangle-exclamation"></i> Ultra · Streaks — experimental.</strong>
+    Bets only teams on a real 4–5 game win streak. Streaks are weak predictors the bookmaker already prices in. These are <strong>unproven</strong> — let the tracker measure them before trusting.
+  </div>`;
+  if(!picks.length){
+    html += `<div class="p-6 text-center" style="color:var(--muted)">No qualifying win streaks among today's games.</div>`;
+    host.innerHTML=html; return;
+  }
+  picks.sort((a,b)=>b.confidence-a.confidence);
+  picks.forEach(r=>{
+    const sig=r.signals.filter(s=>s.real).map(s=>s.note).join(' · ');
+    const trends=r.signals.filter(s=>!s.real).map(s=>s.note).join(' · ');
+    html += `<details class="match-item is-lean-row" data-search="${(r.match.home+' '+r.match.away+' '+r.match.league).toLowerCase().replace(/"/g,'')}" data-market="${marketTag(r.primary)}" data-banker="0" data-upcoming="0">
+      <summary class="match-line px-4 py-3 flex items-center gap-3">
+        <div class="flex-1 min-w-0">
+          <div class="text-sm font-medium truncate">${r.match.home}</div>
+          <div class="text-sm font-medium truncate">${r.match.away}</div>
+          <div class="text-[11px]" style="color:var(--muted)">${r.match.league||''}</div>
+        </div>
+        <div class="flex flex-col items-end gap-1 flex-shrink-0 w-24">
+          <span class="text-[9px] font-bold uppercase" style="color:#f59e0b">Streak ${r.confidence}/10</span>
+          <span class="px-2.5 py-1 rounded-lg text-xs font-semibold ${pill(r.primary)} whitespace-nowrap">${r.primary}</span>
+        </div>
+        <i class="fa-solid fa-chevron-down chev text-sm" style="color:var(--muted)"></i>
+      </summary>
+      <div class="px-4 pb-4 pt-3 text-sm" style="border-top:1px solid var(--line);background:var(--panel-2)">
+        <div><span style="color:var(--ink);font-weight:600">Real streak:</span> ${sig||'—'}</div>
+        ${trends?`<div style="color:var(--muted);margin-top:.3rem"><em>Trend (avg-based, not a streak): ${trends}</em></div>`:''}
+        ${r.reasons.length?`<div style="color:var(--muted);margin-top:.3rem">${r.reasons.join(' ')}</div>`:''}
+        <div style="margin-top:.5rem;color:#f59e0b"><i class="fa-solid fa-triangle-exclamation"></i> ${r.disclaimer}</div>
+      </div>
+    </details>`;
+  });
+  host.innerHTML=html;
+  applyFilters();
+}
+
 function renderStrictMatches(){
   const root = document.getElementById('matches-root');
   const rows = byDate[activeDate]||[];
@@ -652,21 +714,24 @@ function renderStrictMatches(){
 }
 
 (function(){
-  const bn=document.getElementById('eng-normal'), bs=document.getElementById('eng-strict'), note=document.getElementById('eng-note');
+  const bn=document.getElementById('eng-normal'), bs=document.getElementById('eng-strict'), bu=document.getElementById('eng-ultra'), note=document.getElementById('eng-note');
   function setMode(mode){
     engineMode=mode;
-    const on='background:linear-gradient(135deg,var(--gold),#f0d77b);color:#0a0e17';
+    const on='background:linear-gradient(135deg,var(--gold),#6fd44a);color:#0a0e17';
     const off='color:var(--muted)';
     bn.style.cssText = mode==='normal'?on:off;
     bs.style.cssText = mode==='strict'?on:off;
+    bu.style.cssText = mode==='ultra'?on:off;
     note.textContent = mode==='strict'
       ? 'Conservative: rejects most games, one clean market or No Bet. Auto-tiered from the table — confirm red flags yourself.'
+      : mode==='ultra'
+      ? '⚠ Experimental & UNPROVEN: bets only teams on a real 4–5 game win streak. Streaks are weak predictors the bookmaker prices in — track results before trusting this.'
       : '';
-    // top cards + sidebar still reflect the normal engine; only the match list switches.
     renderMatches();
   }
   bn.addEventListener('click',()=>setMode('normal'));
   bs.addEventListener('click',()=>setMode('strict'));
+  bu.addEventListener('click',()=>setMode('ultra'));
 })();
 
 /* ============ MASTER RENDER ============ */
