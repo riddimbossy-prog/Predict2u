@@ -187,6 +187,7 @@
       <button id="eng-strict" class="px-3 py-1.5 rounded-lg text-sm font-semibold" style="color:var(--muted)">Strict Bankers</button>
       <button id="eng-ultra" class="px-3 py-1.5 rounded-lg text-sm font-semibold" style="color:var(--muted)">Ultra Bankers</button>
       <button id="eng-rulespro" class="px-3 py-1.5 rounded-lg text-sm font-semibold" style="color:var(--muted)">Elite Bankers</button>
+      <button id="eng-apex" class="px-3 py-1.5 rounded-lg text-sm font-semibold" style="color:var(--muted)">Apex Bankers</button>
     </div>
     <span id="eng-note" class="text-xs" style="color:var(--muted)"></span>
   </div>
@@ -449,6 +450,11 @@ function enginePicks(rows){
       return { match:r.match, primary:u.primary, confidence:u.confidence>=8?'High':'Medium',
                banker:u.banker, weight:u.confidence, reason:u.verdict||'' }; }).filter(Boolean);
   }
+  if(engineMode==='apex' && typeof apexRecommend==='function'){
+    return rows.map(r=>{ const u=apexRecommend(r.match); if(!u.bet) return null;
+      return { match:r.match, primary:u.primary, confidence:u.confidence>=8?'High':'Medium',
+               banker:u.banker, weight:u.confidence, reason:u.verdict||'' }; }).filter(Boolean);
+  }
   // normal
   return rows.filter(r=>r.banker).map(r=>({ match:r.match, primary:r.primary, confidence:r.confidence,
             banker:true, weight:r.rankWeight, reason:(r.wdnb&&r.wdnb.reasons&&r.wdnb.reasons[0])||'' }));
@@ -539,6 +545,7 @@ function renderMatches(){
   if(engineMode==='strict'){ renderStrictMatches(); return; }
   if(engineMode==='ultra'){ renderUltraMatches(); return; }
   if(engineMode==='rulespro'){ renderRulesProMatches(); return; }
+  if(engineMode==='apex'){ renderApexMatches(); return; }
   const root = document.getElementById('matches-root');
   const rows = byDate[activeDate]||[];
   const empty = document.getElementById('empty-state');
@@ -847,14 +854,16 @@ function renderRulesProMatches(){
     const blockedList=(r.blocked||[]).slice(0,4).map(b=>`${b.market}`).join(', ');
     html += `<details class="match-item is-banker-row" data-search="${(r.match.home+' '+r.match.away+' '+r.match.league).toLowerCase().replace(/"/g,'')}" data-market="${marketTag(r.primary)}" data-banker="1" data-upcoming="0" data-safeodds="${safeOddsPick(r.primary,r.match.odds)?'1':'0'}">
       <summary class="match-line px-4 py-3 flex items-center gap-3">
+        <div class="w-12 text-center flex-shrink-0">${rowScore(r.match)}</div>
         <div class="flex-1 min-w-0">
           <div class="text-sm font-medium truncate">${r.match.home}</div>
           <div class="text-sm font-medium truncate">${r.match.away}</div>
-          <div class="text-[11px]" style="color:var(--muted)">${r.match.league||''}</div>
+          <div class="text-[11px]" style="color:var(--muted)">${rowFlag(r.match)}${r.match.league||''}</div>
         </div>
         <div class="flex flex-col items-end gap-1 flex-shrink-0 w-28">
           <span class="text-[9px] font-bold uppercase" style="color:var(--brand)">${tierName} ${r.confidence}/10</span>
-          <span class="px-2.5 py-1 rounded-lg text-xs font-semibold ${pill(r.primary)} whitespace-nowrap">${r.primary}</span>
+          <span class="px-2 py-1 rounded-lg text-[11px] font-semibold ${pill(r.primary)} text-right leading-tight">${r.primary}</span>
+          ${rowSettle(r.match,r.primary)}
         </div>
         <i class="fa-solid fa-chevron-down chev text-sm" style="color:var(--muted)"></i>
       </summary>
@@ -871,6 +880,65 @@ function renderRulesProMatches(){
   applyFilters();
 }
 
+function renderApexMatches(){
+  const host=document.getElementById('matches-root');
+  if (typeof apexRecommend !== 'function'){ host.innerHTML='<div class="p-6 text-center" style="color:var(--muted)">Apex engine unavailable — deploy the latest banker-engine.js.</div>'; return; }
+  const dayMatches=(byDate[activeDate]||[]);
+  const picks=dayMatches.map(r=>apexRecommend(r.match)).filter(r=>r.bet);
+  let html='';
+  html += `<div class="panel rounded-xl p-3 mb-3 text-sm" style="border:1px solid rgba(76,175,39,.4);background:rgba(76,175,39,.07)">
+    <strong style="color:var(--brand)"><i class="fa-solid fa-mountain"></i> Apex Bankers — Elite + Home Advantage protection.</strong>
+    Runs the Elite exact-threshold engine, then applies a Home Advantage layer: away markets must prove MORE, and a resistant home side blocks or penalises away picks. The most conservative engine. Some % inputs estimated. Unproven — track first. 18+.
+  </div>`;
+  if(!picks.length){
+    html += `<div class="p-6 text-center" style="color:var(--muted)">No pick survived the Elite thresholds AND the home-advantage protection today.</div>`;
+    host.innerHTML=html; return;
+  }
+  picks.sort((a,b)=>b.confidence-a.confidence);
+  picks.forEach(r=>{
+    const tierName = r.confidence>=10?"Elite Banker":r.confidence>=9?"Banker":r.confidence>=8?"Strong":"Playable";
+    const blockedList=(r.blocked||[]).slice(0,4).map(b=>`${b.market}`).join(', ');
+    html += `<details class="match-item is-banker-row" data-search="${(r.match.home+' '+r.match.away+' '+r.match.league).toLowerCase().replace(/"/g,'')}" data-market="${marketTag(r.primary)}" data-banker="1" data-upcoming="0" data-safeodds="${safeOddsPick(r.primary,r.match.odds)?'1':'0'}">
+      <summary class="match-line px-4 py-3 flex items-center gap-3">
+        <div class="w-12 text-center flex-shrink-0">${rowScore(r.match)}</div>
+        <div class="flex-1 min-w-0">
+          <div class="text-sm font-medium truncate">${r.match.home}</div>
+          <div class="text-sm font-medium truncate">${r.match.away}</div>
+          <div class="text-[11px]" style="color:var(--muted)">${rowFlag(r.match)}${r.match.league||''}</div>
+        </div>
+        <div class="flex flex-col items-end gap-1 flex-shrink-0 w-28">
+          <span class="text-[9px] font-bold uppercase" style="color:var(--brand)">${tierName} ${r.confidence}/10</span>
+          <span class="px-2 py-1 rounded-lg text-[11px] font-semibold ${pill(r.primary)} text-right leading-tight">${r.primary}</span>
+          ${rowSettle(r.match,r.primary)}
+        </div>
+        <i class="fa-solid fa-chevron-down chev text-sm" style="color:var(--muted)"></i>
+      </summary>
+      <div class="px-4 pb-4 pt-3 text-sm" style="border-top:1px solid var(--line);background:var(--panel-2)">
+        <div style="font-weight:600;margin-bottom:.4rem">${r.verdict}</div>
+        <div style="color:var(--muted);font-size:.75rem">Home resistance: ${r.resistScore}/6 ${r.homeResistant?'(resistant — away markets restricted)':'(not resistant)'}</div>
+        ${r.usedEstimates?`<div style="color:#b45309;font-size:.75rem;margin-top:.4rem"><i class="fa-solid fa-triangle-exclamation"></i> Uses ESTIMATED stats (win rate / unbeaten / clean-sheet / FTS approximated).</div>`:''}
+        ${blockedList?`<div style="color:var(--muted);font-size:.72rem;margin-top:.3rem">Blocked: ${blockedList}</div>`:''}
+        ${(r.humanChecks||[]).length?`<div style="color:#b45309;font-size:.75rem;margin-top:.5rem"><i class="fa-solid fa-user-check"></i> ${r.humanChecks[0]}</div>`:''}
+      </div>
+    </details>`;
+  });
+  host.innerHTML=html;
+  applyFilters();
+}
+
+// shared row bits for Ultra/Elite/Apex lists: score, league flag, settle tag
+function rowScore(match){
+  const hg=match.homeGoals, ag=match.awayGoals, played=hg!=null&&ag!=null;
+  const t = match.kickoff ? new Date(match.kickoff).toLocaleTimeString(undefined,{hour:'2-digit',minute:'2-digit'}) : '';
+  return played ? `<span class="display font-bold tnum">${hg} - ${ag}</span>` : `<span class="text-xs tnum" style="color:var(--muted)">${t||'—'}</span>`;
+}
+function rowFlag(match){
+  return match.flag ? `<img src="${match.flag}" alt="" width="16" height="11" style="width:16px;height:11px;object-fit:cover;border-radius:2px;flex-shrink:0;display:inline-block;vertical-align:middle;margin-right:4px" onerror="this.style.display='none'"/>` : '';
+}
+function rowSettle(match, primary){
+  const res = settle(primary, match.homeGoals, match.awayGoals);
+  return res ? `<span class="px-2 py-0.5 rounded text-[10px] font-bold ${resClass(res)}">${res.toUpperCase()}</span>` : '';
+}
 function renderUltraMatches(){
   const host=document.getElementById('matches-root');
   if (typeof ultraRecommend !== 'function'){ host.innerHTML='<div class="p-6 text-center" style="color:var(--muted)">Ultra engine unavailable.</div>'; return; }
@@ -894,14 +962,16 @@ function renderUltraMatches(){
     const blockedList=(r.blocked||[]).slice(0,6).map(b=>`${b.market}`).join(', ');
     html += `<details class="match-item is-banker-row" data-search="${(r.match.home+' '+r.match.away+' '+r.match.league).toLowerCase().replace(/"/g,'')}" data-market="${marketTag(r.primary)}" data-banker="1" data-upcoming="0" data-safeodds="${safeOddsPick(r.primary,r.match.odds)?'1':'0'}">
       <summary class="match-line px-4 py-3 flex items-center gap-3">
+        <div class="w-12 text-center flex-shrink-0">${rowScore(r.match)}</div>
         <div class="flex-1 min-w-0">
           <div class="text-sm font-medium truncate">${r.match.home}</div>
           <div class="text-sm font-medium truncate">${r.match.away}</div>
-          <div class="text-[11px]" style="color:var(--muted)">${r.match.league||''}</div>
+          <div class="text-[11px]" style="color:var(--muted)">${rowFlag(r.match)}${r.match.league||''}</div>
         </div>
         <div class="flex flex-col items-end gap-1 flex-shrink-0 w-28">
           <span class="text-[9px] font-bold uppercase" style="color:var(--brand)">${tierName} ${r.confidence}/10</span>
-          <span class="px-2.5 py-1 rounded-lg text-xs font-semibold ${pill(r.primary)} whitespace-nowrap">${r.primary}</span>
+          <span class="px-2 py-1 rounded-lg text-[11px] font-semibold ${pill(r.primary)} text-right leading-tight">${r.primary}</span>
+          ${rowSettle(r.match,r.primary)}
         </div>
         <i class="fa-solid fa-chevron-down chev text-sm" style="color:var(--muted)"></i>
       </summary>
@@ -1005,7 +1075,7 @@ function renderStrictMatches(){
 }
 
 (function(){
-  const bn=document.getElementById('eng-normal'), bs=document.getElementById('eng-strict'), bu=document.getElementById('eng-ultra'), bp=document.getElementById('eng-rulespro'), note=document.getElementById('eng-note');
+  const bn=document.getElementById('eng-normal'), bs=document.getElementById('eng-strict'), bu=document.getElementById('eng-ultra'), bp=document.getElementById('eng-rulespro'), ba=document.getElementById('eng-apex'), note=document.getElementById('eng-note');
   function setMode(mode){
     engineMode=mode;
     const on='background:linear-gradient(135deg,var(--gold),#6fd44a);color:#0a0e17';
@@ -1014,12 +1084,15 @@ function renderStrictMatches(){
     bs.style.cssText = mode==='strict'?on:off;
     bu.style.cssText = mode==='ultra'?on:off;
     bp.style.cssText = mode==='rulespro'?on:off;
+    ba.style.cssText = mode==='apex'?on:off;
     note.textContent = mode==='strict'
       ? 'Conservative: rejects most games, one clean market or No Bet. Auto-tiered from the table — confirm red flags yourself.'
       : mode==='ultra'
       ? 'Universal Market Engine: evaluates every market with data, outputs the single strongest edge or No Bet. Rejects same-tier, cup ties, conflicts, and confidence under 7. Unproven — track before trusting.'
       : mode==='rulespro'
       ? 'Elite Bankers: exact-threshold engine (full spec gates per market). Some % inputs (win rate, clean sheet, FTS) are ESTIMATED from PPG/goals — flagged on each pick. Strict by design; expect many No Bets. Unproven — track first.'
+      : mode==='apex'
+      ? 'Apex Bankers: Elite thresholds PLUS a Home Advantage layer — away markets must prove more; resistant home sides block or penalise away picks. Some % inputs estimated. The most conservative engine. Unproven — track first.'
       : '';
     renderStats(); renderCards(); renderMatches();
   }
@@ -1027,6 +1100,7 @@ function renderStrictMatches(){
   bs.addEventListener('click',()=>setMode('strict'));
   bu.addEventListener('click',()=>setMode('ultra'));
   bp.addEventListener('click',()=>setMode('rulespro'));
+  ba.addEventListener('click',()=>setMode('apex'));
 })();
 
 /* ============ MASTER RENDER ============ */
