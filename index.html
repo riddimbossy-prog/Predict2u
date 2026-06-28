@@ -248,6 +248,9 @@
         <label class="flex items-center gap-2 text-sm panel-2 rounded-xl px-3 py-2 cursor-pointer" style="color:var(--ink)">
           <input id="filter-upcoming" type="checkbox" class="accent-yellow-500" /> Upcoming only
         </label>
+        <label class="flex items-center gap-2 text-sm panel-2 rounded-xl px-3 py-2 cursor-pointer" style="color:var(--ink)" title="Only Win picks priced at or below 1.55">
+          <input id="filter-safeodds" type="checkbox" class="accent-yellow-500" /> Wins ≤1.55 only
+        </label>
       </div>
 
       <!-- slip builder -->
@@ -346,6 +349,15 @@ const resClass = r => r==='Won'?'res-won':r==='Lost'?'res-lost':r==='Void'?'res-
 const keyOf = r => `${r.match.matchDate}|${r.match.home}|${r.match.away}`;
 const ord = n => { const s=["th","st","nd","rd"],v=n%100; return n+(s[(v-20)%10]||s[v]||s[0]); };
 const marketTag = p => p.includes('DNB')?'DNB':p.includes('Win')?'Win':p.includes('Under')?'Under':p.includes('Over 1.5')?'Over 1.5':p.includes('Over')?'Over 2.5':p.includes('BTTS')?'BTTS':p;
+// Safe-odds rule: ONLY Win picks with a real bookmaker odd at/below 1.55 qualify.
+// Anything without a single odd (DNB, Over/Under, BTTS) does NOT qualify and is
+// hidden when the "Wins ≤1.55 only" filter is on.
+function safeOddsPick(market, odds){
+  if(!odds) return false;
+  if(market==='Home Win' && odds.home && odds.home<=1.55) return true;
+  if(market==='Away Win' && odds.away && odds.away<=1.55) return true;
+  return false;
+}
 // flag emoji-ish: use country name -> emoji via simple map fallback (flag image service)
 const flagFor = league => {
   // crude league->country guess for the flag; falls back to a globe
@@ -545,7 +557,7 @@ function renderMatches(){
       const upcoming = !played && !live && koInFuture;
       const isLean = !isB && r.lean;
       const dataMkt = isLean ? marketTag(r.lean.market) : marketTag(r.primary);
-      return `<details class="match-item ${isB?'is-banker-row':''} ${isLean?'is-lean-row':''}" data-search="${(r.match.home+' '+r.match.away+' '+r.match.league).toLowerCase().replace(/"/g,'')}" data-market="${dataMkt}" data-banker="${isB?'1':'0'}" data-lean="${isLean?'1':'0'}" data-upcoming="${upcoming?'1':'0'}">
+      return `<details class="match-item ${isB?'is-banker-row':''} ${isLean?'is-lean-row':''}" data-search="${(r.match.home+' '+r.match.away+' '+r.match.league).toLowerCase().replace(/"/g,'')}" data-market="${dataMkt}" data-banker="${isB?'1':'0'}" data-lean="${isLean?'1':'0'}" data-upcoming="${upcoming?'1':'0'}" data-safeodds="${safeOddsPick(r.primary,r.match.odds)?'1':'0'}">
         <summary class="match-line px-4 py-3 flex items-center gap-3">
           <div class="w-12 text-center flex-shrink-0">${score}</div>
           <div class="flex-1 min-w-0">
@@ -593,9 +605,10 @@ function applyFilters(){
   const mk=document.getElementById('filter-market').value;
   const bk=document.getElementById('filter-bankers').checked;
   const up=document.getElementById('filter-upcoming').checked;
+  const so=document.getElementById('filter-safeodds').checked;
   let any=false;
   document.querySelectorAll('.match-item').forEach(el=>{
-    const show = (!q||el.dataset.search.includes(q)) && (!mk||el.dataset.market===mk) && (!bk||el.dataset.banker==='1') && (!up||el.dataset.upcoming==='1');
+    const show = (!q||el.dataset.search.includes(q)) && (!mk||el.dataset.market===mk) && (!bk||el.dataset.banker==='1') && (!up||el.dataset.upcoming==='1') && (!so||el.dataset.safeodds==='1');
     el.style.display = show?'':'none'; if(show) any=true;
   });
   document.querySelectorAll('.lg-row').forEach(b=>{
@@ -607,6 +620,7 @@ function applyFilters(){
 ['filter-search','filter-market'].forEach(id=>document.getElementById(id).addEventListener('input',applyFilters));
 document.getElementById('filter-bankers').addEventListener('change',applyFilters);
 document.getElementById('filter-upcoming').addEventListener('change',applyFilters);
+document.getElementById('filter-safeodds').addEventListener('change',applyFilters);
 
 /* ============ SLIP BUILDER ============ */
 function legOdd(r){
@@ -749,7 +763,7 @@ function renderUltraMatches(){
     const failed=(r.failed||[]).map(p=>`<li style="color:var(--muted)">✗ ${p}</li>`).join('');
     const others=(r.allScores||[]).filter(s=>s.market!==r.primary).slice(0,4).map(s=>`${s.market} ${s.conf}`).join(' · ');
     const blockedList=(r.blocked||[]).slice(0,6).map(b=>`${b.market}`).join(', ');
-    html += `<details class="match-item is-banker-row" data-search="${(r.match.home+' '+r.match.away+' '+r.match.league).toLowerCase().replace(/"/g,'')}" data-market="${marketTag(r.primary)}" data-banker="1" data-upcoming="0">
+    html += `<details class="match-item is-banker-row" data-search="${(r.match.home+' '+r.match.away+' '+r.match.league).toLowerCase().replace(/"/g,'')}" data-market="${marketTag(r.primary)}" data-banker="1" data-upcoming="0" data-safeodds="${safeOddsPick(r.primary,r.match.odds)?'1':'0'}">
       <summary class="match-line px-4 py-3 flex items-center gap-3">
         <div class="flex-1 min-w-0">
           <div class="text-sm font-medium truncate">${r.match.home}</div>
@@ -789,11 +803,13 @@ function renderStrictMatches(){
 
   let html='';
   Object.entries(byLeague).forEach(([league,lrows])=>{
+    const hasBet = lrows.some(r=>{ const sr=strictByKey[keyOf(r)]; return sr && sr.bet; });
+    if(!hasBet) return;
     html += `<details open class="lg-row panel rounded-2xl mb-3 overflow-hidden" data-league="${league.toLowerCase()}">
       <summary class="px-4 py-3 flex items-center gap-2">
         <i class="fa-solid fa-lock text-xs text-gold"></i>
         <span class="font-semibold">${league}</span>
-        <span class="text-xs" style="color:var(--muted)">· ${lrows.length} match${lrows.length>1?'es':''}</span>
+        <span class="text-xs" style="color:var(--muted)">· ${lrows.filter(r=>{const sr=strictByKey[keyOf(r)];return sr&&sr.bet;}).length} strict pick(s)</span>
         <i class="fa-solid fa-chevron-down lg-chev ml-auto text-sm" style="color:var(--muted)"></i>
       </summary>
       <div style="border-top:1px solid var(--line)">`;
@@ -802,6 +818,7 @@ function renderStrictMatches(){
       const sr = strictByKey[keyOf(r)];
       if(!sr){ return; }
       const isBet = sr.bet;
+      if(!isBet){ return; } // Strict view shows only actual strict bets, not No-bet clutter
       const t = r.match.kickoff ? new Date(r.match.kickoff).toLocaleTimeString(undefined,{hour:'2-digit',minute:'2-digit'}) : '';
       const hg=r.match.homeGoals, ag=r.match.awayGoals, played=hg!=null&&ag!=null;
       const settled = played ? settle(sr.market, hg, ag) : '';
@@ -813,7 +830,7 @@ function renderStrictMatches(){
       const upcoming = !played && !(r.match.status && ['1H','2H','HT','ET','LIVE'].includes(r.match.status)) && koInFuture;
       html += `<details class="match-item ${isBet?'is-banker-row':''}"
         data-search="${(r.match.home+' '+r.match.away+' '+r.match.league).toLowerCase().replace(/"/g,'')}"
-        data-market="${marketTag(sr.market)}" data-banker="${isBet?'1':'0'}" data-upcoming="${upcoming?'1':'0'}">
+        data-market="${marketTag(sr.market)}" data-banker="${isBet?'1':'0'}" data-upcoming="${upcoming?'1':'0'}" data-safeodds="${safeOddsPick(sr.market,r.match.odds)?'1':'0'}">
         <summary class="match-line px-4 py-3 flex items-center gap-3">
           <div class="w-12 text-center flex-shrink-0">${score}</div>
           <div class="flex-1 min-w-0">
