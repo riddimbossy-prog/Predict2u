@@ -479,7 +479,13 @@ function renderMatches(){
           <div class="odd-cell">${r.match.odds.draw||'-'}</div>
           <div class="odd-cell">${r.match.odds.away||'-'}</div></div>` : `<div class="hidden sm:block w-36"></div>`;
 
-      const upcoming = !played && !live;
+      // Upcoming = not played, not live, AND kickoff is genuinely still in the
+      // future. The time check matters because between fetches a game can have
+      // kicked off (or finished) without its goals/status updated yet — without
+      // it, those stale past games wrongly show as "upcoming".
+      const koTime = r.match.kickoff ? new Date(r.match.kickoff).getTime() : null;
+      const koInFuture = koTime != null ? koTime > Date.now() : true;
+      const upcoming = !played && !live && koInFuture;
       const isLean = !isB && r.lean;  // skipped game carrying a league-profile lean
       const dataMkt = isLean ? marketTag(r.lean.market) : marketTag(r.primary);
       html += `<details class="match-item ${isB?'is-banker-row':''} ${isLean?'is-lean-row':''}" data-search="${(r.match.home+' '+r.match.away+' '+r.match.league).toLowerCase().replace(/"/g,'')}" data-market="${dataMkt}" data-banker="${isB?'1':'0'}" data-lean="${isLean?'1':'0'}" data-upcoming="${upcoming?'1':'0'}">
@@ -667,7 +673,9 @@ function renderStrictMatches(){
       const settleTag = settled ? `<span class="px-2 py-0.5 rounded text-[10px] font-bold ${resClass(settled)}">${settled.toUpperCase()}</span>` : '';
       const score = played ? `<span class="display font-bold tnum">${hg} - ${ag}</span>` : `<span class="text-xs tnum" style="color:var(--muted)">${t||'—'}</span>`;
 
-      const upcoming = !played && !(r.match.status && ['1H','2H','HT','ET','LIVE'].includes(r.match.status));
+      const koTime = r.match.kickoff ? new Date(r.match.kickoff).getTime() : null;
+      const koInFuture = koTime != null ? koTime > Date.now() : true;
+      const upcoming = !played && !(r.match.status && ['1H','2H','HT','ET','LIVE'].includes(r.match.status)) && koInFuture;
       html += `<details class="match-item ${isBet?'is-banker-row':''}"
         data-search="${(r.match.home+' '+r.match.away+' '+r.match.league).toLowerCase().replace(/"/g,'')}"
         data-market="${marketTag(sr.market)}" data-banker="${isBet?'1':'0'}" data-upcoming="${upcoming?'1':'0'}">
