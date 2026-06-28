@@ -426,14 +426,44 @@ const perLeagueTop = {};
 }
 
 /* ============ STAT ROW (for active date) ============ */
+/* ============ ENGINE-AWARE DASHBOARD ============ */
+// Returns the CURRENT engine's picks for a set of rows, normalized to a common
+// shape so the stats bar and Top Bankers cards reflect whichever engine is
+// selected — not always the Normal engine.
+function enginePicks(rows){
+  if(engineMode==='strict' && typeof analyseStrict==='function'){
+    return rows.map(r=>{
+      const sr = strictByKey[keyOf(r)];
+      if(!sr || !sr.bet) return null;
+      return { match:r.match, primary:sr.market, confidence:sr.confidence>=8?'High':sr.confidence>=7?'Medium':'Low',
+               banker:sr.confidence>=8, weight:sr.confidence, reason:(sr.reasons&&sr.reasons[0])||'' };
+    }).filter(Boolean);
+  }
+  if(engineMode==='ultra' && typeof ultraRecommend==='function'){
+    return rows.map(r=>{ const u=ultraRecommend(r.match); if(!u.bet) return null;
+      return { match:r.match, primary:u.primary, confidence:u.confidence>=8?'High':'Medium',
+               banker:u.banker, weight:u.confidence, reason:u.verdict||'' }; }).filter(Boolean);
+  }
+  if(engineMode==='rulespro' && typeof rulesProRecommend==='function'){
+    return rows.map(r=>{ const u=rulesProRecommend(r.match); if(!u.bet) return null;
+      return { match:r.match, primary:u.primary, confidence:u.confidence>=8?'High':'Medium',
+               banker:u.banker, weight:u.confidence, reason:u.verdict||'' }; }).filter(Boolean);
+  }
+  // normal
+  return rows.filter(r=>r.banker).map(r=>({ match:r.match, primary:r.primary, confidence:r.confidence,
+            banker:true, weight:r.rankWeight, reason:(r.wdnb&&r.wdnb.reasons&&r.wdnb.reasons[0])||'' }));
+}
+
 function renderStats(){
   const rows = byDate[activeDate]||[];
-  let won=0,lost=0; const bankers = rows.filter(r=>r.banker);
-  bankers.forEach(r=>{ const s=settle(r.primary,r.match.homeGoals,r.match.awayGoals); if(s==='Won')won++; else if(s==='Lost')lost++; });
-  const stat=(l,v,c)=>`<div class="panel rounded-2xl p-4"><div class="text-xs uppercase tracking-wider font-semibold mb-1" style="color:var(--muted)">${l}</div><div class="display text-3xl font-bold tnum ${c||''}">${v}</div></div>`;
+  const picks = enginePicks(rows);
+  let won=0,lost=0;
+  picks.forEach(p=>{ const s=settle(p.primary,p.match.homeGoals,p.match.awayGoals); if(s==='Won')won++; else if(s==='Lost')lost++; });
+  const settledNote = (won+lost)>0 ? '<div class="text-[9px] mt-0.5" style="color:var(--muted);opacity:.7">settled / backtest</div>' : '';
+  const stat=(l,v,c,extra)=>`<div class="panel rounded-2xl p-4"><div class="text-xs uppercase tracking-wider font-semibold mb-1" style="color:var(--muted)">${l}</div><div class="display text-3xl font-bold tnum ${c||''}">${v}</div>${extra||''}</div>`;
   document.getElementById('stat-row').innerHTML =
-    stat('Matches', rows.length) + stat('Bankers', bankers.length, 'text-gold') +
-    stat('Won', (won+lost)>0?won:'—', 'text-green') + stat('Lost', (won+lost)>0?lost:'—', '');
+    stat('Matches', rows.length) + stat('Bankers', picks.length, 'text-gold') +
+    stat('Won', (won+lost)>0?won:'—', 'text-green', settledNote) + stat('Lost', (won+lost)>0?lost:'—', '', settledNote);
 }
 
 /* ============ DATE STRIP ============ */
@@ -453,10 +483,11 @@ function renderStrip(){
 
 /* ============ TOP PREDICTION CARDS (active date bankers, top 6) ============ */
 function renderCards(){
-  const cards = (byDate[activeDate]||[]).filter(r=>r.banker).sort((a,b)=>b.rankWeight-a.rankWeight).slice(0,6);
+  const rows = byDate[activeDate]||[];
+  const cards = enginePicks(rows).sort((a,b)=>(b.weight||0)-(a.weight||0)).slice(0,6);
   document.getElementById('cards-day').textContent = dayLabel(activeDate);
   const wrap = document.getElementById('pred-cards');
-  if(!cards.length){ wrap.innerHTML = `<div class="sm:col-span-2 lg:col-span-3 panel rounded-2xl p-6 text-center" style="color:var(--muted)">No bankers qualified for ${dayLabel(activeDate).toLowerCase()} — protecting the stake is a valid outcome.</div>`; return; }
+  if(!cards.length){ wrap.innerHTML = `<div class="sm:col-span-2 lg:col-span-3 panel rounded-2xl p-6 text-center" style="color:var(--muted)">No bankers qualified for ${dayLabel(activeDate).toLowerCase()} on this engine — protecting the stake is a valid outcome.</div>`; return; }
   wrap.innerHTML = cards.map(b=>{
     const res = settle(b.primary,b.match.homeGoals,b.match.awayGoals);
     const resTag = res?`<span class="px-2 py-0.5 rounded-md text-[10px] font-bold ${resClass(res)}">${res.toUpperCase()}</span>`:'';
@@ -467,7 +498,7 @@ function renderCards(){
         <span class="text-xs tnum" style="color:var(--muted)">${t}</span>
       </div>
       <div class="display font-semibold mb-1 flex items-center gap-2 flex-wrap">${b.match.home} <span style="color:var(--muted)">v</span> ${b.match.away} ${resTag}</div>
-      <div class="text-xs mb-3" style="color:var(--muted)">${b.wdnb.reasons[0]||''}</div>
+      <div class="text-xs mb-3" style="color:var(--muted)">${(b.reason||'').slice(0,90)}</div>
       <div class="flex items-center justify-between">
         <span class="px-3 py-1 rounded-lg text-sm font-semibold ${pill(b.primary)}">${b.primary}</span>
         <span class="text-xs" style="color:var(--muted)">${b.confidence}</span>
@@ -990,7 +1021,7 @@ function renderStrictMatches(){
       : mode==='rulespro'
       ? 'Elite Bankers: exact-threshold engine (full spec gates per market). Some % inputs (win rate, clean sheet, FTS) are ESTIMATED from PPG/goals — flagged on each pick. Strict by design; expect many No Bets. Unproven — track first.'
       : '';
-    renderMatches();
+    renderStats(); renderCards(); renderMatches();
   }
   bn.addEventListener('click',()=>setMode('normal'));
   bs.addEventListener('click',()=>setMode('strict'));
