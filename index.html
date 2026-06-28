@@ -830,7 +830,7 @@ function renderRulesProMatches(){
   const host=document.getElementById('matches-root');
   if (typeof rulesProRecommend !== 'function'){ host.innerHTML='<div class="p-6 text-center" style="color:var(--muted)">Elite Bankers engine unavailable — deploy the latest banker-engine.js.</div>'; return; }
   const dayMatches=(byDate[activeDate]||[]);
-  const picks=dayMatches.map(rulesProRecommend).filter(r=>r.bet);
+  const picks=dayMatches.map(r=>rulesProRecommend(r.match)).filter(r=>r.bet);
   let html='';
   html += `<div class="panel rounded-xl p-3 mb-3 text-sm" style="border:1px solid rgba(76,175,39,.4);background:rgba(76,175,39,.07)">
     <strong style="color:var(--brand)"><i class="fa-solid fa-ruler-combined"></i> Elite Bankers — exact-threshold engine.</strong>
@@ -875,7 +875,7 @@ function renderUltraMatches(){
   const host=document.getElementById('matches-root');
   if (typeof ultraRecommend !== 'function'){ host.innerHTML='<div class="p-6 text-center" style="color:var(--muted)">Ultra engine unavailable.</div>'; return; }
   const dayMatches=(byDate[activeDate]||[]);
-  const picks=dayMatches.map(ultraRecommend).filter(r=>r.bet);
+  const picks=dayMatches.map(r=>ultraRecommend(r.match)).filter(r=>r.bet);
   let html='';
   html += `<div class="panel rounded-xl p-3 mb-3 text-sm" style="border:1px solid rgba(76,175,39,.4);background:rgba(76,175,39,.07)">
     <strong style="color:var(--brand)"><i class="fa-solid fa-shield-halved"></i> Ultra Bankers — Universal Market Engine.</strong>
