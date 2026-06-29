@@ -50,6 +50,25 @@
 
 function clamp(n, lo, hi) { return Math.max(lo, Math.min(hi, n)); }
 
+// DATA QUALITY GATE — reject matches whose stats are too thin to trust.
+// A pick built on a handful of games is noise, not signal. Engines call this
+// first and return No Bet when the data isn't solid enough.
+function dataQualityOK(m){
+  // not enough games played in the season → unreliable rates
+  const gp = m.gamesPlayed;
+  if (gp != null && gp < 5) return false;
+  // venue (home/away) sample too thin → home/away splits unreliable
+  const hvg = m.homeVenueGames, avg = m.awayVenueGames;
+  if (hvg != null && hvg < 3) return false;
+  if (avg != null && avg < 3) return false;
+  // core goal data missing entirely → can't model anything
+  if (m.homeScoredAtHome == null && m.awayScoredAway == null) return false;
+  // league baseline unreliable AND we have no team goal data to fall back on
+  const la = m.leagueAvg;
+  if ((!la || !la.reliable) && m.homeScoredAtHome == null) return false;
+  return true;
+}
+
 function formPoints(form) {
   if (!form) return 0;
   let pts = 0, n = 0;
@@ -438,6 +457,9 @@ function leagueLean(m) {
 
 /* ---------------- FINAL RECOMMENDATION (Rules 1,9,13) -------- */
 function recommend(m) {
+  if(!dataQualityOK(m)){
+    return { match:m, over:null, btts:null, under:null, wdnb:null, primary:"Skip", confidence:"Low", banker:false, rankWeight:0, summary:"Low-quality data — skipped.", value:null, chosenKind:null, lean:null };
+  }
   const over = scoreOver25(m);
   const btts = scoreBTTS(m);
   const wdnb = scoreWinDNB(m);
@@ -613,14 +635,26 @@ function settle(primary, homeGoals, awayGoals) {
     case "Away Win": return awayWon ? "Won" : "Lost";
     case "Home DNB": return draw ? "Void" : (homeWon ? "Won" : "Lost");
     case "Away DNB": return draw ? "Void" : (awayWon ? "Won" : "Lost");
-    case "Over 2.5": return total >= 3 ? "Won" : "Lost";
+    case "Double Chance 1X": return (homeWon || draw) ? "Won" : "Lost";
+    case "Double Chance X2": return (awayWon || draw) ? "Won" : "Lost";
+    case "Double Chance 12": return !draw ? "Won" : "Lost";
     case "Over 1.5": return total >= 2 ? "Won" : "Lost";
+    case "Over 2.5": return total >= 3 ? "Won" : "Lost";
+    case "Over 3.5": return total >= 4 ? "Won" : "Lost";
     case "Under 2.5": return total <= 2 ? "Won" : "Lost";
     case "Under 3.5": return total <= 3 ? "Won" : "Lost";
+    case "Under 4.5": return total <= 4 ? "Won" : "Lost";
     case "BTTS Yes": return bothScored ? "Won" : "Lost";
+    case "BTTS No": return !bothScored ? "Won" : "Lost";
     case "Over 2.5 + BTTS": return (total >= 3 && bothScored) ? "Won" : "Lost";
+    case "Home Team Over 0.5 Goals": return homeGoals >= 1 ? "Won" : "Lost";
+    case "Away Team Over 0.5 Goals": return awayGoals >= 1 ? "Won" : "Lost";
+    case "Home Team Over 1.5 Goals": return homeGoals >= 2 ? "Won" : "Lost";
+    case "Away Team Over 1.5 Goals": return awayGoals >= 2 ? "Won" : "Lost";
+    case "Home Team Under 1.5 Goals": return homeGoals <= 1 ? "Won" : "Lost";
+    case "Away Team Under 1.5 Goals": return awayGoals <= 1 ? "Won" : "Lost";
     case "Skip": return ""; // no bet was placed
-    case "No Bet": return ""; // strict engine declined
+    case "No Bet": return ""; // engine declined
     default: return "";
   }
 }
@@ -764,6 +798,12 @@ function strictRecommend(m) {
     // ELITE-ONLY: a strict bet now needs confidence >= 8 (was 7).
     bet: decision === "Bet" && market !== "No Bet" && confidence >= STRICT_CONF_FLOOR,
   });
+
+  // ---- DATA QUALITY GATE ----
+  if(!dataQualityOK(m)){
+    block("All markets", "Low-quality data — not enough reliable games.");
+    return result("No Bet", "Avoid", 0);
+  }
 
   // ---- need tiers to proceed ----
   if (homeTier == null || awayTier == null) {
@@ -981,6 +1021,7 @@ function analyseStrict(matches) {
 function ultraRecommend(m) {
   const size = m.tableSize ?? 20;
   const blocked = [];
+  if(!dataQualityOK(m)) return { match:m, engine:"ultra", primary:"No Bet", confidence:0, bet:false, banker:false, passed:[], failed:["Low-quality data — skipped."], blocked:[], humanChecks:[], allScores:[], verdict:"Low-quality data — skipped." };
   const humanChecks = [];
 
   const homeTier = tierFromProfile(m, 'home');
@@ -1140,6 +1181,7 @@ function estFTS(gf){ if(gf==null) return null; return clamp(0.50-(gf-0.7)*0.22,0
 function rulesProRecommend(m){
   const size = m.tableSize ?? 20;
   const blocked = [];
+  if(!dataQualityOK(m)) return { match:m, engine:"rulespro", primary:"No Bet", confidence:0, bet:false, banker:false, note:"", usedEstimates:false, blocked:[], humanChecks:[], verdict:"Low-quality data — skipped." };
   const humanChecks = ["Verify manually: derby, rotation, suspicious odds movement, weather, neutral venue, dead rubber, motivation."];
   let usedEstimates = false;
 
@@ -1281,6 +1323,7 @@ function rulesProRecommend(m){
    (Win%, unbeaten%, clean-sheet%, FTS% are ESTIMATED — flagged.)
    ------------------------------------------------------------------- */
 function apexRecommend(m){
+  if(!dataQualityOK(m)) return { match:m, engine:"apex", primary:"No Bet", confidence:0, bet:false, banker:false, usedEstimates:false, blocked:[], humanChecks:[], allScores:[], homeResistant:false, resistScore:0, verdict:"Low-quality data — skipped." };
   const base = rulesProRecommend(m); // Elite pick first
   const size = m.tableSize ?? 20;
 
@@ -1375,6 +1418,7 @@ function apexRecommend(m){
    ------------------------------------------------------------------- */
 function primeRecommend(m){
   const size = m.tableSize ?? 20;
+  if(!dataQualityOK(m)) return primeOut(m,"No Bet","No Bet",99,["Low-quality data — skipped."],"Unknown",null);
   const la = m.leagueAvg;
   // league average team goals (per team per game)
   const latgTeam = (la && la.reliable && la.goalsPerGame) ? la.goalsPerGame/2 : 1.35;
@@ -1667,6 +1711,7 @@ function factorial(n){ let r=1; for(let i=2;i<=n;i++) r*=i; return r; }
 function poissonP(k, lambda){ return Math.pow(lambda,k)*Math.exp(-lambda)/factorial(k); }
 
 function valueRecommend(m){
+  if(!dataQualityOK(m)) return valueOut(m,"No Bet",0,null,["Insufficient/low-quality data — skipped."]);
   const la = m.leagueAvg;
   const leagueAvgTeam = (la && la.reliable && la.goalsPerGame) ? la.goalsPerGame/2 : 1.35;
 
