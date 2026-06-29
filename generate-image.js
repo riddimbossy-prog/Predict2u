@@ -45,37 +45,50 @@ function strongestFn(fn){
   return best;
 }
 
-const picks = [
+const rawPicks = [
   { engine:"Normal", pick: strongestNormal() },
   { engine:"Strict", pick: strongestStrict() },
   { engine:"Ultra",  pick: strongestFn(eng.ultraRecommend) },
   { engine:"Elite",  pick: strongestFn(eng.rulesProRecommend) },
   { engine:"Apex",   pick: strongestFn(eng.apexRecommend) },
-];
+  { engine:"Prime",  pick: strongestFn(eng.primeRecommend) },
+].filter(p=>p.pick);
 
-const W=1080, pad=70, cw=W-pad*2, cardH=176;
-// dynamic height: header(336) + cards + CTA band + disclaimer + margin
-const H = 336 + (picks.length * (cardH+20)) + 200;
+// Group by match: same game from multiple engines combos into one card.
+const groups = [];
+const byMatch = {};
+for(const {engine,pick} of rawPicks){
+  const key = (pick.home+"|"+pick.away).toLowerCase();
+  if(!byMatch[key]){ byMatch[key]={ home:pick.home, away:pick.away, league:pick.league, lines:[] }; groups.push(byMatch[key]); }
+  byMatch[key].lines.push({ engine, market:pick.market, conf:pick.conf });
+}
+
+const W=1080, pad=70, cw=W-pad*2, lineH=46;
+// each card height depends on how many engine-lines it has
+function cardHeightFor(g){ return 96 + g.lines.length*lineH + 24; }
+const totalCardsH = groups.reduce((s,g)=>s+cardHeightFor(g)+20, 0);
+const H = 336 + totalCardsH + 200;
 const dstr = new Date().toLocaleDateString("en-GB",{weekday:"long",day:"numeric",month:"long"});
 
 let cards=""; let y=336;
-for(const {engine,pick} of picks){
-  cards += `<rect x="${pad}" y="${y}" width="${cw}" height="${cardH}" rx="22" fill="rgba(255,255,255,0.04)" stroke="rgba(76,175,39,0.28)" stroke-width="2"/>`;
-  cards += `<text x="${pad+34}" y="${y+44}" font-family="Arial,sans-serif" font-weight="bold" font-size="24" fill="#4CAF27">${engine.toUpperCase()} BANKER</text>`;
-  if(pick){
-    // reserve space for the market pill on the right so long names never collide
-    const label=esc(pick.market); const lw=label.length*18+48; const px=pad+cw-lw-34;
-    const nameMaxChars = Math.max(14, Math.floor((px - (pad+34)) / 21)); // chars that fit before pill
-    const matchLine = trunc(pick.home+" v "+pick.away, nameMaxChars);
-    cards += `<text x="${pad+34}" y="${y+96}" font-family="Arial,sans-serif" font-weight="bold" font-size="38" fill="#ffffff">${esc(matchLine)}</text>`;
-    cards += `<text x="${pad+34}" y="${y+140}" font-family="Arial,sans-serif" font-size="24" fill="#8a93a6">${esc(trunc(pick.league,40))}</text>`;
-    cards += `<rect x="${px}" y="${y+58}" width="${lw}" height="54" rx="14" fill="rgba(76,175,39,0.18)"/>`;
-    cards += `<text x="${px+24}" y="${y+93}" font-family="Arial,sans-serif" font-weight="bold" font-size="30" fill="#7ee05a">${label}</text>`;
-    cards += `<text x="${px+24}" y="${y+138}" font-family="Arial,sans-serif" font-weight="600" font-size="22" fill="#8a93a6">conf ${pick.conf}/10</text>`;
-  } else {
-    cards += `<text x="${pad+34}" y="${y+104}" font-family="Arial,sans-serif" font-style="italic" font-size="30" fill="#8a93a6">No qualifying pick today</text>`;
+for(const g of groups){
+  const ch = cardHeightFor(g);
+  const combo = g.lines.length>1;
+  cards += `<rect x="${pad}" y="${y}" width="${cw}" height="${ch}" rx="22" fill="rgba(255,255,255,0.04)" stroke="rgba(76,175,39,${combo?0.5:0.28})" stroke-width="2"/>`;
+  // match title
+  const matchLine = trunc(g.home+" v "+g.away, 34);
+  cards += `<text x="${pad+34}" y="${y+50}" font-family="Arial,sans-serif" font-weight="bold" font-size="38" fill="#ffffff">${esc(matchLine)}</text>`;
+  cards += `<text x="${pad+34}" y="${y+84}" font-family="Arial,sans-serif" font-size="22" fill="#8a93a6">${esc(trunc(g.league,38))}${combo?`  ·  ${g.lines.length} engines agree`:''}</text>`;
+  // engine lines
+  let ly = y+96+30;
+  for(const ln of g.lines){
+    cards += `<text x="${pad+34}" y="${ly}" font-family="Arial,sans-serif" font-weight="bold" font-size="20" fill="#4CAF27">${ln.engine.toUpperCase()}</text>`;
+    const label=esc(ln.market); const lw=label.length*17+44; const px=pad+cw-lw-34;
+    cards += `<rect x="${px}" y="${ly-30}" width="${lw}" height="44" rx="12" fill="rgba(76,175,39,0.18)"/>`;
+    cards += `<text x="${px+22}" y="${ly}" font-family="Arial,sans-serif" font-weight="bold" font-size="26" fill="#7ee05a">${label}</text>`;
+    ly += lineH;
   }
-  y += cardH+20;
+  y += ch+20;
 }
 
 const disclaimer = "Heuristic picks, not guarantees. A banker fits our rules - not a sure win. Only stake what you can afford to lose. 18+ - Gamble responsibly - predict2u.com";
@@ -106,7 +119,7 @@ fs.writeFileSync(path.join(HERE,"today.svg"), svg);
     fs.writeFileSync(path.join(HERE,"today.png"), buf);
     try { fs.mkdirSync(path.join(HERE,"daily"),{recursive:true}); } catch(e){}
     fs.writeFileSync(path.join(HERE,"daily",`${todayStr}.png`), buf);
-    console.log("Generated today.png + daily/"+todayStr+".png ("+picks.filter(p=>p.pick).length+" picks)");
+    console.log("Generated today.png + daily/"+todayStr+".png ("+rawPicks.length+" picks, "+groups.length+" cards)");
   } catch(e){
     console.log("PNG conversion failed ("+e.message+"); today.svg still written.");
   }
