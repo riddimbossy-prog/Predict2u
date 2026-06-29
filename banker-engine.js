@@ -1487,13 +1487,21 @@ function primeRecommend(m){
 
   // ---- UNDER 3.5 (protection) ----
   {
+    const highScoring = (leagueType==="High-Scoring"||leagueType==="Inflated-Chaos");
     let ok = goalIndex<=T.u35 || (sameTier && goalIndex<1.10);
+    // In high-scoring leagues, goals are the natural state — Under 3.5 only
+    // qualifies if the game is GENUINELY extreme (very controlled), not merely
+    // "below average". Over 1.5 is the default there.
+    if(highScoring){
+      ok = (goalIndex<=T.u35*0.92) && (sameTier || (hAR<0.85 && aAR<0.85));
+    }
     // avoid conditions
     if(goalIndex>1.20 || homeDefVleaky||awayDefVleaky || hAR>=T.ea) ok=false;
     if(ok){
       let r=baseRisk("Under 3.5",false);
       r-=1; // under in compressed match relief
-      cands.push({market:"Under 3.5", risk:Math.max(0,r), reasons:[`Controlled profile (Goal Index ${(goalIndex*100|0)}%).`]});
+      if(highScoring) r+=1; // less relief in goal-friendly leagues
+      cands.push({market:"Under 3.5", risk:Math.max(0,r), reasons:[`Controlled profile (Goal Index ${(goalIndex*100|0)}%)${highScoring?' — extreme control in a high-scoring league':''}.`]});
     }
   }
 
@@ -1580,7 +1588,10 @@ function primeRecommend(m){
   if(!cands.length){
     return primeOut(m,"No Bet","No Bet",99,["No market qualified."],leagueType,goalIndex);
   }
-  const priority = ["Under 3.5","Over 1.5","Double Chance 1X","Double Chance X2","Home DNB","Away DNB","Home Team Over 0.5 Goals","Away Team Over 0.5 Goals","Home Win","Away Win","Home Team Over 1.5 Goals","Away Team Over 1.5 Goals","Over 2.5","BTTS Yes","BTTS No"];
+  const highScoringLeague = (leagueType==="High-Scoring"||leagueType==="Inflated-Chaos");
+  const priority = highScoringLeague
+    ? ["Over 1.5","Under 3.5","Double Chance 1X","Double Chance X2","Home DNB","Away DNB","Home Team Over 0.5 Goals","Away Team Over 0.5 Goals","Home Win","Away Win","Home Team Over 1.5 Goals","Away Team Over 1.5 Goals","Over 2.5","BTTS Yes","BTTS No"]
+    : ["Under 3.5","Over 1.5","Double Chance 1X","Double Chance X2","Home DNB","Away DNB","Home Team Over 0.5 Goals","Away Team Over 0.5 Goals","Home Win","Away Win","Home Team Over 1.5 Goals","Away Team Over 1.5 Goals","Over 2.5","BTTS Yes","BTTS No"];
   cands.sort((a,b)=> a.risk-b.risk || (priority.indexOf(a.market)-priority.indexOf(b.market)));
   const best=cands[0];
   const tierName = best.risk===0?"Elite Banker":best.risk===1?"Tier A Banker":best.risk===2?"Strong Tier B":best.risk===3?"Soft Tier B":best.risk<=5?"Tier C":"No Bet";
