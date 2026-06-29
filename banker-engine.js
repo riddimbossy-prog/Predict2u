@@ -1364,6 +1364,245 @@ function apexRecommend(m){
 }
 
 /* ============================================================
+   PRIME BANKERS ENGINE 1.0 — "Only true teams qualify."
+   Ratio-based strict filter. Classifies the league by LATG, applies
+   per-league Prime thresholds, computes attack/defence RATIOS (vs league
+   avg) AND raw floors (ratio must be confirmed by raw GA — no ratio-only
+   upgrades), runs true-team / true-defence checks, compression filters,
+   a market-confirmation overlay (when odds exist), then a risk-point
+   tiering. Outputs ONE market or No Bet.
+   Probability/market parts are DERIVED from win-rate/odds and flagged.
+   ------------------------------------------------------------------- */
+function primeRecommend(m){
+  const size = m.tableSize ?? 20;
+  const la = m.leagueAvg;
+  // league average team goals (per team per game)
+  const latgTeam = (la && la.reliable && la.goalsPerGame) ? la.goalsPerGame/2 : 1.35;
+  const LATG = latgTeam*2;
+
+  // ---- league classification ----
+  let leagueType, T;
+  if (LATG < 2.40) leagueType="Low-Scoring";
+  else if (LATG <= 3.00) leagueType="Medium-Scoring";
+  else if (LATG <= 3.40) leagueType="High-Scoring";
+  else leagueType="Inflated-Chaos";
+
+  // ---- Prime thresholds per league (strongAtt, eliteAtt, leaky, vleaky, o15, o25, u35, rawLeaky, rawVleaky) ----
+  const TBL = {
+    "Low-Scoring":    {sa:1.35,ea:1.65,lk:1.45,vl:1.80,o15:1.10,o25:1.45,u35:1.05,rlk:1.65,rvl:2.00},
+    "Medium-Scoring": {sa:1.30,ea:1.60,lk:1.35,vl:1.70,o15:1.05,o25:1.40,u35:1.02,rlk:1.55,rvl:1.90},
+    "High-Scoring":   {sa:1.25,ea:1.55,lk:1.30,vl:1.65,o15:1.00,o25:1.35,u35:0.98,rlk:1.80,rvl:2.25},
+    "Inflated-Chaos": {sa:1.25,ea:1.55,lk:1.30,vl:1.60,o15:1.05,o25:1.40,u35:0.95,rlk:2.30,rvl:2.75},
+  };
+  T = TBL[leagueType];
+
+  // ---- core rates ----
+  const hGF=m.homeScoredAtHome, hGA=m.homeConcededAtHome, aGF=m.awayScoredAway, aGA=m.awayConcededAway;
+  if(hGF==null||hGA==null||aGF==null||aGA==null){
+    return primeOut(m,"No Bet","No Bet",99,["Insufficient goal data."],leagueType,null);
+  }
+  // ratios vs league avg team goals
+  const hAR=hGF/latgTeam, aAR=aGF/latgTeam;          // attack ratios
+  const hDR=hGA/latgTeam, aDR=aGA/latgTeam;          // defensive ratios (higher=concedes more)
+  const goalIndex=(hGF+hGA+aGF+aGA)/(2*LATG);        // as a ratio (1.0 = 100%)
+
+  // ---- true defence checks (ratio AND raw must both confirm) ----
+  const homeDefLeaky  = (hDR>=T.lk && hGA>=T.rlk);
+  const homeDefVleaky = (hDR>=T.vl && hGA>=T.rvl);
+  const awayDefLeaky  = (aDR>=T.lk && aGA>=T.rlk);
+  const awayDefVleaky = (aDR>=T.vl && aGA>=T.rvl);
+
+  // ---- probabilities (DERIVED — real win-rate biased by table gap, refined by odds) ----
+  const o=m.odds;
+  const impl = (x)=> x? 1/x : null;
+  let pHome = impl(o&&o.home), pDraw=impl(o&&o.draw), pAway=impl(o&&o.away);
+  if(pHome&&pDraw&&pAway){ const s=pHome+pDraw+pAway; pHome/=s; pDraw/=s; pAway/=s; } // normalise
+  const hasMarket = !!(pHome&&pAway);
+  // fallback derived from win-rate when no odds
+  const hWinR = m.homeWinRate ?? null, aWinR=m.awayWinRate ?? null;
+  const homeWinProb = hasMarket? pHome : (hWinR!=null? hWinR : 0.45);
+  const awayWinProb = hasMarket? pAway : (aWinR!=null? aWinR : 0.27);
+
+  // ---- tiers / positions / compression ----
+  const tier=(pos)=>{
+    if(pos==null) return null;
+    if(size>=18){ if(pos<=4)return 1; if(pos<=8)return 2; if(pos<=14)return 3; if(pos<=17)return 4; return 5; }
+    if(size>=15){ if(pos<=3)return 1; if(pos<=6)return 2; if(pos<=11)return 3; if(pos<=14)return 4; return 5; }
+    if(size>=12){ if(pos<=3)return 1; if(pos<=5)return 2; if(pos<=8)return 3; if(pos<=10)return 4; return 5; }
+    if(size>=10){ if(pos<=2)return 1; if(pos<=4)return 2; if(pos<=7)return 3; if(pos<=9)return 4; return 5; }
+    if(pos<=2)return 1; if(pos<=5)return 2; return 3;
+  };
+  const hTier=tier(m.homePos), aTier=tier(m.awayPos);
+  const sameTier = (hTier!=null&&aTier!=null&&hTier===aTier);
+  const topClash = (hTier===1&&aTier===1);
+  const posGap = (m.homePos!=null&&m.awayPos!=null)? Math.abs(m.homePos-m.awayPos) : null;
+
+  // ---- candidate evaluation with risk points ----
+  // helper: count true conditions
+  const cnt = (...c)=>c.filter(Boolean).length;
+  const cands=[]; // {market, risk, reasons[]}
+  const homeStronger = (m.homePos!=null&&m.awayPos!=null) ? m.homePos<m.awayPos : hAR>aAR;
+  const favWinProb = homeStronger? homeWinProb : awayWinProb;
+
+  // base risk from sample/compression that applies broadly
+  function baseRisk(market, aggressive){
+    let r=0;
+    if(m.gamesPlayed!=null && m.gamesPlayed<6) r+=1;
+    if(m.gamesPlayed!=null && m.gamesPlayed<5) r+=1;
+    if(sameTier) r+=1;
+    if(topClash && aggressive) r+=2;
+    if(posGap!=null && posGap<=2) r+=1;
+    else if(posGap!=null && posGap<=5) r+=1;
+    return r;
+  }
+
+  // ---- OVER 1.5 ----
+  {
+    const weakerAR=Math.min(hAR,aAR);
+    const oneTeamDep = weakerAR<0.85;
+    const conds = cnt(hAR>=T.sa||aAR>=T.sa, homeDefLeaky||awayDefLeaky, (hGF+aGF)>=LATG*0.9, favWinProb>=0.55, hasMarket&&((pHome+pAway)>0.6), !sameTier, weakerAR>=0.85);
+    let ok = goalIndex>=T.o15 && conds>=2;
+    if(oneTeamDep){
+      const trig = cnt((Math.max(hAR,aAR))>=T.ea, homeDefLeaky||awayDefLeaky, favWinProb>=0.60, goalIndex>=1.20);
+      if(trig<1) ok=false;
+    }
+    if(ok){
+      let r=baseRisk("Over 1.5",true);
+      if(oneTeamDep) r+=2;
+      cands.push({market:"Over 1.5", risk:r, reasons:[`Goal Index ${(goalIndex*100|0)}% ≥ Over1.5 gate; ${conds} confirmations.`]});
+    }
+  }
+
+  // ---- OVER 2.5 (hard) ----
+  {
+    const conds = cnt(hAR>=T.sa&&aAR>=T.sa, hAR>=T.ea||aAR>=T.ea, homeDefVleaky||awayDefVleaky, homeDefLeaky&&awayDefLeaky, hasMarket&&((pHome+pAway)>0.62), !sameTier, !topClash, (hGA>=T.rlk||aGA>=T.rlk), (hAR>=1.0&&aAR>=1.0));
+    let ok = goalIndex>=T.o25 && conds>=3;
+    if(sameTier){ ok = goalIndex>=1.50 && (homeDefVleaky||awayDefVleaky) && (hAR>=1.0&&aAR>=1.0); }
+    if(ok){
+      let r=baseRisk("Over 2.5",true);
+      if(sameTier) r+=3;
+      cands.push({market:"Over 2.5", risk:r, reasons:[`Goal Index ${(goalIndex*100|0)}% with ${conds} aggressive confirmations.`]});
+    }
+  }
+
+  // ---- UNDER 3.5 (protection) ----
+  {
+    let ok = goalIndex<=T.u35 || (sameTier && goalIndex<1.10);
+    // avoid conditions
+    if(goalIndex>1.20 || homeDefVleaky||awayDefVleaky || hAR>=T.ea) ok=false;
+    if(ok){
+      let r=baseRisk("Under 3.5",false);
+      r-=1; // under in compressed match relief
+      cands.push({market:"Under 3.5", risk:Math.max(0,r), reasons:[`Controlled profile (Goal Index ${(goalIndex*100|0)}%).`]});
+    }
+  }
+
+  // ---- TEAM OVER 1.5 (true team) ----
+  function teamOver15(side){
+    const AR=side==='home'?hAR:aAR, oppLeaky=side==='home'?awayDefLeaky:homeDefLeaky, oppVleaky=side==='home'?awayDefVleaky:homeDefLeaky;
+    const winP=side==='home'?homeWinProb:awayWinProb, oppAR=side==='home'?aAR:hAR;
+    const tableAdv=side==='home'?(homeStronger):(!homeStronger);
+    const conds=cnt(AR>=T.sa, AR>=T.ea, oppLeaky, oppVleaky, winP>=0.58, tableAdv&&posGap!=null&&posGap>=6, oppAR<0.80, goalIndex>=1.20, hasMarket&&winP>=0.5);
+    let ok=conds>=3;
+    if(sameTier||topClash){ ok = AR>=T.ea && oppLeaky && winP>=0.60; }
+    if(ok){
+      let r=baseRisk("Team Over 1.5",true);
+      if(sameTier||topClash) r+=3;
+      cands.push({market:(side==='home'?"Home":"Away")+" Team Over 1.5 Goals", risk:r, reasons:[`True-team check ${conds} confirmations.`]});
+    }
+  }
+  teamOver15('home'); teamOver15('away');
+
+  // ---- TEAM OVER 0.5 (safer substitute) ----
+  function teamOver05(side){
+    const AR=side==='home'?hAR:aAR, oppElite=(side==='home'?aDR:hDR)<0.7; // opponent elite defence
+    const ok = AR>=1.0 && !oppElite && goalIndex>=0.90;
+    if(ok){
+      let r=baseRisk("Team Over 0.5",false);
+      cands.push({market:(side==='home'?"Home":"Away")+" Team Over 0.5 Goals", risk:r, reasons:[`Attack ratio ${(AR*100|0)}% with scoring route.`]});
+    }
+  }
+  teamOver05('home'); teamOver05('away');
+
+  // ---- BTTS ----
+  {
+    const bothRoute = hAR>=0.85 && aAR>=0.85;
+    const extra = cnt(homeDefLeaky||awayDefLeaky, (hGF>=latgTeam||aGF>=latgTeam), hasMarket, goalIndex>=1.20);
+    if(bothRoute && extra>=1 && !(hAR<0.75||aAR<0.75)){
+      let r=baseRisk("BTTS Yes",true);
+      if(sameTier&&topClash) r+=1;
+      if(leagueType==="Low-Scoring") r+=1;
+      cands.push({market:"BTTS Yes", risk:r, reasons:[`Both attacks ≥85% with ${extra} support.`]});
+    }
+    const oneWeak = hAR<0.75||aAR<0.75;
+    if(oneWeak && goalIndex<1.00){
+      let r=baseRisk("BTTS No",false);
+      cands.push({market:"BTTS No", risk:r, reasons:[`One weak attack; low goal index.`]});
+    }
+  }
+
+  // ---- WIN / DNB / DOUBLE CHANCE ----
+  {
+    const favSide=homeStronger?'home':'away';
+    const favAR=homeStronger?hAR:aAR, oppLeaky=homeStronger?awayDefLeaky:homeDefLeaky;
+    const clearGap = posGap!=null && posGap>=6;
+    // straight win
+    if(favWinProb>=0.60 && (favAR>=T.sa) && oppLeaky && clearGap && !sameTier){
+      let r=baseRisk("Win",false);
+      cands.push({market:(homeStronger?"Home":"Away")+" Win", risk:r, reasons:[`Win prob ${(favWinProb*100|0)}%, strong attack, leaky opp, clear gap.`]});
+    }
+    // DNB
+    if(favWinProb>=0.50 && favWinProb<0.60 && favAR>=aAR && !sameTier){
+      let r=baseRisk("DNB",false);
+      cands.push({market:(homeStronger?"Home":"Away")+" DNB", risk:r, reasons:[`Edge present, win not clean (prob ${(favWinProb*100|0)}%).`]});
+    }
+    // double chance
+    if((sameTier || (posGap!=null&&posGap<=5)) && favAR>aAR*0.0 && favWinProb>=0.45){
+      let r=baseRisk("DC",false);
+      cands.push({market:(homeStronger?"Double Chance 1X":"Double Chance X2"), risk:r, reasons:[`Edge but compression/risk — cover via DC.`]});
+    }
+  }
+
+  // ---- market disagreement overlay (+2) ----
+  cands.forEach(c=>{
+    if(hasMarket){
+      if(/Home Team|Home Win|Double Chance 1X/.test(c.market) && pHome<0.45) c.risk+=2;
+      if(/Away Team|Away Win|Double Chance X2/.test(c.market) && pAway<0.30) c.risk+=2;
+      if(/Over 2.5/.test(c.market) && Math.abs(pHome-pAway)<0.08 && sameTier) c.risk+=2;
+    }
+    // strong favourite relief
+    const reliefAR = homeStronger? hAR : aAR;
+    const reliefOppDR = homeStronger? aDR : hDR;
+    if(favWinProb>=0.60 && (reliefAR>=1.40 || reliefOppDR>=1.40)) c.risk=Math.max(0,c.risk-1);
+  });
+
+  // ---- select by final market priority among those within risk budget ----
+  if(!cands.length){
+    return primeOut(m,"No Bet","No Bet",99,["No market qualified."],leagueType,goalIndex);
+  }
+  const priority = ["Under 3.5","Over 1.5","Double Chance 1X","Double Chance X2","Home DNB","Away DNB","Home Team Over 0.5 Goals","Away Team Over 0.5 Goals","Home Win","Away Win","Home Team Over 1.5 Goals","Away Team Over 1.5 Goals","Over 2.5","BTTS Yes","BTTS No"];
+  cands.sort((a,b)=> a.risk-b.risk || (priority.indexOf(a.market)-priority.indexOf(b.market)));
+  const best=cands[0];
+  const tierName = best.risk===0?"Elite Banker":best.risk===1?"Tier A Banker":best.risk===2?"Strong Tier B":best.risk===3?"Soft Tier B":best.risk<=5?"Tier C":"No Bet";
+  if(best.risk>=6){
+    return primeOut(m,"No Bet","No Bet",best.risk,["Best market exceeded risk budget."],leagueType,goalIndex);
+  }
+  return primeOut(m,best.market,tierName,best.risk,best.reasons,leagueType,goalIndex,!hasMarket);
+}
+
+function primeOut(m,market,tierName,risk,reasons,leagueType,goalIndex,derived){
+  const banker = (tierName==="Elite Banker"||tierName==="Tier A Banker"||tierName==="Strong Tier B");
+  return {
+    match:m, engine:"prime", primary:market, bet:market!=="No Bet",
+    banker, confidence: Math.max(0,10-risk), riskPoints:risk, tier:tierName,
+    leagueType, goalIndex: goalIndex!=null? Math.round(goalIndex*100):null,
+    usedEstimates: !!derived,
+    verdict: `${market}${market!=="No Bet"?" — "+tierName+" (risk "+risk+")":""}. ${reasons.join(' ')}${derived?' [market derived from win-rate, no odds]':''}`,
+    reasons, humanChecks:["Verify: injuries, rotation, motivation, weather."]
+  };
+}
+
+/* ============================================================
    ULTRA-STRICT: STREAK ENGINE (separate path)
    Fires on STREAK signals alone, independent of the tier engines.
    HONESTY NOTES baked into the labels:
@@ -1426,5 +1665,5 @@ function streakRecommend(m) {
 
 if (typeof module !== "undefined") module.exports = {
   analyseAll, recommend, scoreOver25, scoreBTTS, scoreWinDNB, settle,
-  analyseStrict, strictRecommend, tierFromRank, streakRecommend, ultraRecommend, rulesProRecommend, apexRecommend
+  analyseStrict, strictRecommend, tierFromRank, streakRecommend, ultraRecommend, rulesProRecommend, apexRecommend, primeRecommend
 };
