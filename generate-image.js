@@ -52,6 +52,7 @@ const rawPicks = [
   { engine:"Elite",  pick: strongestFn(eng.rulesProRecommend) },
   { engine:"Apex",   pick: strongestFn(eng.apexRecommend) },
   { engine:"Prime",  pick: strongestFn(eng.primeRecommend) },
+  { engine:"Value",  pick: strongestFn(eng.valueRecommend) },
 ].filter(p=>p.pick);
 
 // Group by match: same game from multiple engines combos into one card.
