@@ -285,10 +285,15 @@
         <label class="flex items-center gap-2 text-sm panel-2 rounded-xl px-3 py-2 cursor-pointer" style="color:var(--ink)">
           <input id="filter-upcoming" type="checkbox" class="accent-yellow-500" /> Upcoming only
         </label>
-        <label class="flex items-center gap-2 text-sm panel-2 rounded-xl px-3 py-2 cursor-pointer" style="color:var(--ink)" title="Only Win picks priced at or below 1.55">
-          <input id="filter-safeodds" type="checkbox" class="accent-yellow-500" /> Wins ≤1.55 only
-        </label>
+        <div class="flex items-center gap-2 text-sm panel-2 rounded-xl px-3 py-2" style="color:var(--ink)" title="Filter Win picks by their real bookmaker odds. Other markets have no odds in our data and are unaffected.">
+          <i class="fa-solid fa-sliders" style="color:var(--muted)"></i>
+          <span class="text-xs whitespace-nowrap" style="color:var(--muted)">Win odds</span>
+          <input id="odds-min" type="number" step="0.05" min="1" max="15" value="1.00" class="w-16 panel rounded px-2 py-1 text-xs" style="color:var(--ink)" />
+          <span style="color:var(--muted)">–</span>
+          <input id="odds-max" type="number" step="0.05" min="1" max="15" value="15.00" class="w-16 panel rounded px-2 py-1 text-xs" style="color:var(--ink)" />
+        </div>
       </div>
+      <p class="text-[11px] -mt-3 mb-4" style="color:var(--muted)"><i class="fa-solid fa-circle-info"></i> Win-odds range filters straight Win picks by real odds; DNB, Over/Under and BTTS have no odds in our data and always show.</p>
 
       <!-- slip builder -->
       <details class="panel rounded-2xl overflow-hidden mb-5">
@@ -427,6 +432,13 @@ function joinClick(el, e){
 }
 
 const marketTag = p => p.includes('DNB')?'DNB':p.includes('Win')?'Win':p.includes('Under')?'Under':p.includes('Over 1.5')?'Over 1.5':p.includes('Over')?'Over 2.5':p.includes('BTTS')?'BTTS':p;
+// Kickoff times pinned to GMT/UTC so they're consistent for everyone (suits the
+// GMT/Ghana/UK audience) regardless of each device's timezone setting.
+function fmtTime(iso){
+  if(!iso) return '';
+  try { return new Date(iso).toLocaleTimeString('en-GB',{hour:'2-digit',minute:'2-digit',timeZone:'GMT'})+' GMT'; }
+  catch(e){ return ''; }
+}
 // Safe-odds rule: ONLY Win picks with a real bookmaker odd at/below 1.55 qualify.
 // Anything without a single odd (DNB, Over/Under, BTTS) does NOT qualify and is
 // hidden when the "Wins ≤1.55 only" filter is on.
@@ -571,7 +583,7 @@ function renderCards(){
   wrap.innerHTML = cards.map(b=>{
     const res = settle(b.primary,b.match.homeGoals,b.match.awayGoals);
     const resTag = res?`<span class="px-2 py-0.5 rounded-md text-[10px] font-bold ${resClass(res)}">${res.toUpperCase()}</span>`:'';
-    const t = b.match.kickoff ? new Date(b.match.kickoff).toLocaleTimeString(undefined,{hour:'2-digit',minute:'2-digit'}) : '';
+    const t = b.match.kickoff ? fmtTime(b.match.kickoff) : '';
     return `<div class="pred-card">
       <div class="flex items-center justify-between mb-2">
         <span class="text-xs font-semibold" style="color:var(--muted)">${b.match.league}</span>
@@ -674,7 +686,7 @@ function renderMatches(){
       const rt=res?`<span class="px-2 py-0.5 rounded text-[10px] font-bold ${resClass(res)}">${res.toUpperCase()}</span>`:'';
       const live = r.match.status && ['1H','2H','HT','ET','LIVE'].includes(r.match.status);
       const isB = leagueBankerKeys.has(keyOf(r));
-      const t = r.match.kickoff ? new Date(r.match.kickoff).toLocaleTimeString(undefined,{hour:'2-digit',minute:'2-digit'}) : '';
+      const t = r.match.kickoff ? fmtTime(r.match.kickoff) : '';
       const score = played ? `<span class="display font-bold tnum">${hg} - ${ag}</span>` : `<span class="text-xs tnum" style="color:var(--muted)">${t||'—'}</span>`;
       const odds = r.match.odds ? `<div class="hidden sm:grid grid-cols-3 gap-1 w-36">
           <div class="odd-cell">${r.match.odds.home||'-'}</div>
@@ -685,7 +697,8 @@ function renderMatches(){
       const upcoming = !played && !live && koInFuture;
       const isLean = !isB && r.lean;
       const dataMkt = isLean ? marketTag(r.lean.market) : marketTag(r.primary);
-      return `<details class="match-item ${isB?'is-banker-row':''} ${isLean?'is-lean-row':''}" data-search="${(r.match.home+' '+r.match.away+' '+r.match.league).toLowerCase().replace(/"/g,'')}" data-market="${dataMkt}" data-banker="${isB?'1':'0'}" data-lean="${isLean?'1':'0'}" data-upcoming="${upcoming?'1':'0'}" data-safeodds="${safeOddsPick(r.primary,r.match.odds)?'1':'0'}">
+      const winOdd = (r.primary==='Home Win'&&r.match.odds&&r.match.odds.home) ? r.match.odds.home : (r.primary==='Away Win'&&r.match.odds&&r.match.odds.away) ? r.match.odds.away : '';
+      return `<details class="match-item ${isB?'is-banker-row':''} ${isLean?'is-lean-row':''}" data-search="${(r.match.home+' '+r.match.away+' '+r.match.league).toLowerCase().replace(/"/g,'')}" data-market="${dataMkt}" data-banker="${isB?'1':'0'}" data-lean="${isLean?'1':'0'}" data-upcoming="${upcoming?'1':'0'}" data-winodd="${winOdd}">
         <summary class="match-line px-4 py-3 flex items-center gap-3">
           <div class="w-12 text-center flex-shrink-0">${score}</div>
           <div class="flex-1 min-w-0">
@@ -733,10 +746,16 @@ function applyFilters(){
   const mk=document.getElementById('filter-market').value;
   const bk=document.getElementById('filter-bankers').checked;
   const up=document.getElementById('filter-upcoming').checked;
-  const so=document.getElementById('filter-safeodds').checked;
+  const oddMinEl=document.getElementById('odds-min'), oddMaxEl=document.getElementById('odds-max');
+  const oddMin=oddMinEl?(parseFloat(oddMinEl.value)||0):0;
+  const oddMax=oddMaxEl?(parseFloat(oddMaxEl.value)||999):999;
+  const oddsActive = oddMin>1.0 || oddMax<15.0;
   let any=false;
   document.querySelectorAll('.match-item').forEach(el=>{
-    const show = (!q||el.dataset.search.includes(q)) && (!mk||el.dataset.market===mk) && (!bk||el.dataset.banker==='1') && (!up||el.dataset.upcoming==='1') && (!so||el.dataset.safeodds==='1');
+    const wo=parseFloat(el.dataset.winodd);
+    const hasWinOdd=!isNaN(wo);
+    const oddOk = !oddsActive || !hasWinOdd || (wo>=oddMin && wo<=oddMax);
+    const show = (!q||el.dataset.search.includes(q)) && (!mk||el.dataset.market===mk) && (!bk||el.dataset.banker==='1') && (!up||el.dataset.upcoming==='1') && oddOk;
     el.style.display = show?'':'none'; if(show) any=true;
   });
   document.querySelectorAll('.lg-row').forEach(b=>{
@@ -748,7 +767,7 @@ function applyFilters(){
 ['filter-search','filter-market'].forEach(id=>document.getElementById(id).addEventListener('input',applyFilters));
 document.getElementById('filter-bankers').addEventListener('change',applyFilters);
 document.getElementById('filter-upcoming').addEventListener('change',applyFilters);
-document.getElementById('filter-safeodds').addEventListener('change',applyFilters);
+['odds-min','odds-max'].forEach(id=>document.getElementById(id).addEventListener('input',applyFilters));
 
 /* ============ SLIP BUILDER ============ */
 function legOdd(r){
@@ -799,13 +818,22 @@ function generateSlip(){
   const checks=[...document.querySelectorAll('.slip-mkt:checked')].map(c=>c.value);
   const allowAll = checks.length===0;
   const today=byDate[activeDate]||[];
+  // ONLY upcoming matches — a slip you can actually bet can't include games that
+  // have already kicked off or finished.
+  const isUpcoming = (mt)=>{
+    const played = mt.homeGoals!=null && mt.awayGoals!=null;
+    const live = mt.status && ['1H','2H','HT','ET','LIVE','P'].includes(mt.status);
+    const ko = mt.kickoff ? new Date(mt.kickoff).getTime() : null;
+    const koInFuture = ko!=null ? ko > Date.now() : true;
+    return !played && !live && koInFuture;
+  };
   let elig=today
-    .filter(r=>r.banker && legOdd(r)!=null && confValue(r.confidence)>=minConf)
+    .filter(r=>isUpcoming(r.match) && r.banker && legOdd(r)!=null && confValue(r.confidence)>=minConf)
     .filter(r=> allowAll || checks.includes(slipGroup(r.primary)))
     .map(r=>{ const lo=legOdd(r); return { r, odd:lo.odd, est:lo.est, conf:confValue(r.confidence) }; })
     .sort((a,b)=>b.conf-a.conf || a.odd-b.odd);
   if(elig.length<nLegs){
-    host.innerHTML=`<div class="text-sm p-3 rounded-xl panel-2" style="color:var(--muted)">Only ${elig.length} eligible pick(s) match your filters at this confidence — need ${nLegs}. Loosen the market filter, lower confidence, reduce legs, or wait for more games.</div>`;
+    host.innerHTML=`<div class="text-sm p-3 rounded-xl panel-2" style="color:var(--muted)">Only ${elig.length} eligible <strong>upcoming</strong> pick(s) match your filters at this confidence — need ${nLegs}. Loosen the market filter, lower confidence, reduce legs, or wait for more upcoming games.</div>`;
     return;
   }
   const maxPerLeague=Math.max(1,Math.ceil(nLegs/2));
@@ -1093,7 +1121,7 @@ function renderApexMatches(){
 // shared row bits for Ultra/Elite/Apex lists: score, league flag, settle tag
 function rowScore(match){
   const hg=match.homeGoals, ag=match.awayGoals, played=hg!=null&&ag!=null;
-  const t = match.kickoff ? new Date(match.kickoff).toLocaleTimeString(undefined,{hour:'2-digit',minute:'2-digit'}) : '';
+  const t = match.kickoff ? fmtTime(match.kickoff) : '';
   return played ? `<span class="display font-bold tnum">${hg} - ${ag}</span>` : `<span class="text-xs tnum" style="color:var(--muted)">${t||'—'}</span>`;
 }
 function rowFlag(match){
@@ -1182,7 +1210,7 @@ function renderStrictMatches(){
       if(!sr){ return; }
       const isBet = sr.bet;
       if(!isBet){ return; } // Strict view shows only actual strict bets, not No-bet clutter
-      const t = r.match.kickoff ? new Date(r.match.kickoff).toLocaleTimeString(undefined,{hour:'2-digit',minute:'2-digit'}) : '';
+      const t = r.match.kickoff ? fmtTime(r.match.kickoff) : '';
       const hg=r.match.homeGoals, ag=r.match.awayGoals, played=hg!=null&&ag!=null;
       const settled = played ? settle(sr.market, hg, ag) : '';
       const settleTag = settled ? `<span class="px-2 py-0.5 rounded text-[10px] font-bold ${resClass(settled)}">${settled.toUpperCase()}</span>` : '';
@@ -1317,7 +1345,7 @@ function renderBankerOfDay(){
     const b=p.match;
     const res=settle(p.market,b.homeGoals,b.awayGoals);
     const resTag=res?`<span class="px-2 py-0.5 rounded text-[11px] font-bold ${resClass(res)}">${res.toUpperCase()}</span>`:'';
-    const t=b.kickoff?new Date(b.kickoff).toLocaleTimeString(undefined,{hour:'2-digit',minute:'2-digit'}):'';
+    const t=b.kickoff?fmtTime(b.kickoff):'';
     const label = isHero ? '<i class="fa-solid fa-star"></i> Banker of the Day' : 'Also strongly agreed';
     return `<div class="${isHero?'':'pt-3 mt-3'}" ${isHero?'':'style="border-top:1px solid var(--line)"'}>
       <div class="flex items-center justify-between mb-1">
