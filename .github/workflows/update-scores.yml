@@ -1,0 +1,70 @@
+name: Update scores (fast)
+# Lightweight: updates ONLY match scores/status from the API every 30 minutes,
+# so finished games settle quickly without waiting for the slow full fetch.
+# Does NOT refetch stats/odds/standings. Runs in ~1-2 minutes.
+
+on:
+  schedule:
+    - cron: "*/30 * * * *"   # every 30 minutes
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
+
+jobs:
+  scores:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out the repository
+        uses: actions/checkout@v4
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+      - name: Write config.txt from secrets
+        run: |
+          cat > config.txt <<EOF
+          API_KEY=${{ secrets.API_KEY }}
+          SEASON=${{ secrets.SEASON }}
+          DAYS_BACK=${{ secrets.DAYS_BACK }}
+          EOF
+      - name: Update scores only
+        run: node fetch-scores.js || echo "scores update skipped"
+      - name: Remove config before commit
+        run: rm -f config.txt
+      - name: Commit updated scores (if changed)
+        run: |
+          git config user.name "predicto-bot"
+          git config user.email "bot@users.noreply.github.com"
+          if [ -n "$(git status --porcelain data.js)" ]; then
+            git add data.js
+            git commit -m "Update scores (fast)"
+            for i in 1 2 3; do
+              git pull --rebase --autostash origin main && git push && { echo "scores pushed."; break; }
+              echo "Push attempt $i failed — retrying..."; sleep 5
+            done
+          else
+            echo "No score changes."
+          fi
+      - name: Configure Pages
+        uses: actions/configure-pages@v5
+      - name: Upload site as Pages artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: "."
+  deploy:
+    needs: scores
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
