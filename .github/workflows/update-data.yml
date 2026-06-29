@@ -44,13 +44,17 @@ jobs:
           EOF
       - name: Run the fetcher
         run: node fetch-data.js
+      - name: Generate daily branded image
+        run: |
+          npm install sharp --no-save || echo "sharp install issue"
+          node generate-image.js || echo "image generation skipped"
       - name: Commit updated data.js (if it changed)
         run: |
           git config user.name "predicto-bot"
           git config user.email "bot@users.noreply.github.com"
-          if ! git diff --quiet data.js; then
-            git add data.js
-            git commit -m "Auto-update match data"
+          if ! git diff --quiet data.js today.png today.svg daily/ 2>/dev/null || [ -n "$(git status --porcelain today.png daily/ 2>/dev/null)" ]; then
+            git add data.js today.png today.svg daily/ 2>/dev/null || git add data.js
+            git commit -m "Auto-update match data + daily image"
             # The run can take many minutes; main may have moved meanwhile.
             # Rebase our data.js commit on top of any new remote changes, then
             # push. Retry once in case of a race. data.js is the only file we
@@ -63,6 +67,24 @@ jobs:
           else
             echo "No data changes today."
           fi
+      - name: Email the daily branded image
+        if: ${{ hashFiles('today.png') != '' }}
+        continue-on-error: true
+        uses: dawidd6/action-send-mail@v3
+        with:
+          server_address: smtp.gmail.com
+          server_port: 465
+          secure: true
+          username: ${{ secrets.MAIL_USERNAME }}
+          password: ${{ secrets.MAIL_PASSWORD }}
+          subject: "Predict2u — Today's Top Bankers"
+          to: predict2u@gmail.com
+          from: Predict2u Bot
+          body: |
+            Today's top bankers (one strongest pick per engine) are attached.
+            Also live at predict2u.com/today.png
+            Heuristic picks, not guarantees. 18+.
+          attachments: today.png
       - name: Configure Pages
         uses: actions/configure-pages@v5
       - name: Upload site as Pages artifact
