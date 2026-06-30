@@ -656,6 +656,12 @@ function renderWonTicker(){
   });
   const wins=Object.values(byMatch);
   if(!wins.length){ box.style.display='none'; box.innerHTML=''; return; }
+  const totalWins=wins.length;
+  // show at most 15 cards in the scroller; lead with the most-backed wins
+  // (more engines agreeing = stronger result) so the best land first.
+  const MAX_CARDS=15;
+  wins.sort((a,b)=>(b.count||0)-(a.count||0));
+  const shown=wins.slice(0,MAX_CARDS);
   const esc=t=>String(t==null?'':t).replace(/[<>&"]/g,c=>({'<':'&lt;','>':'&gt;','&':'&amp;','"':'&quot;'}[c]));
   const card=w=>{
     const m=w.match;
@@ -670,10 +676,10 @@ function renderWonTicker(){
       `<span class="wc-team">${esc(m.away)}</span>${crest(m.awayLogo)}`+
       `${badges}</span>`;
   };
-  const items = wins.map(card).join('');
+  const items = shown.map(card).join('');
   box.style.display='';
   box.innerHTML =
-    `<div class="flex items-center gap-2 mb-2"><span class="text-xs uppercase tracking-wider font-semibold" style="color:var(--muted)">Today's winners</span><span class="text-xs" style="color:var(--muted)">· ${wins.length} match${wins.length>1?'es':''}</span></div>`+
+    `<div class="flex items-center gap-2 mb-2"><span class="text-xs uppercase tracking-wider font-semibold" style="color:var(--muted)">Today's winners</span><span class="text-xs" style="color:var(--muted)">· ${totalWins} match${totalWins>1?'es':''}${totalWins>MAX_CARDS?` (showing top ${MAX_CARDS})`:''}</span></div>`+
     `<div class="won-marquee"><div class="won-marquee-track">${items}${items}</div></div>`;
 }
 
@@ -772,6 +778,13 @@ function renderMatches(){
 
   let html='';
   Object.entries(byLeague).forEach(([league,lrows])=>{
+    // sort matches within the league by kickoff time (earliest first);
+    // matches with no kickoff go last, preserving their relative order.
+    lrows.sort((a,b)=>{
+      const ka = a.match.kickoff ? new Date(a.match.kickoff).getTime() : Infinity;
+      const kb = b.match.kickoff ? new Date(b.match.kickoff).getTime() : Infinity;
+      return ka - kb;
+    });
     const top = perLeagueTop[`${activeDate}|${league}`]||[];
     let lw=0,ll=0; lrows.forEach(r=>{ if(!r.banker)return; const s=settle(r.primary, r.match.homeGoals, r.match.awayGoals, r.match.status); if(s==='Won')lw++;else if(s==='Lost')ll++; });
     const tally=(lw+ll)>0?`<span class="text-xs ml-2"><span class="text-green">${lw}W</span> <span style="color:#fb7185">${ll}L</span></span>`:'';
@@ -1480,6 +1493,11 @@ function renderStrictMatches(){
 
   let html='';
   Object.entries(byLeague).forEach(([league,lrows])=>{
+    lrows.sort((a,b)=>{
+      const ka = a.match.kickoff ? new Date(a.match.kickoff).getTime() : Infinity;
+      const kb = b.match.kickoff ? new Date(b.match.kickoff).getTime() : Infinity;
+      return ka - kb;
+    });
     const hasBet = lrows.some(r=>{ const sr=strictByKey[keyOf(r)]; return sr && sr.bet; });
     if(!hasBet) return;
     html += `<details open class="lg-row panel rounded-2xl mb-3 overflow-hidden" data-league="${league.toLowerCase()}">
