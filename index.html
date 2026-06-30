@@ -547,6 +547,11 @@ function enginePicks(rows){
       return { match:r.match, primary:u.primary, confidence:u.confidence>=8?'High':'Medium',
                banker:u.banker, weight:u.confidence, reason:u.verdict||'' }; }).filter(Boolean);
   }
+  if(engineMode==='acca'){
+    return accaLegs(rows).map(l=>({ match:l.match, primary:l.market,
+      confidence:l.rating>=8?'High':l.rating>=7?'Medium':'Low', banker:true,
+      weight:l.rating, reason:`Strongest banker across ${l.nEng} engine(s).` }));
+  }
   // normal
   return rows.filter(r=>r.banker).map(r=>({ match:r.match, primary:r.primary, confidence:r.confidence,
             banker:true, weight:r.rankWeight, reason:(r.wdnb&&r.wdnb.reasons&&r.wdnb.reasons[0])||'' }));
@@ -991,11 +996,8 @@ function renderRulesProMatches(){
   applyFilters();
 }
 
-function renderAccaMatches(){
-  const host=document.getElementById('matches-root');
-  const rows=(byDate[activeDate]||[]);
-  // gather every engine's banker pick per match
-  const perMatch={}; // key -> { match, picks:[{engine,market,conf}], engines:Set }
+function accaLegs(rows){
+  const perMatch={};
   const norm=s=>String(s||'').trim().toLowerCase();
   function add(match, market, engine, conf){
     if(!market||market==='No Bet'||market==='Skip') return;
@@ -1014,19 +1016,21 @@ function renderAccaMatches(){
     try{ if(typeof primeRecommend==='function'){const u=primeRecommend(m); if(u.banker) add(m,u.primary,'Prime',u.confidence);}}catch(e){}
     try{ if(typeof valueRecommend==='function'){const u=valueRecommend(m); if(u.banker) add(m,u.primary,'Value',u.confidence);}}catch(e){}
   });
-
-  // collapse each match to ONE leg = its strongest market; rate by agreement + avg conf
-  const legs=Object.values(perMatch).map(g=>{
-    // strongest market for this match = highest single confidence
+  return Object.values(perMatch).map(g=>{
     const best=g.picks.slice().sort((a,b)=>b.conf-a.conf)[0];
     const avgConf=g.picks.reduce((s,p)=>s+p.conf,0)/g.picks.length;
     const nEng=g.engines.size;
-    // RATING: average confidence + small bonus for multi-engine agreement, capped 10
     const rating=Math.min(10, Math.round((avgConf + (nEng-1)*0.6)*10)/10);
     const lo=legOdd({primary:best.market, match:g.match});
     return { match:g.match, market:best.market, rating, nEng, engines:[...g.engines],
              odd: lo?lo.odd:null, est: lo?lo.est:true };
   }).filter(l=>l.odd!=null);
+}
+
+function renderAccaMatches(){
+  const host=document.getElementById('matches-root');
+  const rows=(byDate[activeDate]||[]);
+  const legs=accaLegs(rows);
 
   // only UPCOMING legs are bettable in an acca
   const isUpcoming=(mt)=>{ const played=mt.homeGoals!=null&&mt.awayGoals!=null;
