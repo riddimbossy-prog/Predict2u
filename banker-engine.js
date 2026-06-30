@@ -74,26 +74,46 @@ function friendlyLean(m){
   const hGF=m.homeScoredAtHome, hGA=m.homeConcededAtHome, aGF=m.awayScoredAway, aGA=m.awayConcededAway;
   if(hGF==null||aGF==null) return null;
   const combined = hGF + aGF;
-  const bothScore = hGF>=1.2 && aGF>=1.2;
   const hWR=m.homeWinRate ?? null, aWR=m.awayWinRate ?? null;
   const hQual=(hGF-(hGA??1))+(hWR!=null?hWR*2:0);
   const aQual=(aGF-(aGA??1))+(aWR!=null?aWR*2:0);
   const gap=Math.abs(hQual-aQual);
+
+  // Odds read: is the game OPEN or TIGHT/closed?
+  // Close 1X2 prices (no strong favourite) = evenly-matched, tends open → Over.
+  // A heavy mismatch (one side very short) can mean a controlled walkover → less open.
+  const o=m.odds;
+  let oddsOpen=null; // null = unknown, true = open, false = tight
+  if(o && o.home && o.away){
+    const short=Math.min(o.home,o.away), long=Math.max(o.home,o.away);
+    const ratio=long/short;            // ~1 = even, large = big mismatch
+    if(ratio>=4.5) oddsOpen=false;     // heavy favourite → possibly controlled (takes priority)
+    else if(ratio<=2.2) oddsOpen=true; // fairly even → open, goals likely
+    // draw price as a secondary hint, only when NOT already a clear mismatch:
+    if(oddsOpen!==false && o.draw && o.draw>=3.6) oddsOpen=true;
+  }
+
+  // Clear quality gap → back the stronger side (kept — distinct useful case)
   if(gap>=1.6){
     const homeBetter=hQual>aQual;
     return { market: homeBetter?"Home DNB":"Away DNB", conf:5,
       reason:`Friendly lean — ${homeBetter?m.home:m.away} clearly stronger (quality gap ${gap.toFixed(1)}). Squads may rotate; not a banker.` };
   }
-  if(bothScore && combined>=3.0){
-    return { market:"Over 1.5", conf:6,
-      reason:`Friendly lean — both sides score freely (combined ${combined.toFixed(1)}/game). Friendlies tend open. Squads may rotate; not a banker.` };
-  }
-  if(combined<=2.4){
+
+  // DEFAULT: Over 1.5 — friendlies tend open and goal-friendly.
+  // Override to Under 3.5 ONLY when BOTH signals point low: genuinely low
+  // combined scoring AND odds NOT indicating an open game.
+  const scoringLow = combined<=2.4;
+  const oddsTight = (oddsOpen===false);   // odds explicitly suggest a closed game
+  if(scoringLow && (oddsTight || oddsOpen===null && combined<=2.0)){
     return { market:"Under 3.5", conf:5,
-      reason:`Friendly lean — low combined scoring (${combined.toFixed(1)}/game). Squads may rotate; not a banker.` };
+      reason:`Friendly lean — low combined scoring (${combined.toFixed(1)}/game)${oddsTight?' and odds point to a tight game':''}. Squads may rotate; not a banker.` };
   }
-  // middling, unpredictable friendly → don't force a pick
-  return { market:"No Bet", conf:0, reason:`Friendly with unclear profile — no confident lean.` };
+
+  // Otherwise Over 1.5 (stronger confidence when odds confirm an open game).
+  const conf = (oddsOpen===true || combined>=3.0) ? 6 : 5;
+  return { market:"Over 1.5", conf,
+    reason:`Friendly lean — friendlies tend open${oddsOpen===true?', and the odds point to an open game':''} (combined ${combined.toFixed(1)}/game). Squads may rotate; not a banker.` };
 }
 // A pick built on a handful of games is noise, not signal. Engines call this
 // first and return No Bet when the data isn't solid enough.
