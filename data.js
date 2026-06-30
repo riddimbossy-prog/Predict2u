@@ -1,5 +1,5 @@
-window.DATA_UPDATED = "2026-06-30T02:55:25.864Z";
-window.ENRICHED_AT = "2026-06-30T02:55:51.202Z";
+window.DATA_UPDATED = "2026-06-30T04:07:59.091Z";
+window.ENRICHED_AT = "2026-06-30T04:08:26.366Z";
 window.MATCHES = [
   {
     "home": "Washington Spirit W",
@@ -53,9 +53,9 @@ window.MATCHES = [
     "isTournament": false,
     "round": "Group Stage",
     "odds": {
-      "home": 1.33,
-      "draw": 4.5,
-      "away": 7
+      "home": 1.3,
+      "draw": 4.6,
+      "away": 8
     },
     "h2h": null
   },
@@ -322,8 +322,8 @@ window.MATCHES = [
     "round": "Round of 32",
     "odds": {
       "home": 1.5,
-      "draw": 3.8,
-      "away": 7.1
+      "draw": 3.7,
+      "away": 7.5
     },
     "h2h": null,
     "oddsOpen": {
@@ -7109,8 +7109,8 @@ window.MATCHES = [
     "isTournament": false,
     "round": "Regular Season - 16",
     "odds": {
-      "home": 5,
-      "draw": 4,
+      "home": 5.6,
+      "draw": 4.1,
       "away": 1.5
     },
     "h2h": null
@@ -7167,9 +7167,9 @@ window.MATCHES = [
     "isTournament": false,
     "round": "Regular Season - 16",
     "odds": {
-      "home": 1.85,
-      "draw": 3,
-      "away": 4
+      "home": 1.95,
+      "draw": 3.2,
+      "away": 3.85
     },
     "h2h": null
   },
@@ -7225,9 +7225,9 @@ window.MATCHES = [
     "isTournament": false,
     "round": "Regular Season - 16",
     "odds": {
-      "home": 4,
-      "draw": 3.5,
-      "away": 1.73
+      "home": 4.5,
+      "draw": 3.55,
+      "away": 1.7
     },
     "h2h": null
   },
@@ -7283,9 +7283,9 @@ window.MATCHES = [
     "isTournament": false,
     "round": "Regular Season - 16",
     "odds": {
-      "home": 2.62,
-      "draw": 3.1,
-      "away": 2.4
+      "home": 2.65,
+      "draw": 3.2,
+      "away": 2.5
     },
     "h2h": null
   },
@@ -7395,9 +7395,9 @@ window.MATCHES = [
     "isTournament": false,
     "round": "Regular Season - 17",
     "odds": {
-      "home": 2.05,
-      "draw": 3.1,
-      "away": 3.5
+      "home": 2.06,
+      "draw": 3.15,
+      "away": 3.45
     },
     "h2h": null
   },
@@ -7453,9 +7453,9 @@ window.MATCHES = [
     "isTournament": false,
     "round": "Regular Season - 17",
     "odds": {
-      "home": 2.9,
-      "draw": 3.25,
-      "away": 2.25
+      "home": 2.98,
+      "draw": 3.35,
+      "away": 2.2
     },
     "h2h": null
   },
@@ -9183,9 +9183,9 @@ window.MATCHES = [
     "isTournament": false,
     "round": "Regular Season - 17",
     "odds": {
-      "home": 1.73,
-      "draw": 3.9,
-      "away": 3.9
+      "home": 1.7,
+      "draw": 4,
+      "away": 3.95
     },
     "h2h": null
   },
@@ -9241,9 +9241,9 @@ window.MATCHES = [
     "isTournament": false,
     "round": "Regular Season - 17",
     "odds": {
-      "home": 1.7,
-      "draw": 3.6,
-      "away": 4.4
+      "home": 1.67,
+      "draw": 3.7,
+      "away": 4.6
     },
     "h2h": null
   },
@@ -9299,9 +9299,9 @@ window.MATCHES = [
     "isTournament": false,
     "round": "Regular Season - 14",
     "odds": {
-      "home": 1.95,
-      "draw": 3.7,
-      "away": 3
+      "home": 2,
+      "draw": 3.6,
+      "away": 2.9
     },
     "h2h": null
   },
@@ -9412,8 +9412,8 @@ window.MATCHES = [
     "round": "Regular Season - 17",
     "odds": {
       "home": 2.15,
-      "draw": 3.4,
-      "away": 3
+      "draw": 3.45,
+      "away": 2.98
     },
     "h2h": null
   },
@@ -14964,7 +14964,11 @@ window.MATCHES = [
     "isKnockout": false,
     "isTournament": false,
     "round": "Regular Season - 14",
-    "odds": null,
+    "odds": {
+      "home": 2.28,
+      "draw": 3.18,
+      "away": 3.14
+    },
     "h2h": null
   },
   {
@@ -15616,7 +15620,11 @@ window.MATCHES = [
     "isKnockout": false,
     "isTournament": false,
     "round": "Regular Season - 16",
-    "odds": null,
+    "odds": {
+      "home": 1.36,
+      "draw": 3.84,
+      "away": 8.7
+    },
     "h2h": null
   },
   {
@@ -15670,7 +15678,11 @@ window.MATCHES = [
     "isKnockout": false,
     "isTournament": false,
     "round": "Regular Season - 16",
-    "odds": null,
+    "odds": {
+      "home": 3.1,
+      "draw": 3.25,
+      "away": 2.08
+    },
     "h2h": null
   },
   {
@@ -17065,8 +17077,8 @@ window.MATCHES = [
     "isTournament": false,
     "round": "Regular Season - 14",
     "odds": {
-      "home": 5.8,
-      "draw": 4.6,
+      "home": 5.5,
+      "draw": 4.5,
       "away": 1.4
     },
     "h2h": null
@@ -17177,9 +17189,9 @@ window.MATCHES = [
     "isTournament": false,
     "round": "Regular Season - 13",
     "odds": {
-      "home": 2.2,
-      "draw": 3.65,
-      "away": 2.6
+      "home": 2.3,
+      "draw": 3.8,
+      "away": 2.4
     },
     "h2h": null
   },
@@ -20170,7 +20182,11 @@ window.MATCHES = [
     "isKnockout": false,
     "isTournament": false,
     "round": "Regular Season - 14",
-    "odds": null,
+    "odds": {
+      "home": 1.58,
+      "draw": 3.82,
+      "away": 5.65
+    },
     "h2h": null
   },
   {
@@ -21481,9 +21497,9 @@ window.MATCHES = [
     "isTournament": false,
     "round": "Regular Season - 14",
     "odds": {
-      "home": 1.91,
-      "draw": 3.4,
-      "away": 3.3
+      "home": 1.95,
+      "draw": 3.3,
+      "away": 3.25
     },
     "h2h": null
   },
@@ -21647,9 +21663,9 @@ window.MATCHES = [
     "isTournament": false,
     "round": "Regular Season - 13",
     "odds": {
-      "home": 2,
+      "home": 2.05,
       "draw": 3.6,
-      "away": 2.9
+      "away": 2.8
     },
     "h2h": null
   },
@@ -22166,7 +22182,11 @@ window.MATCHES = [
     "isKnockout": false,
     "isTournament": false,
     "round": "Regular Season - 16",
-    "odds": null,
+    "odds": {
+      "home": 2.08,
+      "draw": 3.35,
+      "away": 3
+    },
     "h2h": null
   },
   {
@@ -27290,7 +27310,11 @@ window.MATCHES = [
     "isKnockout": true,
     "isTournament": true,
     "round": "Apertura - Semi-finals",
-    "odds": null,
+    "odds": {
+      "home": 2.25,
+      "draw": 3.25,
+      "away": 3
+    },
     "h2h": null
   },
   {
@@ -27344,7 +27368,11 @@ window.MATCHES = [
     "isKnockout": true,
     "isTournament": true,
     "round": "Apertura - Semi-finals",
-    "odds": null,
+    "odds": {
+      "home": 2.15,
+      "draw": 3.25,
+      "away": 3.2
+    },
     "h2h": null
   },
   {
@@ -28983,8 +29011,8 @@ window.MATCHES = [
     "isTournament": false,
     "round": "Group Stage",
     "odds": {
-      "home": 2.8,
-      "draw": 3.1,
+      "home": 2.62,
+      "draw": 3.3,
       "away": 2.3
     },
     "h2h": null
@@ -32762,7 +32790,11 @@ window.MATCHES = [
     "isKnockout": false,
     "isTournament": false,
     "round": "Regular Season - 14",
-    "odds": null,
+    "odds": {
+      "home": 8.6,
+      "draw": 3.98,
+      "away": 1.42
+    },
     "h2h": null
   },
   {
@@ -32960,7 +32992,11 @@ window.MATCHES = [
     "isKnockout": false,
     "isTournament": false,
     "round": "Regular Season - 16",
-    "odds": null,
+    "odds": {
+      "home": 1.67,
+      "draw": 3.4,
+      "away": 4.65
+    },
     "h2h": null
   },
   {
@@ -33719,9 +33755,9 @@ window.MATCHES = [
     "isTournament": false,
     "round": "Regular Season - 14",
     "odds": {
-      "home": 1.57,
+      "home": 1.62,
       "draw": 4.2,
-      "away": 4.2
+      "away": 4
     },
     "h2h": null
   },
@@ -37461,9 +37497,9 @@ window.MATCHES = [
     "isTournament": false,
     "round": "Regular Season - 23",
     "odds": {
-      "home": 2.15,
-      "draw": 3.8,
-      "away": 2.92
+      "home": 2.16,
+      "draw": 3.75,
+      "away": 2.95
     },
     "h2h": null
   },
@@ -40163,13 +40199,13 @@ window.MATCHES = [
     "awayVenueGames": null,
     "venueTableSize": 20,
     "leagueAvg": null,
-    "homeWinRate": null,
+    "homeWinRate": 0,
     "awayWinRate": 1,
-    "homeUnbeatenRate": null,
+    "homeUnbeatenRate": 0,
     "awayUnbeatenRate": 1,
-    "homeCleanSheetRate": null,
+    "homeCleanSheetRate": 0,
     "awayCleanSheetRate": 1,
-    "homeFailedToScoreRate": null,
+    "homeFailedToScoreRate": 0,
     "awayFailedToScoreRate": 0,
     "statsReal": true,
     "sameGroup": false,
@@ -41271,9 +41307,9 @@ window.MATCHES = [
     "isTournament": false,
     "round": "Regular Season - 14",
     "odds": {
-      "home": 1.75,
+      "home": 1.8,
       "draw": 3.75,
-      "away": 3.5
+      "away": 3.4
     },
     "h2h": null
   },
@@ -41382,7 +41418,11 @@ window.MATCHES = [
     "isKnockout": false,
     "isTournament": false,
     "round": "Group A",
-    "odds": null,
+    "odds": {
+      "home": 2.25,
+      "draw": 3.45,
+      "away": 2.55
+    },
     "h2h": null
   },
   {
@@ -43034,7 +43074,11 @@ window.MATCHES = [
     "isKnockout": false,
     "isTournament": true,
     "round": "Group Stage",
-    "odds": null,
+    "odds": {
+      "home": 1.28,
+      "draw": 5.75,
+      "away": 6
+    },
     "h2h": null
   },
   {
@@ -44007,8 +44051,8 @@ window.MATCHES = [
     "isTournament": false,
     "round": "Division B - Group 4 - 15",
     "odds": {
-      "home": 2.41,
-      "draw": 3.28,
+      "home": 2.4,
+      "draw": 3.3,
       "away": 2.55
     },
     "h2h": null
@@ -45389,9 +45433,9 @@ window.MATCHES = [
     "isTournament": false,
     "round": "Division B - Group 4 - 15",
     "odds": {
-      "home": 1.57,
-      "draw": 3.7,
-      "away": 4.85
+      "home": 1.52,
+      "draw": 3.75,
+      "away": 5.3
     },
     "h2h": null
   },
@@ -45965,9 +46009,9 @@ window.MATCHES = [
     "isTournament": false,
     "round": "Division B - Group 4 - 15",
     "odds": {
-      "home": 1.36,
-      "draw": 4.05,
-      "away": 7.7
+      "home": 1.32,
+      "draw": 4.25,
+      "away": 8.3
     },
     "h2h": null
   },
@@ -47438,7 +47482,11 @@ window.MATCHES = [
     "isKnockout": false,
     "isTournament": false,
     "round": "Group Stage",
-    "odds": null,
+    "odds": {
+      "home": 1.49,
+      "draw": 4,
+      "away": 5.9
+    },
     "h2h": null
   },
   {
@@ -50868,7 +50916,7 @@ window.MATCHES = [
     "round": "Group Stage - 2",
     "odds": {
       "home": 2.45,
-      "draw": 3.45,
+      "draw": 3.5,
       "away": 2.45
     },
     "h2h": null
@@ -50919,9 +50967,9 @@ window.MATCHES = [
     "isTournament": false,
     "round": "Group Stage - 2",
     "odds": {
-      "home": 1.85,
-      "draw": 3.35,
-      "away": 3.8
+      "home": 1.91,
+      "draw": 3.3,
+      "away": 3.6
     },
     "h2h": null
   },
@@ -50971,9 +51019,9 @@ window.MATCHES = [
     "isTournament": false,
     "round": "Group Stage - 2",
     "odds": {
-      "home": 2.9,
-      "draw": 3.3,
-      "away": 2.2
+      "home": 2.85,
+      "draw": 3.25,
+      "away": 2.25
     },
     "h2h": null
   },
@@ -51739,11 +51787,11 @@ window.MATCHES = [
     "league": "USL League Two",
     "country": "USA",
     "flag": "https://media.api-sports.io/flags/us.svg",
-    "status": "NS",
+    "status": "FT",
     "kickoff": "2026-06-30T00:00:00+00:00",
     "matchDate": "2026-06-30",
-    "homeGoals": null,
-    "awayGoals": null,
+    "homeGoals": 3,
+    "awayGoals": 5,
     "homePos": 8,
     "awayPos": 5,
     "tableSize": 144,
@@ -51771,15 +51819,15 @@ window.MATCHES = [
       "gamesPlayed": 886,
       "reliable": true
     },
-    "homeWinRate": 0.2,
-    "awayWinRate": 0.4,
-    "homeUnbeatenRate": 0.6,
-    "awayUnbeatenRate": 0.8,
-    "homeCleanSheetRate": 0.2,
-    "awayCleanSheetRate": 0.2,
-    "homeFailedToScoreRate": 0.2,
-    "awayFailedToScoreRate": 0.2,
-    "statsReal": true,
+    "homeWinRate": null,
+    "awayWinRate": null,
+    "homeUnbeatenRate": null,
+    "awayUnbeatenRate": null,
+    "homeCleanSheetRate": null,
+    "awayCleanSheetRate": null,
+    "homeFailedToScoreRate": null,
+    "awayFailedToScoreRate": null,
+    "statsReal": false,
     "sameGroup": true,
     "isKnockout": false,
     "isTournament": true,
@@ -51793,11 +51841,11 @@ window.MATCHES = [
     "league": "World Cup",
     "country": "World",
     "flag": null,
-    "status": "1H",
+    "status": "BT",
     "kickoff": "2026-06-30T01:00:00+00:00",
     "matchDate": "2026-06-30",
-    "homeGoals": 0,
-    "awayGoals": 0,
+    "homeGoals": 1,
+    "awayGoals": 1,
     "homePos": 1,
     "awayPos": 2,
     "tableSize": 60,
@@ -51840,8 +51888,8 @@ window.MATCHES = [
     "round": "Round of 32",
     "odds": {
       "home": 2.3,
-      "draw": 3.05,
-      "away": 3.25
+      "draw": 3.15,
+      "away": 3.2
     },
     "h2h": null
   },
@@ -52518,7 +52566,11 @@ window.MATCHES = [
     "isKnockout": false,
     "isTournament": false,
     "round": "Club Friendlies",
-    "odds": null,
+    "odds": {
+      "home": 1.19,
+      "draw": 6.65,
+      "away": 12.5
+    },
     "h2h": null
   },
   {
@@ -52772,7 +52824,11 @@ window.MATCHES = [
     "isKnockout": false,
     "isTournament": false,
     "round": "Club Friendlies",
-    "odds": null,
+    "odds": {
+      "home": 2.4,
+      "draw": 3.6,
+      "away": 2.4
+    },
     "h2h": null
   },
   {
@@ -53278,7 +53334,11 @@ window.MATCHES = [
     "isKnockout": false,
     "isTournament": false,
     "round": "Club Friendlies",
-    "odds": null,
+    "odds": {
+      "home": 1.27,
+      "draw": 5.5,
+      "away": 7
+    },
     "h2h": null
   },
   {
@@ -53326,7 +53386,11 @@ window.MATCHES = [
     "isKnockout": false,
     "isTournament": false,
     "round": "Club Friendlies",
-    "odds": null,
+    "odds": {
+      "home": 1.48,
+      "draw": 4.2,
+      "away": 5.25
+    },
     "h2h": null
   },
   {
@@ -53672,7 +53736,11 @@ window.MATCHES = [
     "isKnockout": false,
     "isTournament": false,
     "round": "Club Friendlies",
-    "odds": null,
+    "odds": {
+      "home": 1.14,
+      "draw": 7.5,
+      "away": 12
+    },
     "h2h": null
   },
   {
@@ -53839,9 +53907,9 @@ window.MATCHES = [
     "isTournament": true,
     "round": "Regular Season - 17",
     "odds": {
-      "home": 4,
-      "draw": 2.95,
-      "away": 1.95
+      "home": 3.5,
+      "draw": 2.9,
+      "away": 2.1
     },
     "h2h": null
   },
@@ -54572,7 +54640,11 @@ window.MATCHES = [
     "isKnockout": false,
     "isTournament": false,
     "round": "Club Friendlies",
-    "odds": null,
+    "odds": {
+      "home": 1.2,
+      "draw": 5.5,
+      "away": 10
+    },
     "h2h": null
   },
   {
@@ -54620,7 +54692,11 @@ window.MATCHES = [
     "isKnockout": false,
     "isTournament": false,
     "round": "Club Friendlies",
-    "odds": null,
+    "odds": {
+      "home": 5,
+      "draw": 4,
+      "away": 1.5
+    },
     "h2h": null
   },
   {
@@ -54764,7 +54840,11 @@ window.MATCHES = [
     "isKnockout": false,
     "isTournament": false,
     "round": "Club Friendlies",
-    "odds": null,
+    "odds": {
+      "home": 8.5,
+      "draw": 5,
+      "away": 1.25
+    },
     "h2h": null
   },
   {
@@ -54908,7 +54988,11 @@ window.MATCHES = [
     "isKnockout": false,
     "isTournament": false,
     "round": "Club Friendlies",
-    "odds": null,
+    "odds": {
+      "home": 6.5,
+      "draw": 4.5,
+      "away": 1.36
+    },
     "h2h": null
   },
   {
@@ -55100,7 +55184,11 @@ window.MATCHES = [
     "isKnockout": false,
     "isTournament": false,
     "round": "Club Friendlies",
-    "odds": null,
+    "odds": {
+      "home": 2.3,
+      "draw": 3.4,
+      "away": 2.55
+    },
     "h2h": null
   },
   {
@@ -55209,9 +55297,9 @@ window.MATCHES = [
     "isTournament": true,
     "round": "Round of 32",
     "odds": {
-      "home": 1.28,
-      "draw": 5.6,
-      "away": 9.4
+      "home": 1.27,
+      "draw": 5.4,
+      "away": 10.5
     },
     "h2h": null
   },
@@ -55432,8 +55520,8 @@ window.MATCHES = [
     "round": "Regular Season - 12",
     "odds": {
       "home": 1.5,
-      "draw": 3.55,
-      "away": 6.5
+      "draw": 3.5,
+      "away": 6.6
     },
     "h2h": null
   },
@@ -55987,9 +56075,9 @@ window.MATCHES = [
     "isTournament": false,
     "round": "Regular Season - 12",
     "odds": {
-      "home": 1.95,
-      "draw": 3.25,
-      "away": 3.65
+      "home": 2.05,
+      "draw": 3,
+      "away": 3.6
     },
     "h2h": null
   },
@@ -56045,9 +56133,9 @@ window.MATCHES = [
     "isTournament": false,
     "round": "Regular Season - 12",
     "odds": {
-      "home": 1.9,
-      "draw": 2.65,
-      "away": 5.1
+      "home": 1.95,
+      "draw": 2.6,
+      "away": 5
     },
     "h2h": null
   },
