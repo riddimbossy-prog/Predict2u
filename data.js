@@ -1,5 +1,5 @@
 window.DATA_UPDATED = "2026-06-30T23:11:53.478Z";
-window.SCORES_UPDATED = "2026-06-30T23:40:35.481Z";
+window.SCORES_UPDATED = "2026-06-30T23:45:34.882Z";
 window.MATCHES = [
   {
     "home": "Washington Spirit W",
@@ -73953,7 +73953,7 @@ window.MATCHES = [
       "dcx2": 1.53
     },
     "h2h": null,
-    "elapsed": 79
+    "elapsed": 84
   },
   {
     "home": "Caxias",
@@ -74037,7 +74037,7 @@ window.MATCHES = [
       "dcx2": 2.1
     },
     "h2h": null,
-    "elapsed": 50
+    "elapsed": 55
   },
   {
     "home": "Treze U20",
@@ -74190,7 +74190,7 @@ window.MATCHES = [
       "dcx2": 1.62
     },
     "h2h": null,
-    "elapsed": 41
+    "elapsed": 45
   },
   {
     "home": "Boston Bolts",
@@ -74272,7 +74272,7 @@ window.MATCHES = [
       "dcx2": 1.13
     },
     "h2h": null,
-    "elapsed": 37
+    "elapsed": 42
   },
   {
     "home": "Charlotte Eagles",
@@ -74341,7 +74341,7 @@ window.MATCHES = [
     "round": "Group Stage",
     "odds": null,
     "h2h": null,
-    "elapsed": 35
+    "elapsed": 40
   },
   {
     "home": "Reading United",
@@ -74492,7 +74492,7 @@ window.MATCHES = [
       "dcx2": 1.4
     },
     "h2h": null,
-    "elapsed": 33
+    "elapsed": 38
   },
   {
     "home": "Midwest United",
@@ -74561,7 +74561,7 @@ window.MATCHES = [
     "round": "Group Stage",
     "odds": null,
     "h2h": null,
-    "elapsed": 38
+    "elapsed": 43
   },
   {
     "home": "Patuxent",
@@ -74783,7 +74783,7 @@ window.MATCHES = [
       "dcx2": 1.75
     },
     "h2h": null,
-    "elapsed": 9
+    "elapsed": 14
   },
   {
     "home": "Volta Redonda",
@@ -74867,7 +74867,7 @@ window.MATCHES = [
       "dcx2": 1.8
     },
     "h2h": null,
-    "elapsed": 10
+    "elapsed": 15
   },
   {
     "home": "Virginia Marauders",
@@ -74880,7 +74880,7 @@ window.MATCHES = [
     "status": "1H",
     "kickoff": "2026-06-30T23:30:00+00:00",
     "matchDate": "2026-06-30",
-    "homeGoals": 0,
+    "homeGoals": 1,
     "awayGoals": 0,
     "homePos": 7,
     "awayPos": 4,
@@ -74949,7 +74949,7 @@ window.MATCHES = [
       "dcx2": 1.01
     },
     "h2h": null,
-    "elapsed": 8
+    "elapsed": 13
   },
   {
     "home": "Miami AC",
