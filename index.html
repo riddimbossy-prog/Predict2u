@@ -136,6 +136,9 @@
   ::-webkit-scrollbar-thumb{ background:var(--line); border-radius:6px; }
 .eng-scroll::-webkit-scrollbar{display:none;}
 .eng-scroll{max-width:100%;}
+/* Equal-width tabs so selecting one never reflows/shifts the others. */
+.eng-scroll button{ min-width:82px; text-align:center; box-sizing:border-box; }
+.eng-scroll button:last-child{ min-width:64px; }
 /* Desktop: let the engine tabs wrap so all are visible (no hidden scroll).
    Mobile: keep them on one scrollable row to save vertical space. */
 @media (min-width: 640px){
@@ -569,7 +572,7 @@ function renderStats(){
   const rows = byDate[activeDate]||[];
   const picks = enginePicks(rows);
   let won=0,lost=0;
-  picks.forEach(p=>{ const s=settle(p.primary,p.match.homeGoals,p.match.awayGoals); if(s==='Won')won++; else if(s==='Lost')lost++; });
+  picks.forEach(p=>{ const s=settle(p.primary, p.match.homeGoals, p.match.awayGoals, p.match.status); if(s==='Won')won++; else if(s==='Lost')lost++; });
   const settledNote = (won+lost)>0 ? '<div class="text-[9px] mt-0.5" style="color:var(--muted);opacity:.7">settled / backtest</div>' : '';
   const stat=(l,v,c,extra)=>`<div class="panel rounded-2xl p-4"><div class="text-xs uppercase tracking-wider font-semibold mb-1" style="color:var(--muted)">${l}</div><div class="display text-3xl font-bold tnum ${c||''}">${v}</div>${extra||''}</div>`;
   document.getElementById('stat-row').innerHTML =
@@ -604,7 +607,7 @@ function renderCards(){
   const wrap = document.getElementById('pred-cards');
   if(!cards.length){ wrap.innerHTML = `<div class="sm:col-span-2 lg:col-span-3 panel rounded-2xl p-6 text-center" style="color:var(--muted)">No bankers qualified for ${dayLabel(activeDate).toLowerCase()} on this engine — protecting the stake is a valid outcome.</div>`; return; }
   wrap.innerHTML = cards.map(b=>{
-    const res = settle(b.primary,b.match.homeGoals,b.match.awayGoals);
+    const res = settle(b.primary, b.match.homeGoals, b.match.awayGoals, b.match.status);
     const resTag = res?`<span class="px-2 py-0.5 rounded-md text-[10px] font-bold ${resClass(res)}">${res.toUpperCase()}</span>`:'';
     const t = b.match.kickoff ? fmtTime(b.match.kickoff) : '';
     return `<div class="pred-card">
@@ -672,7 +675,7 @@ function renderMatches(){
   let html='';
   Object.entries(byLeague).forEach(([league,lrows])=>{
     const top = perLeagueTop[`${activeDate}|${league}`]||[];
-    let lw=0,ll=0; lrows.forEach(r=>{ if(!r.banker)return; const s=settle(r.primary,r.match.homeGoals,r.match.awayGoals); if(s==='Won')lw++;else if(s==='Lost')ll++; });
+    let lw=0,ll=0; lrows.forEach(r=>{ if(!r.banker)return; const s=settle(r.primary, r.match.homeGoals, r.match.awayGoals, r.match.status); if(s==='Won')lw++;else if(s==='Lost')ll++; });
     const tally=(lw+ll)>0?`<span class="text-xs ml-2"><span class="text-green">${lw}W</span> <span style="color:#fb7185">${ll}L</span></span>`:'';
 
     html += `<details open class="lg-row panel rounded-2xl mb-3 overflow-hidden" data-league="${league.toLowerCase()}">
@@ -691,7 +694,7 @@ function renderMatches(){
         <div class="flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-gold mb-2"><i class="fa-solid fa-star"></i> Top Bankers (${top.length})</div>
         <div class="grid grid-cols-1 md:grid-cols-2 gap-1.5">`;
       top.forEach((r,i)=>{
-        const res=settle(r.primary,r.match.homeGoals,r.match.awayGoals);
+        const res=settle(r.primary, r.match.homeGoals, r.match.awayGoals, r.match.status);
         const rt=res?`<span class="px-1.5 py-0.5 rounded text-[10px] font-bold ${resClass(res)}">${res.toUpperCase()}</span>`:'';
         html+=`<div class="flex items-center gap-2 text-sm"><span class="w-5 h-5 bg-gold rounded flex items-center justify-center text-[11px] font-bold flex-shrink-0">${i+1}</span><span class="flex-1 truncate">${r.match.home} v ${r.match.away} ${rt}</span><span class="px-2 py-0.5 rounded text-xs ${pill(r.primary)}">${r.primary}</span></div>`;
       });
@@ -707,7 +710,7 @@ function renderMatches(){
 
     const renderRow = (r)=>{
       const hg=r.match.homeGoals, ag=r.match.awayGoals, played=hg!=null&&ag!=null;
-      const res=settle(r.primary,hg,ag);
+      const res=settle(r.primary,hg,ag,r.match&&r.match.status);
       const rt=res?`<span class="px-2 py-0.5 rounded text-[10px] font-bold ${resClass(res)}">${res.toUpperCase()}</span>`:'';
       const live = r.match.status && ['1H','2H','HT','ET','LIVE'].includes(r.match.status);
       const isB = leagueBankerKeys.has(keyOf(r));
@@ -899,13 +902,13 @@ document.getElementById('slip-generate').addEventListener('click',generateSlip);
   const koMs = r => r.match.kickoff ? new Date(r.match.kickoff).getTime() : null;
   const isForward = r => snapMs!=null && koMs(r)!=null && koMs(r) > snapMs;
 
-  const allBankers = results.filter(r=>r.banker && settle(r.primary,r.match.homeGoals,r.match.awayGoals));
+  const allBankers = results.filter(r=>r.banker && settle(r.primary, r.match.homeGoals, r.match.awayGoals, r.match.status));
   const forward = allBankers.filter(isForward);
   const backtest = allBankers.filter(r=>!isForward(r)); // already-decided when analysed
 
   const tally = arr => {
     let w=0,l=0,v=0;
-    arr.forEach(r=>{const s=settle(r.primary,r.match.homeGoals,r.match.awayGoals); if(s==='Won')w++;else if(s==='Lost')l++;else if(s==='Void')v++;});
+    arr.forEach(r=>{const s=settle(r.primary, r.match.homeGoals, r.match.awayGoals, r.match.status); if(s==='Won')w++;else if(s==='Lost')l++;else if(s==='Void')v++;});
     const dec=w+l; return {w,l,v,dec,rate:dec>0?Math.round(w/dec*100):null};
   };
   const F=tally(forward), B=tally(backtest);
@@ -933,7 +936,7 @@ document.getElementById('slip-generate').addEventListener('click',generateSlip);
   }
 
   // by-market / by-league use FORWARD picks only
-  const gr=fn=>{const g={};forward.forEach(r=>{const k=fn(r),s=settle(r.primary,r.match.homeGoals,r.match.awayGoals);g[k]=g[k]||{w:0,l:0};if(s==='Won')g[k].w++;else if(s==='Lost')g[k].l++;});return Object.entries(g).map(([k,o])=>{const d=o.w+o.l;return{k,...o,rate:d>0?Math.round(o.w/d*100):null,d};}).sort((a,b)=>b.d-a.d);};
+  const gr=fn=>{const g={};forward.forEach(r=>{const k=fn(r),s=settle(r.primary, r.match.homeGoals, r.match.awayGoals, r.match.status);g[k]=g[k]||{w:0,l:0};if(s==='Won')g[k].w++;else if(s==='Lost')g[k].l++;});return Object.entries(g).map(([k,o])=>{const d=o.w+o.l;return{k,...o,rate:d>0?Math.round(o.w/d*100):null,d};}).sort((a,b)=>b.d-a.d);};
   const bar=row=>{const p=row.rate!=null?row.rate:0,c=p>=60?'var(--green)':p>=45?'var(--gold)':'#fb7185';return `<div class="flex items-center gap-3 text-sm"><span class="w-24 truncate">${row.k}</span><div class="flex-1 bar-track h-2"><div style="width:${p}%;height:100%;background:${c};border-radius:9999px"></div></div><span class="w-20 text-right tnum" style="color:var(--muted)">${row.rate!=null?row.rate+'%':'—'} <span style="opacity:.6">(${row.w}-${row.l})</span></span></div>`;};
   const mkt=gr(r=>marketTag(r.primary)), lg=gr(r=>r.match.league);
   const emptyMsg='<div class="text-sm" style="color:var(--muted)">No settled forward picks yet.</div>';
@@ -1307,7 +1310,7 @@ function rowFlag(match){
   return match.flag ? `<img src="${match.flag}" alt="" width="16" height="11" style="width:16px;height:11px;object-fit:cover;border-radius:2px;flex-shrink:0;display:inline-block;vertical-align:middle;margin-right:4px" onerror="this.style.display='none'"/>` : '';
 }
 function rowSettle(match, primary){
-  const res = settle(primary, match.homeGoals, match.awayGoals);
+  const res = settle(primary, match.homeGoals, match.awayGoals, match.status);
   return res ? `<span class="px-2 py-0.5 rounded text-[10px] font-bold ${resClass(res)}">${res.toUpperCase()}</span>` : '';
 }
 function renderUltraMatches(){
@@ -1391,7 +1394,7 @@ function renderStrictMatches(){
       if(!isBet){ return; } // Strict view shows only actual strict bets, not No-bet clutter
       const t = r.match.kickoff ? fmtTime(r.match.kickoff) : '';
       const hg=r.match.homeGoals, ag=r.match.awayGoals, played=hg!=null&&ag!=null;
-      const settled = played ? settle(sr.market, hg, ag) : '';
+      const settled = played ? settle(sr.market, hg, ag, r.match.status) : '';
       const settleTag = settled ? `<span class="px-2 py-0.5 rounded text-[10px] font-bold ${resClass(settled)}">${settled.toUpperCase()}</span>` : '';
       const score = played ? `<span class="display font-bold tnum">${hg} - ${ag}</span>` : `<span class="text-xs tnum" style="color:var(--muted)">${t||'—'}</span>`;
 
@@ -1449,17 +1452,20 @@ function renderStrictMatches(){
   const bn=document.getElementById('eng-normal'), bs=document.getElementById('eng-strict'), bu=document.getElementById('eng-ultra'), bp=document.getElementById('eng-rulespro'), ba=document.getElementById('eng-apex'), bpr=document.getElementById('eng-prime'), bv=document.getElementById('eng-value'), bpro=document.getElementById('eng-pro'), bac=document.getElementById('eng-acca'), note=document.getElementById('eng-note');
   function setMode(mode){
     engineMode=mode;
-    const on='background:linear-gradient(135deg,var(--gold),#6fd44a);color:#0a0e17';
-    const off='color:var(--muted)';
-    bn.style.cssText = mode==='normal'?on:off;
-    bs.style.cssText = mode==='strict'?on:off;
-    bu.style.cssText = mode==='ultra'?on:off;
-    bp.style.cssText = mode==='rulespro'?on:off;
-    ba.style.cssText = mode==='apex'?on:off;
-    bpr.style.cssText = mode==='prime'?on:off;
-    bv.style.cssText = mode==='value'?on:off;
-    bpro.style.cssText = mode==='pro'?on:off;
-    bac.style.cssText = mode==='acca'?on:off;
+    const setTab=(btn,active)=>{
+      if(!btn) return;
+      if(active){ btn.style.background='linear-gradient(135deg,var(--gold),#6fd44a)'; btn.style.color='#0a0e17'; }
+      else { btn.style.background='transparent'; btn.style.color='var(--muted)'; }
+    };
+    setTab(bn, mode==='normal');
+    setTab(bs, mode==='strict');
+    setTab(bu, mode==='ultra');
+    setTab(bp, mode==='rulespro');
+    setTab(ba, mode==='apex');
+    setTab(bpr, mode==='prime');
+    setTab(bv, mode==='value');
+    setTab(bpro, mode==='pro');
+    setTab(bac, mode==='acca');
     note.textContent = mode==='strict'
       ? 'Conservative: rejects most games, one clean market or No Bet. Auto-tiered from the table — confirm red flags yourself.'
       : mode==='ultra'
@@ -1530,7 +1536,7 @@ function renderBankerOfDay(){
 
   function pickRow(p, isHero){
     const b=p.match;
-    const res=settle(p.market,b.homeGoals,b.awayGoals);
+    const res=settle(p.market,b.homeGoals,b.awayGoals,b.status);
     const resTag=res?`<span class="px-2 py-0.5 rounded text-[11px] font-bold ${resClass(res)}">${res.toUpperCase()}</span>`:'';
     const t=b.kickoff?fmtTime(b.kickoff):'';
     const label = isHero ? '<i class="fa-solid fa-star"></i> Banker of the Day' : 'Also strongly agreed';
