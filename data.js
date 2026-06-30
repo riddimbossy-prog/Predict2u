@@ -1,5 +1,5 @@
 window.DATA_UPDATED = "2026-06-30T23:11:53.478Z";
-window.SCORES_UPDATED = "2026-06-30T23:30:50.182Z";
+window.SCORES_UPDATED = "2026-06-30T23:35:26.416Z";
 window.MATCHES = [
   {
     "home": "Washington Spirit W",
@@ -73816,7 +73816,7 @@ window.MATCHES = [
     "awayLogo": "https://media.api-sports.io/football/teams/23112.png",
     "country": "USA",
     "flag": "https://media.api-sports.io/flags/us.svg",
-    "status": "1H",
+    "status": "HT",
     "kickoff": "2026-06-30T22:00:00+00:00",
     "matchDate": "2026-06-30",
     "homeGoals": 1,
@@ -73888,7 +73888,7 @@ window.MATCHES = [
     "status": "2H",
     "kickoff": "2026-06-30T22:00:00+00:00",
     "matchDate": "2026-06-30",
-    "homeGoals": 1,
+    "homeGoals": 2,
     "awayGoals": 2,
     "homePos": null,
     "awayPos": null,
@@ -73953,7 +73953,7 @@ window.MATCHES = [
       "dcx2": 1.53
     },
     "h2h": null,
-    "elapsed": 69
+    "elapsed": 74
   },
   {
     "home": "Caxias",
@@ -74190,7 +74190,7 @@ window.MATCHES = [
       "dcx2": 1.62
     },
     "h2h": null,
-    "elapsed": 31
+    "elapsed": 35
   },
   {
     "home": "Boston Bolts",
@@ -74272,7 +74272,7 @@ window.MATCHES = [
       "dcx2": 1.13
     },
     "h2h": null,
-    "elapsed": 28
+    "elapsed": 32
   },
   {
     "home": "Charlotte Eagles",
@@ -74286,7 +74286,7 @@ window.MATCHES = [
     "kickoff": "2026-06-30T23:00:00+00:00",
     "matchDate": "2026-06-30",
     "homeGoals": 0,
-    "awayGoals": 0,
+    "awayGoals": 1,
     "homePos": 6,
     "awayPos": null,
     "tableSize": 144,
@@ -74341,7 +74341,7 @@ window.MATCHES = [
     "round": "Group Stage",
     "odds": null,
     "h2h": null,
-    "elapsed": 26
+    "elapsed": 30
   },
   {
     "home": "Reading United",
@@ -74492,7 +74492,7 @@ window.MATCHES = [
       "dcx2": 1.4
     },
     "h2h": null,
-    "elapsed": 24
+    "elapsed": 28
   },
   {
     "home": "Midwest United",
@@ -74561,7 +74561,7 @@ window.MATCHES = [
     "round": "Group Stage",
     "odds": null,
     "h2h": null,
-    "elapsed": 29
+    "elapsed": 33
   },
   {
     "home": "Patuxent",
@@ -74709,11 +74709,11 @@ window.MATCHES = [
     "awayLogo": "https://media.api-sports.io/football/teams/1211.png",
     "country": "Brazil",
     "flag": "https://media.api-sports.io/flags/br.svg",
-    "status": "NS",
+    "status": "1H",
     "kickoff": "2026-06-30T23:30:00+00:00",
     "matchDate": "2026-06-30",
-    "homeGoals": null,
-    "awayGoals": null,
+    "homeGoals": 0,
+    "awayGoals": 0,
     "homePos": 16,
     "awayPos": 2,
     "tableSize": 20,
@@ -74783,7 +74783,7 @@ window.MATCHES = [
       "dcx2": 1.75
     },
     "h2h": null,
-    "elapsed": null
+    "elapsed": 4
   },
   {
     "home": "Volta Redonda",
@@ -74793,11 +74793,11 @@ window.MATCHES = [
     "awayLogo": "https://media.api-sports.io/football/teams/10862.png",
     "country": "Brazil",
     "flag": "https://media.api-sports.io/flags/br.svg",
-    "status": "NS",
+    "status": "1H",
     "kickoff": "2026-06-30T23:30:00+00:00",
     "matchDate": "2026-06-30",
-    "homeGoals": null,
-    "awayGoals": null,
+    "homeGoals": 0,
+    "awayGoals": 0,
     "homePos": 14,
     "awayPos": 9,
     "tableSize": 20,
@@ -74867,7 +74867,7 @@ window.MATCHES = [
       "dcx2": 1.8
     },
     "h2h": null,
-    "elapsed": null
+    "elapsed": 5
   },
   {
     "home": "Virginia Marauders",
@@ -74877,11 +74877,11 @@ window.MATCHES = [
     "awayLogo": "https://media.api-sports.io/football/teams/23971.png",
     "country": "USA",
     "flag": "https://media.api-sports.io/flags/us.svg",
-    "status": "NS",
+    "status": "1H",
     "kickoff": "2026-06-30T23:30:00+00:00",
     "matchDate": "2026-06-30",
-    "homeGoals": null,
-    "awayGoals": null,
+    "homeGoals": 0,
+    "awayGoals": 0,
     "homePos": 7,
     "awayPos": 4,
     "tableSize": 144,
@@ -74949,7 +74949,7 @@ window.MATCHES = [
       "dcx2": 1.01
     },
     "h2h": null,
-    "elapsed": null
+    "elapsed": 2
   },
   {
     "home": "Miami AC",
