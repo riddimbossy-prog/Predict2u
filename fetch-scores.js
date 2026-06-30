@@ -46,7 +46,15 @@ function apiGet(endpoint, key) {
 }
 
 // status codes the API uses for a finished match
-const FINISHED = new Set(["FT","AET","PEN"]);
+const FINISHED = new Set(["FT","AET","PEN","AWD","WO"]);
+// statuses that mean "this match is over" but the API sometimes leaves stuck
+// on a live code (2H/ET/P/etc.) for obscure leagues. We treat a match as over
+// if it's already FINISHED, OR it has a final score and kicked off long ago.
+const STALE_MINUTES = 150; // ~90 min play + HT + stoppage + buffer
+function kickoffMsAgo(mt) {
+  const t = mt && mt.kickoff ? Date.parse(mt.kickoff) : NaN;
+  return Number.isFinite(t) ? (Date.now() - t) : NaN;
+}
 const sleep = ms => new Promise(r=>setTimeout(r, ms));
 
 function loadExistingMatches() {
@@ -121,6 +129,24 @@ function loadExistingMatches() {
       updated++;
     }
   }
+
+  // SAFETY NET — fix the "stuck on LIVE" bug.
+  // API-Football occasionally never flips obscure-league fixtures to FT.
+  // If a match already has a final score AND kicked off more than
+  // STALE_MINUTES ago AND is not already a finished status, force it to FT.
+  // This only PROMOTES clearly-over games; it never blanks goals or rebuilds.
+  let promoted = 0;
+  for (const mt of matches) {
+    const hasScore = mt.homeGoals != null && mt.awayGoals != null;
+    const overdue = kickoffMsAgo(mt) >= STALE_MINUTES * 60 * 1000;
+    const notFinished = !FINISHED.has(String(mt.status || "").toUpperCase());
+    if (hasScore && overdue && notFinished) {
+      mt.status = "FT";
+      promoted++;
+      updated++;
+    }
+  }
+  if (promoted) console.log(`Promoted ${promoted} stale-live match(es) to FT (overdue + final score).`);
 
   if (updated === 0) {
     console.log(`No score changes (${calls} calls, ${dates.length} dates). Leaving data.js as-is.`);
