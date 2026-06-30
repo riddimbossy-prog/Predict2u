@@ -1,5 +1,5 @@
 window.DATA_UPDATED = "2026-06-30T23:11:53.478Z";
-window.SCORES_UPDATED = "2026-06-30T23:50:36.123Z";
+window.SCORES_UPDATED = "2026-06-30T23:55:29.494Z";
 window.MATCHES = [
   {
     "home": "Washington Spirit W",
@@ -73819,7 +73819,7 @@ window.MATCHES = [
     "status": "2H",
     "kickoff": "2026-06-30T22:00:00+00:00",
     "matchDate": "2026-06-30",
-    "homeGoals": 1,
+    "homeGoals": 2,
     "awayGoals": 0,
     "homePos": 5,
     "awayPos": 4,
@@ -73875,7 +73875,7 @@ window.MATCHES = [
     "round": "Group Stage",
     "odds": null,
     "h2h": null,
-    "elapsed": 48
+    "elapsed": 53
   },
   {
     "home": "A. Italiano",
@@ -73888,7 +73888,7 @@ window.MATCHES = [
     "status": "2H",
     "kickoff": "2026-06-30T22:00:00+00:00",
     "matchDate": "2026-06-30",
-    "homeGoals": 2,
+    "homeGoals": 3,
     "awayGoals": 2,
     "homePos": null,
     "awayPos": null,
@@ -73953,7 +73953,7 @@ window.MATCHES = [
       "dcx2": 1.53
     },
     "h2h": null,
-    "elapsed": 89
+    "elapsed": 90
   },
   {
     "home": "Caxias",
@@ -74037,7 +74037,7 @@ window.MATCHES = [
       "dcx2": 2.1
     },
     "h2h": null,
-    "elapsed": 60
+    "elapsed": 65
   },
   {
     "home": "Treze U20",
@@ -74282,7 +74282,7 @@ window.MATCHES = [
     "awayLogo": "https://media.api-sports.io/football/teams/23993.png",
     "country": "USA",
     "flag": "https://media.api-sports.io/flags/us.svg",
-    "status": "1H",
+    "status": "HT",
     "kickoff": "2026-06-30T23:00:00+00:00",
     "matchDate": "2026-06-30",
     "homeGoals": 0,
@@ -74492,7 +74492,7 @@ window.MATCHES = [
       "dcx2": 1.4
     },
     "h2h": null,
-    "elapsed": 43
+    "elapsed": 45
   },
   {
     "home": "Midwest United",
@@ -74502,7 +74502,7 @@ window.MATCHES = [
     "awayLogo": "https://media.api-sports.io/football/teams/4052.png",
     "country": "USA",
     "flag": "https://media.api-sports.io/flags/us.svg",
-    "status": "1H",
+    "status": "HT",
     "kickoff": "2026-06-30T23:00:00+00:00",
     "matchDate": "2026-06-30",
     "homeGoals": 1,
@@ -74783,7 +74783,7 @@ window.MATCHES = [
       "dcx2": 1.75
     },
     "h2h": null,
-    "elapsed": 19
+    "elapsed": 24
   },
   {
     "home": "Volta Redonda",
@@ -74867,7 +74867,7 @@ window.MATCHES = [
       "dcx2": 1.8
     },
     "h2h": null,
-    "elapsed": 20
+    "elapsed": 25
   },
   {
     "home": "Virginia Marauders",
@@ -74949,7 +74949,7 @@ window.MATCHES = [
       "dcx2": 1.01
     },
     "h2h": null,
-    "elapsed": 17
+    "elapsed": 22
   },
   {
     "home": "Miami AC",
