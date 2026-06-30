@@ -1,5 +1,5 @@
 window.DATA_UPDATED = "2026-06-30T11:28:03.083Z";
-window.SCORES_UPDATED = "2026-06-30T14:06:14.923Z";
+window.SCORES_UPDATED = "2026-06-30T14:15:32.087Z";
 window.MATCHES = [
   {
     "home": "Washington Spirit W",
@@ -52902,8 +52902,8 @@ window.MATCHES = [
     "status": "FT",
     "kickoff": "2026-06-30T08:00:00+00:00",
     "matchDate": "2026-06-30",
-    "homeGoals": 0,
-    "awayGoals": 1,
+    "homeGoals": 4,
+    "awayGoals": 3,
     "homePos": 8,
     "awayPos": 5,
     "tableSize": 16,
