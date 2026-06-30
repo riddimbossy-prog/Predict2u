@@ -41,9 +41,12 @@ jobs:
           DAYS_FWD=${{ secrets.DAYS_FWD }}
           REQUEST_BUDGET=${{ secrets.REQUEST_BUDGET }}
           SLEEP_MS=${{ secrets.SLEEP_MS }}
+          STATS_API_KEY=${{ secrets.STATS_API_KEY }}
           EOF
       - name: Run the fetcher
         run: node fetch-data.js
+      - name: Enrich with real xG (TheStatsAPI)
+        run: node enrich-xg.js || echo "xG enrichment skipped (site unaffected)"
       - name: Generate daily branded image
         run: |
           npm install sharp --no-save || echo "sharp install issue"
@@ -55,10 +58,6 @@ jobs:
           if ! git diff --quiet data.js today.png today.svg daily/ 2>/dev/null || [ -n "$(git status --porcelain today.png daily/ 2>/dev/null)" ]; then
             git add data.js today.png today.svg daily/ 2>/dev/null || git add data.js
             git commit -m "Auto-update match data + daily image"
-            # The run can take many minutes; main may have moved meanwhile.
-            # Rebase our data.js commit on top of any new remote changes, then
-            # push. Retry once in case of a race. data.js is the only file we
-            # touch, so a rebase can't conflict with code edits.
             for i in 1 2 3; do
               git pull --rebase --autostash origin main && git push && { echo "data.js updated and pushed."; break; }
               echo "Push attempt $i failed (remote moved) — retrying after sync..."
