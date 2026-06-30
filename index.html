@@ -96,29 +96,6 @@
     transition:transform .15s, border-color .15s; }
   .pred-card:hover{ transform:translateY(-2px); border-color:rgba(76,175,39,.4); }
 
-  /* NerdyTips-style match card grid */
-  .mcard-grid{ display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:12px; padding:14px; }
-  @media (min-width:1024px){ .mcard-grid{ grid-template-columns:repeat(3,minmax(0,1fr)); } }
-  .mcard{ background:var(--panel-2); border:1px solid var(--line); border-radius:14px; overflow:hidden;
-    transition:border-color .15s, transform .15s; }
-  .mcard:hover{ border-color:rgba(76,175,39,.4); transform:translateY(-2px); }
-  .mcard.is-banker-row{ box-shadow:inset 3px 0 0 var(--gold); }
-  .mcard.is-lean-row{ box-shadow:inset 3px 0 0 rgba(45,212,191,.55); }
-  .mcard>summary{ padding:14px 12px 12px; cursor:pointer; }
-  .mcard-top{ display:flex; align-items:center; justify-content:space-between; gap:8px; }
-  .mcard-team{ display:flex; flex-direction:column; align-items:center; gap:6px; flex:1; min-width:0; text-align:center; }
-  .mcard-crest{ width:34px; height:34px; object-fit:contain; }
-  .mcard-crest-fb{ width:34px; height:34px; border-radius:50%; background:var(--line); display:flex; align-items:center; justify-content:center; font-size:13px; font-weight:700; color:var(--muted); }
-  .mcard-name{ font-size:12.5px; font-weight:600; line-height:1.2; max-width:100%; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; }
-  .mcard-mid{ display:flex; flex-direction:column; align-items:center; gap:4px; flex-shrink:0; padding:0 4px; }
-  .mcard-score{ font-size:20px; font-weight:800; font-variant-numeric:tabular-nums; }
-  .mcard-time{ font-size:15px; font-weight:700; color:var(--muted); }
-  .mcard-status{ font-size:9px; font-weight:700; text-transform:uppercase; letter-spacing:.04em; padding:2px 7px; border-radius:999px; }
-  .mst-upcoming{ background:rgba(168,85,247,.16); color:#a855f7; border:1px solid rgba(168,85,247,.4); }
-  .mst-fin{ background:var(--line); color:var(--muted); }
-  .mcard-foot{ display:flex; align-items:center; justify-content:center; gap:6px; margin-top:10px; padding-top:10px; border-top:1px solid var(--line); flex-wrap:wrap; }
-  .mcard-detail{ padding:0 12px 14px; }
-
   .odd-cell{ background:var(--panel-2); border:1px solid var(--line); border-radius:.5rem; padding:.35rem .2rem;
     text-align:center; font-size:.8rem; font-weight:600; }
   .odd-cell.best{ border-color:rgba(126,217,87,.5); color:var(--brand); }
@@ -158,39 +135,29 @@
 
   ::-webkit-scrollbar{ width:10px; height:10px; }
   ::-webkit-scrollbar-thumb{ background:var(--line); border-radius:6px; }
-/* Won-bets marquee — NerdyTips-style: a row of dark rounded CARDS that scroll
-   right-to-left on a loop. Each card: [flag] Team A  VS  Team B  [✓ WON].
-   Pauses on hover so users can read a card. */
-.won-marquee{ overflow:hidden; position:relative; }
-.won-marquee-track{ display:inline-flex; gap:14px; white-space:nowrap; will-change:transform; animation:wonscroll 45s linear infinite; padding-left:100%; }
-.won-marquee:hover .won-marquee-track{ animation-play-state:paused; }
-.won-card{ display:inline-flex; align-items:center; gap:10px; padding:10px 16px; border-radius:14px;
-  background:var(--panel); border:1px solid var(--line); }
-.won-card .wc-flag{ width:20px; height:14px; object-fit:cover; border-radius:2px; flex-shrink:0; background:var(--line); }
-.won-card .wc-crest{ width:20px; height:20px; object-fit:contain; flex-shrink:0; }
-.won-card .wc-team{ font-weight:600; font-size:14px; }
-.won-card .wc-vs{ font-size:12px; font-weight:700; letter-spacing:.04em; color:var(--brand,#a855f7); }
-.won-card .wc-badge{ display:inline-flex; align-items:center; gap:5px; padding:4px 9px; border-radius:999px;
-  background:rgba(34,197,94,.16); border:1px solid rgba(34,197,94,.4); font-size:12px; font-weight:700; color:#22c55e; }
-body.light .won-card .wc-badge{ background:rgba(22,163,74,.10); border-color:rgba(22,163,74,.35); color:#16a34a; }
-@keyframes wonscroll{ from{ transform:translateX(0); } to{ transform:translateX(-100%); } }
-@media (prefers-reduced-motion: reduce){ .won-marquee-track{ animation:none; } }
 .eng-scroll::-webkit-scrollbar{display:none;}
-/* Equal-width, non-reflowing tabs. FIXED basis (not min-width) so the active
-   tab's gradient/bold state can never change a button's size or nudge the row.
-   border is always present (transparent when inactive) so the box model is
-   identical in both states — this is what stops the jump-on-tap. */
-.eng-scroll button{
-  flex:0 0 82px; width:82px; box-sizing:border-box;
-  text-align:center; border:1px solid transparent;
-  transition:color .12s ease, background-color .12s ease; /* color only — never size */
-}
-.eng-scroll button:last-child{ flex-basis:64px; width:64px; }
+.eng-scroll{max-width:100%;}
+/* Equal-width tabs so selecting one never reflows/shifts the others. */
+.eng-scroll button{ min-width:82px; text-align:center; box-sizing:border-box; }
+.eng-scroll button:last-child{ min-width:64px; }
 /* Desktop: let the engine tabs wrap so all are visible (no hidden scroll).
    Mobile: keep them on one scrollable row to save vertical space. */
 @media (min-width: 640px){
   .eng-scroll{ flex-wrap:wrap; overflow-x:visible !important; }
 }
+/* Won-bets marquee — NerdyTips-style cards scrolling right-to-left. */
+.won-marquee{ overflow:hidden; position:relative; }
+.won-marquee-track{ display:inline-flex; gap:14px; white-space:nowrap; will-change:transform; animation:wonscroll 45s linear infinite; padding-left:100%; }
+.won-marquee:hover .won-marquee-track{ animation-play-state:paused; }
+.won-card{ display:inline-flex; align-items:center; gap:10px; padding:10px 16px; border-radius:14px; background:var(--panel); border:1px solid var(--line); }
+.won-card .wc-flag{ width:20px; height:14px; object-fit:cover; border-radius:2px; flex-shrink:0; background:var(--line); }
+.won-card .wc-crest{ width:20px; height:20px; object-fit:contain; flex-shrink:0; }
+.won-card .wc-team{ font-weight:600; font-size:14px; }
+.won-card .wc-vs{ font-size:12px; font-weight:700; letter-spacing:.04em; color:var(--brand); }
+.won-card .wc-badge{ display:inline-flex; align-items:center; gap:5px; padding:4px 9px; border-radius:999px; background:rgba(34,197,94,.16); border:1px solid rgba(34,197,94,.4); font-size:12px; font-weight:700; color:#22c55e; }
+body.light .won-card .wc-badge{ background:rgba(22,163,74,.10); border-color:rgba(22,163,74,.35); color:#16a34a; }
+@keyframes wonscroll{ from{ transform:translateX(0); } to{ transform:translateX(-100%); } }
+@media (prefers-reduced-motion: reduce){ .won-marquee-track{ animation:none; } }
 </style>
 </head>
 <body>
@@ -292,7 +259,7 @@ body.light .won-card .wc-badge{ background:rgba(22,163,74,.10); border-color:rgb
   </div>
 
   <!-- stat row -->
-  <div class="panel rounded-2xl px-4 py-3 mb-6 flex flex-wrap items-center gap-x-6 gap-y-3" id="stat-row"></div>
+  <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 mb-6" id="stat-row"></div>
 
   <!-- WON-BETS TICKER — auto-scrolling marquee of today's settled WON bankers -->
   <div id="won-ticker" class="mb-6" style="display:none"></div>
@@ -520,39 +487,23 @@ function fmtTime(iso){
   catch(e){ return ''; }
 }
 // Live badge: shows the in-play minute, ticking forward client-side from the
-// minute captured at the last scores fetch (window.SCORES_UPDATED). Because
-// data only refreshes every ~15 min, a frozen minute lags the real clock; we
-// estimate the current minute = fetched minute + real minutes since the fetch.
-// HONESTY GUARDS (a client estimate can't see the real feed):
-//  • shown as "~24'" (tilde = approximate, never claims exact precision)
-//  • HT shows "HT"
-//  • first half caps at 45 (won't count into half-time); 45+ shows "~45+'"
-//  • second half caps at 90; 90+ shows "~90+'"
-//  • if no SCORES_UPDATED anchor, falls back to the plain fetched minute
+// minute captured at the last scores fetch (window.SCORES_UPDATED). Shown as
+// "~24'" (approximate); HT shows "HT"; caps near 45 and 90 so it never counts
+// through breaks; falls back to plain "LIVE" if no minute is known.
 function liveBadge(m){
   if(!m) return '';
   const st = String(m.status||'').toUpperCase();
   if(!['1H','2H','HT','ET','LIVE','P'].includes(st)) return '';
   if(st==='HT') return `<span class="chip-live px-2 py-0.5 rounded text-[10px] font-bold whitespace-nowrap">HT</span>`;
-
   let label = 'LIVE';
   const base = (m.elapsed!=null && m.elapsed!=='') ? Number(m.elapsed) : null;
   if(base!=null && !isNaN(base)){
-    // minutes elapsed in REAL time since the fetch that captured `base`
     let sinceMin = 0;
     const anchor = window.SCORES_UPDATED ? new Date(window.SCORES_UPDATED).getTime() : null;
     if(anchor && !isNaN(anchor)) sinceMin = Math.max(0, Math.floor((Date.now()-anchor)/60000));
     let est = base + sinceMin;
-
-    // freeze near breaks so we never count THROUGH half-time / full-time
-    if(st==='1H'){
-      if(est>=45) label = `~45+'`;
-      else label = `~${est}'`;
-    } else { // 2H / ET / LIVE
-      if(est>=90) label = `~90+'`;
-      else if(base<45 && est>45) label = `~45+'`; // anchor was 1st half, drifted past 45 → don't fake 2nd-half minute
-      else label = `~${est}'`;
-    }
+    if(st==='1H'){ label = est>=45 ? `~45+'` : `~${est}'`; }
+    else { if(est>=90) label=`~90+'`; else if(base<45 && est>45) label=`~45+'`; else label=`~${est}'`; }
   }
   return `<span class="chip-live px-2 py-0.5 rounded text-[10px] font-bold whitespace-nowrap">${label}</span>`;
 }
@@ -678,42 +629,22 @@ function renderStats(){
   const picks = enginePicks(rows);
   let won=0,lost=0;
   picks.forEach(p=>{ const s=settle(p.primary, p.match.homeGoals, p.match.awayGoals, p.match.status); if(s==='Won')won++; else if(s==='Lost')lost++; });
-  // upcoming = matches not yet kicked off
-  const now=Date.now();
-  const upcoming = rows.filter(r=>{
-    const ko=r.match.kickoff?new Date(r.match.kickoff).getTime():null;
-    const played=r.match.homeGoals!=null&&r.match.awayGoals!=null;
-    const live=r.match.status&&['1H','2H','HT','ET','LIVE','P'].includes(String(r.match.status).toUpperCase());
-    return !played && !live && (ko==null||ko>now);
-  }).length;
-  const settled=won+lost;
-  // NerdyTips-style summary item: icon + label + count
-  const item=(icon,label,val,color)=>`<div class="flex items-center gap-2">
-      <i class="fa-solid ${icon}" style="color:${color||'var(--brand)'};font-size:15px"></i>
-      <span class="text-sm" style="color:var(--muted)">${label}</span>
-      <span class="display text-lg font-bold tnum ${color?'':''}" style="${color?'color:'+color:''}">${val}</span>
-    </div>`;
-  const sep='<span style="width:1px;height:18px;background:var(--line)"></span>';
-  let html =
-    item('fa-clock-rotate-left','Predicted', rows.length, 'var(--brand)') + sep +
-    item('fa-hourglass-half','Upcoming', upcoming, '#a855f7') + sep +
-    item('fa-star','Bankers', picks.length, 'var(--gold)') + sep +
-    item('fa-trophy','Won', settled>0?won:'—', '#22c55e');
-  if(settled>0) html += sep + item('fa-xmark','Lost', lost, '#fb7185') +
-    `<span class="text-[10px] ml-1" style="color:var(--muted);opacity:.7">settled / backtest</span>`;
-  document.getElementById('stat-row').innerHTML = html;
+  const settledNote = (won+lost)>0 ? '<div class="text-[9px] mt-0.5" style="color:var(--muted);opacity:.7">settled / backtest</div>' : '';
+  const stat=(l,v,c,extra)=>`<div class="panel rounded-2xl p-4"><div class="text-xs uppercase tracking-wider font-semibold mb-1" style="color:var(--muted)">${l}</div><div class="display text-3xl font-bold tnum ${c||''}">${v}</div>${extra||''}</div>`;
+  document.getElementById('stat-row').innerHTML =
+    stat('Matches', rows.length) + stat('Bankers', picks.length, 'text-gold') +
+    stat('Won', (won+lost)>0?won:'—', 'text-green', settledNote) + stat('Lost', (won+lost)>0?lost:'—', '', settledNote);
 }
 
 /* ============ WON-BETS TICKER ============
-   Auto-scrolling marquee of the day's settled WON bankers, styled like
-   NerdyTips: a row of dark cards [flag] Team A VS Team B [✓ WON]. Honesty-first:
+   Auto-scrolling marquee of the day's settled WON bankers, NerdyTips-style:
+   a row of dark cards [crest/flag] Team A VS Team B [✓ market]. Honesty-first:
    real settled wins for the active date only. Hidden when there are none. */
 function renderWonTicker(){
   const box=document.getElementById('won-ticker');
   if(!box) return;
   const rows = byDate[activeDate]||[];
   const picks = enginePicks(rows);
-  // collapse to unique matches that have at least one WON banker; collect markets
   const byMatch={};
   picks.forEach(p=>{
     const s=settle(p.primary, p.match.homeGoals, p.match.awayGoals, p.match.status);
@@ -728,24 +659,17 @@ function renderWonTicker(){
   const esc=t=>String(t==null?'':t).replace(/[<>&"]/g,c=>({'<':'&lt;','>':'&gt;','&':'&amp;','"':'&quot;'}[c]));
   const card=w=>{
     const m=w.match;
-    const crest=(url,name)=> url
-      ? `<img class="wc-crest" src="${esc(url)}" alt="" onerror="this.style.display='none'"/>`
-      : '';
-    const flag = (!m.homeLogo && !m.awayLogo && m.flag)
-      ? `<img class="wc-flag" src="${esc(m.flag)}" alt="" onerror="this.style.display='none'"/>`
-      : '';
-    // green tick badge(s) carry the won MARKET name (NerdyTips style: "✓ Over 2.5")
+    const crest=(url)=> url ? `<img class="wc-crest" src="${esc(url)}" alt="" onerror="this.style.display='none'"/>` : '';
+    const flag = (!m.homeLogo && !m.awayLogo && m.flag) ? `<img class="wc-flag" src="${esc(m.flag)}" alt="" onerror="this.style.display='none'"/>` : '';
     const badges = (w.markets && w.markets.length)
       ? w.markets.map(mk=>`<span class="wc-badge">✓ ${esc(mk)}</span>`).join('')
       : `<span class="wc-badge">✓ ${w.count}</span>`;
     return `<span class="won-card">${flag}`+
-      `${crest(m.homeLogo,m.home)}<span class="wc-team">${esc(m.home)}</span>`+
+      `${crest(m.homeLogo)}<span class="wc-team">${esc(m.home)}</span>`+
       `<span class="wc-vs">VS</span>`+
-      `<span class="wc-team">${esc(m.away)}</span>${crest(m.awayLogo,m.away)}`+
-      `${badges}`+
-      `</span>`;
+      `<span class="wc-team">${esc(m.away)}</span>${crest(m.awayLogo)}`+
+      `${badges}</span>`;
   };
-  // duplicate the set so the loop wraps seamlessly with no visible gap
   const items = wins.map(card).join('');
   box.style.display='';
   box.innerHTML =
@@ -827,67 +751,6 @@ function miniBar(label,m){
   </div>`;
 }
 
-/* ============ SHARED MATCH CARD (NerdyTips-style) ============
-   One card component every engine renderer can use, so the whole site shares
-   the same look. Preserves all data-* filter hooks, settle badges, banker/lean
-   markers, and an expandable detail body. opts:
-     isBanker  -> gold left-edge + "Banker" tag
-     isLean    -> teal left-edge + "League lean" tag (Normal only)
-     market    -> the pick to show in the foot pill
-     detailHTML-> custom expandable body (defaults to r.summary) */
-function matchCard(r, opts){
-  opts = opts||{};
-  const m=r.match;
-  const hg=m.homeGoals, ag=m.awayGoals, played=hg!=null&&ag!=null;
-  const live = m.status && ['1H','2H','HT','ET','LIVE','P'].includes(String(m.status).toUpperCase());
-  const ko = m.kickoff ? new Date(m.kickoff).getTime() : null;
-  const koFuture = ko!=null ? ko>Date.now() : true;
-  const upcoming = !played && !live && koFuture;
-  const esc=t=>String(t==null?'':t).replace(/[<>&"]/g,c=>({'<':'&lt;','>':'&gt;','&':'&amp;','"':'&quot;'}[c]));
-  const initials=n=>String(n||'?').trim().slice(0,2).toUpperCase();
-  const crest=(url,name)=> url
-    ? `<img class="mcard-crest" src="${esc(url)}" alt="" onerror="this.outerHTML='<div class=\\'mcard-crest-fb\\'>${esc(initials(name))}</div>'"/>`
-    : `<div class="mcard-crest-fb">${esc(initials(name))}</div>`;
-
-  // middle: score (played/live) or kickoff time (upcoming), plus status badge
-  let mid;
-  if(played || live){
-    const lb = liveBadge(m);
-    mid = `<div class="mcard-score">${hg!=null?hg:'-'} - ${ag!=null?ag:'-'}</div>`+
-          (lb || (!live ? `<span class="mcard-status mst-fin">Finished</span>` : ''));
-  } else {
-    const t = m.kickoff ? fmtTime(m.kickoff).replace(' GMT','') : '—';
-    mid = `<div class="mcard-time">${t}</div><span class="mcard-status mst-upcoming">Upcoming</span>`;
-  }
-
-  // foot: market pill + settle badge
-  const market = opts.market || r.primary;
-  const res = settle(market, hg, ag, m && m.status);
-  const rt = res?`<span class="px-2 py-0.5 rounded text-[10px] font-bold ${resClass(res)}">${res.toUpperCase()}</span>`:'';
-  const tag = opts.isBanker?'<span class="text-[9px] font-bold uppercase" style="color:var(--brand)">Banker</span>'
-            : opts.isLean?'<span class="text-[9px] font-bold uppercase" style="color:var(--muted)">League lean</span>':'';
-  const pillHTML = `<span class="px-2.5 py-1 rounded-lg text-xs font-semibold ${pill(market)} whitespace-nowrap">${esc(market)}</span>`;
-
-  const detail = opts.detailHTML || (opts.isLean && r.lean
-    ? `<span style="color:var(--ink)"><i class="fa-solid fa-flag"></i> League lean:</span> ${r.lean.note} <em>(a tracked profile lean, not a staked banker)</em>`
-    : (r.summary||''));
-
-  const dataMkt = marketTag(market);
-  const winOdd = (market==='Home Win'&&m.odds&&m.odds.home) ? m.odds.home : (market==='Away Win'&&m.odds&&m.odds.away) ? m.odds.away : '';
-
-  return `<details class="mcard match-item ${opts.isBanker?'is-banker-row':''} ${opts.isLean?'is-lean-row':''}" data-search="${(m.home+' '+m.away+' '+m.league).toLowerCase().replace(/"/g,'')}" data-market="${dataMkt}" data-banker="${opts.isBanker?'1':'0'}" data-lean="${opts.isLean?'1':'0'}" data-upcoming="${upcoming?'1':'0'}" data-winodd="${winOdd}" data-safeodds="${safeOddsPick(market,m.odds)?'1':'0'}">
-    <summary>
-      <div class="mcard-top">
-        <div class="mcard-team">${crest(m.homeLogo,m.home)}<span class="mcard-name">${esc(m.home)}</span></div>
-        <div class="mcard-mid">${mid}</div>
-        <div class="mcard-team">${crest(m.awayLogo,m.away)}<span class="mcard-name">${esc(m.away)}</span></div>
-      </div>
-      <div class="mcard-foot">${tag}${pillHTML}${rt}</div>
-    </summary>
-    <div class="mcard-detail" style="border-top:1px solid var(--line);padding-top:.6rem;font-size:13px;color:var(--muted)">${detail}</div>
-  </details>`;
-}
-
 function renderMatches(){
   if(engineMode==='strict'){ renderStrictMatches(); return; }
   if(engineMode==='ultra'){ renderUltraMatches(); return; }
@@ -944,25 +807,54 @@ function renderMatches(){
     const hiddenRows = bankerRows.slice(2).concat(otherRows);
 
     const renderRow = (r)=>{
+      const hg=r.match.homeGoals, ag=r.match.awayGoals, played=hg!=null&&ag!=null;
+      const res=settle(r.primary,hg,ag,r.match&&r.match.status);
+      const rt=res?`<span class="px-2 py-0.5 rounded text-[10px] font-bold ${resClass(res)}">${res.toUpperCase()}</span>`:'';
+      const live = r.match.status && ['1H','2H','HT','ET','LIVE'].includes(r.match.status);
       const isB = leagueBankerKeys.has(keyOf(r));
+      const t = r.match.kickoff ? fmtTime(r.match.kickoff) : '';
+      const score = played ? `<span class="display font-bold tnum">${hg} - ${ag}</span>` : `<span class="text-xs tnum" style="color:var(--muted)">${t||'—'}</span>`;
+      const odds = r.match.odds ? `<div class="hidden sm:grid grid-cols-3 gap-1 w-36">
+          <div class="odd-cell">${r.match.odds.home||'-'}</div>
+          <div class="odd-cell">${r.match.odds.draw||'-'}</div>
+          <div class="odd-cell">${r.match.odds.away||'-'}</div></div>` : `<div class="hidden sm:block w-36"></div>`;
+      const koTime = r.match.kickoff ? new Date(r.match.kickoff).getTime() : null;
+      const koInFuture = koTime != null ? koTime > Date.now() : true;
+      const upcoming = !played && !live && koInFuture;
       const isLean = !isB && r.lean;
-      return matchCard(r, {
-        isBanker: isB,
-        isLean: isLean,
-        market: isLean ? r.lean.market : r.primary
-      });
+      const dataMkt = isLean ? marketTag(r.lean.market) : marketTag(r.primary);
+      const winOdd = (r.primary==='Home Win'&&r.match.odds&&r.match.odds.home) ? r.match.odds.home : (r.primary==='Away Win'&&r.match.odds&&r.match.odds.away) ? r.match.odds.away : '';
+      return `<details class="match-item ${isB?'is-banker-row':''} ${isLean?'is-lean-row':''}" data-search="${(r.match.home+' '+r.match.away+' '+r.match.league).toLowerCase().replace(/"/g,'')}" data-market="${dataMkt}" data-banker="${isB?'1':'0'}" data-lean="${isLean?'1':'0'}" data-upcoming="${upcoming?'1':'0'}" data-winodd="${winOdd}">
+        <summary class="match-line px-4 py-3 flex items-center gap-3">
+          <div class="w-12 text-center flex-shrink-0">${score}</div>
+          <div class="flex-1 min-w-0">
+            <div class="flex items-center gap-2 text-sm"><span class="truncate font-medium">${r.match.home}</span></div>
+            <div class="flex items-center gap-2 text-sm"><span class="truncate font-medium">${r.match.away}</span></div>
+          </div>
+          ${ liveBadge(r.match) }
+          ${odds}
+          <div class="flex flex-col items-end gap-1 flex-shrink-0 w-24">
+            ${ isB?'<span class="text-[9px] font-bold uppercase" style="color:var(--brand)">Banker</span>'
+                 : isLean?'<span class="text-[9px] font-bold uppercase" style="color:var(--muted)">League lean</span>':'' }
+            <span class="px-2.5 py-1 rounded-lg text-xs font-semibold ${isLean?pill(r.lean.market):pill(r.primary)} whitespace-nowrap">${isLean?r.lean.market:r.primary}</span>
+            ${rt}
+          </div>
+          <i class="fa-solid fa-chevron-down chev text-sm" style="color:var(--muted)"></i>
+        </summary>
+        <div class="px-4 pb-4 pt-1 flex flex-wrap gap-x-6 gap-y-2">
+          <div class="basis-full text-sm" style="color:var(--muted);border-top:1px solid var(--line);padding-top:.6rem">${ isLean ? `<span style="color:var(--ink)"><i class="fa-solid fa-flag"></i> League lean:</span> ${r.lean.note} <em>(a tracked profile lean, not a staked banker)</em>` : r.summary }</div>
+        </div>
+      </details>`;
     };
 
-    html += `<div class="mcard-grid">`;
     shownBankers.forEach(r=>{ html += renderRow(r); });
-    html += `</div>`;
     if (hiddenRows.length){
       const moreBankers = bankerRows.length>2 ? `${bankerRows.length-2} more banker${bankerRows.length-2>1?'s':''} + ` : '';
       html += `<details class="lg-more">
         <summary class="px-4 py-2.5 text-sm font-medium cursor-pointer flex items-center gap-2" style="color:var(--brand);border-top:1px solid var(--line)">
           <i class="fa-solid fa-chevron-down lg-chev text-xs"></i> Show ${moreBankers}${otherRows.length} other match${(hiddenRows.length)>1?'es':''}
         </summary>
-        <div class="mcard-grid">${hiddenRows.map(renderRow).join('')}</div>
+        <div>${hiddenRows.map(renderRow).join('')}</div>
       </details>`;
     }
     html += `</div></details>`;
@@ -1192,19 +1084,34 @@ function renderRulesProMatches(){
     host.innerHTML=html; return;
   }
   picks.sort((a,b)=>b.confidence-a.confidence);
-  html+=`<div class="mcard-grid">`;
   picks.forEach(r=>{
     const tierName = r.confidence>=10?"Elite Banker":r.confidence>=9?"Banker":r.confidence>=8?"Strong":"Playable";
     const others=(r.allScores||[]).filter(s=>s.market!==r.primary).slice(0,4).map(s=>`${s.market} ${s.conf}`).join(' · ');
     const blockedList=(r.blocked||[]).slice(0,4).map(b=>`${b.market}`).join(', ');
-    const detail=`<div style="font-weight:600;margin-bottom:.4rem">${tierName} ${r.confidence}/10 — ${r.verdict}</div>`+
-      (r.usedEstimates?`<div style="color:#b45309;font-size:.75rem;margin-bottom:.4rem"><i class="fa-solid fa-triangle-exclamation"></i> This pick relied on ESTIMATED stats (win rate / clean-sheet / failed-to-score approximated from PPG & goals — not real counts).</div>`:'')+
-      (others?`<div style="color:var(--muted);font-size:.75rem;margin-top:.3rem">Other markets scored: ${others}</div>`:'')+
-      (blockedList?`<div style="color:var(--muted);font-size:.72rem;margin-top:.3rem">Blocked (no data): ${blockedList}</div>`:'')+
-      ((r.humanChecks||[]).length?`<div style="color:#b45309;font-size:.75rem;margin-top:.5rem"><i class="fa-solid fa-user-check"></i> ${r.humanChecks[0]}</div>`:'');
-    html+=matchCard(r,{ isBanker:true, market:r.primary, detailHTML:detail });
+    html += `<details class="match-item is-banker-row" data-search="${(r.match.home+' '+r.match.away+' '+r.match.league).toLowerCase().replace(/"/g,'')}" data-market="${marketTag(r.primary)}" data-banker="1" data-upcoming="0" data-safeodds="${safeOddsPick(r.primary,r.match.odds)?'1':'0'}">
+      <summary class="match-line px-4 py-3 flex items-center gap-3">
+        <div class="w-12 text-center flex-shrink-0">${rowScore(r.match)}</div>
+        <div class="flex-1 min-w-0">
+          <div class="text-sm font-medium truncate">${r.match.home}</div>
+          <div class="text-sm font-medium truncate">${r.match.away}</div>
+          <div class="text-[11px]" style="color:var(--muted)">${rowFlag(r.match)}${r.match.league||''}</div>
+        </div>
+        <div class="flex flex-col items-end gap-1 flex-shrink-0 w-28">
+          <span class="text-[9px] font-bold uppercase" style="color:var(--brand)">${tierName} ${r.confidence}/10</span>
+          <span class="px-2 py-1 rounded-lg text-[11px] font-semibold ${pill(r.primary)} text-right leading-tight">${r.primary}</span>
+          ${rowSettle(r.match,r.primary)}
+        </div>
+        <i class="fa-solid fa-chevron-down chev text-sm" style="color:var(--muted)"></i>
+      </summary>
+      <div class="px-4 pb-4 pt-3 text-sm" style="border-top:1px solid var(--line);background:var(--panel-2)">
+        <div style="font-weight:600;margin-bottom:.4rem">${r.verdict}</div>
+        ${r.usedEstimates?`<div style="color:#b45309;font-size:.75rem;margin-bottom:.4rem"><i class="fa-solid fa-triangle-exclamation"></i> This pick relied on ESTIMATED stats (win rate / clean-sheet / failed-to-score approximated from PPG & goals — not real counts).</div>`:''}
+        ${others?`<div style="color:var(--muted);font-size:.75rem;margin-top:.3rem">Other markets scored: ${others}</div>`:''}
+        ${blockedList?`<div style="color:var(--muted);font-size:.72rem;margin-top:.3rem">Blocked (no data): ${blockedList}</div>`:''}
+        ${(r.humanChecks||[]).length?`<div style="color:#b45309;font-size:.75rem;margin-top:.5rem"><i class="fa-solid fa-user-check"></i> ${r.humanChecks[0]}</div>`:''}
+      </div>
+    </details>`;
   });
-  html+=`</div>`;
   host.innerHTML=html;
   applyFilters();
 }
@@ -1267,7 +1174,7 @@ function renderAccaMatches(){
     host.innerHTML=html; return;
   }
 
-  // build the slip: combined odds + honest combined win probability
+  // build the acca: combined odds + honest combined win probability
   // per-leg probability estimated from its odds (implied), lightly de-margined
   let combinedOdds=1, combinedProb=1;
   upcomingLegs.forEach(l=>{ combinedOdds*=l.odd; const impP=Math.min(0.97, (1/l.odd)*1.05); combinedProb*=impP; });
@@ -1284,14 +1191,30 @@ function renderAccaMatches(){
   </div>`;
 
   // each leg
-  html+=`<div class="mcard-grid">`;
   upcomingLegs.forEach((l,i)=>{
-    const detail = `<div style="font-weight:600;margin-bottom:.3rem">Leg ${i+1} · Rated ${l.rating}/10 · ${l.est?'~':''}${l.odd.toFixed(2)}${l.est?' est odds':' odds'}</div>`+
-      `Backed by: ${l.engines.join(', ')}. Match's strongest banker = ${l.market}, rated ${l.rating}/10.`+
-      (l.est?'<div style="color:#b45309;font-size:.75rem;margin-top:.4rem">Odds estimated — this market has no real bookmaker price in our data.</div>':'');
-    html+=matchCard({match:l.match, primary:l.market, summary:detail}, { isBanker:true, market:l.market, detailHTML:detail });
+    const b=l.match;
+    const t=b.kickoff?fmtTime(b.kickoff):'';
+    html+=`<details class="match-item is-banker-row" data-search="${(b.home+' '+b.away+' '+(b.league||'')).toLowerCase().replace(/"/g,'')}" data-market="${marketTag(l.market)}" data-banker="1" data-upcoming="1" data-winodd="">
+      <summary class="match-line px-4 py-3 flex items-center gap-3">
+        <div class="w-8 text-center flex-shrink-0 display font-bold" style="color:var(--muted)">${i+1}</div>
+        <div class="flex-1 min-w-0">
+          <div class="text-sm font-medium truncate">${b.home}</div>
+          <div class="text-sm font-medium truncate">${b.away}</div>
+          <div class="text-[11px]" style="color:var(--muted)">${rowFlag(b)}${b.league||''}${t?' · '+t:''} · ${l.nEng} engine${l.nEng>1?'s':''}</div>
+        </div>
+        <div class="flex flex-col items-end gap-1 flex-shrink-0 w-28">
+          <span class="text-[9px] font-bold uppercase" style="color:var(--brand)">Rated ${l.rating}/10</span>
+          <span class="px-2 py-1 rounded-lg text-[11px] font-semibold ${pill(l.market)} text-right leading-tight">${l.market}</span>
+          <span class="text-[10px]" style="color:var(--muted)">${l.est?'~':''}${l.odd.toFixed(2)}${l.est?' est':''}</span>
+        </div>
+        <i class="fa-solid fa-chevron-down chev text-sm" style="color:var(--muted)"></i>
+      </summary>
+      <div class="px-4 pb-4 pt-3 text-sm" style="border-top:1px solid var(--line);background:var(--panel-2)">
+        Backed by: ${l.engines.join(', ')}. Match's strongest banker = ${l.market}, rated ${l.rating}/10.
+        ${l.est?'<div style="color:#b45309;font-size:.75rem;margin-top:.4rem">Odds estimated — this market has no real bookmaker price in our data.</div>':''}
+      </div>
+    </details>`;
   });
-  html+=`</div>`;
 
   // stash shareable text
   const legTxt=upcomingLegs.map((l,i)=>`${i+1}. ${l.match.home} v ${l.match.away} — ${l.market} (${l.rating}/10)`).join('\n');
@@ -1317,17 +1240,32 @@ function renderProMatches(){
   </div>`;
   if(!picks.length){ html+=`<div class="p-6 text-center" style="color:var(--muted)">No pick cleared the Pro model's confidence floor today — the model sees no safe edge.</div>`; host.innerHTML=html; return; }
   picks.sort((a,b)=>(b.usedXg-a.usedXg)||(b.confidence-a.confidence));
-  html+=`<div class="mcard-grid">`;
   picks.forEach(r=>{
     const tierName=r.confidence>=9?"Pro Banker":r.confidence>=8?"Strong":"Playable";
     const probTxt=r.model&&r.model.prob!=null?`${(r.model.prob*100).toFixed(0)}% model prob`:'';
-    const detail=`<div style="font-weight:600;margin-bottom:.4rem">${tierName}${r.usedXg?' · xG':''} ${r.confidence}/10 — ${r.verdict}</div>`+
-      (r.model?`<div style="color:var(--muted);font-size:.75rem">Expected goals: ${r.model.lambdaHome.toFixed(2)} - ${r.model.lambdaAway.toFixed(2)} · ${probTxt}${r.usedXg?' · sharpened with real xG':' · estimated (no xG for this league)'}</div>`:'')+
-      (r.lowSample?`<div style="color:#b45309;font-size:.75rem;margin-top:.4rem"><i class="fa-solid fa-triangle-exclamation"></i> Low sample — estimate regressed toward league average.</div>`:'')+
-      ((r.humanChecks||[]).length?`<div style="color:#b45309;font-size:.75rem;margin-top:.5rem"><i class="fa-solid fa-user-check"></i> ${r.humanChecks[0]}</div>`:'');
-    html+=matchCard(r,{ isBanker:!!r.banker, market:r.primary, detailHTML:detail });
+    html+=`<details class="match-item is-banker-row" data-search="${(r.match.home+' '+r.match.away+' '+(r.match.league||'')).toLowerCase().replace(/"/g,'')}" data-market="${marketTag(r.primary)}" data-banker="${r.banker?'1':'0'}" data-upcoming="0" data-winodd="">
+      <summary class="match-line px-4 py-3 flex items-center gap-3">
+        <div class="w-12 text-center flex-shrink-0">${rowScore(r.match)}</div>
+        <div class="flex-1 min-w-0">
+          <div class="text-sm font-medium truncate">${r.match.home}</div>
+          <div class="text-sm font-medium truncate">${r.match.away}</div>
+          <div class="text-[11px]" style="color:var(--muted)">${rowFlag(r.match)}${r.match.league||''}</div>
+        </div>
+        <div class="flex flex-col items-end gap-1 flex-shrink-0 w-28">
+          <span class="text-[9px] font-bold uppercase" style="color:${r.usedXg?'#7ee05a':'var(--brand)'}">${tierName}${r.usedXg?' · xG':''} ${r.confidence}/10</span>
+          <span class="px-2 py-1 rounded-lg text-[11px] font-semibold ${pill(r.primary)} text-right leading-tight">${r.primary}</span>
+          ${rowSettle(r.match,r.primary)}
+        </div>
+        <i class="fa-solid fa-chevron-down chev text-sm" style="color:var(--muted)"></i>
+      </summary>
+      <div class="px-4 pb-4 pt-3 text-sm" style="border-top:1px solid var(--line);background:var(--panel-2)">
+        <div style="font-weight:600;margin-bottom:.4rem">${r.verdict}</div>
+        ${r.model?`<div style="color:var(--muted);font-size:.75rem">Expected goals: ${r.model.lambdaHome.toFixed(2)} - ${r.model.lambdaAway.toFixed(2)} · ${probTxt}${r.usedXg?' · sharpened with real xG':' · estimated (no xG for this league)'}</div>`:''}
+        ${r.lowSample?`<div style="color:#b45309;font-size:.75rem;margin-top:.4rem"><i class="fa-solid fa-triangle-exclamation"></i> Low sample — estimate regressed toward league average.</div>`:''}
+        ${(r.humanChecks||[]).length?`<div style="color:#b45309;font-size:.75rem;margin-top:.5rem"><i class="fa-solid fa-user-check"></i> ${r.humanChecks[0]}</div>`:''}
+      </div>
+    </details>`;
   });
-  html+=`</div>`;
   host.innerHTML=html;
   applyFilters();
 }
@@ -1347,17 +1285,32 @@ function renderValueMatches(){
     host.innerHTML=html; return;
   }
   picks.sort((a,b)=> (b.isValue-a.isValue) || (b.confidence-a.confidence));
-  html+=`<div class="mcard-grid">`;
   picks.forEach(r=>{
     const tierName = r.isValue?"VALUE":(r.confidence>=9?"Model Banker":r.confidence>=8?"Strong":"Playable");
     const probTxt = r.model&&r.model.prob!=null ? `${(r.model.prob*100).toFixed(0)}% model prob` : '';
-    const detail=`<div style="font-weight:600;margin-bottom:.4rem">${tierName} ${r.confidence}/10 — ${r.verdict}</div>`+
-      (r.model?`<div style="color:var(--muted);font-size:.75rem">Expected goals: ${r.model.lambdaHome.toFixed(2)} - ${r.model.lambdaAway.toFixed(2)} · ${probTxt}${r.isValue&&r.model.edge!=null?` · edge +${(r.model.edge*100).toFixed(0)}pts vs market`:''}</div>`:'')+
-      (r.lowSample?`<div style="color:#b45309;font-size:.75rem;margin-top:.4rem"><i class="fa-solid fa-triangle-exclamation"></i> Low sample size — estimates regressed toward league average.</div>`:'')+
-      ((r.humanChecks||[]).length?`<div style="color:#b45309;font-size:.75rem;margin-top:.5rem"><i class="fa-solid fa-user-check"></i> ${r.humanChecks[0]}</div>`:'');
-    html+=matchCard(r,{ isBanker:!!r.banker, market:r.primary, detailHTML:detail });
+    html += `<details class="match-item is-banker-row" data-search="${(r.match.home+' '+r.match.away+' '+r.match.league).toLowerCase().replace(/"/g,'')}" data-market="${marketTag(r.primary)}" data-banker="${r.banker?'1':'0'}" data-upcoming="0" data-safeodds="${safeOddsPick(r.primary,r.match.odds)?'1':'0'}">
+      <summary class="match-line px-4 py-3 flex items-center gap-3">
+        <div class="w-12 text-center flex-shrink-0">${rowScore(r.match)}</div>
+        <div class="flex-1 min-w-0">
+          <div class="text-sm font-medium truncate">${r.match.home}</div>
+          <div class="text-sm font-medium truncate">${r.match.away}</div>
+          <div class="text-[11px]" style="color:var(--muted)">${rowFlag(r.match)}${r.match.league||''}</div>
+        </div>
+        <div class="flex flex-col items-end gap-1 flex-shrink-0 w-28">
+          <span class="text-[9px] font-bold uppercase" style="color:${r.isValue?'#7ee05a':'var(--brand)'}">${tierName} ${r.confidence}/10</span>
+          <span class="px-2 py-1 rounded-lg text-[11px] font-semibold ${pill(r.primary)} text-right leading-tight">${r.primary}</span>
+          ${rowSettle(r.match,r.primary)}
+        </div>
+        <i class="fa-solid fa-chevron-down chev text-sm" style="color:var(--muted)"></i>
+      </summary>
+      <div class="px-4 pb-4 pt-3 text-sm" style="border-top:1px solid var(--line);background:var(--panel-2)">
+        <div style="font-weight:600;margin-bottom:.4rem">${r.verdict}</div>
+        ${r.model?`<div style="color:var(--muted);font-size:.75rem">Expected goals: ${r.model.lambdaHome.toFixed(2)} - ${r.model.lambdaAway.toFixed(2)} · ${probTxt}${r.isValue&&r.model.edge!=null?` · edge +${(r.model.edge*100).toFixed(0)}pts vs market`:''}</div>`:''}
+        ${r.lowSample?`<div style="color:#b45309;font-size:.75rem;margin-top:.4rem"><i class="fa-solid fa-triangle-exclamation"></i> Low sample size — estimates regressed toward league average.</div>`:''}
+        ${(r.humanChecks||[]).length?`<div style="color:#b45309;font-size:.75rem;margin-top:.5rem"><i class="fa-solid fa-user-check"></i> ${r.humanChecks[0]}</div>`:''}
+      </div>
+    </details>`;
   });
-  html+=`</div>`;
   host.innerHTML=html;
   applyFilters();
 }
@@ -1377,15 +1330,30 @@ function renderPrimeMatches(){
     host.innerHTML=html; return;
   }
   picks.sort((a,b)=>a.riskPoints-b.riskPoints);
-  html+=`<div class="mcard-grid">`;
   picks.forEach(r=>{
-    const detail=`<div style="font-weight:600;margin-bottom:.4rem">${r.tier} · risk ${r.riskPoints} — ${r.verdict}</div>`+
-      `<div style="color:var(--muted);font-size:.75rem">League: ${r.leagueType||'?'} · Goal Index: ${r.goalIndex!=null?r.goalIndex+'%':'?'} · Tier: ${r.tier}</div>`+
-      (r.usedEstimates?`<div style="color:#b45309;font-size:.75rem;margin-top:.4rem"><i class="fa-solid fa-triangle-exclamation"></i> Market check DERIVED from win-rate (no odds for this game).</div>`:'')+
-      ((r.humanChecks||[]).length?`<div style="color:#b45309;font-size:.75rem;margin-top:.5rem"><i class="fa-solid fa-user-check"></i> ${r.humanChecks[0]}</div>`:'');
-    html+=matchCard(r,{ isBanker:!!r.banker, market:r.primary, detailHTML:detail });
+    html += `<details class="match-item is-banker-row" data-search="${(r.match.home+' '+r.match.away+' '+r.match.league).toLowerCase().replace(/"/g,'')}" data-market="${marketTag(r.primary)}" data-banker="${r.banker?'1':'0'}" data-upcoming="0" data-safeodds="${safeOddsPick(r.primary,r.match.odds)?'1':'0'}">
+      <summary class="match-line px-4 py-3 flex items-center gap-3">
+        <div class="w-12 text-center flex-shrink-0">${rowScore(r.match)}</div>
+        <div class="flex-1 min-w-0">
+          <div class="text-sm font-medium truncate">${r.match.home}</div>
+          <div class="text-sm font-medium truncate">${r.match.away}</div>
+          <div class="text-[11px]" style="color:var(--muted)">${rowFlag(r.match)}${r.match.league||''}</div>
+        </div>
+        <div class="flex flex-col items-end gap-1 flex-shrink-0 w-28">
+          <span class="text-[9px] font-bold uppercase" style="color:var(--brand)">${r.tier} · risk ${r.riskPoints}</span>
+          <span class="px-2 py-1 rounded-lg text-[11px] font-semibold ${pill(r.primary)} text-right leading-tight">${r.primary}</span>
+          ${rowSettle(r.match,r.primary)}
+        </div>
+        <i class="fa-solid fa-chevron-down chev text-sm" style="color:var(--muted)"></i>
+      </summary>
+      <div class="px-4 pb-4 pt-3 text-sm" style="border-top:1px solid var(--line);background:var(--panel-2)">
+        <div style="font-weight:600;margin-bottom:.4rem">${r.verdict}</div>
+        <div style="color:var(--muted);font-size:.75rem">League: ${r.leagueType||'?'} · Goal Index: ${r.goalIndex!=null?r.goalIndex+'%':'?'} · Tier: ${r.tier}</div>
+        ${r.usedEstimates?`<div style="color:#b45309;font-size:.75rem;margin-top:.4rem"><i class="fa-solid fa-triangle-exclamation"></i> Market check DERIVED from win-rate (no odds for this game).</div>`:''}
+        ${(r.humanChecks||[]).length?`<div style="color:#b45309;font-size:.75rem;margin-top:.5rem"><i class="fa-solid fa-user-check"></i> ${r.humanChecks[0]}</div>`:''}
+      </div>
+    </details>`;
   });
-  html+=`</div>`;
   host.innerHTML=html;
   applyFilters();
 }
@@ -1405,18 +1373,33 @@ function renderApexMatches(){
     host.innerHTML=html; return;
   }
   picks.sort((a,b)=>b.confidence-a.confidence);
-  html+=`<div class="mcard-grid">`;
   picks.forEach(r=>{
     const tierName = r.confidence>=10?"Elite Banker":r.confidence>=9?"Banker":r.confidence>=8?"Strong":"Playable";
     const blockedList=(r.blocked||[]).slice(0,4).map(b=>`${b.market}`).join(', ');
-    const detail=`<div style="font-weight:600;margin-bottom:.4rem">${tierName} ${r.confidence}/10 — ${r.verdict}</div>`+
-      `<div style="color:var(--muted);font-size:.75rem">Home resistance: ${r.resistScore}/6 ${r.homeResistant?'(resistant — away markets restricted)':'(not resistant)'}</div>`+
-      (r.usedEstimates?`<div style="color:#b45309;font-size:.75rem;margin-top:.4rem"><i class="fa-solid fa-triangle-exclamation"></i> Uses ESTIMATED stats (win rate / unbeaten / clean-sheet / FTS approximated).</div>`:'')+
-      (blockedList?`<div style="color:var(--muted);font-size:.72rem;margin-top:.3rem">Blocked: ${blockedList}</div>`:'')+
-      ((r.humanChecks||[]).length?`<div style="color:#b45309;font-size:.75rem;margin-top:.5rem"><i class="fa-solid fa-user-check"></i> ${r.humanChecks[0]}</div>`:'');
-    html+=matchCard(r,{ isBanker:true, market:r.primary, detailHTML:detail });
+    html += `<details class="match-item is-banker-row" data-search="${(r.match.home+' '+r.match.away+' '+r.match.league).toLowerCase().replace(/"/g,'')}" data-market="${marketTag(r.primary)}" data-banker="1" data-upcoming="0" data-safeodds="${safeOddsPick(r.primary,r.match.odds)?'1':'0'}">
+      <summary class="match-line px-4 py-3 flex items-center gap-3">
+        <div class="w-12 text-center flex-shrink-0">${rowScore(r.match)}</div>
+        <div class="flex-1 min-w-0">
+          <div class="text-sm font-medium truncate">${r.match.home}</div>
+          <div class="text-sm font-medium truncate">${r.match.away}</div>
+          <div class="text-[11px]" style="color:var(--muted)">${rowFlag(r.match)}${r.match.league||''}</div>
+        </div>
+        <div class="flex flex-col items-end gap-1 flex-shrink-0 w-28">
+          <span class="text-[9px] font-bold uppercase" style="color:var(--brand)">${tierName} ${r.confidence}/10</span>
+          <span class="px-2 py-1 rounded-lg text-[11px] font-semibold ${pill(r.primary)} text-right leading-tight">${r.primary}</span>
+          ${rowSettle(r.match,r.primary)}
+        </div>
+        <i class="fa-solid fa-chevron-down chev text-sm" style="color:var(--muted)"></i>
+      </summary>
+      <div class="px-4 pb-4 pt-3 text-sm" style="border-top:1px solid var(--line);background:var(--panel-2)">
+        <div style="font-weight:600;margin-bottom:.4rem">${r.verdict}</div>
+        <div style="color:var(--muted);font-size:.75rem">Home resistance: ${r.resistScore}/6 ${r.homeResistant?'(resistant — away markets restricted)':'(not resistant)'}</div>
+        ${r.usedEstimates?`<div style="color:#b45309;font-size:.75rem;margin-top:.4rem"><i class="fa-solid fa-triangle-exclamation"></i> Uses ESTIMATED stats (win rate / unbeaten / clean-sheet / FTS approximated).</div>`:''}
+        ${blockedList?`<div style="color:var(--muted);font-size:.72rem;margin-top:.3rem">Blocked: ${blockedList}</div>`:''}
+        ${(r.humanChecks||[]).length?`<div style="color:#b45309;font-size:.75rem;margin-top:.5rem"><i class="fa-solid fa-user-check"></i> ${r.humanChecks[0]}</div>`:''}
+      </div>
+    </details>`;
   });
-  html+=`</div>`;
   host.innerHTML=html;
   applyFilters();
 }
@@ -1449,22 +1432,37 @@ function renderUltraMatches(){
     host.innerHTML=html; return;
   }
   picks.sort((a,b)=>b.confidence-a.confidence);
-  html+=`<div class="mcard-grid">`;
   picks.forEach(r=>{
     const tierName = r.confidence>=10?"Elite Banker":r.confidence>=9?"Banker":r.confidence>=8?"Strong":"Playable";
     const passed=(r.passed||[]).map(p=>`<li style="color:#1f7a3f">✓ ${p}</li>`).join('');
     const failed=(r.failed||[]).map(p=>`<li style="color:var(--muted)">✗ ${p}</li>`).join('');
     const others=(r.allScores||[]).filter(s=>s.market!==r.primary).slice(0,4).map(s=>`${s.market} ${s.conf}`).join(' · ');
     const blockedList=(r.blocked||[]).slice(0,6).map(b=>`${b.market}`).join(', ');
-    const detail=`<div style="font-weight:600;margin-bottom:.4rem">${tierName} ${r.confidence}/10 — ${r.verdict}</div>`+
-      (passed?`<ul style="margin:.3rem 0;padding-left:.2rem;list-style:none;font-size:.8rem">${passed}</ul>`:'')+
-      (failed?`<details style="margin-top:.3rem"><summary style="color:var(--muted);font-size:.78rem;cursor:pointer">Failed checks</summary><ul style="padding-left:.2rem;list-style:none;font-size:.78rem;margin-top:.3rem">${failed}</ul></details>`:'')+
-      (others?`<div style="color:var(--muted);font-size:.75rem;margin-top:.5rem">Other markets scored: ${others}</div>`:'')+
-      (blockedList?`<div style="color:var(--muted);font-size:.72rem;margin-top:.3rem">Blocked (no data): ${blockedList}</div>`:'')+
-      ((r.humanChecks||[]).length?`<div style="color:#b45309;font-size:.75rem;margin-top:.5rem"><i class="fa-solid fa-user-check"></i> ${r.humanChecks[0]}</div>`:'');
-    html+=matchCard(r,{ isBanker:true, market:r.primary, detailHTML:detail });
+    html += `<details class="match-item is-banker-row" data-search="${(r.match.home+' '+r.match.away+' '+r.match.league).toLowerCase().replace(/"/g,'')}" data-market="${marketTag(r.primary)}" data-banker="1" data-upcoming="0" data-safeodds="${safeOddsPick(r.primary,r.match.odds)?'1':'0'}">
+      <summary class="match-line px-4 py-3 flex items-center gap-3">
+        <div class="w-12 text-center flex-shrink-0">${rowScore(r.match)}</div>
+        <div class="flex-1 min-w-0">
+          <div class="text-sm font-medium truncate">${r.match.home}</div>
+          <div class="text-sm font-medium truncate">${r.match.away}</div>
+          <div class="text-[11px]" style="color:var(--muted)">${rowFlag(r.match)}${r.match.league||''}</div>
+        </div>
+        <div class="flex flex-col items-end gap-1 flex-shrink-0 w-28">
+          <span class="text-[9px] font-bold uppercase" style="color:var(--brand)">${tierName} ${r.confidence}/10</span>
+          <span class="px-2 py-1 rounded-lg text-[11px] font-semibold ${pill(r.primary)} text-right leading-tight">${r.primary}</span>
+          ${rowSettle(r.match,r.primary)}
+        </div>
+        <i class="fa-solid fa-chevron-down chev text-sm" style="color:var(--muted)"></i>
+      </summary>
+      <div class="px-4 pb-4 pt-3 text-sm" style="border-top:1px solid var(--line);background:var(--panel-2)">
+        <div style="font-weight:600;margin-bottom:.4rem">${r.verdict}</div>
+        ${passed?`<ul style="margin:.3rem 0;padding-left:.2rem;list-style:none;font-size:.8rem">${passed}</ul>`:''}
+        ${failed?`<details style="margin-top:.3rem"><summary style="color:var(--muted);font-size:.78rem;cursor:pointer">Failed checks</summary><ul style="padding-left:.2rem;list-style:none;font-size:.78rem;margin-top:.3rem">${failed}</ul></details>`:''}
+        ${others?`<div style="color:var(--muted);font-size:.75rem;margin-top:.5rem">Other markets scored: ${others}</div>`:''}
+        ${blockedList?`<div style="color:var(--muted);font-size:.72rem;margin-top:.3rem">Blocked (no data): ${blockedList}</div>`:''}
+        ${(r.humanChecks||[]).length?`<div style="color:#b45309;font-size:.75rem;margin-top:.5rem"><i class="fa-solid fa-user-check"></i> ${r.humanChecks[0]}</div>`:''}
+      </div>
+    </details>`;
   });
-  html+=`</div>`;
   host.innerHTML=html;
   applyFilters();
 }
@@ -1490,26 +1488,64 @@ function renderStrictMatches(){
         <span class="font-semibold">${league}</span>
         <span class="text-xs" style="color:var(--muted)">· ${lrows.filter(r=>{const sr=strictByKey[keyOf(r)];return sr&&sr.bet;}).length} strict pick(s)</span>
         <i class="fa-solid fa-chevron-down lg-chev ml-auto text-sm" style="color:var(--muted)"></i>
-      </summary>`;
+      </summary>
+      <div style="border-top:1px solid var(--line)">`;
 
-    let cardsHTML='';
     lrows.forEach(r=>{
       const sr = strictByKey[keyOf(r)];
       if(!sr){ return; }
       const isBet = sr.bet;
       if(!isBet){ return; } // Strict view shows only actual strict bets, not No-bet clutter
-      const detail = `<div class="flex flex-wrap gap-x-6 gap-y-2 text-sm panel rounded-xl p-3 mb-2">`+
-            `<div><div class="text-[11px] uppercase tracking-wider font-semibold" style="color:var(--muted)">Tiers</div><div class="font-semibold">${r.match.home} T${sr.homeTier ?? '—'} · ${r.match.away} T${sr.awayTier ?? '—'} (gap ${sr.tierGap ?? '—'})</div></div>`+
-            `<div><div class="text-[11px] uppercase tracking-wider font-semibold" style="color:var(--muted)">Relevant PPG</div><div class="font-semibold">${r.match.home} ${sr.homePPG ?? '—'} home · ${r.match.away} ${sr.awayPPG ?? '—'} away</div></div>`+
-            `<div><div class="text-[11px] uppercase tracking-wider font-semibold" style="color:var(--muted)">Confidence</div><div class="font-semibold">${sr.confidence}/10</div></div>`+
-          `</div>`+
-          ( sr.reasons && sr.reasons.length ? `<div class="panel rounded-xl p-3 mb-2"><div class="text-[11px] uppercase tracking-wider font-semibold mb-1" style="color:var(--muted)">Reasons</div><ul class="space-y-1 text-sm">${sr.reasons.map(x=>`<li class="flex gap-2"><span class="text-gold">•</span><span>${x}</span></li>`).join('')}</ul></div>`:'' )+
-          ( sr.blocked && sr.blocked.length ? `<div class="panel rounded-xl p-3 mb-2"><div class="text-[11px] uppercase tracking-wider font-semibold mb-1" style="color:var(--muted)">Blocked markets</div><ul class="space-y-1 text-sm">${sr.blocked.map(b=>`<li><span class="px-2 py-0.5 rounded text-[10px] font-bold chip-skip">${b.market}</span> <span style="color:var(--muted)">${b.why}</span></li>`).join('')}</ul></div>`:'' )+
-          ( sr.humanChecks && sr.humanChecks.length ? `<div class="panel rounded-xl p-3" style="border-color:rgba(245,183,61,.4)"><div class="text-[11px] uppercase tracking-wider font-semibold mb-1" style="color:var(--amber,#f5b73d)"><i class="fa-solid fa-triangle-exclamation"></i> Check before betting</div><div class="text-xs mb-1" style="color:var(--muted)">The engine can't see these — confirm them yourself first:</div><div class="flex flex-wrap gap-x-4 gap-y-1 text-sm">${sr.humanChecks.map(c=>`<span style="color:var(--muted)">☐ ${c}</span>`).join('')}</div></div>`:'' );
-      cardsHTML += matchCard(r, { isBanker:true, market:sr.market, detailHTML:detail });
+      const t = r.match.kickoff ? fmtTime(r.match.kickoff) : '';
+      const hg=r.match.homeGoals, ag=r.match.awayGoals, played=hg!=null&&ag!=null;
+      const settled = played ? settle(sr.market, hg, ag, r.match.status) : '';
+      const settleTag = settled ? `<span class="px-2 py-0.5 rounded text-[10px] font-bold ${resClass(settled)}">${settled.toUpperCase()}</span>` : '';
+      const score = played ? `<span class="display font-bold tnum">${hg} - ${ag}</span>` : `<span class="text-xs tnum" style="color:var(--muted)">${t||'—'}</span>`;
+
+      const koTime = r.match.kickoff ? new Date(r.match.kickoff).getTime() : null;
+      const koInFuture = koTime != null ? koTime > Date.now() : true;
+      const upcoming = !played && !(r.match.status && ['1H','2H','HT','ET','LIVE'].includes(r.match.status)) && koInFuture;
+      html += `<details class="match-item ${isBet?'is-banker-row':''}"
+        data-search="${(r.match.home+' '+r.match.away+' '+r.match.league).toLowerCase().replace(/"/g,'')}"
+        data-market="${marketTag(sr.market)}" data-banker="${isBet?'1':'0'}" data-upcoming="${upcoming?'1':'0'}" data-safeodds="${safeOddsPick(sr.market,r.match.odds)?'1':'0'}">
+        <summary class="match-line px-4 py-3 flex items-center gap-3">
+          <div class="w-12 text-center flex-shrink-0">${score}</div>
+          <div class="flex-1 min-w-0">
+            <div class="text-sm font-medium truncate">${r.match.home}</div>
+            <div class="text-sm font-medium truncate">${r.match.away}</div>
+          </div>
+          <div class="flex flex-col items-end gap-1 flex-shrink-0">
+            <span class="text-[9px] font-bold uppercase ${isBet?'text-gold':''}" style="${isBet?'':'color:var(--muted)'}">${isBet?'Strict bet':'No bet'}</span>
+            <span class="px-2.5 py-1 rounded-lg text-xs font-semibold ${strictChip(sr.market)} whitespace-nowrap">${sr.market}</span>
+            ${settleTag}
+          </div>
+          <i class="fa-solid fa-chevron-down chev text-sm" style="color:var(--muted)"></i>
+        </summary>
+        <div class="px-4 pb-4 pt-3" style="border-top:1px solid var(--line);background:var(--panel-2)">
+          <div class="flex flex-wrap gap-x-6 gap-y-2 text-sm panel rounded-xl p-3 mb-2">
+            <div><div class="text-[11px] uppercase tracking-wider font-semibold" style="color:var(--muted)">Tiers</div><div class="font-semibold">${r.match.home} T${sr.homeTier ?? '—'} · ${r.match.away} T${sr.awayTier ?? '—'} (gap ${sr.tierGap ?? '—'})</div></div>
+            <div><div class="text-[11px] uppercase tracking-wider font-semibold" style="color:var(--muted)">Relevant PPG</div><div class="font-semibold">${r.match.home} ${sr.homePPG ?? '—'} home · ${r.match.away} ${sr.awayPPG ?? '—'} away</div></div>
+            <div><div class="text-[11px] uppercase tracking-wider font-semibold" style="color:var(--muted)">Confidence</div><div class="font-semibold">${sr.confidence}/10</div></div>
+            <div><div class="text-[11px] uppercase tracking-wider font-semibold" style="color:var(--muted)">Decision</div><div class="font-semibold ${isBet?'text-green':''}" style="${isBet?'':'color:var(--muted)'}">${isBet?'Bet':'No Bet / Avoid'}</div></div>
+          </div>
+          ${ sr.reasons && sr.reasons.length ? `<div class="panel rounded-xl p-3 mb-2">
+            <div class="text-[11px] uppercase tracking-wider font-semibold mb-1" style="color:var(--muted)">Reasons</div>
+            <ul class="space-y-1 text-sm">${sr.reasons.map(x=>`<li class="flex gap-2"><span class="text-gold">•</span><span>${x}</span></li>`).join('')}</ul>
+          </div>`:'' }
+          ${ sr.blocked && sr.blocked.length ? `<div class="panel rounded-xl p-3 mb-2">
+            <div class="text-[11px] uppercase tracking-wider font-semibold mb-1" style="color:var(--muted)">Blocked markets</div>
+            <ul class="space-y-1 text-sm">${sr.blocked.map(b=>`<li><span class="px-2 py-0.5 rounded text-[10px] font-bold chip-skip">${b.market}</span> <span style="color:var(--muted)">${b.why}</span></li>`).join('')}</ul>
+          </div>`:'' }
+          ${ isBet && sr.humanChecks && sr.humanChecks.length ? `<div class="panel rounded-xl p-3" style="border-color:rgba(245,183,61,.4)">
+            <div class="text-[11px] uppercase tracking-wider font-semibold mb-1" style="color:var(--amber,#f5b73d)"><i class="fa-solid fa-triangle-exclamation"></i> Check before betting</div>
+            <div class="text-xs mb-1" style="color:var(--muted)">The engine can't see these — confirm them yourself first:</div>
+            <div class="flex flex-wrap gap-x-4 gap-y-1 text-sm">${sr.humanChecks.map(c=>`<span style="color:var(--muted)">☐ ${c}</span>`).join('')}</div>
+          </div>`:'' }
+        </div>
+      </details>`;
     });
 
-    html += `<div class="mcard-grid" style="border-top:1px solid var(--line)">${cardsHTML}</div></details>`;
+    html += `</div></details>`;
   });
 
   root.innerHTML = html || `<div class="text-center py-12" style="color:var(--muted)">No matches for this league.</div>`;
@@ -1563,7 +1599,6 @@ function renderStrictMatches(){
     if(sel){
       const inDropdown=['strict','ultra','rulespro','apex','prime','value','pro'].includes(mode);
       sel.value = inDropdown ? mode : '';
-      // highlight the dropdown when it owns the active engine
       if(inDropdown){ sel.style.background='linear-gradient(135deg,var(--gold),#6fd44a)'; sel.style.color='#0a0e17'; }
       else { sel.style.background='var(--panel)'; sel.style.color='var(--muted)'; }
     }
@@ -1659,11 +1694,8 @@ function shareBotd(){
 }
 renderAll();
 
-/* ===== LIVE-MINUTE TICKER =====
-   The live badge shows an approximate minute that advances in real time
-   (see liveBadge). Re-render every 60s so that estimate ticks forward, but
-   ONLY while at least one match on the board is live — otherwise it's a no-op,
-   no wasted work. This is display-only; it never refetches data. */
+/* ===== LIVE-MINUTE TICKER — re-render every 60s while any match is live so
+   the approximate minute advances. Display-only; never refetches data. ===== */
 (function liveTicker(){
   const LIVE = ['1H','2H','HT','ET','LIVE','P'];
   setInterval(()=>{
