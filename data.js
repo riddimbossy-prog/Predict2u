@@ -1,5 +1,5 @@
 window.DATA_UPDATED = "2026-06-30T23:11:53.478Z";
-window.SCORES_UPDATED = "2026-06-30T23:35:26.416Z";
+window.SCORES_UPDATED = "2026-06-30T23:40:35.481Z";
 window.MATCHES = [
   {
     "home": "Washington Spirit W",
@@ -73953,7 +73953,7 @@ window.MATCHES = [
       "dcx2": 1.53
     },
     "h2h": null,
-    "elapsed": 74
+    "elapsed": 79
   },
   {
     "home": "Caxias",
@@ -73963,7 +73963,7 @@ window.MATCHES = [
     "awayLogo": "https://media.api-sports.io/football/teams/7852.png",
     "country": "Brazil",
     "flag": "https://media.api-sports.io/flags/br.svg",
-    "status": "HT",
+    "status": "2H",
     "kickoff": "2026-06-30T22:30:00+00:00",
     "matchDate": "2026-06-30",
     "homeGoals": 0,
@@ -74037,7 +74037,7 @@ window.MATCHES = [
       "dcx2": 2.1
     },
     "h2h": null,
-    "elapsed": 45
+    "elapsed": 50
   },
   {
     "home": "Treze U20",
@@ -74190,7 +74190,7 @@ window.MATCHES = [
       "dcx2": 1.62
     },
     "h2h": null,
-    "elapsed": 35
+    "elapsed": 41
   },
   {
     "home": "Boston Bolts",
@@ -74272,7 +74272,7 @@ window.MATCHES = [
       "dcx2": 1.13
     },
     "h2h": null,
-    "elapsed": 32
+    "elapsed": 37
   },
   {
     "home": "Charlotte Eagles",
@@ -74341,7 +74341,7 @@ window.MATCHES = [
     "round": "Group Stage",
     "odds": null,
     "h2h": null,
-    "elapsed": 30
+    "elapsed": 35
   },
   {
     "home": "Reading United",
@@ -74492,7 +74492,7 @@ window.MATCHES = [
       "dcx2": 1.4
     },
     "h2h": null,
-    "elapsed": 28
+    "elapsed": 33
   },
   {
     "home": "Midwest United",
@@ -74505,7 +74505,7 @@ window.MATCHES = [
     "status": "1H",
     "kickoff": "2026-06-30T23:00:00+00:00",
     "matchDate": "2026-06-30",
-    "homeGoals": 0,
+    "homeGoals": 1,
     "awayGoals": 2,
     "homePos": 2,
     "awayPos": 1,
@@ -74561,7 +74561,7 @@ window.MATCHES = [
     "round": "Group Stage",
     "odds": null,
     "h2h": null,
-    "elapsed": 33
+    "elapsed": 38
   },
   {
     "home": "Patuxent",
@@ -74783,7 +74783,7 @@ window.MATCHES = [
       "dcx2": 1.75
     },
     "h2h": null,
-    "elapsed": 4
+    "elapsed": 9
   },
   {
     "home": "Volta Redonda",
@@ -74867,7 +74867,7 @@ window.MATCHES = [
       "dcx2": 1.8
     },
     "h2h": null,
-    "elapsed": 5
+    "elapsed": 10
   },
   {
     "home": "Virginia Marauders",
@@ -74949,7 +74949,7 @@ window.MATCHES = [
       "dcx2": 1.01
     },
     "h2h": null,
-    "elapsed": 2
+    "elapsed": 8
   },
   {
     "home": "Miami AC",
