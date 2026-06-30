@@ -1,5 +1,5 @@
 window.DATA_UPDATED = "2026-06-30T16:20:35.146Z";
-window.SCORES_UPDATED = "2026-06-30T20:40:40.508Z";
+window.SCORES_UPDATED = "2026-06-30T20:45:32.105Z";
 window.MATCHES = [
   {
     "home": "Washington Spirit W",
@@ -56985,11 +56985,11 @@ window.MATCHES = [
     "league": "Brasileiro U17",
     "country": "Brazil",
     "flag": "https://media.api-sports.io/flags/br.svg",
-    "status": "NS",
+    "status": "FT",
     "kickoff": "2026-06-30T18:00:00+00:00",
     "matchDate": "2026-06-30",
-    "homeGoals": null,
-    "awayGoals": null,
+    "homeGoals": 2,
+    "awayGoals": 2,
     "homePos": 19,
     "awayPos": 10,
     "tableSize": 20,
@@ -57095,11 +57095,11 @@ window.MATCHES = [
     "league": "Brasileiro U17",
     "country": "Brazil",
     "flag": "https://media.api-sports.io/flags/br.svg",
-    "status": "NS",
+    "status": "FT",
     "kickoff": "2026-06-30T18:00:00+00:00",
     "matchDate": "2026-06-30",
-    "homeGoals": null,
-    "awayGoals": null,
+    "homeGoals": 5,
+    "awayGoals": 4,
     "homePos": 11,
     "awayPos": 20,
     "tableSize": 20,
@@ -58141,7 +58141,7 @@ window.MATCHES = [
       "dcx2": 1.62
     },
     "h2h": null,
-    "elapsed": 85
+    "elapsed": 90
   },
   {
     "home": "Palmeiras U17",
