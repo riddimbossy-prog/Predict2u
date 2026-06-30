@@ -1,5 +1,5 @@
 window.DATA_UPDATED = "2026-06-29T23:02:47.031Z";
-window.SCORES_UPDATED = "2026-06-30T00:18:18.256Z";
+window.SCORES_UPDATED = "2026-06-30T00:38:29.811Z";
 window.MATCHES = [
   {
     "home": "Fortaleza EC",
@@ -29469,7 +29469,7 @@ window.MATCHES = [
     "league": "Copa Chile",
     "country": "Chile",
     "flag": "https://media.api-sports.io/flags/cl.svg",
-    "status": "1H",
+    "status": "2H",
     "kickoff": "2026-06-29T23:30:00+00:00",
     "matchDate": "2026-06-29",
     "homeGoals": 0,
