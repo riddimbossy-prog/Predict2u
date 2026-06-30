@@ -197,6 +197,7 @@
       <button id="eng-apex" class="px-3 py-1.5 rounded-lg text-sm font-semibold whitespace-nowrap flex-shrink-0" style="color:var(--muted)">Apex Bankers</button>
       <button id="eng-prime" class="px-3 py-1.5 rounded-lg text-sm font-semibold whitespace-nowrap flex-shrink-0" style="color:var(--muted)">Prime Bankers</button>
       <button id="eng-value" class="px-3 py-1.5 rounded-lg text-sm font-semibold whitespace-nowrap flex-shrink-0" style="color:var(--muted)">Value Bankers</button>
+      <button id="eng-acca" class="px-3 py-1.5 rounded-lg text-sm font-semibold whitespace-nowrap flex-shrink-0" style="color:var(--muted)">Today's Bankers Acca</button>
     </div>
     <span id="eng-note" class="text-xs hidden sm:inline" style="color:var(--muted)"></span>
   </div>
@@ -639,6 +640,7 @@ function renderMatches(){
   if(engineMode==='apex'){ renderApexMatches(); return; }
   if(engineMode==='prime'){ renderPrimeMatches(); return; }
   if(engineMode==='value'){ renderValueMatches(); return; }
+  if(engineMode==='acca'){ renderAccaMatches(); return; }
   const root = document.getElementById('matches-root');
   const rows = byDate[activeDate]||[];
   const empty = document.getElementById('empty-state');
@@ -989,6 +991,116 @@ function renderRulesProMatches(){
   applyFilters();
 }
 
+function renderAccaMatches(){
+  const host=document.getElementById('matches-root');
+  const rows=(byDate[activeDate]||[]);
+  // gather every engine's banker pick per match
+  const perMatch={}; // key -> { match, picks:[{engine,market,conf}], engines:Set }
+  const norm=s=>String(s||'').trim().toLowerCase();
+  function add(match, market, engine, conf){
+    if(!market||market==='No Bet'||market==='Skip') return;
+    const key=norm(match.home)+'|'+norm(match.away);
+    if(!perMatch[key]) perMatch[key]={match, picks:[], engines:new Set()};
+    perMatch[key].picks.push({engine, market, conf:conf||7});
+    perMatch[key].engines.add(engine);
+  }
+  rows.forEach(r=>{
+    const m=r.match;
+    if(r.banker) add(m, r.primary, 'Normal', confValue(r.confidence));
+    try{ const s=strictByKey[keyOf(r)]; if(s&&s.bet) add(m,s.market,'Strict',s.confidence);}catch(e){}
+    try{ if(typeof ultraRecommend==='function'){const u=ultraRecommend(m); if(u.banker) add(m,u.primary,'Ultra',u.confidence);}}catch(e){}
+    try{ if(typeof rulesProRecommend==='function'){const u=rulesProRecommend(m); if(u.banker) add(m,u.primary,'Elite',u.confidence);}}catch(e){}
+    try{ if(typeof apexRecommend==='function'){const u=apexRecommend(m); if(u.banker) add(m,u.primary,'Apex',u.confidence);}}catch(e){}
+    try{ if(typeof primeRecommend==='function'){const u=primeRecommend(m); if(u.banker) add(m,u.primary,'Prime',u.confidence);}}catch(e){}
+    try{ if(typeof valueRecommend==='function'){const u=valueRecommend(m); if(u.banker) add(m,u.primary,'Value',u.confidence);}}catch(e){}
+  });
+
+  // collapse each match to ONE leg = its strongest market; rate by agreement + avg conf
+  const legs=Object.values(perMatch).map(g=>{
+    // strongest market for this match = highest single confidence
+    const best=g.picks.slice().sort((a,b)=>b.conf-a.conf)[0];
+    const avgConf=g.picks.reduce((s,p)=>s+p.conf,0)/g.picks.length;
+    const nEng=g.engines.size;
+    // RATING: average confidence + small bonus for multi-engine agreement, capped 10
+    const rating=Math.min(10, Math.round((avgConf + (nEng-1)*0.6)*10)/10);
+    const lo=legOdd({primary:best.market, match:g.match});
+    return { match:g.match, market:best.market, rating, nEng, engines:[...g.engines],
+             odd: lo?lo.odd:null, est: lo?lo.est:true };
+  }).filter(l=>l.odd!=null);
+
+  // only UPCOMING legs are bettable in an acca
+  const isUpcoming=(mt)=>{ const played=mt.homeGoals!=null&&mt.awayGoals!=null;
+    const live=mt.status&&['1H','2H','HT','ET','LIVE','P'].includes(mt.status);
+    const ko=mt.kickoff?new Date(mt.kickoff).getTime():null; const koF=ko!=null?ko>Date.now():true;
+    return !played&&!live&&koF; };
+  const upcomingLegs=legs.filter(l=>isUpcoming(l.match)).sort((a,b)=>b.rating-a.rating);
+
+  let html=`<div class="panel rounded-xl p-3 mb-3 text-sm" style="border:1px solid rgba(76,175,39,.4);background:rgba(76,175,39,.07)">
+    <strong style="color:var(--brand)"><i class="fa-solid fa-layer-group"></i> Today's Bankers Acca.</strong>
+    The strongest banker per match across all engines, rated by engine agreement + average confidence (out of 10). Same-match markets collapse to that match's single strongest pick.
+    <div style="color:#b45309;margin-top:.5rem"><i class="fa-solid fa-triangle-exclamation"></i> An accumulator needs <strong>every</strong> leg to win. More legs = much lower chance. The combined probability below is the honest likelihood of ALL legs landing. High risk — 18+.</div>
+  </div>`;
+
+  if(!upcomingLegs.length){
+    html+=`<div class="p-6 text-center" style="color:var(--muted)">No upcoming bankers across the engines right now — the acca builds from upcoming bankers only.</div>`;
+    host.innerHTML=html; return;
+  }
+
+  // build the acca: combined odds + honest combined win probability
+  // per-leg probability estimated from its odds (implied), lightly de-margined
+  let combinedOdds=1, combinedProb=1;
+  upcomingLegs.forEach(l=>{ combinedOdds*=l.odd; const impP=Math.min(0.97, (1/l.odd)*1.05); combinedProb*=impP; });
+  const accaPct=Math.round(combinedProb*100);
+
+  html+=`<div class="rounded-2xl p-4 mb-4" style="background:linear-gradient(135deg,rgba(76,175,39,.16),rgba(76,175,39,.04));border:1.5px solid rgba(76,175,39,.5)">
+    <div class="flex items-center justify-between flex-wrap gap-2">
+      <div><div class="text-xs uppercase tracking-wider font-bold" style="color:var(--brand)">${upcomingLegs.length}-leg Acca</div>
+      <div class="display text-2xl font-bold">~${combinedOdds.toFixed(2)} <span class="text-sm font-normal" style="color:var(--muted)">combined odds</span></div></div>
+      <div class="text-right"><div class="text-xs" style="color:var(--muted)">Chance all legs land</div>
+      <div class="display text-2xl font-bold" style="color:${accaPct>=40?'var(--brand)':accaPct>=20?'#b45309':'#c0392b'}">~${accaPct}%</div></div>
+    </div>
+    <button onclick="shareAcca()" class="mt-3 text-xs px-3 py-1.5 rounded-lg font-semibold text-white" style="background:var(--brand)"><i class="fa-solid fa-share-nodes"></i> Share acca</button>
+  </div>`;
+
+  // each leg
+  upcomingLegs.forEach((l,i)=>{
+    const b=l.match;
+    const t=b.kickoff?fmtTime(b.kickoff):'';
+    html+=`<details class="match-item is-banker-row" data-search="${(b.home+' '+b.away+' '+(b.league||'')).toLowerCase().replace(/"/g,'')}" data-market="${marketTag(l.market)}" data-banker="1" data-upcoming="1" data-winodd="">
+      <summary class="match-line px-4 py-3 flex items-center gap-3">
+        <div class="w-8 text-center flex-shrink-0 display font-bold" style="color:var(--muted)">${i+1}</div>
+        <div class="flex-1 min-w-0">
+          <div class="text-sm font-medium truncate">${b.home}</div>
+          <div class="text-sm font-medium truncate">${b.away}</div>
+          <div class="text-[11px]" style="color:var(--muted)">${rowFlag(b)}${b.league||''}${t?' · '+t:''} · ${l.nEng} engine${l.nEng>1?'s':''}</div>
+        </div>
+        <div class="flex flex-col items-end gap-1 flex-shrink-0 w-28">
+          <span class="text-[9px] font-bold uppercase" style="color:var(--brand)">Rated ${l.rating}/10</span>
+          <span class="px-2 py-1 rounded-lg text-[11px] font-semibold ${pill(l.market)} text-right leading-tight">${l.market}</span>
+          <span class="text-[10px]" style="color:var(--muted)">${l.est?'~':''}${l.odd.toFixed(2)}${l.est?' est':''}</span>
+        </div>
+        <i class="fa-solid fa-chevron-down chev text-sm" style="color:var(--muted)"></i>
+      </summary>
+      <div class="px-4 pb-4 pt-3 text-sm" style="border-top:1px solid var(--line);background:var(--panel-2)">
+        Backed by: ${l.engines.join(', ')}. Match's strongest banker = ${l.market}, rated ${l.rating}/10.
+        ${l.est?'<div style="color:#b45309;font-size:.75rem;margin-top:.4rem">Odds estimated — this market has no real bookmaker price in our data.</div>':''}
+      </div>
+    </details>`;
+  });
+
+  // stash shareable text
+  const legTxt=upcomingLegs.map((l,i)=>`${i+1}. ${l.match.home} v ${l.match.away} — ${l.market} (${l.rating}/10)`).join('\n');
+  window.__accaText=`⚽ PREDICT2U — TODAY'S BANKERS ACCA\n\n${legTxt}\n\n~${combinedOdds.toFixed(2)} combined odds · ~${accaPct}% chance all land\n\n⚠️ Accumulator — every leg must win. High risk. Not a guarantee. 18+. predict2u.com`;
+
+  host.innerHTML=html;
+  applyFilters();
+}
+function shareAcca(){
+  const t=window.__accaText||''; if(!t) return;
+  if(navigator.share){ navigator.share({title:"Predict2u — Today's Bankers Acca", text:t, url:'https://predict2u.com'}).catch(()=>{}); }
+  else if(navigator.clipboard){ navigator.clipboard.writeText(t); const btn=event.target.closest('button'); if(btn) btn.innerHTML='<i class="fa-solid fa-check"></i> Copied!'; }
+}
+
 function renderValueMatches(){
   const host=document.getElementById('matches-root');
   if (typeof valueRecommend !== 'function'){ host.innerHTML='<div class="p-6 text-center" style="color:var(--muted)">Value engine unavailable — deploy the latest banker-engine.js.</div>'; return; }
@@ -1272,7 +1384,7 @@ function renderStrictMatches(){
 }
 
 (function(){
-  const bn=document.getElementById('eng-normal'), bs=document.getElementById('eng-strict'), bu=document.getElementById('eng-ultra'), bp=document.getElementById('eng-rulespro'), ba=document.getElementById('eng-apex'), bpr=document.getElementById('eng-prime'), bv=document.getElementById('eng-value'), note=document.getElementById('eng-note');
+  const bn=document.getElementById('eng-normal'), bs=document.getElementById('eng-strict'), bu=document.getElementById('eng-ultra'), bp=document.getElementById('eng-rulespro'), ba=document.getElementById('eng-apex'), bpr=document.getElementById('eng-prime'), bv=document.getElementById('eng-value'), bac=document.getElementById('eng-acca'), note=document.getElementById('eng-note');
   function setMode(mode){
     engineMode=mode;
     const on='background:linear-gradient(135deg,var(--gold),#6fd44a);color:#0a0e17';
@@ -1284,6 +1396,7 @@ function renderStrictMatches(){
     ba.style.cssText = mode==='apex'?on:off;
     bpr.style.cssText = mode==='prime'?on:off;
     bv.style.cssText = mode==='value'?on:off;
+    bac.style.cssText = mode==='acca'?on:off;
     note.textContent = mode==='strict'
       ? 'Conservative: rejects most games, one clean market or No Bet. Auto-tiered from the table — confirm red flags yourself.'
       : mode==='ultra'
@@ -1296,6 +1409,8 @@ function renderStrictMatches(){
       ? 'Prime Bankers: ratio-based true-team filter. Classifies the league by goal environment, then demands attack/defence ratios confirmed by RAW numbers (no ratio-only upgrades), respects table compression, and tiers by risk points. One market or No Bet. Market checks use odds where present, else derived. Unproven — track first.'
       : mode==='value'
       ? 'Value Bankers: Dixon-Coles/Poisson goal model. Estimates each team\'s expected goals for the match, builds the full scoreline probability matrix, and picks the highest-probability safe market — or No Bet when nothing clears the floor. Flags VALUE when the model beats the bookmaker odds. The most mathematically grounded engine. Unproven — track first.'
+      : mode==='acca'
+      ? 'Today\'s Bankers Acca: combines the strongest banker per match across all engines, rated by engine agreement + average confidence. Same-match markets collapse to that match\'s single strongest pick. An accumulator needs EVERY leg to win — more legs = far lower chance. The shown combined probability is the honest odds of all legs landing. High risk. 18+.'
       : '';
     const noteM=document.getElementById('eng-note-mobile'); if(noteM) noteM.textContent = note.textContent;
     renderStats(); renderCards(); renderMatches();
@@ -1307,6 +1422,7 @@ function renderStrictMatches(){
   ba.addEventListener('click',()=>setMode('apex'));
   bpr.addEventListener('click',()=>setMode('prime'));
   bv.addEventListener('click',()=>setMode('value'));
+  bac.addEventListener('click',()=>setMode('acca'));
 })();
 
 /* ============ MASTER RENDER ============ */
