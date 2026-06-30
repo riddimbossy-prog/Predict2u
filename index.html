@@ -136,6 +136,11 @@
   ::-webkit-scrollbar-thumb{ background:var(--line); border-radius:6px; }
 .eng-scroll::-webkit-scrollbar{display:none;}
 .eng-scroll{max-width:100%;}
+/* Desktop: let the engine tabs wrap so all are visible (no hidden scroll).
+   Mobile: keep them on one scrollable row to save vertical space. */
+@media (min-width: 640px){
+  .eng-scroll{ flex-wrap:wrap; overflow-x:visible !important; }
+}
 </style>
 </head>
 <body>
