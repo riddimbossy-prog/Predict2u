@@ -94,9 +94,10 @@ function loadExistingMatches() {
       for (const fx of arr) {
         const id = fx.fixture && fx.fixture.id;
         const st = fx.fixture && fx.fixture.status && fx.fixture.status.short;
+        const el = fx.fixture && fx.fixture.status && fx.fixture.status.elapsed;
         const gh = fx.goals ? fx.goals.home : null;
         const ga = fx.goals ? fx.goals.away : null;
-        const rec = { homeGoals: gh, awayGoals: ga, status: st };
+        const rec = { homeGoals: gh, awayGoals: ga, status: st, elapsed: (el != null ? el : null) };
         if (id != null) liveById[id] = rec;
         const hn = fx.teams && fx.teams.home && fx.teams.home.name;
         const an = fx.teams && fx.teams.away && fx.teams.away.name;
@@ -120,12 +121,15 @@ function loadExistingMatches() {
     }
     if (!rec) continue;
     // only write when there's something new (avoids needless commits)
-    const newH = rec.homeGoals, newA = rec.awayGoals, newS = rec.status;
-    if (mt.homeGoals !== newH || mt.awayGoals !== newA || mt.status !== newS) {
+    const newH = rec.homeGoals, newA = rec.awayGoals, newS = rec.status, newE = rec.elapsed;
+    if (mt.homeGoals !== newH || mt.awayGoals !== newA || mt.status !== newS || mt.elapsed !== newE) {
       // only overwrite goals if the API actually has them (don't blank existing)
       if (newH != null) mt.homeGoals = newH;
       if (newA != null) mt.awayGoals = newA;
       if (newS) mt.status = newS;
+      // live minute: store while in-play, clear once finished
+      if (FINISHED.has(String(newS || "").toUpperCase())) mt.elapsed = null;
+      else mt.elapsed = (newE != null ? newE : null);
       updated++;
     }
   }
@@ -142,6 +146,7 @@ function loadExistingMatches() {
     const notFinished = !FINISHED.has(String(mt.status || "").toUpperCase());
     if (hasScore && overdue && notFinished) {
       mt.status = "FT";
+      mt.elapsed = null;
       promoted++;
       updated++;
     }
