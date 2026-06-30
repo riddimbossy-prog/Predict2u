@@ -627,6 +627,7 @@ function renderCards(){
 
 /* ============ COUNTRY / LEAGUE SIDEBAR ============ */
 let leagueFilter = null;
+function dayRows(){ const r=(byDate[activeDate]||[]); return leagueFilter ? r.filter(x=>x.match.league===leagueFilter) : r; }
 function renderSidebar(){
   const rows = byDate[activeDate]||[];
   const leagues = {}; const flags = {};
@@ -968,7 +969,7 @@ const strictChip = mkt =>
 function renderRulesProMatches(){
   const host=document.getElementById('matches-root');
   if (typeof rulesProRecommend !== 'function'){ host.innerHTML='<div class="p-6 text-center" style="color:var(--muted)">Elite Bankers engine unavailable — deploy the latest banker-engine.js.</div>'; return; }
-  const dayMatches=(byDate[activeDate]||[]);
+  const dayMatches=dayRows();
   const picks=dayMatches.map(r=>rulesProRecommend(r.match)).filter(r=>r.bet);
   let html='';
   html += `<div class="panel rounded-xl p-3 mb-3 text-sm" style="border:1px solid rgba(76,175,39,.4);background:rgba(76,175,39,.07)">
@@ -1053,7 +1054,7 @@ function noStandingsLocal(m){
 
 function renderAccaMatches(){
   const host=document.getElementById('matches-root');
-  const rows=(byDate[activeDate]||[]);
+  const rows=dayRows();
   const legs=accaLegs(rows);
 
   // only UPCOMING legs are bettable in an acca
@@ -1128,7 +1129,7 @@ function shareAcca(){
 function renderProMatches(){
   const host=document.getElementById('matches-root');
   if(typeof proRecommend!=='function'){ host.innerHTML='<div class="p-6 text-center" style="color:var(--muted)">Pro engine unavailable — deploy the latest banker-engine.js.</div>'; return; }
-  const dayMatches=(byDate[activeDate]||[]);
+  const dayMatches=dayRows();
   const picks=dayMatches.map(r=>proRecommend(r.match)).filter(r=>r.bet);
   let html=`<div class="panel rounded-xl p-3 mb-3 text-sm" style="border:1px solid rgba(76,175,39,.4);background:rgba(76,175,39,.07)">
     <strong style="color:var(--brand)"><i class="fa-solid fa-microchip"></i> Pro Bankers — disciplined, xG-aware.</strong>
@@ -1169,7 +1170,7 @@ function renderProMatches(){
 function renderValueMatches(){
   const host=document.getElementById('matches-root');
   if (typeof valueRecommend !== 'function'){ host.innerHTML='<div class="p-6 text-center" style="color:var(--muted)">Value engine unavailable — deploy the latest banker-engine.js.</div>'; return; }
-  const dayMatches=(byDate[activeDate]||[]);
+  const dayMatches=dayRows();
   const picks=dayMatches.map(r=>valueRecommend(r.match)).filter(r=>r.bet);
   let html='';
   html += `<div class="panel rounded-xl p-3 mb-3 text-sm" style="border:1px solid rgba(76,175,39,.4);background:rgba(76,175,39,.07)">
@@ -1214,7 +1215,7 @@ function renderValueMatches(){
 function renderPrimeMatches(){
   const host=document.getElementById('matches-root');
   if (typeof primeRecommend !== 'function'){ host.innerHTML='<div class="p-6 text-center" style="color:var(--muted)">Prime engine unavailable — deploy the latest banker-engine.js.</div>'; return; }
-  const dayMatches=(byDate[activeDate]||[]);
+  const dayMatches=dayRows();
   const picks=dayMatches.map(r=>primeRecommend(r.match)).filter(r=>r.bet);
   let html='';
   html += `<div class="panel rounded-xl p-3 mb-3 text-sm" style="border:1px solid rgba(76,175,39,.4);background:rgba(76,175,39,.07)">
@@ -1257,7 +1258,7 @@ function renderPrimeMatches(){
 function renderApexMatches(){
   const host=document.getElementById('matches-root');
   if (typeof apexRecommend !== 'function'){ host.innerHTML='<div class="p-6 text-center" style="color:var(--muted)">Apex engine unavailable — deploy the latest banker-engine.js.</div>'; return; }
-  const dayMatches=(byDate[activeDate]||[]);
+  const dayMatches=dayRows();
   const picks=dayMatches.map(r=>apexRecommend(r.match)).filter(r=>r.bet);
   let html='';
   html += `<div class="panel rounded-xl p-3 mb-3 text-sm" style="border:1px solid rgba(76,175,39,.4);background:rgba(76,175,39,.07)">
@@ -1316,7 +1317,7 @@ function rowSettle(match, primary){
 function renderUltraMatches(){
   const host=document.getElementById('matches-root');
   if (typeof ultraRecommend !== 'function'){ host.innerHTML='<div class="p-6 text-center" style="color:var(--muted)">Ultra engine unavailable.</div>'; return; }
-  const dayMatches=(byDate[activeDate]||[]);
+  const dayMatches=dayRows();
   const picks=dayMatches.map(r=>ultraRecommend(r.match)).filter(r=>r.bet);
   let html='';
   html += `<div class="panel rounded-xl p-3 mb-3 text-sm" style="border:1px solid rgba(76,175,39,.4);background:rgba(76,175,39,.07)">
