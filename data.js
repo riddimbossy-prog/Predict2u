@@ -1,5 +1,5 @@
 window.DATA_UPDATED = "2026-06-30T16:20:35.146Z";
-window.SCORES_UPDATED = "2026-06-30T20:10:18.044Z";
+window.SCORES_UPDATED = "2026-06-30T20:15:33.941Z";
 window.MATCHES = [
   {
     "home": "Washington Spirit W",
@@ -57040,11 +57040,11 @@ window.MATCHES = [
     "league": "Brasileiro U17",
     "country": "Brazil",
     "flag": "https://media.api-sports.io/flags/br.svg",
-    "status": "NS",
+    "status": "FT",
     "kickoff": "2026-06-30T18:00:00+00:00",
     "matchDate": "2026-06-30",
-    "homeGoals": null,
-    "awayGoals": null,
+    "homeGoals": 3,
+    "awayGoals": 2,
     "homePos": 3,
     "awayPos": 9,
     "tableSize": 20,
@@ -57375,7 +57375,7 @@ window.MATCHES = [
       "dcx2": 1.67
     },
     "h2h": null,
-    "elapsed": 83
+    "elapsed": 88
   },
   {
     "home": "Raith Rovers",
@@ -57424,7 +57424,7 @@ window.MATCHES = [
     "round": "Club Friendlies",
     "odds": null,
     "h2h": null,
-    "elapsed": 82
+    "elapsed": 87
   },
   {
     "home": "Ayr Utd",
@@ -57486,7 +57486,7 @@ window.MATCHES = [
       "dcx2": 2.75
     },
     "h2h": null,
-    "elapsed": 78
+    "elapsed": 84
   },
   {
     "home": "Alloa Athletic",
@@ -57498,7 +57498,7 @@ window.MATCHES = [
     "kickoff": "2026-06-30T18:30:00+00:00",
     "matchDate": "2026-06-30",
     "homeGoals": 0,
-    "awayGoals": 2,
+    "awayGoals": 3,
     "homePos": null,
     "awayPos": null,
     "tableSize": 20,
@@ -57548,7 +57548,7 @@ window.MATCHES = [
       "dcx2": 1.11
     },
     "h2h": null,
-    "elapsed": 84
+    "elapsed": 89
   },
   {
     "home": "Kelty Hearts",
@@ -57661,7 +57661,7 @@ window.MATCHES = [
       "dcx2": 1.02
     },
     "h2h": null,
-    "elapsed": 82
+    "elapsed": 87
   },
   {
     "home": "Musselburgh Athletic",
@@ -57772,7 +57772,7 @@ window.MATCHES = [
       "dcx2": 1.02
     },
     "h2h": null,
-    "elapsed": 70
+    "elapsed": 75
   },
   {
     "home": "Caerau (Ely)",
@@ -57821,7 +57821,7 @@ window.MATCHES = [
     "round": "Club Friendlies",
     "odds": null,
     "h2h": null,
-    "elapsed": 66
+    "elapsed": 71
   },
   {
     "home": "Linlithgow Rose",
@@ -57932,7 +57932,7 @@ window.MATCHES = [
       "dcx2": 1.06
     },
     "h2h": null,
-    "elapsed": 65
+    "elapsed": 70
   },
   {
     "home": "Gretna 2008",
@@ -57944,7 +57944,7 @@ window.MATCHES = [
     "kickoff": "2026-06-30T18:45:00+00:00",
     "matchDate": "2026-06-30",
     "homeGoals": 2,
-    "awayGoals": 2,
+    "awayGoals": 3,
     "homePos": null,
     "awayPos": null,
     "tableSize": 20,
@@ -57981,7 +57981,7 @@ window.MATCHES = [
     "round": "Club Friendlies",
     "odds": null,
     "h2h": null,
-    "elapsed": 66
+    "elapsed": 71
   },
   {
     "home": "Nairn County",
@@ -58141,7 +58141,7 @@ window.MATCHES = [
       "dcx2": 1.62
     },
     "h2h": null,
-    "elapsed": 54
+    "elapsed": 60
   },
   {
     "home": "Palmeiras U17",
