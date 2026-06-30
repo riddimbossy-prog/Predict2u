@@ -1,5 +1,5 @@
 window.DATA_UPDATED = "2026-06-30T16:20:35.146Z";
-window.SCORES_UPDATED = "2026-06-30T20:20:38.751Z";
+window.SCORES_UPDATED = "2026-06-30T20:25:27.993Z";
 window.MATCHES = [
   {
     "home": "Washington Spirit W",
@@ -57315,7 +57315,7 @@ window.MATCHES = [
     "league": "Division Intermedia",
     "country": "Paraguay",
     "flag": "https://media.api-sports.io/flags/py.svg",
-    "status": "2H",
+    "status": "FT",
     "kickoff": "2026-06-30T18:30:00+00:00",
     "matchDate": "2026-06-30",
     "homeGoals": 1,
@@ -57375,7 +57375,7 @@ window.MATCHES = [
       "dcx2": 1.67
     },
     "h2h": null,
-    "elapsed": 90
+    "elapsed": null
   },
   {
     "home": "Raith Rovers",
@@ -57432,7 +57432,7 @@ window.MATCHES = [
     "league": "Friendlies Clubs",
     "country": "World",
     "flag": null,
-    "status": "2H",
+    "status": "FT",
     "kickoff": "2026-06-30T18:30:00+00:00",
     "matchDate": "2026-06-30",
     "homeGoals": 3,
@@ -57486,7 +57486,7 @@ window.MATCHES = [
       "dcx2": 2.75
     },
     "h2h": null,
-    "elapsed": 89
+    "elapsed": null
   },
   {
     "home": "Alloa Athletic",
@@ -57772,7 +57772,7 @@ window.MATCHES = [
       "dcx2": 1.02
     },
     "h2h": null,
-    "elapsed": 80
+    "elapsed": 85
   },
   {
     "home": "Caerau (Ely)",
@@ -57821,7 +57821,7 @@ window.MATCHES = [
     "round": "Club Friendlies",
     "odds": null,
     "h2h": null,
-    "elapsed": 77
+    "elapsed": 82
   },
   {
     "home": "Linlithgow Rose",
@@ -57932,7 +57932,7 @@ window.MATCHES = [
       "dcx2": 1.06
     },
     "h2h": null,
-    "elapsed": 75
+    "elapsed": 80
   },
   {
     "home": "Gretna 2008",
@@ -57981,7 +57981,7 @@ window.MATCHES = [
     "round": "Club Friendlies",
     "odds": null,
     "h2h": null,
-    "elapsed": 77
+    "elapsed": 81
   },
   {
     "home": "Nairn County",
@@ -58141,7 +58141,7 @@ window.MATCHES = [
       "dcx2": 1.62
     },
     "h2h": null,
-    "elapsed": 65
+    "elapsed": 70
   },
   {
     "home": "Palmeiras U17",
