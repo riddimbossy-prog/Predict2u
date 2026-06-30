@@ -800,22 +800,28 @@ document.getElementById('filter-upcoming').addEventListener('change',applyFilter
 
 /* ============ SLIP BUILDER ============ */
 function legOdd(r){
-  // Returns { odd, est } where est=true means the price is ESTIMATED (no real
-  // single odd in our data). Real odds exist only for straight Win picks.
+  // Returns { odd, est } where est=true means the price is ESTIMATED.
+  // Now uses REAL market odds where the expanded fetch provided them.
   const o = r.match.odds;
   const p = r.primary;
-  // real 1X2 odds
   if (o){
-    if (p === 'Home Win' && o.home) return { odd:o.home, est:false };
-    if (p === 'Away Win' && o.away) return { odd:o.away, est:false };
+    // --- REAL odds for the extra markets (from expanded API-Football fetch) ---
+    const realMap = {
+      'Home Win':o.home, 'Away Win':o.away,
+      'Over 1.5':o.over15, 'Over 2.5':o.over25, 'Over 3.5':o.over35,
+      'Under 1.5':o.under15, 'Under 2.5':o.under25, 'Under 3.5':o.under35,
+      'BTTS Yes':o.bttsYes, 'BTTS No':o.bttsNo,
+      'Double Chance 1X':o.dc1x, 'Double Chance 12':o.dc12, 'Double Chance X2':o.dcx2
+    };
+    if (realMap[p]) return { odd:realMap[p], est:false };
     // DNB estimated from the win odd (shorter, since draw refunds the stake)
     if (p === 'Home DNB' && o.home){ const w=o.home; return { odd:Math.max(1.05, +(1+(w-1)*0.78).toFixed(2)), est:true }; }
     if (p === 'Away DNB' && o.away){ const w=o.away; return { odd:Math.max(1.05, +(1+(w-1)*0.78).toFixed(2)), est:true }; }
-    // Double chance estimated from combined implied probs
+    // Double chance fallback if real not present
     if (p === 'Double Chance 1X' && o.home && o.draw){ const ph=1/o.home, pd=1/o.draw; const pr=Math.min(0.95,(ph+pd)); return { odd:Math.max(1.05,+(1/pr*0.92).toFixed(2)), est:true }; }
     if (p === 'Double Chance X2' && o.away && o.draw){ const pa=1/o.away, pd=1/o.draw; const pr=Math.min(0.95,(pa+pd)); return { odd:Math.max(1.05,+(1/pr*0.92).toFixed(2)), est:true }; }
   }
-  // goal/BTTS markets: no 1X2 basis — estimate from typical pricing bands
+  // goal/BTTS markets with no real odds: estimate from typical pricing bands
   const band = {
     'Over 1.5':1.30, 'Over 2.5':1.85, 'Over 3.5':2.90,
     'Under 1.5':3.20, 'Under 2.5':1.90, 'Under 3.5':1.35, 'Under 4.5':1.15,
