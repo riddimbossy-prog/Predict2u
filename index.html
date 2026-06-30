@@ -191,13 +191,14 @@
     <span class="text-xs uppercase tracking-wider font-semibold flex-shrink-0" style="color:var(--muted)">Engine</span>
     <div class="inline-flex rounded-xl panel p-0.5 overflow-x-auto eng-scroll" role="tablist" style="-webkit-overflow-scrolling:touch;scrollbar-width:none;">
       <button id="eng-normal" class="px-3 py-1.5 rounded-lg text-sm font-semibold whitespace-nowrap flex-shrink-0" style="background:linear-gradient(135deg,var(--gold),#6fd44a);color:#0a0e17">Normal</button>
-      <button id="eng-strict" class="px-3 py-1.5 rounded-lg text-sm font-semibold whitespace-nowrap flex-shrink-0" style="color:var(--muted)">Strict Bankers</button>
-      <button id="eng-ultra" class="px-3 py-1.5 rounded-lg text-sm font-semibold whitespace-nowrap flex-shrink-0" style="color:var(--muted)">Ultra Bankers</button>
-      <button id="eng-rulespro" class="px-3 py-1.5 rounded-lg text-sm font-semibold whitespace-nowrap flex-shrink-0" style="color:var(--muted)">Elite Bankers</button>
-      <button id="eng-apex" class="px-3 py-1.5 rounded-lg text-sm font-semibold whitespace-nowrap flex-shrink-0" style="color:var(--muted)">Apex Bankers</button>
-      <button id="eng-prime" class="px-3 py-1.5 rounded-lg text-sm font-semibold whitespace-nowrap flex-shrink-0" style="color:var(--muted)">Prime Bankers</button>
-      <button id="eng-value" class="px-3 py-1.5 rounded-lg text-sm font-semibold whitespace-nowrap flex-shrink-0" style="color:var(--muted)">Value Bankers</button>
-      <button id="eng-acca" class="px-3 py-1.5 rounded-lg text-sm font-semibold whitespace-nowrap flex-shrink-0" style="color:var(--muted)">Today's Bankers Acca</button>
+      <button id="eng-strict" class="px-3 py-1.5 rounded-lg text-sm font-semibold whitespace-nowrap flex-shrink-0" style="color:var(--muted)">Strict</button>
+      <button id="eng-ultra" class="px-3 py-1.5 rounded-lg text-sm font-semibold whitespace-nowrap flex-shrink-0" style="color:var(--muted)">Ultra</button>
+      <button id="eng-rulespro" class="px-3 py-1.5 rounded-lg text-sm font-semibold whitespace-nowrap flex-shrink-0" style="color:var(--muted)">Elite</button>
+      <button id="eng-apex" class="px-3 py-1.5 rounded-lg text-sm font-semibold whitespace-nowrap flex-shrink-0" style="color:var(--muted)">Apex</button>
+      <button id="eng-prime" class="px-3 py-1.5 rounded-lg text-sm font-semibold whitespace-nowrap flex-shrink-0" style="color:var(--muted)">Prime</button>
+      <button id="eng-value" class="px-3 py-1.5 rounded-lg text-sm font-semibold whitespace-nowrap flex-shrink-0" style="color:var(--muted)">Value</button>
+      <button id="eng-pro" class="px-3 py-1.5 rounded-lg text-sm font-semibold whitespace-nowrap flex-shrink-0" style="color:var(--muted)">Pro</button>
+      <button id="eng-acca" class="px-3 py-1.5 rounded-lg text-sm font-semibold whitespace-nowrap flex-shrink-0" style="color:var(--muted)">Acca</button>
     </div>
     <span id="eng-note" class="text-xs hidden sm:inline" style="color:var(--muted)"></span>
   </div>
@@ -254,11 +255,13 @@
   </div>
 
   <!-- TODAY'S TOP PREDICTION CARDS -->
+  <div id="top-bankers-section">
   <div class="flex items-center justify-between mb-3">
     <h2 class="display text-lg font-semibold flex items-center gap-2"><i class="fa-solid fa-star text-gold"></i> Today's Top Bankers</h2>
     <span id="cards-day" class="text-xs" style="color:var(--muted)"></span>
   </div>
   <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 mb-8" id="pred-cards"></div>
+  </div>
 
   <!-- BODY: sidebar + matches -->
   <div class="grid grid-cols-1 lg:grid-cols-[230px_1fr] gap-5">
@@ -547,6 +550,11 @@ function enginePicks(rows){
       return { match:r.match, primary:u.primary, confidence:u.confidence>=8?'High':'Medium',
                banker:u.banker, weight:u.confidence, reason:u.verdict||'' }; }).filter(Boolean);
   }
+  if(engineMode==='pro' && typeof proRecommend==='function'){
+    return rows.map(r=>{ const u=proRecommend(r.match); if(!u.bet) return null;
+      return { match:r.match, primary:u.primary, confidence:u.confidence>=8?'High':'Medium',
+               banker:u.banker, weight:u.confidence, reason:u.verdict||'' }; }).filter(Boolean);
+  }
   if(engineMode==='acca'){
     return accaLegs(rows).map(l=>({ match:l.match, primary:l.market,
       confidence:l.rating>=8?'High':l.rating>=7?'Medium':'Low', banker:true,
@@ -586,6 +594,10 @@ function renderStrip(){
 
 /* ============ TOP PREDICTION CARDS (active date bankers, top 6) ============ */
 function renderCards(){
+  // Hide the "Today's Top Bankers" card section entirely on the Acca tab.
+  const sec=document.getElementById('top-bankers-section');
+  if(sec) sec.style.display = (engineMode==='acca') ? 'none' : '';
+  if(engineMode==='acca') return;
   const rows = byDate[activeDate]||[];
   const cards = enginePicks(rows).sort((a,b)=>(b.weight||0)-(a.weight||0)).slice(0,6);
   document.getElementById('cards-day').textContent = dayLabel(activeDate);
@@ -645,6 +657,7 @@ function renderMatches(){
   if(engineMode==='apex'){ renderApexMatches(); return; }
   if(engineMode==='prime'){ renderPrimeMatches(); return; }
   if(engineMode==='value'){ renderValueMatches(); return; }
+  if(engineMode==='pro'){ renderProMatches(); return; }
   if(engineMode==='acca'){ renderAccaMatches(); return; }
   const root = document.getElementById('matches-root');
   const rows = byDate[activeDate]||[];
@@ -1109,6 +1122,47 @@ function shareAcca(){
   else if(navigator.clipboard){ navigator.clipboard.writeText(t); const btn=event.target.closest('button'); if(btn) btn.innerHTML='<i class="fa-solid fa-check"></i> Copied!'; }
 }
 
+function renderProMatches(){
+  const host=document.getElementById('matches-root');
+  if(typeof proRecommend!=='function'){ host.innerHTML='<div class="p-6 text-center" style="color:var(--muted)">Pro engine unavailable — deploy the latest banker-engine.js.</div>'; return; }
+  const dayMatches=(byDate[activeDate]||[]);
+  const picks=dayMatches.map(r=>proRecommend(r.match)).filter(r=>r.bet);
+  let html=`<div class="panel rounded-xl p-3 mb-3 text-sm" style="border:1px solid rgba(76,175,39,.4);background:rgba(76,175,39,.07)">
+    <strong style="color:var(--brand)"><i class="fa-solid fa-microchip"></i> Pro Bankers — disciplined, xG-aware.</strong>
+    Every game runs through a Poisson/Dixon-Coles probability model, sharpened with <strong>real expected goals</strong> where available. Bets only where probability clears a real floor; never bankers friendlies or table-less games; needs the backed team to expect 2+ goals for any Win/DNB. Fewer, better-grounded picks. Unproven — track first. 18+.
+  </div>`;
+  if(!picks.length){ html+=`<div class="p-6 text-center" style="color:var(--muted)">No pick cleared the Pro model's confidence floor today — the model sees no safe edge.</div>`; host.innerHTML=html; return; }
+  picks.sort((a,b)=>(b.usedXg-a.usedXg)||(b.confidence-a.confidence));
+  picks.forEach(r=>{
+    const tierName=r.confidence>=9?"Pro Banker":r.confidence>=8?"Strong":"Playable";
+    const probTxt=r.model&&r.model.prob!=null?`${(r.model.prob*100).toFixed(0)}% model prob`:'';
+    html+=`<details class="match-item is-banker-row" data-search="${(r.match.home+' '+r.match.away+' '+(r.match.league||'')).toLowerCase().replace(/"/g,'')}" data-market="${marketTag(r.primary)}" data-banker="${r.banker?'1':'0'}" data-upcoming="0" data-winodd="">
+      <summary class="match-line px-4 py-3 flex items-center gap-3">
+        <div class="w-12 text-center flex-shrink-0">${rowScore(r.match)}</div>
+        <div class="flex-1 min-w-0">
+          <div class="text-sm font-medium truncate">${r.match.home}</div>
+          <div class="text-sm font-medium truncate">${r.match.away}</div>
+          <div class="text-[11px]" style="color:var(--muted)">${rowFlag(r.match)}${r.match.league||''}</div>
+        </div>
+        <div class="flex flex-col items-end gap-1 flex-shrink-0 w-28">
+          <span class="text-[9px] font-bold uppercase" style="color:${r.usedXg?'#7ee05a':'var(--brand)'}">${tierName}${r.usedXg?' · xG':''} ${r.confidence}/10</span>
+          <span class="px-2 py-1 rounded-lg text-[11px] font-semibold ${pill(r.primary)} text-right leading-tight">${r.primary}</span>
+          ${rowSettle(r.match,r.primary)}
+        </div>
+        <i class="fa-solid fa-chevron-down chev text-sm" style="color:var(--muted)"></i>
+      </summary>
+      <div class="px-4 pb-4 pt-3 text-sm" style="border-top:1px solid var(--line);background:var(--panel-2)">
+        <div style="font-weight:600;margin-bottom:.4rem">${r.verdict}</div>
+        ${r.model?`<div style="color:var(--muted);font-size:.75rem">Expected goals: ${r.model.lambdaHome.toFixed(2)} - ${r.model.lambdaAway.toFixed(2)} · ${probTxt}${r.usedXg?' · sharpened with real xG':' · estimated (no xG for this league)'}</div>`:''}
+        ${r.lowSample?`<div style="color:#b45309;font-size:.75rem;margin-top:.4rem"><i class="fa-solid fa-triangle-exclamation"></i> Low sample — estimate regressed toward league average.</div>`:''}
+        ${(r.humanChecks||[]).length?`<div style="color:#b45309;font-size:.75rem;margin-top:.5rem"><i class="fa-solid fa-user-check"></i> ${r.humanChecks[0]}</div>`:''}
+      </div>
+    </details>`;
+  });
+  host.innerHTML=html;
+  applyFilters();
+}
+
 function renderValueMatches(){
   const host=document.getElementById('matches-root');
   if (typeof valueRecommend !== 'function'){ host.innerHTML='<div class="p-6 text-center" style="color:var(--muted)">Value engine unavailable — deploy the latest banker-engine.js.</div>'; return; }
@@ -1392,7 +1446,7 @@ function renderStrictMatches(){
 }
 
 (function(){
-  const bn=document.getElementById('eng-normal'), bs=document.getElementById('eng-strict'), bu=document.getElementById('eng-ultra'), bp=document.getElementById('eng-rulespro'), ba=document.getElementById('eng-apex'), bpr=document.getElementById('eng-prime'), bv=document.getElementById('eng-value'), bac=document.getElementById('eng-acca'), note=document.getElementById('eng-note');
+  const bn=document.getElementById('eng-normal'), bs=document.getElementById('eng-strict'), bu=document.getElementById('eng-ultra'), bp=document.getElementById('eng-rulespro'), ba=document.getElementById('eng-apex'), bpr=document.getElementById('eng-prime'), bv=document.getElementById('eng-value'), bpro=document.getElementById('eng-pro'), bac=document.getElementById('eng-acca'), note=document.getElementById('eng-note');
   function setMode(mode){
     engineMode=mode;
     const on='background:linear-gradient(135deg,var(--gold),#6fd44a);color:#0a0e17';
@@ -1404,6 +1458,7 @@ function renderStrictMatches(){
     ba.style.cssText = mode==='apex'?on:off;
     bpr.style.cssText = mode==='prime'?on:off;
     bv.style.cssText = mode==='value'?on:off;
+    bpro.style.cssText = mode==='pro'?on:off;
     bac.style.cssText = mode==='acca'?on:off;
     note.textContent = mode==='strict'
       ? 'Conservative: rejects most games, one clean market or No Bet. Auto-tiered from the table — confirm red flags yourself.'
@@ -1419,6 +1474,8 @@ function renderStrictMatches(){
       ? 'Value Bankers: Dixon-Coles/Poisson goal model. Estimates each team\'s expected goals for the match, builds the full scoreline probability matrix, and picks the highest-probability safe market — or No Bet when nothing clears the floor. Flags VALUE when the model beats the bookmaker odds. The most mathematically grounded engine. Unproven — track first.'
       : mode==='acca'
       ? 'Today\'s Bankers Acca: combines the strongest banker per match across all engines, rated by engine agreement + average confidence. Same-match markets collapse to that match\'s single strongest pick. An accumulator needs EVERY leg to win — more legs = far lower chance. The shown combined probability is the honest odds of all legs landing. High risk. 18+.'
+      : mode==='pro'
+      ? 'Pro Bankers: the disciplined, xG-aware engine. Runs every game through a Poisson/Dixon-Coles probability model — sharpened with REAL expected goals where available (most leagues fall back to the estimate). Bets only where probability clears a real floor, widens caution on thin data, never bankers friendlies/table-less games, and needs the backed team to expect 2+ goals for any Win/DNB. Fewer, better-grounded picks. Unproven — track first.'
       : '';
     const noteM=document.getElementById('eng-note-mobile'); if(noteM) noteM.textContent = note.textContent;
     renderStats(); renderCards(); renderMatches();
@@ -1430,6 +1487,7 @@ function renderStrictMatches(){
   ba.addEventListener('click',()=>setMode('apex'));
   bpr.addEventListener('click',()=>setMode('prime'));
   bv.addEventListener('click',()=>setMode('value'));
+  bpro.addEventListener('click',()=>setMode('pro'));
   bac.addEventListener('click',()=>setMode('acca'));
 })();
 
