@@ -23,8 +23,10 @@ function confNum(c){ return c==='High'?8:c==='Medium'?7:c==='Low'?5:(typeof c===
 // estimate an odd for a market (rough — non-Win markets have no real odds)
 function estOdd(market, m){
   const o=m.odds;
-  if(market==="Home Win"&&o&&o.home) return {odd:o.home,est:false};
-  if(market==="Away Win"&&o&&o.away) return {odd:o.away,est:false};
+  if(o){
+    const realMap={'Home Win':o.home,'Away Win':o.away,'Over 1.5':o.over15,'Over 2.5':o.over25,'Over 3.5':o.over35,'Under 1.5':o.under15,'Under 2.5':o.under25,'Under 3.5':o.under35,'BTTS Yes':o.bttsYes,'BTTS No':o.bttsNo,'Double Chance 1X':o.dc1x,'Double Chance X2':o.dcx2};
+    if(realMap[market]) return {odd:realMap[market], est:false};
+  }
   const map={"Over 1.5":1.30,"Under 3.5":1.35,"Over 2.5":1.90,"Under 2.5":1.85,"BTTS Yes":1.85,"BTTS No":1.80,"Double Chance 1X":1.30,"Double Chance X2":1.45,"Home DNB":1.55,"Away DNB":1.95};
   return {odd:map[market]||1.50, est:true};
 }
