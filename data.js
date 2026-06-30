@@ -1,5 +1,5 @@
 window.DATA_UPDATED = "2026-06-30T16:20:35.146Z";
-window.SCORES_UPDATED = "2026-06-30T18:30:54.777Z";
+window.SCORES_UPDATED = "2026-06-30T18:45:33.607Z";
 window.MATCHES = [
   {
     "home": "Washington Spirit W",
@@ -56342,7 +56342,7 @@ window.MATCHES = [
     "status": "2H",
     "kickoff": "2026-06-30T17:00:00+00:00",
     "matchDate": "2026-06-30",
-    "homeGoals": 0,
+    "homeGoals": 1,
     "awayGoals": 1,
     "homePos": 2,
     "awayPos": 2,
@@ -56401,7 +56401,7 @@ window.MATCHES = [
       "dcx2": 1.33
     },
     "h2h": null,
-    "elapsed": 71
+    "elapsed": 86
   },
   {
     "home": "Chevremont",
@@ -56507,7 +56507,7 @@ window.MATCHES = [
     "league": "Friendlies Clubs",
     "country": "World",
     "flag": null,
-    "status": "HT",
+    "status": "2H",
     "kickoff": "2026-06-30T17:30:00+00:00",
     "matchDate": "2026-06-30",
     "homeGoals": 0,
@@ -56561,7 +56561,7 @@ window.MATCHES = [
       "dcx2": 4.5
     },
     "h2h": null,
-    "elapsed": 45
+    "elapsed": 54
   },
   {
     "home": "Campos AA",
@@ -56569,10 +56569,10 @@ window.MATCHES = [
     "league": "Carioca C",
     "country": "Brazil",
     "flag": "https://media.api-sports.io/flags/br.svg",
-    "status": "1H",
+    "status": "HT",
     "kickoff": "2026-06-30T17:45:00+00:00",
     "matchDate": "2026-06-30",
-    "homeGoals": 1,
+    "homeGoals": 2,
     "awayGoals": 0,
     "homePos": 2,
     "awayPos": 5,
@@ -56641,7 +56641,7 @@ window.MATCHES = [
     "kickoff": "2026-06-30T18:00:00+00:00",
     "matchDate": "2026-06-30",
     "homeGoals": 0,
-    "awayGoals": 0,
+    "awayGoals": 1,
     "homePos": 11,
     "awayPos": 12,
     "tableSize": 28,
@@ -56699,7 +56699,7 @@ window.MATCHES = [
       "dcx2": 1.28
     },
     "h2h": null,
-    "elapsed": 25
+    "elapsed": 39
   },
   {
     "home": "Claypole",
@@ -56769,7 +56769,7 @@ window.MATCHES = [
       "dcx2": 1.2
     },
     "h2h": null,
-    "elapsed": 25
+    "elapsed": 40
   },
   {
     "home": "Cove Rangers",
@@ -56829,7 +56829,7 @@ window.MATCHES = [
     "status": "1H",
     "kickoff": "2026-06-30T18:00:00+00:00",
     "matchDate": "2026-06-30",
-    "homeGoals": 0,
+    "homeGoals": 1,
     "awayGoals": 0,
     "homePos": null,
     "awayPos": null,
@@ -56867,7 +56867,7 @@ window.MATCHES = [
     "round": "Group Stage",
     "odds": null,
     "h2h": null,
-    "elapsed": 30
+    "elapsed": 45
   },
   {
     "home": "Botafogo U17",
@@ -57375,7 +57375,7 @@ window.MATCHES = [
       "dcx2": 1.67
     },
     "h2h": null,
-    "elapsed": 1
+    "elapsed": 15
   },
   {
     "home": "Raith Rovers",
@@ -57383,11 +57383,11 @@ window.MATCHES = [
     "league": "Friendlies Clubs",
     "country": "World",
     "flag": null,
-    "status": "NS",
+    "status": "1H",
     "kickoff": "2026-06-30T18:30:00+00:00",
     "matchDate": "2026-06-30",
-    "homeGoals": null,
-    "awayGoals": null,
+    "homeGoals": 1,
+    "awayGoals": 0,
     "homePos": null,
     "awayPos": null,
     "tableSize": 20,
@@ -57424,7 +57424,7 @@ window.MATCHES = [
     "round": "Club Friendlies",
     "odds": null,
     "h2h": null,
-    "elapsed": null
+    "elapsed": 14
   },
   {
     "home": "Ayr Utd",
@@ -57432,11 +57432,11 @@ window.MATCHES = [
     "league": "Friendlies Clubs",
     "country": "World",
     "flag": null,
-    "status": "NS",
+    "status": "1H",
     "kickoff": "2026-06-30T18:30:00+00:00",
     "matchDate": "2026-06-30",
-    "homeGoals": null,
-    "awayGoals": null,
+    "homeGoals": 0,
+    "awayGoals": 0,
     "homePos": null,
     "awayPos": null,
     "tableSize": 20,
@@ -57486,7 +57486,7 @@ window.MATCHES = [
       "dcx2": 2.75
     },
     "h2h": null,
-    "elapsed": null
+    "elapsed": 12
   },
   {
     "home": "Alloa Athletic",
@@ -57498,7 +57498,7 @@ window.MATCHES = [
     "kickoff": "2026-06-30T18:30:00+00:00",
     "matchDate": "2026-06-30",
     "homeGoals": 0,
-    "awayGoals": 0,
+    "awayGoals": 1,
     "homePos": null,
     "awayPos": null,
     "tableSize": 20,
@@ -57548,7 +57548,7 @@ window.MATCHES = [
       "dcx2": 1.11
     },
     "h2h": null,
-    "elapsed": 1
+    "elapsed": 15
   },
   {
     "home": "Kelty Hearts",
@@ -57661,7 +57661,7 @@ window.MATCHES = [
       "dcx2": 1.02
     },
     "h2h": null,
-    "elapsed": 1
+    "elapsed": 15
   },
   {
     "home": "Musselburgh Athletic",
