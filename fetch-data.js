@@ -73,6 +73,7 @@ function apiGet(endpoint, key) {
 }
 
 function fmtDate(d){ return `${d.getFullYear()}-${String(d.getMonth()+1).padStart(2,"0")}-${String(d.getDate()).padStart(2,"0")}`; }
+
 function todayStr(){ return fmtDate(new Date()); }
 // Build the list of date strings to fetch: today-back .. today+fwd (inclusive).
 function buildDateWindow(back, fwd){
@@ -391,6 +392,28 @@ const FINISHED = new Set(["FT","AET","PEN"]);
         const hPlayed=(f.played&&f.played.home)||0, aPlayed=(f.played&&f.played.away)||0;
         const hWins=(f.wins&&f.wins.home)||0, aWins=(f.wins&&f.wins.away)||0;
         const hDraws=(f.draws&&f.draws.home)||0, aDraws=(f.draws&&f.draws.away)||0;
+
+        // ---- HT/FT half-splits from goals-by-minute buckets (same response) ----
+        // 1st-half buckets 0-45, 2nd-half buckets 46-90+. Gives real per-game
+        // first/second-half goal tendencies for the 1H/2H markets.
+        const gFor = (r.goals && r.goals.for && r.goals.for.minute) || {};
+        const gAg  = (r.goals && r.goals.against && r.goals.against.minute) || {};
+        const sumB = (obj,keys)=>keys.reduce((a,k)=>{ const t=obj[k]&&obj[k].total; return a+(t!=null?Number(t):0); },0);
+        const FK=["0-15","16-30","31-45"], SK=["46-60","61-75","76-90","91-105"];
+        const haveMinutes = Object.keys(gFor).length>0 || Object.keys(gAg).length>0;
+        const f1=sumB(gFor,FK), f2=sumB(gFor,SK), a1=sumB(gAg,FK), a2=sumB(gAg,SK);
+
+        // ---- real Over/Under hit-rates per line (same response) ----
+        // r.goals.for.under_over is keyed by line ("0.5","1.5","2.5",...), each
+        // { over, under }. Convert the 2.5 line to a hit-rate the spec wants.
+        const ouBlock = (r.goals && r.goals.for && r.goals.for.under_over) || r.under_over || null;
+        const ouRate = (line)=>{
+          const cell = ouBlock && ouBlock[line];
+          if (!cell) return null;
+          const o = Number(cell.over)||0, u = Number(cell.under)||0;
+          return (o+u)>0 ? Math.round((o/(o+u))*100)/100 : null;
+        };
+
         stats = {
           played,
           winRate: played? wins/played : null,
@@ -407,6 +430,13 @@ const FINISHED = new Set(["FT","AET","PEN"]);
           cleanSheetAway: (cs.away!=null&&aPlayed)? cs.away/aPlayed : null,
           ftsHome: (fts.home!=null&&hPlayed)? fts.home/hPlayed : null,
           ftsAway: (fts.away!=null&&aPlayed)? fts.away/aPlayed : null,
+          // NEW: HT/FT half-split per-game goal tendencies (null if no minute data)
+          avg1HFor: (haveMinutes&&played)? Math.round((f1/played)*100)/100 : null,
+          avg2HFor: (haveMinutes&&played)? Math.round((f2/played)*100)/100 : null,
+          avg1HAgainst: (haveMinutes&&played)? Math.round((a1/played)*100)/100 : null,
+          avg2HAgainst: (haveMinutes&&played)? Math.round((a2/played)*100)/100 : null,
+          // NEW: real Over/Under hit-rates per line
+          over15Rate: ouRate("1.5"), over25Rate: ouRate("2.5"), over35Rate: ouRate("3.5"),
         };
       }
       await sleep(SLEEP);
@@ -512,6 +542,9 @@ const FINISHED = new Set(["FT","AET","PEN"]);
           const games = (hr.response || []).filter(g => FINISHED.has(g.fixture.status.short));
           if (games.length) {
             let homeWins=0, awayWins=0, draws=0, over25=0, bttsCount=0;
+            // half-time goal aggregation (API-Football returns score.halftime).
+            // 1H goals = HT total; 2H goals = FT total minus HT total.
+            let htSum=0, ftSum=0, htSamples=0;
             const recent = [];
             for (const g of games) {
               const gh=g.goals.home, ga=g.goals.away;
@@ -524,10 +557,23 @@ const FINISHED = new Set(["FT","AET","PEN"]);
               }
               if (gh+ga>=3) over25++;
               if (gh>0 && ga>0) bttsCount++;
+              // half-time goals for this fixture
+              const ht = g.score && g.score.halftime;
+              if (ht && ht.home!=null && ht.away!=null) {
+                htSum += (ht.home + ht.away);
+                ftSum += (gh + ga);
+                htSamples++;
+              }
               recent.push({ date:(g.fixture.date||"").slice(0,10),
                 ht:g.teams.home.name, at:g.teams.away.name, hg:gh, ag:ga, res });
             }
             h2h = { played:games.length, homeWins, awayWins, draws, over25, bttsCount, recent:recent.slice(0,5) };
+            // average 1st-half and 2nd-half goals across the H2H sample (real data).
+            if (htSamples > 0) {
+              h2h.avg1H = Math.round((htSum / htSamples) * 100) / 100;
+              h2h.avg2H = Math.round(((ftSum - htSum) / htSamples) * 100) / 100;
+              h2h.htSamples = htSamples;
+            }
           }
           await sleep(SLEEP);
         } catch (e) { /* h2h optional */ }
@@ -544,6 +590,8 @@ const FINISHED = new Set(["FT","AET","PEN"]);
 
       out.push({
         home: fx.teams.home.name, away: fx.teams.away.name, league: leagueName,
+        homeLogo: (fx.teams.home && fx.teams.home.logo) || null,
+        awayLogo: (fx.teams.away && fx.teams.away.logo) || null,
         country: leagueCountry, flag: leagueFlag,
         status: st, kickoff: fx.fixture.date || null, matchDate: date,
         homeGoals: (fx.goals && fx.goals.home != null) ? fx.goals.home : null,
@@ -570,6 +618,20 @@ const FINISHED = new Set(["FT","AET","PEN"]);
         awayCleanSheetRate: awayStats ? round2(awayStats.cleanSheetAway ?? awayStats.cleanSheetRate) : null,
         homeFailedToScoreRate: homeStats ? round2(homeStats.ftsHome ?? homeStats.failedToScoreRate) : null,
         awayFailedToScoreRate: awayStats ? round2(awayStats.ftsAway ?? awayStats.failedToScoreRate) : null,
+        // HT/FT half-split goal tendencies (real, from goals-by-minute)
+        home1HFor: homeStats ? homeStats.avg1HFor : null,
+        home2HFor: homeStats ? homeStats.avg2HFor : null,
+        home1HAgainst: homeStats ? homeStats.avg1HAgainst : null,
+        home2HAgainst: homeStats ? homeStats.avg2HAgainst : null,
+        away1HFor: awayStats ? awayStats.avg1HFor : null,
+        away2HFor: awayStats ? awayStats.avg2HFor : null,
+        away1HAgainst: awayStats ? awayStats.avg1HAgainst : null,
+        away2HAgainst: awayStats ? awayStats.avg2HAgainst : null,
+        // real Over/Under hit-rates per line
+        homeOver25Rate: homeStats ? homeStats.over25Rate : null,
+        awayOver25Rate: awayStats ? awayStats.over25Rate : null,
+        homeOver15Rate: homeStats ? homeStats.over15Rate : null,
+        awayOver15Rate: awayStats ? awayStats.over15Rate : null,
         statsReal: !!(homeStats || awayStats),
         sameGroup, isKnockout,
         isTournament: multiGroup || isKnockout,
