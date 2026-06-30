@@ -459,6 +459,18 @@ function fmtTime(iso){
   try { return new Date(iso).toLocaleTimeString('en-GB',{hour:'2-digit',minute:'2-digit',timeZone:'GMT'})+' GMT'; }
   catch(e){ return ''; }
 }
+// Live badge: shows the in-play minute as of the LAST fetch (data refreshes
+// every ~15 min, so this is "minute at last update", not a live ticking clock).
+// HT shows "HT"; a known minute shows e.g. "LIVE 71'"; otherwise plain "LIVE".
+function liveBadge(m){
+  if(!m) return '';
+  const st = String(m.status||'').toUpperCase();
+  if(!['1H','2H','HT','ET','LIVE','P'].includes(st)) return '';
+  let label = 'LIVE';
+  if(st==='HT') label = 'HT';
+  else if(m.elapsed!=null && m.elapsed!=='') label = `LIVE ${m.elapsed}'`;
+  return `<span class="chip-live px-2 py-0.5 rounded text-[10px] font-bold whitespace-nowrap">${label}</span>`;
+}
 // Safe-odds rule: ONLY Win picks with a real bookmaker odd at/below 1.55 qualify.
 // Anything without a single odd (DNB, Over/Under, BTTS) does NOT qualify and is
 // hidden when the "Wins ≤1.55 only" filter is on.
@@ -742,7 +754,7 @@ function renderMatches(){
             <div class="flex items-center gap-2 text-sm"><span class="truncate font-medium">${r.match.home}</span></div>
             <div class="flex items-center gap-2 text-sm"><span class="truncate font-medium">${r.match.away}</span></div>
           </div>
-          ${ live?'<span class="chip-live px-2 py-0.5 rounded text-[10px] font-bold">LIVE</span>':'' }
+          ${ liveBadge(r.match) }
           ${odds}
           <div class="flex flex-col items-end gap-1 flex-shrink-0 w-24">
             ${ isB?'<span class="text-[9px] font-bold uppercase" style="color:var(--brand)">Banker</span>'
