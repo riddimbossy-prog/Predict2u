@@ -1,5 +1,5 @@
 window.DATA_UPDATED = "2026-07-01T19:51:47.056Z";
-window.SCORES_UPDATED = "2026-07-01T20:01:01.229Z";
+window.SCORES_UPDATED = "2026-07-01T20:05:29.589Z";
 window.MATCHES = [
   {
     "home": "Santa Cruz",
@@ -87830,7 +87830,7 @@ window.MATCHES = [
     "awayLogo": "https://media.api-sports.io/football/teams/12979.png",
     "country": "Brazil",
     "flag": "https://media.api-sports.io/flags/br.svg",
-    "status": "2H",
+    "status": "FT",
     "kickoff": "2026-07-01T18:00:00+00:00",
     "matchDate": "2026-07-01",
     "homeGoals": 1,
@@ -87892,7 +87892,7 @@ window.MATCHES = [
     "round": "Regular Season - 19",
     "odds": null,
     "h2h": null,
-    "elapsed": 90
+    "elapsed": null
   },
   {
     "home": "Juventude U20",
@@ -88072,7 +88072,7 @@ window.MATCHES = [
     "awayLogo": "https://media.api-sports.io/football/teams/13008.png",
     "country": "Brazil",
     "flag": "https://media.api-sports.io/flags/br.svg",
-    "status": "2H",
+    "status": "FT",
     "kickoff": "2026-07-01T18:00:00+00:00",
     "matchDate": "2026-07-01",
     "homeGoals": 3,
@@ -88147,7 +88147,7 @@ window.MATCHES = [
       "dcx2": 1.95
     },
     "h2h": null,
-    "elapsed": 90
+    "elapsed": null
   },
   {
     "home": "Blumenau",
@@ -88386,7 +88386,7 @@ window.MATCHES = [
     "status": "2H",
     "kickoff": "2026-07-01T18:30:00+00:00",
     "matchDate": "2026-07-01",
-    "homeGoals": 0,
+    "homeGoals": 1,
     "awayGoals": 1,
     "homePos": null,
     "awayPos": null,
@@ -88439,7 +88439,7 @@ window.MATCHES = [
     "round": "Club Friendlies",
     "odds": null,
     "h2h": null,
-    "elapsed": 78
+    "elapsed": 82
   },
   {
     "home": "Legiao U20",
@@ -88583,7 +88583,7 @@ window.MATCHES = [
     "round": "Regular Season - 5",
     "odds": null,
     "h2h": null,
-    "elapsed": 68
+    "elapsed": 73
   },
   {
     "home": "Tupan",
@@ -88746,7 +88746,7 @@ window.MATCHES = [
     "awayLogo": "https://media.api-sports.io/football/teams/10336.png",
     "country": "World",
     "flag": null,
-    "status": "HT",
+    "status": "2H",
     "kickoff": "2026-07-01T19:00:00+00:00",
     "matchDate": "2026-07-01",
     "homeGoals": 0,
@@ -88814,7 +88814,7 @@ window.MATCHES = [
       "bttsNo": 1.62
     },
     "h2h": null,
-    "elapsed": 45
+    "elapsed": 47
   },
   {
     "home": "Haukar",
@@ -88824,7 +88824,7 @@ window.MATCHES = [
     "awayLogo": "https://media.api-sports.io/football/teams/4170.png",
     "country": "Iceland",
     "flag": "https://media.api-sports.io/flags/is.svg",
-    "status": "1H",
+    "status": "HT",
     "kickoff": "2026-07-01T19:15:00+00:00",
     "matchDate": "2026-07-01",
     "homeGoals": 2,
@@ -88986,7 +88986,7 @@ window.MATCHES = [
       "dcx2": 1.67
     },
     "h2h": null,
-    "elapsed": 1
+    "elapsed": 5
   },
   {
     "home": "SF Glens",
@@ -89143,7 +89143,7 @@ window.MATCHES = [
       "dcx2": 1.42
     },
     "h2h": null,
-    "elapsed": 2
+    "elapsed": 6
   },
   {
     "home": "HFX Wanderers FC",
