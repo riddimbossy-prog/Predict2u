@@ -1,5 +1,5 @@
 window.DATA_UPDATED = "2026-07-01T19:51:47.056Z";
-window.SCORES_UPDATED = "2026-07-01T23:15:05.574Z";
+window.SCORES_UPDATED = "2026-07-01T23:15:33.615Z";
 window.MATCHES = [
   {
     "home": "Santa Cruz",
@@ -92245,7 +92245,7 @@ window.MATCHES = [
     "round": "Semi-finals",
     "odds": null,
     "h2h": null,
-    "elapsed": 15
+    "elapsed": 16
   },
   {
     "home": "Boston City",
