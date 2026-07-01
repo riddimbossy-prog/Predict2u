@@ -326,9 +326,12 @@ body.light .won-card .wc-badge{ background:rgba(22,163,74,.10); border-color:rgb
           <option value="Win">Win</option><option value="DNB">DNB</option>
           <option value="Over 1.5">Over 1.5</option><option value="Over 2.5">Over 2.5</option><option value="Under">Under</option><option value="BTTS">BTTS</option>
         </select>
-        <label class="flex items-center gap-2 text-sm panel-2 rounded-xl px-3 py-2 cursor-pointer" style="color:var(--ink)">
-          <input id="filter-bankers" type="checkbox" class="accent-yellow-500" /> Bankers only
-        </label>
+        <select id="filter-sort" class="panel-2 rounded-xl px-3 py-2 text-sm focus:outline-none" style="color:var(--ink)" title="Choose how matches are ordered">
+          <option value="default">Sort: Default</option>
+          <option value="kickoff">Sort: Kickoff time</option>
+          <option value="bankers">Sort: Bankers first</option>
+          <option value="confidence">Sort: Highest confidence</option>
+        </select>
         <label class="flex items-center gap-2 text-sm panel-2 rounded-xl px-3 py-2 cursor-pointer" style="color:var(--ink)">
           <input id="filter-upcoming" type="checkbox" class="accent-yellow-500" /> Upcoming only
         </label>
@@ -837,7 +840,8 @@ function renderMatches(){
       const isLean = !isB && r.lean;
       const dataMkt = isLean ? marketTag(r.lean.market) : marketTag(r.primary);
       const winOdd = (r.primary==='Home Win'&&r.match.odds&&r.match.odds.home) ? r.match.odds.home : (r.primary==='Away Win'&&r.match.odds&&r.match.odds.away) ? r.match.odds.away : '';
-      return `<details class="match-item ${isB?'is-banker-row':''} ${isLean?'is-lean-row':''}" data-search="${(r.match.home+' '+r.match.away+' '+r.match.league).toLowerCase().replace(/"/g,'')}" data-market="${dataMkt}" data-banker="${isB?'1':'0'}" data-lean="${isLean?'1':'0'}" data-upcoming="${upcoming?'1':'0'}" data-winodd="${winOdd}">
+      const confVal = (typeof r.confidence==='number') ? r.confidence : (r.confidence==='High'?9:r.confidence==='Medium'?7:r.confidence==='Low'?5:'');
+      return `<details class="match-item ${isB?'is-banker-row':''} ${isLean?'is-lean-row':''}" data-search="${(r.match.home+' '+r.match.away+' '+r.match.league).toLowerCase().replace(/"/g,'')}" data-market="${dataMkt}" data-banker="${isB?'1':'0'}" data-lean="${isLean?'1':'0'}" data-upcoming="${upcoming?'1':'0'}" data-winodd="${winOdd}" data-ko="${koTime||''}" data-conf="${confVal}">
         <summary class="match-line px-4 py-3 flex items-center gap-3">
           <div class="w-12 text-center flex-shrink-0">${score}</div>
           <div class="flex-1 min-w-0">
@@ -883,7 +887,6 @@ function renderMatches(){
 function applyFilters(){
   const q=(document.getElementById('filter-search').value||'').trim().toLowerCase();
   const mk=document.getElementById('filter-market').value;
-  const bk=document.getElementById('filter-bankers').checked;
   const up=document.getElementById('filter-upcoming').checked;
   const oddMinEl=document.getElementById('odds-min'), oddMaxEl=document.getElementById('odds-max');
   const oddMin=oddMinEl?(parseFloat(oddMinEl.value)||0):0;
@@ -894,7 +897,7 @@ function applyFilters(){
     const wo=parseFloat(el.dataset.winodd);
     const hasWinOdd=!isNaN(wo);
     const oddOk = !oddsActive || !hasWinOdd || (wo>=oddMin && wo<=oddMax);
-    const show = (!q||el.dataset.search.includes(q)) && (!mk||el.dataset.market===mk) && (!bk||el.dataset.banker==='1') && (!up||el.dataset.upcoming==='1') && oddOk;
+    const show = (!q||el.dataset.search.includes(q)) && (!mk||el.dataset.market===mk) && (!up||el.dataset.upcoming==='1') && oddOk;
     el.style.display = show?'':'none'; if(show) any=true;
   });
   document.querySelectorAll('.lg-row').forEach(b=>{
@@ -902,10 +905,39 @@ function applyFilters(){
     b.style.display = vis?'':'none';
   });
   document.getElementById('no-results').classList.toggle('hidden', any || !(byDate[activeDate]||[]).length);
+  applySort();
+}
+
+/* Reorder visible match rows inside each league panel per the Sort dropdown.
+   Reorders DOM nodes in place (keeps all filtering/collapse behaviour). */
+function applySort(){
+  const sel=document.getElementById('filter-sort');
+  const mode=sel?sel.value:'default';
+  if(!mode||mode==='default') return;
+  const ko=el=>{ const t=parseFloat(el.dataset.ko); return isNaN(t)?Infinity:t; };
+  const conf=el=>{ const c=parseFloat(el.dataset.conf); return isNaN(c)?-1:c; };
+  const isBank=el=>el.dataset.banker==='1'?1:0;
+  // group visible rows by their direct parent container, then reorder each group
+  const groups=new Map();
+  document.querySelectorAll('.match-item').forEach(el=>{
+    const p=el.parentElement; if(!p) return;
+    if(!groups.has(p)) groups.set(p,[]);
+    groups.get(p).push(el);
+  });
+  groups.forEach((rows,container)=>{
+    if(rows.length<2) return;
+    rows.sort((a,b)=>{
+      if(mode==='kickoff')    return ko(a)-ko(b);
+      if(mode==='confidence') return conf(b)-conf(a);
+      if(mode==='bankers')    return isBank(b)-isBank(a) || conf(b)-conf(a);
+      return 0;
+    });
+    rows.forEach(r=>container.appendChild(r));
+  });
 }
 ['filter-search','filter-market'].forEach(id=>document.getElementById(id).addEventListener('input',applyFilters));
-document.getElementById('filter-bankers').addEventListener('change',applyFilters);
 document.getElementById('filter-upcoming').addEventListener('change',applyFilters);
+document.getElementById('filter-sort').addEventListener('change',applyFilters);
 ['odds-min','odds-max'].forEach(id=>document.getElementById(id).addEventListener('input',applyFilters));
 
 /* ============ SLIP BUILDER ============ */
