@@ -1,5 +1,5 @@
 window.DATA_UPDATED = "2026-07-01T19:51:47.056Z";
-window.SCORES_UPDATED = "2026-07-01T20:10:41.064Z";
+window.SCORES_UPDATED = "2026-07-01T20:15:39.719Z";
 window.MATCHES = [
   {
     "home": "Santa Cruz",
@@ -88383,7 +88383,7 @@ window.MATCHES = [
     "awayLogo": "https://media.api-sports.io/football/teams/7434.png",
     "country": "World",
     "flag": null,
-    "status": "2H",
+    "status": "FT",
     "kickoff": "2026-07-01T18:30:00+00:00",
     "matchDate": "2026-07-01",
     "homeGoals": 1,
@@ -88439,7 +88439,7 @@ window.MATCHES = [
     "round": "Club Friendlies",
     "odds": null,
     "h2h": null,
-    "elapsed": 87
+    "elapsed": null
   },
   {
     "home": "Legiao U20",
@@ -88583,7 +88583,7 @@ window.MATCHES = [
     "round": "Regular Season - 5",
     "odds": null,
     "h2h": null,
-    "elapsed": 78
+    "elapsed": 83
   },
   {
     "home": "Tupan",
@@ -88736,7 +88736,7 @@ window.MATCHES = [
       "dcx2": 1.36
     },
     "h2h": null,
-    "elapsed": 51
+    "elapsed": 56
   },
   {
     "home": "Wales U19",
@@ -88814,7 +88814,7 @@ window.MATCHES = [
       "bttsNo": 1.62
     },
     "h2h": null,
-    "elapsed": 52
+    "elapsed": 57
   },
   {
     "home": "Haukar",
@@ -88986,7 +88986,7 @@ window.MATCHES = [
       "dcx2": 1.67
     },
     "h2h": null,
-    "elapsed": 10
+    "elapsed": 15
   },
   {
     "home": "SF Glens",
@@ -89143,7 +89143,7 @@ window.MATCHES = [
       "dcx2": 1.42
     },
     "h2h": null,
-    "elapsed": 12
+    "elapsed": 17
   },
   {
     "home": "HFX Wanderers FC",
@@ -89153,11 +89153,11 @@ window.MATCHES = [
     "awayLogo": "https://media.api-sports.io/football/teams/10169.png",
     "country": "Canada",
     "flag": "https://media.api-sports.io/flags/ca.svg",
-    "status": "NS",
+    "status": "1H",
     "kickoff": "2026-07-01T20:00:00+00:00",
     "matchDate": "2026-07-01",
-    "homeGoals": null,
-    "awayGoals": null,
+    "homeGoals": 0,
+    "awayGoals": 1,
     "homePos": 4,
     "awayPos": 3,
     "tableSize": 8,
@@ -89230,7 +89230,7 @@ window.MATCHES = [
       "dcx2": 1.48
     },
     "h2h": null,
-    "elapsed": null
+    "elapsed": 5
   },
   {
     "home": "Atlas",
