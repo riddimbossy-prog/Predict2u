@@ -1,5 +1,5 @@
 window.DATA_UPDATED = "2026-06-30T23:11:53.478Z";
-window.SCORES_UPDATED = "2026-07-01T00:00:59.363Z";
+window.SCORES_UPDATED = "2026-07-01T00:05:28.730Z";
 window.MATCHES = [
   {
     "home": "Washington Spirit W",
@@ -74057,7 +74057,7 @@ window.MATCHES = [
     "round": "Group Stage",
     "odds": null,
     "h2h": null,
-    "elapsed": 58
+    "elapsed": 63
   },
   {
     "home": "A. Italiano",
@@ -74219,7 +74219,7 @@ window.MATCHES = [
       "dcx2": 2.1
     },
     "h2h": null,
-    "elapsed": 70
+    "elapsed": 75
   },
   {
     "home": "Treze U20",
@@ -74298,7 +74298,7 @@ window.MATCHES = [
     "awayLogo": "https://media.api-sports.io/football/teams/146.png",
     "country": "Brazil",
     "flag": "https://media.api-sports.io/flags/br.svg",
-    "status": "HT",
+    "status": "2H",
     "kickoff": "2026-06-30T23:00:00+00:00",
     "matchDate": "2026-06-30",
     "homeGoals": 0,
@@ -74372,7 +74372,7 @@ window.MATCHES = [
       "dcx2": 1.62
     },
     "h2h": null,
-    "elapsed": 45
+    "elapsed": 46
   },
   {
     "home": "Boston Bolts",
@@ -74382,7 +74382,7 @@ window.MATCHES = [
     "awayLogo": "https://media.api-sports.io/football/teams/4100.png",
     "country": "USA",
     "flag": "https://media.api-sports.io/flags/us.svg",
-    "status": "HT",
+    "status": "2H",
     "kickoff": "2026-06-30T23:00:00+00:00",
     "matchDate": "2026-06-30",
     "homeGoals": 0,
@@ -74454,7 +74454,7 @@ window.MATCHES = [
       "dcx2": 1.13
     },
     "h2h": null,
-    "elapsed": 45
+    "elapsed": 46
   },
   {
     "home": "Charlotte Eagles",
@@ -74965,7 +74965,7 @@ window.MATCHES = [
       "dcx2": 1.75
     },
     "h2h": null,
-    "elapsed": 29
+    "elapsed": 34
   },
   {
     "home": "Volta Redonda",
@@ -75049,7 +75049,7 @@ window.MATCHES = [
       "dcx2": 1.8
     },
     "h2h": null,
-    "elapsed": 30
+    "elapsed": 35
   },
   {
     "home": "Virginia Marauders",
@@ -75131,7 +75131,7 @@ window.MATCHES = [
       "dcx2": 1.01
     },
     "h2h": null,
-    "elapsed": 28
+    "elapsed": 33
   },
   {
     "home": "Miami AC",
