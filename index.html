@@ -1127,11 +1127,7 @@ function renderRulesProMatches(){
   const dayMatches=dayRows();
   const picks=dayMatches.map(r=>rulesProRecommend(r.match)).filter(r=>r.bet);
   let html='';
-  html += `<div class="panel rounded-xl p-3 mb-3 text-sm" style="border:1px solid rgba(76,175,39,.4);background:rgba(76,175,39,.07)">
-    <strong style="color:var(--brand)"><i class="fa-solid fa-ruler-combined"></i> Elite Bankers — exact-threshold engine.</strong>
-    Every market must clear its FULL set of numeric thresholds (PPG, goals, form, GD, BTTS, etc.) or it's rejected. One match = one strongest market, or No Bet. <strong>Some inputs are estimated</strong> — win rate, clean-sheet %, and failed-to-score % aren't in the data, so they're approximated from PPG/goals and flagged on each pick. Strict by design — expect many No Bets. Unproven — track first. 18+.
-  </div>`;
-  if(!picks.length){
+    if(!picks.length){
     html += `<div class="p-6 text-center" style="color:var(--muted)">No market cleared its full threshold set among today's games (this engine rejects anything that misses a single requirement).</div>`;
     host.innerHTML=html; return;
   }
@@ -1286,11 +1282,8 @@ function renderProMatches(){
   if(typeof proRecommend!=='function'){ host.innerHTML='<div class="p-6 text-center" style="color:var(--muted)">Pro engine unavailable — deploy the latest banker-engine.js.</div>'; return; }
   const dayMatches=dayRows();
   const picks=dayMatches.map(r=>proRecommend(r.match)).filter(r=>r.bet);
-  let html=`<div class="panel rounded-xl p-3 mb-3 text-sm" style="border:1px solid rgba(76,175,39,.4);background:rgba(76,175,39,.07)">
-    <strong style="color:var(--brand)"><i class="fa-solid fa-microchip"></i> Pro Bankers — disciplined, xG-aware.</strong>
-    Every game runs through a Poisson/Dixon-Coles probability model, sharpened with <strong>real expected goals</strong> where available. Bets only where probability clears a real floor; never bankers friendlies or table-less games; needs the backed team to expect 2+ goals for any Win/DNB. Fewer, better-grounded picks. Unproven — track first. 18+.
-  </div>`;
-  if(!picks.length){ html+=`<div class="p-6 text-center" style="color:var(--muted)">No pick cleared the Pro model's confidence floor today — the model sees no safe edge.</div>`; host.innerHTML=html; return; }
+  let html='';
+  if(!picks.length){ html+=`<div class="p-6 text-center" style="color:var(--muted)">No qualifying picks right now.</div>`; host.innerHTML=html; return; }
   picks.sort((a,b)=>(b.usedXg-a.usedXg)||(b.confidence-a.confidence));
   picks.forEach(r=>{
     const tierName=r.confidence>=9?"Pro Banker":r.confidence>=8?"Strong":"Playable";
@@ -1327,11 +1320,8 @@ function renderTrendMatches(){
   if(typeof trendRecommend!=='function'){ host.innerHTML='<div class="p-6 text-center" style="color:var(--muted)">League Trend engine unavailable — deploy the latest banker-engine.js.</div>'; return; }
   const dayMatches=dayRows();
   const picks=dayMatches.map(r=>trendRecommend(r.match)).filter(r=>r.bet);
-  let html=`<div class="panel rounded-xl p-3 mb-3 text-sm" style="border:1px solid rgba(76,175,39,.4);background:rgba(76,175,39,.07)">
-    <strong style="color:var(--brand)"><i class="fa-solid fa-chart-line"></i> League Trend — studies the league first.</strong>
-    Finds the markets a league produces most often (real league-wide hit-rates), keeps only the top-3 trends hitting 70%+, then filters the fixture's teams against that trend. A pick needs the <strong>70-70-70 rule</strong>: league, team, and match must each clear 70%. If the league data is thin (&lt;50 matches) or any layer fails, it returns No Bet. Populates after a full data run. Unproven — track first. 18+.
-  </div>`;
-  if(!picks.length){ html+=`<div class="p-6 text-center" style="color:var(--muted)">No market cleared the 70-70-70 rule today. Either the leagues lack a strong trend, the teams don't fit it, or league history isn't loaded yet (run "Update Predicto data").</div>`; host.innerHTML=html; return; }
+  let html='';
+  if(!picks.length){ html+=`<div class="p-6 text-center" style="color:var(--muted)">No qualifying picks right now.</div>`; host.innerHTML=html; return; }
   picks.sort((a,b)=>(b.confidence-a.confidence));
   picks.forEach(u=>{
     const L=u.layers||{}; const tierName=u.tier||'Value Pick';
@@ -1370,11 +1360,7 @@ function renderValueMatches(){
   const dayMatches=dayRows();
   const picks=dayMatches.map(r=>valueRecommend(r.match)).filter(r=>r.bet);
   let html='';
-  html += `<div class="panel rounded-xl p-3 mb-3 text-sm" style="border:1px solid rgba(76,175,39,.4);background:rgba(76,175,39,.07)">
-    <strong style="color:var(--brand)"><i class="fa-solid fa-square-root-variable"></i> Value Bankers — Dixon-Coles / Poisson model.</strong>
-    Estimates each team's expected goals for the match, builds the full scoreline probability matrix, and picks the highest-probability safe market — or No Bet when nothing clears the confidence floor. Flags <strong style="color:#7ee05a">VALUE</strong> when the model's probability beats the bookmaker's odds. The most mathematically grounded engine. Unproven — track first. 18+.
-  </div>`;
-  if(!picks.length){
+    if(!picks.length){
     html += `<div class="p-6 text-center" style="color:var(--muted)">No market cleared the model's probability floor today — the model sees no safe edge.</div>`;
     host.innerHTML=html; return;
   }
@@ -1415,11 +1401,7 @@ function renderPrimeMatches(){
   const dayMatches=dayRows();
   const picks=dayMatches.map(r=>primeRecommend(r.match)).filter(r=>r.bet);
   let html='';
-  html += `<div class="panel rounded-xl p-3 mb-3 text-sm" style="border:1px solid rgba(76,175,39,.4);background:rgba(76,175,39,.07)">
-    <strong style="color:var(--brand)"><i class="fa-solid fa-gem"></i> Prime Bankers — true-team ratio filter.</strong>
-    Classifies each league by its goal environment, then demands attack/defence ratios CONFIRMED by raw numbers (no ratio-only upgrades), respects table compression, and tiers every pick by risk points. One market or No Bet. Market checks use odds where present, otherwise derived from win-rate (flagged). Unproven — track first. 18+.
-  </div>`;
-  if(!picks.length){
+    if(!picks.length){
     html += `<div class="p-6 text-center" style="color:var(--muted)">No match cleared the Prime true-team filters today. "Only true teams qualify."</div>`;
     host.innerHTML=html; return;
   }
@@ -1458,11 +1440,7 @@ function renderApexMatches(){
   const dayMatches=dayRows();
   const picks=dayMatches.map(r=>apexRecommend(r.match)).filter(r=>r.bet);
   let html='';
-  html += `<div class="panel rounded-xl p-3 mb-3 text-sm" style="border:1px solid rgba(76,175,39,.4);background:rgba(76,175,39,.07)">
-    <strong style="color:var(--brand)"><i class="fa-solid fa-mountain"></i> Apex Bankers — Elite + Home Advantage protection.</strong>
-    Runs the Elite exact-threshold engine, then applies a Home Advantage layer: away markets must prove MORE, and a resistant home side blocks or penalises away picks. The most conservative engine. Some % inputs estimated. Unproven — track first. 18+.
-  </div>`;
-  if(!picks.length){
+    if(!picks.length){
     html += `<div class="p-6 text-center" style="color:var(--muted)">No pick survived the Elite thresholds AND the home-advantage protection today.</div>`;
     host.innerHTML=html; return;
   }
@@ -1517,11 +1495,7 @@ function renderUltraMatches(){
   const dayMatches=dayRows();
   const picks=dayMatches.map(r=>ultraRecommend(r.match)).filter(r=>r.bet);
   let html='';
-  html += `<div class="panel rounded-xl p-3 mb-3 text-sm" style="border:1px solid rgba(76,175,39,.4);background:rgba(76,175,39,.07)">
-    <strong style="color:var(--brand)"><i class="fa-solid fa-shield-halved"></i> Ultra Bankers — Universal Market Engine.</strong>
-    Evaluates every market with data, picks the SINGLE strongest edge, or No Bet. One match = one market. Same-tier, cup ties, conflicts, and confidence under 7 are all rejected. First-half, corners, and cards are blocked (no data). Unproven — track before trusting. 18+.
-  </div>`;
-  if(!picks.length){
+    if(!picks.length){
     html += `<div class="p-6 text-center" style="color:var(--muted)">No qualifying single-market edges among today's games (the engine rejects uncertainty by design).</div>`;
     host.innerHTML=html; return;
   }
@@ -1669,24 +1643,8 @@ function renderStrictMatches(){
     setTab(bv, mode==='value');
     setTab(bpro, mode==='pro');
     setTab(bac, mode==='acca');
-    note.textContent = mode==='strict'
-      ? 'Conservative: rejects most games, one clean market or No Bet. Auto-tiered from the table — confirm red flags yourself.'
-      : mode==='ultra'
-      ? 'Universal Market Engine: evaluates every market with data, outputs the single strongest edge or No Bet. Rejects same-tier, cup ties, conflicts, and confidence under 7. Unproven — track before trusting.'
-      : mode==='rulespro'
-      ? 'Elite Bankers: exact-threshold engine (full spec gates per market). Some % inputs (win rate, clean sheet, FTS) are ESTIMATED from PPG/goals — flagged on each pick. Strict by design; expect many No Bets. Unproven — track first.'
-      : mode==='apex'
-      ? 'Apex Bankers: Elite thresholds PLUS a Home Advantage layer — away markets must prove more; resistant home sides block or penalise away picks. Some % inputs estimated. The most conservative engine. Unproven — track first.'
-      : mode==='prime'
-      ? 'Prime Bankers: ratio-based true-team filter. Classifies the league by goal environment, then demands attack/defence ratios confirmed by RAW numbers (no ratio-only upgrades), respects table compression, and tiers by risk points. One market or No Bet. Market checks use odds where present, else derived. Unproven — track first.'
-      : mode==='value'
-      ? 'Value Bankers: Dixon-Coles/Poisson goal model. Estimates each team\'s expected goals for the match, builds the full scoreline probability matrix, and picks the highest-probability safe market — or No Bet when nothing clears the floor. Flags VALUE when the model beats the bookmaker odds. The most mathematically grounded engine. Unproven — track first.'
-      : mode==='acca'
-      ? 'All Bankers Slip: combines the strongest banker per match across all engines, rated by engine agreement + average confidence. Same-match markets collapse to that match\'s single strongest pick. An accumulator needs EVERY leg to win — more legs = far lower chance. The shown combined probability is the honest odds of all legs landing. High risk. 18+.'
-      : mode==='pro'
-      ? 'Pro Bankers: the disciplined, xG-aware engine. Runs every game through a Poisson/Dixon-Coles probability model — sharpened with REAL expected goals where available (most leagues fall back to the estimate). Bets only where probability clears a real floor, widens caution on thin data, never bankers friendlies/table-less games, and needs the backed team to expect 2+ goals for any Win/DNB. Fewer, better-grounded picks. Unproven — track first.'
-      : mode==='trend'
-      ? 'League Trend: studies the league FIRST. Computes real league-wide market hit-rates from the full season, keeps only the top-3 trends hitting 70%+, then filters the fixture\'s teams against that trend. A pick needs the 70-70-70 rule — league, team, and match must each clear 70% — or it returns No Bet. Needs the full data run to load league history. Unproven — track first.'
+    note.textContent = mode==='acca'
+      ? 'An accumulator needs EVERY leg to win — more legs = far lower chance. The combined figure is the honest odds of all legs landing. High risk. 18+.'
       : '';
     const noteM=document.getElementById('eng-note-mobile'); if(noteM) noteM.textContent = note.textContent;
 
