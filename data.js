@@ -1,5 +1,5 @@
 window.DATA_UPDATED = "2026-06-30T23:11:53.478Z";
-window.SCORES_UPDATED = "2026-07-01T00:05:28.730Z";
+window.SCORES_UPDATED = "2026-07-01T00:10:40.122Z";
 window.MATCHES = [
   {
     "home": "Washington Spirit W",
@@ -56299,11 +56299,11 @@ window.MATCHES = [
     "awayLogo": "https://media.api-sports.io/football/teams/4047.png",
     "country": "USA",
     "flag": "https://media.api-sports.io/flags/us.svg",
-    "status": "NS",
+    "status": "1H",
     "kickoff": "2026-07-01T00:00:00+00:00",
     "matchDate": "2026-07-01",
-    "homeGoals": null,
-    "awayGoals": null,
+    "homeGoals": 0,
+    "awayGoals": 0,
     "homePos": 3,
     "awayPos": 1,
     "tableSize": 144,
@@ -56358,7 +56358,7 @@ window.MATCHES = [
     "round": "Group Stage",
     "odds": null,
     "h2h": null,
-    "elapsed": null
+    "elapsed": 5
   },
   {
     "home": "Fort Worth Vaqueros",
@@ -74057,7 +74057,7 @@ window.MATCHES = [
     "round": "Group Stage",
     "odds": null,
     "h2h": null,
-    "elapsed": 63
+    "elapsed": 68
   },
   {
     "home": "A. Italiano",
@@ -74148,7 +74148,7 @@ window.MATCHES = [
     "status": "2H",
     "kickoff": "2026-06-30T22:30:00+00:00",
     "matchDate": "2026-06-30",
-    "homeGoals": 0,
+    "homeGoals": 1,
     "awayGoals": 0,
     "homePos": 10,
     "awayPos": 20,
@@ -74219,7 +74219,7 @@ window.MATCHES = [
       "dcx2": 2.1
     },
     "h2h": null,
-    "elapsed": 75
+    "elapsed": 80
   },
   {
     "home": "Treze U20",
@@ -74372,7 +74372,7 @@ window.MATCHES = [
       "dcx2": 1.62
     },
     "h2h": null,
-    "elapsed": 46
+    "elapsed": 51
   },
   {
     "home": "Boston Bolts",
@@ -74454,7 +74454,7 @@ window.MATCHES = [
       "dcx2": 1.13
     },
     "h2h": null,
-    "elapsed": 46
+    "elapsed": 51
   },
   {
     "home": "Charlotte Eagles",
@@ -74684,7 +74684,7 @@ window.MATCHES = [
     "awayLogo": "https://media.api-sports.io/football/teams/4052.png",
     "country": "USA",
     "flag": "https://media.api-sports.io/flags/us.svg",
-    "status": "HT",
+    "status": "2H",
     "kickoff": "2026-06-30T23:00:00+00:00",
     "matchDate": "2026-06-30",
     "homeGoals": 1,
@@ -74743,7 +74743,7 @@ window.MATCHES = [
     "round": "Group Stage",
     "odds": null,
     "h2h": null,
-    "elapsed": 45
+    "elapsed": 47
   },
   {
     "home": "Patuxent",
@@ -74965,7 +74965,7 @@ window.MATCHES = [
       "dcx2": 1.75
     },
     "h2h": null,
-    "elapsed": 34
+    "elapsed": 39
   },
   {
     "home": "Volta Redonda",
@@ -75049,7 +75049,7 @@ window.MATCHES = [
       "dcx2": 1.8
     },
     "h2h": null,
-    "elapsed": 35
+    "elapsed": 40
   },
   {
     "home": "Virginia Marauders",
@@ -75131,7 +75131,7 @@ window.MATCHES = [
       "dcx2": 1.01
     },
     "h2h": null,
-    "elapsed": 33
+    "elapsed": 38
   },
   {
     "home": "Miami AC",
