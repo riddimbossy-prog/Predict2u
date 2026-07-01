@@ -1,5 +1,5 @@
 window.DATA_UPDATED = "2026-07-01T19:51:47.056Z";
-window.SCORES_UPDATED = "2026-07-01T21:15:33.468Z";
+window.SCORES_UPDATED = "2026-07-01T21:20:37.222Z";
 window.MATCHES = [
   {
     "home": "Santa Cruz",
@@ -88986,7 +88986,7 @@ window.MATCHES = [
       "dcx2": 1.67
     },
     "h2h": null,
-    "elapsed": 53
+    "elapsed": 58
   },
   {
     "home": "SF Glens",
@@ -89143,7 +89143,7 @@ window.MATCHES = [
       "dcx2": 1.42
     },
     "h2h": null,
-    "elapsed": 55
+    "elapsed": 60
   },
   {
     "home": "HFX Wanderers FC",
@@ -89153,7 +89153,7 @@ window.MATCHES = [
     "awayLogo": "https://media.api-sports.io/football/teams/10169.png",
     "country": "Canada",
     "flag": "https://media.api-sports.io/flags/ca.svg",
-    "status": "HT",
+    "status": "2H",
     "kickoff": "2026-07-01T20:00:00+00:00",
     "matchDate": "2026-07-01",
     "homeGoals": 0,
@@ -89230,7 +89230,7 @@ window.MATCHES = [
       "dcx2": 1.48
     },
     "h2h": null,
-    "elapsed": 45
+    "elapsed": 47
   },
   {
     "home": "Atlas",
@@ -90096,7 +90096,7 @@ window.MATCHES = [
     "kickoff": "2026-07-01T21:00:00+00:00",
     "matchDate": "2026-07-01",
     "homeGoals": 0,
-    "awayGoals": 0,
+    "awayGoals": 1,
     "homePos": 5,
     "awayPos": 1,
     "tableSize": 144,
@@ -90154,7 +90154,7 @@ window.MATCHES = [
     "round": "Group Stage",
     "odds": null,
     "h2h": null,
-    "elapsed": 15
+    "elapsed": 20
   },
   {
     "home": "Asheville City",
