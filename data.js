@@ -1,5 +1,5 @@
 window.DATA_UPDATED = "2026-07-01T19:51:47.056Z";
-window.SCORES_UPDATED = "2026-07-01T23:20:38.560Z";
+window.SCORES_UPDATED = "2026-07-01T23:25:26.406Z";
 window.MATCHES = [
   {
     "home": "Santa Cruz",
@@ -90313,7 +90313,7 @@ window.MATCHES = [
       "dcx2": 2.45
     },
     "h2h": null,
-    "elapsed": 78
+    "elapsed": 83
   },
   {
     "home": "LDU de Quito",
@@ -90400,7 +90400,7 @@ window.MATCHES = [
       "dcx2": 2.55
     },
     "h2h": null,
-    "elapsed": 56
+    "elapsed": 62
   },
   {
     "home": "North Carolina II",
@@ -90714,7 +90714,7 @@ window.MATCHES = [
     "status": "2H",
     "kickoff": "2026-07-01T22:00:00+00:00",
     "matchDate": "2026-07-01",
-    "homeGoals": 2,
+    "homeGoals": 3,
     "awayGoals": 1,
     "homePos": 8,
     "awayPos": 7,
@@ -90786,7 +90786,7 @@ window.MATCHES = [
       "dcx2": 1.67
     },
     "h2h": null,
-    "elapsed": 54
+    "elapsed": 59
   },
   {
     "home": "Steel City",
@@ -91015,7 +91015,7 @@ window.MATCHES = [
       "dcx2": 2.3
     },
     "h2h": null,
-    "elapsed": 52
+    "elapsed": 57
   },
   {
     "home": "Cobresal",
@@ -91096,7 +91096,7 @@ window.MATCHES = [
       "dcx2": 1.77
     },
     "h2h": null,
-    "elapsed": 62
+    "elapsed": 67
   },
   {
     "home": "Deportes Limache",
@@ -91177,7 +91177,7 @@ window.MATCHES = [
       "dcx2": 1.36
     },
     "h2h": null,
-    "elapsed": 59
+    "elapsed": 64
   },
   {
     "home": "Caldense",
@@ -91264,7 +91264,7 @@ window.MATCHES = [
       "dcx2": 1.6
     },
     "h2h": null,
-    "elapsed": 57
+    "elapsed": 62
   },
   {
     "home": "Mamoré",
@@ -91351,7 +91351,7 @@ window.MATCHES = [
       "dcx2": 1.53
     },
     "h2h": null,
-    "elapsed": 57
+    "elapsed": 62
   },
   {
     "home": "Minneapolis City",
@@ -91364,7 +91364,7 @@ window.MATCHES = [
     "status": "1H",
     "kickoff": "2026-07-01T22:30:00+00:00",
     "matchDate": "2026-07-01",
-    "homeGoals": 1,
+    "homeGoals": 2,
     "awayGoals": 0,
     "homePos": 1,
     "awayPos": 6,
@@ -91423,7 +91423,7 @@ window.MATCHES = [
     "round": "Group Stage",
     "odds": null,
     "h2h": null,
-    "elapsed": 43
+    "elapsed": 45
   },
   {
     "home": "Port City",
@@ -91505,7 +91505,7 @@ window.MATCHES = [
     "awayLogo": "https://media.api-sports.io/football/teams/153.png",
     "country": "Brazil",
     "flag": "https://media.api-sports.io/flags/br.svg",
-    "status": "1H",
+    "status": "HT",
     "kickoff": "2026-07-01T22:30:00+00:00",
     "matchDate": "2026-07-01",
     "homeGoals": 2,
@@ -91711,7 +91711,7 @@ window.MATCHES = [
     "round": "Group Stage",
     "odds": null,
     "h2h": null,
-    "elapsed": 14
+    "elapsed": 19
   },
   {
     "home": "Hudson Valley Hammers",
@@ -91870,7 +91870,7 @@ window.MATCHES = [
       "dcx2": 2.4
     },
     "h2h": null,
-    "elapsed": 13
+    "elapsed": 18
   },
   {
     "home": "Valeriodoce",
@@ -91942,7 +91942,7 @@ window.MATCHES = [
     "round": "Regular Season - 8",
     "odds": null,
     "h2h": null,
-    "elapsed": 20
+    "elapsed": 25
   },
   {
     "home": "Nação",
@@ -92014,7 +92014,7 @@ window.MATCHES = [
     "round": "Regular Season - 12",
     "odds": null,
     "h2h": null,
-    "elapsed": 20
+    "elapsed": 26
   },
   {
     "home": "Vitória ES",
@@ -92101,7 +92101,7 @@ window.MATCHES = [
       "dcx2": 2.45
     },
     "h2h": null,
-    "elapsed": 17
+    "elapsed": 22
   },
   {
     "home": "Ceará U20",
@@ -92173,7 +92173,7 @@ window.MATCHES = [
     "round": "Semi-finals",
     "odds": null,
     "h2h": null,
-    "elapsed": 19
+    "elapsed": 25
   },
   {
     "home": "Goiás U20",
@@ -92245,7 +92245,7 @@ window.MATCHES = [
     "round": "Semi-finals",
     "odds": null,
     "h2h": null,
-    "elapsed": 21
+    "elapsed": 26
   },
   {
     "home": "Boston City",
