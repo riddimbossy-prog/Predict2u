@@ -1,5 +1,5 @@
 window.DATA_UPDATED = "2026-07-01T19:51:47.056Z";
-window.SCORES_UPDATED = "2026-07-01T20:20:39.252Z";
+window.SCORES_UPDATED = "2026-07-01T20:25:29.557Z";
 window.MATCHES = [
   {
     "home": "Santa Cruz",
@@ -88524,7 +88524,7 @@ window.MATCHES = [
     "status": "2H",
     "kickoff": "2026-07-01T18:30:00+00:00",
     "matchDate": "2026-07-01",
-    "homeGoals": 2,
+    "homeGoals": 3,
     "awayGoals": 1,
     "homePos": 3,
     "awayPos": 4,
@@ -88583,7 +88583,7 @@ window.MATCHES = [
     "round": "Regular Season - 5",
     "odds": null,
     "h2h": null,
-    "elapsed": 88
+    "elapsed": 90
   },
   {
     "home": "Tupan",
@@ -88736,7 +88736,7 @@ window.MATCHES = [
       "dcx2": 1.36
     },
     "h2h": null,
-    "elapsed": 60
+    "elapsed": 65
   },
   {
     "home": "Wales U19",
@@ -88814,7 +88814,7 @@ window.MATCHES = [
       "bttsNo": 1.62
     },
     "h2h": null,
-    "elapsed": 62
+    "elapsed": 67
   },
   {
     "home": "Haukar",
@@ -88899,7 +88899,7 @@ window.MATCHES = [
       "dcx2": 2.3
     },
     "h2h": null,
-    "elapsed": 48
+    "elapsed": 53
   },
   {
     "home": "Belgium",
@@ -88913,7 +88913,7 @@ window.MATCHES = [
     "kickoff": "2026-07-01T20:00:00+00:00",
     "matchDate": "2026-07-01",
     "homeGoals": 0,
-    "awayGoals": 0,
+    "awayGoals": 1,
     "homePos": 1,
     "awayPos": 8,
     "tableSize": 60,
@@ -88986,7 +88986,7 @@ window.MATCHES = [
       "dcx2": 1.67
     },
     "h2h": null,
-    "elapsed": 20
+    "elapsed": 25
   },
   {
     "home": "SF Glens",
@@ -89071,7 +89071,7 @@ window.MATCHES = [
     "status": "1H",
     "kickoff": "2026-07-01T20:00:00+00:00",
     "matchDate": "2026-07-01",
-    "homeGoals": 1,
+    "homeGoals": 2,
     "awayGoals": 0,
     "homePos": 5,
     "awayPos": 4,
@@ -89143,7 +89143,7 @@ window.MATCHES = [
       "dcx2": 1.42
     },
     "h2h": null,
-    "elapsed": 21
+    "elapsed": 26
   },
   {
     "home": "HFX Wanderers FC",
@@ -89230,7 +89230,7 @@ window.MATCHES = [
       "dcx2": 1.48
     },
     "h2h": null,
-    "elapsed": 9
+    "elapsed": 14
   },
   {
     "home": "Atlas",
