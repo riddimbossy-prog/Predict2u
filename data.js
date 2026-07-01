@@ -1,5 +1,5 @@
 window.DATA_UPDATED = "2026-07-01T11:11:45.806Z";
-window.SCORES_UPDATED = "2026-07-01T11:40:38.823Z";
+window.SCORES_UPDATED = "2026-07-01T11:45:45.221Z";
 window.MATCHES = [
   {
     "home": "Santa Cruz",
@@ -78040,7 +78040,7 @@ window.MATCHES = [
     "round": "Regular Season - 9",
     "odds": null,
     "h2h": null,
-    "elapsed": 85
+    "elapsed": 90
   },
   {
     "home": "Seoul W",
@@ -78123,7 +78123,7 @@ window.MATCHES = [
       "dcx2": 1.1
     },
     "h2h": null,
-    "elapsed": 85
+    "elapsed": 90
   },
   {
     "home": "Stal Mielec",
@@ -78133,7 +78133,7 @@ window.MATCHES = [
     "awayLogo": "https://media.api-sports.io/football/teams/12834.png",
     "country": "World",
     "flag": null,
-    "status": "2H",
+    "status": "FT",
     "kickoff": "2026-07-01T10:00:00+00:00",
     "matchDate": "2026-07-01",
     "homeGoals": 1,
@@ -78187,7 +78187,7 @@ window.MATCHES = [
     "round": "Club Friendlies",
     "odds": null,
     "h2h": null,
-    "elapsed": 89
+    "elapsed": null
   },
   {
     "home": "Chornomorets",
@@ -78251,7 +78251,7 @@ window.MATCHES = [
     "round": "Club Friendlies",
     "odds": null,
     "h2h": null,
-    "elapsed": 78
+    "elapsed": 83
   },
   {
     "home": "Radomiak Radom",
@@ -78315,7 +78315,7 @@ window.MATCHES = [
     "round": "Club Friendlies",
     "odds": null,
     "h2h": null,
-    "elapsed": 54
+    "elapsed": 59
   },
   {
     "home": "Qarabag",
@@ -78392,7 +78392,7 @@ window.MATCHES = [
     "status": "1H",
     "kickoff": "2026-07-01T11:00:00+00:00",
     "matchDate": "2026-07-01",
-    "homeGoals": 0,
+    "homeGoals": 1,
     "awayGoals": 0,
     "homePos": 7,
     "awayPos": 9,
@@ -78462,7 +78462,7 @@ window.MATCHES = [
       "dcx2": 1.25
     },
     "h2h": null,
-    "elapsed": 41
+    "elapsed": 45
   },
   {
     "home": "Dinamo Barnaul",
@@ -78475,7 +78475,7 @@ window.MATCHES = [
     "status": "1H",
     "kickoff": "2026-07-01T11:30:00+00:00",
     "matchDate": "2026-07-01",
-    "homeGoals": 0,
+    "homeGoals": 1,
     "awayGoals": 0,
     "homePos": 11,
     "awayPos": 5,
@@ -78547,7 +78547,7 @@ window.MATCHES = [
       "dcx2": 1.44
     },
     "h2h": null,
-    "elapsed": 11
+    "elapsed": 16
   },
   {
     "home": "KDV",
