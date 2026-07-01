@@ -1,5 +1,5 @@
 window.DATA_UPDATED = "2026-07-01T14:22:56.907Z";
-window.SCORES_UPDATED = "2026-07-01T15:27:21.781Z";
+window.SCORES_UPDATED = "2026-07-01T15:30:52.051Z";
 window.MATCHES = [
   {
     "home": "Santa Cruz",
@@ -79863,7 +79863,7 @@ window.MATCHES = [
     "round": "Division B - Group 4 - 15",
     "odds": null,
     "h2h": null,
-    "elapsed": 72
+    "elapsed": 75
   },
   {
     "home": "Izhevsk",
@@ -79933,7 +79933,7 @@ window.MATCHES = [
     "round": "Division B - Group 4 - 15",
     "odds": null,
     "h2h": null,
-    "elapsed": 71
+    "elapsed": 74
   },
   {
     "home": "Erzgebirge Aue",
@@ -79997,7 +79997,7 @@ window.MATCHES = [
     "round": "Club Friendlies",
     "odds": null,
     "h2h": null,
-    "elapsed": 70
+    "elapsed": 74
   },
   {
     "home": "Zenit",
@@ -80061,7 +80061,7 @@ window.MATCHES = [
     "round": "Club Friendlies",
     "odds": null,
     "h2h": null,
-    "elapsed": 69
+    "elapsed": 73
   },
   {
     "home": "Oleksandria",
@@ -80189,7 +80189,7 @@ window.MATCHES = [
     "round": "Club Friendlies",
     "odds": null,
     "h2h": null,
-    "elapsed": 71
+    "elapsed": 74
   },
   {
     "home": "Humenné",
@@ -80253,7 +80253,7 @@ window.MATCHES = [
     "round": "Club Friendlies",
     "odds": null,
     "h2h": null,
-    "elapsed": 75
+    "elapsed": 78
   },
   {
     "home": "OshMU Aldier",
@@ -80387,7 +80387,7 @@ window.MATCHES = [
     "round": "Club Friendlies",
     "odds": null,
     "h2h": null,
-    "elapsed": 46
+    "elapsed": 49
   },
   {
     "home": "GKS Katowice",
@@ -80397,7 +80397,7 @@ window.MATCHES = [
     "awayLogo": "https://media.api-sports.io/football/teams/335.png",
     "country": "World",
     "flag": null,
-    "status": "HT",
+    "status": "2H",
     "kickoff": "2026-07-01T14:30:00+00:00",
     "matchDate": "2026-07-01",
     "homeGoals": 2,
@@ -80451,7 +80451,7 @@ window.MATCHES = [
     "round": "Club Friendlies",
     "odds": null,
     "h2h": null,
-    "elapsed": 45
+    "elapsed": 46
   },
   {
     "home": "Houston FC",
@@ -80465,7 +80465,7 @@ window.MATCHES = [
     "kickoff": "2026-07-01T15:00:00+00:00",
     "matchDate": "2026-07-01",
     "homeGoals": 0,
-    "awayGoals": 1,
+    "awayGoals": 0,
     "homePos": 4,
     "awayPos": 6,
     "tableSize": 144,
@@ -80536,7 +80536,7 @@ window.MATCHES = [
       "dcx2": 1.75
     },
     "h2h": null,
-    "elapsed": 20
+    "elapsed": 24
   },
   {
     "home": "FA Šiauliai II",
@@ -80619,7 +80619,7 @@ window.MATCHES = [
       "dcx2": 1.04
     },
     "h2h": null,
-    "elapsed": 27
+    "elapsed": 31
   },
   {
     "home": "Tukums",
@@ -80704,7 +80704,7 @@ window.MATCHES = [
       "dcx2": 1.65
     },
     "h2h": null,
-    "elapsed": 26
+    "elapsed": 30
   },
   {
     "home": "Khimik Dzerzhinsk",
@@ -80717,7 +80717,7 @@ window.MATCHES = [
     "status": "1H",
     "kickoff": "2026-07-01T15:00:00+00:00",
     "matchDate": "2026-07-01",
-    "homeGoals": 1,
+    "homeGoals": 2,
     "awayGoals": 0,
     "homePos": 1,
     "awayPos": 7,
@@ -80789,7 +80789,7 @@ window.MATCHES = [
       "dcx2": 2.74
     },
     "h2h": null,
-    "elapsed": 26
+    "elapsed": 29
   },
   {
     "home": "Zaglebie Lubin",
@@ -80917,7 +80917,7 @@ window.MATCHES = [
     "round": "Club Friendlies",
     "odds": null,
     "h2h": null,
-    "elapsed": 29
+    "elapsed": 33
   },
   {
     "home": "Slavia Praha",
@@ -80981,7 +80981,7 @@ window.MATCHES = [
     "round": "Club Friendlies",
     "odds": null,
     "h2h": null,
-    "elapsed": 27
+    "elapsed": 30
   },
   {
     "home": "Plzen",
@@ -81058,7 +81058,7 @@ window.MATCHES = [
       "dcx2": 3
     },
     "h2h": null,
-    "elapsed": 26
+    "elapsed": 29
   },
   {
     "home": "PAOK",
@@ -81122,7 +81122,7 @@ window.MATCHES = [
     "round": "Club Friendlies",
     "odds": null,
     "h2h": null,
-    "elapsed": 26
+    "elapsed": 30
   },
   {
     "home": "Cherno More Varna",
@@ -81186,7 +81186,7 @@ window.MATCHES = [
     "round": "Club Friendlies",
     "odds": null,
     "h2h": null,
-    "elapsed": 21
+    "elapsed": 24
   },
   {
     "home": "Sigma Olomouc",
@@ -81250,7 +81250,7 @@ window.MATCHES = [
     "round": "Club Friendlies",
     "odds": null,
     "h2h": null,
-    "elapsed": 28
+    "elapsed": 31
   },
   {
     "home": "Correcaminos Uat",
@@ -81378,7 +81378,7 @@ window.MATCHES = [
     "round": "Club Friendlies",
     "odds": null,
     "h2h": null,
-    "elapsed": 27
+    "elapsed": 31
   },
   {
     "home": "Pardubice",
@@ -81506,7 +81506,7 @@ window.MATCHES = [
     "round": "Club Friendlies",
     "odds": null,
     "h2h": null,
-    "elapsed": 26
+    "elapsed": 29
   },
   {
     "home": "Rilski Sportist",
@@ -81583,7 +81583,7 @@ window.MATCHES = [
     "status": "1H",
     "kickoff": "2026-07-01T15:00:00+00:00",
     "matchDate": "2026-07-01",
-    "homeGoals": 2,
+    "homeGoals": 3,
     "awayGoals": 0,
     "homePos": null,
     "awayPos": null,
@@ -81634,7 +81634,7 @@ window.MATCHES = [
     "round": "Group Stage",
     "odds": null,
     "h2h": null,
-    "elapsed": 27
+    "elapsed": 31
   },
   {
     "home": "Botev Plovdiv",
