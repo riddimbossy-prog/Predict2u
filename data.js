@@ -1,5 +1,5 @@
 window.DATA_UPDATED = "2026-07-01T11:11:45.806Z";
-window.SCORES_UPDATED = "2026-07-01T12:45:39.047Z";
+window.SCORES_UPDATED = "2026-07-01T12:50:40.969Z";
 window.MATCHES = [
   {
     "home": "Santa Cruz",
@@ -78389,7 +78389,7 @@ window.MATCHES = [
     "awayLogo": "https://media.api-sports.io/football/teams/17273.png",
     "country": "Mongolia",
     "flag": "https://media.api-sports.io/flags/mn.svg",
-    "status": "2H",
+    "status": "FT",
     "kickoff": "2026-07-01T11:00:00+00:00",
     "matchDate": "2026-07-01",
     "homeGoals": 7,
@@ -78462,7 +78462,7 @@ window.MATCHES = [
       "dcx2": 1.25
     },
     "h2h": null,
-    "elapsed": 87
+    "elapsed": null
   },
   {
     "home": "Dinamo Barnaul",
@@ -78476,7 +78476,7 @@ window.MATCHES = [
     "kickoff": "2026-07-01T11:30:00+00:00",
     "matchDate": "2026-07-01",
     "homeGoals": 3,
-    "awayGoals": 1,
+    "awayGoals": 2,
     "homePos": 11,
     "awayPos": 5,
     "tableSize": 12,
@@ -78547,7 +78547,7 @@ window.MATCHES = [
       "dcx2": 1.44
     },
     "h2h": null,
-    "elapsed": 54
+    "elapsed": 59
   },
   {
     "home": "KDV",
@@ -78557,7 +78557,7 @@ window.MATCHES = [
     "awayLogo": "https://media.api-sports.io/football/teams/21535.png",
     "country": "Russia",
     "flag": "https://media.api-sports.io/flags/ru.svg",
-    "status": "1H",
+    "status": "HT",
     "kickoff": "2026-07-01T12:00:00+00:00",
     "matchDate": "2026-07-01",
     "homeGoals": 1,
@@ -78819,7 +78819,7 @@ window.MATCHES = [
     "awayLogo": "https://media.api-sports.io/football/teams/565.png",
     "country": "World",
     "flag": null,
-    "status": "1H",
+    "status": "HT",
     "kickoff": "2026-07-01T12:00:00+00:00",
     "matchDate": "2026-07-01",
     "homeGoals": 0,
@@ -78888,7 +78888,7 @@ window.MATCHES = [
       "dcx2": 1.2
     },
     "h2h": null,
-    "elapsed": 44
+    "elapsed": 45
   },
   {
     "home": "Lokomotiv Sofia",
@@ -79154,7 +79154,7 @@ window.MATCHES = [
     "awayLogo": "https://media.api-sports.io/football/teams/250.png",
     "country": "World",
     "flag": null,
-    "status": "1H",
+    "status": "HT",
     "kickoff": "2026-07-01T12:00:00+00:00",
     "matchDate": "2026-07-01",
     "homeGoals": 0,
@@ -79474,7 +79474,7 @@ window.MATCHES = [
     "awayLogo": "https://media.api-sports.io/football/teams/19005.png",
     "country": "Bhutan",
     "flag": "https://media.api-sports.io/flags/bt.svg",
-    "status": "1H",
+    "status": "HT",
     "kickoff": "2026-07-01T12:00:00+00:00",
     "matchDate": "2026-07-01",
     "homeGoals": 0,
