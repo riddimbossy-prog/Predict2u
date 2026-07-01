@@ -1,5 +1,5 @@
 window.DATA_UPDATED = "2026-06-30T23:11:53.478Z";
-window.SCORES_UPDATED = "2026-07-01T01:31:48.287Z";
+window.SCORES_UPDATED = "2026-07-01T01:35:27.487Z";
 window.MATCHES = [
   {
     "home": "Washington Spirit W",
@@ -56358,7 +56358,7 @@ window.MATCHES = [
     "round": "Group Stage",
     "odds": null,
     "h2h": null,
-    "elapsed": 65
+    "elapsed": 68
   },
   {
     "home": "Fort Worth Vaqueros",
@@ -56671,7 +56671,7 @@ window.MATCHES = [
       "dcx2": 4.33
     },
     "h2h": null,
-    "elapsed": 26
+    "elapsed": 30
   },
   {
     "home": "Colorado Storm",
@@ -69266,11 +69266,11 @@ window.MATCHES = [
     "awayLogo": "https://media.api-sports.io/football/teams/13200.png",
     "country": "USA",
     "flag": "https://media.api-sports.io/flags/us.svg",
-    "status": "NS",
+    "status": "FT",
     "kickoff": "2026-06-30T01:00:00+00:00",
     "matchDate": "2026-06-30",
-    "homeGoals": null,
-    "awayGoals": null,
+    "homeGoals": 2,
+    "awayGoals": 2,
     "homePos": null,
     "awayPos": null,
     "tableSize": 144,
@@ -69420,8 +69420,8 @@ window.MATCHES = [
     "status": "FT",
     "kickoff": "2026-06-30T08:00:00+00:00",
     "matchDate": "2026-06-30",
-    "homeGoals": 4,
-    "awayGoals": 3,
+    "homeGoals": 0,
+    "awayGoals": 1,
     "homePos": 7,
     "awayPos": 5,
     "tableSize": 16,
@@ -74533,11 +74533,11 @@ window.MATCHES = [
     "awayLogo": "https://media.api-sports.io/football/teams/27756.png",
     "country": "USA",
     "flag": "https://media.api-sports.io/flags/us.svg",
-    "status": "NS",
+    "status": "FT",
     "kickoff": "2026-06-30T23:00:00+00:00",
     "matchDate": "2026-06-30",
-    "homeGoals": null,
-    "awayGoals": null,
+    "homeGoals": 1,
+    "awayGoals": 1,
     "homePos": 3,
     "awayPos": null,
     "tableSize": 144,
@@ -74822,11 +74822,11 @@ window.MATCHES = [
     "awayLogo": "https://media.api-sports.io/football/teams/23970.png",
     "country": "USA",
     "flag": "https://media.api-sports.io/flags/us.svg",
-    "status": "NS",
+    "status": "FT",
     "kickoff": "2026-06-30T23:00:00+00:00",
     "matchDate": "2026-06-30",
-    "homeGoals": null,
-    "awayGoals": null,
+    "homeGoals": 1,
+    "awayGoals": 6,
     "homePos": 5,
     "awayPos": 3,
     "tableSize": 144,
