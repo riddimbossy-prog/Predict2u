@@ -1,5 +1,5 @@
 window.DATA_UPDATED = "2026-07-01T11:11:45.806Z";
-window.SCORES_UPDATED = "2026-07-01T11:55:29.870Z";
+window.SCORES_UPDATED = "2026-07-01T12:01:01.093Z";
 window.MATCHES = [
   {
     "home": "Santa Cruz",
@@ -78315,7 +78315,7 @@ window.MATCHES = [
     "round": "Club Friendlies",
     "odds": null,
     "h2h": null,
-    "elapsed": 68
+    "elapsed": 73
   },
   {
     "home": "Qarabag",
@@ -78475,7 +78475,7 @@ window.MATCHES = [
     "status": "1H",
     "kickoff": "2026-07-01T11:30:00+00:00",
     "matchDate": "2026-07-01",
-    "homeGoals": 2,
+    "homeGoals": 3,
     "awayGoals": 0,
     "homePos": 11,
     "awayPos": 5,
@@ -78547,7 +78547,7 @@ window.MATCHES = [
       "dcx2": 1.44
     },
     "h2h": null,
-    "elapsed": 26
+    "elapsed": 31
   },
   {
     "home": "KDV",
