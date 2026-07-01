@@ -2410,6 +2410,26 @@ function proOut(m,market,conf,model,reasons,lowSample){
         if (Array.isArray(out.reasons) && lc.type !== "Unknown" && !out.reasons.some(r=>/League context:/.test(r))) {
           out.reasons = out.reasons.concat([`League context: ${lc.type}${lc.volatile ? " (volatile — treat with caution)" : ""}.`]);
         }
+
+        // FINAL VALIDATION — Universal Odds Ladder Gate. Runs LAST, after the
+        // engine and league context have settled on a market. The odds must
+        // confirm the pick; if they contradict it (or are absent), the pick is
+        // blocked → No Bet. This is the mandatory-odds policy: no confirmation,
+        // no bet. Applies to every engine via this shared wrapper. Handles both
+        // out.primary (most engines) and out.market (Strict).
+        const mkField = ("primary" in out) ? "primary" : ("market" in out ? "market" : null);
+        const finalMk = mkField ? out[mkField] : null;
+        if (finalMk && finalMk !== "No Bet" && !/lean/i.test(out.tier||out.tierName||"")) {
+          const g = oddsLadderGate(m, finalMk);
+          if (g.block) {
+            out.banker = false; if ("bet" in out) out.bet = false;
+            out[mkField] = "No Bet";
+            if ("confidence" in out && typeof out.confidence==="number") out.confidence = 0;
+            if (Array.isArray(out.reasons)) out.reasons = out.reasons.concat([`Odds gate: blocked — ${g.reason}${g.suggest?` (odds favour ${g.suggest})`:""}`]);
+          } else if (g.reason && Array.isArray(out.reasons)) {
+            out.reasons = out.reasons.concat([`Odds gate: ${g.reason}`]);
+          }
+        }
       }
     } catch(e){}
     return out;
@@ -2584,8 +2604,108 @@ function trendRecommend(m){
     { league:pct(best.leaguePct), team:pct(best.teamPct), match:pct(best.matchPct), bar:pct(best.bar) }, reasons);
 }
 
+// ============================================================
+// UNIVERSAL ODDS LADDER GATE  (final validation for EVERY engine)
+// ------------------------------------------------------------
+// Every engine's pick runs through this before publishing. It reads the real
+// bookmaker odds and checks the pick sits in the zone the odds justify (spec:
+// Win 1.20–1.59, DNB 1.60–2.10, DC >2.10; Over/Under ladders off U3.5 / O1.5;
+// GG 1.20–1.55). If the odds CONTRADICT the pick, it is blocked (→ No Bet) or
+// downgraded. Per the chosen policy: NO ODDS → NO BET (odds are mandatory).
+//
+// Returns { ok:bool, block:bool, reason:string, suggest:string|null }.
+//   ok=true    → pick is confirmed by the odds
+//   block=true → pick contradicts the odds (or no odds) → caller sets No Bet
+//   suggest    → the market the odds ladder would have chosen (for the reason)
+function oddsLadderGate(m, market){
+  const o = m && m.odds;
+  const mk = String(market||"");
+  if (mk==="No Bet" || mk==="") return { ok:true, block:false, reason:"" };
+
+  // MANDATORY ODDS: no odds block present → No Bet (user policy).
+  if (!o || (o.home==null && o.over15==null && o.under35==null && o.bttsYes==null)) {
+    return { ok:false, block:true, reason:"No bookmaker odds to confirm this pick — odds are required.", suggest:null };
+  }
+
+  const inRange=(v,lo,hi)=> v!=null && v>=lo && v<=hi;
+
+  // ----- WIN / DNB / DOUBLE CHANCE zone (spec §1, §2) -----
+  const isHomeSide = /home|^1x$|1x|home win|home dnb/i.test(mk) && !/away/i.test(mk);
+  const isAwaySide = /away|x2|away win|away dnb/i.test(mk);
+  if (/win|dnb|double chance|1x|x2|dc/i.test(mk)) {
+    const teamOdd = isAwaySide ? o.away : o.home;
+    const oppOdd  = isAwaySide ? o.home : o.away;
+    const drawOdd = o.draw;
+    if (teamOdd==null) return { ok:false, block:true, reason:"No win-market odds to confirm this pick.", suggest:null };
+
+    // which zone do the odds put this team in?
+    let zone;
+    if (inRange(teamOdd,1.20,1.59)) zone="win";
+    else if (inRange(teamOdd,1.60,2.10)) zone="dnb";
+    else if (teamOdd>2.10) zone="dc";
+    else zone="tooshort"; // < 1.20: no value / not laddered
+
+    const isStraightWin = /win/i.test(mk) && !/dnb|double|1x|x2|dc/i.test(mk);
+    const isDNB = /dnb/i.test(mk);
+    const isDC  = /double chance|1x|x2|dc/i.test(mk);
+
+    if (isStraightWin) {
+      // spec §2: straight win needs zone AND opponent ≥5.00 AND draw >3.60
+      if (zone!=="win") return { ok:false, block:true, reason:`Odds put this in the ${zone==="dnb"?"DNB":zone==="dc"?"Double Chance":"too-short"} zone (win odd ${teamOdd}), not a straight-win price.`, suggest: zone==="dnb"?"DNB":zone==="dc"?"Double Chance":null };
+      if (!(oppOdd!=null && oppOdd>=5.00)) return { ok:false, block:true, reason:`Straight win blocked — opponent priced ${oppOdd} (needs ≥5.00).`, suggest:"DNB" };
+      if (!(drawOdd!=null && drawOdd>3.60)) return { ok:false, block:true, reason:`Straight win blocked — draw priced ${drawOdd} (needs >3.60).`, suggest:"DNB" };
+      return { ok:true, block:false, reason:`Straight win confirmed by odds (${teamOdd}, opp ${oppOdd}, draw ${drawOdd}).` };
+    }
+    if (isDNB) {
+      if (zone==="win") return { ok:true, block:false, reason:`DNB safe — team is actually a strong favourite (${teamOdd}).` };
+      if (zone==="dnb") return { ok:true, block:false, reason:`DNB confirmed by odds (${teamOdd} in 1.60–2.10).` };
+      return { ok:false, block:true, reason:`Odds put this team above the DNB zone (${teamOdd} > 2.10) — too risky for DNB.`, suggest:"Double Chance" };
+    }
+    if (isDC) {
+      // double chance is the safety market — valid at dnb/dc prices, redundant (but safe) at win price
+      return { ok:true, block:false, reason:`Double Chance confirmed (team odd ${teamOdd}).` };
+    }
+  }
+
+  // ----- OVER GOALS ladder off Under-3.5 odds (spec §3) -----
+  if (/over/i.test(mk) && /[0-9]\.5/.test(mk)) {
+    const u35 = o.under35;
+    if (u35==null) return { ok:false, block:true, reason:"No Under-3.5 odds to confirm an Over pick.", suggest:null };
+    let ladder = u35>2.00 ? "Over 3.5" : u35>1.63 ? "Over 2.5" : u35>1.40 ? "Over 1.5" : null;
+    if (!ladder) return { ok:false, block:true, reason:`Under-3.5 priced ${u35} — market doesn't support any Over line.`, suggest:null };
+    // pick is fine if it is AT or BELOW the ladder-justified line (safer is ok)
+    const lineOf = s => parseFloat((String(s).match(/([0-9]\.5)/)||[])[1]);
+    if (lineOf(mk) <= lineOf(ladder)) return { ok:true, block:false, reason:`Over confirmed — U3.5 ${u35} supports up to ${ladder}.` };
+    return { ok:false, block:true, reason:`Odds only support ${ladder} (U3.5 ${u35}); ${mk} is too high.`, suggest:ladder };
+  }
+
+  // ----- UNDER GOALS ladder off Over-1.5 odds (spec §4) -----
+  if (/under/i.test(mk) && /[0-9]\.5/.test(mk)) {
+    const o15 = o.over15;
+    if (o15==null) return { ok:false, block:true, reason:"No Over-1.5 odds to confirm an Under pick.", suggest:null };
+    let ladder = o15>2.00 ? "Under 1.5" : o15>1.63 ? "Under 2.5" : o15>1.40 ? "Under 3.5" : null;
+    if (!ladder) return { ok:false, block:true, reason:`Over-1.5 priced ${o15} — market doesn't support any Under line.`, suggest:null };
+    const lineOf = s => parseFloat((String(s).match(/([0-9]\.5)/)||[])[1]);
+    // for Under, a HIGHER line is safer, so pick is fine if at or ABOVE the ladder line
+    if (lineOf(mk) >= lineOf(ladder)) return { ok:true, block:false, reason:`Under confirmed — O1.5 ${o15} supports ${ladder} or safer.` };
+    return { ok:false, block:true, reason:`Odds only support ${ladder} (O1.5 ${o15}); ${mk} is too tight.`, suggest:ladder };
+  }
+
+  // ----- GG / BTTS Yes (spec §5) -----
+  if (/btts yes|gg/i.test(mk)) {
+    const gg = o.bttsYes;
+    if (gg==null) return { ok:false, block:true, reason:"No BTTS odds to confirm this pick.", suggest:null };
+    if (inRange(gg,1.20,1.55)) return { ok:true, block:false, reason:`BTTS Yes confirmed by odds (${gg} in 1.20–1.55).` };
+    return { ok:false, block:true, reason:`BTTS Yes priced ${gg} — outside the 1.20–1.55 confirmation zone.`, suggest:null };
+  }
+
+  // markets the ladder doesn't cover (e.g. Team Over, half markets): don't block,
+  // but they still needed odds to exist (checked above).
+  return { ok:true, block:false, reason:"" };
+}
+
 if (typeof module !== "undefined") module.exports = {
   analyseAll, recommend, scoreOver25, scoreBTTS, scoreWinDNB, settle,
   analyseStrict, strictRecommend, tierFromRank, streakRecommend, ultraRecommend, rulesProRecommend, apexRecommend, primeRecommend, valueRecommend, proRecommend,
-  classifyLeague, leagueContextVerdict, trendRecommend
+  classifyLeague, leagueContextVerdict, trendRecommend, oddsLadderGate
 };
