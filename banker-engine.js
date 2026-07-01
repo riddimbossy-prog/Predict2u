@@ -2464,8 +2464,12 @@ function teamTrendFor(m, market){
     const as = m.awayScoredAway!=null ? Math.min(1, m.awayScoredAway/1.5) : null;
     return avg(hs, as);
   }
-  // Under markets proxy: inverse of over rate
-  if(/Under 3\.5/i.test(mk)){ const o=avg(m.homeOver25Rate,m.awayOver25Rate); return o!=null?Math.max(0,1-o*0.6):null; }
+  // Under markets proxy: prefer REAL over-rates (inverted) when captured, else
+  // estimate from Over 2.5. Under 3.5 = 1 − Over 3.5 rate; Under 2.5 = 1 − Over 2.5.
+  if(/Under 3\.5/i.test(mk)){
+    if(m.homeOver35Rate!=null && m.awayOver35Rate!=null) return 1 - avg(m.homeOver35Rate, m.awayOver35Rate);
+    const o=avg(m.homeOver25Rate,m.awayOver25Rate); return o!=null?Math.max(0,1-o*0.6):null;
+  }
   if(/Under 2\.5/i.test(mk)){ const o=avg(m.homeOver25Rate,m.awayOver25Rate); return o!=null?1-o:null; }
   // Home/Away win proxy from win rates
   if(/Home Win/i.test(mk))   return m.homeWinRate!=null?m.homeWinRate:null;
@@ -2509,18 +2513,50 @@ function trendRecommend(m){
     const matchPct = matchPassFor(m, t.market);     // Layer 3
     candidates.push({ market:t.market, leaguePct, teamPct, matchPct });
   }
-  // keep only those where ALL three layers ≥70% (the 70-70-70 rule)
-  const passing = candidates.filter(c=> c.leaguePct>=0.70 && c.teamPct>=0.70 && c.matchPct>=0.70);
+  // keep only markets that clear the league-relative rule:
+  //   Layer 1 (league) ≥70%  ·  Layer 3 (match) ≥70%  (flat, unchanged)
+  //   Layer 2 (team) must BEAT the league's own baseline, not a flat 70:
+  //     teamBar = max(0.66, leagueRate − 0.05 cushion)
+  //   → a strong league (85%) demands a strong team (80%); a weak-but-qualifying
+  //     league (71%) floors the team bar at 66%, so a 67% team in a defensive
+  //     league now qualifies where flat-70 wrongly rejected it. Net strictness
+  //     moves to where the league signal is, instead of a blanket 70.
+  const TEAM_FLOOR = 0.66, CUSHION = 0.05;
+  candidates.forEach(c=> c.bar = Math.max(TEAM_FLOOR, c.leaguePct - CUSHION));
+  // Layer 1 (league) stays flat ≥70%; Layers 2 (team) and 3 (match) must each
+  // beat the league-relative bar. So a weak-but-qualifying league floors both at
+  // 66%, and a strong league raises both toward 80% — strictness follows the
+  // league signal instead of a blanket 70 on all three.
+  //
+  // ELITE-LEAGUE-TREND OVERRIDE: when the league trend is very strong (≥80% over
+  // the full season), a team/match that's CLOSE to the bar (within 10 points) is
+  // admitted — the large-sample league signal earns the benefit of the doubt over
+  // a small-sample team proxy. But a team FAR below the bar is still rejected, so
+  // a genuinely mismatched side can't ride in on the league trend alone.
+  const ELITE_LEAGUE = 0.80, GRACE = 0.10;
+  const clears = (c, layerPct) => {
+    if (layerPct >= c.bar) return true;
+    if (c.leaguePct >= ELITE_LEAGUE && layerPct >= c.bar - GRACE) return true; // within grace of a strong trend
+    return false;
+  };
+  const passing = candidates.filter(c=> c.leaguePct>=0.70 && clears(c, c.teamPct) && clears(c, c.matchPct));
+  candidates.forEach(c=> c.viaOverride = c.leaguePct>=ELITE_LEAGUE && (c.teamPct < c.bar || c.matchPct < c.bar));
   if(!passing.length){
     return trendOut(m, "No Bet", null, "NO BET", null,
-      ["No market cleared the 70-70-70 rule (league, team, and match must all pass 70%)."]);
+      ["No market cleared the league-relative rule (team and match must beat the league's own baseline)."]);
   }
-  // pick the strongest by the minimum of the three layers (weakest-link), then league rate
+  // RANK BY STRONGEST LEAGUE TREND FIRST. The league rate is computed from the
+  // full season (large, robust sample); the team/match layers come from a small,
+  // noisy per-team proxy. So a strong league trend should not be vetoed by a
+  // shakier team proxy — as long as the pick still CLEARS its bar (the floors
+  // above), we prefer the market with the highest league hit-rate. Weakest-link
+  // is only a tiebreaker between equally-strong league trends.
   passing.forEach(c=> c.floor=Math.min(c.leaguePct,c.teamPct,c.matchPct));
-  passing.sort((a,b)=> b.floor-a.floor || b.leaguePct-a.leaguePct);
+  passing.sort((a,b)=> b.leaguePct-a.leaguePct || b.floor-a.floor);
   const best = passing[0];
 
-  // Section 10: tier escalates with the weakest of the three layers
+  // Tier escalates with the weakest of the three layers (a pick is only as
+  // strong as its shakiest leg), but SELECTION is by league strength above.
   const f = best.floor;
   let tier, decision;
   if(f>=0.85){ tier="Elite Banker"; decision="PLAY"; }
@@ -2528,14 +2564,24 @@ function trendRecommend(m){
   else if(f>=0.75){ tier="Banker"; decision="PLAY"; }
   else { tier="Value Pick"; decision="SMALL STAKE"; }
 
+  // A pick admitted via the elite-league-trend override leaned on the league
+  // signal, not a clean team fit — cap it at Banker and drop to SMALL STAKE so it
+  // is never presented as a top-tier certainty.
+  if(best.viaOverride){
+    if(tier==="Elite Banker"||tier==="Strong Banker") tier="Banker";
+    decision = "SMALL STAKE";
+  }
+
   const pct=x=>Math.round(x*100);
   const reasons = [
     `League identity: ${lt.identity} (sample ${lt.sample}).`,
-    `${best.market}: league ${pct(best.leaguePct)}% · team ${pct(best.teamPct)}% · match ${pct(best.matchPct)}%.`,
-    `All three layers cleared 70% — weakest link ${pct(f)}%.`
+    `${best.market}: league ${pct(best.leaguePct)}% (strongest qualifying trend) · team ${pct(best.teamPct)}% · match ${pct(best.matchPct)}% (bar ${pct(best.bar)}%).`,
+    best.viaOverride
+      ? `Admitted on a strong league trend (${pct(best.leaguePct)}%) despite a team/match layer just under the bar — staked small.`
+      : `Selected as the strongest league trend that cleared its bar; tier set by weakest link ${pct(f)}%.`
   ];
   return trendOut(m, best.market, tier, decision,
-    { league:pct(best.leaguePct), team:pct(best.teamPct), match:pct(best.matchPct) }, reasons);
+    { league:pct(best.leaguePct), team:pct(best.teamPct), match:pct(best.matchPct), bar:pct(best.bar) }, reasons);
 }
 
 if (typeof module !== "undefined") module.exports = {
