@@ -1,5 +1,5 @@
 window.DATA_UPDATED = "2026-06-30T23:11:53.478Z";
-window.SCORES_UPDATED = "2026-07-01T02:30:47.520Z";
+window.SCORES_UPDATED = "2026-07-01T02:35:28.486Z";
 window.MATCHES = [
   {
     "home": "Washington Spirit W",
@@ -56230,11 +56230,11 @@ window.MATCHES = [
     "awayLogo": "https://media.api-sports.io/football/teams/4064.png",
     "country": "USA",
     "flag": "https://media.api-sports.io/flags/us.svg",
-    "status": "NS",
+    "status": "FT",
     "kickoff": "2026-07-01T00:00:00+00:00",
     "matchDate": "2026-07-01",
-    "homeGoals": null,
-    "awayGoals": null,
+    "homeGoals": 1,
+    "awayGoals": 3,
     "homePos": null,
     "awayPos": 7,
     "tableSize": 144,
@@ -56518,7 +56518,7 @@ window.MATCHES = [
     "status": "1H",
     "kickoff": "2026-07-01T01:00:00+00:00",
     "matchDate": "2026-07-01",
-    "homeGoals": 1,
+    "homeGoals": 2,
     "awayGoals": 0,
     "homePos": 1,
     "awayPos": 4,
@@ -56589,7 +56589,7 @@ window.MATCHES = [
       "dcx2": 1.65
     },
     "h2h": null,
-    "elapsed": 30
+    "elapsed": 35
   },
   {
     "home": "Snohomish United",
@@ -56671,7 +56671,7 @@ window.MATCHES = [
       "dcx2": 4.33
     },
     "h2h": null,
-    "elapsed": 65
+    "elapsed": 70
   },
   {
     "home": "Colorado Storm",
@@ -56809,7 +56809,7 @@ window.MATCHES = [
     "round": "Group Stage",
     "odds": null,
     "h2h": null,
-    "elapsed": 27
+    "elapsed": 31
   },
   {
     "home": "Bangers",
