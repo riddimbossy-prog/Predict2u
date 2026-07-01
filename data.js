@@ -1,5 +1,5 @@
 window.DATA_UPDATED = "2026-06-30T23:11:53.478Z";
-window.SCORES_UPDATED = "2026-07-01T00:55:29.960Z";
+window.SCORES_UPDATED = "2026-07-01T01:01:31.480Z";
 window.MATCHES = [
   {
     "home": "Washington Spirit W",
@@ -56505,7 +56505,7 @@ window.MATCHES = [
       "dcx2": 2.4
     },
     "h2h": null,
-    "elapsed": 26
+    "elapsed": 32
   },
   {
     "home": "Mexico",
@@ -74298,7 +74298,7 @@ window.MATCHES = [
     "awayLogo": "https://media.api-sports.io/football/teams/146.png",
     "country": "Brazil",
     "flag": "https://media.api-sports.io/flags/br.svg",
-    "status": "2H",
+    "status": "FT",
     "kickoff": "2026-06-30T23:00:00+00:00",
     "matchDate": "2026-06-30",
     "homeGoals": 0,
@@ -74372,7 +74372,7 @@ window.MATCHES = [
       "dcx2": 1.62
     },
     "h2h": null,
-    "elapsed": 90
+    "elapsed": null
   },
   {
     "home": "Boston Bolts",
@@ -74523,7 +74523,7 @@ window.MATCHES = [
     "round": "Group Stage",
     "odds": null,
     "h2h": null,
-    "elapsed": 87
+    "elapsed": 90
   },
   {
     "home": "Reading United",
@@ -74684,7 +74684,7 @@ window.MATCHES = [
     "awayLogo": "https://media.api-sports.io/football/teams/4052.png",
     "country": "USA",
     "flag": "https://media.api-sports.io/flags/us.svg",
-    "status": "2H",
+    "status": "FT",
     "kickoff": "2026-06-30T23:00:00+00:00",
     "matchDate": "2026-06-30",
     "homeGoals": 1,
@@ -74743,7 +74743,7 @@ window.MATCHES = [
     "round": "Group Stage",
     "odds": null,
     "h2h": null,
-    "elapsed": 90
+    "elapsed": null
   },
   {
     "home": "Patuxent",
@@ -74965,7 +74965,7 @@ window.MATCHES = [
       "dcx2": 1.75
     },
     "h2h": null,
-    "elapsed": 64
+    "elapsed": 70
   },
   {
     "home": "Volta Redonda",
@@ -75049,7 +75049,7 @@ window.MATCHES = [
       "dcx2": 1.8
     },
     "h2h": null,
-    "elapsed": 64
+    "elapsed": 70
   },
   {
     "home": "Virginia Marauders",
@@ -75131,7 +75131,7 @@ window.MATCHES = [
       "dcx2": 1.01
     },
     "h2h": null,
-    "elapsed": 62
+    "elapsed": 68
   },
   {
     "home": "Miami AC",
