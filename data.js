@@ -1,5 +1,5 @@
 window.DATA_UPDATED = "2026-07-01T08:20:14.429Z";
-window.SCORES_UPDATED = "2026-07-01T08:55:32.241Z";
+window.SCORES_UPDATED = "2026-07-01T09:20:56.437Z";
 window.MATCHES = [
   {
     "home": "Santa Cruz",
@@ -75934,7 +75934,7 @@ window.MATCHES = [
     "awayLogo": "https://media.api-sports.io/football/teams/3490.png",
     "country": "World",
     "flag": null,
-    "status": "HT",
+    "status": "2H",
     "kickoff": "2026-07-01T08:00:00+00:00",
     "matchDate": "2026-07-01",
     "homeGoals": 3,
@@ -75987,7 +75987,7 @@ window.MATCHES = [
     "round": "Club Friendlies",
     "odds": null,
     "h2h": null,
-    "elapsed": 45
+    "elapsed": 62
   },
   {
     "home": "MTK Budapest",
@@ -76060,7 +76060,7 @@ window.MATCHES = [
     "awayLogo": "https://media.api-sports.io/football/teams/26667.png",
     "country": "Mongolia",
     "flag": "https://media.api-sports.io/flags/mn.svg",
-    "status": "HT",
+    "status": "2H",
     "kickoff": "2026-07-01T08:00:00+00:00",
     "matchDate": "2026-07-01",
     "homeGoals": 1,
@@ -76119,7 +76119,7 @@ window.MATCHES = [
     "round": "Regular Season - 22",
     "odds": null,
     "h2h": null,
-    "elapsed": 45
+    "elapsed": 60
   },
   {
     "home": "GKS Katowice",
@@ -76129,11 +76129,11 @@ window.MATCHES = [
     "awayLogo": "https://media.api-sports.io/football/teams/349.png",
     "country": "World",
     "flag": null,
-    "status": "1H",
+    "status": "2H",
     "kickoff": "2026-07-01T08:15:00+00:00",
     "matchDate": "2026-07-01",
     "homeGoals": 0,
-    "awayGoals": 0,
+    "awayGoals": 1,
     "homePos": null,
     "awayPos": null,
     "tableSize": 20,
@@ -76197,7 +76197,7 @@ window.MATCHES = [
       "dcx2": null
     },
     "h2h": null,
-    "elapsed": 40
+    "elapsed": 49
   },
   {
     "home": "Ajka",
@@ -76211,7 +76211,7 @@ window.MATCHES = [
     "kickoff": "2026-07-01T08:30:00+00:00",
     "matchDate": "2026-07-01",
     "homeGoals": 2,
-    "awayGoals": 0,
+    "awayGoals": 1,
     "homePos": null,
     "awayPos": null,
     "tableSize": 20,
@@ -76260,7 +76260,7 @@ window.MATCHES = [
     "round": "Club Friendlies",
     "odds": null,
     "h2h": null,
-    "elapsed": 23
+    "elapsed": 45
   },
   {
     "home": "Krylia Sovetov",
