@@ -1,5 +1,5 @@
 window.DATA_UPDATED = "2026-07-01T11:11:45.806Z";
-window.SCORES_UPDATED = "2026-07-01T12:10:37.957Z";
+window.SCORES_UPDATED = "2026-07-01T12:15:37.274Z";
 window.MATCHES = [
   {
     "home": "Santa Cruz",
@@ -78265,7 +78265,7 @@ window.MATCHES = [
     "kickoff": "2026-07-01T10:30:00+00:00",
     "matchDate": "2026-07-01",
     "homeGoals": 2,
-    "awayGoals": 2,
+    "awayGoals": 3,
     "homePos": null,
     "awayPos": null,
     "tableSize": 20,
@@ -78315,7 +78315,7 @@ window.MATCHES = [
     "round": "Club Friendlies",
     "odds": null,
     "h2h": null,
-    "elapsed": 83
+    "elapsed": 89
   },
   {
     "home": "Qarabag",
@@ -78392,8 +78392,8 @@ window.MATCHES = [
     "status": "2H",
     "kickoff": "2026-07-01T11:00:00+00:00",
     "matchDate": "2026-07-01",
-    "homeGoals": 4,
-    "awayGoals": 0,
+    "homeGoals": 5,
+    "awayGoals": 1,
     "homePos": 7,
     "awayPos": 9,
     "tableSize": 19,
@@ -78462,7 +78462,7 @@ window.MATCHES = [
       "dcx2": 1.25
     },
     "h2h": null,
-    "elapsed": 52
+    "elapsed": 58
   },
   {
     "home": "Dinamo Barnaul",
@@ -78476,7 +78476,7 @@ window.MATCHES = [
     "kickoff": "2026-07-01T11:30:00+00:00",
     "matchDate": "2026-07-01",
     "homeGoals": 3,
-    "awayGoals": 0,
+    "awayGoals": 1,
     "homePos": 11,
     "awayPos": 5,
     "tableSize": 12,
@@ -78547,7 +78547,7 @@ window.MATCHES = [
       "dcx2": 1.44
     },
     "h2h": null,
-    "elapsed": 40
+    "elapsed": 45
   },
   {
     "home": "KDV",
@@ -78617,7 +78617,7 @@ window.MATCHES = [
     "round": "Division B - Group 4 - 15",
     "odds": null,
     "h2h": null,
-    "elapsed": 10
+    "elapsed": 15
   },
   {
     "home": "Slavia Sofia",
@@ -78888,7 +78888,7 @@ window.MATCHES = [
       "dcx2": 1.2
     },
     "h2h": null,
-    "elapsed": 9
+    "elapsed": 14
   },
   {
     "home": "Lokomotiv Sofia",
@@ -79158,7 +79158,7 @@ window.MATCHES = [
     "kickoff": "2026-07-01T12:00:00+00:00",
     "matchDate": "2026-07-01",
     "homeGoals": 0,
-    "awayGoals": 0,
+    "awayGoals": 2,
     "homePos": null,
     "awayPos": null,
     "tableSize": 20,
@@ -79208,7 +79208,7 @@ window.MATCHES = [
     "round": "Club Friendlies",
     "odds": null,
     "h2h": null,
-    "elapsed": 10
+    "elapsed": 15
   },
   {
     "home": "Chelyabinsk",
@@ -79534,7 +79534,7 @@ window.MATCHES = [
     "round": null,
     "odds": null,
     "h2h": null,
-    "elapsed": 10
+    "elapsed": 15
   },
   {
     "home": "Guairena FC",
