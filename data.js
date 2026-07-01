@@ -1,5 +1,5 @@
 window.DATA_UPDATED = "2026-07-01T14:22:56.907Z";
-window.SCORES_UPDATED = "2026-07-01T14:50:41.950Z";
+window.SCORES_UPDATED = "2026-07-01T14:56:54.409Z";
 window.MATCHES = [
   {
     "home": "Santa Cruz",
@@ -79486,7 +79486,7 @@ window.MATCHES = [
     "awayLogo": "https://media.api-sports.io/football/teams/1189.png",
     "country": "Paraguay",
     "flag": "https://media.api-sports.io/flags/py.svg",
-    "status": "2H",
+    "status": "FT",
     "kickoff": "2026-07-01T13:00:00+00:00",
     "matchDate": "2026-07-01",
     "homeGoals": 0,
@@ -79559,7 +79559,7 @@ window.MATCHES = [
       "dcx2": 1.53
     },
     "h2h": null,
-    "elapsed": 90
+    "elapsed": null
   },
   {
     "home": "Zenit Penza",
@@ -79569,7 +79569,7 @@ window.MATCHES = [
     "awayLogo": "https://media.api-sports.io/football/teams/6826.png",
     "country": "Russia",
     "flag": "https://media.api-sports.io/flags/ru.svg",
-    "status": "2H",
+    "status": "FT",
     "kickoff": "2026-07-01T13:00:00+00:00",
     "matchDate": "2026-07-01",
     "homeGoals": 1,
@@ -79644,7 +79644,7 @@ window.MATCHES = [
       "dcx2": 1.08
     },
     "h2h": null,
-    "elapsed": 90
+    "elapsed": null
   },
   {
     "home": "Rubin Kazan 2",
@@ -79654,7 +79654,7 @@ window.MATCHES = [
     "awayLogo": "https://media.api-sports.io/football/teams/6818.png",
     "country": "Russia",
     "flag": "https://media.api-sports.io/flags/ru.svg",
-    "status": "2H",
+    "status": "FT",
     "kickoff": "2026-07-01T13:00:00+00:00",
     "matchDate": "2026-07-01",
     "homeGoals": 3,
@@ -79729,7 +79729,7 @@ window.MATCHES = [
       "dcx2": 2.21
     },
     "h2h": null,
-    "elapsed": 89
+    "elapsed": null
   },
   {
     "home": "Epitsentr Dunayivtsi",
@@ -79739,7 +79739,7 @@ window.MATCHES = [
     "awayLogo": "https://media.api-sports.io/football/teams/3620.png",
     "country": "World",
     "flag": null,
-    "status": "2H",
+    "status": "FT",
     "kickoff": "2026-07-01T13:00:00+00:00",
     "matchDate": "2026-07-01",
     "homeGoals": 3,
@@ -79793,7 +79793,7 @@ window.MATCHES = [
     "round": "Club Friendlies",
     "odds": null,
     "h2h": null,
-    "elapsed": 86
+    "elapsed": null
   },
   {
     "home": "Krylya Sovetov II",
@@ -80387,7 +80387,7 @@ window.MATCHES = [
     "round": "Club Friendlies",
     "odds": null,
     "h2h": null,
-    "elapsed": 21
+    "elapsed": 28
   },
   {
     "home": "GKS Katowice",
@@ -80451,7 +80451,7 @@ window.MATCHES = [
     "round": "Club Friendlies",
     "odds": null,
     "h2h": null,
-    "elapsed": 20
+    "elapsed": 27
   },
   {
     "home": "Houston FC",
