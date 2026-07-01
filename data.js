@@ -1,5 +1,5 @@
 window.DATA_UPDATED = "2026-06-30T23:11:53.478Z";
-window.SCORES_UPDATED = "2026-07-01T00:25:27.990Z";
+window.SCORES_UPDATED = "2026-07-01T00:30:47.942Z";
 window.MATCHES = [
   {
     "home": "Washington Spirit W",
@@ -56302,7 +56302,7 @@ window.MATCHES = [
     "status": "1H",
     "kickoff": "2026-07-01T00:00:00+00:00",
     "matchDate": "2026-07-01",
-    "homeGoals": 1,
+    "homeGoals": 0,
     "awayGoals": 0,
     "homePos": 3,
     "awayPos": 1,
@@ -56358,7 +56358,7 @@ window.MATCHES = [
     "round": "Group Stage",
     "odds": null,
     "h2h": null,
-    "elapsed": 20
+    "elapsed": 25
   },
   {
     "home": "Fort Worth Vaqueros",
@@ -56437,11 +56437,11 @@ window.MATCHES = [
     "awayLogo": "https://media.api-sports.io/football/teams/2325.png",
     "country": "Chile",
     "flag": "https://media.api-sports.io/flags/cl.svg",
-    "status": "NS",
+    "status": "1H",
     "kickoff": "2026-07-01T00:30:00+00:00",
     "matchDate": "2026-07-01",
-    "homeGoals": null,
-    "awayGoals": null,
+    "homeGoals": 0,
+    "awayGoals": 0,
     "homePos": null,
     "awayPos": null,
     "tableSize": 20,
@@ -56505,7 +56505,7 @@ window.MATCHES = [
       "dcx2": 2.4
     },
     "h2h": null,
-    "elapsed": null
+    "elapsed": 2
   },
   {
     "home": "Mexico",
@@ -73998,7 +73998,7 @@ window.MATCHES = [
     "awayLogo": "https://media.api-sports.io/football/teams/23112.png",
     "country": "USA",
     "flag": "https://media.api-sports.io/flags/us.svg",
-    "status": "2H",
+    "status": "FT",
     "kickoff": "2026-06-30T22:00:00+00:00",
     "matchDate": "2026-06-30",
     "homeGoals": 3,
@@ -74057,7 +74057,7 @@ window.MATCHES = [
     "round": "Group Stage",
     "odds": null,
     "h2h": null,
-    "elapsed": 83
+    "elapsed": null
   },
   {
     "home": "A. Italiano",
@@ -74145,11 +74145,11 @@ window.MATCHES = [
     "awayLogo": "https://media.api-sports.io/football/teams/7852.png",
     "country": "Brazil",
     "flag": "https://media.api-sports.io/flags/br.svg",
-    "status": "2H",
+    "status": "FT",
     "kickoff": "2026-06-30T22:30:00+00:00",
     "matchDate": "2026-06-30",
     "homeGoals": 1,
-    "awayGoals": 0,
+    "awayGoals": 1,
     "homePos": 10,
     "awayPos": 20,
     "tableSize": 20,
@@ -74219,7 +74219,7 @@ window.MATCHES = [
       "dcx2": 2.1
     },
     "h2h": null,
-    "elapsed": 90
+    "elapsed": null
   },
   {
     "home": "Treze U20",
@@ -74372,7 +74372,7 @@ window.MATCHES = [
       "dcx2": 1.62
     },
     "h2h": null,
-    "elapsed": 66
+    "elapsed": 71
   },
   {
     "home": "Boston Bolts",
@@ -74454,7 +74454,7 @@ window.MATCHES = [
       "dcx2": 1.13
     },
     "h2h": null,
-    "elapsed": 66
+    "elapsed": 72
   },
   {
     "home": "Charlotte Eagles",
@@ -74467,8 +74467,8 @@ window.MATCHES = [
     "status": "2H",
     "kickoff": "2026-06-30T23:00:00+00:00",
     "matchDate": "2026-06-30",
-    "homeGoals": 0,
-    "awayGoals": 1,
+    "homeGoals": 1,
+    "awayGoals": 2,
     "homePos": 6,
     "awayPos": null,
     "tableSize": 144,
@@ -74523,7 +74523,7 @@ window.MATCHES = [
     "round": "Group Stage",
     "odds": null,
     "h2h": null,
-    "elapsed": 57
+    "elapsed": 62
   },
   {
     "home": "Reading United",
@@ -74605,7 +74605,7 @@ window.MATCHES = [
     "status": "2H",
     "kickoff": "2026-06-30T23:00:00+00:00",
     "matchDate": "2026-06-30",
-    "homeGoals": 1,
+    "homeGoals": 2,
     "awayGoals": 0,
     "homePos": 7,
     "awayPos": 4,
@@ -74674,7 +74674,7 @@ window.MATCHES = [
       "dcx2": 1.4
     },
     "h2h": null,
-    "elapsed": 60
+    "elapsed": 65
   },
   {
     "home": "Midwest United",
@@ -74743,7 +74743,7 @@ window.MATCHES = [
     "round": "Group Stage",
     "odds": null,
     "h2h": null,
-    "elapsed": 62
+    "elapsed": 68
   },
   {
     "home": "Patuxent",
