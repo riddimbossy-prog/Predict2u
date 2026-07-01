@@ -1,5 +1,5 @@
 window.DATA_UPDATED = "2026-06-30T23:11:53.478Z";
-window.SCORES_UPDATED = "2026-07-01T02:00:55.164Z";
+window.SCORES_UPDATED = "2026-07-01T02:05:27.842Z";
 window.MATCHES = [
   {
     "home": "Washington Spirit W",
@@ -56299,7 +56299,7 @@ window.MATCHES = [
     "awayLogo": "https://media.api-sports.io/football/teams/4047.png",
     "country": "USA",
     "flag": "https://media.api-sports.io/flags/us.svg",
-    "status": "2H",
+    "status": "FT",
     "kickoff": "2026-07-01T00:00:00+00:00",
     "matchDate": "2026-07-01",
     "homeGoals": 2,
@@ -56358,7 +56358,7 @@ window.MATCHES = [
     "round": "Group Stage",
     "odds": null,
     "h2h": null,
-    "elapsed": 90
+    "elapsed": null
   },
   {
     "home": "Fort Worth Vaqueros",
@@ -56505,7 +56505,7 @@ window.MATCHES = [
       "dcx2": 2.4
     },
     "h2h": null,
-    "elapsed": 69
+    "elapsed": 74
   },
   {
     "home": "Mexico",
@@ -56515,11 +56515,11 @@ window.MATCHES = [
     "awayLogo": "https://media.api-sports.io/football/teams/2382.png",
     "country": "World",
     "flag": null,
-    "status": "PST",
+    "status": "1H",
     "kickoff": "2026-07-01T01:00:00+00:00",
     "matchDate": "2026-07-01",
-    "homeGoals": null,
-    "awayGoals": null,
+    "homeGoals": 0,
+    "awayGoals": 0,
     "homePos": 1,
     "awayPos": 4,
     "tableSize": 60,
@@ -56589,7 +56589,7 @@ window.MATCHES = [
       "dcx2": 1.65
     },
     "h2h": null,
-    "elapsed": null
+    "elapsed": 5
   },
   {
     "home": "Snohomish United",
@@ -56750,11 +56750,11 @@ window.MATCHES = [
     "awayLogo": "https://media.api-sports.io/football/teams/4109.png",
     "country": "USA",
     "flag": "https://media.api-sports.io/flags/us.svg",
-    "status": "NS",
+    "status": "1H",
     "kickoff": "2026-07-01T02:00:00+00:00",
     "matchDate": "2026-07-01",
-    "homeGoals": null,
-    "awayGoals": null,
+    "homeGoals": 0,
+    "awayGoals": 0,
     "homePos": 1,
     "awayPos": 2,
     "tableSize": 144,
@@ -56809,7 +56809,7 @@ window.MATCHES = [
     "round": "Group Stage",
     "odds": null,
     "h2h": null,
-    "elapsed": null
+    "elapsed": 2
   },
   {
     "home": "Bangers",
