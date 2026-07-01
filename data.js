@@ -1,5 +1,5 @@
 window.DATA_UPDATED = "2026-07-01T19:51:47.056Z";
-window.SCORES_UPDATED = "2026-07-01T20:55:32.256Z";
+window.SCORES_UPDATED = "2026-07-01T21:13:51.810Z";
 window.MATCHES = [
   {
     "home": "Santa Cruz",
@@ -88665,7 +88665,7 @@ window.MATCHES = [
     "awayLogo": "https://media.api-sports.io/football/teams/2337.png",
     "country": "Chile",
     "flag": "https://media.api-sports.io/flags/cl.svg",
-    "status": "2H",
+    "status": "FT",
     "kickoff": "2026-07-01T19:00:00+00:00",
     "matchDate": "2026-07-01",
     "homeGoals": 0,
@@ -88736,7 +88736,7 @@ window.MATCHES = [
       "dcx2": 1.36
     },
     "h2h": null,
-    "elapsed": 90
+    "elapsed": null
   },
   {
     "home": "Wales U19",
@@ -88746,7 +88746,7 @@ window.MATCHES = [
     "awayLogo": "https://media.api-sports.io/football/teams/10336.png",
     "country": "World",
     "flag": null,
-    "status": "2H",
+    "status": "FT",
     "kickoff": "2026-07-01T19:00:00+00:00",
     "matchDate": "2026-07-01",
     "homeGoals": 0,
@@ -88814,7 +88814,7 @@ window.MATCHES = [
       "bttsNo": 1.62
     },
     "h2h": null,
-    "elapsed": 90
+    "elapsed": null
   },
   {
     "home": "Haukar",
@@ -88824,10 +88824,10 @@ window.MATCHES = [
     "awayLogo": "https://media.api-sports.io/football/teams/4170.png",
     "country": "Iceland",
     "flag": "https://media.api-sports.io/flags/is.svg",
-    "status": "2H",
+    "status": "FT",
     "kickoff": "2026-07-01T19:15:00+00:00",
     "matchDate": "2026-07-01",
-    "homeGoals": 3,
+    "homeGoals": 4,
     "awayGoals": 1,
     "homePos": 1,
     "awayPos": 3,
@@ -88899,7 +88899,7 @@ window.MATCHES = [
       "dcx2": 2.3
     },
     "h2h": null,
-    "elapsed": 83
+    "elapsed": null
   },
   {
     "home": "Belgium",
@@ -88909,11 +88909,11 @@ window.MATCHES = [
     "awayLogo": "https://media.api-sports.io/football/teams/13.png",
     "country": "World",
     "flag": null,
-    "status": "HT",
+    "status": "2H",
     "kickoff": "2026-07-01T20:00:00+00:00",
     "matchDate": "2026-07-01",
     "homeGoals": 0,
-    "awayGoals": 1,
+    "awayGoals": 2,
     "homePos": 1,
     "awayPos": 8,
     "tableSize": 60,
@@ -88986,7 +88986,7 @@ window.MATCHES = [
       "dcx2": 1.67
     },
     "h2h": null,
-    "elapsed": 45
+    "elapsed": 52
   },
   {
     "home": "SF Glens",
@@ -89068,10 +89068,10 @@ window.MATCHES = [
     "awayLogo": "https://media.api-sports.io/football/teams/4079.png",
     "country": "USA",
     "flag": "https://media.api-sports.io/flags/us.svg",
-    "status": "HT",
+    "status": "2H",
     "kickoff": "2026-07-01T20:00:00+00:00",
     "matchDate": "2026-07-01",
-    "homeGoals": 3,
+    "homeGoals": 4,
     "awayGoals": 1,
     "homePos": 5,
     "awayPos": 4,
@@ -89143,7 +89143,7 @@ window.MATCHES = [
       "dcx2": 1.42
     },
     "h2h": null,
-    "elapsed": 45
+    "elapsed": 54
   },
   {
     "home": "HFX Wanderers FC",
@@ -89153,7 +89153,7 @@ window.MATCHES = [
     "awayLogo": "https://media.api-sports.io/football/teams/10169.png",
     "country": "Canada",
     "flag": "https://media.api-sports.io/flags/ca.svg",
-    "status": "1H",
+    "status": "HT",
     "kickoff": "2026-07-01T20:00:00+00:00",
     "matchDate": "2026-07-01",
     "homeGoals": 0,
@@ -89230,7 +89230,7 @@ window.MATCHES = [
       "dcx2": 1.48
     },
     "h2h": null,
-    "elapsed": 44
+    "elapsed": 45
   },
   {
     "home": "Atlas",
@@ -90092,11 +90092,11 @@ window.MATCHES = [
     "awayLogo": "https://media.api-sports.io/football/teams/18912.png",
     "country": "USA",
     "flag": "https://media.api-sports.io/flags/us.svg",
-    "status": "NS",
+    "status": "1H",
     "kickoff": "2026-07-01T21:00:00+00:00",
     "matchDate": "2026-07-01",
-    "homeGoals": null,
-    "awayGoals": null,
+    "homeGoals": 0,
+    "awayGoals": 0,
     "homePos": 5,
     "awayPos": 1,
     "tableSize": 144,
@@ -90154,7 +90154,7 @@ window.MATCHES = [
     "round": "Group Stage",
     "odds": null,
     "h2h": null,
-    "elapsed": null
+    "elapsed": 13
   },
   {
     "home": "Asheville City",
