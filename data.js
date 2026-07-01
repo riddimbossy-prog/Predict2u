@@ -1,5 +1,5 @@
 window.DATA_UPDATED = "2026-06-30T23:11:53.478Z";
-window.SCORES_UPDATED = "2026-07-01T00:50:37.538Z";
+window.SCORES_UPDATED = "2026-07-01T00:55:29.960Z";
 window.MATCHES = [
   {
     "home": "Washington Spirit W",
@@ -56299,7 +56299,7 @@ window.MATCHES = [
     "awayLogo": "https://media.api-sports.io/football/teams/4047.png",
     "country": "USA",
     "flag": "https://media.api-sports.io/flags/us.svg",
-    "status": "1H",
+    "status": "HT",
     "kickoff": "2026-07-01T00:00:00+00:00",
     "matchDate": "2026-07-01",
     "homeGoals": 1,
@@ -56505,7 +56505,7 @@ window.MATCHES = [
       "dcx2": 2.4
     },
     "h2h": null,
-    "elapsed": 21
+    "elapsed": 26
   },
   {
     "home": "Mexico",
@@ -56515,7 +56515,7 @@ window.MATCHES = [
     "awayLogo": "https://media.api-sports.io/football/teams/2382.png",
     "country": "World",
     "flag": null,
-    "status": "NS",
+    "status": "PST",
     "kickoff": "2026-07-01T01:00:00+00:00",
     "matchDate": "2026-07-01",
     "homeGoals": null,
@@ -74382,7 +74382,7 @@ window.MATCHES = [
     "awayLogo": "https://media.api-sports.io/football/teams/4100.png",
     "country": "USA",
     "flag": "https://media.api-sports.io/flags/us.svg",
-    "status": "2H",
+    "status": "FT",
     "kickoff": "2026-06-30T23:00:00+00:00",
     "matchDate": "2026-06-30",
     "homeGoals": 1,
@@ -74454,7 +74454,7 @@ window.MATCHES = [
       "dcx2": 1.13
     },
     "h2h": null,
-    "elapsed": 90
+    "elapsed": null
   },
   {
     "home": "Charlotte Eagles",
@@ -74523,7 +74523,7 @@ window.MATCHES = [
     "round": "Group Stage",
     "odds": null,
     "h2h": null,
-    "elapsed": 82
+    "elapsed": 87
   },
   {
     "home": "Reading United",
@@ -74674,7 +74674,7 @@ window.MATCHES = [
       "dcx2": 1.4
     },
     "h2h": null,
-    "elapsed": 85
+    "elapsed": 90
   },
   {
     "home": "Midwest United",
@@ -74743,7 +74743,7 @@ window.MATCHES = [
     "round": "Group Stage",
     "odds": null,
     "h2h": null,
-    "elapsed": 87
+    "elapsed": 90
   },
   {
     "home": "Patuxent",
@@ -74965,7 +74965,7 @@ window.MATCHES = [
       "dcx2": 1.75
     },
     "h2h": null,
-    "elapsed": 59
+    "elapsed": 64
   },
   {
     "home": "Volta Redonda",
@@ -75049,7 +75049,7 @@ window.MATCHES = [
       "dcx2": 1.8
     },
     "h2h": null,
-    "elapsed": 59
+    "elapsed": 64
   },
   {
     "home": "Virginia Marauders",
@@ -75131,7 +75131,7 @@ window.MATCHES = [
       "dcx2": 1.01
     },
     "h2h": null,
-    "elapsed": 57
+    "elapsed": 62
   },
   {
     "home": "Miami AC",
