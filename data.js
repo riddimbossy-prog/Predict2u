@@ -1,5 +1,5 @@
 window.DATA_UPDATED = "2026-06-30T23:11:53.478Z";
-window.SCORES_UPDATED = "2026-07-01T02:50:39.734Z";
+window.SCORES_UPDATED = "2026-07-01T02:55:29.144Z";
 window.MATCHES = [
   {
     "home": "Washington Spirit W",
@@ -56515,7 +56515,7 @@ window.MATCHES = [
     "awayLogo": "https://media.api-sports.io/football/teams/2382.png",
     "country": "World",
     "flag": null,
-    "status": "1H",
+    "status": "HT",
     "kickoff": "2026-07-01T01:00:00+00:00",
     "matchDate": "2026-07-01",
     "homeGoals": 2,
@@ -56671,7 +56671,7 @@ window.MATCHES = [
       "dcx2": 4.33
     },
     "h2h": null,
-    "elapsed": 86
+    "elapsed": 90
   },
   {
     "home": "Colorado Storm",
