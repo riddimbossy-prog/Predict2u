@@ -61,13 +61,25 @@ jobs:
         run: |
           git config user.name "predicto-bot"
           git config user.email "bot@users.noreply.github.com"
-          if [ -n "$(git status --porcelain data.js xg.js today.png today.svg daily/ 2>/dev/null)" ]; then
-            git add data.js xg.js today.png today.svg daily/ 2>/dev/null
-            git commit -m "Update Predicto data (fixtures + xG + image)"
-            for i in 1 2 3; do
-              git pull --rebase --autostash origin main && git push && { echo "pushed."; break; }
-              echo "Push attempt $i failed — retrying..."; sleep 5
-            done
-          else
-            echo "No changes."
+          if [ -z "$(git status --porcelain data.js xg.js today.png today.svg daily/ 2>/dev/null)" ]; then
+            echo "No changes."; exit 0
           fi
+          git add data.js xg.js today.png today.svg daily/ 2>/dev/null
+          git commit -m "Update Predicto data (fixtures + xG + image)"
+          # These are GENERATED files — there is no "true" version to preserve, so
+          # on a race with the scores workflow we take OUR freshly-built copy and
+          # move on, instead of failing on an unmergeable rebase conflict.
+          for i in 1 2 3 4 5; do
+            git fetch origin main
+            if git rebase origin/main; then
+              :
+            else
+              echo "Rebase conflict on generated files — keeping our fresh copies."
+              git checkout --ours data.js xg.js today.png today.svg 2>/dev/null || true
+              git checkout --ours daily/ 2>/dev/null || true
+              git add data.js xg.js today.png today.svg daily/ 2>/dev/null || true
+              GIT_EDITOR=true git rebase --continue || git rebase --abort
+            fi
+            if git push origin HEAD:main; then echo "pushed (attempt $i)."; break; fi
+            echo "Push attempt $i failed (remote moved) — syncing and retrying..."; sleep $((5 * i))
+          done
