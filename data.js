@@ -1,5 +1,5 @@
 window.DATA_UPDATED = "2026-07-02T01:16:59.972Z";
-window.SCORES_UPDATED = "2026-07-02T12:05:34.709Z";
+window.SCORES_UPDATED = "2026-07-02T12:10:43.867Z";
 window.MATCHES = [
   {
     "home": "Santa Cruz",
@@ -75159,7 +75159,7 @@ window.MATCHES = [
     "round": "Regular Season - 12",
     "odds": null,
     "h2h": null,
-    "elapsed": 6
+    "elapsed": 11
   },
   {
     "home": "Astana II",
@@ -75172,7 +75172,7 @@ window.MATCHES = [
     "status": "1H",
     "kickoff": "2026-07-02T12:00:00+00:00",
     "matchDate": "2026-07-02",
-    "homeGoals": 0,
+    "homeGoals": 1,
     "awayGoals": 0,
     "homePos": 5,
     "awayPos": 10,
@@ -75231,7 +75231,7 @@ window.MATCHES = [
     "round": "Regular Season - 12",
     "odds": null,
     "h2h": null,
-    "elapsed": 5
+    "elapsed": 10
   },
   {
     "home": "Dundee",
@@ -75740,7 +75740,7 @@ window.MATCHES = [
     "round": null,
     "odds": null,
     "h2h": null,
-    "elapsed": 6
+    "elapsed": 10
   },
   {
     "home": "Tobol 2",
