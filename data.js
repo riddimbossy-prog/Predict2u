@@ -1,5 +1,5 @@
 window.DATA_UPDATED = "2026-07-02T01:16:59.972Z";
-window.SCORES_UPDATED = "2026-07-02T01:25:32.411Z";
+window.SCORES_UPDATED = "2026-07-02T01:30:50.354Z";
 window.MATCHES = [
   {
     "home": "Santa Cruz",
@@ -73686,7 +73686,7 @@ window.MATCHES = [
       "away": 6.5
     },
     "lineupConfirmed": true,
-    "elapsed": 60
+    "elapsed": 65
   },
   {
     "home": "Delfin SC",
@@ -73981,7 +73981,7 @@ window.MATCHES = [
     "round": "Group Stage",
     "odds": null,
     "h2h": null,
-    "elapsed": 56
+    "elapsed": 61
   },
   {
     "home": "GFI",
@@ -74192,7 +74192,7 @@ window.MATCHES = [
       "dcx2": 2.3
     },
     "h2h": null,
-    "elapsed": 44
+    "elapsed": 45
   },
   {
     "home": "Marin",
@@ -92485,11 +92485,11 @@ window.MATCHES = [
     "awayLogo": "https://media.api-sports.io/football/teams/4082.png",
     "country": "USA",
     "flag": "https://media.api-sports.io/flags/us.svg",
-    "status": "2H",
+    "status": "FT",
     "kickoff": "2026-07-01T23:30:00+00:00",
     "matchDate": "2026-07-01",
     "homeGoals": 2,
-    "awayGoals": 4,
+    "awayGoals": 5,
     "homePos": null,
     "awayPos": null,
     "tableSize": 20,
@@ -92541,7 +92541,7 @@ window.MATCHES = [
     "round": "Group Stage",
     "odds": null,
     "h2h": null,
-    "elapsed": 90
+    "elapsed": null
   },
   {
     "home": "Charlottesville Blues",
