@@ -1,5 +1,5 @@
 window.DATA_UPDATED = "2026-07-02T01:16:59.972Z";
-window.SCORES_UPDATED = "2026-07-02T17:01:06.071Z";
+window.SCORES_UPDATED = "2026-07-02T17:05:37.468Z";
 window.MATCHES = [
   {
     "home": "Santa Cruz",
@@ -76784,7 +76784,7 @@ window.MATCHES = [
     "round": "Club Friendlies",
     "odds": null,
     "h2h": null,
-    "elapsed": 52
+    "elapsed": 57
   },
   {
     "home": "Dekani",
@@ -76863,7 +76863,7 @@ window.MATCHES = [
       "dcx2": 1.01
     },
     "h2h": null,
-    "elapsed": 46
+    "elapsed": 50
   },
   {
     "home": "Wieczysta Kraków",
@@ -77029,7 +77029,7 @@ window.MATCHES = [
       "dcx2": 1.17
     },
     "h2h": null,
-    "elapsed": 73
+    "elapsed": 77
   },
   {
     "home": "Lyn",
@@ -77039,7 +77039,7 @@ window.MATCHES = [
     "awayLogo": "https://media.api-sports.io/football/teams/2148.png",
     "country": "Norway",
     "flag": "https://media.api-sports.io/flags/no.svg",
-    "status": "HT",
+    "status": "2H",
     "kickoff": "2026-07-02T16:00:00+00:00",
     "matchDate": "2026-07-02",
     "homeGoals": 5,
@@ -77126,7 +77126,7 @@ window.MATCHES = [
       "draw": 3.7,
       "away": 3.5
     },
-    "elapsed": 45
+    "elapsed": 49
   },
   {
     "home": "FC jazz",
@@ -77136,7 +77136,7 @@ window.MATCHES = [
     "awayLogo": "https://media.api-sports.io/football/teams/10199.png",
     "country": "Finland",
     "flag": "https://media.api-sports.io/flags/fi.svg",
-    "status": "HT",
+    "status": "2H",
     "kickoff": "2026-07-02T16:00:00+00:00",
     "matchDate": "2026-07-02",
     "homeGoals": 0,
@@ -77213,7 +77213,7 @@ window.MATCHES = [
       "dcx2": 2.45
     },
     "h2h": null,
-    "elapsed": 45
+    "elapsed": 49
   },
   {
     "home": "PPJ",
@@ -77223,7 +77223,7 @@ window.MATCHES = [
     "awayLogo": "https://media.api-sports.io/football/teams/9174.png",
     "country": "Finland",
     "flag": "https://media.api-sports.io/flags/fi.svg",
-    "status": "HT",
+    "status": "2H",
     "kickoff": "2026-07-02T16:00:00+00:00",
     "matchDate": "2026-07-02",
     "homeGoals": 0,
@@ -77300,7 +77300,7 @@ window.MATCHES = [
       "dcx2": 1.65
     },
     "h2h": null,
-    "elapsed": 45
+    "elapsed": 47
   },
   {
     "home": "Tartu Welco",
@@ -77385,7 +77385,7 @@ window.MATCHES = [
       "dcx2": 1.5
     },
     "h2h": null,
-    "elapsed": 46
+    "elapsed": 50
   },
   {
     "home": "Kuressaare",
@@ -77395,7 +77395,7 @@ window.MATCHES = [
     "awayLogo": "https://media.api-sports.io/football/teams/687.png",
     "country": "Estonia",
     "flag": "https://media.api-sports.io/flags/ee.svg",
-    "status": "HT",
+    "status": "2H",
     "kickoff": "2026-07-02T16:00:00+00:00",
     "matchDate": "2026-07-02",
     "homeGoals": 0,
@@ -77472,7 +77472,7 @@ window.MATCHES = [
       "dcx2": 1.07
     },
     "h2h": null,
-    "elapsed": 45
+    "elapsed": 46
   },
   {
     "home": "FC BW Linz",
@@ -77836,7 +77836,7 @@ window.MATCHES = [
       "dcx2": 1.15
     },
     "h2h": null,
-    "elapsed": 1
+    "elapsed": 6
   },
   {
     "home": "Thor Akureyri",
@@ -77846,11 +77846,11 @@ window.MATCHES = [
     "awayLogo": "https://media.api-sports.io/football/teams/271.png",
     "country": "Iceland",
     "flag": "https://media.api-sports.io/flags/is.svg",
-    "status": "NS",
+    "status": "1H",
     "kickoff": "2026-07-02T17:00:00+00:00",
     "matchDate": "2026-07-02",
-    "homeGoals": null,
-    "awayGoals": null,
+    "homeGoals": 1,
+    "awayGoals": 0,
     "homePos": 10,
     "awayPos": 2,
     "tableSize": 12,
@@ -77923,7 +77923,7 @@ window.MATCHES = [
       "dcx2": 1.06
     },
     "h2h": null,
-    "elapsed": null
+    "elapsed": 4
   },
   {
     "home": "Serbia U19",
@@ -77933,11 +77933,11 @@ window.MATCHES = [
     "awayLogo": "https://media.api-sports.io/football/teams/10352.png",
     "country": "World",
     "flag": null,
-    "status": "NS",
+    "status": "1H",
     "kickoff": "2026-07-02T17:00:00+00:00",
     "matchDate": "2026-07-02",
-    "homeGoals": null,
-    "awayGoals": null,
+    "homeGoals": 0,
+    "awayGoals": 0,
     "homePos": null,
     "awayPos": null,
     "tableSize": 20,
@@ -78004,7 +78004,7 @@ window.MATCHES = [
       "dcx2": 1.44
     },
     "h2h": null,
-    "elapsed": null
+    "elapsed": 5
   },
   {
     "home": "Peckeloh",
