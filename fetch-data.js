@@ -466,9 +466,85 @@ const FINISHED = new Set(["FT","AET","PEN"]);
   const teamStatsCache = {}; // key `${teamId}|${leagueId}|${season}` -> stats object
   const wantStats = cfg.STATS !== false; // set STATS=false secret to disable
 
-  // Fetch REAL season stats for one team in one league (cached per run).
-  // Returns { winRate, drawRate, lossRate, unbeatenRate, cleanSheetRate,
-  //           failedToScoreRate, ... } home/away split where available.
+  // Fetch a team's finished fixtures this season and compute the CURRENT
+  // streaks (of any length) at the most recent game: win / unbeaten / no-loss /
+  // no-win / loss / over2.5 / under2.5. Cached per team per run. One extra
+  // /fixtures call per team — the biggest per-team cost, so it's cached hard and
+  // only requested for upcoming games (same as team stats).
+  const teamStreakCache = {};
+  async function getTeamStreaks(teamId, season){
+    if(!teamId) return null;
+    const ck=`${teamId}|${season}`;
+    if(teamStreakCache[ck]!==undefined) return teamStreakCache[ck];
+    let streaks=null;
+    try{
+      const res=await apiGet(`/fixtures?team=${teamId}&season=${season}&status=FT-AET-PEN`, cfg.API_KEY); requests++;
+      const games=(res.response||[])
+        .filter(g=>g&&g.fixture&&g.goals&&g.goals.home!=null&&g.goals.away!=null&&FINISHED.has(String(g.fixture.status.short||"").toUpperCase()))
+        .sort((a,b)=>new Date(b.fixture.date)-new Date(a.fixture.date)); // most recent first
+      if(games.length){
+        // build a per-game result from THIS team's perspective, most-recent first
+        const seq=games.map(g=>{
+          const isHome=g.teams.home.id===teamId;
+          const gf=isHome?g.goals.home:g.goals.away;
+          const ga=isHome?g.goals.away:g.goals.home;
+          // half-time result from THIS team's perspective (null if no HT data)
+          const ht=g.score&&g.score.halftime;
+          let htRes=null;
+          if(ht&&ht.home!=null&&ht.away!=null){
+            const hf=isHome?ht.home:ht.away, ha=isHome?ht.away:ht.home;
+            htRes = hf>ha?"W":hf<ha?"L":"D";
+          }
+          return { res: gf>ga?"W":gf<ga?"L":"D", ftRes: gf>ga?"W":gf<ga?"L":"D", htRes, tot:gf+ga };
+        });
+        const run=pred=>{ let n=0; for(const s of seq){ if(pred(s))n++; else break; } return n; };
+
+        // ---- HT/FT OUTCOME MATRIX (the "whole story" cross-tab) ----
+        // Counts each HT→FT transition across all games with HT data, then
+        // derives the behavioural rates: hold a lead, throw a lead, comeback
+        // to win, comeback to draw, collapse. This is what reveals a
+        // "draw-specialist" or "strong-finisher" profile the aggregates miss.
+        const cell={WW:0,WD:0,WL:0,DW:0,DD:0,DL:0,LW:0,LD:0,LL:0};
+        let htSamp=0;
+        for(const s of seq){
+          if(!s.htRes) continue;
+          htSamp++;
+          cell[s.htRes+s.ftRes] = (cell[s.htRes+s.ftRes]||0) + 1;
+        }
+        const R=(c)=> htSamp>0 ? Math.round((c/htSamp)*100)/100 : null;
+        const led = cell.WW+cell.WD+cell.WL;      // games leading at HT
+        const trailed = cell.LW+cell.LD+cell.LL;  // games trailing at HT
+        const htft = htSamp>0 ? {
+          samples: htSamp,
+          cells: cell,
+          holdLeadRate:  led>0 ? Math.round((cell.WW/led)*100)/100 : null,   // led→won
+          throwLeadRate: led>0 ? Math.round(((cell.WD+cell.WL)/led)*100)/100 : null, // led→dropped
+          comebackWinRate: trailed>0 ? Math.round((cell.LW/trailed)*100)/100 : null, // trailed→won
+          comebackDrawRate: trailed>0 ? Math.round((cell.LD/trailed)*100)/100 : null,// trailed→drew
+          collapseRate: trailed>0 ? Math.round((cell.LL/trailed)*100)/100 : null,    // trailed→lost
+          drawFromLevelRate: (cell.DW+cell.DD+cell.DL)>0 ? Math.round((cell.DD/(cell.DW+cell.DD+cell.DL))*100)/100 : null,
+          // "draw specialist" = high share of games that ended drawn from any HT state
+          drawEndRate: Math.round(((cell.WD+cell.DD+cell.LD)/htSamp)*100)/100,
+        } : null;
+
+        streaks={
+          win:      run(s=>s.res==="W"),
+          loss:     run(s=>s.res==="L"),
+          noLoss:   run(s=>s.res!=="L"),
+          noWin:    run(s=>s.res!=="W"),
+          noDraw:   run(s=>s.res!=="D"),
+          over25:   run(s=>s.tot>=3),
+          under25:  run(s=>s.tot<=2),
+          sample:   seq.length,
+          htft
+        };
+      }
+      await sleep(SLEEP);
+    }catch(e){ /* streaks optional */ }
+    teamStreakCache[ck]=streaks;
+    return streaks;
+  }
+
   async function getTeamStats(teamId, leagueId, season){
     if (!wantStats || !teamId || !leagueId) return null;
     const ck = `${teamId}|${leagueId}|${season}`;
@@ -684,14 +760,17 @@ const FINISHED = new Set(["FT","AET","PEN"]);
       // REAL team stats (cached per team per run) — only fetch for games not
       // already finished, to contain cost (no point fetching for settled games).
       let homeStats = null, awayStats = null;
+      let homeStreaks = null, awayStreaks = null;
       if (wantStats && st !== "FT" && st !== "AET" && st !== "PEN") {
         const hid = fx.teams.home.id, aid = fx.teams.away.id;
         homeStats = await getTeamStats(hid, leagueId, seasonForStandings);
         awayStats = await getTeamStats(aid, leagueId, seasonForStandings);
+        homeStreaks = await getTeamStreaks(hid, seasonForStandings);
+        awayStreaks = await getTeamStreaks(aid, seasonForStandings);
       }
 
       out.push({
-        home: fx.teams.home.name, away: fx.teams.away.name, league: leagueName,
+        home: fx.teams.home.name, away: fx.teams.away.name, league: leagueName, leagueId: leagueId,
         homeLogo: (fx.teams.home && fx.teams.home.logo) || null,
         awayLogo: (fx.teams.away && fx.teams.away.logo) || null,
         country: leagueCountry, flag: leagueFlag,
@@ -738,6 +817,8 @@ const FINISHED = new Set(["FT","AET","PEN"]);
         homeOver35Rate: homeStats ? homeStats.over35Rate : null,
         awayOver35Rate: awayStats ? awayStats.over35Rate : null,
         statsReal: !!(homeStats || awayStats),
+        // real streaks of any length (from full season fixture history)
+        homeStreaks, awayStreaks,
         sameGroup, isKnockout,
         isTournament: multiGroup || isKnockout,
         round: roundName || null,
