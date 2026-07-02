@@ -1,5 +1,5 @@
 window.DATA_UPDATED = "2026-07-02T01:16:59.972Z";
-window.SCORES_UPDATED = "2026-07-02T18:05:29.506Z";
+window.SCORES_UPDATED = "2026-07-02T18:11:58.324Z";
 window.MATCHES = [
   {
     "home": "Santa Cruz",
@@ -77836,7 +77836,7 @@ window.MATCHES = [
       "dcx2": 1.15
     },
     "h2h": null,
-    "elapsed": 49
+    "elapsed": 57
   },
   {
     "home": "Thor Akureyri",
@@ -77846,7 +77846,7 @@ window.MATCHES = [
     "awayLogo": "https://media.api-sports.io/football/teams/271.png",
     "country": "Iceland",
     "flag": "https://media.api-sports.io/flags/is.svg",
-    "status": "HT",
+    "status": "2H",
     "kickoff": "2026-07-02T17:00:00+00:00",
     "matchDate": "2026-07-02",
     "homeGoals": 3,
@@ -77923,7 +77923,7 @@ window.MATCHES = [
       "dcx2": 1.06
     },
     "h2h": null,
-    "elapsed": 45
+    "elapsed": 52
   },
   {
     "home": "Serbia U19",
@@ -78004,7 +78004,7 @@ window.MATCHES = [
       "dcx2": 1.44
     },
     "h2h": null,
-    "elapsed": 47
+    "elapsed": 55
   },
   {
     "home": "Peckeloh",
@@ -78084,7 +78084,7 @@ window.MATCHES = [
     "kickoff": "2026-07-02T17:30:00+00:00",
     "matchDate": "2026-07-02",
     "homeGoals": 0,
-    "awayGoals": 3,
+    "awayGoals": 4,
     "homePos": null,
     "awayPos": null,
     "tableSize": 20,
@@ -78136,7 +78136,7 @@ window.MATCHES = [
     "round": "Round of 128",
     "odds": null,
     "h2h": null,
-    "elapsed": 34
+    "elapsed": 41
   },
   {
     "home": "Cove Rangers",
@@ -78215,7 +78215,7 @@ window.MATCHES = [
       "dcx2": 5
     },
     "h2h": null,
-    "elapsed": 4
+    "elapsed": 12
   },
   {
     "home": "Sao Luis",
