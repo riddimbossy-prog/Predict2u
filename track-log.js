@@ -56,7 +56,8 @@ function bankersFor(m){
   try{ const r=eng.recommend(m);        if(r.banker) push("Normal", r.primary, r.confidence); }catch(e){}
   try{ const r=eng.strictRecommend(m);  if(r.bet)    push("Strict", r.market,  r.confidence); }catch(e){}
   [["Ultra",eng.ultraRecommend],["Elite",eng.rulesProRecommend],["Apex",eng.apexRecommend],
-   ["Prime",eng.primeRecommend],["Value",eng.valueRecommend],["Pro",eng.proRecommend]
+   ["Prime",eng.primeRecommend],["Value",eng.valueRecommend],["Pro",eng.proRecommend],
+   ["Trend",eng.trendRecommend],["Streaks",eng.streakRecommend]
   ].forEach(([name,fn])=>{ try{ const r=fn(m); if(r.banker) push(name, r.primary, r.confidence); }catch(e){} });
   return out;
 }
