@@ -558,7 +558,7 @@ const datesWithGames = Object.keys(byDate).filter(d=>d!=='Undated').sort();
    reads as intentional rather than broken. NOTE: this only displays dates your
    data contains — to fill more tabs, widen the fixture window in fetch-data.js. */
 const ANCHOR_BACK = 2;   // days before today to always show
-const ANCHOR_FWD  = 2;   // days after today to always show
+const ANCHOR_FWD  = 3;   // days after today to always show
 const stripDates = (()=>{
   const set = new Set(datesWithGames);
   for(let off=-ANCHOR_BACK; off<=ANCHOR_FWD; off++){
