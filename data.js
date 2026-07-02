@@ -1,5 +1,5 @@
 window.DATA_UPDATED = "2026-07-02T01:16:59.972Z";
-window.SCORES_UPDATED = "2026-07-02T16:15:43.426Z";
+window.SCORES_UPDATED = "2026-07-02T16:21:08.564Z";
 window.MATCHES = [
   {
     "home": "Santa Cruz",
@@ -75521,7 +75521,7 @@ window.MATCHES = [
     "status": "FT",
     "kickoff": "2026-07-02T12:00:00+00:00",
     "matchDate": "2026-07-02",
-    "homeGoals": 2,
+    "homeGoals": 3,
     "awayGoals": 1,
     "homePos": null,
     "awayPos": null,
@@ -75965,7 +75965,7 @@ window.MATCHES = [
     "round": "Regular Season - 12",
     "odds": null,
     "h2h": null,
-    "elapsed": 79
+    "elapsed": 84
   },
   {
     "home": "Dordoi Bishkek",
@@ -76348,7 +76348,7 @@ window.MATCHES = [
       "dcx2": 1.2
     },
     "h2h": null,
-    "elapsed": 61
+    "elapsed": 66
   },
   {
     "home": "BFA",
@@ -76433,7 +76433,7 @@ window.MATCHES = [
       "dcx2": 1.8
     },
     "h2h": null,
-    "elapsed": 59
+    "elapsed": 64
   },
   {
     "home": "Žalgiris II",
@@ -76520,7 +76520,7 @@ window.MATCHES = [
       "dcx2": 2.3
     },
     "h2h": null,
-    "elapsed": 61
+    "elapsed": 67
   },
   {
     "home": "1. FC Nürnberg",
@@ -76665,7 +76665,7 @@ window.MATCHES = [
     "status": "2H",
     "kickoff": "2026-07-02T15:00:00+00:00",
     "matchDate": "2026-07-02",
-    "homeGoals": 0,
+    "homeGoals": 1,
     "awayGoals": 1,
     "homePos": null,
     "awayPos": null,
@@ -76718,7 +76718,7 @@ window.MATCHES = [
     "round": "Club Friendlies",
     "odds": null,
     "h2h": null,
-    "elapsed": 56
+    "elapsed": 61
   },
   {
     "home": "NK Varazdin",
@@ -76784,7 +76784,7 @@ window.MATCHES = [
     "round": "Club Friendlies",
     "odds": null,
     "h2h": null,
-    "elapsed": 16
+    "elapsed": 21
   },
   {
     "home": "Dekani",
@@ -76798,7 +76798,7 @@ window.MATCHES = [
     "kickoff": "2026-07-02T15:00:00+00:00",
     "matchDate": "2026-07-02",
     "homeGoals": 0,
-    "awayGoals": 0,
+    "awayGoals": 1,
     "homePos": null,
     "awayPos": null,
     "tableSize": 20,
@@ -76863,7 +76863,7 @@ window.MATCHES = [
       "dcx2": 1.01
     },
     "h2h": null,
-    "elapsed": 14
+    "elapsed": 19
   },
   {
     "home": "Wieczysta Kraków",
@@ -76942,7 +76942,7 @@ window.MATCHES = [
       "dcx2": 1.83
     },
     "h2h": null,
-    "elapsed": 59
+    "elapsed": 64
   },
   {
     "home": "EBK",
@@ -76952,7 +76952,7 @@ window.MATCHES = [
     "awayLogo": "https://media.api-sports.io/football/teams/13494.png",
     "country": "Finland",
     "flag": "https://media.api-sports.io/flags/fi.svg",
-    "status": "1H",
+    "status": "HT",
     "kickoff": "2026-07-02T15:30:00+00:00",
     "matchDate": "2026-07-02",
     "homeGoals": 1,
@@ -77126,7 +77126,7 @@ window.MATCHES = [
       "draw": 3.7,
       "away": 3.5
     },
-    "elapsed": 16
+    "elapsed": 21
   },
   {
     "home": "FC jazz",
@@ -77213,7 +77213,7 @@ window.MATCHES = [
       "dcx2": 2.45
     },
     "h2h": null,
-    "elapsed": 14
+    "elapsed": 20
   },
   {
     "home": "PPJ",
@@ -77300,7 +77300,7 @@ window.MATCHES = [
       "dcx2": 1.65
     },
     "h2h": null,
-    "elapsed": 15
+    "elapsed": 20
   },
   {
     "home": "Tartu Welco",
@@ -77313,7 +77313,7 @@ window.MATCHES = [
     "status": "1H",
     "kickoff": "2026-07-02T16:00:00+00:00",
     "matchDate": "2026-07-02",
-    "homeGoals": 1,
+    "homeGoals": 2,
     "awayGoals": 0,
     "homePos": 1,
     "awayPos": 2,
@@ -77385,7 +77385,7 @@ window.MATCHES = [
       "dcx2": 1.5
     },
     "h2h": null,
-    "elapsed": 15
+    "elapsed": 21
   },
   {
     "home": "Kuressaare",
@@ -77472,7 +77472,7 @@ window.MATCHES = [
       "dcx2": 1.07
     },
     "h2h": null,
-    "elapsed": 14
+    "elapsed": 19
   },
   {
     "home": "FC BW Linz",
