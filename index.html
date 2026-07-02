@@ -1802,7 +1802,14 @@ function renderBankerOfDay(){
 // engine support. Only renders during the tournament (when WC matches exist).
 function renderWorldCup(){
   const host=document.getElementById('worldcup'); if(!host) return;
-  const rows=(byDate[activeDate]||[]).filter(r=> r.match && (r.match.leagueId===1 || /world cup/i.test(r.match.league||'')));
+  const isWC = m => {
+    if(!m) return false;
+    if(m.leagueId===1 || m.leagueId==="1") return true;
+    const L=String(m.league||m.competition||"").toLowerCase();
+    return /world cup/.test(L) || /fifa/.test(L) || /\bwc\b/.test(L);
+  };
+  const rows=(byDate[activeDate]||[]).filter(r=> isWC(r.match));
+  try{ if(window.console) console.log(`World Cup section: ${rows.length} WC match(es) found for ${activeDate}.`); }catch(e){}
   if(!rows.length){ host.innerHTML=''; return; }
 
   const tally={};
