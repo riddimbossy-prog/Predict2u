@@ -1,5 +1,5 @@
 window.DATA_UPDATED = "2026-07-02T01:16:59.972Z";
-window.SCORES_UPDATED = "2026-07-02T01:30:50.354Z";
+window.SCORES_UPDATED = "2026-07-02T01:35:27.917Z";
 window.MATCHES = [
   {
     "home": "Santa Cruz",
@@ -73686,7 +73686,7 @@ window.MATCHES = [
       "away": 6.5
     },
     "lineupConfirmed": true,
-    "elapsed": 65
+    "elapsed": 70
   },
   {
     "home": "Delfin SC",
@@ -73981,7 +73981,7 @@ window.MATCHES = [
     "round": "Group Stage",
     "odds": null,
     "h2h": null,
-    "elapsed": 61
+    "elapsed": 66
   },
   {
     "home": "GFI",
@@ -74123,7 +74123,7 @@ window.MATCHES = [
     "awayLogo": "https://media.api-sports.io/football/teams/24018.png",
     "country": "USA",
     "flag": "https://media.api-sports.io/flags/us.svg",
-    "status": "1H",
+    "status": "HT",
     "kickoff": "2026-07-02T00:30:00+00:00",
     "matchDate": "2026-07-02",
     "homeGoals": 0,
