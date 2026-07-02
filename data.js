@@ -1,5 +1,5 @@
 window.DATA_UPDATED = "2026-07-02T01:16:59.972Z";
-window.SCORES_UPDATED = "2026-07-02T08:50:40.879Z";
+window.SCORES_UPDATED = "2026-07-02T08:55:32.621Z";
 window.MATCHES = [
   {
     "home": "Santa Cruz",
@@ -74886,7 +74886,7 @@ window.MATCHES = [
     "awayLogo": "https://media.api-sports.io/football/teams/14441.png",
     "country": "World",
     "flag": null,
-    "status": "2H",
+    "status": "FT",
     "kickoff": "2026-07-02T07:00:00+00:00",
     "matchDate": "2026-07-02",
     "homeGoals": 1,
@@ -74942,7 +74942,7 @@ window.MATCHES = [
     "round": "Club Friendlies",
     "odds": null,
     "h2h": null,
-    "elapsed": 90
+    "elapsed": null
   },
   {
     "home": "Aluminij",
@@ -75373,7 +75373,7 @@ window.MATCHES = [
     "awayLogo": "https://media.api-sports.io/football/teams/2246.png",
     "country": "World",
     "flag": null,
-    "status": "NS",
+    "status": "CANC",
     "kickoff": "2026-07-02T12:00:00+00:00",
     "matchDate": "2026-07-02",
     "homeGoals": null,
