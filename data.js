@@ -1,5 +1,5 @@
 window.DATA_UPDATED = "2026-07-02T01:16:59.972Z";
-window.SCORES_UPDATED = "2026-07-02T14:30:54.283Z";
+window.SCORES_UPDATED = "2026-07-02T14:35:34.213Z";
 window.MATCHES = [
   {
     "home": "Santa Cruz",
@@ -75754,7 +75754,7 @@ window.MATCHES = [
     "kickoff": "2026-07-02T13:00:00+00:00",
     "matchDate": "2026-07-02",
     "homeGoals": 4,
-    "awayGoals": 3,
+    "awayGoals": 4,
     "homePos": 12,
     "awayPos": 11,
     "tableSize": 14,
@@ -75812,7 +75812,7 @@ window.MATCHES = [
     "round": "Regular Season - 12",
     "odds": null,
     "h2h": null,
-    "elapsed": 72
+    "elapsed": 76
   },
   {
     "home": "Croatia U19",
@@ -75893,7 +75893,7 @@ window.MATCHES = [
       "dcx2": 1.3
     },
     "h2h": null,
-    "elapsed": 73
+    "elapsed": 78
   },
   {
     "home": "Khan Tengri",
@@ -76109,7 +76109,7 @@ window.MATCHES = [
     "round": "Regular Season - 14",
     "odds": null,
     "h2h": null,
-    "elapsed": 30
+    "elapsed": 34
   },
   {
     "home": "Toktogul",
