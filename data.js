@@ -1,5 +1,5 @@
 window.DATA_UPDATED = "2026-07-02T01:16:59.972Z";
-window.SCORES_UPDATED = "2026-07-02T12:45:35.901Z";
+window.SCORES_UPDATED = "2026-07-02T12:50:41.041Z";
 window.MATCHES = [
   {
     "home": "Santa Cruz",
@@ -75097,7 +75097,7 @@ window.MATCHES = [
     "awayLogo": "https://media.api-sports.io/football/teams/4566.png",
     "country": "Kazakhstan",
     "flag": "https://media.api-sports.io/flags/kz.svg",
-    "status": "1H",
+    "status": "HT",
     "kickoff": "2026-07-02T12:00:00+00:00",
     "matchDate": "2026-07-02",
     "homeGoals": 0,
@@ -75169,10 +75169,10 @@ window.MATCHES = [
     "awayLogo": "https://media.api-sports.io/football/teams/27633.png",
     "country": "Kazakhstan",
     "flag": "https://media.api-sports.io/flags/kz.svg",
-    "status": "1H",
+    "status": "HT",
     "kickoff": "2026-07-02T12:00:00+00:00",
     "matchDate": "2026-07-02",
-    "homeGoals": 5,
+    "homeGoals": 6,
     "awayGoals": 0,
     "homePos": 5,
     "awayPos": 10,
@@ -75678,7 +75678,7 @@ window.MATCHES = [
     "awayLogo": "https://media.api-sports.io/football/teams/27725.png",
     "country": "Bhutan",
     "flag": "https://media.api-sports.io/flags/bt.svg",
-    "status": "1H",
+    "status": "HT",
     "kickoff": "2026-07-02T12:00:00+00:00",
     "matchDate": "2026-07-02",
     "homeGoals": 0,
