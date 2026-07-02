@@ -1,5 +1,5 @@
 window.DATA_UPDATED = "2026-07-02T01:16:59.972Z";
-window.SCORES_UPDATED = "2026-07-02T08:25:32.786Z";
+window.SCORES_UPDATED = "2026-07-02T08:30:52.063Z";
 window.MATCHES = [
   {
     "home": "Santa Cruz",
@@ -74889,7 +74889,7 @@ window.MATCHES = [
     "status": "2H",
     "kickoff": "2026-07-02T07:00:00+00:00",
     "matchDate": "2026-07-02",
-    "homeGoals": 0,
+    "homeGoals": 1,
     "awayGoals": 1,
     "homePos": null,
     "awayPos": null,
@@ -74942,7 +74942,7 @@ window.MATCHES = [
     "round": "Club Friendlies",
     "odds": null,
     "h2h": null,
-    "elapsed": 66
+    "elapsed": 71
   },
   {
     "home": "Aluminij",
