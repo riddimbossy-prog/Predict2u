@@ -1895,40 +1895,46 @@ function renderWorldCup(){
     if(!m) return false;
     if(m.leagueId===1 || m.leagueId==="1") return true;
     const L=String(m.league||m.competition||"").toLowerCase();
-    return /world cup/.test(L) || /fifa/.test(L) || /\bwc\b/.test(L);
+    // national-team World Cup only — exclude the FIFA CLUB World Cup
+    if(/club world cup/.test(L)) return false;
+    return /world cup/.test(L) || /\bfifa\b/.test(L) || /\bwc\b/.test(L);
   };
   const rows=(byDate[activeDate]||[]).filter(r=> isWC(r.match));
-  try{ if(window.console) console.log(`World Cup Bankers: ${rows.length} WC match(es) found for ${activeDate}.`); }catch(e){}
+  try{ if(window.console) console.log(`World Cup Bankers: ${rows.length} WC match(es) for ${activeDate}.`); }catch(e){}
   if(!rows.length){ host.innerHTML=''; return; }
 
   const TOTAL_ENGINES=10;
   const norm=s=>String(s||'').trim();
+  const engines=[['Normal',recommend],['Strict',strictRecommend],['Ultra',ultraRecommend],
+    ['Elite',rulesProRecommend],['Apex',apexRecommend],['Prime',primeRecommend],
+    ['Value',valueRecommend],['Pro',proRecommend],['Trend',trendRecommend],['Streaks',streakRecommend]];
 
-  /* One prediction per World Cup game: run all 10 (frame-wrapped) engines,
-     tally which market each backs, take the market with the most agreement.
-     Tiers: 4+ engines = ELITE BANKER, 3 = BANKER, 2 = BANKER only if an
-     engine flagged it banker (else LEAN), 1 = LEAN, 0 = honest NO BET. */
-  const perMatch={};
-  rows.forEach(r=>{
+  /* For EVERY WC game (upcoming OR finished) run all 10 frame-wrapped engines and
+     tally which market they back. Finished games still get a pick — we settle it
+     against the real score to show WON/LOST, so the board stays alive all tournament.
+     Tiers: 4+ = ELITE BANKER, 3 = BANKER, 2 = BANKER if any engine flagged banker
+     (else LEAN), 1 = LEAN, 0 = honest NO BET. */
+  const cards=rows.map(r=>{
     const m=r.match;
-    const mk=(norm(m.home)+'|'+norm(m.away)).toLowerCase();
-    perMatch[mk]={match:m, markets:{}, framedNote:null};
-    const add=(market,engine,conf,banker)=>{
+    const hg=m.homeGoals, ag=m.awayGoals, played=hg!=null&&ag!=null;
+    const live=m.status && ['1H','2H','HT','ET','LIVE','P'].includes(String(m.status).toUpperCase());
+    const markets={}; let framed=false;
+    const add=(market,engine,conf,banker,fr)=>{
       if(!market||market==='No Bet'||market==='Skip') return;
       const k=norm(market);
-      if(!perMatch[mk].markets[k]) perMatch[mk].markets[k]={market:k,count:0,engines:[],confSum:0,anyBanker:false};
-      const t=perMatch[mk].markets[k];
-      t.count++; t.engines.push(engine); t.confSum+=(conf||7); if(banker) t.anyBanker=true;
+      if(!markets[k]) markets[k]={market:k,count:0,engines:[],confSum:0,anyBanker:false};
+      markets[k].count++; markets[k].engines.push(engine); markets[k].confSum+=(conf||7); if(banker) markets[k].anyBanker=true;
+      if(fr) framed=true;
     };
-    try{ const u=recommend(m); if(u.banker||u.bet||u.primary) add(u.primary,'Normal',confValue(u.confidence),u.banker); if(u.intlFrame&&u.intlFrame.changed) perMatch[mk].framedNote=1; }catch(e){}
-    try{ const s=strictRecommend(m); if(s&&s.bet) add(s.market||s.primary,'Strict',s.confidence,s.banker); if(s&&s.intlFrame&&s.intlFrame.changed) perMatch[mk].framedNote=1; }catch(e){}
-    [['Ultra',ultraRecommend],['Elite',rulesProRecommend],['Apex',apexRecommend],['Prime',primeRecommend],['Value',valueRecommend],['Pro',proRecommend],['Trend',trendRecommend],['Streaks',streakRecommend]].forEach(([name,fn])=>{
-      try{ if(typeof fn==='function'){ const u=fn(m); if(u.bet) add(u.primary,name,u.confidence,u.banker); if(u.intlFrame&&u.intlFrame.changed) perMatch[mk].framedNote=1; } }catch(e){}
+    engines.forEach(([name,fn])=>{
+      try{ if(typeof fn!=='function') return;
+        const u=fn(m); const mk=u.primary!=null?u.primary:u.market;
+        // Normal returns a market even when not a "bet"; only count real picks
+        if(u.bet!==false) add(mk,name,confValue(u.confidence),u.banker);
+        if(u.intlFrame&&u.intlFrame.changed) framed=true;
+      }catch(e){}
     });
-  });
-
-  const cards=Object.values(perMatch).map(pm=>{
-    const best=Object.values(pm.markets).sort((a,b)=> b.count-a.count || (b.anyBanker?1:0)-(a.anyBanker?1:0) || b.confSum-a.confSum)[0]||null;
+    const best=Object.values(markets).sort((a,b)=> b.count-a.count || (b.anyBanker?1:0)-(a.anyBanker?1:0) || b.confSum-a.confSum)[0]||null;
     let tier=null, tierRank=0;
     if(best){
       if(best.count>=4){ tier='ELITE BANKER'; tierRank=4; }
@@ -1936,59 +1942,83 @@ function renderWorldCup(){
       else if(best.count===2){ tier=best.anyBanker?'BANKER':'LEAN'; tierRank=best.anyBanker?3:2; }
       else { tier='LEAN'; tierRank=1; }
     }
-    return { match:pm.match, best, tier, tierRank, framed:!!pm.framedNote };
-  }).sort((a,b)=> b.tierRank-a.tierRank || ((b.best?b.best.count:0)-(a.best?a.best.count:0)) ||
-     ((a.match.kickoff?new Date(a.match.kickoff).getTime():0)-(b.match.kickoff?new Date(b.match.kickoff).getTime():0)));
+    const res = (best&&played) ? settle(best.market,hg,ag,m.status) : null;
+    return { match:m, best, tier, tierRank, framed, played, live, hg, ag, res };
+  }).sort((a,b)=>
+    // upcoming/live first (so today's predictions lead), then bankers, then kickoff
+    (b.live?1:0)-(a.live?1:0) ||
+    (a.played?1:0)-(b.played?1:0) ||
+    b.tierRank-a.tierRank ||
+    ((a.match.kickoff?new Date(a.match.kickoff).getTime():0)-(b.match.kickoff?new Date(b.match.kickoff).getTime():0))
+  );
 
-  const tierStyle=t=> t==='ELITE BANKER' ? 'background:rgba(245,183,61,.2);color:#f5b73d'
-    : t==='BANKER' ? 'background:rgba(76,175,39,.2);color:var(--brand)'
-    : 'background:rgba(148,163,184,.15);color:#cbd5e1';
+  const tierStyle=t=> t==='ELITE BANKER' ? 'background:rgba(242,193,78,.2);color:var(--banker)'
+    : t==='BANKER' ? 'background:rgba(62,207,110,.2);color:var(--brand)'
+    : 'background:rgba(147,163,150,.15);color:var(--muted)';
 
   const card=c=>{
     const b=c.match, t=b.kickoff?fmtTime(b.kickoff):'';
-    const stage=b.round?`<span class="text-[10px] px-1.5 py-0.5 rounded" style="background:rgba(245,183,61,.12);color:#f5b73d">${b.round}</span>`:'';
+    const stage=b.round?`<span class="text-[10px] px-1.5 py-0.5 rounded" style="background:rgba(242,193,78,.12);color:var(--banker)">${b.round}</span>`:'';
+    const liveTag=c.live?`<span class="px-2 py-0.5 rounded text-[10px] font-bold chip-live">LIVE</span>`:'';
+    const scoreOrTime = c.played||c.live
+      ? `<span class="display font-bold tnum">${c.hg??'0'} - ${c.ag??'0'}</span>`
+      : `<span class="text-xs tnum" style="color:var(--muted)">${t||'—'}</span>`;
     if(!c.best){
-      return `<div class="rounded-xl p-3 mb-2" style="background:var(--panel-2);border:1px dashed var(--line);opacity:.8">
+      return `<div class="rounded-xl p-3 mb-2" style="background:var(--panel-2);border:1px dashed var(--line);opacity:.85">
         <div class="flex items-center justify-between mb-1">
-          <span class="text-[13px] font-semibold flex items-center gap-2 flex-wrap">${rowFlag(b)}${b.home} <span style="color:var(--muted)">v</span> ${b.away} ${stage}</span>
-          <span class="text-[11px] font-bold px-2 py-0.5 rounded-lg" style="background:rgba(239,68,68,.15);color:#fca5a5">NO BET</span>
+          <span class="text-[13px] font-semibold flex items-center gap-2 flex-wrap">${rowFlag(b)}${b.home} <span style="color:var(--muted)">v</span> ${b.away} ${stage} ${liveTag}</span>
+          <span class="text-[11px] font-bold px-2 py-0.5 rounded-lg" style="background:rgba(251,113,133,.15);color:var(--live)">NO BET</span>
         </div>
-        <div class="text-[11px]" style="color:var(--muted)">${t?t+' · ':''}No engine backs a market here${c.framed?' (international frame blocked the risky picks)':''} — sitting this one out is the pick.</div>
+        <div class="flex items-center justify-between">
+          ${scoreOrTime}
+          <span class="text-[11px]" style="color:var(--muted)">${c.played?'Result in — ':''}No engine backs a market${c.framed?' (frame blocked the risky picks)':''}.</span>
+        </div>
       </div>`;
     }
     const p=c.best;
-    const res=settle(p.market,b.homeGoals,b.awayGoals,b.status);
-    const resTag=res?`<span class="px-2 py-0.5 rounded text-[11px] font-bold ${resClass(res)}">${res.toUpperCase()}</span>`:'';
+    const resTag=c.res?`<span class="px-2 py-0.5 rounded text-[11px] font-bold ${resClass(c.res)}">${c.res.toUpperCase()}</span>`:'';
     const strong=c.tierRank>=3;
-    return `<div class="rounded-xl p-3 mb-2" style="background:var(--panel-2);border:1px solid ${strong?'rgba(76,175,39,.4)':'var(--line)'}">
+    return `<div class="rounded-xl p-3 mb-2" style="background:var(--panel-2);border:1px solid ${strong?'rgba(62,207,110,.4)':'var(--line)'}">
       <div class="flex items-center justify-between mb-1">
-        <span class="text-[13px] font-semibold flex items-center gap-2 flex-wrap">${rowFlag(b)}${b.home} <span style="color:var(--muted)">v</span> ${b.away} ${stage} ${resTag}</span>
+        <span class="text-[13px] font-semibold flex items-center gap-2 flex-wrap">${rowFlag(b)}${b.home} <span style="color:var(--muted)">v</span> ${b.away} ${stage} ${liveTag} ${resTag}</span>
         <span class="text-[11px] font-bold px-2 py-0.5 rounded-lg" style="${tierStyle(c.tier)}">${c.tier}</span>
       </div>
-      <div class="flex items-center justify-between">
-        <span class="px-2 py-1 rounded-lg text-[12px] font-semibold ${pill(p.market)}">${p.market}</span>
-        <span class="text-[10px]" style="color:var(--muted)">${t?t+' · ':''}${p.count}/${TOTAL_ENGINES} engines: ${p.engines.join(', ')}</span>
+      <div class="flex items-center justify-between gap-2">
+        <div class="flex items-center gap-2">
+          ${scoreOrTime}
+          <span class="px-2 py-1 rounded-lg text-[12px] font-semibold ${pill(p.market)}">${p.market}</span>
+        </div>
+        <span class="text-[10px] text-right" style="color:var(--muted)">${p.count}/${TOTAL_ENGINES}: ${p.engines.join(', ')}</span>
       </div>
     </div>`;
   };
 
-  // share text for the day's WC bankers (wins AND losses get posted — that's the brand)
+  const upcomingN=cards.filter(c=>!c.played&&!c.live).length;
+  const doneN=cards.filter(c=>c.played).length;
+  const liveN=cards.filter(c=>c.live).length;
+
   const dateLabel=activeDate||'';
   window.__wcBankersText = `🏆 WORLD CUP BANKERS — ${dateLabel}\n`+cards.map(c=>{
     const b=c.match;
-    return c.best ? `${b.home} v ${b.away}: ${c.best.market} (${c.tier}, ${c.best.count}/${TOTAL_ENGINES})`
-                  : `${b.home} v ${b.away}: NO BET`;
+    if(!c.best) return `${b.home} v ${b.away}: NO BET`;
+    const tail = c.res ? ` — ${c.res.toUpperCase()} (${c.hg}-${c.ag})` : ` (${c.tier}, ${c.best.count}/${TOTAL_ENGINES})`;
+    return `${b.home} v ${b.away}: ${c.best.market}${tail}`;
   }).join('\n')+`\nFree · honest · tracked — predict2u.com`;
+
+  const summary=[
+    liveN?`${liveN} live`:'', upcomingN?`${upcomingN} upcoming`:'', doneN?`${doneN} settled`:''
+  ].filter(Boolean).join(' · ');
 
   host.innerHTML=`<div class="panel rounded-2xl p-4">
     <div class="flex items-center justify-between mb-3">
       <div class="flex items-center gap-2">
         <span class="text-lg">🏆</span>
         <span class="display text-lg font-bold">World Cup Bankers</span>
+        ${summary?`<span class="text-[11px] px-2 py-0.5 rounded-full chip-green">${summary}</span>`:''}
       </div>
-      <button onclick="shareWcBankers(event)" class="text-[11px] font-bold px-2 py-1 rounded-lg" style="background:rgba(76,175,39,.2);color:var(--brand)"><i class="fa-solid fa-share-nodes"></i> Share</button>
+      <button onclick="shareWcBankers(event)" class="text-[11px] font-bold px-2 py-1 rounded-lg" style="background:rgba(62,207,110,.2);color:var(--brand)"><i class="fa-solid fa-share-nodes"></i> Share</button>
     </div>
-    <div class="text-[11px] mb-3" style="color:var(--muted)">One prediction per World Cup game — the market our engines agree on, protected by the international frame (knockout Under bias, mismatch checks, odds ladder). NO BET is an honest pick too. Not a guarantee — 18+.</div>
+    <div class="text-[11px] mb-3" style="color:var(--muted)">One prediction per World Cup game — the market our engines agree on, protected by the international frame. Upcoming games show live predictions; finished games show how the pick settled. NO BET is an honest pick too. Not a guarantee — 18+.</div>
     ${cards.map(card).join('')}
   </div>`;
 }
