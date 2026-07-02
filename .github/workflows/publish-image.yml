@@ -3,19 +3,19 @@ name: Publish daily image (fast)
 # Does NOT run the slow fetcher — use this to refresh/republish the branded
 # image (and fix the today.png link) in ~1 minute. Trigger manually from the
 # Actions tab ("Run workflow").
-
 on:
   workflow_dispatch: {}
-
 permissions:
   contents: write
   pages: write
   id-token: write
-
+# CONCURRENCY (fixed): this manual publish runs in its OWN workflow group so a
+# scheduled scores run can't cancel it. cancel-in-progress:true here means only
+# that a SECOND publish supersedes an earlier publish (harmless — the newest
+# code should win). It no longer shares a group with the scores workflow.
 concurrency:
-  group: "pages-deploy"
+  group: "pages-publish"
   cancel-in-progress: true
-
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -54,6 +54,12 @@ jobs:
   deploy:
     needs: build
     runs-on: ubuntu-latest
+    # Shares the real Pages DEPLOY lane, but WAITS for any in-flight deploy
+    # instead of cancelling it. This is the setting that lets a scores deploy
+    # and a publish deploy coexist — whoever is second simply waits ~1 min.
+    concurrency:
+      group: "pages-deploy"
+      cancel-in-progress: false
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
