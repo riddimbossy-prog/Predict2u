@@ -1,5 +1,5 @@
 window.DATA_UPDATED = "2026-07-02T01:16:59.972Z";
-window.SCORES_UPDATED = "2026-07-02T13:30:49.687Z";
+window.SCORES_UPDATED = "2026-07-02T13:35:32.070Z";
 window.MATCHES = [
   {
     "home": "Santa Cruz",
@@ -75159,7 +75159,7 @@ window.MATCHES = [
     "round": "Regular Season - 12",
     "odds": null,
     "h2h": null,
-    "elapsed": 71
+    "elapsed": 76
   },
   {
     "home": "Astana II",
@@ -75231,7 +75231,7 @@ window.MATCHES = [
     "round": "Regular Season - 12",
     "odds": null,
     "h2h": null,
-    "elapsed": 75
+    "elapsed": 80
   },
   {
     "home": "Dundee",
@@ -75740,7 +75740,7 @@ window.MATCHES = [
     "round": null,
     "odds": null,
     "h2h": null,
-    "elapsed": 75
+    "elapsed": 80
   },
   {
     "home": "Tobol 2",
@@ -75753,7 +75753,7 @@ window.MATCHES = [
     "status": "1H",
     "kickoff": "2026-07-02T13:00:00+00:00",
     "matchDate": "2026-07-02",
-    "homeGoals": 2,
+    "homeGoals": 3,
     "awayGoals": 0,
     "homePos": 12,
     "awayPos": 11,
@@ -75812,7 +75812,7 @@ window.MATCHES = [
     "round": "Regular Season - 12",
     "odds": null,
     "h2h": null,
-    "elapsed": 28
+    "elapsed": 33
   },
   {
     "home": "Croatia U19",
@@ -75893,7 +75893,7 @@ window.MATCHES = [
       "dcx2": 1.3
     },
     "h2h": null,
-    "elapsed": 30
+    "elapsed": 35
   },
   {
     "home": "Khan Tengri",
