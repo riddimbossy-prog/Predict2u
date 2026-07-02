@@ -1,5 +1,5 @@
 window.DATA_UPDATED = "2026-07-02T01:16:59.972Z";
-window.SCORES_UPDATED = "2026-07-02T02:40:40.252Z";
+window.SCORES_UPDATED = "2026-07-02T02:45:33.820Z";
 window.MATCHES = [
   {
     "home": "Santa Cruz",
@@ -74568,7 +74568,7 @@ window.MATCHES = [
       "draw": 3.3,
       "away": 3.25
     },
-    "elapsed": 33
+    "elapsed": 38
   },
   {
     "home": "New Mexico United",
@@ -74713,7 +74713,7 @@ window.MATCHES = [
       "dcx2": 1.8
     },
     "h2h": null,
-    "elapsed": 32
+    "elapsed": 37
   },
   {
     "home": "West Seattle Junction",
@@ -74779,7 +74779,7 @@ window.MATCHES = [
     "round": "Group Stage",
     "odds": null,
     "h2h": null,
-    "elapsed": 4
+    "elapsed": 8
   },
   {
     "home": "Union Omaha",
@@ -74876,7 +74876,7 @@ window.MATCHES = [
       "draw": 3.75,
       "away": 4.1
     },
-    "elapsed": 4
+    "elapsed": 9
   },
   {
     "home": "Karpaty",
