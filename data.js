@@ -1,5 +1,5 @@
 window.DATA_UPDATED = "2026-07-02T01:16:59.972Z";
-window.SCORES_UPDATED = "2026-07-02T17:45:33.467Z";
+window.SCORES_UPDATED = "2026-07-02T17:58:29.231Z";
 window.MATCHES = [
   {
     "home": "Santa Cruz",
@@ -77039,11 +77039,11 @@ window.MATCHES = [
     "awayLogo": "https://media.api-sports.io/football/teams/2148.png",
     "country": "Norway",
     "flag": "https://media.api-sports.io/flags/no.svg",
-    "status": "2H",
+    "status": "FT",
     "kickoff": "2026-07-02T16:00:00+00:00",
     "matchDate": "2026-07-02",
     "homeGoals": 6,
-    "awayGoals": 1,
+    "awayGoals": 2,
     "homePos": 16,
     "awayPos": 13,
     "tableSize": 16,
@@ -77126,7 +77126,7 @@ window.MATCHES = [
       "draw": 3.7,
       "away": 3.5
     },
-    "elapsed": 89
+    "elapsed": null
   },
   {
     "home": "FC jazz",
@@ -77136,7 +77136,7 @@ window.MATCHES = [
     "awayLogo": "https://media.api-sports.io/football/teams/10199.png",
     "country": "Finland",
     "flag": "https://media.api-sports.io/flags/fi.svg",
-    "status": "2H",
+    "status": "FT",
     "kickoff": "2026-07-02T16:00:00+00:00",
     "matchDate": "2026-07-02",
     "homeGoals": 0,
@@ -77213,7 +77213,7 @@ window.MATCHES = [
       "dcx2": 2.45
     },
     "h2h": null,
-    "elapsed": 88
+    "elapsed": null
   },
   {
     "home": "PPJ",
@@ -77223,7 +77223,7 @@ window.MATCHES = [
     "awayLogo": "https://media.api-sports.io/football/teams/9174.png",
     "country": "Finland",
     "flag": "https://media.api-sports.io/flags/fi.svg",
-    "status": "2H",
+    "status": "FT",
     "kickoff": "2026-07-02T16:00:00+00:00",
     "matchDate": "2026-07-02",
     "homeGoals": 1,
@@ -77300,7 +77300,7 @@ window.MATCHES = [
       "dcx2": 1.65
     },
     "h2h": null,
-    "elapsed": 87
+    "elapsed": null
   },
   {
     "home": "Tartu Welco",
@@ -77310,7 +77310,7 @@ window.MATCHES = [
     "awayLogo": "https://media.api-sports.io/football/teams/14340.png",
     "country": "Estonia",
     "flag": "https://media.api-sports.io/flags/ee.svg",
-    "status": "2H",
+    "status": "FT",
     "kickoff": "2026-07-02T16:00:00+00:00",
     "matchDate": "2026-07-02",
     "homeGoals": 2,
@@ -77385,7 +77385,7 @@ window.MATCHES = [
       "dcx2": 1.5
     },
     "h2h": null,
-    "elapsed": 90
+    "elapsed": null
   },
   {
     "home": "Kuressaare",
@@ -77395,7 +77395,7 @@ window.MATCHES = [
     "awayLogo": "https://media.api-sports.io/football/teams/687.png",
     "country": "Estonia",
     "flag": "https://media.api-sports.io/flags/ee.svg",
-    "status": "2H",
+    "status": "FT",
     "kickoff": "2026-07-02T16:00:00+00:00",
     "matchDate": "2026-07-02",
     "homeGoals": 0,
@@ -77472,7 +77472,7 @@ window.MATCHES = [
       "dcx2": 1.07
     },
     "h2h": null,
-    "elapsed": 86
+    "elapsed": null
   },
   {
     "home": "FC BW Linz",
@@ -77759,7 +77759,7 @@ window.MATCHES = [
     "awayLogo": "https://media.api-sports.io/football/teams/394.png",
     "country": "Belarus",
     "flag": "https://media.api-sports.io/flags/by.svg",
-    "status": "1H",
+    "status": "HT",
     "kickoff": "2026-07-02T17:00:00+00:00",
     "matchDate": "2026-07-02",
     "homeGoals": 0,
@@ -77846,7 +77846,7 @@ window.MATCHES = [
     "awayLogo": "https://media.api-sports.io/football/teams/271.png",
     "country": "Iceland",
     "flag": "https://media.api-sports.io/flags/is.svg",
-    "status": "1H",
+    "status": "HT",
     "kickoff": "2026-07-02T17:00:00+00:00",
     "matchDate": "2026-07-02",
     "homeGoals": 3,
@@ -77923,7 +77923,7 @@ window.MATCHES = [
       "dcx2": 1.06
     },
     "h2h": null,
-    "elapsed": 43
+    "elapsed": 45
   },
   {
     "home": "Serbia U19",
@@ -77933,7 +77933,7 @@ window.MATCHES = [
     "awayLogo": "https://media.api-sports.io/football/teams/10352.png",
     "country": "World",
     "flag": null,
-    "status": "1H",
+    "status": "HT",
     "kickoff": "2026-07-02T17:00:00+00:00",
     "matchDate": "2026-07-02",
     "homeGoals": 1,
@@ -78004,7 +78004,7 @@ window.MATCHES = [
       "dcx2": 1.44
     },
     "h2h": null,
-    "elapsed": 44
+    "elapsed": 45
   },
   {
     "home": "Peckeloh",
@@ -78136,7 +78136,7 @@ window.MATCHES = [
     "round": "Round of 128",
     "odds": null,
     "h2h": null,
-    "elapsed": 14
+    "elapsed": 27
   },
   {
     "home": "Cove Rangers",
