@@ -1,5 +1,5 @@
 window.DATA_UPDATED = "2026-07-02T01:16:59.972Z";
-window.SCORES_UPDATED = "2026-07-02T16:36:15.009Z";
+window.SCORES_UPDATED = "2026-07-02T16:40:50.960Z";
 window.MATCHES = [
   {
     "home": "Santa Cruz",
@@ -75311,7 +75311,7 @@ window.MATCHES = [
     "kickoff": "2026-07-02T12:00:00+00:00",
     "matchDate": "2026-07-02",
     "homeGoals": 1,
-    "awayGoals": 3,
+    "awayGoals": 4,
     "homePos": null,
     "awayPos": null,
     "tableSize": 20,
@@ -76348,7 +76348,7 @@ window.MATCHES = [
       "dcx2": 1.2
     },
     "h2h": null,
-    "elapsed": 81
+    "elapsed": 86
   },
   {
     "home": "BFA",
@@ -76433,7 +76433,7 @@ window.MATCHES = [
       "dcx2": 1.8
     },
     "h2h": null,
-    "elapsed": 79
+    "elapsed": 84
   },
   {
     "home": "Žalgiris II",
@@ -76520,7 +76520,7 @@ window.MATCHES = [
       "dcx2": 2.3
     },
     "h2h": null,
-    "elapsed": 82
+    "elapsed": 87
   },
   {
     "home": "1. FC Nürnberg",
@@ -76718,7 +76718,7 @@ window.MATCHES = [
     "round": "Club Friendlies",
     "odds": null,
     "h2h": null,
-    "elapsed": 76
+    "elapsed": 81
   },
   {
     "home": "NK Varazdin",
@@ -76731,7 +76731,7 @@ window.MATCHES = [
     "status": "1H",
     "kickoff": "2026-07-02T15:00:00+00:00",
     "matchDate": "2026-07-02",
-    "homeGoals": 0,
+    "homeGoals": 1,
     "awayGoals": 0,
     "homePos": null,
     "awayPos": null,
@@ -76784,7 +76784,7 @@ window.MATCHES = [
     "round": "Club Friendlies",
     "odds": null,
     "h2h": null,
-    "elapsed": 37
+    "elapsed": 41
   },
   {
     "home": "Dekani",
@@ -76863,7 +76863,7 @@ window.MATCHES = [
       "dcx2": 1.01
     },
     "h2h": null,
-    "elapsed": 34
+    "elapsed": 39
   },
   {
     "home": "Wieczysta Kraków",
@@ -76942,7 +76942,7 @@ window.MATCHES = [
       "dcx2": 1.83
     },
     "h2h": null,
-    "elapsed": 79
+    "elapsed": 84
   },
   {
     "home": "EBK",
@@ -77029,7 +77029,7 @@ window.MATCHES = [
       "dcx2": 1.17
     },
     "h2h": null,
-    "elapsed": 48
+    "elapsed": 52
   },
   {
     "home": "Lyn",
@@ -77126,7 +77126,7 @@ window.MATCHES = [
       "draw": 3.7,
       "away": 3.5
     },
-    "elapsed": 36
+    "elapsed": 41
   },
   {
     "home": "FC jazz",
@@ -77213,7 +77213,7 @@ window.MATCHES = [
       "dcx2": 2.45
     },
     "h2h": null,
-    "elapsed": 35
+    "elapsed": 40
   },
   {
     "home": "PPJ",
@@ -77227,7 +77227,7 @@ window.MATCHES = [
     "kickoff": "2026-07-02T16:00:00+00:00",
     "matchDate": "2026-07-02",
     "homeGoals": 0,
-    "awayGoals": 0,
+    "awayGoals": 1,
     "homePos": 5,
     "awayPos": 3,
     "tableSize": 10,
@@ -77300,7 +77300,7 @@ window.MATCHES = [
       "dcx2": 1.65
     },
     "h2h": null,
-    "elapsed": 36
+    "elapsed": 40
   },
   {
     "home": "Tartu Welco",
@@ -77314,7 +77314,7 @@ window.MATCHES = [
     "kickoff": "2026-07-02T16:00:00+00:00",
     "matchDate": "2026-07-02",
     "homeGoals": 2,
-    "awayGoals": 0,
+    "awayGoals": 1,
     "homePos": 1,
     "awayPos": 2,
     "tableSize": 10,
@@ -77385,7 +77385,7 @@ window.MATCHES = [
       "dcx2": 1.5
     },
     "h2h": null,
-    "elapsed": 36
+    "elapsed": 41
   },
   {
     "home": "Kuressaare",
@@ -77472,7 +77472,7 @@ window.MATCHES = [
       "dcx2": 1.07
     },
     "h2h": null,
-    "elapsed": 34
+    "elapsed": 39
   },
   {
     "home": "FC BW Linz",
