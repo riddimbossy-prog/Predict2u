@@ -1,5 +1,5 @@
 window.DATA_UPDATED = "2026-07-02T01:16:59.972Z";
-window.SCORES_UPDATED = "2026-07-02T14:45:38.183Z";
+window.SCORES_UPDATED = "2026-07-02T14:50:43.067Z";
 window.MATCHES = [
   {
     "home": "Santa Cruz",
@@ -75812,7 +75812,7 @@ window.MATCHES = [
     "round": "Regular Season - 12",
     "odds": null,
     "h2h": null,
-    "elapsed": 86
+    "elapsed": 90
   },
   {
     "home": "Croatia U19",
@@ -75822,7 +75822,7 @@ window.MATCHES = [
     "awayLogo": "https://media.api-sports.io/football/teams/10338.png",
     "country": "World",
     "flag": null,
-    "status": "2H",
+    "status": "FT",
     "kickoff": "2026-07-02T13:00:00+00:00",
     "matchDate": "2026-07-02",
     "homeGoals": 0,
@@ -75893,7 +75893,7 @@ window.MATCHES = [
       "dcx2": 1.3
     },
     "h2h": null,
-    "elapsed": 88
+    "elapsed": null
   },
   {
     "home": "Khan Tengri",
@@ -75907,7 +75907,7 @@ window.MATCHES = [
     "kickoff": "2026-07-02T14:00:00+00:00",
     "matchDate": "2026-07-02",
     "homeGoals": 0,
-    "awayGoals": 0,
+    "awayGoals": 1,
     "homePos": 6,
     "awayPos": 9,
     "tableSize": 14,
@@ -75965,7 +75965,7 @@ window.MATCHES = [
     "round": "Regular Season - 12",
     "odds": null,
     "h2h": null,
-    "elapsed": 4
+    "elapsed": 9
   },
   {
     "home": "Dordoi Bishkek",
@@ -76047,10 +76047,10 @@ window.MATCHES = [
     "awayLogo": "https://media.api-sports.io/football/teams/27432.png",
     "country": "Kyrgyzstan",
     "flag": "https://media.api-sports.io/flags/kg.svg",
-    "status": "1H",
+    "status": "HT",
     "kickoff": "2026-07-02T14:00:00+00:00",
     "matchDate": "2026-07-02",
-    "homeGoals": 1,
+    "homeGoals": 2,
     "awayGoals": 1,
     "homePos": 5,
     "awayPos": 3,
@@ -76109,7 +76109,7 @@ window.MATCHES = [
     "round": "Regular Season - 14",
     "odds": null,
     "h2h": null,
-    "elapsed": 44
+    "elapsed": 45
   },
   {
     "home": "Toktogul",
