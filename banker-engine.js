@@ -2086,6 +2086,20 @@ function valueRecommend(m){
   lambdaHome = Math.min(3.6, Math.max(0.15, lambdaHome));
   lambdaAway = Math.min(3.6, Math.max(0.12, lambdaAway));
 
+  // Real xG nudge (heavy weight) + regression signal, matching Pro.
+  let usedXg=false; const xgReg=xgRegression(m);
+  if(m.xgReal && m.xgHomeReal!=null && m.xgAwayReal!=null){
+    lambdaHome = 0.45*lambdaHome + 0.55*Math.max(0.1, m.xgHomeReal);
+    lambdaAway = 0.45*lambdaAway + 0.55*Math.max(0.1, m.xgAwayReal);
+    if(xgReg){
+      if(xgReg.home.flag==="fade") lambdaHome*=0.90;
+      if(xgReg.home.flag==="back") lambdaHome*=1.08;
+      if(xgReg.away.flag==="fade") lambdaAway*=0.90;
+      if(xgReg.away.flag==="back") lambdaAway*=1.08;
+    }
+    usedXg=true;
+  }
+
   // --- build scoreline matrix 0..8 with Dixon-Coles low-score correction ---
   const MAX=8;
   const rho = -0.05; // Dixon-Coles dependence parameter (typical small negative)
@@ -2191,7 +2205,7 @@ function valueRecommend(m){
     `Model: expected goals ${lambdaHome.toFixed(2)} - ${lambdaAway.toFixed(2)} (Dixon-Coles).`,
     `P(${best.market}) = ${(best.p*100).toFixed(0)}%.${valueNote}`
   ];
-  return valueOut(m, best.market, conf, {lambdaHome,lambdaAway,isValue,edge,prob:best.p}, reasons, gp<6);
+  return valueOut(m, best.market, conf, {lambdaHome,lambdaAway,isValue,edge,prob:best.p,usedXg}, reasons, gp<6);
 }
 
 function valueOut(m, market, conf, model, reasons, lowSample){
@@ -2257,6 +2271,31 @@ function streakRecommendLegacy(m) {
    data, Win/DNB only if the backed team is expected to score 2+, and bet only
    where probability clears a real floor — else No Bet.
    ------------------------------------------------------------------- */
+// ============================================================
+// xG OVERPERFORMANCE SIGNAL  (shared — the real power of xG)
+// ------------------------------------------------------------
+// Compares a team's actual goals to its rolling xG. Sustained OVERperformance
+// (goals >> xG) regresses to the mean → a FADE signal. UNDERperformance
+// (xG >> goals — dominating but not scoring) → a BACK signal (a positive
+// correction is likely coming). This is the edge only xG can see: results that
+// are lying about a team. Returns { home:{delta,flag}, away:{delta,flag} } with
+// flag 'fade' | 'back' | null.
+function xgRegression(m){
+  if(!m || !m.xgReal) return null;
+  const judge=(realXg, actualScore)=>{
+    if(realXg==null || actualScore==null) return {delta:null, flag:null};
+    const delta = Math.round((actualScore - realXg)*100)/100; // + = scoring above xG (lucky)
+    let flag=null;
+    if(delta >= 0.45) flag="fade";
+    else if(delta <= -0.45) flag="back";
+    return {delta, flag};
+  };
+  return {
+    home: judge(m.xgHomeReal, m.homeScoredAtHome),
+    away: judge(m.xgAwayReal, m.awayScoredAway)
+  };
+}
+
 function proRecommend(m){
   const la = m.leagueAvg;
   const leagueAvgTeam = (la && la.reliable && la.goalsPerGame) ? la.goalsPerGame/2 : 1.35;
@@ -2270,7 +2309,7 @@ function proRecommend(m){
     return proOut(m, fl.market, fl.conf, {friendly:true}, [fl.reason]);
   }
 
-  // low-sample regression toward league mean
+// low-sample regression toward league mean
   const gp = m.gamesPlayed!=null ? m.gamesPlayed : 12;
   const w = Math.min(1, gp/12);
   const shrink = r => w*r + (1-w)*leagueAvgTeam;
@@ -2280,13 +2319,20 @@ function proRecommend(m){
   let lambdaHome = leagueAvgTeam * Math.sqrt((hAtt/leagueAvgTeam)*(aDef/leagueAvgTeam));
   let lambdaAway = leagueAvgTeam * Math.sqrt((aAtt/leagueAvgTeam)*(hDef/leagueAvgTeam));
 
-  // REAL xG sharpening: if enrichment provided real xG averages, blend them in.
-  // (xgHomeReal/xgAwayReal are per-match actuals; when present we nudge λ toward
-  // them, weighted modestly so one noisy match can't dominate.)
-  let usedXg=false;
+  // REAL xG sharpening: blend real rolling xG into λ, weighted heavily (xG
+  // predicts future goals better than past results). Also apply the regression
+  // signal — fade a team scoring above its xG, lean into one scoring below.
+  let usedXg=false; const xgReg=xgRegression(m); let xgNote="";
   if(m.xgReal && m.xgHomeReal!=null && m.xgAwayReal!=null){
-    lambdaHome = 0.6*lambdaHome + 0.4*Math.max(0.1, m.xgHomeReal);
-    lambdaAway = 0.6*lambdaAway + 0.4*Math.max(0.1, m.xgAwayReal);
+    lambdaHome = 0.45*lambdaHome + 0.55*Math.max(0.1, m.xgHomeReal);
+    lambdaAway = 0.45*lambdaAway + 0.55*Math.max(0.1, m.xgAwayReal);
+    // regression: nudge λ toward the xG-implied level a team is over/under-shooting
+    if(xgReg){
+      if(xgReg.home.flag==="fade"){ lambdaHome*=0.90; xgNote+=`Home has been scoring above xG (+${xgReg.home.delta}) — regression risk. `; }
+      if(xgReg.home.flag==="back"){ lambdaHome*=1.08; xgNote+=`Home creating more than scoring (${xgReg.home.delta}) — positive regression likely. `; }
+      if(xgReg.away.flag==="fade"){ lambdaAway*=0.90; xgNote+=`Away over-performing xG (+${xgReg.away.delta}) — regression risk. `; }
+      if(xgReg.away.flag==="back"){ lambdaAway*=1.08; xgNote+=`Away under-performing xG (${xgReg.away.delta}) — due a correction. `; }
+    }
     usedXg=true;
   }
   lambdaHome=Math.min(3.6,Math.max(0.12,lambdaHome));
@@ -2349,6 +2395,7 @@ function proRecommend(m){
     `Model: expected goals ${lambdaHome.toFixed(2)} - ${lambdaAway.toFixed(2)}${usedXg?' (sharpened with real xG)':' (estimated)'}.`,
     `P(${best.market}) = ${(best.p*100).toFixed(0)}%.`
   ];
+  if(xgNote) reasons.push(xgNote.trim());
   return proOut(m,best.market,conf,{lambdaHome,lambdaAway,usedXg,prob:best.p},reasons,gp<6);
 }
 
@@ -2747,12 +2794,19 @@ function streakRecommend(m){
     return streakOut(m,"No Bet",null,null,null,["No bookmaker odds — streak picks need odds confirmation."]);
   }
 
-  // ---- team streaks (home team = home form, away team = away form) ----
-  const hWin=winStreak(m.homeForm), aWin=winStreak(m.awayForm);
-  const hNoLoss=noLossStreak(m.homeForm), aNoLoss=noLossStreak(m.awayForm);
-  const hNoWin=noWinStreak(m.homeForm), aNoWin=noWinStreak(m.awayForm);
-  const hLoss=lossStreak(m.homeForm), aLoss=lossStreak(m.awayForm);
-  const hNoDraw=noDrawStreak(m.homeForm), aNoDraw=noDrawStreak(m.awayForm);
+  // ---- team streaks: prefer REAL streaks (any length, from season history);
+  // fall back to last-5 form strings when history wasn't fetched. ----
+  const hs=m.homeStreaks, as=m.awayStreaks;
+  const hWin    = hs ? hs.win    : winStreak(m.homeForm);
+  const aWin    = as ? as.win    : winStreak(m.awayForm);
+  const hNoLoss = hs ? hs.noLoss : noLossStreak(m.homeForm);
+  const aNoLoss = as ? as.noLoss : noLossStreak(m.awayForm);
+  const hNoWin  = hs ? hs.noWin  : noWinStreak(m.homeForm);
+  const aNoWin  = as ? as.noWin  : noWinStreak(m.awayForm);
+  const hLoss   = hs ? hs.loss   : lossStreak(m.homeForm);
+  const aLoss   = as ? as.loss   : lossStreak(m.awayForm);
+  const hNoDraw = hs ? hs.noDraw : noDrawStreak(m.homeForm);
+  const aNoDraw = as ? as.noDraw : noDrawStreak(m.awayForm);
 
   // ---- league trend (League First rule §1-2) ----
   const lt=m.leagueTrends;
@@ -2775,6 +2829,13 @@ function streakRecommend(m){
     if(oppNoWin>=5)s+=3; if(oppLoss>=4)s+=2;
     const oppCS = homeSide? m.awayCleanSheetRate : m.homeCleanSheetRate;
     if(oppCS!=null && oppCS<0.25)s+=1;
+    // HT/FT signal: an opponent that COLLAPSES from HT (loses when trailing) is
+    // weaker; one that's a DRAW-SPECIALIST is LESS exploitable for a straight win.
+    const oppHtft = homeSide ? (as&&as.htft) : (hs&&hs.htft);
+    if(oppHtft){
+      if(oppHtft.collapseRate!=null && oppHtft.collapseRate>=0.60) s+=2; // folds when behind
+      if(oppHtft.drawEndRate!=null && oppHtft.drawEndRate>=0.45) s-=2;   // draw-magnet: HARDER to beat outright
+    }
     return s;
   }
 
@@ -2848,13 +2909,23 @@ function streakRecommend(m){
 
   const teamName = best.homeSide? m.home : m.away;
   const ow=oppWeakness(best.homeSide);
+  // HT/FT context on the backed team and opponent, for the reason line + a
+  // straight-win caution: a team that THROWS leads is riskier to back to win.
+  const teamHtft = best.homeSide ? (hs&&hs.htft) : (as&&as.htft);
+  const oppHtft  = best.homeSide ? (as&&as.htft) : (hs&&hs.htft);
+  const htftNotes=[];
+  if(teamHtft && teamHtft.holdLeadRate!=null) htftNotes.push(`holds leads ${Math.round(teamHtft.holdLeadRate*100)}%`);
+  if(oppHtft && oppHtft.drawEndRate!=null && oppHtft.drawEndRate>=0.45) htftNotes.push(`opponent is a draw-specialist (${Math.round(oppHtft.drawEndRate*100)}% end drawn)`);
+  if(oppHtft && oppHtft.collapseRate!=null && oppHtft.collapseRate>=0.60) htftNotes.push(`opponent collapses when behind (${Math.round(oppHtft.collapseRate*100)}%)`);
+
   const reasons=[
     `${teamName} on a ${best.streak}-game ${best.kind} streak.`,
     `League win trend ${Math.round(leagueWinTrend*100)}%, opponent weakness ${ow}/17.`,
     `Odds ladder confirms ${best.market}. Banker score ${best.score}/18.`
   ];
+  if(htftNotes.length) reasons.push(`HT/FT: ${htftNotes.join('; ')}.`);
   return streakOut(m, best.market, grade, best.score, best.homeSide?"home":"away", reasons,
-    { streakLen:best.streak, oppWeak:ow });
+    { streakLen:best.streak, oppWeak:ow, htft: teamHtft||null });
 }
 
 if (typeof module !== "undefined") module.exports = {
