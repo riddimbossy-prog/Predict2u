@@ -1,5 +1,5 @@
 window.DATA_UPDATED = "2026-07-02T01:16:59.972Z";
-window.SCORES_UPDATED = "2026-07-02T15:10:44.550Z";
+window.SCORES_UPDATED = "2026-07-02T15:15:38.976Z";
 window.MATCHES = [
   {
     "home": "Santa Cruz",
@@ -75965,7 +75965,7 @@ window.MATCHES = [
     "round": "Regular Season - 12",
     "odds": null,
     "h2h": null,
-    "elapsed": 30
+    "elapsed": 35
   },
   {
     "home": "Dordoi Bishkek",
@@ -76109,7 +76109,7 @@ window.MATCHES = [
     "round": "Regular Season - 14",
     "odds": null,
     "h2h": null,
-    "elapsed": 50
+    "elapsed": 55
   },
   {
     "home": "Toktogul",
@@ -76348,7 +76348,7 @@ window.MATCHES = [
       "dcx2": 1.2
     },
     "h2h": null,
-    "elapsed": 10
+    "elapsed": 15
   },
   {
     "home": "BFA",
@@ -76433,7 +76433,7 @@ window.MATCHES = [
       "dcx2": 1.8
     },
     "h2h": null,
-    "elapsed": 10
+    "elapsed": 15
   },
   {
     "home": "Žalgiris II",
@@ -76520,7 +76520,7 @@ window.MATCHES = [
       "dcx2": 2.3
     },
     "h2h": null,
-    "elapsed": 11
+    "elapsed": 16
   },
   {
     "home": "1. FC Nürnberg",
@@ -76718,7 +76718,7 @@ window.MATCHES = [
     "round": "Club Friendlies",
     "odds": null,
     "h2h": null,
-    "elapsed": 5
+    "elapsed": 11
   },
   {
     "home": "NK Varazdin",
@@ -76877,7 +76877,7 @@ window.MATCHES = [
     "kickoff": "2026-07-02T15:00:00+00:00",
     "matchDate": "2026-07-02",
     "homeGoals": 0,
-    "awayGoals": 1,
+    "awayGoals": 2,
     "homePos": null,
     "awayPos": null,
     "tableSize": 20,
@@ -76942,7 +76942,7 @@ window.MATCHES = [
       "dcx2": 1.83
     },
     "h2h": null,
-    "elapsed": 10
+    "elapsed": 15
   },
   {
     "home": "EBK",
