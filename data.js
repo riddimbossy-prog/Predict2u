@@ -1,5 +1,5 @@
 window.DATA_UPDATED = "2026-07-02T01:16:59.972Z";
-window.SCORES_UPDATED = "2026-07-02T10:05:30.253Z";
+window.SCORES_UPDATED = "2026-07-02T10:10:38.930Z";
 window.MATCHES = [
   {
     "home": "Santa Cruz",
@@ -75022,7 +75022,7 @@ window.MATCHES = [
     "kickoff": "2026-07-02T09:00:00+00:00",
     "matchDate": "2026-07-02",
     "homeGoals": 0,
-    "awayGoals": 2,
+    "awayGoals": 3,
     "homePos": null,
     "awayPos": null,
     "tableSize": 20,
@@ -75087,7 +75087,7 @@ window.MATCHES = [
       "dcx2": null
     },
     "h2h": null,
-    "elapsed": 27
+    "elapsed": 32
   },
   {
     "home": "Akademiya Ontustik",
