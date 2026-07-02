@@ -1,5 +1,5 @@
 window.DATA_UPDATED = "2026-07-02T01:16:59.972Z";
-window.SCORES_UPDATED = "2026-07-02T15:20:41.021Z";
+window.SCORES_UPDATED = "2026-07-02T15:25:38.367Z";
 window.MATCHES = [
   {
     "home": "Santa Cruz",
@@ -75311,7 +75311,7 @@ window.MATCHES = [
     "kickoff": "2026-07-02T12:00:00+00:00",
     "matchDate": "2026-07-02",
     "homeGoals": 1,
-    "awayGoals": 0,
+    "awayGoals": 1,
     "homePos": null,
     "awayPos": null,
     "tableSize": 20,
@@ -75907,7 +75907,7 @@ window.MATCHES = [
     "kickoff": "2026-07-02T14:00:00+00:00",
     "matchDate": "2026-07-02",
     "homeGoals": 0,
-    "awayGoals": 1,
+    "awayGoals": 2,
     "homePos": 6,
     "awayPos": 9,
     "tableSize": 14,
@@ -75965,7 +75965,7 @@ window.MATCHES = [
     "round": "Regular Season - 12",
     "odds": null,
     "h2h": null,
-    "elapsed": 40
+    "elapsed": 45
   },
   {
     "home": "Dordoi Bishkek",
@@ -76050,7 +76050,7 @@ window.MATCHES = [
     "status": "2H",
     "kickoff": "2026-07-02T14:00:00+00:00",
     "matchDate": "2026-07-02",
-    "homeGoals": 2,
+    "homeGoals": 3,
     "awayGoals": 2,
     "homePos": 5,
     "awayPos": 3,
@@ -76109,7 +76109,7 @@ window.MATCHES = [
     "round": "Regular Season - 14",
     "odds": null,
     "h2h": null,
-    "elapsed": 60
+    "elapsed": 65
   },
   {
     "home": "Toktogul",
@@ -76348,7 +76348,7 @@ window.MATCHES = [
       "dcx2": 1.2
     },
     "h2h": null,
-    "elapsed": 20
+    "elapsed": 25
   },
   {
     "home": "BFA",
@@ -76433,7 +76433,7 @@ window.MATCHES = [
       "dcx2": 1.8
     },
     "h2h": null,
-    "elapsed": 20
+    "elapsed": 25
   },
   {
     "home": "Žalgiris II",
@@ -76520,7 +76520,7 @@ window.MATCHES = [
       "dcx2": 2.3
     },
     "h2h": null,
-    "elapsed": 21
+    "elapsed": 26
   },
   {
     "home": "1. FC Nürnberg",
@@ -76718,7 +76718,7 @@ window.MATCHES = [
     "round": "Club Friendlies",
     "odds": null,
     "h2h": null,
-    "elapsed": 15
+    "elapsed": 21
   },
   {
     "home": "NK Varazdin",
@@ -76942,7 +76942,7 @@ window.MATCHES = [
       "dcx2": 1.83
     },
     "h2h": null,
-    "elapsed": 20
+    "elapsed": 25
   },
   {
     "home": "EBK",
