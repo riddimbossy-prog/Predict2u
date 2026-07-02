@@ -1,5 +1,5 @@
 window.DATA_UPDATED = "2026-07-02T01:16:59.972Z";
-window.SCORES_UPDATED = "2026-07-02T10:20:59.782Z";
+window.SCORES_UPDATED = "2026-07-02T10:25:27.950Z";
 window.MATCHES = [
   {
     "home": "Santa Cruz",
@@ -75018,7 +75018,7 @@ window.MATCHES = [
     "awayLogo": "https://media.api-sports.io/football/teams/702.png",
     "country": "World",
     "flag": null,
-    "status": "1H",
+    "status": "HT",
     "kickoff": "2026-07-02T09:00:00+00:00",
     "matchDate": "2026-07-02",
     "homeGoals": 0,
@@ -75087,7 +75087,7 @@ window.MATCHES = [
       "dcx2": null
     },
     "h2h": null,
-    "elapsed": 42
+    "elapsed": 45
   },
   {
     "home": "Akademiya Ontustik",
