@@ -1,5 +1,5 @@
 window.DATA_UPDATED = "2026-07-02T01:16:59.972Z";
-window.SCORES_UPDATED = "2026-07-02T12:55:33.689Z";
+window.SCORES_UPDATED = "2026-07-02T13:06:04.896Z";
 window.MATCHES = [
   {
     "home": "Santa Cruz",
@@ -75097,7 +75097,7 @@ window.MATCHES = [
     "awayLogo": "https://media.api-sports.io/football/teams/4566.png",
     "country": "Kazakhstan",
     "flag": "https://media.api-sports.io/flags/kz.svg",
-    "status": "HT",
+    "status": "2H",
     "kickoff": "2026-07-02T12:00:00+00:00",
     "matchDate": "2026-07-02",
     "homeGoals": 0,
@@ -75159,7 +75159,7 @@ window.MATCHES = [
     "round": "Regular Season - 12",
     "odds": null,
     "h2h": null,
-    "elapsed": 45
+    "elapsed": 47
   },
   {
     "home": "Astana II",
@@ -75169,7 +75169,7 @@ window.MATCHES = [
     "awayLogo": "https://media.api-sports.io/football/teams/27633.png",
     "country": "Kazakhstan",
     "flag": "https://media.api-sports.io/flags/kz.svg",
-    "status": "HT",
+    "status": "2H",
     "kickoff": "2026-07-02T12:00:00+00:00",
     "matchDate": "2026-07-02",
     "homeGoals": 6,
@@ -75231,7 +75231,7 @@ window.MATCHES = [
     "round": "Regular Season - 12",
     "odds": null,
     "h2h": null,
-    "elapsed": 45
+    "elapsed": 50
   },
   {
     "home": "Dundee",
@@ -75678,7 +75678,7 @@ window.MATCHES = [
     "awayLogo": "https://media.api-sports.io/football/teams/27725.png",
     "country": "Bhutan",
     "flag": "https://media.api-sports.io/flags/bt.svg",
-    "status": "HT",
+    "status": "2H",
     "kickoff": "2026-07-02T12:00:00+00:00",
     "matchDate": "2026-07-02",
     "homeGoals": 0,
@@ -75740,7 +75740,7 @@ window.MATCHES = [
     "round": null,
     "odds": null,
     "h2h": null,
-    "elapsed": 45
+    "elapsed": 50
   },
   {
     "home": "Tobol 2",
@@ -75750,11 +75750,11 @@ window.MATCHES = [
     "awayLogo": "https://media.api-sports.io/football/teams/4546.png",
     "country": "Kazakhstan",
     "flag": "https://media.api-sports.io/flags/kz.svg",
-    "status": "NS",
+    "status": "1H",
     "kickoff": "2026-07-02T13:00:00+00:00",
     "matchDate": "2026-07-02",
-    "homeGoals": null,
-    "awayGoals": null,
+    "homeGoals": 1,
+    "awayGoals": 0,
     "homePos": 12,
     "awayPos": 11,
     "tableSize": 14,
@@ -75812,7 +75812,7 @@ window.MATCHES = [
     "round": "Regular Season - 12",
     "odds": null,
     "h2h": null,
-    "elapsed": null
+    "elapsed": 4
   },
   {
     "home": "Croatia U19",
@@ -75822,11 +75822,11 @@ window.MATCHES = [
     "awayLogo": "https://media.api-sports.io/football/teams/10338.png",
     "country": "World",
     "flag": null,
-    "status": "NS",
+    "status": "1H",
     "kickoff": "2026-07-02T13:00:00+00:00",
     "matchDate": "2026-07-02",
-    "homeGoals": null,
-    "awayGoals": null,
+    "homeGoals": 0,
+    "awayGoals": 0,
     "homePos": null,
     "awayPos": null,
     "tableSize": 20,
@@ -75893,7 +75893,7 @@ window.MATCHES = [
       "dcx2": 1.3
     },
     "h2h": null,
-    "elapsed": null
+    "elapsed": 6
   },
   {
     "home": "Khan Tengri",
