@@ -1,5 +1,5 @@
 window.DATA_UPDATED = "2026-07-02T01:16:59.972Z";
-window.SCORES_UPDATED = "2026-07-02T19:00:56.124Z";
+window.SCORES_UPDATED = "2026-07-02T19:26:31.972Z";
 window.MATCHES = [
   {
     "home": "Santa Cruz",
@@ -76596,11 +76596,11 @@ window.MATCHES = [
     "awayLogo": "https://media.api-sports.io/football/teams/2398.png",
     "country": "World",
     "flag": null,
-    "status": "NS",
+    "status": "FT",
     "kickoff": "2026-07-02T15:00:00+00:00",
     "matchDate": "2026-07-02",
-    "homeGoals": null,
-    "awayGoals": null,
+    "homeGoals": 2,
+    "awayGoals": 1,
     "homePos": null,
     "awayPos": null,
     "tableSize": 20,
@@ -77548,11 +77548,11 @@ window.MATCHES = [
     "awayLogo": "https://media.api-sports.io/football/teams/9346.png",
     "country": "World",
     "flag": null,
-    "status": "NS",
+    "status": "FT",
     "kickoff": "2026-07-02T16:30:00+00:00",
     "matchDate": "2026-07-02",
-    "homeGoals": null,
-    "awayGoals": null,
+    "homeGoals": 1,
+    "awayGoals": 2,
     "homePos": null,
     "awayPos": null,
     "tableSize": 20,
@@ -77614,11 +77614,11 @@ window.MATCHES = [
     "awayLogo": "https://media.api-sports.io/football/teams/620.png",
     "country": "World",
     "flag": null,
-    "status": "NS",
+    "status": "FT",
     "kickoff": "2026-07-02T16:30:00+00:00",
     "matchDate": "2026-07-02",
-    "homeGoals": null,
-    "awayGoals": null,
+    "homeGoals": 0,
+    "awayGoals": 9,
     "homePos": null,
     "awayPos": null,
     "tableSize": 20,
@@ -78080,11 +78080,11 @@ window.MATCHES = [
     "awayLogo": "https://media.api-sports.io/football/teams/16718.png",
     "country": "Estonia",
     "flag": "https://media.api-sports.io/flags/ee.svg",
-    "status": "2H",
+    "status": "FT",
     "kickoff": "2026-07-02T17:30:00+00:00",
     "matchDate": "2026-07-02",
     "homeGoals": 0,
-    "awayGoals": 8,
+    "awayGoals": 10,
     "homePos": null,
     "awayPos": null,
     "tableSize": 20,
@@ -78136,7 +78136,7 @@ window.MATCHES = [
     "round": "Round of 128",
     "odds": null,
     "h2h": null,
-    "elapsed": 76
+    "elapsed": null
   },
   {
     "home": "Cove Rangers",
@@ -78146,7 +78146,7 @@ window.MATCHES = [
     "awayLogo": "https://media.api-sports.io/football/teams/7452.png",
     "country": "World",
     "flag": null,
-    "status": "HT",
+    "status": "2H",
     "kickoff": "2026-07-02T18:00:00+00:00",
     "matchDate": "2026-07-02",
     "homeGoals": 0,
@@ -78215,7 +78215,7 @@ window.MATCHES = [
       "dcx2": 5
     },
     "h2h": null,
-    "elapsed": 45
+    "elapsed": 70
   },
   {
     "home": "Sao Luis",
@@ -78297,11 +78297,11 @@ window.MATCHES = [
     "awayLogo": "https://media.api-sports.io/football/teams/775.png",
     "country": "World",
     "flag": null,
-    "status": "NS",
+    "status": "1H",
     "kickoff": "2026-07-02T19:00:00+00:00",
     "matchDate": "2026-07-02",
-    "homeGoals": null,
-    "awayGoals": null,
+    "homeGoals": 0,
+    "awayGoals": 0,
     "homePos": 1,
     "awayPos": 2,
     "tableSize": 60,
@@ -78385,7 +78385,7 @@ window.MATCHES = [
       "away": 11
     },
     "lineupConfirmed": true,
-    "elapsed": null
+    "elapsed": 26
   },
   {
     "home": "Dundee II",
@@ -78464,7 +78464,7 @@ window.MATCHES = [
       "dcx2": 1.03
     },
     "h2h": null,
-    "elapsed": 1
+    "elapsed": 27
   },
   {
     "home": "Vikingur Reykjavik",
@@ -78474,11 +78474,11 @@ window.MATCHES = [
     "awayLogo": "https://media.api-sports.io/football/teams/272.png",
     "country": "Iceland",
     "flag": "https://media.api-sports.io/flags/is.svg",
-    "status": "NS",
+    "status": "1H",
     "kickoff": "2026-07-02T19:15:00+00:00",
     "matchDate": "2026-07-02",
-    "homeGoals": null,
-    "awayGoals": null,
+    "homeGoals": 1,
+    "awayGoals": 0,
     "homePos": 1,
     "awayPos": 8,
     "tableSize": 12,
@@ -78551,7 +78551,7 @@ window.MATCHES = [
       "dcx2": 4.33
     },
     "h2h": null,
-    "elapsed": null
+    "elapsed": 11
   },
   {
     "home": "Birmingham Legion II",
