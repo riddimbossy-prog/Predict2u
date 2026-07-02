@@ -1,5 +1,5 @@
 window.DATA_UPDATED = "2026-07-02T01:16:59.972Z";
-window.SCORES_UPDATED = "2026-07-02T02:35:32.602Z";
+window.SCORES_UPDATED = "2026-07-02T02:40:40.252Z";
 window.MATCHES = [
   {
     "home": "Santa Cruz",
@@ -74123,7 +74123,7 @@ window.MATCHES = [
     "awayLogo": "https://media.api-sports.io/football/teams/24018.png",
     "country": "USA",
     "flag": "https://media.api-sports.io/flags/us.svg",
-    "status": "2H",
+    "status": "FT",
     "kickoff": "2026-07-02T00:30:00+00:00",
     "matchDate": "2026-07-02",
     "homeGoals": 3,
@@ -74192,7 +74192,7 @@ window.MATCHES = [
       "dcx2": 2.3
     },
     "h2h": null,
-    "elapsed": 90
+    "elapsed": null
   },
   {
     "home": "Marin",
@@ -74485,7 +74485,7 @@ window.MATCHES = [
     "kickoff": "2026-07-02T01:00:00+00:00",
     "matchDate": "2026-07-02",
     "homeGoals": 0,
-    "awayGoals": 0,
+    "awayGoals": 1,
     "homePos": 5,
     "awayPos": 8,
     "tableSize": 17,
@@ -74568,7 +74568,7 @@ window.MATCHES = [
       "draw": 3.3,
       "away": 3.25
     },
-    "elapsed": 28
+    "elapsed": 33
   },
   {
     "home": "New Mexico United",
@@ -74713,7 +74713,7 @@ window.MATCHES = [
       "dcx2": 1.8
     },
     "h2h": null,
-    "elapsed": 26
+    "elapsed": 32
   },
   {
     "home": "West Seattle Junction",
@@ -74723,11 +74723,11 @@ window.MATCHES = [
     "awayLogo": "https://media.api-sports.io/football/teams/25953.png",
     "country": "USA",
     "flag": "https://media.api-sports.io/flags/us.svg",
-    "status": "NS",
+    "status": "1H",
     "kickoff": "2026-07-02T02:30:00+00:00",
     "matchDate": "2026-07-02",
-    "homeGoals": null,
-    "awayGoals": null,
+    "homeGoals": 0,
+    "awayGoals": 0,
     "homePos": null,
     "awayPos": null,
     "tableSize": 20,
@@ -74779,7 +74779,7 @@ window.MATCHES = [
     "round": "Group Stage",
     "odds": null,
     "h2h": null,
-    "elapsed": null
+    "elapsed": 4
   },
   {
     "home": "Union Omaha",
@@ -74789,11 +74789,11 @@ window.MATCHES = [
     "awayLogo": "https://media.api-sports.io/football/teams/25838.png",
     "country": "USA",
     "flag": "https://media.api-sports.io/flags/us.svg",
-    "status": "NS",
+    "status": "1H",
     "kickoff": "2026-07-02T02:30:00+00:00",
     "matchDate": "2026-07-02",
-    "homeGoals": null,
-    "awayGoals": null,
+    "homeGoals": 0,
+    "awayGoals": 0,
     "homePos": 1,
     "awayPos": 4,
     "tableSize": 17,
@@ -74876,7 +74876,7 @@ window.MATCHES = [
       "draw": 3.75,
       "away": 4.1
     },
-    "elapsed": null
+    "elapsed": 4
   },
   {
     "home": "Karpaty",
