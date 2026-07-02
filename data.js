@@ -1,5 +1,5 @@
 window.DATA_UPDATED = "2026-07-02T01:16:59.972Z";
-window.SCORES_UPDATED = "2026-07-02T13:50:47.917Z";
+window.SCORES_UPDATED = "2026-07-02T13:55:32.609Z";
 window.MATCHES = [
   {
     "home": "Santa Cruz",
@@ -75097,7 +75097,7 @@ window.MATCHES = [
     "awayLogo": "https://media.api-sports.io/football/teams/4566.png",
     "country": "Kazakhstan",
     "flag": "https://media.api-sports.io/flags/kz.svg",
-    "status": "2H",
+    "status": "FT",
     "kickoff": "2026-07-02T12:00:00+00:00",
     "matchDate": "2026-07-02",
     "homeGoals": 1,
@@ -75159,7 +75159,7 @@ window.MATCHES = [
     "round": "Regular Season - 12",
     "odds": null,
     "h2h": null,
-    "elapsed": 90
+    "elapsed": null
   },
   {
     "home": "Astana II",
@@ -75169,7 +75169,7 @@ window.MATCHES = [
     "awayLogo": "https://media.api-sports.io/football/teams/27633.png",
     "country": "Kazakhstan",
     "flag": "https://media.api-sports.io/flags/kz.svg",
-    "status": "2H",
+    "status": "FT",
     "kickoff": "2026-07-02T12:00:00+00:00",
     "matchDate": "2026-07-02",
     "homeGoals": 6,
@@ -75231,7 +75231,7 @@ window.MATCHES = [
     "round": "Regular Season - 12",
     "odds": null,
     "h2h": null,
-    "elapsed": 90
+    "elapsed": null
   },
   {
     "home": "Dundee",
@@ -75678,7 +75678,7 @@ window.MATCHES = [
     "awayLogo": "https://media.api-sports.io/football/teams/27725.png",
     "country": "Bhutan",
     "flag": "https://media.api-sports.io/flags/bt.svg",
-    "status": "2H",
+    "status": "FT",
     "kickoff": "2026-07-02T12:00:00+00:00",
     "matchDate": "2026-07-02",
     "homeGoals": 2,
@@ -75740,7 +75740,7 @@ window.MATCHES = [
     "round": null,
     "odds": null,
     "h2h": null,
-    "elapsed": 90
+    "elapsed": null
   },
   {
     "home": "Tobol 2",
