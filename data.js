@@ -1,5 +1,5 @@
 window.DATA_UPDATED = "2026-07-02T01:16:59.972Z";
-window.SCORES_UPDATED = "2026-07-02T16:21:08.564Z";
+window.SCORES_UPDATED = "2026-07-02T16:26:22.349Z";
 window.MATCHES = [
   {
     "home": "Santa Cruz",
@@ -75965,7 +75965,7 @@ window.MATCHES = [
     "round": "Regular Season - 12",
     "odds": null,
     "h2h": null,
-    "elapsed": 84
+    "elapsed": 89
   },
   {
     "home": "Dordoi Bishkek",
@@ -76190,11 +76190,11 @@ window.MATCHES = [
     "awayLogo": "https://media.api-sports.io/football/teams/19449.png",
     "country": "World",
     "flag": null,
-    "status": "NS",
+    "status": "FT",
     "kickoff": "2026-07-02T14:00:00+00:00",
     "matchDate": "2026-07-02",
-    "homeGoals": null,
-    "awayGoals": null,
+    "homeGoals": 1,
+    "awayGoals": 0,
     "homePos": null,
     "awayPos": null,
     "tableSize": 20,
@@ -76348,7 +76348,7 @@ window.MATCHES = [
       "dcx2": 1.2
     },
     "h2h": null,
-    "elapsed": 66
+    "elapsed": 71
   },
   {
     "home": "BFA",
@@ -76433,7 +76433,7 @@ window.MATCHES = [
       "dcx2": 1.8
     },
     "h2h": null,
-    "elapsed": 64
+    "elapsed": 70
   },
   {
     "home": "Žalgiris II",
@@ -76520,7 +76520,7 @@ window.MATCHES = [
       "dcx2": 2.3
     },
     "h2h": null,
-    "elapsed": 67
+    "elapsed": 72
   },
   {
     "home": "1. FC Nürnberg",
@@ -76718,7 +76718,7 @@ window.MATCHES = [
     "round": "Club Friendlies",
     "odds": null,
     "h2h": null,
-    "elapsed": 61
+    "elapsed": 66
   },
   {
     "home": "NK Varazdin",
@@ -76784,7 +76784,7 @@ window.MATCHES = [
     "round": "Club Friendlies",
     "odds": null,
     "h2h": null,
-    "elapsed": 21
+    "elapsed": 27
   },
   {
     "home": "Dekani",
@@ -76798,7 +76798,7 @@ window.MATCHES = [
     "kickoff": "2026-07-02T15:00:00+00:00",
     "matchDate": "2026-07-02",
     "homeGoals": 0,
-    "awayGoals": 1,
+    "awayGoals": 2,
     "homePos": null,
     "awayPos": null,
     "tableSize": 20,
@@ -76863,7 +76863,7 @@ window.MATCHES = [
       "dcx2": 1.01
     },
     "h2h": null,
-    "elapsed": 19
+    "elapsed": 24
   },
   {
     "home": "Wieczysta Kraków",
@@ -76942,7 +76942,7 @@ window.MATCHES = [
       "dcx2": 1.83
     },
     "h2h": null,
-    "elapsed": 64
+    "elapsed": 69
   },
   {
     "home": "EBK",
@@ -77126,7 +77126,7 @@ window.MATCHES = [
       "draw": 3.7,
       "away": 3.5
     },
-    "elapsed": 21
+    "elapsed": 27
   },
   {
     "home": "FC jazz",
@@ -77213,7 +77213,7 @@ window.MATCHES = [
       "dcx2": 2.45
     },
     "h2h": null,
-    "elapsed": 20
+    "elapsed": 25
   },
   {
     "home": "PPJ",
@@ -77300,7 +77300,7 @@ window.MATCHES = [
       "dcx2": 1.65
     },
     "h2h": null,
-    "elapsed": 20
+    "elapsed": 26
   },
   {
     "home": "Tartu Welco",
@@ -77385,7 +77385,7 @@ window.MATCHES = [
       "dcx2": 1.5
     },
     "h2h": null,
-    "elapsed": 21
+    "elapsed": 26
   },
   {
     "home": "Kuressaare",
@@ -77472,7 +77472,7 @@ window.MATCHES = [
       "dcx2": 1.07
     },
     "h2h": null,
-    "elapsed": 19
+    "elapsed": 24
   },
   {
     "home": "FC BW Linz",
