@@ -1,5 +1,5 @@
 window.DATA_UPDATED = "2026-07-02T01:16:59.972Z";
-window.SCORES_UPDATED = "2026-07-02T16:46:17.421Z";
+window.SCORES_UPDATED = "2026-07-02T16:50:51.343Z";
 window.MATCHES = [
   {
     "home": "Santa Cruz",
@@ -75521,7 +75521,7 @@ window.MATCHES = [
     "status": "FT",
     "kickoff": "2026-07-02T12:00:00+00:00",
     "matchDate": "2026-07-02",
-    "homeGoals": 3,
+    "homeGoals": 4,
     "awayGoals": 1,
     "homePos": null,
     "awayPos": null,
@@ -76271,7 +76271,7 @@ window.MATCHES = [
     "awayLogo": "https://media.api-sports.io/football/teams/389.png",
     "country": "Belarus",
     "flag": "https://media.api-sports.io/flags/by.svg",
-    "status": "2H",
+    "status": "FT",
     "kickoff": "2026-07-02T15:00:00+00:00",
     "matchDate": "2026-07-02",
     "homeGoals": 0,
@@ -76348,7 +76348,7 @@ window.MATCHES = [
       "dcx2": 1.2
     },
     "h2h": null,
-    "elapsed": 90
+    "elapsed": null
   },
   {
     "home": "BFA",
@@ -76433,7 +76433,7 @@ window.MATCHES = [
       "dcx2": 1.8
     },
     "h2h": null,
-    "elapsed": 89
+    "elapsed": 90
   },
   {
     "home": "Žalgiris II",
@@ -76443,7 +76443,7 @@ window.MATCHES = [
     "awayLogo": "https://media.api-sports.io/football/teams/23156.png",
     "country": "Lithuania",
     "flag": "https://media.api-sports.io/flags/lt.svg",
-    "status": "2H",
+    "status": "FT",
     "kickoff": "2026-07-02T15:00:00+00:00",
     "matchDate": "2026-07-02",
     "homeGoals": 3,
@@ -76520,7 +76520,7 @@ window.MATCHES = [
       "dcx2": 2.3
     },
     "h2h": null,
-    "elapsed": 90
+    "elapsed": null
   },
   {
     "home": "1. FC Nürnberg",
@@ -76666,7 +76666,7 @@ window.MATCHES = [
     "kickoff": "2026-07-02T15:00:00+00:00",
     "matchDate": "2026-07-02",
     "homeGoals": 1,
-    "awayGoals": 2,
+    "awayGoals": 3,
     "homePos": null,
     "awayPos": null,
     "tableSize": 20,
@@ -76718,7 +76718,7 @@ window.MATCHES = [
     "round": "Club Friendlies",
     "odds": null,
     "h2h": null,
-    "elapsed": 86
+    "elapsed": 90
   },
   {
     "home": "NK Varazdin",
@@ -76728,7 +76728,7 @@ window.MATCHES = [
     "awayLogo": "https://media.api-sports.io/football/teams/2578.png",
     "country": "World",
     "flag": null,
-    "status": "1H",
+    "status": "HT",
     "kickoff": "2026-07-02T15:00:00+00:00",
     "matchDate": "2026-07-02",
     "homeGoals": 1,
@@ -76794,7 +76794,7 @@ window.MATCHES = [
     "awayLogo": "https://media.api-sports.io/football/teams/2592.png",
     "country": "World",
     "flag": null,
-    "status": "1H",
+    "status": "HT",
     "kickoff": "2026-07-02T15:00:00+00:00",
     "matchDate": "2026-07-02",
     "homeGoals": 0,
@@ -76863,7 +76863,7 @@ window.MATCHES = [
       "dcx2": 1.01
     },
     "h2h": null,
-    "elapsed": 44
+    "elapsed": 45
   },
   {
     "home": "Wieczysta Kraków",
@@ -76873,7 +76873,7 @@ window.MATCHES = [
     "awayLogo": "https://media.api-sports.io/football/teams/4257.png",
     "country": "World",
     "flag": null,
-    "status": "2H",
+    "status": "FT",
     "kickoff": "2026-07-02T15:00:00+00:00",
     "matchDate": "2026-07-02",
     "homeGoals": 1,
@@ -76942,7 +76942,7 @@ window.MATCHES = [
       "dcx2": 1.83
     },
     "h2h": null,
-    "elapsed": 89
+    "elapsed": null
   },
   {
     "home": "EBK",
@@ -77029,7 +77029,7 @@ window.MATCHES = [
       "dcx2": 1.17
     },
     "h2h": null,
-    "elapsed": 58
+    "elapsed": 62
   },
   {
     "home": "Lyn",
@@ -77039,7 +77039,7 @@ window.MATCHES = [
     "awayLogo": "https://media.api-sports.io/football/teams/2148.png",
     "country": "Norway",
     "flag": "https://media.api-sports.io/flags/no.svg",
-    "status": "1H",
+    "status": "HT",
     "kickoff": "2026-07-02T16:00:00+00:00",
     "matchDate": "2026-07-02",
     "homeGoals": 5,
@@ -77136,7 +77136,7 @@ window.MATCHES = [
     "awayLogo": "https://media.api-sports.io/football/teams/10199.png",
     "country": "Finland",
     "flag": "https://media.api-sports.io/flags/fi.svg",
-    "status": "1H",
+    "status": "HT",
     "kickoff": "2026-07-02T16:00:00+00:00",
     "matchDate": "2026-07-02",
     "homeGoals": 0,
@@ -77223,7 +77223,7 @@ window.MATCHES = [
     "awayLogo": "https://media.api-sports.io/football/teams/9174.png",
     "country": "Finland",
     "flag": "https://media.api-sports.io/flags/fi.svg",
-    "status": "1H",
+    "status": "HT",
     "kickoff": "2026-07-02T16:00:00+00:00",
     "matchDate": "2026-07-02",
     "homeGoals": 0,
@@ -77395,7 +77395,7 @@ window.MATCHES = [
     "awayLogo": "https://media.api-sports.io/football/teams/687.png",
     "country": "Estonia",
     "flag": "https://media.api-sports.io/flags/ee.svg",
-    "status": "1H",
+    "status": "HT",
     "kickoff": "2026-07-02T16:00:00+00:00",
     "matchDate": "2026-07-02",
     "homeGoals": 0,
@@ -77472,7 +77472,7 @@ window.MATCHES = [
       "dcx2": 1.07
     },
     "h2h": null,
-    "elapsed": 44
+    "elapsed": 45
   },
   {
     "home": "FC BW Linz",
