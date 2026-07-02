@@ -46,16 +46,26 @@ jobs:
         run: |
           git config user.name "predicto-bot"
           git config user.email "bot@users.noreply.github.com"
-          if [ -n "$(git status --porcelain data.js track-log.json)" ]; then
-            git add data.js track-log.json
-            git commit -m "Update scores + forward tracker"
-            for i in 1 2 3; do
-              git pull --rebase --autostash origin main && git push && { echo "pushed."; break; }
-              echo "Push attempt $i failed — retrying..."; sleep 5
-            done
-          else
-            echo "No changes."
+          if [ -z "$(git status --porcelain data.js track-log.json)" ]; then
+            echo "No changes."; exit 0
           fi
+          git add data.js track-log.json
+          git commit -m "Update scores + forward tracker"
+          # data.js / track-log.json are GENERATED — on a race with the full data
+          # fetch, take OUR fresh copy rather than dying on an unmergeable rebase.
+          for i in 1 2 3 4 5; do
+            git fetch origin main
+            if git rebase origin/main; then
+              :
+            else
+              echo "Rebase conflict on generated files — keeping our fresh copies."
+              git checkout --ours data.js track-log.json 2>/dev/null || true
+              git add data.js track-log.json 2>/dev/null || true
+              GIT_EDITOR=true git rebase --continue || git rebase --abort
+            fi
+            if git push origin HEAD:main; then echo "pushed (attempt $i)."; break; fi
+            echo "Push attempt $i failed (remote moved) — syncing and retrying..."; sleep $((5 * i))
+          done
       - name: Configure Pages
         uses: actions/configure-pages@v5
       - name: Upload site as Pages artifact
