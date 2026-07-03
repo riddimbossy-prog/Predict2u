@@ -1,5 +1,5 @@
 window.DATA_UPDATED = "2026-07-03T20:12:54.418Z";
-window.SCORES_UPDATED = "2026-07-03T20:45:32.754Z";
+window.SCORES_UPDATED = "2026-07-03T20:50:43.827Z";
 window.MATCHES = [
   {
     "home": "Santa Cruz",
@@ -55882,7 +55882,7 @@ window.MATCHES = [
     "round": "Group Stage",
     "odds": null,
     "h2h": null,
-    "elapsed": 77
+    "elapsed": 82
   },
   {
     "home": "Shelbourne",
@@ -56032,7 +56032,7 @@ window.MATCHES = [
       "dcx2": 1.83
     },
     "h2h": null,
-    "elapsed": 87
+    "elapsed": 90
   },
   {
     "home": "FH hafnarfjordur",
@@ -56182,7 +56182,7 @@ window.MATCHES = [
       "dcx2": 1.48
     },
     "h2h": null,
-    "elapsed": 74
+    "elapsed": 79
   },
   {
     "home": "Grotta",
@@ -56332,7 +56332,7 @@ window.MATCHES = [
       "dcx2": 1.28
     },
     "h2h": null,
-    "elapsed": 73
+    "elapsed": 78
   },
   {
     "home": "IR Reykjavik",
@@ -56482,7 +56482,7 @@ window.MATCHES = [
       "dcx2": 1.28
     },
     "h2h": null,
-    "elapsed": 74
+    "elapsed": 79
   },
   {
     "home": "Njardvik",
@@ -56632,7 +56632,7 @@ window.MATCHES = [
       "dcx2": 1.48
     },
     "h2h": null,
-    "elapsed": 75
+    "elapsed": 80
   },
   {
     "home": "Ægir",
@@ -56782,7 +56782,7 @@ window.MATCHES = [
       "dcx2": 1.11
     },
     "h2h": null,
-    "elapsed": 74
+    "elapsed": 79
   },
   {
     "home": "KFG",
@@ -56930,7 +56930,7 @@ window.MATCHES = [
       "dcx2": 1.13
     },
     "h2h": null,
-    "elapsed": 68
+    "elapsed": 73
   },
   {
     "home": "Fernando De La Mora",
