@@ -94,18 +94,23 @@ jobs:
           # discarded here so `git rebase` can't abort with exit 128 on a dirty tree.
           git stash -u 2>/dev/null || true
           git stash drop 2>/dev/null || true
-          # Generated files — on a race with the scores workflow, keep OUR fresh copy
-          # rather than dying on an unmergeable rebase conflict (the bug that blocked
-          # the push before). Retry with backoff.
+          # Generated files — on a race with the scores workflow, keep OUR fresh copy.
+          # NOTE: during a rebase, --ours/--theirs are INVERTED (--ours = origin's
+          # side). The old `git checkout --ours` therefore kept the STALE remote
+          # data.js while claiming to keep ours — pushes were silently wrong or
+          # aborted. `git rebase -X theirs` correctly favors THIS run's files.
+          PUSHED=0
           for i in 1 2 3 4 5; do
             git fetch origin main
-            if ! git rebase origin/main; then
-              echo "Rebase conflict on generated files — keeping our fresh copies."
-              git checkout --ours data.js xg.js today.png today.svg 2>/dev/null || true
-              git checkout --ours daily/ 2>/dev/null || true
-              git add data.js xg.js today.png today.svg daily/ 2>/dev/null || true
-              GIT_EDITOR=true git rebase --continue || git rebase --abort
+            if ! git rebase -X theirs origin/main; then
+              echo "Rebase failed even with -X theirs — aborting and retrying."
+              git rebase --abort 2>/dev/null || true
+              sleep $((5 * i)); continue
             fi
-            if git push origin HEAD:main; then echo "pushed (attempt $i)."; break; fi
+            if git push origin HEAD:main; then echo "pushed (attempt $i)."; PUSHED=1; break; fi
             echo "Push attempt $i failed (remote moved) — syncing and retrying..."; sleep $((5 * i))
           done
+          if [ "$PUSHED" != "1" ]; then
+            echo "ERROR: failed to push after 5 attempts — data.js NOT published."
+            exit 1
+          fi
