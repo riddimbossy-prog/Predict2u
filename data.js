@@ -1,5 +1,5 @@
 window.DATA_UPDATED = "2026-07-02T01:16:59.972Z";
-window.SCORES_UPDATED = "2026-07-03T07:45:32.402Z";
+window.SCORES_UPDATED = "2026-07-03T07:50:38.374Z";
 window.MATCHES = [
   {
     "home": "Santa Cruz",
@@ -65702,7 +65702,7 @@ window.MATCHES = [
     "round": "Club Friendlies",
     "odds": null,
     "h2h": null,
-    "elapsed": 38
+    "elapsed": 43
   },
   {
     "home": "Abdish-Ata",
