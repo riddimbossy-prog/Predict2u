@@ -1,5 +1,5 @@
 window.DATA_UPDATED = "2026-07-02T01:16:59.972Z";
-window.SCORES_UPDATED = "2026-07-03T01:50:37.325Z";
+window.SCORES_UPDATED = "2026-07-03T01:55:51.422Z";
 window.MATCHES = [
   {
     "home": "Santa Cruz",
@@ -59992,7 +59992,7 @@ window.MATCHES = [
       "draw": 3.25,
       "away": 2.35
     },
-    "elapsed": 82
+    "elapsed": 87
   },
   {
     "home": "FC Motown II",
@@ -60002,10 +60002,10 @@ window.MATCHES = [
     "awayLogo": "https://media.api-sports.io/football/teams/16682.png",
     "country": "USA",
     "flag": "https://media.api-sports.io/flags/us.svg",
-    "status": "2H",
+    "status": "FT",
     "kickoff": "2026-07-03T00:00:00+00:00",
     "matchDate": "2026-07-03",
-    "homeGoals": 7,
+    "homeGoals": 8,
     "awayGoals": 0,
     "homePos": null,
     "awayPos": null,
@@ -60058,7 +60058,7 @@ window.MATCHES = [
     "round": "Group Stage",
     "odds": null,
     "h2h": null,
-    "elapsed": 87
+    "elapsed": null
   },
   {
     "home": "Flatirons Rush",
@@ -60269,8 +60269,8 @@ window.MATCHES = [
     "status": "2H",
     "kickoff": "2026-07-03T00:30:00+00:00",
     "matchDate": "2026-07-03",
-    "homeGoals": 1,
-    "awayGoals": 3,
+    "homeGoals": 0,
+    "awayGoals": 0,
     "homePos": null,
     "awayPos": null,
     "tableSize": 20,
@@ -60322,7 +60322,7 @@ window.MATCHES = [
     "round": "Group Stage",
     "odds": null,
     "h2h": null,
-    "elapsed": 55
+    "elapsed": 60
   },
   {
     "home": "O'Higgins",
@@ -60403,7 +60403,7 @@ window.MATCHES = [
       "dcx2": 1.3
     },
     "h2h": null,
-    "elapsed": 61
+    "elapsed": 66
   },
   {
     "home": "Boise",
@@ -60500,7 +60500,7 @@ window.MATCHES = [
       "draw": 3.3,
       "away": 2.6
     },
-    "elapsed": 12
+    "elapsed": 18
   },
   {
     "home": "Redlands",
