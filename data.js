@@ -1,5 +1,5 @@
 window.DATA_UPDATED = "2026-07-02T01:16:59.972Z";
-window.SCORES_UPDATED = "2026-07-03T08:01:02.013Z";
+window.SCORES_UPDATED = "2026-07-03T08:05:31.149Z";
 window.MATCHES = [
   {
     "home": "Santa Cruz",
@@ -60740,11 +60740,11 @@ window.MATCHES = [
     "awayLogo": "https://media.api-sports.io/football/teams/16185.png",
     "country": "Mongolia",
     "flag": "https://media.api-sports.io/flags/mn.svg",
-    "status": "NS",
+    "status": "1H",
     "kickoff": "2026-07-03T08:00:00+00:00",
     "matchDate": "2026-07-03",
-    "homeGoals": null,
-    "awayGoals": null,
+    "homeGoals": 0,
+    "awayGoals": 0,
     "homePos": 2,
     "awayPos": 3,
     "tableSize": 19,
@@ -60802,7 +60802,7 @@ window.MATCHES = [
     "round": "Regular Season - 23",
     "odds": null,
     "h2h": null,
-    "elapsed": null
+    "elapsed": 5
   },
   {
     "home": "Arka Gdynia",
@@ -63846,11 +63846,11 @@ window.MATCHES = [
     "awayLogo": "https://media.api-sports.io/football/teams/1418.png",
     "country": "World",
     "flag": null,
-    "status": "NS",
+    "status": "1H",
     "kickoff": "2026-07-03T12:00:00+00:00",
     "matchDate": "2026-07-03",
-    "homeGoals": null,
-    "awayGoals": null,
+    "homeGoals": 1,
+    "awayGoals": 0,
     "homePos": null,
     "awayPos": null,
     "tableSize": 20,
@@ -63902,7 +63902,7 @@ window.MATCHES = [
     "round": "Club Friendlies",
     "odds": null,
     "h2h": null,
-    "elapsed": null
+    "elapsed": 4
   },
   {
     "home": "CSKA Sofia",
@@ -64110,11 +64110,11 @@ window.MATCHES = [
     "awayLogo": "https://media.api-sports.io/football/teams/3985.png",
     "country": "World",
     "flag": null,
-    "status": "NS",
+    "status": "1H",
     "kickoff": "2026-07-03T12:00:00+00:00",
     "matchDate": "2026-07-03",
-    "homeGoals": null,
-    "awayGoals": null,
+    "homeGoals": 0,
+    "awayGoals": 0,
     "homePos": null,
     "awayPos": null,
     "tableSize": 20,
@@ -64166,7 +64166,7 @@ window.MATCHES = [
     "round": "Club Friendlies",
     "odds": null,
     "h2h": null,
-    "elapsed": null
+    "elapsed": 1
   },
   {
     "home": "Obolon'-Brovar",
