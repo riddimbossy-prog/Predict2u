@@ -1,5 +1,5 @@
 window.DATA_UPDATED = "2026-07-03T22:07:07.413Z";
-window.SCORES_UPDATED = "2026-07-03T23:40:42.979Z";
+window.SCORES_UPDATED = "2026-07-03T23:45:34.344Z";
 window.MATCHES = [
   {
     "home": "Santa Cruz",
@@ -61704,7 +61704,7 @@ window.MATCHES = [
     "xgAwayReal": 0.49,
     "awayXgAgainst": 1.94,
     "lineupConfirmed": true,
-    "elapsed": 80
+    "elapsed": 85
   },
   {
     "home": "Inter Gainesville",
@@ -61869,7 +61869,7 @@ window.MATCHES = [
     "round": "Group Stage",
     "odds": null,
     "h2h": null,
-    "elapsed": 79
+    "elapsed": 84
   },
   {
     "home": "AFC Ann Arbor",
@@ -62555,7 +62555,7 @@ window.MATCHES = [
       "dcx2": 1.02
     },
     "h2h": null,
-    "elapsed": 37
+    "elapsed": 42
   },
   {
     "home": "Loudoun United",
@@ -62735,7 +62735,7 @@ window.MATCHES = [
       "dcx2": 2.15
     },
     "h2h": null,
-    "elapsed": 4
+    "elapsed": 9
   },
   {
     "home": "Western Mass Pioneers",
@@ -62900,7 +62900,7 @@ window.MATCHES = [
     "round": "Group Stage",
     "odds": null,
     "h2h": null,
-    "elapsed": 10
+    "elapsed": 14
   },
   {
     "home": "West Chester United",
@@ -63065,7 +63065,7 @@ window.MATCHES = [
     "round": "Group Stage",
     "odds": null,
     "h2h": null,
-    "elapsed": 1
+    "elapsed": 6
   },
   {
     "home": "USA",
