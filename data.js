@@ -1,5 +1,5 @@
 window.DATA_UPDATED = "2026-07-03T20:12:54.418Z";
-window.SCORES_UPDATED = "2026-07-03T21:40:45.096Z";
+window.SCORES_UPDATED = "2026-07-03T21:45:33.589Z";
 window.MATCHES = [
   {
     "home": "Santa Cruz",
@@ -56944,7 +56944,7 @@ window.MATCHES = [
     "status": "2H",
     "kickoff": "2026-07-03T20:00:00+00:00",
     "matchDate": "2026-07-03",
-    "homeGoals": 1,
+    "homeGoals": 2,
     "awayGoals": 2,
     "homePos": 12,
     "awayPos": 16,
@@ -57078,7 +57078,7 @@ window.MATCHES = [
       "dcx2": 1.7
     },
     "h2h": null,
-    "elapsed": 78
+    "elapsed": 83
   },
   {
     "home": "Argentina",
