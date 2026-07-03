@@ -1,5 +1,5 @@
 window.DATA_UPDATED = "2026-07-02T01:16:59.972Z";
-window.SCORES_UPDATED = "2026-07-03T00:25:30.606Z";
+window.SCORES_UPDATED = "2026-07-03T00:30:51.230Z";
 window.MATCHES = [
   {
     "home": "Santa Cruz",
@@ -59808,7 +59808,7 @@ window.MATCHES = [
       "draw": 5,
       "away": 9
     },
-    "elapsed": 26
+    "elapsed": 31
   },
   {
     "home": "Santo Domingo",
@@ -59895,7 +59895,7 @@ window.MATCHES = [
       "dcx2": 1.44
     },
     "h2h": null,
-    "elapsed": 26
+    "elapsed": 31
   },
   {
     "home": "Birmingham Legion",
@@ -59992,7 +59992,7 @@ window.MATCHES = [
       "draw": 3.25,
       "away": 2.35
     },
-    "elapsed": 19
+    "elapsed": 24
   },
   {
     "home": "FC Motown II",
@@ -60005,7 +60005,7 @@ window.MATCHES = [
     "status": "1H",
     "kickoff": "2026-07-03T00:00:00+00:00",
     "matchDate": "2026-07-03",
-    "homeGoals": 1,
+    "homeGoals": 0,
     "awayGoals": 0,
     "homePos": null,
     "awayPos": null,
@@ -60058,7 +60058,7 @@ window.MATCHES = [
     "round": "Group Stage",
     "odds": null,
     "h2h": null,
-    "elapsed": 21
+    "elapsed": 26
   },
   {
     "home": "Flatirons Rush",
@@ -79060,7 +79060,7 @@ window.MATCHES = [
     "status": "2H",
     "kickoff": "2026-07-02T23:00:00+00:00",
     "matchDate": "2026-07-02",
-    "homeGoals": 0,
+    "homeGoals": 1,
     "awayGoals": 1,
     "homePos": 2,
     "awayPos": 2,
@@ -79145,7 +79145,7 @@ window.MATCHES = [
       "away": 4.75
     },
     "lineupConfirmed": true,
-    "elapsed": 66
+    "elapsed": 71
   },
   {
     "home": "Cuiaba",
@@ -79242,7 +79242,7 @@ window.MATCHES = [
       "draw": 3.3,
       "away": 5
     },
-    "elapsed": 66
+    "elapsed": 71
   },
   {
     "home": "Cedar Stars Rush",
@@ -79308,7 +79308,7 @@ window.MATCHES = [
     "round": "Group Stage",
     "odds": null,
     "h2h": null,
-    "elapsed": 61
+    "elapsed": 66
   },
   {
     "home": "Rochester",
@@ -79374,7 +79374,7 @@ window.MATCHES = [
     "round": "Group Stage",
     "odds": null,
     "h2h": null,
-    "elapsed": 62
+    "elapsed": 67
   },
   {
     "home": "Apotheos",
