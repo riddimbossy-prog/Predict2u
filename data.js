@@ -1,5 +1,5 @@
 window.DATA_UPDATED = "2026-07-03T22:07:07.413Z";
-window.SCORES_UPDATED = "2026-07-03T23:10:42.542Z";
+window.SCORES_UPDATED = "2026-07-03T23:15:34.388Z";
 window.MATCHES = [
   {
     "home": "Santa Cruz",
@@ -61704,7 +61704,7 @@ window.MATCHES = [
     "xgAwayReal": 0.49,
     "awayXgAgainst": 1.94,
     "lineupConfirmed": true,
-    "elapsed": 50
+    "elapsed": 55
   },
   {
     "home": "Inter Gainesville",
@@ -62555,7 +62555,7 @@ window.MATCHES = [
       "dcx2": 1.02
     },
     "h2h": null,
-    "elapsed": 7
+    "elapsed": 11
   },
   {
     "home": "Loudoun United",
