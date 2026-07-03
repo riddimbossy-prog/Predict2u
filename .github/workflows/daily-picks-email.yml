@@ -1,19 +1,19 @@
-name: Daily tracker email
-# Runs each morning, refreshes the forward tracker (settles finished picks,
-# records new ones), then emails the per-engine / per-market / per-league
-# performance report so you can monitor which engines actually work — without
-# opening the repo. Reuses the same Gmail secrets as the results email.
+name: Daily picks email
+# Runs each morning BEFORE the day's games: rebuilds the multi-slip acca
+# images (6 legs per slip) and the top-bankers cards (top 2 per engine,
+# 6 games per card) from the current data.js, commits them, and emails
+# EVERY slip/card as attachments. Reuses the same Gmail secrets.
 
 on:
   schedule:
-    - cron: "45 0 * * *"     # 00:45 UTC daily (after the results email at 00:30)
+    - cron: "15 0 * * *"     # 00:15 UTC daily - ~45 min before the 01:00 GMT kickoffs, using the 21:00 data run
   workflow_dispatch: {}
 
 permissions:
   contents: write
 
 jobs:
-  tracker:
+  picks:
     runs-on: ubuntu-latest
     steps:
       - name: Check out the repository
@@ -22,33 +22,36 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: "20"
-      - name: Refresh tracker and build report
-        run: node track-log.js || echo "tracker skipped"
-      - name: Commit tracker log (if changed)
+      - name: Build acca slips + top-banker cards
+        run: |
+          npm install sharp --no-save || echo "sharp install issue"
+          node generate-acca.js  || echo "acca generation skipped"
+          node generate-image.js || echo "top-bankers generation skipped"
+      - name: Commit the images (if changed)
         run: |
           git config user.name "predicto-bot"
           git config user.email "bot@users.noreply.github.com"
-          if [ -n "$(git status --porcelain track-log.json 2>/dev/null)" ]; then
-            git add track-log.json
-            git commit -m "Forward tracker daily refresh"
-            for i in 1 2 3; do
-              git pull --rebase --autostash origin main && git push && { echo "pushed."; break; }
-              echo "Push attempt $i failed — retrying..."; sleep 5
-            done
-          else
-            echo "No tracker changes."
-          fi
-      - name: Read report into an output
-        id: rpt
+          # per-path guarded adds — a missing file must never kill the job
+          for p in acca.png acca.svg acca-*.png acca-*.svg today.png today.svg today-*.png today-*.svg daily/; do
+            git add -- $p 2>/dev/null || echo "note: $p not present - skipped"
+          done
+          if git diff --staged --quiet; then echo "Nothing staged."; exit 0; fi
+          git commit -m "Daily picks images (acca slips + top-banker cards)"
+          PUSHED=0
+          for i in 1 2 3 4 5; do
+            git pull --rebase --autostash origin main || { sleep $((5*i)); continue; }
+            if git push origin HEAD:main; then echo "pushed (attempt $i)."; PUSHED=1; break; fi
+            echo "Push attempt $i failed — retrying..."; sleep $((5 * i))
+          done
+          if [ "$PUSHED" != "1" ]; then echo "ERROR: failed to push after 5 attempts."; exit 1; fi
+      - name: Collect attachment list
+        id: att
         run: |
-          if [ -f track-report.txt ]; then
-            echo "body<<REPORT_EOF" >> "$GITHUB_OUTPUT"
-            cat track-report.txt >> "$GITHUB_OUTPUT"
-            echo "REPORT_EOF" >> "$GITHUB_OUTPUT"
-          else
-            echo "body=No tracker report generated today (no settled data yet)." >> "$GITHUB_OUTPUT"
-          fi
-      - name: Email the tracker report
+          FILES=$(ls acca.png acca-*.png today.png today-*.png 2>/dev/null | sort -u | paste -sd, -)
+          echo "list=$FILES" >> "$GITHUB_OUTPUT"
+          echo "Attaching: $FILES"
+      - name: Email the picks images
+        if: ${{ steps.att.outputs.list != '' }}
         continue-on-error: true
         uses: dawidd6/action-send-mail@v3
         with:
@@ -57,15 +60,14 @@ jobs:
           secure: true
           username: ${{ secrets.MAIL_USERNAME }}
           password: ${{ secrets.MAIL_PASSWORD }}
-          subject: "Predict2u — Engine Tracker Report"
+          subject: "Predict2u — Today's Bankers (acca slips + top picks)"
           to: predict2u@gmail.com
           from: Predict2u Bot
           body: |
-            Your daily Predict2u forward-tracker report — which engines, markets,
-            and leagues are performing, from real before-kickoff picks.
+            Today's picks attached:
+            - Acca slips (6 legs per image, all engines consulted, no repeats)
+            - Top-banker cards (top 2 from every engine, 6 games per card)
 
-            ${{ steps.rpt.outputs.body }}
-
-            (Full log attached. Numbers only become meaningful past ~100 settled
-            picks per engine. 18+. Gamble responsibly.)
-          attachments: track-report.txt
+            Full board at predict2u.com
+            Heuristic picks, not guarantees. 18+. Gamble responsibly.
+          attachments: ${{ steps.att.outputs.list }}
