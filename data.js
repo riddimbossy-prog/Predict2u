@@ -1,5 +1,5 @@
 window.DATA_UPDATED = "2026-07-03T20:12:54.418Z";
-window.SCORES_UPDATED = "2026-07-03T20:50:43.827Z";
+window.SCORES_UPDATED = "2026-07-03T20:55:29.444Z";
 window.MATCHES = [
   {
     "home": "Santa Cruz",
@@ -53614,7 +53614,7 @@ window.MATCHES = [
     "awayLogo": "https://media.api-sports.io/football/teams/32.png",
     "country": "World",
     "flag": null,
-    "status": "FT",
+    "status": "PEN",
     "kickoff": "2026-07-03T18:00:00+00:00",
     "matchDate": "2026-07-03",
     "homeGoals": 1,
@@ -55761,7 +55761,7 @@ window.MATCHES = [
     "status": "2H",
     "kickoff": "2026-07-03T19:00:00+00:00",
     "matchDate": "2026-07-03",
-    "homeGoals": 3,
+    "homeGoals": 4,
     "awayGoals": 0,
     "homePos": 3,
     "awayPos": 5,
@@ -55882,7 +55882,7 @@ window.MATCHES = [
     "round": "Group Stage",
     "odds": null,
     "h2h": null,
-    "elapsed": 82
+    "elapsed": 88
   },
   {
     "home": "Shelbourne",
@@ -55893,7 +55893,7 @@ window.MATCHES = [
     "awayLogo": "https://media.api-sports.io/football/teams/584.png",
     "country": "Ireland",
     "flag": "https://media.api-sports.io/flags/ie.svg",
-    "status": "2H",
+    "status": "FT",
     "kickoff": "2026-07-03T19:00:00+00:00",
     "matchDate": "2026-07-03",
     "homeGoals": 2,
@@ -56032,7 +56032,7 @@ window.MATCHES = [
       "dcx2": 1.83
     },
     "h2h": null,
-    "elapsed": 90
+    "elapsed": null
   },
   {
     "home": "FH hafnarfjordur",
@@ -56182,7 +56182,7 @@ window.MATCHES = [
       "dcx2": 1.48
     },
     "h2h": null,
-    "elapsed": 79
+    "elapsed": 85
   },
   {
     "home": "Grotta",
@@ -56332,7 +56332,7 @@ window.MATCHES = [
       "dcx2": 1.28
     },
     "h2h": null,
-    "elapsed": 78
+    "elapsed": 83
   },
   {
     "home": "IR Reykjavik",
@@ -56482,7 +56482,7 @@ window.MATCHES = [
       "dcx2": 1.28
     },
     "h2h": null,
-    "elapsed": 79
+    "elapsed": 84
   },
   {
     "home": "Njardvik",
@@ -56632,7 +56632,7 @@ window.MATCHES = [
       "dcx2": 1.48
     },
     "h2h": null,
-    "elapsed": 80
+    "elapsed": 85
   },
   {
     "home": "Ægir",
@@ -56782,7 +56782,7 @@ window.MATCHES = [
       "dcx2": 1.11
     },
     "h2h": null,
-    "elapsed": 79
+    "elapsed": 84
   },
   {
     "home": "KFG",
@@ -56930,7 +56930,7 @@ window.MATCHES = [
       "dcx2": 1.13
     },
     "h2h": null,
-    "elapsed": 73
+    "elapsed": 78
   },
   {
     "home": "Fernando De La Mora",
@@ -56941,7 +56941,7 @@ window.MATCHES = [
     "awayLogo": "https://media.api-sports.io/football/teams/21374.png",
     "country": "Paraguay",
     "flag": "https://media.api-sports.io/flags/py.svg",
-    "status": "1H",
+    "status": "HT",
     "kickoff": "2026-07-03T20:00:00+00:00",
     "matchDate": "2026-07-03",
     "homeGoals": 0,
