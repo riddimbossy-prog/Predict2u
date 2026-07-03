@@ -1,5 +1,5 @@
 window.DATA_UPDATED = "2026-07-02T01:16:59.972Z";
-window.SCORES_UPDATED = "2026-07-03T11:55:31.439Z";
+window.SCORES_UPDATED = "2026-07-03T12:00:55.828Z";
 window.MATCHES = [
   {
     "home": "Santa Cruz",
@@ -61638,11 +61638,11 @@ window.MATCHES = [
     "awayLogo": "https://media.api-sports.io/football/teams/10209.png",
     "country": "Australia",
     "flag": "https://media.api-sports.io/flags/au.svg",
-    "status": "2H",
+    "status": "FT",
     "kickoff": "2026-07-03T10:00:00+00:00",
     "matchDate": "2026-07-03",
     "homeGoals": 3,
-    "awayGoals": 0,
+    "awayGoals": 1,
     "homePos": 7,
     "awayPos": 11,
     "tableSize": 12,
@@ -61713,7 +61713,7 @@ window.MATCHES = [
       "dcx2": 1.91
     },
     "h2h": null,
-    "elapsed": 90
+    "elapsed": null
   },
   {
     "home": "Vejle",
@@ -61927,7 +61927,7 @@ window.MATCHES = [
     "awayLogo": "https://media.api-sports.io/football/teams/20791.png",
     "country": "Australia",
     "flag": "https://media.api-sports.io/flags/au.svg",
-    "status": "2H",
+    "status": "FT",
     "kickoff": "2026-07-03T10:00:00+00:00",
     "matchDate": "2026-07-03",
     "homeGoals": 1,
@@ -62002,7 +62002,7 @@ window.MATCHES = [
       "dcx2": 1.44
     },
     "h2h": null,
-    "elapsed": 90
+    "elapsed": null
   },
   {
     "home": "Prospect United",
@@ -62012,7 +62012,7 @@ window.MATCHES = [
     "awayLogo": "https://media.api-sports.io/football/teams/3766.png",
     "country": "Australia",
     "flag": "https://media.api-sports.io/flags/au.svg",
-    "status": "2H",
+    "status": "FT",
     "kickoff": "2026-07-03T10:00:00+00:00",
     "matchDate": "2026-07-03",
     "homeGoals": 1,
@@ -62087,7 +62087,7 @@ window.MATCHES = [
       "dcx2": 1.3
     },
     "h2h": null,
-    "elapsed": 90
+    "elapsed": null
   },
   {
     "home": "Tensung",
@@ -62231,7 +62231,7 @@ window.MATCHES = [
     "round": "Regular Season - 17",
     "odds": null,
     "h2h": null,
-    "elapsed": 78
+    "elapsed": 83
   },
   {
     "home": "Glenorchy Knights U21",
@@ -62390,7 +62390,7 @@ window.MATCHES = [
       "dcx2": 1.5
     },
     "h2h": null,
-    "elapsed": 68
+    "elapsed": 74
   },
   {
     "home": "Ipswich",
@@ -62462,7 +62462,7 @@ window.MATCHES = [
     "round": "Regular Season - 17",
     "odds": null,
     "h2h": null,
-    "elapsed": 64
+    "elapsed": 70
   },
   {
     "home": "Melbourne Knights",
@@ -62547,7 +62547,7 @@ window.MATCHES = [
       "dcx2": 1.83
     },
     "h2h": null,
-    "elapsed": 68
+    "elapsed": 73
   },
   {
     "home": "Northcote City",
@@ -62632,7 +62632,7 @@ window.MATCHES = [
       "dcx2": 2.1
     },
     "h2h": null,
-    "elapsed": 68
+    "elapsed": 74
   },
   {
     "home": "Brunswick Juventus FC",
@@ -62646,7 +62646,7 @@ window.MATCHES = [
     "kickoff": "2026-07-03T10:30:00+00:00",
     "matchDate": "2026-07-03",
     "homeGoals": 4,
-    "awayGoals": 1,
+    "awayGoals": 2,
     "homePos": 3,
     "awayPos": 10,
     "tableSize": 14,
@@ -62717,7 +62717,7 @@ window.MATCHES = [
       "dcx2": 1.91
     },
     "h2h": null,
-    "elapsed": 65
+    "elapsed": 70
   },
   {
     "home": "Springvale",
@@ -63081,11 +63081,11 @@ window.MATCHES = [
     "awayLogo": "https://media.api-sports.io/football/teams/840.png",
     "country": "China",
     "flag": "https://media.api-sports.io/flags/cn.svg",
-    "status": "NS",
+    "status": "1H",
     "kickoff": "2026-07-03T12:00:00+00:00",
     "matchDate": "2026-07-03",
-    "homeGoals": null,
-    "awayGoals": null,
+    "homeGoals": 0,
+    "awayGoals": 0,
     "homePos": 5,
     "awayPos": 13,
     "tableSize": 16,
@@ -63158,7 +63158,7 @@ window.MATCHES = [
       "dcx2": 1.53
     },
     "h2h": null,
-    "elapsed": null
+    "elapsed": 1
   },
   {
     "home": "Nizhny Novgorod U19",
@@ -63312,11 +63312,11 @@ window.MATCHES = [
     "awayLogo": "https://media.api-sports.io/football/teams/27635.png",
     "country": "Kazakhstan",
     "flag": "https://media.api-sports.io/flags/kz.svg",
-    "status": "NS",
+    "status": "1H",
     "kickoff": "2026-07-03T12:00:00+00:00",
     "matchDate": "2026-07-03",
-    "homeGoals": null,
-    "awayGoals": null,
+    "homeGoals": 0,
+    "awayGoals": 0,
     "homePos": 13,
     "awayPos": 14,
     "tableSize": 14,
@@ -63374,7 +63374,7 @@ window.MATCHES = [
     "round": "Regular Season - 12",
     "odds": null,
     "h2h": null,
-    "elapsed": null
+    "elapsed": 1
   },
   {
     "home": "Vitesse",
@@ -63384,11 +63384,11 @@ window.MATCHES = [
     "awayLogo": "https://media.api-sports.io/football/teams/414.png",
     "country": "World",
     "flag": null,
-    "status": "NS",
+    "status": "1H",
     "kickoff": "2026-07-03T12:00:00+00:00",
     "matchDate": "2026-07-03",
-    "homeGoals": null,
-    "awayGoals": null,
+    "homeGoals": 0,
+    "awayGoals": 0,
     "homePos": null,
     "awayPos": null,
     "tableSize": 20,
@@ -63440,7 +63440,7 @@ window.MATCHES = [
     "round": "Club Friendlies",
     "odds": null,
     "h2h": null,
-    "elapsed": null
+    "elapsed": 1
   },
   {
     "home": "SC Braga",
