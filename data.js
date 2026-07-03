@@ -1,5 +1,5 @@
 window.DATA_UPDATED = "2026-07-03T22:07:07.413Z";
-window.SCORES_UPDATED = "2026-07-03T23:50:40.977Z";
+window.SCORES_UPDATED = "2026-07-03T23:55:28.268Z";
 window.MATCHES = [
   {
     "home": "Santa Cruz",
@@ -61869,7 +61869,7 @@ window.MATCHES = [
     "round": "Group Stage",
     "odds": null,
     "h2h": null,
-    "elapsed": 84
+    "elapsed": 90
   },
   {
     "home": "AFC Ann Arbor",
@@ -62388,7 +62388,7 @@ window.MATCHES = [
     "awayLogo": "https://media.api-sports.io/football/teams/4087.png",
     "country": "USA",
     "flag": "https://media.api-sports.io/flags/us.svg",
-    "status": "1H",
+    "status": "HT",
     "kickoff": "2026-07-03T23:00:00+00:00",
     "matchDate": "2026-07-03",
     "homeGoals": 1,
@@ -62735,7 +62735,7 @@ window.MATCHES = [
       "dcx2": 2.15
     },
     "h2h": null,
-    "elapsed": 14
+    "elapsed": 19
   },
   {
     "home": "Western Mass Pioneers",
@@ -62900,7 +62900,7 @@ window.MATCHES = [
     "round": "Group Stage",
     "odds": null,
     "h2h": null,
-    "elapsed": 19
+    "elapsed": 24
   },
   {
     "home": "West Chester United",
@@ -63065,7 +63065,7 @@ window.MATCHES = [
     "round": "Group Stage",
     "odds": null,
     "h2h": null,
-    "elapsed": 11
+    "elapsed": 16
   },
   {
     "home": "USA",
