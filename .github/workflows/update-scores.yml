@@ -64,7 +64,13 @@ jobs:
           if [ -z "$(git status --porcelain data.js track-log.json)" ]; then
             echo "No changes."; exit 0
           fi
-          git add data.js track-log.json
+          # Add each output individually. A single `git add` with both paths dies
+          # with exit 128 if either doesn't exist (e.g. track-log.json missing
+          # because track-log.js was skipped). Guard per path, confirm staged.
+          for p in data.js track-log.json; do
+            git add -- "$p" 2>/dev/null || echo "note: $p not present - skipped"
+          done
+          if git diff --staged --quiet; then echo "Nothing staged."; exit 0; fi
           git commit -m "Update scores + forward tracker"
           # Guarantee a CLEAN tree before rebase. Anything not part of this commit
           # (restored config.txt, node_modules, stray build files) is discarded here
