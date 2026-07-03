@@ -1,5 +1,5 @@
 window.DATA_UPDATED = "2026-07-02T01:16:59.972Z";
-window.SCORES_UPDATED = "2026-07-03T13:00:57.812Z";
+window.SCORES_UPDATED = "2026-07-03T13:05:31.593Z";
 window.MATCHES = [
   {
     "home": "Santa Cruz",
@@ -62937,11 +62937,11 @@ window.MATCHES = [
     "awayLogo": "https://media.api-sports.io/football/teams/16854.png",
     "country": "Mongolia",
     "flag": "https://media.api-sports.io/flags/mn.svg",
-    "status": "2H",
+    "status": "FT",
     "kickoff": "2026-07-03T11:00:00+00:00",
     "matchDate": "2026-07-03",
-    "homeGoals": 1,
-    "awayGoals": 2,
+    "homeGoals": 3,
+    "awayGoals": 4,
     "homePos": 4,
     "awayPos": 1,
     "tableSize": 19,
@@ -62999,7 +62999,7 @@ window.MATCHES = [
     "round": "Regular Season - 23",
     "odds": null,
     "h2h": null,
-    "elapsed": 89
+    "elapsed": null
   },
   {
     "home": "Minsk II",
@@ -63168,7 +63168,7 @@ window.MATCHES = [
     "awayLogo": "https://media.api-sports.io/football/teams/9231.png",
     "country": "Russia",
     "flag": "https://media.api-sports.io/flags/ru.svg",
-    "status": "HT",
+    "status": "2H",
     "kickoff": "2026-07-03T12:00:00+00:00",
     "matchDate": "2026-07-03",
     "homeGoals": 1,
@@ -63230,7 +63230,7 @@ window.MATCHES = [
     "round": "Regular Season - 13",
     "odds": null,
     "h2h": null,
-    "elapsed": 45
+    "elapsed": 46
   },
   {
     "home": "Sport Academy Kairat",
@@ -63240,7 +63240,7 @@ window.MATCHES = [
     "awayLogo": "https://media.api-sports.io/football/teams/4559.png",
     "country": "Kazakhstan",
     "flag": "https://media.api-sports.io/flags/kz.svg",
-    "status": "HT",
+    "status": "2H",
     "kickoff": "2026-07-03T12:00:00+00:00",
     "matchDate": "2026-07-03",
     "homeGoals": 3,
@@ -63302,7 +63302,7 @@ window.MATCHES = [
     "round": "Regular Season - 12",
     "odds": null,
     "h2h": null,
-    "elapsed": 45
+    "elapsed": 46
   },
   {
     "home": "Arys",
@@ -63312,7 +63312,7 @@ window.MATCHES = [
     "awayLogo": "https://media.api-sports.io/football/teams/27635.png",
     "country": "Kazakhstan",
     "flag": "https://media.api-sports.io/flags/kz.svg",
-    "status": "HT",
+    "status": "2H",
     "kickoff": "2026-07-03T12:00:00+00:00",
     "matchDate": "2026-07-03",
     "homeGoals": 3,
@@ -63374,7 +63374,7 @@ window.MATCHES = [
     "round": "Regular Season - 12",
     "odds": null,
     "h2h": null,
-    "elapsed": 45
+    "elapsed": 46
   },
   {
     "home": "Vitesse",
@@ -63384,7 +63384,7 @@ window.MATCHES = [
     "awayLogo": "https://media.api-sports.io/football/teams/414.png",
     "country": "World",
     "flag": null,
-    "status": "HT",
+    "status": "2H",
     "kickoff": "2026-07-03T12:00:00+00:00",
     "matchDate": "2026-07-03",
     "homeGoals": 1,
@@ -63440,7 +63440,7 @@ window.MATCHES = [
     "round": "Club Friendlies",
     "odds": null,
     "h2h": null,
-    "elapsed": 45
+    "elapsed": 50
   },
   {
     "home": "SC Braga",
@@ -64506,7 +64506,7 @@ window.MATCHES = [
     "awayLogo": "https://media.api-sports.io/football/teams/3496.png",
     "country": "World",
     "flag": null,
-    "status": "HT",
+    "status": "2H",
     "kickoff": "2026-07-03T12:00:00+00:00",
     "matchDate": "2026-07-03",
     "homeGoals": 1,
@@ -64562,7 +64562,7 @@ window.MATCHES = [
     "round": "Club Friendlies",
     "odds": null,
     "h2h": null,
-    "elapsed": 45
+    "elapsed": 47
   },
   {
     "home": "Juazeiro EC U20",
@@ -64576,7 +64576,7 @@ window.MATCHES = [
     "kickoff": "2026-07-03T12:30:00+00:00",
     "matchDate": "2026-07-03",
     "homeGoals": 0,
-    "awayGoals": 3,
+    "awayGoals": 4,
     "homePos": 7,
     "awayPos": 2,
     "tableSize": 14,
@@ -64634,7 +64634,7 @@ window.MATCHES = [
     "round": "Regular Season - 2",
     "odds": null,
     "h2h": null,
-    "elapsed": 33
+    "elapsed": 35
   },
   {
     "home": "Naftan",
@@ -64644,11 +64644,11 @@ window.MATCHES = [
     "awayLogo": "https://media.api-sports.io/football/teams/386.png",
     "country": "Belarus",
     "flag": "https://media.api-sports.io/flags/by.svg",
-    "status": "NS",
+    "status": "1H",
     "kickoff": "2026-07-03T13:00:00+00:00",
     "matchDate": "2026-07-03",
-    "homeGoals": null,
-    "awayGoals": null,
+    "homeGoals": 0,
+    "awayGoals": 1,
     "homePos": 16,
     "awayPos": 8,
     "tableSize": 16,
@@ -64721,7 +64721,7 @@ window.MATCHES = [
       "dcx2": 1.05
     },
     "h2h": null,
-    "elapsed": null
+    "elapsed": 6
   },
   {
     "home": "Brann",
@@ -64731,11 +64731,11 @@ window.MATCHES = [
     "awayLogo": "https://media.api-sports.io/football/teams/320.png",
     "country": "World",
     "flag": null,
-    "status": "NS",
+    "status": "1H",
     "kickoff": "2026-07-03T13:00:00+00:00",
     "matchDate": "2026-07-03",
-    "homeGoals": null,
-    "awayGoals": null,
+    "homeGoals": 0,
+    "awayGoals": 0,
     "homePos": null,
     "awayPos": null,
     "tableSize": 20,
@@ -64787,7 +64787,7 @@ window.MATCHES = [
     "round": "Club Friendlies",
     "odds": null,
     "h2h": null,
-    "elapsed": null
+    "elapsed": 3
   },
   {
     "home": "Ried",
