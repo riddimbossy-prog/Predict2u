@@ -1,5 +1,5 @@
 window.DATA_UPDATED = "2026-07-02T01:16:59.972Z";
-window.SCORES_UPDATED = "2026-07-03T05:40:39.046Z";
+window.SCORES_UPDATED = "2026-07-03T05:45:36.329Z";
 window.MATCHES = [
   {
     "home": "Santa Cruz",
@@ -60674,7 +60674,7 @@ window.MATCHES = [
     "awayLogo": "https://media.api-sports.io/football/teams/4257.png",
     "country": "World",
     "flag": null,
-    "status": "NS",
+    "status": "CANC",
     "kickoff": "2026-07-03T08:00:00+00:00",
     "matchDate": "2026-07-03",
     "homeGoals": null,
