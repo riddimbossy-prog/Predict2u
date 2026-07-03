@@ -1,5 +1,5 @@
 window.DATA_UPDATED = "2026-07-02T01:16:59.972Z";
-window.SCORES_UPDATED = "2026-07-03T18:10:42.628Z";
+window.SCORES_UPDATED = "2026-07-03T18:15:33.070Z";
 window.MATCHES = [
   {
     "home": "Santa Cruz",
@@ -67752,7 +67752,7 @@ window.MATCHES = [
     "round": "Club Friendlies",
     "odds": null,
     "h2h": null,
-    "elapsed": 86
+    "elapsed": 90
   },
   {
     "home": "Wildon",
@@ -67766,7 +67766,7 @@ window.MATCHES = [
     "kickoff": "2026-07-03T16:30:00+00:00",
     "matchDate": "2026-07-03",
     "homeGoals": 0,
-    "awayGoals": 2,
+    "awayGoals": 3,
     "homePos": null,
     "awayPos": null,
     "tableSize": 20,
@@ -67818,7 +67818,7 @@ window.MATCHES = [
     "round": "Club Friendlies",
     "odds": null,
     "h2h": null,
-    "elapsed": 56
+    "elapsed": 61
   },
   {
     "home": "ZFC Meuselwitz",
@@ -67898,7 +67898,7 @@ window.MATCHES = [
     "kickoff": "2026-07-03T16:30:00+00:00",
     "matchDate": "2026-07-03",
     "homeGoals": 0,
-    "awayGoals": 12,
+    "awayGoals": 13,
     "homePos": null,
     "awayPos": null,
     "tableSize": 20,
@@ -67950,7 +67950,7 @@ window.MATCHES = [
     "round": "Club Friendlies",
     "odds": null,
     "h2h": null,
-    "elapsed": 82
+    "elapsed": 87
   },
   {
     "home": "Germania Teveren",
@@ -68016,7 +68016,7 @@ window.MATCHES = [
     "round": "Club Friendlies",
     "odds": null,
     "h2h": null,
-    "elapsed": 65
+    "elapsed": 70
   },
   {
     "home": "VfL Halle",
@@ -68092,7 +68092,7 @@ window.MATCHES = [
     "awayLogo": "https://media.api-sports.io/football/teams/4990.png",
     "country": "World",
     "flag": null,
-    "status": "2H",
+    "status": "FT",
     "kickoff": "2026-07-03T16:30:00+00:00",
     "matchDate": "2026-07-03",
     "homeGoals": 0,
@@ -68148,7 +68148,7 @@ window.MATCHES = [
     "round": "Club Friendlies",
     "odds": null,
     "h2h": null,
-    "elapsed": 87
+    "elapsed": null
   },
   {
     "home": "Ranheim",
@@ -68235,7 +68235,7 @@ window.MATCHES = [
       "dcx2": 1.44
     },
     "h2h": null,
-    "elapsed": 53
+    "elapsed": 58
   },
   {
     "home": "Sirius",
@@ -68249,7 +68249,7 @@ window.MATCHES = [
     "kickoff": "2026-07-03T17:00:00+00:00",
     "matchDate": "2026-07-03",
     "homeGoals": 3,
-    "awayGoals": 0,
+    "awayGoals": 1,
     "homePos": 1,
     "awayPos": 6,
     "tableSize": 16,
@@ -68332,7 +68332,7 @@ window.MATCHES = [
       "draw": 4.1,
       "away": 5
     },
-    "elapsed": 53
+    "elapsed": 58
   },
   {
     "home": "Fortuna Sittard",
@@ -68398,7 +68398,7 @@ window.MATCHES = [
     "round": "Club Friendlies",
     "odds": null,
     "h2h": null,
-    "elapsed": 49
+    "elapsed": 54
   },
   {
     "home": "Heerenveen",
@@ -68530,7 +68530,7 @@ window.MATCHES = [
     "round": "Club Friendlies",
     "odds": null,
     "h2h": null,
-    "elapsed": 51
+    "elapsed": 56
   },
   {
     "home": "Schwabach",
@@ -68734,7 +68734,7 @@ window.MATCHES = [
     "round": "Regular Season - 13",
     "odds": null,
     "h2h": null,
-    "elapsed": 40
+    "elapsed": 45
   },
   {
     "home": "Tallinna Kalev",
@@ -68819,7 +68819,7 @@ window.MATCHES = [
       "dcx2": 1.7
     },
     "h2h": null,
-    "elapsed": 38
+    "elapsed": 43
   },
   {
     "home": "Atlas Delmenhorst",
@@ -69029,7 +69029,7 @@ window.MATCHES = [
     "round": "Regular Season - 8",
     "odds": null,
     "h2h": null,
-    "elapsed": 27
+    "elapsed": 32
   },
   {
     "home": "EC Resende",
@@ -69101,7 +69101,7 @@ window.MATCHES = [
     "round": "Regular Season - 8",
     "odds": null,
     "h2h": null,
-    "elapsed": 26
+    "elapsed": 31
   },
   {
     "home": "Uni Souza",
@@ -69114,7 +69114,7 @@ window.MATCHES = [
     "status": "1H",
     "kickoff": "2026-07-03T17:45:00+00:00",
     "matchDate": "2026-07-03",
-    "homeGoals": 1,
+    "homeGoals": 2,
     "awayGoals": 0,
     "homePos": 5,
     "awayPos": 7,
@@ -69173,7 +69173,7 @@ window.MATCHES = [
     "round": "Regular Season - 8",
     "odds": null,
     "h2h": null,
-    "elapsed": 20
+    "elapsed": 25
   },
   {
     "home": "Uniao Central",
@@ -69245,7 +69245,7 @@ window.MATCHES = [
     "round": "Regular Season - 8",
     "odds": null,
     "h2h": null,
-    "elapsed": 21
+    "elapsed": 26
   },
   {
     "home": "Australia",
@@ -69259,7 +69259,7 @@ window.MATCHES = [
     "kickoff": "2026-07-03T18:00:00+00:00",
     "matchDate": "2026-07-03",
     "homeGoals": 0,
-    "awayGoals": 0,
+    "awayGoals": 1,
     "homePos": 2,
     "awayPos": 2,
     "tableSize": 60,
@@ -69343,7 +69343,7 @@ window.MATCHES = [
       "away": 1.91
     },
     "lineupConfirmed": true,
-    "elapsed": 11
+    "elapsed": 16
   },
   {
     "home": "Hvíti riddarinn",
@@ -69415,7 +69415,7 @@ window.MATCHES = [
     "round": "Regular Season - 11",
     "odds": null,
     "h2h": null,
-    "elapsed": 8
+    "elapsed": 13
   },
   {
     "home": "Deportivo Cuenca Juniors",
@@ -69487,7 +69487,7 @@ window.MATCHES = [
     "round": "Regular Season - 15",
     "odds": null,
     "h2h": null,
-    "elapsed": 7
+    "elapsed": 13
   },
   {
     "home": "NSI Runavik",
@@ -69574,7 +69574,7 @@ window.MATCHES = [
       "dcx2": 1.38
     },
     "h2h": null,
-    "elapsed": 11
+    "elapsed": 16
   },
   {
     "home": "Capivariano U20",
@@ -69646,7 +69646,7 @@ window.MATCHES = [
     "round": "Regular Season - 5",
     "odds": null,
     "h2h": null,
-    "elapsed": 11
+    "elapsed": 16
   },
   {
     "home": "Desportivo Brasil U20",
@@ -69718,7 +69718,7 @@ window.MATCHES = [
     "round": "Regular Season - 5",
     "odds": null,
     "h2h": null,
-    "elapsed": 10
+    "elapsed": 15
   },
   {
     "home": "Ferroviária U20",
@@ -69790,7 +69790,7 @@ window.MATCHES = [
     "round": "Regular Season - 5",
     "odds": null,
     "h2h": null,
-    "elapsed": 12
+    "elapsed": 17
   },
   {
     "home": "Flamengo SP U20",
@@ -69862,7 +69862,7 @@ window.MATCHES = [
     "round": "Regular Season - 5",
     "odds": null,
     "h2h": null,
-    "elapsed": 9
+    "elapsed": 14
   },
   {
     "home": "Guarani U20",
@@ -69934,7 +69934,7 @@ window.MATCHES = [
     "round": "Regular Season - 5",
     "odds": null,
     "h2h": null,
-    "elapsed": 12
+    "elapsed": 17
   },
   {
     "home": "Mauá U20",
@@ -70006,7 +70006,7 @@ window.MATCHES = [
     "round": "Regular Season - 5",
     "odds": null,
     "h2h": null,
-    "elapsed": 11
+    "elapsed": 16
   },
   {
     "home": "Osasco Audax U20",
@@ -70078,7 +70078,7 @@ window.MATCHES = [
     "round": "Regular Season - 5",
     "odds": null,
     "h2h": null,
-    "elapsed": 12
+    "elapsed": 17
   },
   {
     "home": "Santo André U20",
@@ -70150,7 +70150,7 @@ window.MATCHES = [
     "round": "Regular Season - 5",
     "odds": null,
     "h2h": null,
-    "elapsed": 10
+    "elapsed": 15
   },
   {
     "home": "São Bento U20",
@@ -70222,7 +70222,7 @@ window.MATCHES = [
     "round": "Regular Season - 5",
     "odds": null,
     "h2h": null,
-    "elapsed": 14
+    "elapsed": 20
   },
   {
     "home": "São Caetano U20",
@@ -70294,7 +70294,7 @@ window.MATCHES = [
     "round": "Regular Season - 5",
     "odds": null,
     "h2h": null,
-    "elapsed": 10
+    "elapsed": 15
   },
   {
     "home": "Ibrachina U20",
@@ -70366,7 +70366,7 @@ window.MATCHES = [
     "round": "Regular Season - 5",
     "odds": null,
     "h2h": null,
-    "elapsed": 8
+    "elapsed": 13
   },
   {
     "home": "Portuguesa Santista U20",
@@ -70438,7 +70438,7 @@ window.MATCHES = [
     "round": "Regular Season - 5",
     "odds": null,
     "h2h": null,
-    "elapsed": 11
+    "elapsed": 16
   },
   {
     "home": "Jabaquara U20",
@@ -70510,7 +70510,7 @@ window.MATCHES = [
     "round": "Regular Season - 5",
     "odds": null,
     "h2h": null,
-    "elapsed": 12
+    "elapsed": 17
   },
   {
     "home": "River Plate",
