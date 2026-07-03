@@ -1,12 +1,18 @@
 /* ============================================================
-   generate-acca.js — TODAY'S BANKERS ACCA image (acca.png).
-   Mirrors the site's acca: strongest banker per match across all engines,
-   rated by engine-agreement + average confidence, keeping only UPCOMING,
-   real-league (no friendlies/table-less) legs rated >= 8. Builds a branded
-   image attached to the daily email. Shows honest combined odds + chance.
+   generate-acca.js — TODAY'S BANKERS ACCA images.
+   v2: * splits legs into PAGES OF 6 (acca.png = page 1, plus
+        acca-1.png, acca-2.png, ... for every page) so email
+        images stay large and readable
+      * one appearance per match (deduped before paging)
+      * league country FLAG on every leg (downloaded once per
+        country, rasterized, embedded; falls back to a country
+        chip if the flag can't be fetched — never breaks)
+      * consults ALL engines incl. Trend, Streaks, Halves
+      * refreshed modern card design
    ============================================================ */
 const fs = require("fs");
 const path = require("path");
+const https = require("https");
 const eng = require("./banker-engine.js");
 const HERE = __dirname;
 
@@ -20,7 +26,38 @@ function esc(s){ return String(s==null?"":s).replace(/&/g,"&amp;").replace(/</g,
 function trunc(s,n){ s=String(s||""); return s.length>n? s.slice(0,n-1)+"…":s; }
 function confNum(c){ return c==='High'?8:c==='Medium'?7:c==='Low'?5:(typeof c==='number'?c:0); }
 
-// estimate an odd for a market (rough — non-Win markets have no real odds)
+// ---- flag fetch + embed (base64 PNG data URIs, cached per URL) ----
+function fetchBuf(url, timeoutMs){
+  return new Promise((resolve)=>{
+    try{
+      const req=https.get(url,{timeout:timeoutMs||4000},res=>{
+        if(res.statusCode!==200){ res.resume(); return resolve(null); }
+        const chunks=[]; res.on("data",c=>chunks.push(c));
+        res.on("end",()=>resolve(Buffer.concat(chunks)));
+      });
+      req.on("timeout",()=>{ req.destroy(); resolve(null); });
+      req.on("error",()=>resolve(null));
+    }catch(e){ resolve(null); }
+  });
+}
+async function buildFlagCache(urls){
+  const cache={};
+  let sharp=null; try{ sharp=require("sharp"); }catch(e){}
+  for(const u of urls){
+    if(!u || cache[u]!==undefined) continue;
+    let dataUri=null;
+    const buf=await fetchBuf(u);
+    if(buf && sharp){
+      try{
+        const png=await sharp(buf).resize(56,40,{fit:"cover"}).png().toBuffer();
+        dataUri="data:image/png;base64,"+png.toString("base64");
+      }catch(e){ dataUri=null; }
+    }
+    cache[u]=dataUri; // null = fallback chip
+  }
+  return cache;
+}
+
 function estOdd(market, m){
   const o=m.odds;
   if(o){
@@ -36,15 +73,16 @@ function accaLegs(matches){
   const per={};
   function add(m,market,enginez,conf){
     if(!market||market==='No Bet'||market==='Skip')return;
-    const k=(String(m.home)+'|'+String(m.away)).toLowerCase();
+    const k=(String(m.home)+'|'+String(m.away)).toLowerCase(); // one entry per MATCH — no repeats
     if(!per[k])per[k]={m,picks:[],engines:new Set()};
     per[k].picks.push({market,conf:conf||7}); per[k].engines.add(enginez);
   }
   matches.forEach(m=>{
     try{ eng.analyseAll([m]).results.filter(r=>r.banker).forEach(r=>add(m,r.primary,'Normal',confNum(r.confidence))); }catch(e){}
     try{ eng.analyseStrict([m]).results.filter(r=>r.bet).forEach(r=>add(m,r.market,'Strict',r.confidence)); }catch(e){}
-    [["Ultra",eng.ultraRecommend],["Elite",eng.rulesProRecommend],["Apex",eng.apexRecommend],["Prime",eng.primeRecommend],["Value",eng.valueRecommend],["Pro",eng.proRecommend]].forEach(([n,fn])=>{
-      try{ const r=fn(m); if(r.banker) add(m,r.primary,n,r.confidence); }catch(e){}
+    [["Ultra",eng.ultraRecommend],["Elite",eng.rulesProRecommend],["Apex",eng.apexRecommend],["Prime",eng.primeRecommend],["Value",eng.valueRecommend],["Pro",eng.proRecommend],
+     ["Trend",eng.trendRecommend],["Streaks",eng.streakRecommend],["Halves",eng.halvesRecommend]].forEach(([n,fn])=>{
+      try{ if(typeof fn!=='function')return; const r=fn(m); if(r&&r.banker) add(m,r.primary,n,typeof r.confidence==='number'?r.confidence:confNum(r.confidence)); }catch(e){}
     });
   });
   return Object.values(per).map(g=>{
@@ -63,52 +101,99 @@ function isUpcoming(mt){
   return !played&&!live&&koF;
 }
 
-(function main(){
+const FONT='Arial, DejaVu Sans, sans-serif';
+function legRow(l, i, y, pad, cw, flagUri){
+  const rh=104; let s='';
+  s+=`<rect x="${pad}" y="${y}" width="${cw}" height="${rh}" rx="20" fill="rgba(255,255,255,.035)" stroke="rgba(110,212,74,.30)" stroke-width="1.5"/>`;
+  s+=`<rect x="${pad}" y="${y}" width="6" height="${rh}" rx="3" fill="#6fd44a"/>`;
+  // number chip
+  s+=`<circle cx="${pad+46}" cy="${y+rh/2}" r="20" fill="rgba(110,212,74,.15)" stroke="rgba(110,212,74,.5)"/>`;
+  s+=`<text x="${pad+46}" y="${y+rh/2+7}" text-anchor="middle" font-family="${FONT}" font-weight="bold" font-size="20" fill="#9be07a">${i}</text>`;
+  // flag or country chip
+  const fx=pad+84, fy=y+rh/2-20;
+  if(flagUri){
+    s+=`<clipPath id="f${i}${y}"><rect x="${fx}" y="${fy}" width="56" height="40" rx="8"/></clipPath>`;
+    s+=`<image href="${flagUri}" x="${fx}" y="${fy}" width="56" height="40" clip-path="url(#f${i}${y})"/>`;
+    s+=`<rect x="${fx}" y="${fy}" width="56" height="40" rx="8" fill="none" stroke="rgba(255,255,255,.25)"/>`;
+  }else{
+    const cc=String(l.m.country||'??').slice(0,3).toUpperCase();
+    s+=`<rect x="${fx}" y="${fy}" width="56" height="40" rx="8" fill="rgba(255,255,255,.08)"/>`;
+    s+=`<text x="${fx+28}" y="${fy+27}" text-anchor="middle" font-family="${FONT}" font-weight="bold" font-size="16" fill="#c7cedb">${esc(cc)}</text>`;
+  }
+  // teams + league
+  s+=`<text x="${fx+76}" y="${y+42}" font-family="${FONT}" font-weight="bold" font-size="27" fill="#ffffff">${esc(trunc(l.m.home+"  v  "+l.m.away,30))}</text>`;
+  s+=`<text x="${fx+76}" y="${y+74}" font-family="${FONT}" font-size="18" fill="#8a93a6">${esc(trunc((l.m.country?l.m.country+" · ":"")+(l.m.league||""),34))} · ${l.nEng} eng · ${l.rating}/10</text>`;
+  // market pill + odd
+  const label=esc(l.market); const lw=label.length*13.5+40; const px=pad+cw-lw-26;
+  s+=`<rect x="${px}" y="${y+18}" width="${lw}" height="40" rx="20" fill="rgba(110,212,74,.16)" stroke="rgba(110,212,74,.55)"/>`;
+  s+=`<text x="${px+lw/2}" y="${y+45}" text-anchor="middle" font-family="${FONT}" font-weight="bold" font-size="21" fill="#9be07a">${label}</text>`;
+  s+=`<text x="${px+lw/2}" y="${y+84}" text-anchor="middle" font-family="${FONT}" font-weight="bold" font-size="19" fill="${l.est?'#e0a458':'#c7cedb'}">@ ${l.odd.toFixed(2)}${l.est?' est':''}</text>`;
+  return s;
+}
+
+function pageSVG(legs, pageNo, pages, dstr, logo, flags, totals){
+  const W=1080, pad=64, cw=W-pad*2, rh=104, gap=16;
+  const H=340 + legs.length*(rh+gap) + 170;
+  let cards=""; let y=340;
+  legs.forEach((l,idx)=>{ cards+=legRow(l, (pageNo-1)*6+idx+1, y, pad, cw, flags[l.m.flag]||null); y+=rh+gap; });
+  let pageOdds=1; legs.forEach(l=>pageOdds*=l.odd);
+  return `<svg xmlns="http://www.w3.org/2000/svg" width="${W}" height="${H}" viewBox="0 0 ${W} ${H}">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0b1a0c"/><stop offset=".5" stop-color="#06090f"/><stop offset="1" stop-color="#0a0e17"/>
+    </linearGradient>
+    <linearGradient id="hd" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#6fd44a"/><stop offset="1" stop-color="#2c7a17"/>
+    </linearGradient>
+  </defs>
+  <rect width="${W}" height="${H}" fill="url(#bg)"/>
+  <rect x="0" y="0" width="${W}" height="8" fill="url(#hd)"/>
+  ${logo?`<image href="${logo}" x="${pad}" y="44" width="84" height="84"/>`:""}
+  <text x="${pad+(logo?102:0)}" y="94" font-family="${FONT}" font-weight="bold" font-size="50" fill="#ffffff">Predict<tspan fill="#6fd44a">2u</tspan></text>
+  <text x="${pad+(logo?104:2)}" y="126" font-family="${FONT}" font-weight="bold" font-size="18" fill="#8a93a6" letter-spacing="3">TODAY'S BANKERS ACCA</text>
+  <text x="${W-pad}" y="94" text-anchor="end" font-family="${FONT}" font-weight="bold" font-size="26" fill="#6fd44a">${esc(dstr)}</text>
+  <text x="${W-pad}" y="126" text-anchor="end" font-family="${FONT}" font-size="20" fill="#8a93a6">Slip ${pageNo} of ${pages}</text>
+  <rect x="${pad}" y="168" width="${cw}" height="110" rx="22" fill="rgba(110,212,74,.08)" stroke="rgba(110,212,74,.35)" stroke-width="1.5"/>
+  <text x="${pad+30}" y="214" font-family="${FONT}" font-weight="bold" font-size="34" fill="#ffffff">${legs.length} legs on this slip · ~${pageOdds.toFixed(2)} odds</text>
+  <text x="${pad+30}" y="252" font-family="${FONT}" font-size="21" fill="#c7cedb">Full acca: ${totals.legs} legs · ~${totals.odds.toFixed(2)} odds · ~${totals.pct}% chance all land · high risk</text>
+  ${cards}
+  <text x="${W/2}" y="${H-96}" text-anchor="middle" font-family="${FONT}" font-weight="bold" font-size="26" fill="#9be07a">Full board at predict2u.com</text>
+  <text x="${W/2}" y="${H-56}" text-anchor="middle" font-family="${FONT}" font-size="18" fill="#5a6478">Accumulator — every leg must win. High risk. Not a guarantee. 18+. Gamble responsibly.</text>
+</svg>`;
+}
+
+(async function main(){
   let matches; try{ matches=loadMatches(); }catch(e){ console.log("no data.js:",e.message); process.exit(0); }
   const legs=accaLegs(matches).filter(l=>isUpcoming(l.m)).sort((a,b)=>b.rating-a.rating);
   if(!legs.length){ console.log("No qualifying acca legs today — no acca image."); process.exit(0); }
 
   let combinedOdds=1, combinedProb=1;
   legs.forEach(l=>{ combinedOdds*=l.odd; combinedProb*=Math.min(0.97,(1/l.odd)*1.05); });
-  const pct=Math.round(combinedProb*100);
+  const totals={legs:legs.length, odds:combinedOdds, pct:Math.round(combinedProb*100)};
 
-  const W=1080, pad=70, cw=W-pad*2, rowH=88;
-  const H=320 + legs.length*(rowH+14) + 150;
+  const flagUrls=[...new Set(legs.map(l=>l.m.flag).filter(Boolean))];
+  const flags=await buildFlagCache(flagUrls);
+  const flagOk=Object.values(flags).filter(Boolean).length;
+  console.log(`Flags: ${flagOk}/${flagUrls.length} embedded (fallback chips for the rest).`);
+
   const dstr=new Date().toLocaleDateString("en-GB",{weekday:"long",day:"numeric",month:"long"});
   let logo=""; try{ const b=fs.readFileSync(path.join(HERE,"icon-512.png")); logo=`data:image/png;base64,${b.toString("base64")}`; }catch(e){}
 
-  let cards=""; let yy=320;
-  legs.forEach((l,i)=>{
-    cards+=`<rect x="${pad}" y="${yy}" width="${cw}" height="${rowH}" rx="16" fill="rgba(76,175,39,.07)" stroke="rgba(76,175,39,.35)" stroke-width="2"/>`;
-    cards+=`<text x="${pad+24}" y="${yy+36}" font-family="Arial,sans-serif" font-weight="bold" font-size="20" fill="#8a93a6">${i+1}</text>`;
-    cards+=`<text x="${pad+60}" y="${yy+36}" font-family="Arial,sans-serif" font-weight="bold" font-size="28" fill="#ffffff">${esc(trunc(l.m.home+" v "+l.m.away,30))}</text>`;
-    cards+=`<text x="${pad+60}" y="${yy+66}" font-family="Arial,sans-serif" font-size="19" fill="#8a93a6">${esc(trunc((l.m.country?l.m.country+" · ":"")+(l.m.league||""),32))} · ${l.nEng} engines · rated ${l.rating}/10</text>`;
-    const lw=l.market.length*15+40; const px=pad+cw-lw-28;
-    cards+=`<rect x="${px}" y="${yy+24}" width="${lw}" height="44" rx="12" fill="rgba(76,175,39,.18)"/>`;
-    cards+=`<text x="${px+20}" y="${yy+53}" font-family="Arial,sans-serif" font-weight="bold" font-size="24" fill="#7ee05a">${esc(l.market)}</text>`;
-    yy+=rowH+14;
-  });
-
-  const svg=`<svg xmlns="http://www.w3.org/2000/svg" width="${W}" height="${H}" viewBox="0 0 ${W} ${H}">
-    <rect width="${W}" height="${H}" fill="#0a0e17"/>
-    ${logo?`<image href="${logo}" x="${pad}" y="40" width="96" height="96"/>`:""}
-    <text x="${pad+(logo?116:0)}" y="92" font-family="Arial,sans-serif" font-weight="bold" font-size="52" fill="#ffffff">Predict<tspan fill="#4CAF27">2u</tspan></text>
-    <text x="${pad+(logo?116:0)}" y="124" font-family="Arial,sans-serif" font-weight="bold" font-size="20" fill="#8a93a6" letter-spacing="2">TODAY'S BANKERS ACCA</text>
-    <text x="${pad}" y="190" font-family="Arial,sans-serif" font-weight="bold" font-size="32" fill="#4CAF27">${dstr}</text>
-    <text x="${pad}" y="240" font-family="Arial,sans-serif" font-weight="bold" font-size="40" fill="#ffffff">${legs.length}-leg acca · ~${combinedOdds.toFixed(2)} odds</text>
-    <text x="${pad}" y="278" font-family="Arial,sans-serif" font-size="24" fill="${pct>=25?'#7ee05a':'#e0a458'}">~${pct}% chance all legs land · high risk</text>
-    ${cards}
-    <text x="${W/2}" y="${H-60}" text-anchor="middle" font-family="Arial,sans-serif" font-size="22" fill="#7ee05a">Full board at predict2u.com</text>
-    <text x="${pad}" y="${H-28}" font-family="Arial,sans-serif" font-size="18" fill="#5a6478">Accumulator — every leg must win. High risk. Not a guarantee. 18+.</text>
-  </svg>`;
-
-  fs.writeFileSync(path.join(HERE,"acca.svg"),svg);
-  (async()=>{
-    try{
-      const sharp=require("sharp");
-      const buf=await sharp(Buffer.from(svg)).png().toBuffer();
-      fs.writeFileSync(path.join(HERE,"acca.png"),buf);
-      console.log(`Acca image: ${legs.length} legs, ~${combinedOdds.toFixed(2)} odds, ~${pct}% chance.`);
-    }catch(e){ console.log("PNG conversion failed:",e.message); }
-  })();
+  const PER=6, pages=Math.ceil(legs.length/PER);
+  let sharp=null; try{ sharp=require("sharp"); }catch(e){}
+  for(let p=1;p<=pages;p++){
+    const slice=legs.slice((p-1)*PER, p*PER);
+    const svg=pageSVG(slice, p, pages, dstr, logo, flags, totals);
+    const svgName=p===1?"acca.svg":`acca-${p}.svg`;
+    fs.writeFileSync(path.join(HERE,svgName),svg);
+    if(sharp){
+      try{
+        const buf=await sharp(Buffer.from(svg)).png().toBuffer();
+        // acca.png stays page 1 (backward compatible); every page also gets acca-N.png
+        if(p===1) fs.writeFileSync(path.join(HERE,"acca.png"),buf);
+        fs.writeFileSync(path.join(HERE,`acca-${p}.png`),buf);
+      }catch(e){ console.log(`PNG failed page ${p}:`,e.message); }
+    }
+  }
+  console.log(`Acca: ${legs.length} legs over ${pages} slip image(s) of up to ${PER}, ~${combinedOdds.toFixed(2)} total odds, ~${totals.pct}% chance.`);
 })();
