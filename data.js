@@ -1,5 +1,5 @@
 window.DATA_UPDATED = "2026-07-02T01:16:59.972Z";
-window.SCORES_UPDATED = "2026-07-03T15:00:55.925Z";
+window.SCORES_UPDATED = "2026-07-03T15:05:30.317Z";
 window.MATCHES = [
   {
     "home": "Santa Cruz",
@@ -63450,11 +63450,11 @@ window.MATCHES = [
     "awayLogo": "https://media.api-sports.io/football/teams/6367.png",
     "country": "World",
     "flag": null,
-    "status": "NS",
+    "status": "FT",
     "kickoff": "2026-07-03T12:00:00+00:00",
     "matchDate": "2026-07-03",
-    "homeGoals": null,
-    "awayGoals": null,
+    "homeGoals": 1,
+    "awayGoals": 0,
     "homePos": null,
     "awayPos": null,
     "tableSize": 20,
@@ -63516,11 +63516,11 @@ window.MATCHES = [
     "awayLogo": "https://media.api-sports.io/football/teams/3403.png",
     "country": "World",
     "flag": null,
-    "status": "NS",
+    "status": "FT",
     "kickoff": "2026-07-03T12:00:00+00:00",
     "matchDate": "2026-07-03",
-    "homeGoals": null,
-    "awayGoals": null,
+    "homeGoals": 0,
+    "awayGoals": 0,
     "homePos": null,
     "awayPos": null,
     "tableSize": 20,
@@ -64919,7 +64919,7 @@ window.MATCHES = [
     "round": "Club Friendlies",
     "odds": null,
     "h2h": null,
-    "elapsed": 68
+    "elapsed": 73
   },
   {
     "home": "Zenit U19",
@@ -64929,10 +64929,10 @@ window.MATCHES = [
     "awayLogo": "https://media.api-sports.io/football/teams/16594.png",
     "country": "Russia",
     "flag": "https://media.api-sports.io/flags/ru.svg",
-    "status": "HT",
+    "status": "2H",
     "kickoff": "2026-07-03T14:00:00+00:00",
     "matchDate": "2026-07-03",
-    "homeGoals": 1,
+    "homeGoals": 3,
     "awayGoals": 0,
     "homePos": 3,
     "awayPos": 11,
@@ -64991,7 +64991,7 @@ window.MATCHES = [
     "round": "Regular Season - 13",
     "odds": null,
     "h2h": null,
-    "elapsed": 45
+    "elapsed": 50
   },
   {
     "home": "CSKA Moskva U19",
@@ -65361,7 +65361,7 @@ window.MATCHES = [
     "awayLogo": "https://media.api-sports.io/football/teams/16611.png",
     "country": "Kazakhstan",
     "flag": "https://media.api-sports.io/flags/kz.svg",
-    "status": "HT",
+    "status": "2H",
     "kickoff": "2026-07-03T14:00:00+00:00",
     "matchDate": "2026-07-03",
     "homeGoals": 1,
@@ -65438,7 +65438,7 @@ window.MATCHES = [
       "dcx2": 2.15
     },
     "h2h": null,
-    "elapsed": 45
+    "elapsed": 50
   },
   {
     "home": "Lokomotiv",
@@ -65514,7 +65514,7 @@ window.MATCHES = [
     "awayLogo": "https://media.api-sports.io/football/teams/1080.png",
     "country": "World",
     "flag": null,
-    "status": "HT",
+    "status": "2H",
     "kickoff": "2026-07-03T14:00:00+00:00",
     "matchDate": "2026-07-03",
     "homeGoals": 1,
@@ -65570,7 +65570,7 @@ window.MATCHES = [
     "round": "Club Friendlies",
     "odds": null,
     "h2h": null,
-    "elapsed": 45
+    "elapsed": 48
   },
   {
     "home": "Farul Constanta",
@@ -65774,7 +65774,7 @@ window.MATCHES = [
     "round": "Regular Season - 14",
     "odds": null,
     "h2h": null,
-    "elapsed": 30
+    "elapsed": 34
   },
   {
     "home": "Talant",
@@ -65846,7 +65846,7 @@ window.MATCHES = [
     "round": "Regular Season - 14",
     "odds": null,
     "h2h": null,
-    "elapsed": 30
+    "elapsed": 35
   },
   {
     "home": "Muras United",
@@ -65918,7 +65918,7 @@ window.MATCHES = [
     "round": "Regular Season - 14",
     "odds": null,
     "h2h": null,
-    "elapsed": 31
+    "elapsed": 35
   },
   {
     "home": "Ozgon",
@@ -65999,11 +65999,11 @@ window.MATCHES = [
     "awayLogo": "https://media.api-sports.io/football/teams/27561.png",
     "country": "Kazakhstan",
     "flag": "https://media.api-sports.io/flags/kz.svg",
-    "status": "NS",
+    "status": "1H",
     "kickoff": "2026-07-03T15:00:00+00:00",
     "matchDate": "2026-07-03",
-    "homeGoals": null,
-    "awayGoals": null,
+    "homeGoals": 0,
+    "awayGoals": 0,
     "homePos": 3,
     "awayPos": 8,
     "tableSize": 14,
@@ -66061,7 +66061,7 @@ window.MATCHES = [
     "round": "Regular Season - 12",
     "odds": null,
     "h2h": null,
-    "elapsed": null
+    "elapsed": 4
   },
   {
     "home": "Dynamo Kyiv",
@@ -66203,11 +66203,11 @@ window.MATCHES = [
     "awayLogo": "https://media.api-sports.io/football/teams/3735.png",
     "country": "World",
     "flag": null,
-    "status": "NS",
+    "status": "1H",
     "kickoff": "2026-07-03T15:00:00+00:00",
     "matchDate": "2026-07-03",
-    "homeGoals": null,
-    "awayGoals": null,
+    "homeGoals": 0,
+    "awayGoals": 0,
     "homePos": null,
     "awayPos": null,
     "tableSize": 20,
@@ -66259,7 +66259,7 @@ window.MATCHES = [
     "round": "Club Friendlies",
     "odds": null,
     "h2h": null,
-    "elapsed": null
+    "elapsed": 4
   },
   {
     "home": "Biel-Bienne",
@@ -66269,11 +66269,11 @@ window.MATCHES = [
     "awayLogo": "https://media.api-sports.io/football/teams/6653.png",
     "country": "World",
     "flag": null,
-    "status": "NS",
+    "status": "1H",
     "kickoff": "2026-07-03T15:00:00+00:00",
     "matchDate": "2026-07-03",
-    "homeGoals": null,
-    "awayGoals": null,
+    "homeGoals": 0,
+    "awayGoals": 0,
     "homePos": null,
     "awayPos": null,
     "tableSize": 20,
@@ -66325,7 +66325,7 @@ window.MATCHES = [
     "round": "Club Friendlies",
     "odds": null,
     "h2h": null,
-    "elapsed": null
+    "elapsed": 1
   },
   {
     "home": "Germany U19 W",
@@ -66335,11 +66335,11 @@ window.MATCHES = [
     "awayLogo": "https://media.api-sports.io/football/teams/19067.png",
     "country": "World",
     "flag": null,
-    "status": "NS",
+    "status": "1H",
     "kickoff": "2026-07-03T15:00:00+00:00",
     "matchDate": "2026-07-03",
-    "homeGoals": null,
-    "awayGoals": null,
+    "homeGoals": 0,
+    "awayGoals": 0,
     "homePos": null,
     "awayPos": null,
     "tableSize": 20,
@@ -66391,7 +66391,7 @@ window.MATCHES = [
     "round": "Group Stage",
     "odds": null,
     "h2h": null,
-    "elapsed": null
+    "elapsed": 4
   },
   {
     "home": "Poland U19 W",
@@ -66401,11 +66401,11 @@ window.MATCHES = [
     "awayLogo": "https://media.api-sports.io/football/teams/10359.png",
     "country": "World",
     "flag": null,
-    "status": "NS",
+    "status": "1H",
     "kickoff": "2026-07-03T15:00:00+00:00",
     "matchDate": "2026-07-03",
-    "homeGoals": null,
-    "awayGoals": null,
+    "homeGoals": 0,
+    "awayGoals": 0,
     "homePos": null,
     "awayPos": null,
     "tableSize": 20,
@@ -66457,7 +66457,7 @@ window.MATCHES = [
     "round": "Group Stage",
     "odds": null,
     "h2h": null,
-    "elapsed": null
+    "elapsed": 4
   },
   {
     "home": "GrIFK",
