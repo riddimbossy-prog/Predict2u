@@ -1,5 +1,5 @@
 window.DATA_UPDATED = "2026-07-03T18:49:41.606Z";
-window.SCORES_UPDATED = "2026-07-03T20:10:39.634Z";
+window.SCORES_UPDATED = "2026-07-03T20:15:34.213Z";
 window.MATCHES = [
   {
     "home": "Santa Cruz",
@@ -53977,7 +53977,7 @@ window.MATCHES = [
     "xgAwayReal": 1.55,
     "awayXgAgainst": 0.94,
     "lineupConfirmed": true,
-    "elapsed": 98
+    "elapsed": 102
   },
   {
     "home": "Hvíti riddarinn",
@@ -54411,7 +54411,7 @@ window.MATCHES = [
     "status": "2H",
     "kickoff": "2026-07-03T18:30:00+00:00",
     "matchDate": "2026-07-03",
-    "homeGoals": 0,
+    "homeGoals": 1,
     "awayGoals": 3,
     "homePos": 5,
     "awayPos": 9,
@@ -54545,7 +54545,7 @@ window.MATCHES = [
       "dcx2": 2.25
     },
     "h2h": null,
-    "elapsed": 85
+    "elapsed": 89
   },
   {
     "home": "Al Hikma",
@@ -54695,7 +54695,7 @@ window.MATCHES = [
       "dcx2": 1.1
     },
     "h2h": null,
-    "elapsed": 81
+    "elapsed": 85
   },
   {
     "home": "Derry City",
@@ -54710,7 +54710,7 @@ window.MATCHES = [
     "kickoff": "2026-07-03T18:45:00+00:00",
     "matchDate": "2026-07-03",
     "homeGoals": 0,
-    "awayGoals": 1,
+    "awayGoals": 2,
     "homePos": 6,
     "awayPos": 10,
     "tableSize": 10,
@@ -54845,7 +54845,7 @@ window.MATCHES = [
       "dcx2": 2.7
     },
     "h2h": null,
-    "elapsed": 67
+    "elapsed": 71
   },
   {
     "home": "Sligo Rovers",
@@ -54995,7 +54995,7 @@ window.MATCHES = [
       "dcx2": 1.13
     },
     "h2h": null,
-    "elapsed": 69
+    "elapsed": 73
   },
   {
     "home": "St Patrick's Athl.",
@@ -55145,7 +55145,7 @@ window.MATCHES = [
       "dcx2": 2.75
     },
     "h2h": null,
-    "elapsed": 71
+    "elapsed": 76
   },
   {
     "home": "Drogheda United",
@@ -55295,7 +55295,7 @@ window.MATCHES = [
       "dcx2": 1.18
     },
     "h2h": null,
-    "elapsed": 67
+    "elapsed": 71
   },
   {
     "home": "Finn Harps",
@@ -55461,7 +55461,7 @@ window.MATCHES = [
     "xgAwayReal": 0.61,
     "awayXgAgainst": 1.57,
     "lineupConfirmed": true,
-    "elapsed": 70
+    "elapsed": 75
   },
   {
     "home": "Bray Wanderers",
@@ -55627,7 +55627,7 @@ window.MATCHES = [
     "xgAwayReal": 1.06,
     "awayXgAgainst": 1.71,
     "lineupConfirmed": true,
-    "elapsed": 67
+    "elapsed": 71
   },
   {
     "home": "Cobh Ramblers",
@@ -55791,7 +55791,7 @@ window.MATCHES = [
     "homeXgAgainst": 1.97,
     "xgReal": true,
     "lineupConfirmed": true,
-    "elapsed": 68
+    "elapsed": 73
   },
   {
     "home": "Treaty United",
@@ -55955,7 +55955,7 @@ window.MATCHES = [
     "awayXgAgainst": 2.18,
     "xgReal": true,
     "lineupConfirmed": true,
-    "elapsed": 69
+    "elapsed": 73
   },
   {
     "home": "Akron City",
@@ -55966,10 +55966,10 @@ window.MATCHES = [
     "awayLogo": "https://media.api-sports.io/football/teams/25955.png",
     "country": "USA",
     "flag": "https://media.api-sports.io/flags/us.svg",
-    "status": "HT",
+    "status": "2H",
     "kickoff": "2026-07-03T19:00:00+00:00",
     "matchDate": "2026-07-03",
-    "homeGoals": 1,
+    "homeGoals": 0,
     "awayGoals": 0,
     "homePos": 3,
     "awayPos": 5,
@@ -56090,7 +56090,7 @@ window.MATCHES = [
     "round": "Group Stage",
     "odds": null,
     "h2h": null,
-    "elapsed": 45
+    "elapsed": 47
   },
   {
     "home": "Shelbourne",
@@ -56240,7 +56240,7 @@ window.MATCHES = [
       "dcx2": 1.85
     },
     "h2h": null,
-    "elapsed": 53
+    "elapsed": 57
   },
   {
     "home": "FH hafnarfjordur",
@@ -57286,7 +57286,7 @@ window.MATCHES = [
       "dcx2": 1.7
     },
     "h2h": null,
-    "elapsed": 11
+    "elapsed": 15
   },
   {
     "home": "Argentina",
