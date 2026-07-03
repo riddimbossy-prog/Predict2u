@@ -1,5 +1,5 @@
 window.DATA_UPDATED = "2026-07-02T01:16:59.972Z";
-window.SCORES_UPDATED = "2026-07-03T13:25:27.300Z";
+window.SCORES_UPDATED = "2026-07-03T13:30:51.817Z";
 window.MATCHES = [
   {
     "home": "Santa Cruz",
@@ -63071,7 +63071,7 @@ window.MATCHES = [
     "round": "Regular Season - 14",
     "odds": null,
     "h2h": null,
-    "elapsed": 64
+    "elapsed": 70
   },
   {
     "home": "Yunnan Yukun",
@@ -63158,7 +63158,7 @@ window.MATCHES = [
       "dcx2": 1.53
     },
     "h2h": null,
-    "elapsed": 56
+    "elapsed": 62
   },
   {
     "home": "Nizhny Novgorod U19",
@@ -63230,7 +63230,7 @@ window.MATCHES = [
     "round": "Regular Season - 13",
     "odds": null,
     "h2h": null,
-    "elapsed": 65
+    "elapsed": 71
   },
   {
     "home": "Sport Academy Kairat",
@@ -63302,7 +63302,7 @@ window.MATCHES = [
     "round": "Regular Season - 12",
     "odds": null,
     "h2h": null,
-    "elapsed": 65
+    "elapsed": 70
   },
   {
     "home": "Arys",
@@ -63374,7 +63374,7 @@ window.MATCHES = [
     "round": "Regular Season - 12",
     "odds": null,
     "h2h": null,
-    "elapsed": 65
+    "elapsed": 71
   },
   {
     "home": "Vitesse",
@@ -63440,7 +63440,7 @@ window.MATCHES = [
     "round": "Club Friendlies",
     "odds": null,
     "h2h": null,
-    "elapsed": 69
+    "elapsed": 75
   },
   {
     "home": "SC Braga",
@@ -64509,7 +64509,7 @@ window.MATCHES = [
     "status": "2H",
     "kickoff": "2026-07-03T12:00:00+00:00",
     "matchDate": "2026-07-03",
-    "homeGoals": 2,
+    "homeGoals": 3,
     "awayGoals": 0,
     "homePos": null,
     "awayPos": null,
@@ -64562,7 +64562,7 @@ window.MATCHES = [
     "round": "Club Friendlies",
     "odds": null,
     "h2h": null,
-    "elapsed": 66
+    "elapsed": 72
   },
   {
     "home": "Juazeiro EC U20",
@@ -64572,7 +64572,7 @@ window.MATCHES = [
     "awayLogo": "https://media.api-sports.io/football/teams/12956.png",
     "country": "Brazil",
     "flag": "https://media.api-sports.io/flags/br.svg",
-    "status": "HT",
+    "status": "2H",
     "kickoff": "2026-07-03T12:30:00+00:00",
     "matchDate": "2026-07-03",
     "homeGoals": 0,
@@ -64634,7 +64634,7 @@ window.MATCHES = [
     "round": "Regular Season - 2",
     "odds": null,
     "h2h": null,
-    "elapsed": 45
+    "elapsed": 47
   },
   {
     "home": "Naftan",
@@ -64721,7 +64721,7 @@ window.MATCHES = [
       "dcx2": 1.05
     },
     "h2h": null,
-    "elapsed": 24
+    "elapsed": 30
   },
   {
     "home": "Brann",
@@ -64787,7 +64787,7 @@ window.MATCHES = [
     "round": "Club Friendlies",
     "odds": null,
     "h2h": null,
-    "elapsed": 22
+    "elapsed": 28
   },
   {
     "home": "Ried",
