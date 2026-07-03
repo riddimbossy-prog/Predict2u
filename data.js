@@ -1,5 +1,5 @@
 window.DATA_UPDATED = "2026-07-02T01:16:59.972Z";
-window.SCORES_UPDATED = "2026-07-03T00:45:34.942Z";
+window.SCORES_UPDATED = "2026-07-03T00:50:40.675Z";
 window.MATCHES = [
   {
     "home": "Santa Cruz",
@@ -59736,7 +59736,7 @@ window.MATCHES = [
     "awayLogo": "https://media.api-sports.io/football/teams/139.png",
     "country": "Brazil",
     "flag": "https://media.api-sports.io/flags/br.svg",
-    "status": "1H",
+    "status": "HT",
     "kickoff": "2026-07-03T00:00:00+00:00",
     "matchDate": "2026-07-03",
     "homeGoals": 0,
@@ -59818,7 +59818,7 @@ window.MATCHES = [
     "awayLogo": "https://media.api-sports.io/football/teams/2238.png",
     "country": "Ecuador",
     "flag": "https://media.api-sports.io/flags/ec.svg",
-    "status": "1H",
+    "status": "HT",
     "kickoff": "2026-07-03T00:00:00+00:00",
     "matchDate": "2026-07-03",
     "homeGoals": 1,
@@ -59992,7 +59992,7 @@ window.MATCHES = [
       "draw": 3.25,
       "away": 2.35
     },
-    "elapsed": 39
+    "elapsed": 44
   },
   {
     "home": "FC Motown II",
@@ -60058,7 +60058,7 @@ window.MATCHES = [
     "round": "Group Stage",
     "odds": null,
     "h2h": null,
-    "elapsed": 41
+    "elapsed": 45
   },
   {
     "home": "Flatirons Rush",
@@ -60322,7 +60322,7 @@ window.MATCHES = [
     "round": "Group Stage",
     "odds": null,
     "h2h": null,
-    "elapsed": 10
+    "elapsed": 15
   },
   {
     "home": "O'Higgins",
@@ -60403,7 +60403,7 @@ window.MATCHES = [
       "dcx2": 1.3
     },
     "h2h": null,
-    "elapsed": 15
+    "elapsed": 20
   },
   {
     "home": "Boise",
@@ -79145,7 +79145,7 @@ window.MATCHES = [
       "away": 4.75
     },
     "lineupConfirmed": true,
-    "elapsed": 85
+    "elapsed": 90
   },
   {
     "home": "Cuiaba",
@@ -79158,7 +79158,7 @@ window.MATCHES = [
     "status": "2H",
     "kickoff": "2026-07-02T23:00:00+00:00",
     "matchDate": "2026-07-02",
-    "homeGoals": 0,
+    "homeGoals": 1,
     "awayGoals": 0,
     "homePos": 13,
     "awayPos": 20,
@@ -79242,7 +79242,7 @@ window.MATCHES = [
       "draw": 3.3,
       "away": 5
     },
-    "elapsed": 86
+    "elapsed": 90
   },
   {
     "home": "Cedar Stars Rush",
@@ -79256,7 +79256,7 @@ window.MATCHES = [
     "kickoff": "2026-07-02T23:00:00+00:00",
     "matchDate": "2026-07-02",
     "homeGoals": 1,
-    "awayGoals": 0,
+    "awayGoals": 1,
     "homePos": null,
     "awayPos": null,
     "tableSize": 20,
@@ -79308,7 +79308,7 @@ window.MATCHES = [
     "round": "Group Stage",
     "odds": null,
     "h2h": null,
-    "elapsed": 81
+    "elapsed": 86
   },
   {
     "home": "Rochester",
@@ -79322,7 +79322,7 @@ window.MATCHES = [
     "kickoff": "2026-07-02T23:00:00+00:00",
     "matchDate": "2026-07-02",
     "homeGoals": 0,
-    "awayGoals": 3,
+    "awayGoals": 4,
     "homePos": null,
     "awayPos": null,
     "tableSize": 20,
@@ -79374,7 +79374,7 @@ window.MATCHES = [
     "round": "Group Stage",
     "odds": null,
     "h2h": null,
-    "elapsed": 82
+    "elapsed": 87
   },
   {
     "home": "Apotheos",
@@ -79440,7 +79440,7 @@ window.MATCHES = [
     "round": "Group Stage",
     "odds": null,
     "h2h": null,
-    "elapsed": 50
+    "elapsed": 56
   },
   {
     "home": "Memphis 901",
