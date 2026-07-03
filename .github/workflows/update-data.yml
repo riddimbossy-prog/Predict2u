@@ -80,7 +80,14 @@ jobs:
           if [ -z "$(git status --porcelain data.js xg.js today.png today.svg daily/ 2>/dev/null)" ]; then
             echo "No changes."; exit 0
           fi
-          git add data.js xg.js today.png today.svg daily/ 2>/dev/null
+          # Add each output individually. A single `git add` with ALL paths dies
+          # with a SILENT exit 128 if ANY one path doesn't exist ("fatal: pathspec
+          # did not match" is hidden by 2>/dev/null but the exit code still kills
+          # the -e shell). Guard per path, then confirm something is staged.
+          for p in data.js xg.js today.png today.svg daily/; do
+            git add -- "$p" 2>/dev/null || echo "note: $p not present - skipped"
+          done
+          if git diff --staged --quiet; then echo "Nothing staged."; exit 0; fi
           git commit -m "Update Predicto data (fixtures + xG + image)"
           # Guarantee a CLEAN tree before rebase. Anything not part of this commit
           # (restored config.txt, node_modules, package-lock, stray build files) is
