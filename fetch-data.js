@@ -554,6 +554,17 @@ const FINISHED = new Set(["FT","AET","PEN"]);
           noDraw:   run(s=>s.res!=="D"),
           over25:   run(s=>s.tot>=3),
           under25:  run(s=>s.tot<=2),
+          // ---- market streaks (beyond wins) — all from the same fixtures,
+          // zero extra API cost. Used with OPPONENT same-market confirmation. ----
+          under35:       run(s=>s.tot<=3),
+          over15:        run(s=>s.tot>=2),
+          btts:          run(s=>s.gf>0&&s.ga>0),   // GG streak
+          noBtts:        run(s=>!(s.gf>0&&s.ga>0)),
+          scored:        run(s=>s.gf>0),
+          failedToScore: run(s=>s.gf===0),
+          cleanSheet:    run(s=>s.ga===0),
+          concededEvery: run(s=>s.ga>0),
+          teamOver15:    run(s=>s.gf>=2),          // scored 2+ streak
           sample:   seq.length,
           htft
         };
