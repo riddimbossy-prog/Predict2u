@@ -1,5 +1,5 @@
 window.DATA_UPDATED = "2026-07-03T22:07:07.413Z";
-window.SCORES_UPDATED = "2026-07-03T23:01:02.859Z";
+window.SCORES_UPDATED = "2026-07-03T23:05:30.071Z";
 window.MATCHES = [
   {
     "home": "Santa Cruz",
@@ -62388,11 +62388,11 @@ window.MATCHES = [
     "awayLogo": "https://media.api-sports.io/football/teams/4087.png",
     "country": "USA",
     "flag": "https://media.api-sports.io/flags/us.svg",
-    "status": "NS",
+    "status": "1H",
     "kickoff": "2026-07-03T23:00:00+00:00",
     "matchDate": "2026-07-03",
-    "homeGoals": null,
-    "awayGoals": null,
+    "homeGoals": 0,
+    "awayGoals": 0,
     "homePos": null,
     "awayPos": 2,
     "tableSize": 144,
@@ -62555,7 +62555,7 @@ window.MATCHES = [
       "dcx2": 1.02
     },
     "h2h": null,
-    "elapsed": null
+    "elapsed": 1
   },
   {
     "home": "Loudoun United",
