@@ -1,5 +1,5 @@
 window.DATA_UPDATED = "2026-07-03T22:07:07.413Z";
-window.SCORES_UPDATED = "2026-07-03T22:25:26.594Z";
+window.SCORES_UPDATED = "2026-07-03T22:30:56.656Z";
 window.MATCHES = [
   {
     "home": "Santa Cruz",
@@ -61522,7 +61522,7 @@ window.MATCHES = [
     "status": "1H",
     "kickoff": "2026-07-03T22:00:00+00:00",
     "matchDate": "2026-07-03",
-    "homeGoals": 0,
+    "homeGoals": 1,
     "awayGoals": 0,
     "homePos": 1,
     "awayPos": 2,
@@ -61704,7 +61704,7 @@ window.MATCHES = [
     "xgAwayReal": 0.49,
     "awayXgAgainst": 1.94,
     "lineupConfirmed": true,
-    "elapsed": 24
+    "elapsed": 30
   },
   {
     "home": "Inter Gainesville",
