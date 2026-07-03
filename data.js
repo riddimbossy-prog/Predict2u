@@ -1,5 +1,5 @@
 window.DATA_UPDATED = "2026-07-03T18:49:41.606Z";
-window.SCORES_UPDATED = "2026-07-03T20:00:58.791Z";
+window.SCORES_UPDATED = "2026-07-03T20:05:27.322Z";
 window.MATCHES = [
   {
     "home": "Santa Cruz",
@@ -53822,7 +53822,7 @@ window.MATCHES = [
     "awayLogo": "https://media.api-sports.io/football/teams/32.png",
     "country": "World",
     "flag": null,
-    "status": "BT",
+    "status": "ET",
     "kickoff": "2026-07-03T18:00:00+00:00",
     "matchDate": "2026-07-03",
     "homeGoals": 1,
@@ -53977,7 +53977,7 @@ window.MATCHES = [
     "xgAwayReal": 1.55,
     "awayXgAgainst": 0.94,
     "lineupConfirmed": true,
-    "elapsed": null
+    "elapsed": 92
   },
   {
     "home": "Hvíti riddarinn",
@@ -54545,7 +54545,7 @@ window.MATCHES = [
       "dcx2": 2.25
     },
     "h2h": null,
-    "elapsed": 75
+    "elapsed": 79
   },
   {
     "home": "Al Hikma",
@@ -54695,7 +54695,7 @@ window.MATCHES = [
       "dcx2": 1.1
     },
     "h2h": null,
-    "elapsed": 70
+    "elapsed": 75
   },
   {
     "home": "Derry City",
@@ -54845,7 +54845,7 @@ window.MATCHES = [
       "dcx2": 2.7
     },
     "h2h": null,
-    "elapsed": 56
+    "elapsed": 61
   },
   {
     "home": "Sligo Rovers",
@@ -54995,7 +54995,7 @@ window.MATCHES = [
       "dcx2": 1.13
     },
     "h2h": null,
-    "elapsed": 59
+    "elapsed": 63
   },
   {
     "home": "St Patrick's Athl.",
@@ -55145,7 +55145,7 @@ window.MATCHES = [
       "dcx2": 2.75
     },
     "h2h": null,
-    "elapsed": 61
+    "elapsed": 65
   },
   {
     "home": "Drogheda United",
@@ -55295,7 +55295,7 @@ window.MATCHES = [
       "dcx2": 1.18
     },
     "h2h": null,
-    "elapsed": 57
+    "elapsed": 61
   },
   {
     "home": "Finn Harps",
@@ -55461,7 +55461,7 @@ window.MATCHES = [
     "xgAwayReal": 0.61,
     "awayXgAgainst": 1.57,
     "lineupConfirmed": true,
-    "elapsed": 60
+    "elapsed": 64
   },
   {
     "home": "Bray Wanderers",
@@ -55627,7 +55627,7 @@ window.MATCHES = [
     "xgAwayReal": 1.06,
     "awayXgAgainst": 1.71,
     "lineupConfirmed": true,
-    "elapsed": 57
+    "elapsed": 61
   },
   {
     "home": "Cobh Ramblers",
@@ -55791,7 +55791,7 @@ window.MATCHES = [
     "homeXgAgainst": 1.97,
     "xgReal": true,
     "lineupConfirmed": true,
-    "elapsed": 58
+    "elapsed": 63
   },
   {
     "home": "Treaty United",
@@ -55955,7 +55955,7 @@ window.MATCHES = [
     "awayXgAgainst": 2.18,
     "xgReal": true,
     "lineupConfirmed": true,
-    "elapsed": 58
+    "elapsed": 63
   },
   {
     "home": "Akron City",
@@ -56101,7 +56101,7 @@ window.MATCHES = [
     "awayLogo": "https://media.api-sports.io/football/teams/584.png",
     "country": "Ireland",
     "flag": "https://media.api-sports.io/flags/ie.svg",
-    "status": "HT",
+    "status": "2H",
     "kickoff": "2026-07-03T19:00:00+00:00",
     "matchDate": "2026-07-03",
     "homeGoals": 2,
@@ -56240,7 +56240,7 @@ window.MATCHES = [
       "dcx2": 1.85
     },
     "h2h": null,
-    "elapsed": 45
+    "elapsed": 47
   },
   {
     "home": "FH hafnarfjordur",
@@ -56251,7 +56251,7 @@ window.MATCHES = [
     "awayLogo": "https://media.api-sports.io/football/teams/275.png",
     "country": "Iceland",
     "flag": "https://media.api-sports.io/flags/is.svg",
-    "status": "1H",
+    "status": "HT",
     "kickoff": "2026-07-03T19:15:00+00:00",
     "matchDate": "2026-07-03",
     "homeGoals": 2,
@@ -56401,7 +56401,7 @@ window.MATCHES = [
     "awayLogo": "https://media.api-sports.io/football/teams/2113.png",
     "country": "Iceland",
     "flag": "https://media.api-sports.io/flags/is.svg",
-    "status": "1H",
+    "status": "HT",
     "kickoff": "2026-07-03T19:15:00+00:00",
     "matchDate": "2026-07-03",
     "homeGoals": 2,
@@ -56551,7 +56551,7 @@ window.MATCHES = [
     "awayLogo": "https://media.api-sports.io/football/teams/3514.png",
     "country": "Iceland",
     "flag": "https://media.api-sports.io/flags/is.svg",
-    "status": "1H",
+    "status": "HT",
     "kickoff": "2026-07-03T19:15:00+00:00",
     "matchDate": "2026-07-03",
     "homeGoals": 0,
@@ -56701,7 +56701,7 @@ window.MATCHES = [
     "awayLogo": "https://media.api-sports.io/football/teams/829.png",
     "country": "Iceland",
     "flag": "https://media.api-sports.io/flags/is.svg",
-    "status": "1H",
+    "status": "HT",
     "kickoff": "2026-07-03T19:15:00+00:00",
     "matchDate": "2026-07-03",
     "homeGoals": 0,
@@ -56851,7 +56851,7 @@ window.MATCHES = [
     "awayLogo": "https://media.api-sports.io/football/teams/267.png",
     "country": "Iceland",
     "flag": "https://media.api-sports.io/flags/is.svg",
-    "status": "1H",
+    "status": "HT",
     "kickoff": "2026-07-03T19:15:00+00:00",
     "matchDate": "2026-07-03",
     "homeGoals": 1,
@@ -57004,8 +57004,8 @@ window.MATCHES = [
     "status": "1H",
     "kickoff": "2026-07-03T19:15:00+00:00",
     "matchDate": "2026-07-03",
-    "homeGoals": 0,
-    "awayGoals": 1,
+    "homeGoals": 1,
+    "awayGoals": 2,
     "homePos": 8,
     "awayPos": 4,
     "tableSize": 12,
@@ -57138,7 +57138,7 @@ window.MATCHES = [
       "dcx2": 1.13
     },
     "h2h": null,
-    "elapsed": 41
+    "elapsed": 45
   },
   {
     "home": "Fernando De La Mora",
@@ -57286,7 +57286,7 @@ window.MATCHES = [
       "dcx2": 1.7
     },
     "h2h": null,
-    "elapsed": 1
+    "elapsed": 5
   },
   {
     "home": "Argentina",
