@@ -1,5 +1,5 @@
 window.DATA_UPDATED = "2026-07-02T01:16:59.972Z";
-window.SCORES_UPDATED = "2026-07-03T08:30:52.801Z";
+window.SCORES_UPDATED = "2026-07-03T08:35:31.099Z";
 window.MATCHES = [
   {
     "home": "Santa Cruz",
@@ -60802,7 +60802,7 @@ window.MATCHES = [
     "round": "Regular Season - 23",
     "odds": null,
     "h2h": null,
-    "elapsed": 30
+    "elapsed": 35
   },
   {
     "home": "Arka Gdynia",
@@ -63902,7 +63902,7 @@ window.MATCHES = [
     "round": "Club Friendlies",
     "odds": null,
     "h2h": null,
-    "elapsed": 30
+    "elapsed": 35
   },
   {
     "home": "CSKA Sofia",
@@ -64166,7 +64166,7 @@ window.MATCHES = [
     "round": "Club Friendlies",
     "odds": null,
     "h2h": null,
-    "elapsed": 26
+    "elapsed": 31
   },
   {
     "home": "Obolon'-Brovar",
@@ -65702,7 +65702,7 @@ window.MATCHES = [
     "round": "Club Friendlies",
     "odds": null,
     "h2h": null,
-    "elapsed": 67
+    "elapsed": 72
   },
   {
     "home": "Abdish-Ata",
