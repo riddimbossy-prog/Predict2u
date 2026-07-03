@@ -1,5 +1,5 @@
 window.DATA_UPDATED = "2026-07-03T18:49:41.606Z";
-window.SCORES_UPDATED = "2026-07-03T19:30:51.226Z";
+window.SCORES_UPDATED = "2026-07-03T19:35:32.113Z";
 window.MATCHES = [
   {
     "home": "Santa Cruz",
@@ -53977,7 +53977,7 @@ window.MATCHES = [
     "xgAwayReal": 1.55,
     "awayXgAgainst": 0.94,
     "lineupConfirmed": true,
-    "elapsed": 69
+    "elapsed": 74
   },
   {
     "home": "Hvíti riddarinn",
@@ -53991,7 +53991,7 @@ window.MATCHES = [
     "status": "2H",
     "kickoff": "2026-07-03T18:00:00+00:00",
     "matchDate": "2026-07-03",
-    "homeGoals": 2,
+    "homeGoals": 3,
     "awayGoals": 2,
     "homePos": 9,
     "awayPos": 2,
@@ -54112,7 +54112,7 @@ window.MATCHES = [
     "round": "Regular Season - 11",
     "odds": null,
     "h2h": null,
-    "elapsed": 68
+    "elapsed": 73
   },
   {
     "home": "Deportivo Cuenca Juniors",
@@ -54247,7 +54247,7 @@ window.MATCHES = [
     "round": "Regular Season - 15",
     "odds": null,
     "h2h": null,
-    "elapsed": 68
+    "elapsed": 73
   },
   {
     "home": "NSI Runavik",
@@ -54397,7 +54397,7 @@ window.MATCHES = [
       "dcx2": 1.42
     },
     "h2h": null,
-    "elapsed": 71
+    "elapsed": 76
   },
   {
     "home": "B36 II",
@@ -54408,7 +54408,7 @@ window.MATCHES = [
     "awayLogo": "https://media.api-sports.io/football/teams/10076.png",
     "country": "Faroe-Islands",
     "flag": "https://media.api-sports.io/flags/fo.svg",
-    "status": "HT",
+    "status": "2H",
     "kickoff": "2026-07-03T18:30:00+00:00",
     "matchDate": "2026-07-03",
     "homeGoals": 0,
@@ -54545,7 +54545,7 @@ window.MATCHES = [
       "dcx2": 2.25
     },
     "h2h": null,
-    "elapsed": 45
+    "elapsed": 49
   },
   {
     "home": "Al Hikma",
@@ -54706,7 +54706,7 @@ window.MATCHES = [
     "awayLogo": "https://media.api-sports.io/football/teams/3845.png",
     "country": "Ireland",
     "flag": "https://media.api-sports.io/flags/ie.svg",
-    "status": "1H",
+    "status": "HT",
     "kickoff": "2026-07-03T18:45:00+00:00",
     "matchDate": "2026-07-03",
     "homeGoals": 0,
@@ -54845,7 +54845,7 @@ window.MATCHES = [
       "dcx2": 2.7
     },
     "h2h": null,
-    "elapsed": 43
+    "elapsed": 45
   },
   {
     "home": "Sligo Rovers",
@@ -54856,7 +54856,7 @@ window.MATCHES = [
     "awayLogo": "https://media.api-sports.io/football/teams/652.png",
     "country": "Ireland",
     "flag": "https://media.api-sports.io/flags/ie.svg",
-    "status": "1H",
+    "status": "HT",
     "kickoff": "2026-07-03T18:45:00+00:00",
     "matchDate": "2026-07-03",
     "homeGoals": 1,
@@ -55006,7 +55006,7 @@ window.MATCHES = [
     "awayLogo": "https://media.api-sports.io/football/teams/3851.png",
     "country": "Ireland",
     "flag": "https://media.api-sports.io/flags/ie.svg",
-    "status": "1H",
+    "status": "HT",
     "kickoff": "2026-07-03T18:45:00+00:00",
     "matchDate": "2026-07-03",
     "homeGoals": 3,
@@ -55156,7 +55156,7 @@ window.MATCHES = [
     "awayLogo": "https://media.api-sports.io/football/teams/3840.png",
     "country": "Ireland",
     "flag": "https://media.api-sports.io/flags/ie.svg",
-    "status": "1H",
+    "status": "HT",
     "kickoff": "2026-07-03T18:45:00+00:00",
     "matchDate": "2026-07-03",
     "homeGoals": 0,
@@ -55295,7 +55295,7 @@ window.MATCHES = [
       "dcx2": 1.18
     },
     "h2h": null,
-    "elapsed": 44
+    "elapsed": 45
   },
   {
     "home": "Finn Harps",
@@ -55306,7 +55306,7 @@ window.MATCHES = [
     "awayLogo": "https://media.api-sports.io/football/teams/3855.png",
     "country": "Ireland",
     "flag": "https://media.api-sports.io/flags/ie.svg",
-    "status": "1H",
+    "status": "HT",
     "kickoff": "2026-07-03T18:45:00+00:00",
     "matchDate": "2026-07-03",
     "homeGoals": 0,
@@ -55472,7 +55472,7 @@ window.MATCHES = [
     "awayLogo": "https://media.api-sports.io/football/teams/3846.png",
     "country": "Ireland",
     "flag": "https://media.api-sports.io/flags/ie.svg",
-    "status": "1H",
+    "status": "HT",
     "kickoff": "2026-07-03T18:45:00+00:00",
     "matchDate": "2026-07-03",
     "homeGoals": 1,
@@ -55627,7 +55627,7 @@ window.MATCHES = [
     "xgAwayReal": 1.06,
     "awayXgAgainst": 1.71,
     "lineupConfirmed": true,
-    "elapsed": 44
+    "elapsed": 45
   },
   {
     "home": "Cobh Ramblers",
@@ -55638,7 +55638,7 @@ window.MATCHES = [
     "awayLogo": "https://media.api-sports.io/football/teams/653.png",
     "country": "Ireland",
     "flag": "https://media.api-sports.io/flags/ie.svg",
-    "status": "1H",
+    "status": "HT",
     "kickoff": "2026-07-03T18:45:00+00:00",
     "matchDate": "2026-07-03",
     "homeGoals": 0,
@@ -55802,7 +55802,7 @@ window.MATCHES = [
     "awayLogo": "https://media.api-sports.io/football/teams/11328.png",
     "country": "Ireland",
     "flag": "https://media.api-sports.io/flags/ie.svg",
-    "status": "1H",
+    "status": "HT",
     "kickoff": "2026-07-03T18:45:00+00:00",
     "matchDate": "2026-07-03",
     "homeGoals": 0,
@@ -56090,7 +56090,7 @@ window.MATCHES = [
     "round": "Group Stage",
     "odds": null,
     "h2h": null,
-    "elapsed": 21
+    "elapsed": 26
   },
   {
     "home": "Shelbourne",
@@ -56240,7 +56240,7 @@ window.MATCHES = [
       "dcx2": 1.85
     },
     "h2h": null,
-    "elapsed": 29
+    "elapsed": 34
   },
   {
     "home": "FH hafnarfjordur",
@@ -56255,7 +56255,7 @@ window.MATCHES = [
     "kickoff": "2026-07-03T19:15:00+00:00",
     "matchDate": "2026-07-03",
     "homeGoals": 1,
-    "awayGoals": 0,
+    "awayGoals": 1,
     "homePos": 12,
     "awayPos": 9,
     "tableSize": 12,
@@ -56390,7 +56390,7 @@ window.MATCHES = [
       "dcx2": 1.48
     },
     "h2h": null,
-    "elapsed": 15
+    "elapsed": 20
   },
   {
     "home": "Grotta",
@@ -56404,7 +56404,7 @@ window.MATCHES = [
     "status": "1H",
     "kickoff": "2026-07-03T19:15:00+00:00",
     "matchDate": "2026-07-03",
-    "homeGoals": 1,
+    "homeGoals": 2,
     "awayGoals": 0,
     "homePos": 8,
     "awayPos": 5,
@@ -56540,7 +56540,7 @@ window.MATCHES = [
       "dcx2": 1.28
     },
     "h2h": null,
-    "elapsed": 15
+    "elapsed": 20
   },
   {
     "home": "IR Reykjavik",
@@ -56690,7 +56690,7 @@ window.MATCHES = [
       "dcx2": 1.28
     },
     "h2h": null,
-    "elapsed": 15
+    "elapsed": 20
   },
   {
     "home": "Njardvik",
@@ -56840,7 +56840,7 @@ window.MATCHES = [
       "dcx2": 1.48
     },
     "h2h": null,
-    "elapsed": 15
+    "elapsed": 20
   },
   {
     "home": "Ægir",
@@ -56990,7 +56990,7 @@ window.MATCHES = [
       "dcx2": 1.11
     },
     "h2h": null,
-    "elapsed": 16
+    "elapsed": 21
   },
   {
     "home": "KFG",
@@ -57138,7 +57138,7 @@ window.MATCHES = [
       "dcx2": 1.13
     },
     "h2h": null,
-    "elapsed": 11
+    "elapsed": 16
   },
   {
     "home": "Fernando De La Mora",
