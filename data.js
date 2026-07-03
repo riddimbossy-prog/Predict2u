@@ -1,5 +1,5 @@
 window.DATA_UPDATED = "2026-07-02T01:16:59.972Z";
-window.SCORES_UPDATED = "2026-07-03T10:15:35.512Z";
+window.SCORES_UPDATED = "2026-07-03T10:20:39.256Z";
 window.MATCHES = [
   {
     "home": "Santa Cruz",
@@ -60868,7 +60868,7 @@ window.MATCHES = [
     "round": "Club Friendlies",
     "odds": null,
     "h2h": null,
-    "elapsed": 56
+    "elapsed": 61
   },
   {
     "home": "AS Trencin",
@@ -60934,7 +60934,7 @@ window.MATCHES = [
     "round": "Club Friendlies",
     "odds": null,
     "h2h": null,
-    "elapsed": 57
+    "elapsed": 62
   },
   {
     "home": "Universitatea Cluj",
@@ -61000,7 +61000,7 @@ window.MATCHES = [
     "round": "Club Friendlies",
     "odds": null,
     "h2h": null,
-    "elapsed": 60
+    "elapsed": 65
   },
   {
     "home": "Schwarz-Weiß Bregenz",
@@ -61076,7 +61076,7 @@ window.MATCHES = [
     "awayLogo": "https://media.api-sports.io/football/teams/3799.png",
     "country": "Australia",
     "flag": "https://media.api-sports.io/flags/au.svg",
-    "status": "1H",
+    "status": "HT",
     "kickoff": "2026-07-03T09:30:00+00:00",
     "matchDate": "2026-07-03",
     "homeGoals": 2,
@@ -61153,7 +61153,7 @@ window.MATCHES = [
       "dcx2": 1.53
     },
     "h2h": null,
-    "elapsed": 44
+    "elapsed": 45
   },
   {
     "home": "Heidelberg United",
@@ -61163,7 +61163,7 @@ window.MATCHES = [
     "awayLogo": "https://media.api-sports.io/football/teams/9978.png",
     "country": "Australia",
     "flag": "https://media.api-sports.io/flags/au.svg",
-    "status": "1H",
+    "status": "HT",
     "kickoff": "2026-07-03T09:30:00+00:00",
     "matchDate": "2026-07-03",
     "homeGoals": 1,
@@ -61240,7 +61240,7 @@ window.MATCHES = [
       "dcx2": 2.35
     },
     "h2h": null,
-    "elapsed": 44
+    "elapsed": 45
   },
   {
     "home": "WDSC Wolves",
@@ -61250,7 +61250,7 @@ window.MATCHES = [
     "awayLogo": "https://media.api-sports.io/football/teams/11182.png",
     "country": "Australia",
     "flag": "https://media.api-sports.io/flags/au.svg",
-    "status": "1H",
+    "status": "HT",
     "kickoff": "2026-07-03T09:30:00+00:00",
     "matchDate": "2026-07-03",
     "homeGoals": 0,
@@ -61399,7 +61399,7 @@ window.MATCHES = [
     "round": "Regular Season - 19",
     "odds": null,
     "h2h": null,
-    "elapsed": 43
+    "elapsed": 45
   },
   {
     "home": "Kingston City",
@@ -61412,7 +61412,7 @@ window.MATCHES = [
     "status": "1H",
     "kickoff": "2026-07-03T09:45:00+00:00",
     "matchDate": "2026-07-03",
-    "homeGoals": 0,
+    "homeGoals": 1,
     "awayGoals": 0,
     "homePos": 12,
     "awayPos": 8,
@@ -61471,7 +61471,7 @@ window.MATCHES = [
     "round": "Regular Season - 19",
     "odds": null,
     "h2h": null,
-    "elapsed": 28
+    "elapsed": 33
   },
   {
     "home": "Almaz Antey U19",
@@ -61543,7 +61543,7 @@ window.MATCHES = [
     "round": "Regular Season - 13",
     "odds": null,
     "h2h": null,
-    "elapsed": 15
+    "elapsed": 20
   },
   {
     "home": "Edgeworth Eagles",
@@ -61628,7 +61628,7 @@ window.MATCHES = [
       "dcx2": 2.4
     },
     "h2h": null,
-    "elapsed": 55
+    "elapsed": 60
   },
   {
     "home": "Cooks Hill United",
@@ -61713,7 +61713,7 @@ window.MATCHES = [
       "dcx2": 1.91
     },
     "h2h": null,
-    "elapsed": 12
+    "elapsed": 17
   },
   {
     "home": "Vejle",
@@ -61779,7 +61779,7 @@ window.MATCHES = [
     "round": "Club Friendlies",
     "odds": null,
     "h2h": null,
-    "elapsed": 15
+    "elapsed": 20
   },
   {
     "home": "Hvidovre",
@@ -61845,7 +61845,7 @@ window.MATCHES = [
     "round": "Club Friendlies",
     "odds": null,
     "h2h": null,
-    "elapsed": 18
+    "elapsed": 23
   },
   {
     "home": "Adelaide Olympic",
@@ -61917,7 +61917,7 @@ window.MATCHES = [
     "round": "Regular Season - 17",
     "odds": null,
     "h2h": null,
-    "elapsed": 13
+    "elapsed": 18
   },
   {
     "home": "Hurstville FC",
@@ -62002,7 +62002,7 @@ window.MATCHES = [
       "dcx2": 1.44
     },
     "h2h": null,
-    "elapsed": 10
+    "elapsed": 15
   },
   {
     "home": "Prospect United",
@@ -62087,7 +62087,7 @@ window.MATCHES = [
       "dcx2": 1.3
     },
     "h2h": null,
-    "elapsed": 10
+    "elapsed": 15
   },
   {
     "home": "Tensung",
@@ -62159,7 +62159,7 @@ window.MATCHES = [
     "round": null,
     "odds": null,
     "h2h": null,
-    "elapsed": 15
+    "elapsed": 20
   },
   {
     "home": "Eastern United",
@@ -62169,11 +62169,11 @@ window.MATCHES = [
     "awayLogo": "https://media.api-sports.io/football/teams/10010.png",
     "country": "Australia",
     "flag": "https://media.api-sports.io/flags/au.svg",
-    "status": "NS",
+    "status": "1H",
     "kickoff": "2026-07-03T10:15:00+00:00",
     "matchDate": "2026-07-03",
-    "homeGoals": null,
-    "awayGoals": null,
+    "homeGoals": 0,
+    "awayGoals": 0,
     "homePos": 10,
     "awayPos": 5,
     "tableSize": 12,
@@ -62231,7 +62231,7 @@ window.MATCHES = [
     "round": "Regular Season - 17",
     "odds": null,
     "h2h": null,
-    "elapsed": null
+    "elapsed": 2
   },
   {
     "home": "Glenorchy Knights U21",
@@ -64496,7 +64496,7 @@ window.MATCHES = [
     "round": "Club Friendlies",
     "odds": null,
     "h2h": null,
-    "elapsed": 60
+    "elapsed": 65
   },
   {
     "home": "Motor Lublin",
