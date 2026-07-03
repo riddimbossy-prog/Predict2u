@@ -1,5 +1,5 @@
 window.DATA_UPDATED = "2026-07-02T01:16:59.972Z";
-window.SCORES_UPDATED = "2026-07-03T00:15:34.844Z";
+window.SCORES_UPDATED = "2026-07-03T00:20:40.187Z";
 window.MATCHES = [
   {
     "home": "Santa Cruz",
@@ -59808,7 +59808,7 @@ window.MATCHES = [
       "draw": 5,
       "away": 9
     },
-    "elapsed": 16
+    "elapsed": 21
   },
   {
     "home": "Santo Domingo",
@@ -59895,7 +59895,7 @@ window.MATCHES = [
       "dcx2": 1.44
     },
     "h2h": null,
-    "elapsed": 16
+    "elapsed": 21
   },
   {
     "home": "Birmingham Legion",
@@ -59992,7 +59992,7 @@ window.MATCHES = [
       "draw": 3.25,
       "away": 2.35
     },
-    "elapsed": 9
+    "elapsed": 14
   },
   {
     "home": "FC Motown II",
@@ -60005,7 +60005,7 @@ window.MATCHES = [
     "status": "1H",
     "kickoff": "2026-07-03T00:00:00+00:00",
     "matchDate": "2026-07-03",
-    "homeGoals": 0,
+    "homeGoals": 1,
     "awayGoals": 0,
     "homePos": null,
     "awayPos": null,
@@ -60058,7 +60058,7 @@ window.MATCHES = [
     "round": "Group Stage",
     "odds": null,
     "h2h": null,
-    "elapsed": 11
+    "elapsed": 16
   },
   {
     "home": "Flatirons Rush",
@@ -79145,7 +79145,7 @@ window.MATCHES = [
       "away": 4.75
     },
     "lineupConfirmed": true,
-    "elapsed": 56
+    "elapsed": 61
   },
   {
     "home": "Cuiaba",
@@ -79242,7 +79242,7 @@ window.MATCHES = [
       "draw": 3.3,
       "away": 5
     },
-    "elapsed": 56
+    "elapsed": 61
   },
   {
     "home": "Cedar Stars Rush",
@@ -79308,7 +79308,7 @@ window.MATCHES = [
     "round": "Group Stage",
     "odds": null,
     "h2h": null,
-    "elapsed": 51
+    "elapsed": 56
   },
   {
     "home": "Rochester",
@@ -79322,7 +79322,7 @@ window.MATCHES = [
     "kickoff": "2026-07-02T23:00:00+00:00",
     "matchDate": "2026-07-02",
     "homeGoals": 0,
-    "awayGoals": 0,
+    "awayGoals": 1,
     "homePos": null,
     "awayPos": null,
     "tableSize": 20,
@@ -79374,7 +79374,7 @@ window.MATCHES = [
     "round": "Group Stage",
     "odds": null,
     "h2h": null,
-    "elapsed": 52
+    "elapsed": 57
   },
   {
     "home": "Apotheos",
@@ -79440,7 +79440,7 @@ window.MATCHES = [
     "round": "Group Stage",
     "odds": null,
     "h2h": null,
-    "elapsed": 37
+    "elapsed": 42
   },
   {
     "home": "Memphis 901",
