@@ -1,5 +1,5 @@
 window.DATA_UPDATED = "2026-07-03T18:49:41.606Z";
-window.SCORES_UPDATED = "2026-07-03T19:25:30.134Z";
+window.SCORES_UPDATED = "2026-07-03T19:30:51.226Z";
 window.MATCHES = [
   {
     "home": "Santa Cruz",
@@ -53977,7 +53977,7 @@ window.MATCHES = [
     "xgAwayReal": 1.55,
     "awayXgAgainst": 0.94,
     "lineupConfirmed": true,
-    "elapsed": 64
+    "elapsed": 69
   },
   {
     "home": "Hvíti riddarinn",
@@ -54112,7 +54112,7 @@ window.MATCHES = [
     "round": "Regular Season - 11",
     "odds": null,
     "h2h": null,
-    "elapsed": 63
+    "elapsed": 68
   },
   {
     "home": "Deportivo Cuenca Juniors",
@@ -54247,7 +54247,7 @@ window.MATCHES = [
     "round": "Regular Season - 15",
     "odds": null,
     "h2h": null,
-    "elapsed": 63
+    "elapsed": 68
   },
   {
     "home": "NSI Runavik",
@@ -54397,7 +54397,7 @@ window.MATCHES = [
       "dcx2": 1.42
     },
     "h2h": null,
-    "elapsed": 67
+    "elapsed": 71
   },
   {
     "home": "B36 II",
@@ -54845,7 +54845,7 @@ window.MATCHES = [
       "dcx2": 2.7
     },
     "h2h": null,
-    "elapsed": 39
+    "elapsed": 43
   },
   {
     "home": "Sligo Rovers",
@@ -54995,7 +54995,7 @@ window.MATCHES = [
       "dcx2": 1.13
     },
     "h2h": null,
-    "elapsed": 40
+    "elapsed": 45
   },
   {
     "home": "St Patrick's Athl.",
@@ -55145,7 +55145,7 @@ window.MATCHES = [
       "dcx2": 2.75
     },
     "h2h": null,
-    "elapsed": 41
+    "elapsed": 45
   },
   {
     "home": "Drogheda United",
@@ -55295,7 +55295,7 @@ window.MATCHES = [
       "dcx2": 1.18
     },
     "h2h": null,
-    "elapsed": 39
+    "elapsed": 44
   },
   {
     "home": "Finn Harps",
@@ -55461,7 +55461,7 @@ window.MATCHES = [
     "xgAwayReal": 0.61,
     "awayXgAgainst": 1.57,
     "lineupConfirmed": true,
-    "elapsed": 40
+    "elapsed": 45
   },
   {
     "home": "Bray Wanderers",
@@ -55627,7 +55627,7 @@ window.MATCHES = [
     "xgAwayReal": 1.06,
     "awayXgAgainst": 1.71,
     "lineupConfirmed": true,
-    "elapsed": 39
+    "elapsed": 44
   },
   {
     "home": "Cobh Ramblers",
@@ -55791,7 +55791,7 @@ window.MATCHES = [
     "homeXgAgainst": 1.97,
     "xgReal": true,
     "lineupConfirmed": true,
-    "elapsed": 41
+    "elapsed": 45
   },
   {
     "home": "Treaty United",
@@ -55955,7 +55955,7 @@ window.MATCHES = [
     "awayXgAgainst": 2.18,
     "xgReal": true,
     "lineupConfirmed": true,
-    "elapsed": 40
+    "elapsed": 45
   },
   {
     "home": "Akron City",
@@ -56090,7 +56090,7 @@ window.MATCHES = [
     "round": "Group Stage",
     "odds": null,
     "h2h": null,
-    "elapsed": 16
+    "elapsed": 21
   },
   {
     "home": "Shelbourne",
@@ -56240,7 +56240,7 @@ window.MATCHES = [
       "dcx2": 1.85
     },
     "h2h": null,
-    "elapsed": 25
+    "elapsed": 29
   },
   {
     "home": "FH hafnarfjordur",
@@ -56254,7 +56254,7 @@ window.MATCHES = [
     "status": "1H",
     "kickoff": "2026-07-03T19:15:00+00:00",
     "matchDate": "2026-07-03",
-    "homeGoals": 0,
+    "homeGoals": 1,
     "awayGoals": 0,
     "homePos": 12,
     "awayPos": 9,
@@ -56390,7 +56390,7 @@ window.MATCHES = [
       "dcx2": 1.48
     },
     "h2h": null,
-    "elapsed": 10
+    "elapsed": 15
   },
   {
     "home": "Grotta",
@@ -56540,7 +56540,7 @@ window.MATCHES = [
       "dcx2": 1.28
     },
     "h2h": null,
-    "elapsed": 10
+    "elapsed": 15
   },
   {
     "home": "IR Reykjavik",
@@ -56690,7 +56690,7 @@ window.MATCHES = [
       "dcx2": 1.28
     },
     "h2h": null,
-    "elapsed": 10
+    "elapsed": 15
   },
   {
     "home": "Njardvik",
@@ -56840,7 +56840,7 @@ window.MATCHES = [
       "dcx2": 1.48
     },
     "h2h": null,
-    "elapsed": 10
+    "elapsed": 15
   },
   {
     "home": "Ægir",
@@ -56855,7 +56855,7 @@ window.MATCHES = [
     "kickoff": "2026-07-03T19:15:00+00:00",
     "matchDate": "2026-07-03",
     "homeGoals": 0,
-    "awayGoals": 0,
+    "awayGoals": 2,
     "homePos": 11,
     "awayPos": 3,
     "tableSize": 12,
@@ -56990,7 +56990,7 @@ window.MATCHES = [
       "dcx2": 1.11
     },
     "h2h": null,
-    "elapsed": 11
+    "elapsed": 16
   },
   {
     "home": "KFG",
@@ -57138,7 +57138,7 @@ window.MATCHES = [
       "dcx2": 1.13
     },
     "h2h": null,
-    "elapsed": 6
+    "elapsed": 11
   },
   {
     "home": "Fernando De La Mora",
