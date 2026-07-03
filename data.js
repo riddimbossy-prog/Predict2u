@@ -1,5 +1,5 @@
 window.DATA_UPDATED = "2026-07-02T01:16:59.972Z";
-window.SCORES_UPDATED = "2026-07-03T02:55:29.608Z";
+window.SCORES_UPDATED = "2026-07-03T03:00:54.794Z";
 window.MATCHES = [
   {
     "home": "Santa Cruz",
@@ -60500,7 +60500,7 @@ window.MATCHES = [
       "draw": 3.3,
       "away": 2.6
     },
-    "elapsed": 58
+    "elapsed": 63
   },
   {
     "home": "Redlands",
