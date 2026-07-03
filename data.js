@@ -1,5 +1,5 @@
 window.DATA_UPDATED = "2026-07-02T01:16:59.972Z";
-window.SCORES_UPDATED = "2026-07-03T12:05:28.562Z";
+window.SCORES_UPDATED = "2026-07-03T12:10:39.771Z";
 window.MATCHES = [
   {
     "home": "Santa Cruz",
@@ -62231,7 +62231,7 @@ window.MATCHES = [
     "round": "Regular Season - 17",
     "odds": null,
     "h2h": null,
-    "elapsed": 87
+    "elapsed": 90
   },
   {
     "home": "Glenorchy Knights U21",
@@ -62317,7 +62317,7 @@ window.MATCHES = [
     "kickoff": "2026-07-03T10:30:00+00:00",
     "matchDate": "2026-07-03",
     "homeGoals": 1,
-    "awayGoals": 0,
+    "awayGoals": 1,
     "homePos": 5,
     "awayPos": 4,
     "tableSize": 12,
@@ -62390,7 +62390,7 @@ window.MATCHES = [
       "dcx2": 1.5
     },
     "h2h": null,
-    "elapsed": 78
+    "elapsed": 83
   },
   {
     "home": "Ipswich",
@@ -62403,7 +62403,7 @@ window.MATCHES = [
     "status": "2H",
     "kickoff": "2026-07-03T10:30:00+00:00",
     "matchDate": "2026-07-03",
-    "homeGoals": 2,
+    "homeGoals": 3,
     "awayGoals": 2,
     "homePos": 3,
     "awayPos": 7,
@@ -62462,7 +62462,7 @@ window.MATCHES = [
     "round": "Regular Season - 17",
     "odds": null,
     "h2h": null,
-    "elapsed": 74
+    "elapsed": 79
   },
   {
     "home": "Melbourne Knights",
@@ -62547,7 +62547,7 @@ window.MATCHES = [
       "dcx2": 1.83
     },
     "h2h": null,
-    "elapsed": 78
+    "elapsed": 83
   },
   {
     "home": "Northcote City",
@@ -62632,7 +62632,7 @@ window.MATCHES = [
       "dcx2": 2.1
     },
     "h2h": null,
-    "elapsed": 78
+    "elapsed": 83
   },
   {
     "home": "Brunswick Juventus FC",
@@ -62717,7 +62717,7 @@ window.MATCHES = [
       "dcx2": 1.91
     },
     "h2h": null,
-    "elapsed": 75
+    "elapsed": 80
   },
   {
     "home": "Springvale",
@@ -62799,7 +62799,7 @@ window.MATCHES = [
     "awayLogo": "https://media.api-sports.io/football/teams/3792.png",
     "country": "Australia",
     "flag": "https://media.api-sports.io/flags/au.svg",
-    "status": "HT",
+    "status": "2H",
     "kickoff": "2026-07-03T11:00:00+00:00",
     "matchDate": "2026-07-03",
     "homeGoals": 1,
@@ -62861,7 +62861,7 @@ window.MATCHES = [
     "round": "Regular Season - 17",
     "odds": null,
     "h2h": null,
-    "elapsed": 45
+    "elapsed": 47
   },
   {
     "home": "Aalborg",
@@ -62871,10 +62871,10 @@ window.MATCHES = [
     "awayLogo": "https://media.api-sports.io/football/teams/2070.png",
     "country": "World",
     "flag": null,
-    "status": "HT",
+    "status": "2H",
     "kickoff": "2026-07-03T11:00:00+00:00",
     "matchDate": "2026-07-03",
-    "homeGoals": 1,
+    "homeGoals": 2,
     "awayGoals": 1,
     "homePos": null,
     "awayPos": null,
@@ -62927,7 +62927,7 @@ window.MATCHES = [
     "round": "Club Friendlies",
     "odds": null,
     "h2h": null,
-    "elapsed": 45
+    "elapsed": 51
   },
   {
     "home": "Khangarid",
@@ -63071,7 +63071,7 @@ window.MATCHES = [
     "round": "Regular Season - 14",
     "odds": null,
     "h2h": null,
-    "elapsed": 4
+    "elapsed": 9
   },
   {
     "home": "Yunnan Yukun",
@@ -63158,7 +63158,7 @@ window.MATCHES = [
       "dcx2": 1.53
     },
     "h2h": null,
-    "elapsed": 5
+    "elapsed": 10
   },
   {
     "home": "Nizhny Novgorod U19",
@@ -63230,7 +63230,7 @@ window.MATCHES = [
     "round": "Regular Season - 13",
     "odds": null,
     "h2h": null,
-    "elapsed": 4
+    "elapsed": 10
   },
   {
     "home": "Sport Academy Kairat",
@@ -63302,7 +63302,7 @@ window.MATCHES = [
     "round": "Regular Season - 12",
     "odds": null,
     "h2h": null,
-    "elapsed": 4
+    "elapsed": 10
   },
   {
     "home": "Arys",
@@ -63374,7 +63374,7 @@ window.MATCHES = [
     "round": "Regular Season - 12",
     "odds": null,
     "h2h": null,
-    "elapsed": 5
+    "elapsed": 11
   },
   {
     "home": "Vitesse",
@@ -63440,7 +63440,7 @@ window.MATCHES = [
     "round": "Club Friendlies",
     "odds": null,
     "h2h": null,
-    "elapsed": 5
+    "elapsed": 10
   },
   {
     "home": "SC Braga",
@@ -64509,7 +64509,7 @@ window.MATCHES = [
     "status": "1H",
     "kickoff": "2026-07-03T12:00:00+00:00",
     "matchDate": "2026-07-03",
-    "homeGoals": 0,
+    "homeGoals": 1,
     "awayGoals": 0,
     "homePos": null,
     "awayPos": null,
@@ -64562,7 +64562,7 @@ window.MATCHES = [
     "round": "Club Friendlies",
     "odds": null,
     "h2h": null,
-    "elapsed": 4
+    "elapsed": 9
   },
   {
     "home": "Juazeiro EC U20",
