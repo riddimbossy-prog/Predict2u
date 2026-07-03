@@ -1,5 +1,5 @@
 window.DATA_UPDATED = "2026-07-02T01:16:59.972Z";
-window.SCORES_UPDATED = "2026-07-03T08:55:31.537Z";
+window.SCORES_UPDATED = "2026-07-03T09:01:02.863Z";
 window.MATCHES = [
   {
     "home": "Santa Cruz",
@@ -63846,7 +63846,7 @@ window.MATCHES = [
     "awayLogo": "https://media.api-sports.io/football/teams/1418.png",
     "country": "World",
     "flag": null,
-    "status": "HT",
+    "status": "2H",
     "kickoff": "2026-07-03T12:00:00+00:00",
     "matchDate": "2026-07-03",
     "homeGoals": 1,
@@ -63902,7 +63902,7 @@ window.MATCHES = [
     "round": "Club Friendlies",
     "odds": null,
     "h2h": null,
-    "elapsed": 45
+    "elapsed": 47
   },
   {
     "home": "CSKA Sofia",
@@ -65646,7 +65646,7 @@ window.MATCHES = [
     "awayLogo": "https://media.api-sports.io/football/teams/6493.png",
     "country": "World",
     "flag": null,
-    "status": "2H",
+    "status": "FT",
     "kickoff": "2026-07-03T14:00:00+00:00",
     "matchDate": "2026-07-03",
     "homeGoals": 2,
@@ -65702,7 +65702,7 @@ window.MATCHES = [
     "round": "Club Friendlies",
     "odds": null,
     "h2h": null,
-    "elapsed": 90
+    "elapsed": null
   },
   {
     "home": "Abdish-Ata",
