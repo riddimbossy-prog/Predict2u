@@ -1,5 +1,5 @@
 window.DATA_UPDATED = "2026-07-02T01:16:59.972Z";
-window.SCORES_UPDATED = "2026-07-03T18:55:27.742Z";
+window.SCORES_UPDATED = "2026-07-03T19:00:59.528Z";
 window.MATCHES = [
   {
     "home": "Santa Cruz",
@@ -68676,7 +68676,7 @@ window.MATCHES = [
     "kickoff": "2026-07-03T17:30:00+00:00",
     "matchDate": "2026-07-03",
     "homeGoals": 0,
-    "awayGoals": 0,
+    "awayGoals": 1,
     "homePos": 14,
     "awayPos": 13,
     "tableSize": 16,
@@ -68734,7 +68734,7 @@ window.MATCHES = [
     "round": "Regular Season - 13",
     "odds": null,
     "h2h": null,
-    "elapsed": 67
+    "elapsed": 72
   },
   {
     "home": "Tallinna Kalev",
@@ -68819,7 +68819,7 @@ window.MATCHES = [
       "dcx2": 1.7
     },
     "h2h": null,
-    "elapsed": 66
+    "elapsed": 72
   },
   {
     "home": "Atlas Delmenhorst",
@@ -69029,7 +69029,7 @@ window.MATCHES = [
     "round": "Regular Season - 8",
     "odds": null,
     "h2h": null,
-    "elapsed": 51
+    "elapsed": 57
   },
   {
     "home": "EC Resende",
@@ -69043,7 +69043,7 @@ window.MATCHES = [
     "kickoff": "2026-07-03T17:45:00+00:00",
     "matchDate": "2026-07-03",
     "homeGoals": 0,
-    "awayGoals": 0,
+    "awayGoals": 1,
     "homePos": 3,
     "awayPos": 3,
     "tableSize": 32,
@@ -69101,7 +69101,7 @@ window.MATCHES = [
     "round": "Regular Season - 8",
     "odds": null,
     "h2h": null,
-    "elapsed": 50
+    "elapsed": 56
   },
   {
     "home": "Uni Souza",
@@ -69173,7 +69173,7 @@ window.MATCHES = [
     "round": "Regular Season - 8",
     "odds": null,
     "h2h": null,
-    "elapsed": 49
+    "elapsed": 54
   },
   {
     "home": "Uniao Central",
@@ -70160,7 +70160,7 @@ window.MATCHES = [
     "awayLogo": "https://media.api-sports.io/football/teams/27289.png",
     "country": "Brazil",
     "flag": "https://media.api-sports.io/flags/br.svg",
-    "status": "HT",
+    "status": "2H",
     "kickoff": "2026-07-03T18:00:00+00:00",
     "matchDate": "2026-07-03",
     "homeGoals": 1,
@@ -70222,7 +70222,7 @@ window.MATCHES = [
     "round": "Regular Season - 5",
     "odds": null,
     "h2h": null,
-    "elapsed": 45
+    "elapsed": 48
   },
   {
     "home": "São Caetano U20",
@@ -70642,7 +70642,7 @@ window.MATCHES = [
     "round": "Club Friendlies",
     "odds": null,
     "h2h": null,
-    "elapsed": 25
+    "elapsed": 30
   },
   {
     "home": "Forres Mechanics",
@@ -70846,7 +70846,7 @@ window.MATCHES = [
     "round": "Regular Season - 3",
     "odds": null,
     "h2h": null,
-    "elapsed": 13
+    "elapsed": 18
   },
   {
     "home": "Derry City",
@@ -70860,7 +70860,7 @@ window.MATCHES = [
     "kickoff": "2026-07-03T18:45:00+00:00",
     "matchDate": "2026-07-03",
     "homeGoals": 0,
-    "awayGoals": 0,
+    "awayGoals": 1,
     "homePos": 6,
     "awayPos": 10,
     "tableSize": 10,
@@ -70933,7 +70933,7 @@ window.MATCHES = [
       "dcx2": 2.7
     },
     "h2h": null,
-    "elapsed": 8
+    "elapsed": 14
   },
   {
     "home": "Sligo Rovers",
@@ -70946,7 +70946,7 @@ window.MATCHES = [
     "status": "1H",
     "kickoff": "2026-07-03T18:45:00+00:00",
     "matchDate": "2026-07-03",
-    "homeGoals": 0,
+    "homeGoals": 1,
     "awayGoals": 0,
     "homePos": 9,
     "awayPos": 1,
@@ -71020,7 +71020,7 @@ window.MATCHES = [
       "dcx2": 1.12
     },
     "h2h": null,
-    "elapsed": 10
+    "elapsed": 15
   },
   {
     "home": "St Patrick's Athl.",
@@ -71107,7 +71107,7 @@ window.MATCHES = [
       "dcx2": 2.8
     },
     "h2h": null,
-    "elapsed": 10
+    "elapsed": 16
   },
   {
     "home": "Drogheda United",
@@ -71194,7 +71194,7 @@ window.MATCHES = [
       "dcx2": 1.18
     },
     "h2h": null,
-    "elapsed": 9
+    "elapsed": 14
   },
   {
     "home": "Finn Harps",
@@ -71283,7 +71283,7 @@ window.MATCHES = [
       "draw": 3.5,
       "away": 1.67
     },
-    "elapsed": 10
+    "elapsed": 16
   },
   {
     "home": "Bray Wanderers",
@@ -71372,7 +71372,7 @@ window.MATCHES = [
       "draw": 3.5,
       "away": 4.33
     },
-    "elapsed": 9
+    "elapsed": 14
   },
   {
     "home": "Cobh Ramblers",
@@ -71461,7 +71461,7 @@ window.MATCHES = [
       "draw": 3.6,
       "away": 1.67
     },
-    "elapsed": 10
+    "elapsed": 16
   },
   {
     "home": "Treaty United",
@@ -71558,7 +71558,7 @@ window.MATCHES = [
       "draw": 3.1,
       "away": 2.7
     },
-    "elapsed": 10
+    "elapsed": 16
   },
   {
     "home": "Dartford",
@@ -71624,7 +71624,7 @@ window.MATCHES = [
     "round": "Club Friendlies",
     "odds": null,
     "h2h": null,
-    "elapsed": 8
+    "elapsed": 14
   },
   {
     "home": "Caerau (Ely)",
@@ -71637,7 +71637,7 @@ window.MATCHES = [
     "status": "1H",
     "kickoff": "2026-07-03T18:45:00+00:00",
     "matchDate": "2026-07-03",
-    "homeGoals": 0,
+    "homeGoals": 2,
     "awayGoals": 0,
     "homePos": null,
     "awayPos": null,
@@ -71690,7 +71690,7 @@ window.MATCHES = [
     "round": "Club Friendlies",
     "odds": null,
     "h2h": null,
-    "elapsed": 7
+    "elapsed": 12
   },
   {
     "home": "Linfield W",
