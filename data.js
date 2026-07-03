@@ -1,5 +1,5 @@
 window.DATA_UPDATED = "2026-07-02T01:16:59.972Z";
-window.SCORES_UPDATED = "2026-07-03T15:45:47.420Z";
+window.SCORES_UPDATED = "2026-07-03T15:50:39.525Z";
 window.MATCHES = [
   {
     "home": "Santa Cruz",
@@ -64929,7 +64929,7 @@ window.MATCHES = [
     "awayLogo": "https://media.api-sports.io/football/teams/16594.png",
     "country": "Russia",
     "flag": "https://media.api-sports.io/flags/ru.svg",
-    "status": "2H",
+    "status": "FT",
     "kickoff": "2026-07-03T14:00:00+00:00",
     "matchDate": "2026-07-03",
     "homeGoals": 5,
@@ -64991,7 +64991,7 @@ window.MATCHES = [
     "round": "Regular Season - 13",
     "odds": null,
     "h2h": null,
-    "elapsed": 90
+    "elapsed": null
   },
   {
     "home": "CSKA Moskva U19",
@@ -65063,7 +65063,7 @@ window.MATCHES = [
     "round": "Regular Season - 13",
     "odds": null,
     "h2h": null,
-    "elapsed": 85
+    "elapsed": 90
   },
   {
     "home": "Spartak Moskva U19",
@@ -65077,7 +65077,7 @@ window.MATCHES = [
     "kickoff": "2026-07-03T14:00:00+00:00",
     "matchDate": "2026-07-03",
     "homeGoals": 1,
-    "awayGoals": 5,
+    "awayGoals": 6,
     "homePos": 6,
     "awayPos": 7,
     "tableSize": 16,
@@ -65135,7 +65135,7 @@ window.MATCHES = [
     "round": "Regular Season - 13",
     "odds": null,
     "h2h": null,
-    "elapsed": 81
+    "elapsed": 86
   },
   {
     "home": "Chertanovo U20",
@@ -65207,7 +65207,7 @@ window.MATCHES = [
     "round": "Regular Season - 13",
     "odds": null,
     "h2h": null,
-    "elapsed": 84
+    "elapsed": 89
   },
   {
     "home": "Fakel U19",
@@ -65279,7 +65279,7 @@ window.MATCHES = [
     "round": "Regular Season - 13",
     "odds": null,
     "h2h": null,
-    "elapsed": 86
+    "elapsed": 90
   },
   {
     "home": "Dynamo Makhachkala U19",
@@ -65351,7 +65351,7 @@ window.MATCHES = [
     "round": "Regular Season - 13",
     "odds": null,
     "h2h": null,
-    "elapsed": 85
+    "elapsed": 89
   },
   {
     "home": "FC Astana",
@@ -65361,7 +65361,7 @@ window.MATCHES = [
     "awayLogo": "https://media.api-sports.io/football/teams/16611.png",
     "country": "Kazakhstan",
     "flag": "https://media.api-sports.io/flags/kz.svg",
-    "status": "2H",
+    "status": "FT",
     "kickoff": "2026-07-03T14:00:00+00:00",
     "matchDate": "2026-07-03",
     "homeGoals": 1,
@@ -65438,7 +65438,7 @@ window.MATCHES = [
       "dcx2": 2.15
     },
     "h2h": null,
-    "elapsed": 90
+    "elapsed": null
   },
   {
     "home": "Lokomotiv",
@@ -65514,7 +65514,7 @@ window.MATCHES = [
     "awayLogo": "https://media.api-sports.io/football/teams/1080.png",
     "country": "World",
     "flag": null,
-    "status": "2H",
+    "status": "FT",
     "kickoff": "2026-07-03T14:00:00+00:00",
     "matchDate": "2026-07-03",
     "homeGoals": 1,
@@ -65570,7 +65570,7 @@ window.MATCHES = [
     "round": "Club Friendlies",
     "odds": null,
     "h2h": null,
-    "elapsed": 89
+    "elapsed": null
   },
   {
     "home": "Farul Constanta",
@@ -65774,7 +65774,7 @@ window.MATCHES = [
     "round": "Regular Season - 14",
     "odds": null,
     "h2h": null,
-    "elapsed": 55
+    "elapsed": 60
   },
   {
     "home": "Talant",
@@ -65846,7 +65846,7 @@ window.MATCHES = [
     "round": "Regular Season - 14",
     "odds": null,
     "h2h": null,
-    "elapsed": 56
+    "elapsed": 60
   },
   {
     "home": "Muras United",
@@ -65918,7 +65918,7 @@ window.MATCHES = [
     "round": "Regular Season - 14",
     "odds": null,
     "h2h": null,
-    "elapsed": 55
+    "elapsed": 60
   },
   {
     "home": "Ozgon",
@@ -66003,7 +66003,7 @@ window.MATCHES = [
     "kickoff": "2026-07-03T15:00:00+00:00",
     "matchDate": "2026-07-03",
     "homeGoals": 0,
-    "awayGoals": 1,
+    "awayGoals": 2,
     "homePos": 3,
     "awayPos": 8,
     "tableSize": 14,
@@ -66137,11 +66137,11 @@ window.MATCHES = [
     "awayLogo": "https://media.api-sports.io/football/teams/1394.png",
     "country": "World",
     "flag": null,
-    "status": "1H",
+    "status": "HT",
     "kickoff": "2026-07-03T15:00:00+00:00",
     "matchDate": "2026-07-03",
     "homeGoals": 2,
-    "awayGoals": 0,
+    "awayGoals": 1,
     "homePos": null,
     "awayPos": null,
     "tableSize": 20,
@@ -66193,7 +66193,7 @@ window.MATCHES = [
     "round": "Club Friendlies",
     "odds": null,
     "h2h": null,
-    "elapsed": 43
+    "elapsed": 45
   },
   {
     "home": "FK Jablonec",
@@ -66203,7 +66203,7 @@ window.MATCHES = [
     "awayLogo": "https://media.api-sports.io/football/teams/3735.png",
     "country": "World",
     "flag": null,
-    "status": "1H",
+    "status": "HT",
     "kickoff": "2026-07-03T15:00:00+00:00",
     "matchDate": "2026-07-03",
     "homeGoals": 0,
@@ -66325,7 +66325,7 @@ window.MATCHES = [
     "round": "Club Friendlies",
     "odds": null,
     "h2h": null,
-    "elapsed": 42
+    "elapsed": 45
   },
   {
     "home": "Germany U19 W",
@@ -66335,7 +66335,7 @@ window.MATCHES = [
     "awayLogo": "https://media.api-sports.io/football/teams/19067.png",
     "country": "World",
     "flag": null,
-    "status": "1H",
+    "status": "HT",
     "kickoff": "2026-07-03T15:00:00+00:00",
     "matchDate": "2026-07-03",
     "homeGoals": 1,
@@ -66401,7 +66401,7 @@ window.MATCHES = [
     "awayLogo": "https://media.api-sports.io/football/teams/10359.png",
     "country": "World",
     "flag": null,
-    "status": "1H",
+    "status": "HT",
     "kickoff": "2026-07-03T15:00:00+00:00",
     "matchDate": "2026-07-03",
     "homeGoals": 3,
@@ -66529,7 +66529,7 @@ window.MATCHES = [
     "round": "Group B",
     "odds": null,
     "h2h": null,
-    "elapsed": 16
+    "elapsed": 21
   },
   {
     "home": "Kooteepee",
@@ -66616,7 +66616,7 @@ window.MATCHES = [
       "dcx2": 1.67
     },
     "h2h": null,
-    "elapsed": 14
+    "elapsed": 18
   },
   {
     "home": "JäPS",
@@ -66713,7 +66713,7 @@ window.MATCHES = [
       "draw": 3.5,
       "away": 3.75
     },
-    "elapsed": 14
+    "elapsed": 18
   },
   {
     "home": "Kongsvinger",
