@@ -1,5 +1,5 @@
 window.DATA_UPDATED = "2026-07-02T01:16:59.972Z";
-window.SCORES_UPDATED = "2026-07-03T01:30:49.794Z";
+window.SCORES_UPDATED = "2026-07-03T01:35:31.435Z";
 window.MATCHES = [
   {
     "home": "Santa Cruz",
@@ -59808,7 +59808,7 @@ window.MATCHES = [
       "draw": 5,
       "away": 9
     },
-    "elapsed": 70
+    "elapsed": 74
   },
   {
     "home": "Santo Domingo",
@@ -59895,7 +59895,7 @@ window.MATCHES = [
       "dcx2": 1.44
     },
     "h2h": null,
-    "elapsed": 71
+    "elapsed": 75
   },
   {
     "home": "Birmingham Legion",
@@ -59992,7 +59992,7 @@ window.MATCHES = [
       "draw": 3.25,
       "away": 2.35
     },
-    "elapsed": 62
+    "elapsed": 67
   },
   {
     "home": "FC Motown II",
@@ -60058,7 +60058,7 @@ window.MATCHES = [
     "round": "Group Stage",
     "odds": null,
     "h2h": null,
-    "elapsed": 68
+    "elapsed": 72
   },
   {
     "home": "Flatirons Rush",
@@ -60332,7 +60332,7 @@ window.MATCHES = [
     "awayLogo": "https://media.api-sports.io/football/teams/2315.png",
     "country": "Chile",
     "flag": "https://media.api-sports.io/flags/cl.svg",
-    "status": "HT",
+    "status": "2H",
     "kickoff": "2026-07-03T00:30:00+00:00",
     "matchDate": "2026-07-03",
     "homeGoals": 2,
@@ -60403,7 +60403,7 @@ window.MATCHES = [
       "dcx2": 1.3
     },
     "h2h": null,
-    "elapsed": 45
+    "elapsed": 46
   },
   {
     "home": "Boise",
