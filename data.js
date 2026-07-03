@@ -1,5 +1,5 @@
 window.DATA_UPDATED = "2026-07-03T18:49:41.606Z";
-window.SCORES_UPDATED = "2026-07-03T19:55:29.570Z";
+window.SCORES_UPDATED = "2026-07-03T20:00:58.791Z";
 window.MATCHES = [
   {
     "home": "Santa Cruz",
@@ -53822,7 +53822,7 @@ window.MATCHES = [
     "awayLogo": "https://media.api-sports.io/football/teams/32.png",
     "country": "World",
     "flag": null,
-    "status": "2H",
+    "status": "BT",
     "kickoff": "2026-07-03T18:00:00+00:00",
     "matchDate": "2026-07-03",
     "homeGoals": 1,
@@ -53977,7 +53977,7 @@ window.MATCHES = [
     "xgAwayReal": 1.55,
     "awayXgAgainst": 0.94,
     "lineupConfirmed": true,
-    "elapsed": 90
+    "elapsed": null
   },
   {
     "home": "Hvíti riddarinn",
@@ -53988,7 +53988,7 @@ window.MATCHES = [
     "awayLogo": "https://media.api-sports.io/football/teams/4172.png",
     "country": "Iceland",
     "flag": "https://media.api-sports.io/flags/is.svg",
-    "status": "2H",
+    "status": "FT",
     "kickoff": "2026-07-03T18:00:00+00:00",
     "matchDate": "2026-07-03",
     "homeGoals": 3,
@@ -54112,7 +54112,7 @@ window.MATCHES = [
     "round": "Regular Season - 11",
     "odds": null,
     "h2h": null,
-    "elapsed": 90
+    "elapsed": null
   },
   {
     "home": "Deportivo Cuenca Juniors",
@@ -54123,7 +54123,7 @@ window.MATCHES = [
     "awayLogo": "https://media.api-sports.io/football/teams/23310.png",
     "country": "Ecuador",
     "flag": "https://media.api-sports.io/flags/ec.svg",
-    "status": "2H",
+    "status": "FT",
     "kickoff": "2026-07-03T18:00:00+00:00",
     "matchDate": "2026-07-03",
     "homeGoals": 1,
@@ -54247,7 +54247,7 @@ window.MATCHES = [
     "round": "Regular Season - 15",
     "odds": null,
     "h2h": null,
-    "elapsed": 90
+    "elapsed": null
   },
   {
     "home": "NSI Runavik",
@@ -54258,7 +54258,7 @@ window.MATCHES = [
     "awayLogo": "https://media.api-sports.io/football/teams/701.png",
     "country": "Faroe-Islands",
     "flag": "https://media.api-sports.io/flags/fo.svg",
-    "status": "2H",
+    "status": "FT",
     "kickoff": "2026-07-03T18:00:00+00:00",
     "matchDate": "2026-07-03",
     "homeGoals": 0,
@@ -54397,7 +54397,7 @@ window.MATCHES = [
       "dcx2": 1.42
     },
     "h2h": null,
-    "elapsed": 90
+    "elapsed": null
   },
   {
     "home": "B36 II",
@@ -54545,7 +54545,7 @@ window.MATCHES = [
       "dcx2": 2.25
     },
     "h2h": null,
-    "elapsed": 70
+    "elapsed": 75
   },
   {
     "home": "Al Hikma",
@@ -54695,7 +54695,7 @@ window.MATCHES = [
       "dcx2": 1.1
     },
     "h2h": null,
-    "elapsed": 65
+    "elapsed": 70
   },
   {
     "home": "Derry City",
@@ -54845,7 +54845,7 @@ window.MATCHES = [
       "dcx2": 2.7
     },
     "h2h": null,
-    "elapsed": 51
+    "elapsed": 56
   },
   {
     "home": "Sligo Rovers",
@@ -54995,7 +54995,7 @@ window.MATCHES = [
       "dcx2": 1.13
     },
     "h2h": null,
-    "elapsed": 54
+    "elapsed": 59
   },
   {
     "home": "St Patrick's Athl.",
@@ -55145,7 +55145,7 @@ window.MATCHES = [
       "dcx2": 2.75
     },
     "h2h": null,
-    "elapsed": 56
+    "elapsed": 61
   },
   {
     "home": "Drogheda United",
@@ -55295,7 +55295,7 @@ window.MATCHES = [
       "dcx2": 1.18
     },
     "h2h": null,
-    "elapsed": 52
+    "elapsed": 57
   },
   {
     "home": "Finn Harps",
@@ -55461,7 +55461,7 @@ window.MATCHES = [
     "xgAwayReal": 0.61,
     "awayXgAgainst": 1.57,
     "lineupConfirmed": true,
-    "elapsed": 55
+    "elapsed": 60
   },
   {
     "home": "Bray Wanderers",
@@ -55627,7 +55627,7 @@ window.MATCHES = [
     "xgAwayReal": 1.06,
     "awayXgAgainst": 1.71,
     "lineupConfirmed": true,
-    "elapsed": 52
+    "elapsed": 57
   },
   {
     "home": "Cobh Ramblers",
@@ -55791,7 +55791,7 @@ window.MATCHES = [
     "homeXgAgainst": 1.97,
     "xgReal": true,
     "lineupConfirmed": true,
-    "elapsed": 53
+    "elapsed": 58
   },
   {
     "home": "Treaty United",
@@ -55955,7 +55955,7 @@ window.MATCHES = [
     "awayXgAgainst": 2.18,
     "xgReal": true,
     "lineupConfirmed": true,
-    "elapsed": 54
+    "elapsed": 58
   },
   {
     "home": "Akron City",
@@ -56254,7 +56254,7 @@ window.MATCHES = [
     "status": "1H",
     "kickoff": "2026-07-03T19:15:00+00:00",
     "matchDate": "2026-07-03",
-    "homeGoals": 1,
+    "homeGoals": 2,
     "awayGoals": 2,
     "homePos": 12,
     "awayPos": 9,
@@ -56390,7 +56390,7 @@ window.MATCHES = [
       "dcx2": 1.48
     },
     "h2h": null,
-    "elapsed": 40
+    "elapsed": 45
   },
   {
     "home": "Grotta",
@@ -56540,7 +56540,7 @@ window.MATCHES = [
       "dcx2": 1.28
     },
     "h2h": null,
-    "elapsed": 41
+    "elapsed": 45
   },
   {
     "home": "IR Reykjavik",
@@ -56690,7 +56690,7 @@ window.MATCHES = [
       "dcx2": 1.28
     },
     "h2h": null,
-    "elapsed": 40
+    "elapsed": 45
   },
   {
     "home": "Njardvik",
@@ -56840,7 +56840,7 @@ window.MATCHES = [
       "dcx2": 1.48
     },
     "h2h": null,
-    "elapsed": 40
+    "elapsed": 45
   },
   {
     "home": "Ægir",
@@ -56854,7 +56854,7 @@ window.MATCHES = [
     "status": "1H",
     "kickoff": "2026-07-03T19:15:00+00:00",
     "matchDate": "2026-07-03",
-    "homeGoals": 0,
+    "homeGoals": 1,
     "awayGoals": 4,
     "homePos": 11,
     "awayPos": 3,
@@ -56990,7 +56990,7 @@ window.MATCHES = [
       "dcx2": 1.11
     },
     "h2h": null,
-    "elapsed": 41
+    "elapsed": 45
   },
   {
     "home": "KFG",
@@ -57138,7 +57138,7 @@ window.MATCHES = [
       "dcx2": 1.13
     },
     "h2h": null,
-    "elapsed": 36
+    "elapsed": 41
   },
   {
     "home": "Fernando De La Mora",
@@ -57149,11 +57149,11 @@ window.MATCHES = [
     "awayLogo": "https://media.api-sports.io/football/teams/21374.png",
     "country": "Paraguay",
     "flag": "https://media.api-sports.io/flags/py.svg",
-    "status": "NS",
+    "status": "1H",
     "kickoff": "2026-07-03T20:00:00+00:00",
     "matchDate": "2026-07-03",
-    "homeGoals": null,
-    "awayGoals": null,
+    "homeGoals": 0,
+    "awayGoals": 0,
     "homePos": 12,
     "awayPos": 16,
     "tableSize": 16,
@@ -57286,7 +57286,7 @@ window.MATCHES = [
       "dcx2": 1.7
     },
     "h2h": null,
-    "elapsed": null
+    "elapsed": 1
   },
   {
     "home": "Argentina",
