@@ -495,7 +495,10 @@ const FINISHED = new Set(["FT","AET","PEN"]);
             const hf=isHome?ht.home:ht.away, ha=isHome?ht.away:ht.home;
             htRes = hf>ha?"W":hf<ha?"L":"D";
           }
-          return { res: gf>ga?"W":gf<ga?"L":"D", ftRes: gf>ga?"W":gf<ga?"L":"D", htRes, tot:gf+ga };
+          // HT goals for/against from this team's perspective (null if no HT data)
+          let hf=null, ha=null;
+          if(ht&&ht.home!=null&&ht.away!=null){ hf=isHome?ht.home:ht.away; ha=isHome?ht.away:ht.home; }
+          return { res: gf>ga?"W":gf<ga?"L":"D", ftRes: gf>ga?"W":gf<ga?"L":"D", htRes, tot:gf+ga, gf, ga, hf, ha };
         });
         const run=pred=>{ let n=0; for(const s of seq){ if(pred(s))n++; else break; } return n; };
 
@@ -525,6 +528,22 @@ const FINISHED = new Set(["FT","AET","PEN"]);
           drawFromLevelRate: (cell.DW+cell.DD+cell.DL)>0 ? Math.round((cell.DD/(cell.DW+cell.DD+cell.DL))*100)/100 : null,
           // "draw specialist" = high share of games that ended drawn from any HT state
           drawEndRate: Math.round(((cell.WD+cell.DD+cell.LD)/htSamp)*100)/100,
+          // ---- extensions for the Halves engine (all among HT-sampled games) ----
+          sample: htSamp, // alias of samples
+          htWin: R(led), htDraw: R(cell.DW+cell.DD+cell.DL), htLoss: R(trailed),
+          ftWin: R(cell.WW+cell.DW+cell.LW), ftDraw: R(cell.WD+cell.DD+cell.LD), ftLoss: R(cell.WL+cell.DL+cell.LL),
+          drawToWin: (cell.DW+cell.DD+cell.DL)>0 ? Math.round((cell.DW/(cell.DW+cell.DD+cell.DL))*100)/100 : null,
+          comebackRate: trailed>0 ? Math.round(((cell.LW+cell.LD)/trailed)*100)/100 : null, // trailed -> avoided defeat
+          ...(function(){ // half-goal aggregates over games WITH HT data
+            let n=0,fhF=0,fhA=0,shF=0,shA=0,btts=0,cs=0;
+            for(const g of seq){ if(g.hf==null) continue; n++;
+              fhF+=g.hf; fhA+=g.ha; shF+=(g.gf-g.hf); shA+=(g.ga-g.ha);
+              if(g.hf>0&&g.ha>0) btts++; if(g.ha===0) cs++; }
+            if(!n) return {};
+            const r2=x=>Math.round((x/n)*100)/100;
+            return { fhFor:r2(fhF), fhAg:r2(fhA), shFor:r2(shF), shAg:r2(shA),
+                     fhBtts:r2(btts), htCleanSheet:r2(cs) };
+          })(),
         } : null;
 
         streaks={
