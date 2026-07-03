@@ -1,5 +1,5 @@
 window.DATA_UPDATED = "2026-07-02T01:16:59.972Z";
-window.SCORES_UPDATED = "2026-07-03T12:45:34.255Z";
+window.SCORES_UPDATED = "2026-07-03T12:50:39.161Z";
 window.MATCHES = [
   {
     "home": "Santa Cruz",
@@ -62803,7 +62803,7 @@ window.MATCHES = [
     "kickoff": "2026-07-03T11:00:00+00:00",
     "matchDate": "2026-07-03",
     "homeGoals": 1,
-    "awayGoals": 3,
+    "awayGoals": 4,
     "homePos": 11,
     "awayPos": 6,
     "tableSize": 12,
@@ -62861,7 +62861,7 @@ window.MATCHES = [
     "round": "Regular Season - 17",
     "odds": null,
     "h2h": null,
-    "elapsed": 82
+    "elapsed": 87
   },
   {
     "home": "Aalborg",
@@ -62927,7 +62927,7 @@ window.MATCHES = [
     "round": "Club Friendlies",
     "odds": null,
     "h2h": null,
-    "elapsed": 86
+    "elapsed": 90
   },
   {
     "home": "Khangarid",
@@ -62940,8 +62940,8 @@ window.MATCHES = [
     "status": "2H",
     "kickoff": "2026-07-03T11:00:00+00:00",
     "matchDate": "2026-07-03",
-    "homeGoals": 2,
-    "awayGoals": 4,
+    "homeGoals": 1,
+    "awayGoals": 2,
     "homePos": 4,
     "awayPos": 1,
     "tableSize": 19,
@@ -62999,7 +62999,7 @@ window.MATCHES = [
     "round": "Regular Season - 23",
     "odds": null,
     "h2h": null,
-    "elapsed": 88
+    "elapsed": 78
   },
   {
     "home": "Minsk II",
@@ -63009,7 +63009,7 @@ window.MATCHES = [
     "awayLogo": "https://media.api-sports.io/football/teams/23433.png",
     "country": "Belarus",
     "flag": "https://media.api-sports.io/flags/by.svg",
-    "status": "1H",
+    "status": "HT",
     "kickoff": "2026-07-03T12:00:00+00:00",
     "matchDate": "2026-07-03",
     "homeGoals": 0,
@@ -63071,7 +63071,7 @@ window.MATCHES = [
     "round": "Regular Season - 14",
     "odds": null,
     "h2h": null,
-    "elapsed": 44
+    "elapsed": 45
   },
   {
     "home": "Yunnan Yukun",
@@ -63084,7 +63084,7 @@ window.MATCHES = [
     "status": "1H",
     "kickoff": "2026-07-03T12:00:00+00:00",
     "matchDate": "2026-07-03",
-    "homeGoals": 1,
+    "homeGoals": 0,
     "awayGoals": 1,
     "homePos": 5,
     "awayPos": 13,
@@ -63168,7 +63168,7 @@ window.MATCHES = [
     "awayLogo": "https://media.api-sports.io/football/teams/9231.png",
     "country": "Russia",
     "flag": "https://media.api-sports.io/flags/ru.svg",
-    "status": "1H",
+    "status": "HT",
     "kickoff": "2026-07-03T12:00:00+00:00",
     "matchDate": "2026-07-03",
     "homeGoals": 1,
@@ -63230,7 +63230,7 @@ window.MATCHES = [
     "round": "Regular Season - 13",
     "odds": null,
     "h2h": null,
-    "elapsed": 44
+    "elapsed": 45
   },
   {
     "home": "Sport Academy Kairat",
@@ -63312,11 +63312,11 @@ window.MATCHES = [
     "awayLogo": "https://media.api-sports.io/football/teams/27635.png",
     "country": "Kazakhstan",
     "flag": "https://media.api-sports.io/flags/kz.svg",
-    "status": "1H",
+    "status": "HT",
     "kickoff": "2026-07-03T12:00:00+00:00",
     "matchDate": "2026-07-03",
     "homeGoals": 3,
-    "awayGoals": 1,
+    "awayGoals": 2,
     "homePos": 13,
     "awayPos": 14,
     "tableSize": 14,
@@ -63384,7 +63384,7 @@ window.MATCHES = [
     "awayLogo": "https://media.api-sports.io/football/teams/414.png",
     "country": "World",
     "flag": null,
-    "status": "1H",
+    "status": "HT",
     "kickoff": "2026-07-03T12:00:00+00:00",
     "matchDate": "2026-07-03",
     "homeGoals": 1,
@@ -64506,7 +64506,7 @@ window.MATCHES = [
     "awayLogo": "https://media.api-sports.io/football/teams/3496.png",
     "country": "World",
     "flag": null,
-    "status": "1H",
+    "status": "HT",
     "kickoff": "2026-07-03T12:00:00+00:00",
     "matchDate": "2026-07-03",
     "homeGoals": 1,
@@ -64562,7 +64562,7 @@ window.MATCHES = [
     "round": "Club Friendlies",
     "odds": null,
     "h2h": null,
-    "elapsed": 44
+    "elapsed": 45
   },
   {
     "home": "Juazeiro EC U20",
@@ -64576,7 +64576,7 @@ window.MATCHES = [
     "kickoff": "2026-07-03T12:30:00+00:00",
     "matchDate": "2026-07-03",
     "homeGoals": 0,
-    "awayGoals": 1,
+    "awayGoals": 2,
     "homePos": 7,
     "awayPos": 2,
     "tableSize": 14,
@@ -64634,7 +64634,7 @@ window.MATCHES = [
     "round": "Regular Season - 2",
     "odds": null,
     "h2h": null,
-    "elapsed": 15
+    "elapsed": 23
   },
   {
     "home": "Naftan",
