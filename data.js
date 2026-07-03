@@ -1,5 +1,5 @@
 window.DATA_UPDATED = "2026-07-02T01:16:59.972Z";
-window.SCORES_UPDATED = "2026-07-03T00:00:59.098Z";
+window.SCORES_UPDATED = "2026-07-03T00:05:31.698Z";
 window.MATCHES = [
   {
     "home": "Santa Cruz",
@@ -59808,7 +59808,7 @@ window.MATCHES = [
       "draw": 5,
       "away": 9
     },
-    "elapsed": 1
+    "elapsed": 6
   },
   {
     "home": "Santo Domingo",
@@ -59895,7 +59895,7 @@ window.MATCHES = [
       "dcx2": 1.44
     },
     "h2h": null,
-    "elapsed": 1
+    "elapsed": 6
   },
   {
     "home": "Birmingham Legion",
@@ -60002,11 +60002,11 @@ window.MATCHES = [
     "awayLogo": "https://media.api-sports.io/football/teams/16682.png",
     "country": "USA",
     "flag": "https://media.api-sports.io/flags/us.svg",
-    "status": "NS",
+    "status": "1H",
     "kickoff": "2026-07-03T00:00:00+00:00",
     "matchDate": "2026-07-03",
-    "homeGoals": null,
-    "awayGoals": null,
+    "homeGoals": 0,
+    "awayGoals": 0,
     "homePos": null,
     "awayPos": null,
     "tableSize": 20,
@@ -60058,7 +60058,7 @@ window.MATCHES = [
     "round": "Group Stage",
     "odds": null,
     "h2h": null,
-    "elapsed": null
+    "elapsed": 1
   },
   {
     "home": "Flatirons Rush",
@@ -79155,7 +79155,7 @@ window.MATCHES = [
     "awayLogo": "https://media.api-sports.io/football/teams/125.png",
     "country": "Brazil",
     "flag": "https://media.api-sports.io/flags/br.svg",
-    "status": "HT",
+    "status": "2H",
     "kickoff": "2026-07-02T23:00:00+00:00",
     "matchDate": "2026-07-02",
     "homeGoals": 0,
@@ -79242,7 +79242,7 @@ window.MATCHES = [
       "draw": 3.3,
       "away": 5
     },
-    "elapsed": 45
+    "elapsed": 46
   },
   {
     "home": "Cedar Stars Rush",
@@ -79440,7 +79440,7 @@ window.MATCHES = [
     "round": "Group Stage",
     "odds": null,
     "h2h": null,
-    "elapsed": 22
+    "elapsed": 27
   },
   {
     "home": "Memphis 901",
