@@ -5,7 +5,7 @@ name: Daily results email
 
 on:
   schedule:
-    - cron: "0 9 * * *"     # 09:00 UTC daily (after most games have settled)
+    - cron: "30 0 * * *"     # 00:30 UTC - previous night results, settled, just before the new 01:00 kickoffs
   workflow_dispatch: {}
 
 permissions:
