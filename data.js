@@ -1,5 +1,5 @@
 window.DATA_UPDATED = "2026-07-03T22:07:07.413Z";
-window.SCORES_UPDATED = "2026-07-03T23:35:27.517Z";
+window.SCORES_UPDATED = "2026-07-03T23:40:42.979Z";
 window.MATCHES = [
   {
     "home": "Santa Cruz",
@@ -61704,7 +61704,7 @@ window.MATCHES = [
     "xgAwayReal": 0.49,
     "awayXgAgainst": 1.94,
     "lineupConfirmed": true,
-    "elapsed": 75
+    "elapsed": 80
   },
   {
     "home": "Inter Gainesville",
@@ -61718,7 +61718,7 @@ window.MATCHES = [
     "status": "2H",
     "kickoff": "2026-07-03T22:00:00+00:00",
     "matchDate": "2026-07-03",
-    "homeGoals": 1,
+    "homeGoals": 2,
     "awayGoals": 0,
     "homePos": 5,
     "awayPos": 3,
@@ -61869,7 +61869,7 @@ window.MATCHES = [
     "round": "Group Stage",
     "odds": null,
     "h2h": null,
-    "elapsed": 74
+    "elapsed": 79
   },
   {
     "home": "AFC Ann Arbor",
@@ -62555,7 +62555,7 @@ window.MATCHES = [
       "dcx2": 1.02
     },
     "h2h": null,
-    "elapsed": 32
+    "elapsed": 37
   },
   {
     "home": "Loudoun United",
@@ -62566,11 +62566,11 @@ window.MATCHES = [
     "awayLogo": "https://media.api-sports.io/football/teams/25959.png",
     "country": "USA",
     "flag": "https://media.api-sports.io/flags/us.svg",
-    "status": "NS",
+    "status": "1H",
     "kickoff": "2026-07-03T23:30:00+00:00",
     "matchDate": "2026-07-03",
-    "homeGoals": null,
-    "awayGoals": null,
+    "homeGoals": 0,
+    "awayGoals": 0,
     "homePos": 11,
     "awayPos": 13,
     "tableSize": 25,
@@ -62735,7 +62735,7 @@ window.MATCHES = [
       "dcx2": 2.15
     },
     "h2h": null,
-    "elapsed": null
+    "elapsed": 4
   },
   {
     "home": "Western Mass Pioneers",
@@ -62900,7 +62900,7 @@ window.MATCHES = [
     "round": "Group Stage",
     "odds": null,
     "h2h": null,
-    "elapsed": 4
+    "elapsed": 10
   },
   {
     "home": "West Chester United",
@@ -62911,11 +62911,11 @@ window.MATCHES = [
     "awayLogo": "https://media.api-sports.io/football/teams/25938.png",
     "country": "USA",
     "flag": "https://media.api-sports.io/flags/us.svg",
-    "status": "NS",
+    "status": "1H",
     "kickoff": "2026-07-03T23:30:00+00:00",
     "matchDate": "2026-07-03",
-    "homeGoals": null,
-    "awayGoals": null,
+    "homeGoals": 0,
+    "awayGoals": 0,
     "homePos": null,
     "awayPos": 5,
     "tableSize": 144,
@@ -63065,7 +63065,7 @@ window.MATCHES = [
     "round": "Group Stage",
     "odds": null,
     "h2h": null,
-    "elapsed": null
+    "elapsed": 1
   },
   {
     "home": "USA",
