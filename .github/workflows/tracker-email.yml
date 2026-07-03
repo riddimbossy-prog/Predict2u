@@ -6,7 +6,7 @@ name: Daily tracker email
 
 on:
   schedule:
-    - cron: "30 9 * * *"     # 09:30 UTC daily (after results-email at 09:00)
+    - cron: "45 0 * * *"     # 00:45 UTC daily (after the results email at 00:30)
   workflow_dispatch: {}
 
 permissions:
