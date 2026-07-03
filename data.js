@@ -1,5 +1,5 @@
 window.DATA_UPDATED = "2026-07-02T01:16:59.972Z";
-window.SCORES_UPDATED = "2026-07-03T16:35:28.196Z";
+window.SCORES_UPDATED = "2026-07-03T16:40:36.721Z";
 window.MATCHES = [
   {
     "home": "Santa Cruz",
@@ -66061,7 +66061,7 @@ window.MATCHES = [
     "round": "Regular Season - 12",
     "odds": null,
     "h2h": null,
-    "elapsed": 74
+    "elapsed": 79
   },
   {
     "home": "Dynamo Kyiv",
@@ -66127,7 +66127,7 @@ window.MATCHES = [
     "round": "Club Friendlies",
     "odds": null,
     "h2h": null,
-    "elapsed": 72
+    "elapsed": 77
   },
   {
     "home": "FK Crvena Zvezda",
@@ -66193,7 +66193,7 @@ window.MATCHES = [
     "round": "Club Friendlies",
     "odds": null,
     "h2h": null,
-    "elapsed": 77
+    "elapsed": 82
   },
   {
     "home": "FK Jablonec",
@@ -66259,7 +66259,7 @@ window.MATCHES = [
     "round": "Club Friendlies",
     "odds": null,
     "h2h": null,
-    "elapsed": 79
+    "elapsed": 84
   },
   {
     "home": "Biel-Bienne",
@@ -66325,7 +66325,7 @@ window.MATCHES = [
     "round": "Club Friendlies",
     "odds": null,
     "h2h": null,
-    "elapsed": 72
+    "elapsed": 77
   },
   {
     "home": "Germany U19 W",
@@ -66391,7 +66391,7 @@ window.MATCHES = [
     "round": "Group Stage",
     "odds": null,
     "h2h": null,
-    "elapsed": 75
+    "elapsed": 80
   },
   {
     "home": "Poland U19 W",
@@ -66457,7 +66457,7 @@ window.MATCHES = [
     "round": "Group Stage",
     "odds": null,
     "h2h": null,
-    "elapsed": 76
+    "elapsed": 81
   },
   {
     "home": "GrIFK",
@@ -66529,7 +66529,7 @@ window.MATCHES = [
     "round": "Group B",
     "odds": null,
     "h2h": null,
-    "elapsed": 48
+    "elapsed": 53
   },
   {
     "home": "Kooteepee",
@@ -66539,7 +66539,7 @@ window.MATCHES = [
     "awayLogo": "https://media.api-sports.io/football/teams/9172.png",
     "country": "Finland",
     "flag": "https://media.api-sports.io/flags/fi.svg",
-    "status": "HT",
+    "status": "2H",
     "kickoff": "2026-07-03T15:30:00+00:00",
     "matchDate": "2026-07-03",
     "homeGoals": 2,
@@ -66616,7 +66616,7 @@ window.MATCHES = [
       "dcx2": 1.67
     },
     "h2h": null,
-    "elapsed": 45
+    "elapsed": 50
   },
   {
     "home": "JäPS",
@@ -66713,7 +66713,7 @@ window.MATCHES = [
       "draw": 3.5,
       "away": 3.75
     },
-    "elapsed": 48
+    "elapsed": 53
   },
   {
     "home": "Kongsvinger",
@@ -66810,7 +66810,7 @@ window.MATCHES = [
       "draw": 4.33,
       "away": 4
     },
-    "elapsed": 34
+    "elapsed": 39
   },
   {
     "home": "Raufoss",
@@ -66897,7 +66897,7 @@ window.MATCHES = [
       "dcx2": 1.53
     },
     "h2h": null,
-    "elapsed": 35
+    "elapsed": 40
   },
   {
     "home": "Nõmme United",
@@ -66984,7 +66984,7 @@ window.MATCHES = [
       "dcx2": 1.15
     },
     "h2h": null,
-    "elapsed": 34
+    "elapsed": 39
   },
   {
     "home": "Džiugas Telšiai",
@@ -67071,7 +67071,7 @@ window.MATCHES = [
       "dcx2": 1.11
     },
     "h2h": null,
-    "elapsed": 31
+    "elapsed": 37
   },
   {
     "home": "Riga",
@@ -67158,7 +67158,7 @@ window.MATCHES = [
       "dcx2": 3.42
     },
     "h2h": null,
-    "elapsed": 36
+    "elapsed": 41
   },
   {
     "home": "Wolfsberger AC",
@@ -67171,7 +67171,7 @@ window.MATCHES = [
     "status": "1H",
     "kickoff": "2026-07-03T16:00:00+00:00",
     "matchDate": "2026-07-03",
-    "homeGoals": 4,
+    "homeGoals": 5,
     "awayGoals": 2,
     "homePos": null,
     "awayPos": null,
@@ -67224,7 +67224,7 @@ window.MATCHES = [
     "round": "Club Friendlies",
     "odds": null,
     "h2h": null,
-    "elapsed": 31
+    "elapsed": 36
   },
   {
     "home": "SKN ST. Polten",
@@ -67290,7 +67290,7 @@ window.MATCHES = [
     "round": "Club Friendlies",
     "odds": null,
     "h2h": null,
-    "elapsed": 34
+    "elapsed": 39
   },
   {
     "home": "Energie Cottbus",
@@ -67488,7 +67488,7 @@ window.MATCHES = [
     "round": "Club Friendlies",
     "odds": null,
     "h2h": null,
-    "elapsed": 31
+    "elapsed": 36
   },
   {
     "home": "Oudenaarde",
@@ -67554,7 +67554,7 @@ window.MATCHES = [
     "round": "Club Friendlies",
     "odds": null,
     "h2h": null,
-    "elapsed": 33
+    "elapsed": 39
   },
   {
     "home": "Schöningen",
@@ -67700,7 +67700,7 @@ window.MATCHES = [
     "kickoff": "2026-07-03T16:30:00+00:00",
     "matchDate": "2026-07-03",
     "homeGoals": 0,
-    "awayGoals": 0,
+    "awayGoals": 1,
     "homePos": null,
     "awayPos": null,
     "tableSize": 20,
@@ -67752,7 +67752,7 @@ window.MATCHES = [
     "round": "Club Friendlies",
     "odds": null,
     "h2h": null,
-    "elapsed": 4
+    "elapsed": 9
   },
   {
     "home": "Wildon",
@@ -67898,7 +67898,7 @@ window.MATCHES = [
     "kickoff": "2026-07-03T16:30:00+00:00",
     "matchDate": "2026-07-03",
     "homeGoals": 0,
-    "awayGoals": 0,
+    "awayGoals": 1,
     "homePos": null,
     "awayPos": null,
     "tableSize": 20,
@@ -67950,7 +67950,7 @@ window.MATCHES = [
     "round": "Club Friendlies",
     "odds": null,
     "h2h": null,
-    "elapsed": 4
+    "elapsed": 9
   },
   {
     "home": "Germania Teveren",
@@ -68148,7 +68148,7 @@ window.MATCHES = [
     "round": "Club Friendlies",
     "odds": null,
     "h2h": null,
-    "elapsed": 1
+    "elapsed": 6
   },
   {
     "home": "Ranheim",
