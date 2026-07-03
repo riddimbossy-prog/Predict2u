@@ -1,5 +1,5 @@
 window.DATA_UPDATED = "2026-07-02T01:16:59.972Z";
-window.SCORES_UPDATED = "2026-07-03T18:45:35.802Z";
+window.SCORES_UPDATED = "2026-07-03T18:50:39.379Z";
 window.MATCHES = [
   {
     "home": "Santa Cruz",
@@ -61013,7 +61013,7 @@ window.MATCHES = [
     "status": "FT",
     "kickoff": "2026-07-03T09:00:00+00:00",
     "matchDate": "2026-07-03",
-    "homeGoals": 1,
+    "homeGoals": 4,
     "awayGoals": 0,
     "homePos": null,
     "awayPos": null,
@@ -67762,7 +67762,7 @@ window.MATCHES = [
     "awayLogo": "https://media.api-sports.io/football/teams/8332.png",
     "country": "World",
     "flag": null,
-    "status": "2H",
+    "status": "FT",
     "kickoff": "2026-07-03T16:30:00+00:00",
     "matchDate": "2026-07-03",
     "homeGoals": 0,
@@ -67818,7 +67818,7 @@ window.MATCHES = [
     "round": "Club Friendlies",
     "odds": null,
     "h2h": null,
-    "elapsed": 90
+    "elapsed": null
   },
   {
     "home": "ZFC Meuselwitz",
@@ -68235,7 +68235,7 @@ window.MATCHES = [
       "dcx2": 1.44
     },
     "h2h": null,
-    "elapsed": 88
+    "elapsed": 90
   },
   {
     "home": "Sirius",
@@ -68249,7 +68249,7 @@ window.MATCHES = [
     "kickoff": "2026-07-03T17:00:00+00:00",
     "matchDate": "2026-07-03",
     "homeGoals": 4,
-    "awayGoals": 3,
+    "awayGoals": 4,
     "homePos": 1,
     "awayPos": 6,
     "tableSize": 16,
@@ -68332,7 +68332,7 @@ window.MATCHES = [
       "draw": 4.1,
       "away": 5
     },
-    "elapsed": 88
+    "elapsed": 90
   },
   {
     "home": "Fortuna Sittard",
@@ -68398,7 +68398,7 @@ window.MATCHES = [
     "round": "Club Friendlies",
     "odds": null,
     "h2h": null,
-    "elapsed": 84
+    "elapsed": 89
   },
   {
     "home": "Heerenveen",
@@ -68474,7 +68474,7 @@ window.MATCHES = [
     "awayLogo": "https://media.api-sports.io/football/teams/158.png",
     "country": "World",
     "flag": null,
-    "status": "2H",
+    "status": "FT",
     "kickoff": "2026-07-03T17:00:00+00:00",
     "matchDate": "2026-07-03",
     "homeGoals": 0,
@@ -68530,7 +68530,7 @@ window.MATCHES = [
     "round": "Club Friendlies",
     "odds": null,
     "h2h": null,
-    "elapsed": 86
+    "elapsed": null
   },
   {
     "home": "Schwabach",
@@ -68734,7 +68734,7 @@ window.MATCHES = [
     "round": "Regular Season - 13",
     "odds": null,
     "h2h": null,
-    "elapsed": 57
+    "elapsed": 62
   },
   {
     "home": "Tallinna Kalev",
@@ -68819,7 +68819,7 @@ window.MATCHES = [
       "dcx2": 1.7
     },
     "h2h": null,
-    "elapsed": 56
+    "elapsed": 61
   },
   {
     "home": "Atlas Delmenhorst",
@@ -68967,7 +68967,7 @@ window.MATCHES = [
     "awayLogo": "https://media.api-sports.io/football/teams/25961.png",
     "country": "Brazil",
     "flag": "https://media.api-sports.io/flags/br.svg",
-    "status": "HT",
+    "status": "2H",
     "kickoff": "2026-07-03T17:45:00+00:00",
     "matchDate": "2026-07-03",
     "homeGoals": 0,
@@ -69029,7 +69029,7 @@ window.MATCHES = [
     "round": "Regular Season - 8",
     "odds": null,
     "h2h": null,
-    "elapsed": 45
+    "elapsed": 47
   },
   {
     "home": "EC Resende",
@@ -69183,7 +69183,7 @@ window.MATCHES = [
     "awayLogo": "https://media.api-sports.io/football/teams/13110.png",
     "country": "Brazil",
     "flag": "https://media.api-sports.io/flags/br.svg",
-    "status": "HT",
+    "status": "PST",
     "kickoff": "2026-07-03T17:45:00+00:00",
     "matchDate": "2026-07-03",
     "homeGoals": 0,
@@ -69245,7 +69245,7 @@ window.MATCHES = [
     "round": "Regular Season - 8",
     "odds": null,
     "h2h": null,
-    "elapsed": 45
+    "elapsed": null
   },
   {
     "home": "Australia",
@@ -69353,10 +69353,10 @@ window.MATCHES = [
     "awayLogo": "https://media.api-sports.io/football/teams/4172.png",
     "country": "Iceland",
     "flag": "https://media.api-sports.io/flags/is.svg",
-    "status": "1H",
+    "status": "HT",
     "kickoff": "2026-07-03T18:00:00+00:00",
     "matchDate": "2026-07-03",
-    "homeGoals": 0,
+    "homeGoals": 1,
     "awayGoals": 2,
     "homePos": 9,
     "awayPos": 2,
@@ -69415,7 +69415,7 @@ window.MATCHES = [
     "round": "Regular Season - 11",
     "odds": null,
     "h2h": null,
-    "elapsed": 43
+    "elapsed": 45
   },
   {
     "home": "Deportivo Cuenca Juniors",
@@ -69425,10 +69425,10 @@ window.MATCHES = [
     "awayLogo": "https://media.api-sports.io/football/teams/23310.png",
     "country": "Ecuador",
     "flag": "https://media.api-sports.io/flags/ec.svg",
-    "status": "1H",
+    "status": "HT",
     "kickoff": "2026-07-03T18:00:00+00:00",
     "matchDate": "2026-07-03",
-    "homeGoals": 0,
+    "homeGoals": 1,
     "awayGoals": 0,
     "homePos": 5,
     "awayPos": 6,
@@ -69487,7 +69487,7 @@ window.MATCHES = [
     "round": "Regular Season - 15",
     "odds": null,
     "h2h": null,
-    "elapsed": 43
+    "elapsed": 45
   },
   {
     "home": "NSI Runavik",
@@ -69497,7 +69497,7 @@ window.MATCHES = [
     "awayLogo": "https://media.api-sports.io/football/teams/701.png",
     "country": "Faroe-Islands",
     "flag": "https://media.api-sports.io/flags/fo.svg",
-    "status": "1H",
+    "status": "HT",
     "kickoff": "2026-07-03T18:00:00+00:00",
     "matchDate": "2026-07-03",
     "homeGoals": 0,
@@ -69584,11 +69584,11 @@ window.MATCHES = [
     "awayLogo": "https://media.api-sports.io/football/teams/13016.png",
     "country": "Brazil",
     "flag": "https://media.api-sports.io/flags/br.svg",
-    "status": "1H",
+    "status": "HT",
     "kickoff": "2026-07-03T18:00:00+00:00",
     "matchDate": "2026-07-03",
     "homeGoals": 1,
-    "awayGoals": 0,
+    "awayGoals": 1,
     "homePos": 4,
     "awayPos": 3,
     "tableSize": 44,
@@ -69656,7 +69656,7 @@ window.MATCHES = [
     "awayLogo": "https://media.api-sports.io/football/teams/23466.png",
     "country": "Brazil",
     "flag": "https://media.api-sports.io/flags/br.svg",
-    "status": "1H",
+    "status": "HT",
     "kickoff": "2026-07-03T18:00:00+00:00",
     "matchDate": "2026-07-03",
     "homeGoals": 0,
@@ -69728,7 +69728,7 @@ window.MATCHES = [
     "awayLogo": "https://media.api-sports.io/football/teams/13021.png",
     "country": "Brazil",
     "flag": "https://media.api-sports.io/flags/br.svg",
-    "status": "1H",
+    "status": "HT",
     "kickoff": "2026-07-03T18:00:00+00:00",
     "matchDate": "2026-07-03",
     "homeGoals": 1,
@@ -69800,7 +69800,7 @@ window.MATCHES = [
     "awayLogo": "https://media.api-sports.io/football/teams/13076.png",
     "country": "Brazil",
     "flag": "https://media.api-sports.io/flags/br.svg",
-    "status": "1H",
+    "status": "HT",
     "kickoff": "2026-07-03T18:00:00+00:00",
     "matchDate": "2026-07-03",
     "homeGoals": 0,
@@ -69862,7 +69862,7 @@ window.MATCHES = [
     "round": "Regular Season - 5",
     "odds": null,
     "h2h": null,
-    "elapsed": 44
+    "elapsed": 45
   },
   {
     "home": "Guarani U20",
@@ -69872,7 +69872,7 @@ window.MATCHES = [
     "awayLogo": "https://media.api-sports.io/football/teams/22848.png",
     "country": "Brazil",
     "flag": "https://media.api-sports.io/flags/br.svg",
-    "status": "1H",
+    "status": "HT",
     "kickoff": "2026-07-03T18:00:00+00:00",
     "matchDate": "2026-07-03",
     "homeGoals": 1,
@@ -69944,7 +69944,7 @@ window.MATCHES = [
     "awayLogo": "https://media.api-sports.io/football/teams/13063.png",
     "country": "Brazil",
     "flag": "https://media.api-sports.io/flags/br.svg",
-    "status": "1H",
+    "status": "HT",
     "kickoff": "2026-07-03T18:00:00+00:00",
     "matchDate": "2026-07-03",
     "homeGoals": 0,
@@ -70016,7 +70016,7 @@ window.MATCHES = [
     "awayLogo": "https://media.api-sports.io/football/teams/13078.png",
     "country": "Brazil",
     "flag": "https://media.api-sports.io/flags/br.svg",
-    "status": "1H",
+    "status": "HT",
     "kickoff": "2026-07-03T18:00:00+00:00",
     "matchDate": "2026-07-03",
     "homeGoals": 2,
@@ -70232,7 +70232,7 @@ window.MATCHES = [
     "awayLogo": "https://media.api-sports.io/football/teams/18356.png",
     "country": "Brazil",
     "flag": "https://media.api-sports.io/flags/br.svg",
-    "status": "1H",
+    "status": "HT",
     "kickoff": "2026-07-03T18:00:00+00:00",
     "matchDate": "2026-07-03",
     "homeGoals": 0,
@@ -70366,7 +70366,7 @@ window.MATCHES = [
     "round": "Regular Season - 5",
     "odds": null,
     "h2h": null,
-    "elapsed": 43
+    "elapsed": 45
   },
   {
     "home": "Portuguesa Santista U20",
@@ -70376,7 +70376,7 @@ window.MATCHES = [
     "awayLogo": "https://media.api-sports.io/football/teams/13045.png",
     "country": "Brazil",
     "flag": "https://media.api-sports.io/flags/br.svg",
-    "status": "1H",
+    "status": "HT",
     "kickoff": "2026-07-03T18:00:00+00:00",
     "matchDate": "2026-07-03",
     "homeGoals": 1,
@@ -70448,7 +70448,7 @@ window.MATCHES = [
     "awayLogo": "https://media.api-sports.io/football/teams/13015.png",
     "country": "Brazil",
     "flag": "https://media.api-sports.io/flags/br.svg",
-    "status": "1H",
+    "status": "HT",
     "kickoff": "2026-07-03T18:00:00+00:00",
     "matchDate": "2026-07-03",
     "homeGoals": 0,
@@ -70642,7 +70642,7 @@ window.MATCHES = [
     "round": "Club Friendlies",
     "odds": null,
     "h2h": null,
-    "elapsed": 15
+    "elapsed": 20
   },
   {
     "home": "Forres Mechanics",
@@ -70846,7 +70846,7 @@ window.MATCHES = [
     "round": "Regular Season - 3",
     "odds": null,
     "h2h": null,
-    "elapsed": 3
+    "elapsed": 8
   },
   {
     "home": "Derry City",
@@ -70856,11 +70856,11 @@ window.MATCHES = [
     "awayLogo": "https://media.api-sports.io/football/teams/3845.png",
     "country": "Ireland",
     "flag": "https://media.api-sports.io/flags/ie.svg",
-    "status": "NS",
+    "status": "1H",
     "kickoff": "2026-07-03T18:45:00+00:00",
     "matchDate": "2026-07-03",
-    "homeGoals": null,
-    "awayGoals": null,
+    "homeGoals": 0,
+    "awayGoals": 0,
     "homePos": 6,
     "awayPos": 10,
     "tableSize": 10,
@@ -70933,7 +70933,7 @@ window.MATCHES = [
       "dcx2": 2.7
     },
     "h2h": null,
-    "elapsed": null
+    "elapsed": 4
   },
   {
     "home": "Sligo Rovers",
@@ -70943,11 +70943,11 @@ window.MATCHES = [
     "awayLogo": "https://media.api-sports.io/football/teams/652.png",
     "country": "Ireland",
     "flag": "https://media.api-sports.io/flags/ie.svg",
-    "status": "NS",
+    "status": "1H",
     "kickoff": "2026-07-03T18:45:00+00:00",
     "matchDate": "2026-07-03",
-    "homeGoals": null,
-    "awayGoals": null,
+    "homeGoals": 0,
+    "awayGoals": 0,
     "homePos": 9,
     "awayPos": 1,
     "tableSize": 10,
@@ -71020,7 +71020,7 @@ window.MATCHES = [
       "dcx2": 1.12
     },
     "h2h": null,
-    "elapsed": null
+    "elapsed": 5
   },
   {
     "home": "St Patrick's Athl.",
@@ -71107,7 +71107,7 @@ window.MATCHES = [
       "dcx2": 2.8
     },
     "h2h": null,
-    "elapsed": 1
+    "elapsed": 6
   },
   {
     "home": "Drogheda United",
@@ -71117,11 +71117,11 @@ window.MATCHES = [
     "awayLogo": "https://media.api-sports.io/football/teams/3840.png",
     "country": "Ireland",
     "flag": "https://media.api-sports.io/flags/ie.svg",
-    "status": "NS",
+    "status": "1H",
     "kickoff": "2026-07-03T18:45:00+00:00",
     "matchDate": "2026-07-03",
-    "homeGoals": null,
-    "awayGoals": null,
+    "homeGoals": 0,
+    "awayGoals": 0,
     "homePos": 8,
     "awayPos": 2,
     "tableSize": 10,
@@ -71194,7 +71194,7 @@ window.MATCHES = [
       "dcx2": 1.18
     },
     "h2h": null,
-    "elapsed": null
+    "elapsed": 4
   },
   {
     "home": "Finn Harps",
@@ -71204,11 +71204,11 @@ window.MATCHES = [
     "awayLogo": "https://media.api-sports.io/football/teams/3855.png",
     "country": "Ireland",
     "flag": "https://media.api-sports.io/flags/ie.svg",
-    "status": "NS",
+    "status": "1H",
     "kickoff": "2026-07-03T18:45:00+00:00",
     "matchDate": "2026-07-03",
-    "homeGoals": null,
-    "awayGoals": null,
+    "homeGoals": 0,
+    "awayGoals": 0,
     "homePos": 9,
     "awayPos": 5,
     "tableSize": 10,
@@ -71283,7 +71283,7 @@ window.MATCHES = [
       "draw": 3.5,
       "away": 1.67
     },
-    "elapsed": null
+    "elapsed": 5
   },
   {
     "home": "Bray Wanderers",
@@ -71293,11 +71293,11 @@ window.MATCHES = [
     "awayLogo": "https://media.api-sports.io/football/teams/3846.png",
     "country": "Ireland",
     "flag": "https://media.api-sports.io/flags/ie.svg",
-    "status": "NS",
+    "status": "1H",
     "kickoff": "2026-07-03T18:45:00+00:00",
     "matchDate": "2026-07-03",
-    "homeGoals": null,
-    "awayGoals": null,
+    "homeGoals": 0,
+    "awayGoals": 0,
     "homePos": 3,
     "awayPos": 8,
     "tableSize": 10,
@@ -71372,7 +71372,7 @@ window.MATCHES = [
       "draw": 3.5,
       "away": 4.33
     },
-    "elapsed": null
+    "elapsed": 4
   },
   {
     "home": "Cobh Ramblers",
@@ -71461,7 +71461,7 @@ window.MATCHES = [
       "draw": 3.6,
       "away": 1.67
     },
-    "elapsed": 1
+    "elapsed": 6
   },
   {
     "home": "Treaty United",
@@ -71471,11 +71471,11 @@ window.MATCHES = [
     "awayLogo": "https://media.api-sports.io/football/teams/11328.png",
     "country": "Ireland",
     "flag": "https://media.api-sports.io/flags/ie.svg",
-    "status": "NS",
+    "status": "1H",
     "kickoff": "2026-07-03T18:45:00+00:00",
     "matchDate": "2026-07-03",
-    "homeGoals": null,
-    "awayGoals": null,
+    "homeGoals": 0,
+    "awayGoals": 0,
     "homePos": 10,
     "awayPos": 6,
     "tableSize": 10,
@@ -71558,7 +71558,7 @@ window.MATCHES = [
       "draw": 3.1,
       "away": 2.7
     },
-    "elapsed": null
+    "elapsed": 5
   },
   {
     "home": "Dartford",
@@ -71568,11 +71568,11 @@ window.MATCHES = [
     "awayLogo": "https://media.api-sports.io/football/teams/1335.png",
     "country": "World",
     "flag": null,
-    "status": "NS",
+    "status": "1H",
     "kickoff": "2026-07-03T18:45:00+00:00",
     "matchDate": "2026-07-03",
-    "homeGoals": null,
-    "awayGoals": null,
+    "homeGoals": 0,
+    "awayGoals": 0,
     "homePos": null,
     "awayPos": null,
     "tableSize": 20,
@@ -71624,7 +71624,7 @@ window.MATCHES = [
     "round": "Club Friendlies",
     "odds": null,
     "h2h": null,
-    "elapsed": null
+    "elapsed": 3
   },
   {
     "home": "Caerau (Ely)",
@@ -71634,11 +71634,11 @@ window.MATCHES = [
     "awayLogo": "https://media.api-sports.io/football/teams/7589.png",
     "country": "World",
     "flag": null,
-    "status": "NS",
+    "status": "1H",
     "kickoff": "2026-07-03T18:45:00+00:00",
     "matchDate": "2026-07-03",
-    "homeGoals": null,
-    "awayGoals": null,
+    "homeGoals": 0,
+    "awayGoals": 0,
     "homePos": null,
     "awayPos": null,
     "tableSize": 20,
@@ -71690,7 +71690,7 @@ window.MATCHES = [
     "round": "Club Friendlies",
     "odds": null,
     "h2h": null,
-    "elapsed": null
+    "elapsed": 2
   },
   {
     "home": "Linfield W",
