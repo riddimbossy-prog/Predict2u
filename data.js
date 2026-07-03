@@ -1,5 +1,5 @@
 window.DATA_UPDATED = "2026-07-03T20:12:54.418Z";
-window.SCORES_UPDATED = "2026-07-03T21:10:45.069Z";
+window.SCORES_UPDATED = "2026-07-03T21:15:34.406Z";
 window.MATCHES = [
   {
     "home": "Santa Cruz",
@@ -56793,7 +56793,7 @@ window.MATCHES = [
     "awayLogo": "https://media.api-sports.io/football/teams/2115.png",
     "country": "Iceland",
     "flag": "https://media.api-sports.io/flags/is.svg",
-    "status": "2H",
+    "status": "FT",
     "kickoff": "2026-07-03T19:15:00+00:00",
     "matchDate": "2026-07-03",
     "homeGoals": 2,
@@ -56930,7 +56930,7 @@ window.MATCHES = [
       "dcx2": 1.13
     },
     "h2h": null,
-    "elapsed": 90
+    "elapsed": null
   },
   {
     "home": "Fernando De La Mora",
@@ -56944,7 +56944,7 @@ window.MATCHES = [
     "status": "2H",
     "kickoff": "2026-07-03T20:00:00+00:00",
     "matchDate": "2026-07-03",
-    "homeGoals": 0,
+    "homeGoals": 1,
     "awayGoals": 0,
     "homePos": 12,
     "awayPos": 16,
@@ -57078,7 +57078,7 @@ window.MATCHES = [
       "dcx2": 1.7
     },
     "h2h": null,
-    "elapsed": 48
+    "elapsed": 52
   },
   {
     "home": "Argentina",
