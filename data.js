@@ -1,5 +1,5 @@
 window.DATA_UPDATED = "2026-07-02T01:16:59.972Z";
-window.SCORES_UPDATED = "2026-07-03T02:20:38.652Z";
+window.SCORES_UPDATED = "2026-07-03T02:25:27.969Z";
 window.MATCHES = [
   {
     "home": "Santa Cruz",
@@ -60322,7 +60322,7 @@ window.MATCHES = [
     "round": "Group Stage",
     "odds": null,
     "h2h": null,
-    "elapsed": 85
+    "elapsed": 90
   },
   {
     "home": "O'Higgins",
@@ -60336,7 +60336,7 @@ window.MATCHES = [
     "kickoff": "2026-07-03T00:30:00+00:00",
     "matchDate": "2026-07-03",
     "homeGoals": 4,
-    "awayGoals": 0,
+    "awayGoals": 1,
     "homePos": null,
     "awayPos": null,
     "tableSize": 20,
@@ -60417,7 +60417,7 @@ window.MATCHES = [
     "kickoff": "2026-07-03T01:30:00+00:00",
     "matchDate": "2026-07-03",
     "homeGoals": 1,
-    "awayGoals": 0,
+    "awayGoals": 1,
     "homePos": 6,
     "awayPos": 2,
     "tableSize": 17,
@@ -60500,7 +60500,7 @@ window.MATCHES = [
       "draw": 3.3,
       "away": 2.6
     },
-    "elapsed": 42
+    "elapsed": 45
   },
   {
     "home": "Redlands",
