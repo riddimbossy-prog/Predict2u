@@ -5,7 +5,7 @@ name: Update Predicto data
 # on how many leagues have games. Commits data.js / xg.js / today.png when done.
 on:
   schedule:
-    - cron: "0 5 * * *"     # once daily ~05:00 UTC (adjust to taste). Also
+    - cron: "0 21 * * *"    # 21:00 UTC - finishes ~23:00, fresh data for the 01:00 GMT kickoffs. Also
                             # triggerable manually below.
   workflow_dispatch: {}
 permissions:
@@ -84,8 +84,8 @@ jobs:
           # with a SILENT exit 128 if ANY one path doesn't exist ("fatal: pathspec
           # did not match" is hidden by 2>/dev/null but the exit code still kills
           # the -e shell). Guard per path, then confirm something is staged.
-          for p in data.js xg.js today.png today.svg daily/; do
-            git add -- "$p" 2>/dev/null || echo "note: $p not present - skipped"
+          for p in data.js xg.js today.png today.svg today-*.png today-*.svg acca.png acca.svg acca-*.png acca-*.svg daily/; do
+            git add -- $p 2>/dev/null || echo "note: $p not present - skipped"
           done
           if git diff --staged --quiet; then echo "Nothing staged."; exit 0; fi
           git commit -m "Update Predicto data (fixtures + xG + image)"
