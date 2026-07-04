@@ -313,10 +313,10 @@
     <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full chip-green text-xs font-bold tracking-wide mb-3">
       <i class="fa-solid fa-shield-halved"></i> PROTECT THE STAKE FIRST
     </div>
-    <h1 class="display hero-title text-4xl sm:text-5xl font-bold">
+    <h1 id="hero-title" class="display hero-title text-4xl sm:text-5xl font-bold">
       Today's safest <span class="text-gold hero-gold">football bankers</span>
     </h1>
-    <p class="mt-2 text-sm max-w-2xl" style="color:var(--muted)">
+    <p id="hero-sub" class="mt-2 text-sm max-w-2xl" style="color:var(--muted)">
       Auto-analysed with the Predict2u Rules — DNB-first protection, strict mismatch criteria, max 4 bankers per league. Not a guarantee; bet only what you can afford to lose. 18+
     </p>
   </div>
@@ -1868,7 +1868,27 @@ function renderStrictMatches(){
 })();
 
 /* ============ MASTER RENDER ============ */
-function renderAll(){ renderStrip(); renderStats(); renderWonTicker(); renderBankerOfDay(); renderWorldCup(); renderBankerLeagues(); renderCards(); renderSidebar(); renderMatches(); wcHubButtonCheck(); }
+const ENGINE_HERO={
+  normal:  {t:"Today's safest ", g:"football bankers", s:"Auto-analysed with the Predict2u Rules — DNB-first protection, strict mismatch criteria, max 4 bankers per league."},
+  strict:  {t:"Strict's iron-gate ", g:"bankers for today", s:"The toughest filter on the board — every pick must clear exact thresholds or it's an honest No Bet."},
+  ultra:   {t:"Ultra's high-conviction ", g:"bankers for today", s:"Only overwhelming statistical mismatches make this list — few picks, maximum conviction."},
+  rulespro:{t:"Elite's precision ", g:"bankers for today", s:"Exact-threshold gates on every market — a pick fires only when the numbers line up to the decimal."},
+  apex:    {t:"Apex's home-fortress ", g:"bankers for today", s:"Elite's precision plus the home-advantage layer — built for teams that defend their turf."},
+  prime:   {t:"Prime's true-team ", g:"bankers for today", s:"Ratio-based filtering that separates genuinely strong sides from flat-track bullies."},
+  value:   {t:"Value's price-hunting ", g:"bankers for today", s:"Where the stats and the bookmaker disagree — picks with a margin built into the price."},
+  pro:     {t:"Pro's balanced ", g:"bankers for today", s:"The all-rounder — blended signals across form, venue and market for steady daily picks."},
+  trend:   {t:"Trend's momentum ", g:"bankers for today", s:"Rides what the league is actually doing — direction and momentum over static tables."},
+  streaks: {t:"Streaks' pattern ", g:"bankers for today", s:"Live runs across every market — wins, goals, GG, clean sheets — confirmed by the opponent's record and the league's trend."},
+  halves:  {t:"Halves' HT/FT ", g:"bankers for today", s:"Built purely from half-time behaviour — lead-holders, comeback kings, fast and slow starters. Honest No Bet when the sample's too thin."}
+};
+function updateHero(){
+  const h=document.getElementById('hero-title'), p=document.getElementById('hero-sub');
+  if(!h||!p) return;
+  const e=ENGINE_HERO[(typeof engineMode!=="undefined"&&engineMode)||'normal']||ENGINE_HERO.normal;
+  h.innerHTML=`${e.t}<span class="text-gold hero-gold">${e.g}</span>`;
+  p.textContent=`${e.s} Not a guarantee; bet only what you can afford to lose. 18+`;
+}
+function renderAll(){ updateHero(); renderStrip(); renderStats(); renderWonTicker(); renderBankerOfDay(); renderWorldCup(); renderBankerLeagues(); renderCards(); renderSidebar(); renderMatches(); wcHubButtonCheck(); }
 
 // BANKER OF THE DAY: runs all engines on today's games, finds the match+market
 // the MOST engines agree on (consensus = strongest signal), and shows it as a
@@ -1976,6 +1996,14 @@ function wcISO(name){
   if(flag!=="⚽"){ return [...flag].map(c=>String.fromCharCode(c.codePointAt(0)-0x1F1E6+65)).join(""); }
   return String(name||"??").replace(/[^A-Za-z]/g,"").slice(0,2).toUpperCase();
 }
+function wcIso2(name){ const f=wcFlag(name); return f!=="⚽" ? [...f].map(c=>String.fromCharCode(c.codePointAt(0)-0x1F1E6+65)).join("").toLowerCase() : null; }
+// real flag image with graceful letter-chip fallback (never breaks offline)
+function wcFlagImg(name,w){
+  w=w||28; const h=Math.round(w*0.72); const iso=wcIso2(name);
+  const chip=`<span class="wc-chip" style="display:inline-flex;align-items:center;justify-content:center;min-width:${w}px;height:${h}px;border-radius:4px;background:#27272a;color:#a1a1aa;font-family:'Saira Condensed',monospace;font-weight:700;font-size:${Math.round(h*0.6)}px">${wcISO(name)}</span>`;
+  if(!iso) return chip;
+  return `<span style="display:inline-flex;align-items:center">${chip.replace('class="wc-chip"','class="wc-chip" data-fb="1" hidden')}<img src="https://flagcdn.com/w40/${iso}.png" alt="${wcISO(name)}" style="width:${w}px;height:${h}px;border-radius:4px;object-fit:cover;box-shadow:0 0 0 1px rgba(255,255,255,.15)" onerror="this.hidden=true;this.previousElementSibling.hidden=false"></span>`;
+}
 function wcMarketPill(market, res){
   const mk=String(market||"");
   const isUnder=/under/i.test(mk), isOver=/over|btts yes/i.test(mk);
@@ -1988,7 +2016,7 @@ function wcMatchBlock(r){
   const m=r.match, p=m.homeGoals!=null&&m.awayGoals!=null;
   const hw=p&&m.homeGoals>m.awayGoals, aw=p&&m.awayGoals>m.homeGoals;
   const row=(name,goals,win)=>`<div class="flex justify-between items-center mb-3">
-    <div class="flex items-center gap-3"><span class="font-mono font-bold text-sm" style="color:#a1a1aa;min-width:28px">${wcISO(name)}</span>
+    <div class="flex items-center gap-3">${wcFlagImg(name,28)}
     <span class="font-medium" style="${win?'font-weight:700':''}">${name}</span></div>
     <span class="font-mono text-3xl font-semibold" style="color:${win?'#facc15':'#fff'}">${p?goals:''}</span></div>`;
   const foot=p?`<div class="mt-2 text-xs font-medium" style="color:#34d399">FT</div>`
@@ -2031,7 +2059,7 @@ function openWcHub(){
     return `<div class="wc-card rounded-2xl p-6" style="background:#0c0c0f;border:1px solid rgba(250,204,21,.3)">
       <div class="flex justify-between items-start mb-4">
         <div><div class="text-xs uppercase tracking-widest" style="color:#71717a">${m.matchDate||''}${m.round?' • '+m.round:''}</div>
-        <div class="font-semibold text-lg mt-1">${wcFlag(m.home)} ${m.home} <span style="color:#71717a">vs</span> ${m.away} ${wcFlag(m.away)}</div></div>
+        <div class="font-semibold text-lg mt-1" style="display:flex;align-items:center;gap:.5rem;flex-wrap:wrap">${wcFlagImg(m.home,24)} ${m.home} <span style="color:#71717a">vs</span> ${m.away} ${wcFlagImg(m.away,24)}</div></div>
         <div class="text-xl font-bold" style="${tierStyle}">${tierTxt}</div></div>
       ${wcMarketPill(c.market+" "+c.count+"/11", res)}
       <div class="mt-3 text-xs" style="color:#71717a">${c.engines.join(' • ')}</div>
@@ -2039,7 +2067,7 @@ function openWcHub(){
   }).join('') || `<div class="text-sm" style="color:#71717a">No engine consensus yet — honest No Bets across the board.</div>`;
   const monthTxt=new Date().toLocaleDateString('en-GB',{month:'short',year:'numeric'}).toUpperCase();
   el.innerHTML=`
-    <style>#wc-hub .title-font{font-family:'Space Grotesk','Arial Black',sans-serif;letter-spacing:-0.03em}
+    <style>#wc-hub{color:#fff;font-family:'Schibsted Grotesk',system-ui,sans-serif} #wc-hub .title-font{font-family:'Saira Condensed','Schibsted Grotesk',sans-serif;letter-spacing:.015em;text-transform:uppercase} #wc-hub .font-mono{font-family:'Saira Condensed',monospace;letter-spacing:.03em}
       #wc-hub .wc-card{transition:all .3s cubic-bezier(.4,0,.2,1)} #wc-hub .wc-card:hover{transform:translateY(-4px)}
       @media(max-width:700px){#wc-hub .wc-pair-right{border-left:none!important;padding-left:0!important;border-top:1px solid #27272a;padding-top:16px;margin-top:4px}
       #wc-hub [style*="grid-template-columns: 1fr 1fr"],#wc-hub [style*="grid-template-columns:1fr 1fr"]{grid-template-columns:1fr!important}}</style>
