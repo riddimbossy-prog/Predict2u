@@ -1,5 +1,5 @@
 window.DATA_UPDATED = "2026-07-04T16:14:30.024Z";
-window.SCORES_UPDATED = "2026-07-04T17:50:40.554Z";
+window.SCORES_UPDATED = "2026-07-04T17:55:30.848Z";
 window.MATCHES = [
   {
     "home": "Barcelona SC",
@@ -46294,7 +46294,7 @@ window.MATCHES = [
     "awayLogo": "https://media.api-sports.io/football/teams/2146.png",
     "country": "Norway",
     "flag": "https://media.api-sports.io/flags/no.svg",
-    "status": "2H",
+    "status": "FT",
     "kickoff": "2026-07-04T16:00:00+00:00",
     "matchDate": "2026-07-04",
     "homeGoals": 1,
@@ -46501,7 +46501,7 @@ window.MATCHES = [
     "xgAwayReal": 1,
     "awayXgAgainst": 1.91,
     "lineupConfirmed": true,
-    "elapsed": 90
+    "elapsed": null
   },
   {
     "home": "Deportivo Camioneros",
@@ -46512,7 +46512,7 @@ window.MATCHES = [
     "awayLogo": "https://media.api-sports.io/football/teams/1956.png",
     "country": "Argentina",
     "flag": "https://media.api-sports.io/flags/ar.svg",
-    "status": "2H",
+    "status": "FT",
     "kickoff": "2026-07-04T16:00:00+00:00",
     "matchDate": "2026-07-04",
     "homeGoals": 4,
@@ -46703,7 +46703,7 @@ window.MATCHES = [
       "dcx2": 1.8
     },
     "h2h": null,
-    "elapsed": 87
+    "elapsed": null
   },
   {
     "home": "Lugano",
@@ -46905,7 +46905,7 @@ window.MATCHES = [
       "dcx2": 1.85
     },
     "h2h": null,
-    "elapsed": 88
+    "elapsed": 90
   },
   {
     "home": "IBV Vestmannaeyjar",
@@ -46916,7 +46916,7 @@ window.MATCHES = [
     "awayLogo": "https://media.api-sports.io/football/teams/274.png",
     "country": "Iceland",
     "flag": "https://media.api-sports.io/flags/is.svg",
-    "status": "2H",
+    "status": "FT",
     "kickoff": "2026-07-04T16:00:00+00:00",
     "matchDate": "2026-07-04",
     "homeGoals": 1,
@@ -47107,7 +47107,7 @@ window.MATCHES = [
       "dcx2": 1.6
     },
     "h2h": null,
-    "elapsed": 90
+    "elapsed": null
   },
   {
     "home": "Leiknir R.",
@@ -47309,7 +47309,7 @@ window.MATCHES = [
       "dcx2": 2.4
     },
     "h2h": null,
-    "elapsed": 85
+    "elapsed": 89
   },
   {
     "home": "Magni",
@@ -47320,7 +47320,7 @@ window.MATCHES = [
     "awayLogo": "https://media.api-sports.io/football/teams/4171.png",
     "country": "Iceland",
     "flag": "https://media.api-sports.io/flags/is.svg",
-    "status": "2H",
+    "status": "FT",
     "kickoff": "2026-07-04T16:00:00+00:00",
     "matchDate": "2026-07-04",
     "homeGoals": 4,
@@ -47509,7 +47509,7 @@ window.MATCHES = [
       "dcx2": 1.44
     },
     "h2h": null,
-    "elapsed": 90
+    "elapsed": null
   },
   {
     "home": "Trans Narva",
@@ -48312,7 +48312,7 @@ window.MATCHES = [
       "dcx2": 1.91
     },
     "h2h": null,
-    "elapsed": 80
+    "elapsed": 84
   },
   {
     "home": "ÍF II",
@@ -48512,7 +48512,7 @@ window.MATCHES = [
       "dcx2": 1.3
     },
     "h2h": null,
-    "elapsed": 59
+    "elapsed": 63
   },
   {
     "home": "Canada",
@@ -48523,7 +48523,7 @@ window.MATCHES = [
     "awayLogo": "https://media.api-sports.io/football/teams/31.png",
     "country": "World",
     "flag": null,
-    "status": "1H",
+    "status": "HT",
     "kickoff": "2026-07-04T17:00:00+00:00",
     "matchDate": "2026-07-04",
     "homeGoals": 0,
@@ -48741,7 +48741,7 @@ window.MATCHES = [
     "awayLogo": "https://media.api-sports.io/football/teams/19410.png",
     "country": "Uruguay",
     "flag": "https://media.api-sports.io/flags/uy.svg",
-    "status": "1H",
+    "status": "HT",
     "kickoff": "2026-07-04T17:00:00+00:00",
     "matchDate": "2026-07-04",
     "homeGoals": 1,
@@ -49146,7 +49146,7 @@ window.MATCHES = [
     "status": "1H",
     "kickoff": "2026-07-04T17:30:00+00:00",
     "matchDate": "2026-07-04",
-    "homeGoals": 0,
+    "homeGoals": 1,
     "awayGoals": 0,
     "homePos": 18,
     "awayPos": 10,
@@ -49334,7 +49334,7 @@ window.MATCHES = [
       "dcx2": 1.42
     },
     "h2h": null,
-    "elapsed": 18
+    "elapsed": 23
   },
   {
     "home": "Skála",
@@ -49536,7 +49536,7 @@ window.MATCHES = [
       "dcx2": 1.8
     },
     "h2h": null,
-    "elapsed": 19
+    "elapsed": 23
   },
   {
     "home": "Colegiales",
