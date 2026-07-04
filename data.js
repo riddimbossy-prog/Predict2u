@@ -1,5 +1,5 @@
 window.DATA_UPDATED = "2026-07-04T16:14:30.024Z";
-window.SCORES_UPDATED = "2026-07-04T16:30:48.732Z";
+window.SCORES_UPDATED = "2026-07-04T16:35:32.954Z";
 window.MATCHES = [
   {
     "home": "Barcelona SC",
@@ -45280,7 +45280,7 @@ window.MATCHES = [
       "dcx2": 2.2
     },
     "h2h": null,
-    "elapsed": 71
+    "elapsed": 75
   },
   {
     "home": "FC Slutsk",
@@ -45467,7 +45467,7 @@ window.MATCHES = [
     "round": "Regular Season - 14",
     "odds": null,
     "h2h": null,
-    "elapsed": 72
+    "elapsed": 76
   },
   {
     "home": "VPS",
@@ -45682,7 +45682,7 @@ window.MATCHES = [
     "xgAwayReal": 2.58,
     "awayXgAgainst": 1.28,
     "lineupConfirmed": true,
-    "elapsed": 69
+    "elapsed": 74
   },
   {
     "home": "OLS",
@@ -45884,7 +45884,7 @@ window.MATCHES = [
       "dcx2": 3.35
     },
     "h2h": null,
-    "elapsed": 74
+    "elapsed": 78
   },
   {
     "home": "Rīgas FS",
@@ -45899,7 +45899,7 @@ window.MATCHES = [
     "kickoff": "2026-07-04T15:00:00+00:00",
     "matchDate": "2026-07-04",
     "homeGoals": 0,
-    "awayGoals": 1,
+    "awayGoals": 2,
     "homePos": 2,
     "awayPos": 3,
     "tableSize": 10,
@@ -46086,7 +46086,7 @@ window.MATCHES = [
       "dcx2": 3
     },
     "h2h": null,
-    "elapsed": 71
+    "elapsed": 76
   },
   {
     "home": "Politehnica UTM",
@@ -46283,7 +46283,7 @@ window.MATCHES = [
       "under35": 1.65
     },
     "h2h": null,
-    "elapsed": 70
+    "elapsed": 74
   },
   {
     "home": "Bryne",
@@ -46501,7 +46501,7 @@ window.MATCHES = [
     "xgAwayReal": 1,
     "awayXgAgainst": 1.91,
     "lineupConfirmed": true,
-    "elapsed": 29
+    "elapsed": 34
   },
   {
     "home": "Deportivo Camioneros",
@@ -46703,7 +46703,7 @@ window.MATCHES = [
       "dcx2": 1.8
     },
     "h2h": null,
-    "elapsed": 25
+    "elapsed": 30
   },
   {
     "home": "Lugano",
@@ -46905,7 +46905,7 @@ window.MATCHES = [
       "dcx2": 1.85
     },
     "h2h": null,
-    "elapsed": 27
+    "elapsed": 32
   },
   {
     "home": "IBV Vestmannaeyjar",
@@ -47107,7 +47107,7 @@ window.MATCHES = [
       "dcx2": 1.6
     },
     "h2h": null,
-    "elapsed": 29
+    "elapsed": 34
   },
   {
     "home": "Leiknir R.",
@@ -47309,7 +47309,7 @@ window.MATCHES = [
       "dcx2": 2.4
     },
     "h2h": null,
-    "elapsed": 29
+    "elapsed": 34
   },
   {
     "home": "Magni",
@@ -47509,7 +47509,7 @@ window.MATCHES = [
       "dcx2": 1.44
     },
     "h2h": null,
-    "elapsed": 30
+    "elapsed": 35
   },
   {
     "home": "Trans Narva",
@@ -47711,7 +47711,7 @@ window.MATCHES = [
       "dcx2": 1.01
     },
     "h2h": null,
-    "elapsed": 30
+    "elapsed": 35
   },
   {
     "home": "Paide",
@@ -47913,7 +47913,7 @@ window.MATCHES = [
       "dcx2": 2.6
     },
     "h2h": null,
-    "elapsed": 30
+    "elapsed": 35
   },
   {
     "home": "Metta / LU",
@@ -48110,7 +48110,7 @@ window.MATCHES = [
       "under35": 2
     },
     "h2h": null,
-    "elapsed": 30
+    "elapsed": 35
   },
   {
     "home": "AB",
@@ -48312,7 +48312,7 @@ window.MATCHES = [
       "dcx2": 1.91
     },
     "h2h": null,
-    "elapsed": 14
+    "elapsed": 19
   },
   {
     "home": "ÍF II",
@@ -48323,11 +48323,11 @@ window.MATCHES = [
     "awayLogo": "https://media.api-sports.io/football/teams/4183.png",
     "country": "Faroe-Islands",
     "flag": "https://media.api-sports.io/flags/fo.svg",
-    "status": "NS",
+    "status": "1H",
     "kickoff": "2026-07-04T16:30:00+00:00",
     "matchDate": "2026-07-04",
-    "homeGoals": null,
-    "awayGoals": null,
+    "homeGoals": 0,
+    "awayGoals": 0,
     "homePos": 4,
     "awayPos": 2,
     "tableSize": 10,
@@ -48512,7 +48512,7 @@ window.MATCHES = [
       "dcx2": 1.3
     },
     "h2h": null,
-    "elapsed": null
+    "elapsed": 3
   },
   {
     "home": "Canada",
