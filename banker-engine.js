@@ -2814,7 +2814,8 @@ function streakRecommend(m){
   const o=m.odds;
   // odds are required (mandatory-odds policy) and the ladder confirms markets
   if(!o || (o.home==null && o.over15==null && o.under35==null)){
-    return streakOut(m,"No Bet",null,null,null,["No bookmaker odds — streak picks need odds confirmation."]);
+    if(!isUpcomingNoScore(m)) return streakOut(m,"No Bet",null,null,null,["No bookmaker odds — streak picks need odds confirmation."]);
+  var __streakNoOdds=true;
   }
 
   // ---- team streaks: prefer REAL streaks (any length, from season history);
@@ -2885,7 +2886,7 @@ function streakRecommend(m){
     if(homeSide)s+=1; // home advantage
     if(!collision(homeSide))s+=2;
     // market odds in safe zone (team priced as a real favourite)
-    const teamOdd=homeSide?o.home:o.away;
+    const teamOdd=o?(homeSide?o.home:o.away):null;
     if(teamOdd!=null && teamOdd>=1.20 && teamOdd<=2.10)s+=2;
     return s;
   }
@@ -2897,7 +2898,7 @@ function streakRecommend(m){
     const streak=Math.max(wStreak,nlStreak);
     if(streak<4) return;
     if(collision(homeSide)) return;
-    const teamOdd=homeSide?o.home:o.away;
+    const teamOdd=o?(homeSide?o.home:o.away):null;
     if(teamOdd==null) return;
     // pick market by odds ladder zone (validated by oddsLadderGate below)
     let market;
@@ -2990,6 +2991,8 @@ function streakRecommend(m){
   const best=candidates[0];
 
   // FINAL: odds ladder must confirm the chosen market (§16, reuse the gate)
+  if(typeof __streakNoOdds!=='undefined'&&__streakNoOdds)
+    return provisionalize(streakOut(m,best.market,"Strong Pick",Math.min(best.score,18),best.homeSide!=null?(best.homeSide?"home":"away"):null,[best.why]), best.market, [best.why]);
   const gate = (typeof oddsLadderGate==='function') ? oddsLadderGate(m, best.market) : {ok:true,block:false};
   if(gate.block){
     const lead = best.kind==="market" ? best.why : `Streak found (${best.streak} games).`;
@@ -3371,7 +3374,8 @@ function halvesOut(m, market, grade, score, reasons, extra){
 function halvesRecommend(m){
   if(!m) return halvesOut(m,"No Bet",null,null,["No match data."]);
   const o=m.odds;
-  if(!o||(o.home==null&&o.over15==null&&o.under35==null)){
+  const noOdds=!o||(o.home==null&&o.over15==null&&o.under35==null);
+  if(noOdds&&!isUpcomingNoScore(m)){
     return halvesOut(m,"No Bet",null,null,["No bookmaker odds — HT/FT picks need odds confirmation."]);
   }
   const H=m.homeStreaks&&m.homeStreaks.htft, A=m.awayStreaks&&m.awayStreaks.htft;
@@ -3421,6 +3425,7 @@ function halvesRecommend(m){
 
   if(!cands.length) return halvesOut(m,"No Bet",null,null,["No HT/FT pattern strong enough — honest No Bet."]);
   cands.sort((x,y)=>y.score-x.score);
+  if(noOdds) return provisionalize(halvesOut(m,cands[0].market,"Strong Pick",cands[0].score,[cands[0].why]), cands[0].market, [cands[0].why]);
   let best=cands[0];
   // universal odds ladder must confirm; try next candidates if blocked
   for(const c of cands){
@@ -3452,7 +3457,8 @@ function mismatchOut(m, market, grade, score, reasons){
 }
 function mismatchRecommend(m){
   if(!m) return mismatchOut(m,"No Bet",null,null,["No match data."]);
-  if(!m.odds) return mismatchOut(m,"No Bet",null,null,["No bookmaker odds — alignment needs price confirmation."]);
+  const noOdds=!m.odds;
+  if(noOdds&&!isUpcomingNoScore(m)) return mismatchOut(m,"No Bet",null,null,["No bookmaker odds — alignment needs price confirmation."]);
   const hA=m.homeScoredAtHome, hD=m.homeConcededAtHome, aA=m.awayScoredAway, aD=m.awayConcededAway;
   if(hA==null||hD==null||aA==null||aD==null)
     return mismatchOut(m,"No Bet",null,null,["Venue profiles incomplete — no alignment read (honest No Bet)."]);
@@ -3517,6 +3523,7 @@ function mismatchRecommend(m){
 
   if(!cands.length) return mismatchOut(m,"No Bet",null,null,["No directional alignment — the teams' profiles disagree (honest No Bet)."]);
   cands.sort((x,y)=>y.score-x.score);
+  if(noOdds) return provisionalize(mismatchOut(m,cands[0].market,"Strong Pick",cands[0].score,[cands[0].why]), cands[0].market, [cands[0].why]);
   let best=null;
   for(const c of cands){
     const g=(typeof oddsLadderGate==='function')?oddsLadderGate(m,c.market):{ok:true,block:false};
@@ -3578,11 +3585,17 @@ function v3Recommend(m){
   const hFTR=D.aRec!=null?null:null; // placeholder clarity
   const aFail=D.aRec!=null?1-D.aRec:null, hFail=D.hRec!=null?1-D.hRec:null;
   const htOK=sMin>=5; // §8: <5 blocks HT/FT-dependent markets
-  const capBySample = sMin>=10?10 : sMin>=7?8.5 : sMin>=5?7.0 : 6.9;
+  // §8 caps apply to HT/FT-INFORMED analysis. With no HT/FT data at all the
+  // other six confirmation layers (splits, PPG, goals, form, league, odds)
+  // still work — capped at 8.4 (Qualified Banker ceiling; Strong/Elite Banker
+  // requires real HT/FT support). Partial samples (1-4) cap below banker.
+  const capBySample = sMin>=10?10 : sMin>=7?8.5 : sMin>=5?7.0 : sMin>=1?7.4 : 8.4;
   const ge=(x,t)=>x!=null&&x>=t, le=(x,t)=>x!=null&&x<=t;
   const two=arr=>arr.filter(Boolean).length>=2;
   const anyT=arr=>arr.some(Boolean);
-  const gate=mk=>{ const g=(typeof oddsLadderGate==='function')?oddsLadderGate(m,mk):{block:false}; return !g.block; };
+  const noOddsV3=!m.odds||(m.odds.home==null&&m.odds.over15==null&&m.odds.under35==null);
+  const provisionalOK=noOddsV3&&isUpcomingNoScore(m);
+  const gate=mk=>{ if(provisionalOK) return true; const g=(typeof oddsLadderGate==='function')?oddsLadderGate(m,mk):{block:false}; return !g.block; };
   // confidence (§37) — components scored from what exists
   function conf(side, market, goalsFit, htDirect, htTrans, conflict){
     let c=0;
@@ -3733,10 +3746,9 @@ function v3Recommend(m){
       [], 0.7, `Slow-starting winner profile: converts ${Math.round((D.hD2W||0)*100)}% of half-time draws.`);
 
   if(!out.length){
-    const cls = sameTier?"Same Tier":(sMin<5&&htOK===false?"Insufficient Data":"Statistical Conflict");
+    const cls = sameTier?"Same Tier":"Statistical Conflict";
     const why = sameTier?`PPG gap only ${adiff.toFixed(2)} with similar profiles — no clear market-specific mismatch.`
-      : sMin<5?`HT/FT sample too small (${sMin}) and no market cleared its thresholds without it.`
-      : `No market passed all mandatory thresholds with HT/FT support (expected total ${expT.toFixed(2)}, PPG ${hPPG.toFixed(2)} v ${aPPG.toFixed(2)}).`;
+      : `No market passed all mandatory thresholds (expected total ${expT.toFixed(2)}, PPG ${hPPG.toFixed(2)} v ${aPPG.toFixed(2)}${sMin>=1&&sMin<5?`, thin HT/FT sample ${sMin}`:''}).`;
     return NB(why,cls);
   }
   // §38 hierarchy selection among qualified
@@ -3745,6 +3757,11 @@ function v3Recommend(m){
   const best=Math.max(...out.map(o=>o.sc));
   out.sort((a,b)=>HIER.indexOf(a.mk)-HIER.indexOf(b.mk));
   const pick=out.find(o=>o.sc>=best-0.5)||out[0];
+  if(provisionalOK){
+    return provisionalize({ match:m, over:null,btts:null,under:null,wdnb:null, value:null, chosenKind:"v3", lean:null,
+      rankWeight:Math.min(pick.sc,7.4), summary:`Awaiting odds — provisional ${pick.mk} (${pick.sc.toFixed(1)}/10 on stats). ${pick.why}` },
+      pick.mk, [pick.why]);
+  }
   const cls = pick.sc>=9.0?"Elite Banker":pick.sc>=8.5?"Strong Banker":pick.sc>=8.0?"Qualified Banker":pick.sc>=7.5?"Value Selection":"Borderline";
   const banker=pick.sc>=8.0;
   return { match:m, over:null,btts:null,under:null,wdnb:null,
@@ -3757,6 +3774,19 @@ function v3Recommend(m){
     value:null, chosenKind:"v3", lean:null };
 }
 
+function isUpcomingNoScore(m){
+  if(!m) return false;
+  if(m.homeGoals!=null&&m.awayGoals!=null) return false;
+  const live=m.status&&['1H','2H','HT','ET','LIVE','P'].includes(m.status);
+  if(live) return false;
+  return true;
+}
+function provisionalize(res, market, reasons){
+  return { ...res, primary:market, market, bet:true, banker:false, awaitingOdds:true,
+    grade:"Awaiting Odds", confidence:5,
+    verdict:`${market} (AWAITING ODDS — provisional). Stats support this market but no bookmaker price exists yet; it becomes actionable only when odds arrive and confirm.`,
+    reasons:[...(reasons||[]), "Awaiting odds — provisional, never a banker, not tracked."] };
+}
 /* ===================== UNIVERSAL OVERLAY (all 12 engines) =====================
    Two owner rules applied AFTER every engine (and after the intl frame):
    1) TABLE PROXIMITY — never back a TEAM (Win/DNB/DC/team-goals) when the two
@@ -3770,7 +3800,7 @@ function overlayIsTeamMarket(mk){
          && !/^over|^under|^btts/i.test(mk);
 }
 function overlayApply(m, res){
-  if(!res || res.bet===false) return res;
+  if(!res || res.bet===false || res.awaitingOdds) return res;
   const mk=String(res.primary||res.market||""); if(!mk||mk==="No Bet") return res;
   const hA=m&&m.homeScoredAtHome, hD=m&&m.homeConcededAtHome, aA=m&&m.awayScoredAway, aD=m&&m.awayConcededAway;
   const gateOk=x=>{ const g=(typeof oddsLadderGate==='function')?oddsLadderGate(m,x):{block:false}; return !g.block; };
