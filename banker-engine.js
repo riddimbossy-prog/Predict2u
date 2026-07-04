@@ -3500,8 +3500,76 @@ function mismatchRecommend(m){
   return mismatchOut(m,best.market,grade,best.score,reasons);
 }
 
+/* ===================== UNIVERSAL OVERLAY (all 12 engines) =====================
+   Two owner rules applied AFTER every engine (and after the intl frame):
+   1) TABLE PROXIMITY — never back a TEAM (Win/DNB/DC/team-goals) when the two
+      sides sit fewer than 3 places apart in the same table. Totals/BTTS are
+      match markets, not team-backed, so they pass.
+   2) VENUE-SPLIT CONFIRMATION — the pick must not contradict the home/away
+      split data (home's record AT HOME, away's record ON THE ROAD). Hard
+      contradictions are vetoed; lukewarm splits strip banker status. */
+function overlayIsTeamMarket(mk){
+  return /(home|away).*(win|dnb)|^(home|away) win|dnb|double chance|ht draw.*win|team over|team under/i.test(mk)
+         && !/^over|^under|^btts/i.test(mk);
+}
+function overlayApply(m, res){
+  if(!res || res.bet===false) return res;
+  const mk=String(res.primary||res.market||""); if(!mk||mk==="No Bet") return res;
+  const hA=m&&m.homeScoredAtHome, hD=m&&m.homeConcededAtHome, aA=m&&m.awayScoredAway, aD=m&&m.awayConcededAway;
+  const gateOk=x=>{ const g=(typeof oddsLadderGate==='function')?oddsLadderGate(m,x):{block:false}; return !g.block; };
+  // ---- RULE 1: table proximity — team-backed picks REVERT to a goals/BTTS market ----
+  if(m && m.homePos!=null && m.awayPos!=null && m.sameGroup!==false && overlayIsTeamMarket(mk)){
+    const gap=Math.abs(m.homePos-m.awayPos);
+    if(gap<3){
+      let fb=null;
+      if(hA!=null&&hD!=null&&aA!=null&&aD!=null){
+        const att=hA+aA, def=hD+aD, cands=[];
+        if(att>=3.00&&hA>=1.3&&aA>=1.1) cands.push("Over 2.5 Goals");
+        if(hA>=1.2&&aA>=1.0&&hD>=0.9&&aD>=0.9) cands.push("BTTS Yes");
+        if(att>=2.40) cands.push("Over 1.5 Goals");
+        if(hD<=0.80&&aA<=0.80) cands.push("BTTS No");
+        if(att<=2.00&&def<=2.00) cands.push("Under 2.5 Goals");
+        if(att<=2.70) cands.push("Under 3.5 Goals");
+        fb=cands.find(gateOk)||null;
+      }
+      if(fb){
+        return { ...res, primary:fb, market:fb, banker:false,
+          grade:"Strong Pick", confidence:Math.min(res.confidence||7,7),
+          verdict:`${fb} (overlay switch). Table gap only ${gap} — too close to back a side, so the pick moves to the goals market the venue splits support. (engine wanted ${mk})`,
+          reasons:[...(res.reasons||[]), `Overlay: gap ${gap} < 3 — reverted ${mk} to ${fb} (goals/BTTS).`],
+          overlay:{rule:"gap-revert",from:mk,to:fb,gap} };
+      }
+      return { ...res, bet:false, banker:false, primary:"No Bet", market:"No Bet", grade:null, confidence:0,
+        verdict:`No Bet — overlay: only ${gap} place${gap===1?'':'s'} between them and no goals/BTTS market qualified as a fallback. (engine wanted ${mk})`,
+        reasons:[...(res.reasons||[]), `Overlay: gap ${gap} < 3 and no viable goals fallback.`], overlay:{rule:"gap-nobet",gap} };
+    }
+  }
+  // ---- RULE 2: venue-split confirmation — WINS / DNB / DC ONLY ----
+  if(hA==null||hD==null||aA==null||aD==null) return res;
+  const backsHome=/(^|\s)home (win|dnb)|double chance 1x|ht draw \/ ft home/i.test(mk);
+  const backsAway=/(^|\s)away (win|dnb)|double chance x2|ht draw \/ ft away/i.test(mk);
+  if(!backsHome&&!backsAway) return res; // goals/BTTS/team-goals markets: rule 2 does not apply
+  const veto=(why)=>({ ...res, bet:false, banker:false, primary:"No Bet", market:"No Bet", grade:null, confidence:0,
+    verdict:`No Bet — overlay: ${why} (engine wanted ${mk}).`,
+    reasons:[...(res.reasons||[]), `Overlay veto (venue-split): ${why}.`], overlay:{rule:"venue-split"} });
+  let soft=null;
+  if(backsHome){
+    if(hA<0.90||hD>=1.70) return veto(`home's own split (${hA} for, ${hD} against at home) argues against backing them`);
+    if(hA<1.10||hD>=1.40) soft=`home venue split is lukewarm (${hA} for, ${hD} against)`;
+  }
+  if(backsAway){
+    if(aA<0.80||aD>=1.70) return veto(`away's road split (${aA} for, ${aD} against) argues against backing them`);
+    if(aA<1.00||aD>=1.40) soft=`away road split is lukewarm (${aA} for, ${aD} against)`;
+  }
+  if(soft){
+    if(res.banker) return { ...res, banker:false, grade:(res.grade==="Elite Banker"||res.grade==="Banker")?"Strong Pick":res.grade,
+      reasons:[...(res.reasons||[]), `Overlay: ${soft} — banker stripped, kept as a pick.`], overlay:{rule:"venue-soft"} };
+    return { ...res, reasons:[...(res.reasons||[]), `Overlay: ${soft} — proceed with caution.`], overlay:{rule:"venue-soft"} };
+  }
+  return { ...res, reasons:[...(res.reasons||[]), `Overlay: venue splits confirm ${mk}.`], overlay:{rule:"confirmed"} };
+}
 function withIntlFrame(fn){
-  return function(m){ return intlFrameApply(m, fn(m)); };
+  return function(m){ return overlayApply(m, intlFrameApply(m, fn(m))); };
 }
 recommend        = withIntlFrame(recommend);
 strictRecommend  = withIntlFrame(strictRecommend);
