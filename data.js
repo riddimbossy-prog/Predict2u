@@ -1,5 +1,5 @@
 window.DATA_UPDATED = "2026-07-04T22:05:04.488Z";
-window.SCORES_UPDATED = "2026-07-04T23:35:28.129Z";
+window.SCORES_UPDATED = "2026-07-04T23:40:41.640Z";
 window.MATCHES = [
   {
     "home": "Barcelona SC",
@@ -50909,7 +50909,7 @@ window.MATCHES = [
       "dcx2": 1.75
     },
     "h2h": null,
-    "elapsed": 75
+    "elapsed": 79
   },
   {
     "home": "Maringá",
@@ -50923,7 +50923,7 @@ window.MATCHES = [
     "status": "2H",
     "kickoff": "2026-07-04T22:00:00+00:00",
     "matchDate": "2026-07-04",
-    "homeGoals": 3,
+    "homeGoals": 4,
     "awayGoals": 0,
     "homePos": 13,
     "awayPos": 9,
@@ -51111,7 +51111,7 @@ window.MATCHES = [
       "dcx2": 2.2
     },
     "h2h": null,
-    "elapsed": 74
+    "elapsed": 79
   },
   {
     "home": "Velo Clube",
@@ -51298,7 +51298,7 @@ window.MATCHES = [
     "round": "Round of 32",
     "odds": null,
     "h2h": null,
-    "elapsed": 75
+    "elapsed": 80
   },
   {
     "home": "Tampa Bay Rowdies",
@@ -51516,7 +51516,7 @@ window.MATCHES = [
     "xgAwayReal": 1.3,
     "awayXgAgainst": 1.36,
     "lineupConfirmed": true,
-    "elapsed": 68
+    "elapsed": 73
   },
   {
     "home": "Deportes Iquique",
@@ -51530,7 +51530,7 @@ window.MATCHES = [
     "status": "2H",
     "kickoff": "2026-07-04T22:00:00+00:00",
     "matchDate": "2026-07-04",
-    "homeGoals": 0,
+    "homeGoals": 1,
     "awayGoals": 0,
     "homePos": null,
     "awayPos": null,
@@ -51712,7 +51712,7 @@ window.MATCHES = [
       "dcx2": 1.25
     },
     "h2h": null,
-    "elapsed": 76
+    "elapsed": 81
   },
   {
     "home": "Santa Cruz",
@@ -51723,7 +51723,7 @@ window.MATCHES = [
     "awayLogo": "https://media.api-sports.io/football/teams/7779.png",
     "country": "Brazil",
     "flag": "https://media.api-sports.io/flags/br.svg",
-    "status": "HT",
+    "status": "2H",
     "kickoff": "2026-07-04T22:30:00+00:00",
     "matchDate": "2026-07-04",
     "homeGoals": 0,
@@ -51914,7 +51914,7 @@ window.MATCHES = [
       "dcx2": 1.62
     },
     "h2h": null,
-    "elapsed": 45
+    "elapsed": 48
   },
   {
     "home": "Goias",
@@ -52131,7 +52131,7 @@ window.MATCHES = [
     "xgReal": true,
     "xgAwayReal": 0.95,
     "awayXgAgainst": 1.3,
-    "elapsed": 35
+    "elapsed": 40
   },
   {
     "home": "Pittsburgh Riverhounds",
@@ -52535,7 +52535,7 @@ window.MATCHES = [
     "round": "2nd Phase - 9",
     "odds": null,
     "h2h": null,
-    "elapsed": 35
+    "elapsed": 40
   },
   {
     "home": "Guarani Campinas",
@@ -52737,7 +52737,7 @@ window.MATCHES = [
       "dcx2": 2.55
     },
     "h2h": null,
-    "elapsed": 4
+    "elapsed": 9
   },
   {
     "home": "Ferroviária",
@@ -52939,7 +52939,7 @@ window.MATCHES = [
       "dcx2": 1.7
     },
     "h2h": null,
-    "elapsed": 5
+    "elapsed": 10
   },
   {
     "home": "North Carolina Courage W",
@@ -52950,11 +52950,11 @@ window.MATCHES = [
     "awayLogo": "https://media.api-sports.io/football/teams/3002.png",
     "country": "USA",
     "flag": "https://media.api-sports.io/flags/us.svg",
-    "status": "NS",
+    "status": "1H",
     "kickoff": "2026-07-04T23:30:00+00:00",
     "matchDate": "2026-07-04",
-    "homeGoals": null,
-    "awayGoals": null,
+    "homeGoals": 0,
+    "awayGoals": 0,
     "homePos": 7,
     "awayPos": 11,
     "tableSize": 16,
@@ -53156,7 +53156,7 @@ window.MATCHES = [
     "xgReal": true,
     "xgAwayReal": 1.21,
     "awayXgAgainst": 1.48,
-    "elapsed": null
+    "elapsed": 2
   },
   {
     "home": "Rhode Island",
@@ -53167,11 +53167,11 @@ window.MATCHES = [
     "awayLogo": "https://media.api-sports.io/football/teams/4007.png",
     "country": "USA",
     "flag": "https://media.api-sports.io/flags/us.svg",
-    "status": "NS",
+    "status": "1H",
     "kickoff": "2026-07-04T23:30:00+00:00",
     "matchDate": "2026-07-04",
-    "homeGoals": null,
-    "awayGoals": null,
+    "homeGoals": 0,
+    "awayGoals": 0,
     "homePos": 9,
     "awayPos": 1,
     "tableSize": 25,
@@ -53373,7 +53373,7 @@ window.MATCHES = [
     "xgReal": true,
     "xgAwayReal": 1.2,
     "awayXgAgainst": 1.43,
-    "elapsed": null
+    "elapsed": 2
   },
   {
     "home": "Fortaleza EC",
