@@ -1544,7 +1544,7 @@ function renderFnEngineMatches(engFn,label){
           <div class="text-[11px]" style="color:var(--muted)">${rowFlag(u.match)}${u.match.league||''}</div>
         </div>
         <div class="flex flex-col items-end gap-1 flex-shrink-0 w-28">
-          <span class="text-[9px] font-bold uppercase" style="color:${u.bet?'var(--brand)':'var(--muted)'}">${grade}${u.score?` · ${u.score}`:''}</span>
+          <span class="text-[9px] font-bold uppercase" style="color:${u.awaitingOdds?'#8a93a6':u.bet?'var(--brand)':'var(--muted)'};${u.awaitingOdds?'border:1px solid #8a93a6;border-radius:6px;padding:1px 5px':''}">${u.awaitingOdds?'AWAITING ODDS':grade}${!u.awaitingOdds&&u.score?` · ${u.score}`:''}</span>
           <span class="px-2 py-1 rounded-lg text-[11px] font-semibold ${u.bet?pill(u.primary):''} text-right leading-tight" style="${u.bet?'':'color:var(--muted)'}">${u.primary}</span>
           ${u.bet?rowSettle(u.match,u.primary):''}
         </div>
@@ -2001,7 +2001,7 @@ function wcAllRows(){ const src=(typeof _allResults!=="undefined")?_allResults:(
 function wcConsensus(m){
   const engines=[['Normal',recommend],['Strict',strictRecommend],['Ultra',ultraRecommend],['Elite',rulesProRecommend],['Apex',apexRecommend],['Prime',primeRecommend],['Value',valueRecommend],['Pro',proRecommend],['Trend',trendRecommend],['Streaks',streakRecommend],['Halves',halvesRecommend],['Mismatch',mismatchRecommend]];
   const markets={};
-  engines.forEach(([name,fn])=>{ try{ if(typeof fn!=='function')return; const u=fn(m);
+  engines.forEach(([name,fn])=>{ try{ if(typeof fn!=='function')return; const u=fn(m); if(u&&u.awaitingOdds)return;
     const mk=u.primary!=null?u.primary:u.market; if(!mk||mk==='No Bet'||mk==='Skip'||u.bet===false)return;
     const k=String(mk).trim(); if(!markets[k])markets[k]={market:k,count:0,engines:[],anyBanker:false};
     markets[k].count++; markets[k].engines.push(name); if(u.banker)markets[k].anyBanker=true; }catch(e){} });
