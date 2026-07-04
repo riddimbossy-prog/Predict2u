@@ -1,5 +1,5 @@
 window.DATA_UPDATED = "2026-07-04T10:19:09.623Z";
-window.SCORES_UPDATED = "2026-07-04T12:01:36.295Z";
+window.SCORES_UPDATED = "2026-07-04T12:05:31.242Z";
 window.MATCHES = [
   {
     "home": "Barcelona SC",
@@ -37832,7 +37832,7 @@ window.MATCHES = [
     "awayLogo": "https://media.api-sports.io/football/teams/27856.png",
     "country": "South-Korea",
     "flag": "https://media.api-sports.io/flags/kr.svg",
-    "status": "2H",
+    "status": "ET",
     "kickoff": "2026-07-04T10:00:00+00:00",
     "matchDate": "2026-07-04",
     "homeGoals": 2,
@@ -38002,7 +38002,7 @@ window.MATCHES = [
     "round": "Round of 128",
     "odds": null,
     "h2h": null,
-    "elapsed": 90
+    "elapsed": 151
   },
   {
     "home": "Ulsan Citizen",
@@ -38209,7 +38209,7 @@ window.MATCHES = [
     "awayLogo": "https://media.api-sports.io/football/teams/25720.png",
     "country": "South-Korea",
     "flag": "https://media.api-sports.io/flags/kr.svg",
-    "status": "2H",
+    "status": "FT",
     "kickoff": "2026-07-04T10:00:00+00:00",
     "matchDate": "2026-07-04",
     "homeGoals": 2,
@@ -38394,7 +38394,7 @@ window.MATCHES = [
       "dcx2": 2.8
     },
     "h2h": null,
-    "elapsed": 90
+    "elapsed": null
   },
   {
     "home": "Haman",
@@ -38590,7 +38590,7 @@ window.MATCHES = [
       "dcx2": 1.02
     },
     "h2h": null,
-    "elapsed": 147
+    "elapsed": 97
   },
   {
     "home": "Yangcheon TNT",
@@ -38601,7 +38601,7 @@ window.MATCHES = [
     "awayLogo": "https://media.api-sports.io/football/teams/18656.png",
     "country": "South-Korea",
     "flag": "https://media.api-sports.io/flags/kr.svg",
-    "status": "2H",
+    "status": "ET",
     "kickoff": "2026-07-04T10:00:00+00:00",
     "matchDate": "2026-07-04",
     "homeGoals": 1,
@@ -38771,7 +38771,7 @@ window.MATCHES = [
     "round": "Round of 128",
     "odds": null,
     "h2h": null,
-    "elapsed": 90
+    "elapsed": 151
   },
   {
     "home": "Ulsan FC",
@@ -38782,7 +38782,7 @@ window.MATCHES = [
     "awayLogo": "https://media.api-sports.io/football/teams/7111.png",
     "country": "South-Korea",
     "flag": "https://media.api-sports.io/flags/kr.svg",
-    "status": "2H",
+    "status": "ET",
     "kickoff": "2026-07-04T10:00:00+00:00",
     "matchDate": "2026-07-04",
     "homeGoals": 1,
@@ -38952,7 +38952,7 @@ window.MATCHES = [
     "round": "Round of 128",
     "odds": null,
     "h2h": null,
-    "elapsed": 90
+    "elapsed": 152
   },
   {
     "home": "Riga FC II",
@@ -39167,7 +39167,7 @@ window.MATCHES = [
     "kickoff": "2026-07-04T10:30:00+00:00",
     "matchDate": "2026-07-04",
     "homeGoals": 1,
-    "awayGoals": 1,
+    "awayGoals": 2,
     "homePos": 7,
     "awayPos": 5,
     "tableSize": 12,
@@ -39369,7 +39369,7 @@ window.MATCHES = [
     "xgReal": true,
     "xgAwayReal": 1.26,
     "awayXgAgainst": 1.52,
-    "elapsed": 70
+    "elapsed": 75
   },
   {
     "home": "Daejeon Citizen",
@@ -39586,7 +39586,7 @@ window.MATCHES = [
     "xgReal": true,
     "xgAwayReal": 0.87,
     "awayXgAgainst": 0.97,
-    "elapsed": 73
+    "elapsed": 77
   },
   {
     "home": "Jeonbuk Motors",
@@ -39803,7 +39803,7 @@ window.MATCHES = [
     "xgReal": true,
     "xgAwayReal": 1.2,
     "awayXgAgainst": 1.44,
-    "elapsed": 73
+    "elapsed": 77
   },
   {
     "home": "Ansan Greeners",
@@ -40020,7 +40020,7 @@ window.MATCHES = [
     "xgReal": true,
     "xgAwayReal": 1.65,
     "awayXgAgainst": 1.5,
-    "elapsed": 68
+    "elapsed": 73
   },
   {
     "home": "Suwon Bluewings",
@@ -40237,7 +40237,7 @@ window.MATCHES = [
     "xgReal": true,
     "xgAwayReal": 1.29,
     "awayXgAgainst": 1.45,
-    "elapsed": 72
+    "elapsed": 76
   },
   {
     "home": "Cheongju",
@@ -40252,7 +40252,7 @@ window.MATCHES = [
     "kickoff": "2026-07-04T10:30:00+00:00",
     "matchDate": "2026-07-04",
     "homeGoals": 0,
-    "awayGoals": 4,
+    "awayGoals": 5,
     "homePos": 14,
     "awayPos": 4,
     "tableSize": 17,
@@ -40454,7 +40454,7 @@ window.MATCHES = [
     "xgReal": true,
     "xgAwayReal": 1.69,
     "awayXgAgainst": 1.98,
-    "elapsed": 73
+    "elapsed": 77
   },
   {
     "home": "Paju Citizen",
@@ -40669,7 +40669,7 @@ window.MATCHES = [
     "xgHomeReal": 1.55,
     "homeXgAgainst": 1.4,
     "xgReal": true,
-    "elapsed": 73
+    "elapsed": 77
   },
   {
     "home": "Shenyang Urban",
@@ -41100,7 +41100,7 @@ window.MATCHES = [
     "awayLogo": "https://media.api-sports.io/football/teams/23269.png",
     "country": "China",
     "flag": "https://media.api-sports.io/flags/cn.svg",
-    "status": "HT",
+    "status": "2H",
     "kickoff": "2026-07-04T11:00:00+00:00",
     "matchDate": "2026-07-04",
     "homeGoals": 0,
@@ -41291,7 +41291,7 @@ window.MATCHES = [
       "dcx2": 1.03
     },
     "h2h": null,
-    "elapsed": 45
+    "elapsed": 47
   },
   {
     "home": "Shenzhen Juniors",
@@ -41302,7 +41302,7 @@ window.MATCHES = [
     "awayLogo": "https://media.api-sports.io/football/teams/2626.png",
     "country": "China",
     "flag": "https://media.api-sports.io/flags/cn.svg",
-    "status": "HT",
+    "status": "2H",
     "kickoff": "2026-07-04T11:00:00+00:00",
     "matchDate": "2026-07-04",
     "homeGoals": 0,
@@ -41493,7 +41493,7 @@ window.MATCHES = [
       "dcx2": 1.5
     },
     "h2h": null,
-    "elapsed": 45
+    "elapsed": 46
   },
   {
     "home": "Shaanxi Union",
@@ -41504,7 +41504,7 @@ window.MATCHES = [
     "awayLogo": "https://media.api-sports.io/football/teams/17269.png",
     "country": "China",
     "flag": "https://media.api-sports.io/flags/cn.svg",
-    "status": "HT",
+    "status": "2H",
     "kickoff": "2026-07-04T11:00:00+00:00",
     "matchDate": "2026-07-04",
     "homeGoals": 0,
@@ -41695,7 +41695,7 @@ window.MATCHES = [
       "dcx2": 1.93
     },
     "h2h": null,
-    "elapsed": 45
+    "elapsed": 48
   },
   {
     "home": "Ningbo Professional",
@@ -42094,7 +42094,7 @@ window.MATCHES = [
       "under35": null
     },
     "h2h": null,
-    "elapsed": 46
+    "elapsed": 50
   },
   {
     "home": "JS Hercules",
@@ -42305,7 +42305,7 @@ window.MATCHES = [
     "awayLogo": "https://media.api-sports.io/football/teams/25785.png",
     "country": "Latvia",
     "flag": "https://media.api-sports.io/flags/lv.svg",
-    "status": "HT",
+    "status": "2H",
     "kickoff": "2026-07-04T11:00:00+00:00",
     "matchDate": "2026-07-04",
     "homeGoals": 0,
@@ -42494,7 +42494,7 @@ window.MATCHES = [
       "dcx2": 1.53
     },
     "h2h": null,
-    "elapsed": 45
+    "elapsed": 49
   },
   {
     "home": "Beijing Guoan",
@@ -42711,7 +42711,7 @@ window.MATCHES = [
     "xgReal": true,
     "xgAwayReal": 1.25,
     "awayXgAgainst": 1.8,
-    "elapsed": 26
+    "elapsed": 31
   },
   {
     "home": "Dalian Zhixing",
@@ -42928,7 +42928,7 @@ window.MATCHES = [
     "xgReal": true,
     "xgAwayReal": 1.26,
     "awayXgAgainst": 1.85,
-    "elapsed": 26
+    "elapsed": 31
   },
   {
     "home": "Egersund",
@@ -43145,7 +43145,7 @@ window.MATCHES = [
     "xgReal": true,
     "xgAwayReal": 2.04,
     "awayXgAgainst": 2.39,
-    "elapsed": 1
+    "elapsed": 5
   },
   {
     "home": "Shakhter Soligorsk",
@@ -43332,7 +43332,7 @@ window.MATCHES = [
     "round": "Regular Season - 14",
     "odds": null,
     "h2h": null,
-    "elapsed": 3
+    "elapsed": 8
   },
   {
     "home": "Tianjin Teda",
@@ -43534,7 +43534,7 @@ window.MATCHES = [
       "dcx2": 1.65
     },
     "h2h": null,
-    "elapsed": 1
+    "elapsed": 6
   },
   {
     "home": "Lahti",
@@ -43545,11 +43545,11 @@ window.MATCHES = [
     "awayLogo": "https://media.api-sports.io/football/teams/2082.png",
     "country": "Finland",
     "flag": "https://media.api-sports.io/flags/fi.svg",
-    "status": "NS",
+    "status": "1H",
     "kickoff": "2026-07-04T12:00:00+00:00",
     "matchDate": "2026-07-04",
-    "homeGoals": null,
-    "awayGoals": null,
+    "homeGoals": 0,
+    "awayGoals": 0,
     "homePos": 9,
     "awayPos": 6,
     "tableSize": 12,
@@ -43751,7 +43751,7 @@ window.MATCHES = [
     "xgReal": true,
     "xgAwayReal": 1.32,
     "awayXgAgainst": 1.08,
-    "elapsed": null
+    "elapsed": 3
   },
   {
     "home": "HIFK Helsinki",
@@ -43962,11 +43962,11 @@ window.MATCHES = [
     "awayLogo": "https://media.api-sports.io/football/teams/27701.png",
     "country": "Finland",
     "flag": "https://media.api-sports.io/flags/fi.svg",
-    "status": "NS",
+    "status": "1H",
     "kickoff": "2026-07-04T12:00:00+00:00",
     "matchDate": "2026-07-04",
-    "homeGoals": null,
-    "awayGoals": null,
+    "homeGoals": 0,
+    "awayGoals": 0,
     "homePos": 5,
     "awayPos": 1,
     "tableSize": 10,
@@ -44151,7 +44151,7 @@ window.MATCHES = [
       "dcx2": 1.44
     },
     "h2h": null,
-    "elapsed": null
+    "elapsed": 4
   },
   {
     "home": "FC Tallinn",
@@ -44162,11 +44162,11 @@ window.MATCHES = [
     "awayLogo": "https://media.api-sports.io/football/teams/25755.png",
     "country": "Estonia",
     "flag": "https://media.api-sports.io/flags/ee.svg",
-    "status": "NS",
+    "status": "1H",
     "kickoff": "2026-07-04T12:00:00+00:00",
     "matchDate": "2026-07-04",
-    "homeGoals": null,
-    "awayGoals": null,
+    "homeGoals": 0,
+    "awayGoals": 0,
     "homePos": 10,
     "awayPos": 7,
     "tableSize": 10,
@@ -44351,7 +44351,7 @@ window.MATCHES = [
       "dcx2": 1.3
     },
     "h2h": null,
-    "elapsed": null
+    "elapsed": 4
   },
   {
     "home": "B71",
@@ -44362,11 +44362,11 @@ window.MATCHES = [
     "awayLogo": "https://media.api-sports.io/football/teams/4179.png",
     "country": "Faroe-Islands",
     "flag": "https://media.api-sports.io/flags/fo.svg",
-    "status": "NS",
+    "status": "1H",
     "kickoff": "2026-07-04T12:00:00+00:00",
     "matchDate": "2026-07-04",
-    "homeGoals": null,
-    "awayGoals": null,
+    "homeGoals": 0,
+    "awayGoals": 0,
     "homePos": 1,
     "awayPos": 7,
     "tableSize": 10,
@@ -44538,7 +44538,7 @@ window.MATCHES = [
     "round": "Regular Season - 16",
     "odds": null,
     "h2h": null,
-    "elapsed": null
+    "elapsed": 1
   },
   {
     "home": "NSÍ II",
@@ -44549,11 +44549,11 @@ window.MATCHES = [
     "awayLogo": "https://media.api-sports.io/football/teams/4182.png",
     "country": "Faroe-Islands",
     "flag": "https://media.api-sports.io/flags/fo.svg",
-    "status": "NS",
+    "status": "1H",
     "kickoff": "2026-07-04T12:00:00+00:00",
     "matchDate": "2026-07-04",
-    "homeGoals": null,
-    "awayGoals": null,
+    "homeGoals": 0,
+    "awayGoals": 0,
     "homePos": 6,
     "awayPos": 3,
     "tableSize": 10,
@@ -44725,7 +44725,7 @@ window.MATCHES = [
     "round": "Regular Season - 16",
     "odds": null,
     "h2h": null,
-    "elapsed": null
+    "elapsed": 5
   },
   {
     "home": "Altay",
@@ -44736,11 +44736,11 @@ window.MATCHES = [
     "awayLogo": "https://media.api-sports.io/football/teams/2259.png",
     "country": "Kazakhstan",
     "flag": "https://media.api-sports.io/flags/kz.svg",
-    "status": "NS",
+    "status": "1H",
     "kickoff": "2026-07-04T12:00:00+00:00",
     "matchDate": "2026-07-04",
-    "homeGoals": null,
-    "awayGoals": null,
+    "homeGoals": 0,
+    "awayGoals": 0,
     "homePos": 16,
     "awayPos": 13,
     "tableSize": 16,
@@ -44912,7 +44912,7 @@ window.MATCHES = [
     "round": "Regular Season - 16",
     "odds": null,
     "h2h": null,
-    "elapsed": null
+    "elapsed": 5
   },
   {
     "home": "Blue Eagles",
