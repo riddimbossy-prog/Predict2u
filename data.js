@@ -1,5 +1,5 @@
 window.DATA_UPDATED = "2026-07-04T16:14:30.024Z";
-window.SCORES_UPDATED = "2026-07-04T17:25:28.877Z";
+window.SCORES_UPDATED = "2026-07-04T17:30:54.203Z";
 window.MATCHES = [
   {
     "home": "Barcelona SC",
@@ -46501,7 +46501,7 @@ window.MATCHES = [
     "xgAwayReal": 1,
     "awayXgAgainst": 1.91,
     "lineupConfirmed": true,
-    "elapsed": 66
+    "elapsed": 73
   },
   {
     "home": "Deportivo Camioneros",
@@ -46703,7 +46703,7 @@ window.MATCHES = [
       "dcx2": 1.8
     },
     "h2h": null,
-    "elapsed": 60
+    "elapsed": 67
   },
   {
     "home": "Lugano",
@@ -46905,7 +46905,7 @@ window.MATCHES = [
       "dcx2": 1.85
     },
     "h2h": null,
-    "elapsed": 62
+    "elapsed": 69
   },
   {
     "home": "IBV Vestmannaeyjar",
@@ -47107,7 +47107,7 @@ window.MATCHES = [
       "dcx2": 1.6
     },
     "h2h": null,
-    "elapsed": 67
+    "elapsed": 74
   },
   {
     "home": "Leiknir R.",
@@ -47309,7 +47309,7 @@ window.MATCHES = [
       "dcx2": 2.4
     },
     "h2h": null,
-    "elapsed": 58
+    "elapsed": 65
   },
   {
     "home": "Magni",
@@ -47509,7 +47509,7 @@ window.MATCHES = [
       "dcx2": 1.44
     },
     "h2h": null,
-    "elapsed": 68
+    "elapsed": 75
   },
   {
     "home": "Trans Narva",
@@ -47524,7 +47524,7 @@ window.MATCHES = [
     "kickoff": "2026-07-04T16:00:00+00:00",
     "matchDate": "2026-07-04",
     "homeGoals": 0,
-    "awayGoals": 2,
+    "awayGoals": 3,
     "homePos": 10,
     "awayPos": 1,
     "tableSize": 10,
@@ -47711,7 +47711,7 @@ window.MATCHES = [
       "dcx2": 1.01
     },
     "h2h": null,
-    "elapsed": 67
+    "elapsed": 74
   },
   {
     "home": "Paide",
@@ -47913,7 +47913,7 @@ window.MATCHES = [
       "dcx2": 2.6
     },
     "h2h": null,
-    "elapsed": 69
+    "elapsed": 76
   },
   {
     "home": "Metta / LU",
@@ -48110,7 +48110,7 @@ window.MATCHES = [
       "under35": 2
     },
     "h2h": null,
-    "elapsed": 68
+    "elapsed": 75
   },
   {
     "home": "AB",
@@ -48312,7 +48312,7 @@ window.MATCHES = [
       "dcx2": 1.91
     },
     "h2h": null,
-    "elapsed": 53
+    "elapsed": 60
   },
   {
     "home": "ÍF II",
@@ -48730,7 +48730,7 @@ window.MATCHES = [
     "xgAwayReal": 1.1,
     "awayXgAgainst": 1.44,
     "lineupConfirmed": true,
-    "elapsed": 23
+    "elapsed": 30
   },
   {
     "home": "Rentistas",
@@ -48932,7 +48932,7 @@ window.MATCHES = [
       "dcx2": 2
     },
     "h2h": null,
-    "elapsed": 21
+    "elapsed": 28
   },
   {
     "home": "Petrocub",
@@ -49132,7 +49132,7 @@ window.MATCHES = [
       "dcx2": 2.1
     },
     "h2h": null,
-    "elapsed": 23
+    "elapsed": 30
   },
   {
     "home": "Ituzaingó",
