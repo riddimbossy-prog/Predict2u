@@ -1,5 +1,5 @@
 window.DATA_UPDATED = "2026-07-04T18:10:30.854Z";
-window.SCORES_UPDATED = "2026-07-04T18:25:27.454Z";
+window.SCORES_UPDATED = "2026-07-04T18:30:53.334Z";
 window.MATCHES = [
   {
     "home": "Barcelona SC",
@@ -45592,7 +45592,7 @@ window.MATCHES = [
     "awayLogo": "https://media.api-sports.io/football/teams/4183.png",
     "country": "Faroe-Islands",
     "flag": "https://media.api-sports.io/flags/fo.svg",
-    "status": "2H",
+    "status": "FT",
     "kickoff": "2026-07-04T16:30:00+00:00",
     "matchDate": "2026-07-04",
     "homeGoals": 3,
@@ -45781,7 +45781,7 @@ window.MATCHES = [
       "dcx2": 1.3
     },
     "h2h": null,
-    "elapsed": 90
+    "elapsed": null
   },
   {
     "home": "Canada",
@@ -45999,7 +45999,7 @@ window.MATCHES = [
     "xgAwayReal": 1.1,
     "awayXgAgainst": 1.44,
     "lineupConfirmed": true,
-    "elapsed": 61
+    "elapsed": 66
   },
   {
     "home": "Rentistas",
@@ -46201,7 +46201,7 @@ window.MATCHES = [
       "dcx2": 2
     },
     "h2h": null,
-    "elapsed": 63
+    "elapsed": 68
   },
   {
     "home": "Petrocub",
@@ -46401,7 +46401,7 @@ window.MATCHES = [
       "dcx2": 2.1
     },
     "h2h": null,
-    "elapsed": 68
+    "elapsed": 73
   },
   {
     "home": "Ituzaingó",
@@ -47007,7 +47007,7 @@ window.MATCHES = [
       "dcx2": 1.8
     },
     "h2h": null,
-    "elapsed": 24
+    "elapsed": 29
   },
   {
     "home": "Flandria",
@@ -47022,7 +47022,7 @@ window.MATCHES = [
     "kickoff": "2026-07-04T18:00:00+00:00",
     "matchDate": "2026-07-04",
     "homeGoals": 1,
-    "awayGoals": 0,
+    "awayGoals": 1,
     "homePos": 21,
     "awayPos": 7,
     "tableSize": 44,
@@ -47209,7 +47209,7 @@ window.MATCHES = [
       "dcx2": 1.42
     },
     "h2h": null,
-    "elapsed": 23
+    "elapsed": 28
   },
   {
     "home": "Dock Sud",
@@ -47411,7 +47411,7 @@ window.MATCHES = [
       "dcx2": 1.25
     },
     "h2h": null,
-    "elapsed": 19
+    "elapsed": 24
   },
   {
     "home": "Comunicaciones",
@@ -47613,7 +47613,7 @@ window.MATCHES = [
       "dcx2": 1.4
     },
     "h2h": null,
-    "elapsed": 23
+    "elapsed": 28
   },
   {
     "home": "Deportivo Merlo",
@@ -47815,7 +47815,7 @@ window.MATCHES = [
       "dcx2": 1.38
     },
     "h2h": null,
-    "elapsed": 7
+    "elapsed": 12
   },
   {
     "home": "Argentino Rosario",
@@ -48017,7 +48017,7 @@ window.MATCHES = [
       "dcx2": 1.45
     },
     "h2h": null,
-    "elapsed": 20
+    "elapsed": 25
   },
   {
     "home": "Estrella Del Sur",
@@ -48219,7 +48219,7 @@ window.MATCHES = [
       "dcx2": 1.85
     },
     "h2h": null,
-    "elapsed": 19
+    "elapsed": 24
   },
   {
     "home": "Leones de Rosario",
@@ -48421,7 +48421,7 @@ window.MATCHES = [
       "dcx2": 2.5
     },
     "h2h": null,
-    "elapsed": 20
+    "elapsed": 25
   },
   {
     "home": "Temperley",
@@ -49038,11 +49038,11 @@ window.MATCHES = [
     "awayLogo": "https://media.api-sports.io/football/teams/469.png",
     "country": "Argentina",
     "flag": "https://media.api-sports.io/flags/ar.svg",
-    "status": "NS",
+    "status": "1H",
     "kickoff": "2026-07-04T18:30:00+00:00",
     "matchDate": "2026-07-04",
-    "homeGoals": null,
-    "awayGoals": null,
+    "homeGoals": 0,
+    "awayGoals": 0,
     "homePos": 12,
     "awayPos": 1,
     "tableSize": 36,
@@ -49229,7 +49229,7 @@ window.MATCHES = [
       "dcx2": 1.42
     },
     "h2h": null,
-    "elapsed": null
+    "elapsed": 1
   },
   {
     "home": "Almirante Brown",
