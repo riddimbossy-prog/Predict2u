@@ -1,5 +1,5 @@
 window.DATA_UPDATED = "2026-07-04T10:19:09.623Z";
-window.SCORES_UPDATED = "2026-07-04T11:20:41.967Z";
+window.SCORES_UPDATED = "2026-07-04T11:21:46.654Z";
 window.MATCHES = [
   {
     "home": "Barcelona SC",
@@ -37423,7 +37423,7 @@ window.MATCHES = [
       "dcx2": 2.25
     },
     "h2h": null,
-    "elapsed": 71
+    "elapsed": 73
   },
   {
     "home": "Yanbian Longding",
@@ -37625,7 +37625,7 @@ window.MATCHES = [
       "dcx2": 1.8
     },
     "h2h": null,
-    "elapsed": 64
+    "elapsed": 65
   },
   {
     "home": "Gangneung City",
@@ -37821,7 +37821,7 @@ window.MATCHES = [
       "dcx2": 1.65
     },
     "h2h": null,
-    "elapsed": 62
+    "elapsed": 63
   },
   {
     "home": "Mokpo City",
@@ -38002,7 +38002,7 @@ window.MATCHES = [
     "round": "Round of 128",
     "odds": null,
     "h2h": null,
-    "elapsed": 61
+    "elapsed": 62
   },
   {
     "home": "Ulsan Citizen",
@@ -38198,7 +38198,7 @@ window.MATCHES = [
       "dcx2": 1.44
     },
     "h2h": null,
-    "elapsed": 59
+    "elapsed": 61
   },
   {
     "home": "Jinju Citizen",
@@ -38394,7 +38394,7 @@ window.MATCHES = [
       "dcx2": 2.8
     },
     "h2h": null,
-    "elapsed": 63
+    "elapsed": 64
   },
   {
     "home": "Haman",
@@ -38590,7 +38590,7 @@ window.MATCHES = [
       "dcx2": 1.02
     },
     "h2h": null,
-    "elapsed": 62
+    "elapsed": 63
   },
   {
     "home": "Yangcheon TNT",
@@ -38771,7 +38771,7 @@ window.MATCHES = [
     "round": "Round of 128",
     "odds": null,
     "h2h": null,
-    "elapsed": 61
+    "elapsed": 62
   },
   {
     "home": "Ulsan FC",
@@ -38786,7 +38786,7 @@ window.MATCHES = [
     "kickoff": "2026-07-04T10:00:00+00:00",
     "matchDate": "2026-07-04",
     "homeGoals": 1,
-    "awayGoals": 0,
+    "awayGoals": 1,
     "homePos": null,
     "awayPos": null,
     "tableSize": 20,
@@ -38952,7 +38952,7 @@ window.MATCHES = [
     "round": "Round of 128",
     "odds": null,
     "h2h": null,
-    "elapsed": 62
+    "elapsed": 63
   },
   {
     "home": "Riga FC II",
@@ -39152,7 +39152,7 @@ window.MATCHES = [
       "dcx2": 1.95
     },
     "h2h": null,
-    "elapsed": 64
+    "elapsed": 66
   },
   {
     "home": "FC Anyang",
@@ -39163,7 +39163,7 @@ window.MATCHES = [
     "awayLogo": "https://media.api-sports.io/football/teams/2764.png",
     "country": "South-Korea",
     "flag": "https://media.api-sports.io/flags/kr.svg",
-    "status": "1H",
+    "status": "HT",
     "kickoff": "2026-07-04T10:30:00+00:00",
     "matchDate": "2026-07-04",
     "homeGoals": 1,
@@ -40684,7 +40684,7 @@ window.MATCHES = [
     "kickoff": "2026-07-04T11:00:00+00:00",
     "matchDate": "2026-07-04",
     "homeGoals": 0,
-    "awayGoals": 0,
+    "awayGoals": 1,
     "homePos": 10,
     "awayPos": 2,
     "tableSize": 16,
@@ -40871,7 +40871,7 @@ window.MATCHES = [
       "dcx2": 1.7
     },
     "h2h": null,
-    "elapsed": 20
+    "elapsed": 21
   },
   {
     "home": "Qingdao Youth Island",
@@ -41089,7 +41089,7 @@ window.MATCHES = [
     "xgAwayReal": 1.2,
     "awayXgAgainst": 1.49,
     "lineupConfirmed": true,
-    "elapsed": 20
+    "elapsed": 21
   },
   {
     "home": "Suzhou Dongwu",
@@ -41291,7 +41291,7 @@ window.MATCHES = [
       "dcx2": 1.03
     },
     "h2h": null,
-    "elapsed": 20
+    "elapsed": 22
   },
   {
     "home": "Shenzhen Juniors",
@@ -41493,7 +41493,7 @@ window.MATCHES = [
       "dcx2": 1.5
     },
     "h2h": null,
-    "elapsed": 20
+    "elapsed": 22
   },
   {
     "home": "Shaanxi Union",
@@ -41695,7 +41695,7 @@ window.MATCHES = [
       "dcx2": 1.93
     },
     "h2h": null,
-    "elapsed": 20
+    "elapsed": 21
   },
   {
     "home": "Ningbo Professional",
@@ -41897,7 +41897,7 @@ window.MATCHES = [
       "dcx2": 1.85
     },
     "h2h": null,
-    "elapsed": 20
+    "elapsed": 22
   },
   {
     "home": "Honka",
@@ -42094,7 +42094,7 @@ window.MATCHES = [
       "under35": null
     },
     "h2h": null,
-    "elapsed": 19
+    "elapsed": 20
   },
   {
     "home": "JS Hercules",
@@ -42294,7 +42294,7 @@ window.MATCHES = [
       "dcx2": 1.5
     },
     "h2h": null,
-    "elapsed": 20
+    "elapsed": 21
   },
   {
     "home": "JDFS Alberts",
@@ -42494,7 +42494,7 @@ window.MATCHES = [
       "dcx2": 1.53
     },
     "h2h": null,
-    "elapsed": 20
+    "elapsed": 22
   },
   {
     "home": "Beijing Guoan",
