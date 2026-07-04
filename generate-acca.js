@@ -81,7 +81,7 @@ function accaLegs(matches){
     try{ eng.analyseAll([m]).results.filter(r=>r.banker).forEach(r=>add(m,r.primary,'Normal',confNum(r.confidence))); }catch(e){}
     try{ eng.analyseStrict([m]).results.filter(r=>r.bet).forEach(r=>add(m,r.market,'Strict',r.confidence)); }catch(e){}
     [["Ultra",eng.ultraRecommend],["Elite",eng.rulesProRecommend],["Apex",eng.apexRecommend],["Prime",eng.primeRecommend],["Value",eng.valueRecommend],["Pro",eng.proRecommend],
-     ["Trend",eng.trendRecommend],["Streaks",eng.streakRecommend],["Halves",eng.halvesRecommend]].forEach(([n,fn])=>{
+     ["Trend",eng.trendRecommend],["Streaks",eng.streakRecommend],["Halves",eng.halvesRecommend],["Mismatch",eng.mismatchRecommend]].forEach(([n,fn])=>{
       try{ if(typeof fn!=='function')return; const r=fn(m); if(r&&r.banker) add(m,r.primary,n,typeof r.confidence==='number'?r.confidence:confNum(r.confidence)); }catch(e){}
     });
   });
