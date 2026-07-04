@@ -1,5 +1,5 @@
 window.DATA_UPDATED = "2026-07-04T06:49:17.438Z";
-window.SCORES_UPDATED = "2026-07-04T09:29:34.440Z";
+window.SCORES_UPDATED = "2026-07-04T09:30:52.419Z";
 window.MATCHES = [
   {
     "home": "Barcelona SC",
@@ -37556,7 +37556,7 @@ window.MATCHES = [
     "awayLogo": "https://media.api-sports.io/football/teams/7105.png",
     "country": "South-Korea",
     "flag": "https://media.api-sports.io/flags/kr.svg",
-    "status": "ET",
+    "status": "FT",
     "kickoff": "2026-07-04T07:00:00+00:00",
     "matchDate": "2026-07-04",
     "homeGoals": 1,
@@ -37741,7 +37741,7 @@ window.MATCHES = [
       "dcx2": 1.17
     },
     "h2h": null,
-    "elapsed": 105
+    "elapsed": null
   },
   {
     "home": "Sutherland Sharks",
@@ -38343,7 +38343,7 @@ window.MATCHES = [
       "dcx2": 8.5
     },
     "h2h": null,
-    "elapsed": 85
+    "elapsed": 86
   },
   {
     "home": "Sunshine Georgies",
@@ -38545,7 +38545,7 @@ window.MATCHES = [
       "dcx2": 1.02
     },
     "h2h": null,
-    "elapsed": 70
+    "elapsed": 71
   },
   {
     "home": "Dianella White Eagle",
@@ -38732,7 +38732,7 @@ window.MATCHES = [
     "round": "Regular Season - 17",
     "odds": null,
     "h2h": null,
-    "elapsed": 22
+    "elapsed": 23
   },
   {
     "home": "Changwon City",
@@ -38928,7 +38928,7 @@ window.MATCHES = [
       "dcx2": 2.05
     },
     "h2h": null,
-    "elapsed": 30
+    "elapsed": 31
   },
   {
     "home": "Pocheon",
@@ -39116,7 +39116,7 @@ window.MATCHES = [
       "dcx2": 1.53
     },
     "h2h": null,
-    "elapsed": 29
+    "elapsed": 30
   },
   {
     "home": "MetroStars",
