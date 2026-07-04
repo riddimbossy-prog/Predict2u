@@ -1,5 +1,5 @@
 window.DATA_UPDATED = "2026-07-04T00:04:59.265Z";
-window.SCORES_UPDATED = "2026-07-04T01:30:50.778Z";
+window.SCORES_UPDATED = "2026-07-04T01:35:32.857Z";
 window.MATCHES = [
   {
     "home": "Santa Cruz",
@@ -19843,7 +19843,7 @@ window.MATCHES = [
     "status": "2H",
     "kickoff": "2026-07-04T00:00:00+00:00",
     "matchDate": "2026-07-04",
-    "homeGoals": 1,
+    "homeGoals": 2,
     "awayGoals": 0,
     "homePos": 1,
     "awayPos": 16,
@@ -20042,7 +20042,7 @@ window.MATCHES = [
     "xgReal": true,
     "xgAwayReal": 0.65,
     "awayXgAgainst": 1.29,
-    "elapsed": 71
+    "elapsed": 76
   },
   {
     "home": "Washington Spirit W",
@@ -20255,7 +20255,7 @@ window.MATCHES = [
     "xgReal": true,
     "xgAwayReal": 1.67,
     "awayXgAgainst": 1.64,
-    "elapsed": 62
+    "elapsed": 67
   },
   {
     "home": "Des Moines Menace",
@@ -20634,7 +20634,7 @@ window.MATCHES = [
       "dcx2": 1.75
     },
     "h2h": null,
-    "elapsed": 66
+    "elapsed": 71
   },
   {
     "home": "Lionsbridge",
@@ -21000,7 +21000,7 @@ window.MATCHES = [
     "round": "Group Stage",
     "odds": null,
     "h2h": null,
-    "elapsed": 54
+    "elapsed": 59
   },
   {
     "home": "Fort Worth Vaqueros",
@@ -21397,7 +21397,7 @@ window.MATCHES = [
     "xgAwayReal": 0.82,
     "awayXgAgainst": 1.3,
     "lineupConfirmed": true,
-    "elapsed": 1
+    "elapsed": 5
   },
   {
     "home": "Denver Summit W",
@@ -21621,11 +21621,11 @@ window.MATCHES = [
     "awayLogo": "https://media.api-sports.io/football/teams/25936.png",
     "country": "USA",
     "flag": "https://media.api-sports.io/flags/us.svg",
-    "status": "NS",
+    "status": "1H",
     "kickoff": "2026-07-04T01:30:00+00:00",
     "matchDate": "2026-07-04",
-    "homeGoals": null,
-    "awayGoals": null,
+    "homeGoals": 0,
+    "awayGoals": 0,
     "homePos": 5,
     "awayPos": 4,
     "tableSize": 144,
@@ -21806,7 +21806,7 @@ window.MATCHES = [
       "dcx2": 1.13
     },
     "h2h": null,
-    "elapsed": null
+    "elapsed": 2
   },
   {
     "home": "Angel City W",
@@ -65733,11 +65733,11 @@ window.MATCHES = [
     "awayLogo": "https://media.api-sports.io/football/teams/4052.png",
     "country": "USA",
     "flag": "https://media.api-sports.io/flags/us.svg",
-    "status": "NS",
+    "status": "FT",
     "kickoff": "2026-07-03T23:00:00+00:00",
     "matchDate": "2026-07-03",
-    "homeGoals": null,
-    "awayGoals": null,
+    "homeGoals": 0,
+    "awayGoals": 2,
     "homePos": 7,
     "awayPos": 1,
     "tableSize": 144,
@@ -65929,11 +65929,11 @@ window.MATCHES = [
     "awayLogo": "https://media.api-sports.io/football/teams/27519.png",
     "country": "USA",
     "flag": "https://media.api-sports.io/flags/us.svg",
-    "status": "NS",
+    "status": "FT",
     "kickoff": "2026-07-03T23:00:00+00:00",
     "matchDate": "2026-07-03",
-    "homeGoals": null,
-    "awayGoals": null,
+    "homeGoals": 4,
+    "awayGoals": 1,
     "homePos": 2,
     "awayPos": null,
     "tableSize": 144,
@@ -66312,7 +66312,7 @@ window.MATCHES = [
     "kickoff": "2026-07-03T23:30:00+00:00",
     "matchDate": "2026-07-03",
     "homeGoals": 2,
-    "awayGoals": 1,
+    "awayGoals": 2,
     "homePos": 11,
     "awayPos": 13,
     "tableSize": 25,
@@ -66861,7 +66861,7 @@ window.MATCHES = [
     "round": "Group Stage",
     "odds": null,
     "h2h": null,
-    "elapsed": 67
+    "elapsed": 72
   },
   {
     "home": "USA",
