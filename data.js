@@ -1,5 +1,5 @@
 window.DATA_UPDATED = "2026-07-04T03:33:42.911Z";
-window.SCORES_UPDATED = "2026-07-04T04:40:39.925Z";
+window.SCORES_UPDATED = "2026-07-04T04:45:33.904Z";
 window.MATCHES = [
   {
     "home": "Barcelona SC",
@@ -34999,11 +34999,11 @@ window.MATCHES = [
     "awayLogo": "https://media.api-sports.io/football/teams/23107.png",
     "country": "USA",
     "flag": "https://media.api-sports.io/flags/us.svg",
-    "status": "NS",
+    "status": "FT",
     "kickoff": "2026-07-04T02:00:00+00:00",
     "matchDate": "2026-07-04",
-    "homeGoals": null,
-    "awayGoals": null,
+    "homeGoals": 6,
+    "awayGoals": 0,
     "homePos": 1,
     "awayPos": 6,
     "tableSize": 144,
@@ -35748,7 +35748,7 @@ window.MATCHES = [
       "dcx2": 1.95
     },
     "h2h": null,
-    "elapsed": 41
+    "elapsed": 45
   },
   {
     "home": "Canberra White Eagles",
