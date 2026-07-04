@@ -1,5 +1,5 @@
 window.DATA_UPDATED = "2026-07-04T10:19:09.623Z";
-window.SCORES_UPDATED = "2026-07-04T11:50:44.038Z";
+window.SCORES_UPDATED = "2026-07-04T11:55:27.844Z";
 window.MATCHES = [
   {
     "home": "Barcelona SC",
@@ -37434,7 +37434,7 @@ window.MATCHES = [
     "awayLogo": "https://media.api-sports.io/football/teams/1445.png",
     "country": "China",
     "flag": "https://media.api-sports.io/flags/cn.svg",
-    "status": "2H",
+    "status": "FT",
     "kickoff": "2026-07-04T10:00:00+00:00",
     "matchDate": "2026-07-04",
     "homeGoals": 3,
@@ -37625,7 +37625,7 @@ window.MATCHES = [
       "dcx2": 1.8
     },
     "h2h": null,
-    "elapsed": 90
+    "elapsed": null
   },
   {
     "home": "Gangneung City",
@@ -39369,7 +39369,7 @@ window.MATCHES = [
     "xgReal": true,
     "xgAwayReal": 1.26,
     "awayXgAgainst": 1.52,
-    "elapsed": 60
+    "elapsed": 65
   },
   {
     "home": "Daejeon Citizen",
@@ -39586,7 +39586,7 @@ window.MATCHES = [
     "xgReal": true,
     "xgAwayReal": 0.87,
     "awayXgAgainst": 0.97,
-    "elapsed": 63
+    "elapsed": 68
   },
   {
     "home": "Jeonbuk Motors",
@@ -39803,7 +39803,7 @@ window.MATCHES = [
     "xgReal": true,
     "xgAwayReal": 1.2,
     "awayXgAgainst": 1.44,
-    "elapsed": 63
+    "elapsed": 67
   },
   {
     "home": "Ansan Greeners",
@@ -40020,7 +40020,7 @@ window.MATCHES = [
     "xgReal": true,
     "xgAwayReal": 1.65,
     "awayXgAgainst": 1.5,
-    "elapsed": 58
+    "elapsed": 63
   },
   {
     "home": "Suwon Bluewings",
@@ -40237,7 +40237,7 @@ window.MATCHES = [
     "xgReal": true,
     "xgAwayReal": 1.29,
     "awayXgAgainst": 1.45,
-    "elapsed": 61
+    "elapsed": 66
   },
   {
     "home": "Cheongju",
@@ -40454,7 +40454,7 @@ window.MATCHES = [
     "xgReal": true,
     "xgAwayReal": 1.69,
     "awayXgAgainst": 1.98,
-    "elapsed": 62
+    "elapsed": 67
   },
   {
     "home": "Paju Citizen",
@@ -40669,7 +40669,7 @@ window.MATCHES = [
     "xgHomeReal": 1.55,
     "homeXgAgainst": 1.4,
     "xgReal": true,
-    "elapsed": 63
+    "elapsed": 67
   },
   {
     "home": "Shenyang Urban",
@@ -40680,7 +40680,7 @@ window.MATCHES = [
     "awayLogo": "https://media.api-sports.io/football/teams/21262.png",
     "country": "China",
     "flag": "https://media.api-sports.io/flags/cn.svg",
-    "status": "1H",
+    "status": "HT",
     "kickoff": "2026-07-04T11:00:00+00:00",
     "matchDate": "2026-07-04",
     "homeGoals": 0,
@@ -42711,7 +42711,7 @@ window.MATCHES = [
     "xgReal": true,
     "xgAwayReal": 1.25,
     "awayXgAgainst": 1.8,
-    "elapsed": 16
+    "elapsed": 21
   },
   {
     "home": "Dalian Zhixing",
@@ -42928,7 +42928,7 @@ window.MATCHES = [
     "xgReal": true,
     "xgAwayReal": 1.26,
     "awayXgAgainst": 1.85,
-    "elapsed": 16
+    "elapsed": 21
   },
   {
     "home": "Egersund",
