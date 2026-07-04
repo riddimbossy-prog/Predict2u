@@ -1,5 +1,5 @@
 window.DATA_UPDATED = "2026-07-04T16:14:30.024Z";
-window.SCORES_UPDATED = "2026-07-04T18:15:35.167Z";
+window.SCORES_UPDATED = "2026-07-04T18:16:42.417Z";
 window.MATCHES = [
   {
     "home": "Barcelona SC",
@@ -48327,7 +48327,7 @@ window.MATCHES = [
     "kickoff": "2026-07-04T16:30:00+00:00",
     "matchDate": "2026-07-04",
     "homeGoals": 3,
-    "awayGoals": 3,
+    "awayGoals": 4,
     "homePos": 4,
     "awayPos": 2,
     "tableSize": 10,
@@ -48512,7 +48512,7 @@ window.MATCHES = [
       "dcx2": 1.3
     },
     "h2h": null,
-    "elapsed": 84
+    "elapsed": 85
   },
   {
     "home": "Canada",
@@ -48730,7 +48730,7 @@ window.MATCHES = [
     "xgAwayReal": 1.1,
     "awayXgAgainst": 1.44,
     "lineupConfirmed": true,
-    "elapsed": 51
+    "elapsed": 53
   },
   {
     "home": "Rentistas",
@@ -48932,7 +48932,7 @@ window.MATCHES = [
       "dcx2": 2
     },
     "h2h": null,
-    "elapsed": 52
+    "elapsed": 54
   },
   {
     "home": "Petrocub",
@@ -49132,7 +49132,7 @@ window.MATCHES = [
       "dcx2": 2.1
     },
     "h2h": null,
-    "elapsed": 57
+    "elapsed": 59
   },
   {
     "home": "Ituzaingó",
@@ -49334,7 +49334,7 @@ window.MATCHES = [
       "dcx2": 1.42
     },
     "h2h": null,
-    "elapsed": 43
+    "elapsed": 44
   },
   {
     "home": "Skála",
@@ -49536,7 +49536,7 @@ window.MATCHES = [
       "dcx2": 1.8
     },
     "h2h": null,
-    "elapsed": 44
+    "elapsed": 45
   },
   {
     "home": "Colegiales",
@@ -49551,7 +49551,7 @@ window.MATCHES = [
     "kickoff": "2026-07-04T18:00:00+00:00",
     "matchDate": "2026-07-04",
     "homeGoals": 0,
-    "awayGoals": 0,
+    "awayGoals": 1,
     "homePos": 8,
     "awayPos": 14,
     "tableSize": 36,
@@ -49738,7 +49738,7 @@ window.MATCHES = [
       "dcx2": 1.8
     },
     "h2h": null,
-    "elapsed": 13
+    "elapsed": 14
   },
   {
     "home": "Flandria",
@@ -49940,7 +49940,7 @@ window.MATCHES = [
       "dcx2": 1.42
     },
     "h2h": null,
-    "elapsed": 13
+    "elapsed": 14
   },
   {
     "home": "Dock Sud",
@@ -49954,7 +49954,7 @@ window.MATCHES = [
     "status": "1H",
     "kickoff": "2026-07-04T18:00:00+00:00",
     "matchDate": "2026-07-04",
-    "homeGoals": 0,
+    "homeGoals": 1,
     "awayGoals": 0,
     "homePos": 14,
     "awayPos": 1,
@@ -50142,7 +50142,7 @@ window.MATCHES = [
       "dcx2": 1.25
     },
     "h2h": null,
-    "elapsed": 8
+    "elapsed": 10
   },
   {
     "home": "Comunicaciones",
@@ -50344,7 +50344,7 @@ window.MATCHES = [
       "dcx2": 1.4
     },
     "h2h": null,
-    "elapsed": 13
+    "elapsed": 14
   },
   {
     "home": "Deportivo Merlo",
@@ -50748,7 +50748,7 @@ window.MATCHES = [
       "dcx2": 1.45
     },
     "h2h": null,
-    "elapsed": 9
+    "elapsed": 11
   },
   {
     "home": "Estrella Del Sur",
@@ -50950,7 +50950,7 @@ window.MATCHES = [
       "dcx2": 1.85
     },
     "h2h": null,
-    "elapsed": 9
+    "elapsed": 10
   },
   {
     "home": "Leones de Rosario",
@@ -51152,7 +51152,7 @@ window.MATCHES = [
       "dcx2": 2.5
     },
     "h2h": null,
-    "elapsed": 9
+    "elapsed": 10
   },
   {
     "home": "Temperley",
