@@ -1,5 +1,5 @@
 window.DATA_UPDATED = "2026-07-04T05:12:07.930Z";
-window.SCORES_UPDATED = "2026-07-04T06:20:44.491Z";
+window.SCORES_UPDATED = "2026-07-04T06:25:27.553Z";
 window.MATCHES = [
   {
     "home": "Barcelona SC",
@@ -34531,7 +34531,7 @@ window.MATCHES = [
     "awayLogo": "https://media.api-sports.io/football/teams/1452.png",
     "country": "Australia",
     "flag": "https://media.api-sports.io/flags/au.svg",
-    "status": "HT",
+    "status": "2H",
     "kickoff": "2026-07-04T05:00:00+00:00",
     "matchDate": "2026-07-04",
     "homeGoals": 0,
@@ -34719,7 +34719,7 @@ window.MATCHES = [
       "bttsNo": 1.25
     },
     "h2h": null,
-    "elapsed": 45
+    "elapsed": 48
   },
   {
     "home": "Queanbeyan City",
@@ -35120,7 +35120,7 @@ window.MATCHES = [
       "dcx2": 1.65
     },
     "h2h": null,
-    "elapsed": 53
+    "elapsed": 57
   },
   {
     "home": "UNSW",
@@ -35322,7 +35322,7 @@ window.MATCHES = [
       "dcx2": 1.65
     },
     "h2h": null,
-    "elapsed": 52
+    "elapsed": 57
   },
   {
     "home": "Adelaide City",
@@ -35519,7 +35519,7 @@ window.MATCHES = [
       "under35": null
     },
     "h2h": null,
-    "elapsed": 59
+    "elapsed": 63
   },
   {
     "home": "Avondale",
@@ -35534,7 +35534,7 @@ window.MATCHES = [
     "kickoff": "2026-07-04T05:00:00+00:00",
     "matchDate": "2026-07-04",
     "homeGoals": 1,
-    "awayGoals": 0,
+    "awayGoals": 1,
     "homePos": 3,
     "awayPos": 4,
     "tableSize": 14,
@@ -35721,7 +35721,7 @@ window.MATCHES = [
       "dcx2": 1.67
     },
     "h2h": null,
-    "elapsed": 63
+    "elapsed": 67
   },
   {
     "home": "Altona Magic",
@@ -35732,7 +35732,7 @@ window.MATCHES = [
     "awayLogo": "https://media.api-sports.io/football/teams/20783.png",
     "country": "Australia",
     "flag": "https://media.api-sports.io/flags/au.svg",
-    "status": "HT",
+    "status": "2H",
     "kickoff": "2026-07-04T05:15:00+00:00",
     "matchDate": "2026-07-04",
     "homeGoals": 0,
@@ -35923,7 +35923,7 @@ window.MATCHES = [
       "dcx2": 1.45
     },
     "h2h": null,
-    "elapsed": 45
+    "elapsed": 49
   },
   {
     "home": "Adelaide United II",
@@ -35934,7 +35934,7 @@ window.MATCHES = [
     "awayLogo": "https://media.api-sports.io/football/teams/3791.png",
     "country": "Australia",
     "flag": "https://media.api-sports.io/flags/au.svg",
-    "status": "1H",
+    "status": "HT",
     "kickoff": "2026-07-04T05:30:00+00:00",
     "matchDate": "2026-07-04",
     "homeGoals": 0,
