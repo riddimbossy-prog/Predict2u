@@ -1,5 +1,5 @@
 window.DATA_UPDATED = "2026-07-04T01:55:29.086Z";
-window.SCORES_UPDATED = "2026-07-04T02:45:33.125Z";
+window.SCORES_UPDATED = "2026-07-04T02:50:41.959Z";
 window.MATCHES = [
   {
     "home": "Barcelona SC",
@@ -33105,7 +33105,7 @@ window.MATCHES = [
     "status": "2H",
     "kickoff": "2026-07-04T01:30:00+00:00",
     "matchDate": "2026-07-04",
-    "homeGoals": 1,
+    "homeGoals": 2,
     "awayGoals": 0,
     "homePos": 1,
     "awayPos": 3,
@@ -33305,7 +33305,7 @@ window.MATCHES = [
     "xgAwayReal": 0.82,
     "awayXgAgainst": 1.3,
     "lineupConfirmed": true,
-    "elapsed": 52
+    "elapsed": 57
   },
   {
     "home": "Denver Summit W",
@@ -33519,7 +33519,7 @@ window.MATCHES = [
     "xgAwayReal": 0.91,
     "awayXgAgainst": 2.35,
     "lineupConfirmed": true,
-    "elapsed": 47
+    "elapsed": 52
   },
   {
     "home": "Midlakes United",
@@ -33715,7 +33715,7 @@ window.MATCHES = [
       "dcx2": 1.13
     },
     "h2h": null,
-    "elapsed": 52
+    "elapsed": 58
   },
   {
     "home": "Angel City W",
@@ -33729,7 +33729,7 @@ window.MATCHES = [
     "status": "1H",
     "kickoff": "2026-07-04T02:00:00+00:00",
     "matchDate": "2026-07-04",
-    "homeGoals": 0,
+    "homeGoals": 1,
     "awayGoals": 0,
     "homePos": 12,
     "awayPos": 8,
@@ -33928,7 +33928,7 @@ window.MATCHES = [
     "xgReal": true,
     "xgAwayReal": 1.56,
     "awayXgAgainst": 1.8,
-    "elapsed": 34
+    "elapsed": 39
   },
   {
     "home": "Ventura County Fusion",
@@ -34125,7 +34125,7 @@ window.MATCHES = [
     "status": "1H",
     "kickoff": "2026-07-04T02:00:00+00:00",
     "matchDate": "2026-07-04",
-    "homeGoals": 2,
+    "homeGoals": 3,
     "awayGoals": 0,
     "homePos": 2,
     "awayPos": 8,
@@ -34294,7 +34294,7 @@ window.MATCHES = [
     "round": "Group Stage",
     "odds": null,
     "h2h": null,
-    "elapsed": 37
+    "elapsed": 42
   },
   {
     "home": "Tacoma Stars",
@@ -34305,7 +34305,7 @@ window.MATCHES = [
     "awayLogo": "https://media.api-sports.io/football/teams/25948.png",
     "country": "USA",
     "flag": "https://media.api-sports.io/flags/us.svg",
-    "status": "1H",
+    "status": "HT",
     "kickoff": "2026-07-04T02:00:00+00:00",
     "matchDate": "2026-07-04",
     "homeGoals": 0,
@@ -34490,7 +34490,7 @@ window.MATCHES = [
       "dcx2": 1.01
     },
     "h2h": null,
-    "elapsed": 42
+    "elapsed": 45
   },
   {
     "home": "Hume City",
