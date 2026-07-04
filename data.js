@@ -1,5 +1,5 @@
 window.DATA_UPDATED = "2026-07-04T16:14:30.024Z";
-window.SCORES_UPDATED = "2026-07-04T16:55:28.458Z";
+window.SCORES_UPDATED = "2026-07-04T17:00:59.443Z";
 window.MATCHES = [
   {
     "home": "Barcelona SC",
@@ -45089,7 +45089,7 @@ window.MATCHES = [
     "awayLogo": "https://media.api-sports.io/football/teams/9419.png",
     "country": "Belarus",
     "flag": "https://media.api-sports.io/flags/by.svg",
-    "status": "2H",
+    "status": "FT",
     "kickoff": "2026-07-04T15:00:00+00:00",
     "matchDate": "2026-07-04",
     "homeGoals": 0,
@@ -45280,7 +45280,7 @@ window.MATCHES = [
       "dcx2": 2.2
     },
     "h2h": null,
-    "elapsed": 90
+    "elapsed": null
   },
   {
     "home": "FC Slutsk",
@@ -45895,7 +45895,7 @@ window.MATCHES = [
     "awayLogo": "https://media.api-sports.io/football/teams/4135.png",
     "country": "Latvia",
     "flag": "https://media.api-sports.io/flags/lv.svg",
-    "status": "2H",
+    "status": "FT",
     "kickoff": "2026-07-04T15:00:00+00:00",
     "matchDate": "2026-07-04",
     "homeGoals": 1,
@@ -46086,7 +46086,7 @@ window.MATCHES = [
       "dcx2": 3
     },
     "h2h": null,
-    "elapsed": 90
+    "elapsed": null
   },
   {
     "home": "Politehnica UTM",
@@ -47722,7 +47722,7 @@ window.MATCHES = [
     "awayLogo": "https://media.api-sports.io/football/teams/3525.png",
     "country": "Estonia",
     "flag": "https://media.api-sports.io/flags/ee.svg",
-    "status": "HT",
+    "status": "2H",
     "kickoff": "2026-07-04T16:00:00+00:00",
     "matchDate": "2026-07-04",
     "homeGoals": 2,
@@ -47913,7 +47913,7 @@ window.MATCHES = [
       "dcx2": 2.6
     },
     "h2h": null,
-    "elapsed": 45
+    "elapsed": 46
   },
   {
     "home": "Metta / LU",
@@ -48312,7 +48312,7 @@ window.MATCHES = [
       "dcx2": 1.91
     },
     "h2h": null,
-    "elapsed": 40
+    "elapsed": 45
   },
   {
     "home": "ÍF II",
@@ -48327,7 +48327,7 @@ window.MATCHES = [
     "kickoff": "2026-07-04T16:30:00+00:00",
     "matchDate": "2026-07-04",
     "homeGoals": 0,
-    "awayGoals": 1,
+    "awayGoals": 2,
     "homePos": 4,
     "awayPos": 2,
     "tableSize": 10,
@@ -48512,7 +48512,7 @@ window.MATCHES = [
       "dcx2": 1.3
     },
     "h2h": null,
-    "elapsed": 24
+    "elapsed": 29
   },
   {
     "home": "Canada",
