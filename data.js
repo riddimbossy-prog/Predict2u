@@ -1,5 +1,5 @@
 window.DATA_UPDATED = "2026-07-04T06:49:17.438Z";
-window.SCORES_UPDATED = "2026-07-04T07:55:26.368Z";
+window.SCORES_UPDATED = "2026-07-04T08:00:57.347Z";
 window.MATCHES = [
   {
     "home": "Barcelona SC",
@@ -36348,7 +36348,7 @@ window.MATCHES = [
       "bttsNo": 1.36
     },
     "h2h": null,
-    "elapsed": 53
+    "elapsed": 58
   },
   {
     "home": "Manly United",
@@ -37556,7 +37556,7 @@ window.MATCHES = [
     "awayLogo": "https://media.api-sports.io/football/teams/7105.png",
     "country": "South-Korea",
     "flag": "https://media.api-sports.io/flags/kr.svg",
-    "status": "1H",
+    "status": "INT",
     "kickoff": "2026-07-04T07:00:00+00:00",
     "matchDate": "2026-07-04",
     "homeGoals": 1,
@@ -37741,7 +37741,7 @@ window.MATCHES = [
       "dcx2": 1.17
     },
     "h2h": null,
-    "elapsed": 45
+    "elapsed": null
   },
   {
     "home": "Sutherland Sharks",
@@ -37943,7 +37943,7 @@ window.MATCHES = [
       "dcx2": 1.11
     },
     "h2h": null,
-    "elapsed": 18
+    "elapsed": 23
   },
   {
     "home": "FK Beograd",
@@ -38143,7 +38143,7 @@ window.MATCHES = [
       "dcx2": 2.05
     },
     "h2h": null,
-    "elapsed": 18
+    "elapsed": 24
   },
   {
     "home": "Monaro Panthers",
@@ -38343,7 +38343,7 @@ window.MATCHES = [
       "dcx2": 8.5
     },
     "h2h": null,
-    "elapsed": 6
+    "elapsed": 11
   },
   {
     "home": "Sunshine Georgies",
