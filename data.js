@@ -1,5 +1,5 @@
 window.DATA_UPDATED = "2026-07-04T16:14:30.024Z";
-window.SCORES_UPDATED = "2026-07-04T17:00:59.443Z";
+window.SCORES_UPDATED = "2026-07-04T17:05:26.846Z";
 window.MATCHES = [
   {
     "home": "Barcelona SC",
@@ -46294,7 +46294,7 @@ window.MATCHES = [
     "awayLogo": "https://media.api-sports.io/football/teams/2146.png",
     "country": "Norway",
     "flag": "https://media.api-sports.io/flags/no.svg",
-    "status": "HT",
+    "status": "2H",
     "kickoff": "2026-07-04T16:00:00+00:00",
     "matchDate": "2026-07-04",
     "homeGoals": 0,
@@ -46501,7 +46501,7 @@ window.MATCHES = [
     "xgAwayReal": 1,
     "awayXgAgainst": 1.91,
     "lineupConfirmed": true,
-    "elapsed": 45
+    "elapsed": 47
   },
   {
     "home": "Deportivo Camioneros",
@@ -46916,7 +46916,7 @@ window.MATCHES = [
     "awayLogo": "https://media.api-sports.io/football/teams/274.png",
     "country": "Iceland",
     "flag": "https://media.api-sports.io/flags/is.svg",
-    "status": "HT",
+    "status": "2H",
     "kickoff": "2026-07-04T16:00:00+00:00",
     "matchDate": "2026-07-04",
     "homeGoals": 0,
@@ -47107,7 +47107,7 @@ window.MATCHES = [
       "dcx2": 1.6
     },
     "h2h": null,
-    "elapsed": 45
+    "elapsed": 48
   },
   {
     "home": "Leiknir R.",
@@ -47320,7 +47320,7 @@ window.MATCHES = [
     "awayLogo": "https://media.api-sports.io/football/teams/4171.png",
     "country": "Iceland",
     "flag": "https://media.api-sports.io/flags/is.svg",
-    "status": "HT",
+    "status": "2H",
     "kickoff": "2026-07-04T16:00:00+00:00",
     "matchDate": "2026-07-04",
     "homeGoals": 2,
@@ -47509,7 +47509,7 @@ window.MATCHES = [
       "dcx2": 1.44
     },
     "h2h": null,
-    "elapsed": 45
+    "elapsed": 49
   },
   {
     "home": "Trans Narva",
@@ -47520,7 +47520,7 @@ window.MATCHES = [
     "awayLogo": "https://media.api-sports.io/football/teams/2273.png",
     "country": "Estonia",
     "flag": "https://media.api-sports.io/flags/ee.svg",
-    "status": "HT",
+    "status": "2H",
     "kickoff": "2026-07-04T16:00:00+00:00",
     "matchDate": "2026-07-04",
     "homeGoals": 0,
@@ -47711,7 +47711,7 @@ window.MATCHES = [
       "dcx2": 1.01
     },
     "h2h": null,
-    "elapsed": 45
+    "elapsed": 48
   },
   {
     "home": "Paide",
@@ -47725,7 +47725,7 @@ window.MATCHES = [
     "status": "2H",
     "kickoff": "2026-07-04T16:00:00+00:00",
     "matchDate": "2026-07-04",
-    "homeGoals": 2,
+    "homeGoals": 3,
     "awayGoals": 1,
     "homePos": 4,
     "awayPos": 6,
@@ -47913,7 +47913,7 @@ window.MATCHES = [
       "dcx2": 2.6
     },
     "h2h": null,
-    "elapsed": 46
+    "elapsed": 50
   },
   {
     "home": "Metta / LU",
@@ -47924,7 +47924,7 @@ window.MATCHES = [
     "awayLogo": "https://media.api-sports.io/football/teams/16835.png",
     "country": "Latvia",
     "flag": "https://media.api-sports.io/flags/lv.svg",
-    "status": "HT",
+    "status": "2H",
     "kickoff": "2026-07-04T16:00:00+00:00",
     "matchDate": "2026-07-04",
     "homeGoals": 1,
@@ -48110,7 +48110,7 @@ window.MATCHES = [
       "under35": 2
     },
     "h2h": null,
-    "elapsed": 45
+    "elapsed": 49
   },
   {
     "home": "AB",
@@ -48121,7 +48121,7 @@ window.MATCHES = [
     "awayLogo": "https://media.api-sports.io/football/teams/4177.png",
     "country": "Faroe-Islands",
     "flag": "https://media.api-sports.io/flags/fo.svg",
-    "status": "1H",
+    "status": "HT",
     "kickoff": "2026-07-04T16:15:00+00:00",
     "matchDate": "2026-07-04",
     "homeGoals": 0,
@@ -48512,7 +48512,7 @@ window.MATCHES = [
       "dcx2": 1.3
     },
     "h2h": null,
-    "elapsed": 29
+    "elapsed": 33
   },
   {
     "home": "Canada",
@@ -48523,11 +48523,11 @@ window.MATCHES = [
     "awayLogo": "https://media.api-sports.io/football/teams/31.png",
     "country": "World",
     "flag": null,
-    "status": "NS",
+    "status": "1H",
     "kickoff": "2026-07-04T17:00:00+00:00",
     "matchDate": "2026-07-04",
-    "homeGoals": null,
-    "awayGoals": null,
+    "homeGoals": 0,
+    "awayGoals": 0,
     "homePos": 2,
     "awayPos": 2,
     "tableSize": 60,
@@ -48730,7 +48730,7 @@ window.MATCHES = [
     "xgAwayReal": 1.1,
     "awayXgAgainst": 1.44,
     "lineupConfirmed": true,
-    "elapsed": null
+    "elapsed": 5
   },
   {
     "home": "Rentistas",
@@ -48741,11 +48741,11 @@ window.MATCHES = [
     "awayLogo": "https://media.api-sports.io/football/teams/19410.png",
     "country": "Uruguay",
     "flag": "https://media.api-sports.io/flags/uy.svg",
-    "status": "NS",
+    "status": "1H",
     "kickoff": "2026-07-04T17:00:00+00:00",
     "matchDate": "2026-07-04",
-    "homeGoals": null,
-    "awayGoals": null,
+    "homeGoals": 0,
+    "awayGoals": 0,
     "homePos": 8,
     "awayPos": 14,
     "tableSize": 56,
@@ -48932,7 +48932,7 @@ window.MATCHES = [
       "dcx2": 2
     },
     "h2h": null,
-    "elapsed": null
+    "elapsed": 2
   },
   {
     "home": "Petrocub",
@@ -48943,11 +48943,11 @@ window.MATCHES = [
     "awayLogo": "https://media.api-sports.io/football/teams/691.png",
     "country": "Moldova",
     "flag": "https://media.api-sports.io/flags/md.svg",
-    "status": "NS",
+    "status": "1H",
     "kickoff": "2026-07-04T17:00:00+00:00",
     "matchDate": "2026-07-04",
-    "homeGoals": null,
-    "awayGoals": null,
+    "homeGoals": 0,
+    "awayGoals": 0,
     "homePos": 3,
     "awayPos": 5,
     "tableSize": 8,
@@ -49132,7 +49132,7 @@ window.MATCHES = [
       "dcx2": 2.1
     },
     "h2h": null,
-    "elapsed": null
+    "elapsed": 4
   },
   {
     "home": "Ituzaingó",
