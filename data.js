@@ -1,5 +1,5 @@
 window.DATA_UPDATED = "2026-07-04T06:49:17.438Z";
-window.SCORES_UPDATED = "2026-07-04T10:25:27.945Z";
+window.SCORES_UPDATED = "2026-07-04T10:30:56.384Z";
 window.MATCHES = [
   {
     "home": "Barcelona SC",
@@ -38732,7 +38732,7 @@ window.MATCHES = [
     "round": "Regular Season - 17",
     "odds": null,
     "h2h": null,
-    "elapsed": 62
+    "elapsed": 68
   },
   {
     "home": "Changwon City",
@@ -38928,7 +38928,7 @@ window.MATCHES = [
       "dcx2": 2.05
     },
     "h2h": null,
-    "elapsed": 68
+    "elapsed": 74
   },
   {
     "home": "Pocheon",
@@ -39116,7 +39116,7 @@ window.MATCHES = [
       "dcx2": 1.53
     },
     "h2h": null,
-    "elapsed": 64
+    "elapsed": 69
   },
   {
     "home": "MetroStars",
@@ -39316,7 +39316,7 @@ window.MATCHES = [
       "dcx2": 2.25
     },
     "h2h": null,
-    "elapsed": 34
+    "elapsed": 40
   },
   {
     "home": "Yanbian Longding",
@@ -39518,7 +39518,7 @@ window.MATCHES = [
       "dcx2": 1.67
     },
     "h2h": null,
-    "elapsed": 25
+    "elapsed": 31
   },
   {
     "home": "Gangneung City",
@@ -39714,7 +39714,7 @@ window.MATCHES = [
       "dcx2": 1.65
     },
     "h2h": null,
-    "elapsed": 26
+    "elapsed": 31
   },
   {
     "home": "Mokpo City",
@@ -39895,7 +39895,7 @@ window.MATCHES = [
     "round": "Round of 128",
     "odds": null,
     "h2h": null,
-    "elapsed": 16
+    "elapsed": 21
   },
   {
     "home": "Ulsan Citizen",
@@ -40091,7 +40091,7 @@ window.MATCHES = [
       "dcx2": 1.44
     },
     "h2h": null,
-    "elapsed": 24
+    "elapsed": 30
   },
   {
     "home": "Jinju Citizen",
@@ -40287,7 +40287,7 @@ window.MATCHES = [
       "dcx2": 2.8
     },
     "h2h": null,
-    "elapsed": 25
+    "elapsed": 31
   },
   {
     "home": "Haman",
@@ -40483,7 +40483,7 @@ window.MATCHES = [
       "dcx2": 1.02
     },
     "h2h": null,
-    "elapsed": 26
+    "elapsed": 31
   },
   {
     "home": "Yangcheon TNT",
@@ -40664,7 +40664,7 @@ window.MATCHES = [
     "round": "Round of 128",
     "odds": null,
     "h2h": null,
-    "elapsed": 22
+    "elapsed": 27
   },
   {
     "home": "Ulsan FC",
@@ -40845,7 +40845,7 @@ window.MATCHES = [
     "round": "Round of 128",
     "odds": null,
     "h2h": null,
-    "elapsed": 22
+    "elapsed": 28
   },
   {
     "home": "Riga FC II",
@@ -41045,7 +41045,7 @@ window.MATCHES = [
       "dcx2": 1.91
     },
     "h2h": null,
-    "elapsed": 24
+    "elapsed": 30
   },
   {
     "home": "FC Anyang",
@@ -41273,11 +41273,11 @@ window.MATCHES = [
     "awayLogo": "https://media.api-sports.io/football/teams/2745.png",
     "country": "South-Korea",
     "flag": "https://media.api-sports.io/flags/kr.svg",
-    "status": "NS",
+    "status": "1H",
     "kickoff": "2026-07-04T10:30:00+00:00",
     "matchDate": "2026-07-04",
-    "homeGoals": null,
-    "awayGoals": null,
+    "homeGoals": 0,
+    "awayGoals": 0,
     "homePos": 10,
     "awayPos": 9,
     "tableSize": 12,
@@ -41479,7 +41479,7 @@ window.MATCHES = [
     "xgReal": true,
     "xgAwayReal": 0.87,
     "awayXgAgainst": 0.97,
-    "elapsed": null
+    "elapsed": 1
   },
   {
     "home": "Jeonbuk Motors",
@@ -41490,11 +41490,11 @@ window.MATCHES = [
     "awayLogo": "https://media.api-sports.io/football/teams/2746.png",
     "country": "South-Korea",
     "flag": "https://media.api-sports.io/flags/kr.svg",
-    "status": "NS",
+    "status": "1H",
     "kickoff": "2026-07-04T10:30:00+00:00",
     "matchDate": "2026-07-04",
-    "homeGoals": null,
-    "awayGoals": null,
+    "homeGoals": 0,
+    "awayGoals": 0,
     "homePos": 3,
     "awayPos": 4,
     "tableSize": 12,
@@ -41696,7 +41696,7 @@ window.MATCHES = [
     "xgReal": true,
     "xgAwayReal": 1.2,
     "awayXgAgainst": 1.44,
-    "elapsed": null
+    "elapsed": 1
   },
   {
     "home": "Ansan Greeners",
@@ -41924,11 +41924,11 @@ window.MATCHES = [
     "awayLogo": "https://media.api-sports.io/football/teams/2757.png",
     "country": "South-Korea",
     "flag": "https://media.api-sports.io/flags/kr.svg",
-    "status": "NS",
+    "status": "1H",
     "kickoff": "2026-07-04T10:30:00+00:00",
     "matchDate": "2026-07-04",
-    "homeGoals": null,
-    "awayGoals": null,
+    "homeGoals": 0,
+    "awayGoals": 0,
     "homePos": 2,
     "awayPos": 10,
     "tableSize": 17,
@@ -42130,7 +42130,7 @@ window.MATCHES = [
     "xgReal": true,
     "xgAwayReal": 1.29,
     "awayXgAgainst": 1.45,
-    "elapsed": null
+    "elapsed": 1
   },
   {
     "home": "Cheongju",
@@ -42141,11 +42141,11 @@ window.MATCHES = [
     "awayLogo": "https://media.api-sports.io/football/teams/2747.png",
     "country": "South-Korea",
     "flag": "https://media.api-sports.io/flags/kr.svg",
-    "status": "NS",
+    "status": "1H",
     "kickoff": "2026-07-04T10:30:00+00:00",
     "matchDate": "2026-07-04",
-    "homeGoals": null,
-    "awayGoals": null,
+    "homeGoals": 0,
+    "awayGoals": 0,
     "homePos": 14,
     "awayPos": 4,
     "tableSize": 17,
@@ -42347,7 +42347,7 @@ window.MATCHES = [
     "xgReal": true,
     "xgAwayReal": 1.69,
     "awayXgAgainst": 1.98,
-    "elapsed": null
+    "elapsed": 1
   },
   {
     "home": "Paju Citizen",
