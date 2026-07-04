@@ -1,5 +1,5 @@
 window.DATA_UPDATED = "2026-07-04T03:33:42.911Z";
-window.SCORES_UPDATED = "2026-07-04T05:00:56.632Z";
+window.SCORES_UPDATED = "2026-07-04T05:05:30.449Z";
 window.MATCHES = [
   {
     "home": "Barcelona SC",
@@ -33978,11 +33978,11 @@ window.MATCHES = [
     "awayLogo": "https://media.api-sports.io/football/teams/24018.png",
     "country": "USA",
     "flag": "https://media.api-sports.io/flags/us.svg",
-    "status": "NS",
+    "status": "FT",
     "kickoff": "2026-07-04T00:30:00+00:00",
     "matchDate": "2026-07-04",
-    "homeGoals": null,
-    "awayGoals": null,
+    "homeGoals": 0,
+    "awayGoals": 6,
     "homePos": null,
     "awayPos": null,
     "tableSize": 144,
@@ -35561,7 +35561,7 @@ window.MATCHES = [
     "awayLogo": "https://media.api-sports.io/football/teams/3800.png",
     "country": "Australia",
     "flag": "https://media.api-sports.io/flags/au.svg",
-    "status": "HT",
+    "status": "2H",
     "kickoff": "2026-07-04T04:00:00+00:00",
     "matchDate": "2026-07-04",
     "homeGoals": 0,
@@ -35748,7 +35748,7 @@ window.MATCHES = [
       "dcx2": 1.95
     },
     "h2h": null,
-    "elapsed": 45
+    "elapsed": 49
   },
   {
     "home": "Canberra White Eagles",
@@ -36738,11 +36738,11 @@ window.MATCHES = [
     "awayLogo": "https://media.api-sports.io/football/teams/19705.png",
     "country": "Australia",
     "flag": "https://media.api-sports.io/flags/au.svg",
-    "status": "NS",
+    "status": "1H",
     "kickoff": "2026-07-04T05:00:00+00:00",
     "matchDate": "2026-07-04",
-    "homeGoals": null,
-    "awayGoals": null,
+    "homeGoals": 0,
+    "awayGoals": 0,
     "homePos": 3,
     "awayPos": 4,
     "tableSize": 14,
@@ -36925,7 +36925,7 @@ window.MATCHES = [
       "dcx2": 1.67
     },
     "h2h": null,
-    "elapsed": null
+    "elapsed": 5
   },
   {
     "home": "Altona Magic",
