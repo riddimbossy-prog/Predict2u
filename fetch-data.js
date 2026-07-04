@@ -730,8 +730,9 @@ const FINISHED = new Set(["FT","AET","PEN"]);
     // League Trend data (70-70-70 engine): real league-wide market hit-rates,
     // fetched once per league and cached. null if <50 matches or fetch failed.
     let leagueTrends = null;
-    try { leagueTrends = await getLeagueTrends(leagueId, seasonForStandings, cfg.API_KEY, SLEEP); requests++; }
-    catch(e){ leagueTrends = null; }
+    try { leagueTrends = await getLeagueTrends(leagueId, seasonForStandings, cfg.API_KEY, SLEEP); requests++;
+      if(!leagueTrends) console.log(`    trends: league ${leagueId} -> null (sample <50 or empty response)`); }
+    catch(e){ leagueTrends = null; console.log(`    trends: league ${leagueId} FAILED -> ${e.message}`); }
 
     for (const fx of fixtures) {
       const st = fx.fixture.status.short;
