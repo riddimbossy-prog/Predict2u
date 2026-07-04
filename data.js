@@ -1,5 +1,5 @@
 window.DATA_UPDATED = "2026-07-04T00:04:59.265Z";
-window.SCORES_UPDATED = "2026-07-04T01:50:38.991Z";
+window.SCORES_UPDATED = "2026-07-04T01:55:29.328Z";
 window.MATCHES = [
   {
     "home": "Santa Cruz",
@@ -19840,7 +19840,7 @@ window.MATCHES = [
     "awayLogo": "https://media.api-sports.io/football/teams/1980.png",
     "country": "Ecuador",
     "flag": "https://media.api-sports.io/flags/ec.svg",
-    "status": "2H",
+    "status": "FT",
     "kickoff": "2026-07-04T00:00:00+00:00",
     "matchDate": "2026-07-04",
     "homeGoals": 4,
@@ -20042,7 +20042,7 @@ window.MATCHES = [
     "xgReal": true,
     "xgAwayReal": 0.65,
     "awayXgAgainst": 1.29,
-    "elapsed": 90
+    "elapsed": null
   },
   {
     "home": "Washington Spirit W",
@@ -20255,7 +20255,7 @@ window.MATCHES = [
     "xgReal": true,
     "xgAwayReal": 1.67,
     "awayXgAgainst": 1.64,
-    "elapsed": 82
+    "elapsed": 87
   },
   {
     "home": "Des Moines Menace",
@@ -20453,7 +20453,7 @@ window.MATCHES = [
     "kickoff": "2026-07-04T00:00:00+00:00",
     "matchDate": "2026-07-04",
     "homeGoals": 4,
-    "awayGoals": 1,
+    "awayGoals": 2,
     "homePos": 4,
     "awayPos": 8,
     "tableSize": 144,
@@ -20634,7 +20634,7 @@ window.MATCHES = [
       "dcx2": 1.75
     },
     "h2h": null,
-    "elapsed": 86
+    "elapsed": 90
   },
   {
     "home": "Lionsbridge",
@@ -21000,7 +21000,7 @@ window.MATCHES = [
     "round": "Group Stage",
     "odds": null,
     "h2h": null,
-    "elapsed": 74
+    "elapsed": 79
   },
   {
     "home": "Fort Worth Vaqueros",
@@ -21397,7 +21397,7 @@ window.MATCHES = [
     "xgAwayReal": 0.82,
     "awayXgAgainst": 1.3,
     "lineupConfirmed": true,
-    "elapsed": 20
+    "elapsed": 26
   },
   {
     "home": "Denver Summit W",
@@ -21610,7 +21610,7 @@ window.MATCHES = [
     "xgReal": true,
     "xgAwayReal": 0.91,
     "awayXgAgainst": 2.35,
-    "elapsed": 12
+    "elapsed": 17
   },
   {
     "home": "Midlakes United",
@@ -21806,7 +21806,7 @@ window.MATCHES = [
       "dcx2": 1.13
     },
     "h2h": null,
-    "elapsed": 17
+    "elapsed": 22
   },
   {
     "home": "Angel City W",
@@ -66861,7 +66861,7 @@ window.MATCHES = [
     "round": "Group Stage",
     "odds": null,
     "h2h": null,
-    "elapsed": 87
+    "elapsed": 90
   },
   {
     "home": "USA",
