@@ -1,5 +1,5 @@
 window.DATA_UPDATED = "2026-07-04T06:49:17.438Z";
-window.SCORES_UPDATED = "2026-07-04T10:20:40.765Z";
+window.SCORES_UPDATED = "2026-07-04T10:25:27.945Z";
 window.MATCHES = [
   {
     "home": "Barcelona SC",
@@ -38732,7 +38732,7 @@ window.MATCHES = [
     "round": "Regular Season - 17",
     "odds": null,
     "h2h": null,
-    "elapsed": 58
+    "elapsed": 62
   },
   {
     "home": "Changwon City",
@@ -38928,7 +38928,7 @@ window.MATCHES = [
       "dcx2": 2.05
     },
     "h2h": null,
-    "elapsed": 64
+    "elapsed": 68
   },
   {
     "home": "Pocheon",
@@ -39116,7 +39116,7 @@ window.MATCHES = [
       "dcx2": 1.53
     },
     "h2h": null,
-    "elapsed": 59
+    "elapsed": 64
   },
   {
     "home": "MetroStars",
@@ -39316,7 +39316,7 @@ window.MATCHES = [
       "dcx2": 2.25
     },
     "h2h": null,
-    "elapsed": 30
+    "elapsed": 34
   },
   {
     "home": "Yanbian Longding",
@@ -39518,7 +39518,7 @@ window.MATCHES = [
       "dcx2": 1.67
     },
     "h2h": null,
-    "elapsed": 21
+    "elapsed": 25
   },
   {
     "home": "Gangneung City",
@@ -39714,7 +39714,7 @@ window.MATCHES = [
       "dcx2": 1.65
     },
     "h2h": null,
-    "elapsed": 21
+    "elapsed": 26
   },
   {
     "home": "Mokpo City",
@@ -39728,7 +39728,7 @@ window.MATCHES = [
     "status": "1H",
     "kickoff": "2026-07-04T10:00:00+00:00",
     "matchDate": "2026-07-04",
-    "homeGoals": 0,
+    "homeGoals": 1,
     "awayGoals": 0,
     "homePos": null,
     "awayPos": null,
@@ -39895,7 +39895,7 @@ window.MATCHES = [
     "round": "Round of 128",
     "odds": null,
     "h2h": null,
-    "elapsed": 11
+    "elapsed": 16
   },
   {
     "home": "Ulsan Citizen",
@@ -40091,7 +40091,7 @@ window.MATCHES = [
       "dcx2": 1.44
     },
     "h2h": null,
-    "elapsed": 20
+    "elapsed": 24
   },
   {
     "home": "Jinju Citizen",
@@ -40287,7 +40287,7 @@ window.MATCHES = [
       "dcx2": 2.8
     },
     "h2h": null,
-    "elapsed": 21
+    "elapsed": 25
   },
   {
     "home": "Haman",
@@ -40483,7 +40483,7 @@ window.MATCHES = [
       "dcx2": 1.02
     },
     "h2h": null,
-    "elapsed": 21
+    "elapsed": 26
   },
   {
     "home": "Yangcheon TNT",
@@ -40497,7 +40497,7 @@ window.MATCHES = [
     "status": "1H",
     "kickoff": "2026-07-04T10:00:00+00:00",
     "matchDate": "2026-07-04",
-    "homeGoals": 0,
+    "homeGoals": 1,
     "awayGoals": 0,
     "homePos": null,
     "awayPos": null,
@@ -40664,7 +40664,7 @@ window.MATCHES = [
     "round": "Round of 128",
     "odds": null,
     "h2h": null,
-    "elapsed": 17
+    "elapsed": 22
   },
   {
     "home": "Ulsan FC",
@@ -40845,7 +40845,7 @@ window.MATCHES = [
     "round": "Round of 128",
     "odds": null,
     "h2h": null,
-    "elapsed": 18
+    "elapsed": 22
   },
   {
     "home": "Riga FC II",
@@ -41045,7 +41045,7 @@ window.MATCHES = [
       "dcx2": 1.91
     },
     "h2h": null,
-    "elapsed": 20
+    "elapsed": 24
   },
   {
     "home": "FC Anyang",
