@@ -1,5 +1,5 @@
 window.DATA_UPDATED = "2026-07-04T14:19:08.286Z";
-window.SCORES_UPDATED = "2026-07-04T15:50:43.125Z";
+window.SCORES_UPDATED = "2026-07-04T15:55:29.607Z";
 window.MATCHES = [
   {
     "home": "Barcelona SC",
@@ -45914,7 +45914,7 @@ window.MATCHES = [
     "round": "Regular Season - 30",
     "odds": null,
     "h2h": null,
-    "elapsed": 82
+    "elapsed": 87
   },
   {
     "home": "hodd",
@@ -46505,7 +46505,7 @@ window.MATCHES = [
       "dcx2": 1.55
     },
     "h2h": null,
-    "elapsed": 88
+    "elapsed": 90
   },
   {
     "home": "Grindavik",
@@ -46516,7 +46516,7 @@ window.MATCHES = [
     "awayLogo": "https://media.api-sports.io/football/teams/4165.png",
     "country": "Iceland",
     "flag": "https://media.api-sports.io/flags/is.svg",
-    "status": "2H",
+    "status": "FT",
     "kickoff": "2026-07-04T14:00:00+00:00",
     "matchDate": "2026-07-04",
     "homeGoals": 0,
@@ -46707,7 +46707,7 @@ window.MATCHES = [
       "dcx2": 1.5
     },
     "h2h": null,
-    "elapsed": 90
+    "elapsed": null
   },
   {
     "home": "Fjolnir",
@@ -46718,10 +46718,10 @@ window.MATCHES = [
     "awayLogo": "https://media.api-sports.io/football/teams/6093.png",
     "country": "Iceland",
     "flag": "https://media.api-sports.io/flags/is.svg",
-    "status": "2H",
+    "status": "FT",
     "kickoff": "2026-07-04T14:00:00+00:00",
     "matchDate": "2026-07-04",
-    "homeGoals": 0,
+    "homeGoals": 1,
     "awayGoals": 1,
     "homePos": 6,
     "awayPos": 5,
@@ -46907,7 +46907,7 @@ window.MATCHES = [
       "dcx2": 1.8
     },
     "h2h": null,
-    "elapsed": 90
+    "elapsed": null
   },
   {
     "home": "Fjardabyggd / Leiknir",
@@ -46921,7 +46921,7 @@ window.MATCHES = [
     "status": "2H",
     "kickoff": "2026-07-04T14:00:00+00:00",
     "matchDate": "2026-07-04",
-    "homeGoals": 2,
+    "homeGoals": 3,
     "awayGoals": 0,
     "homePos": 10,
     "awayPos": 7,
@@ -47118,7 +47118,7 @@ window.MATCHES = [
     "awayLogo": "https://media.api-sports.io/football/teams/1168.png",
     "country": "Finland",
     "flag": "https://media.api-sports.io/flags/fi.svg",
-    "status": "2H",
+    "status": "FT",
     "kickoff": "2026-07-04T14:00:00+00:00",
     "matchDate": "2026-07-04",
     "homeGoals": 3,
@@ -47309,7 +47309,7 @@ window.MATCHES = [
       "dcx2": 2.1
     },
     "h2h": null,
-    "elapsed": 90
+    "elapsed": null
   },
   {
     "home": "FF Jaro",
@@ -47542,7 +47542,7 @@ window.MATCHES = [
     "kickoff": "2026-07-04T14:00:00+00:00",
     "matchDate": "2026-07-04",
     "homeGoals": 1,
-    "awayGoals": 2,
+    "awayGoals": 3,
     "homePos": 10,
     "awayPos": 1,
     "tableSize": 12,
@@ -47740,7 +47740,7 @@ window.MATCHES = [
     "awayLogo": "https://media.api-sports.io/football/teams/9179.png",
     "country": "Finland",
     "flag": "https://media.api-sports.io/flags/fi.svg",
-    "status": "2H",
+    "status": "FT",
     "kickoff": "2026-07-04T14:00:00+00:00",
     "matchDate": "2026-07-04",
     "homeGoals": 3,
@@ -47929,7 +47929,7 @@ window.MATCHES = [
       "dcx2": 1.4
     },
     "h2h": null,
-    "elapsed": 90
+    "elapsed": null
   },
   {
     "home": "TP-47",
@@ -48140,7 +48140,7 @@ window.MATCHES = [
     "awayLogo": "https://media.api-sports.io/football/teams/21202.png",
     "country": "Latvia",
     "flag": "https://media.api-sports.io/flags/lv.svg",
-    "status": "2H",
+    "status": "FT",
     "kickoff": "2026-07-04T14:00:00+00:00",
     "matchDate": "2026-07-04",
     "homeGoals": 1,
@@ -48329,7 +48329,7 @@ window.MATCHES = [
       "dcx2": 1.14
     },
     "h2h": null,
-    "elapsed": 90
+    "elapsed": null
   },
   {
     "home": "TB",
@@ -48340,7 +48340,7 @@ window.MATCHES = [
     "awayLogo": "https://media.api-sports.io/football/teams/4190.png",
     "country": "Faroe-Islands",
     "flag": "https://media.api-sports.io/flags/fo.svg",
-    "status": "2H",
+    "status": "FT",
     "kickoff": "2026-07-04T14:00:00+00:00",
     "matchDate": "2026-07-04",
     "homeGoals": 3,
@@ -48516,7 +48516,7 @@ window.MATCHES = [
     "round": "Regular Season - 16",
     "odds": null,
     "h2h": null,
-    "elapsed": 90
+    "elapsed": null
   },
   {
     "home": "Neman",
