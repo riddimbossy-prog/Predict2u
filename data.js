@@ -1,5 +1,5 @@
 window.DATA_UPDATED = "2026-07-04T00:04:59.265Z";
-window.SCORES_UPDATED = "2026-07-04T00:46:04.960Z";
+window.SCORES_UPDATED = "2026-07-04T00:50:42.889Z";
 window.MATCHES = [
   {
     "home": "Santa Cruz",
@@ -19840,7 +19840,7 @@ window.MATCHES = [
     "awayLogo": "https://media.api-sports.io/football/teams/1980.png",
     "country": "Ecuador",
     "flag": "https://media.api-sports.io/flags/ec.svg",
-    "status": "1H",
+    "status": "HT",
     "kickoff": "2026-07-04T00:00:00+00:00",
     "matchDate": "2026-07-04",
     "homeGoals": 1,
@@ -20255,7 +20255,7 @@ window.MATCHES = [
     "xgReal": true,
     "xgAwayReal": 1.67,
     "awayXgAgainst": 1.64,
-    "elapsed": 38
+    "elapsed": 42
   },
   {
     "home": "Des Moines Menace",
@@ -20634,7 +20634,7 @@ window.MATCHES = [
       "dcx2": 1.75
     },
     "h2h": null,
-    "elapsed": 40
+    "elapsed": 45
   },
   {
     "home": "Lionsbridge",
@@ -21000,7 +21000,7 @@ window.MATCHES = [
     "round": "Group Stage",
     "odds": null,
     "h2h": null,
-    "elapsed": 39
+    "elapsed": 44
   },
   {
     "home": "Fort Worth Vaqueros",
@@ -66297,7 +66297,7 @@ window.MATCHES = [
       "dcx2": 1.02
     },
     "h2h": null,
-    "elapsed": 83
+    "elapsed": 88
   },
   {
     "home": "Loudoun United",
@@ -66495,7 +66495,7 @@ window.MATCHES = [
       "dcx2": 2.15
     },
     "h2h": null,
-    "elapsed": 47
+    "elapsed": 52
   },
   {
     "home": "Western Mass Pioneers",
@@ -66678,7 +66678,7 @@ window.MATCHES = [
     "round": "Group Stage",
     "odds": null,
     "h2h": null,
-    "elapsed": 57
+    "elapsed": 62
   },
   {
     "home": "West Chester United",
