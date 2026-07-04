@@ -1,5 +1,5 @@
 window.DATA_UPDATED = "2026-07-04T05:12:07.930Z";
-window.SCORES_UPDATED = "2026-07-04T06:45:33.890Z";
+window.SCORES_UPDATED = "2026-07-04T06:50:39.511Z";
 window.MATCHES = [
   {
     "home": "Barcelona SC",
@@ -34719,7 +34719,7 @@ window.MATCHES = [
       "bttsNo": 1.25
     },
     "h2h": null,
-    "elapsed": 68
+    "elapsed": 73
   },
   {
     "home": "Queanbeyan City",
@@ -35120,7 +35120,7 @@ window.MATCHES = [
       "dcx2": 1.65
     },
     "h2h": null,
-    "elapsed": 78
+    "elapsed": 83
   },
   {
     "home": "UNSW",
@@ -35322,7 +35322,7 @@ window.MATCHES = [
       "dcx2": 1.65
     },
     "h2h": null,
-    "elapsed": 77
+    "elapsed": 82
   },
   {
     "home": "Adelaide City",
@@ -35519,7 +35519,7 @@ window.MATCHES = [
       "under35": null
     },
     "h2h": null,
-    "elapsed": 83
+    "elapsed": 89
   },
   {
     "home": "Avondale",
@@ -35721,7 +35721,7 @@ window.MATCHES = [
       "dcx2": 1.67
     },
     "h2h": null,
-    "elapsed": 88
+    "elapsed": 90
   },
   {
     "home": "Altona Magic",
@@ -35923,7 +35923,7 @@ window.MATCHES = [
       "dcx2": 1.45
     },
     "h2h": null,
-    "elapsed": 70
+    "elapsed": 75
   },
   {
     "home": "Adelaide United II",
@@ -36123,7 +36123,7 @@ window.MATCHES = [
       "dcx2": 1.6
     },
     "h2h": null,
-    "elapsed": 52
+    "elapsed": 57
   },
   {
     "home": "Sturt Lions",
@@ -36323,7 +36323,7 @@ window.MATCHES = [
       "dcx2": 1.5
     },
     "h2h": null,
-    "elapsed": 56
+    "elapsed": 61
   },
   {
     "home": "Belconnen United",
@@ -36522,7 +36522,7 @@ window.MATCHES = [
       "bttsNo": 1.36
     },
     "h2h": null,
-    "elapsed": 10
+    "elapsed": 15
   },
   {
     "home": "Manly United",
