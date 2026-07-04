@@ -1,5 +1,5 @@
 window.DATA_UPDATED = "2026-07-04T06:49:17.438Z";
-window.SCORES_UPDATED = "2026-07-04T09:35:27.923Z";
+window.SCORES_UPDATED = "2026-07-04T09:40:42.366Z";
 window.MATCHES = [
   {
     "home": "Barcelona SC",
@@ -38154,7 +38154,7 @@ window.MATCHES = [
     "awayLogo": "https://media.api-sports.io/football/teams/23516.png",
     "country": "Australia",
     "flag": "https://media.api-sports.io/flags/au.svg",
-    "status": "2H",
+    "status": "FT",
     "kickoff": "2026-07-04T07:45:00+00:00",
     "matchDate": "2026-07-04",
     "homeGoals": 9,
@@ -38343,7 +38343,7 @@ window.MATCHES = [
       "dcx2": 8.5
     },
     "h2h": null,
-    "elapsed": 90
+    "elapsed": null
   },
   {
     "home": "Sunshine Georgies",
@@ -38545,7 +38545,7 @@ window.MATCHES = [
       "dcx2": 1.02
     },
     "h2h": null,
-    "elapsed": 76
+    "elapsed": 81
   },
   {
     "home": "Dianella White Eagle",
@@ -38732,7 +38732,7 @@ window.MATCHES = [
     "round": "Regular Season - 17",
     "odds": null,
     "h2h": null,
-    "elapsed": 28
+    "elapsed": 33
   },
   {
     "home": "Changwon City",
@@ -38928,7 +38928,7 @@ window.MATCHES = [
       "dcx2": 2.05
     },
     "h2h": null,
-    "elapsed": 35
+    "elapsed": 41
   },
   {
     "home": "Pocheon",
@@ -39116,7 +39116,7 @@ window.MATCHES = [
       "dcx2": 1.53
     },
     "h2h": null,
-    "elapsed": 34
+    "elapsed": 40
   },
   {
     "home": "MetroStars",
