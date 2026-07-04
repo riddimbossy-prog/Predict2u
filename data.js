@@ -1,5 +1,5 @@
 window.DATA_UPDATED = "2026-07-04T12:19:14.861Z";
-window.SCORES_UPDATED = "2026-07-04T14:15:33.771Z";
+window.SCORES_UPDATED = "2026-07-04T14:20:43.710Z";
 window.MATCHES = [
   {
     "home": "Barcelona SC",
@@ -44498,7 +44498,7 @@ window.MATCHES = [
       "dcx2": 2.1
     },
     "h2h": null,
-    "elapsed": 83
+    "elapsed": 88
   },
   {
     "home": "Nyasa Big Bullets",
@@ -44685,7 +44685,7 @@ window.MATCHES = [
     "round": "Regular Season - 9",
     "odds": null,
     "h2h": null,
-    "elapsed": 89
+    "elapsed": 90
   },
   {
     "home": "Bulawayo Chiefs",
@@ -44872,7 +44872,7 @@ window.MATCHES = [
     "round": "Regular Season - 21",
     "odds": null,
     "h2h": null,
-    "elapsed": 59
+    "elapsed": 64
   },
   {
     "home": "Ngezi Platinum",
@@ -45059,7 +45059,7 @@ window.MATCHES = [
     "round": "Regular Season - 21",
     "odds": null,
     "h2h": null,
-    "elapsed": 56
+    "elapsed": 61
   },
   {
     "home": "TelOne",
@@ -45246,7 +45246,7 @@ window.MATCHES = [
     "round": "Regular Season - 21",
     "odds": null,
     "h2h": null,
-    "elapsed": 53
+    "elapsed": 58
   },
   {
     "home": "Hunters",
@@ -45433,7 +45433,7 @@ window.MATCHES = [
     "round": "Regular Season - 21",
     "odds": null,
     "h2h": null,
-    "elapsed": 60
+    "elapsed": 65
   },
   {
     "home": "Halmstad",
@@ -45650,7 +45650,7 @@ window.MATCHES = [
     "xgReal": true,
     "xgAwayReal": 1.13,
     "awayXgAgainst": 1.9,
-    "elapsed": 56
+    "elapsed": 62
   },
   {
     "home": "Degerfors IF",
@@ -45868,7 +45868,7 @@ window.MATCHES = [
     "xgAwayReal": 1.29,
     "awayXgAgainst": 2.17,
     "lineupConfirmed": true,
-    "elapsed": 58
+    "elapsed": 63
   },
   {
     "home": "FC Vitebsk",
@@ -46070,7 +46070,7 @@ window.MATCHES = [
       "dcx2": 1.65
     },
     "h2h": null,
-    "elapsed": 61
+    "elapsed": 67
   },
   {
     "home": "Niva",
@@ -46257,7 +46257,7 @@ window.MATCHES = [
     "round": "Regular Season - 14",
     "odds": null,
     "h2h": null,
-    "elapsed": 58
+    "elapsed": 64
   },
   {
     "home": "SalPa",
@@ -46459,7 +46459,7 @@ window.MATCHES = [
       "dcx2": 1.67
     },
     "h2h": null,
-    "elapsed": 54
+    "elapsed": 60
   },
   {
     "home": "Atlantis",
@@ -46659,7 +46659,7 @@ window.MATCHES = [
       "dcx2": 1.65
     },
     "h2h": null,
-    "elapsed": 56
+    "elapsed": 60
   },
   {
     "home": "Union Plaani",
@@ -46859,7 +46859,7 @@ window.MATCHES = [
       "dcx2": 1.4
     },
     "h2h": null,
-    "elapsed": 56
+    "elapsed": 60
   },
   {
     "home": "P-Iirot",
@@ -46873,7 +46873,7 @@ window.MATCHES = [
     "status": "2H",
     "kickoff": "2026-07-04T13:00:00+00:00",
     "matchDate": "2026-07-04",
-    "homeGoals": 1,
+    "homeGoals": 2,
     "awayGoals": 0,
     "homePos": 6,
     "awayPos": 3,
@@ -47059,7 +47059,7 @@ window.MATCHES = [
       "dcx2": 1.45
     },
     "h2h": null,
-    "elapsed": 57
+    "elapsed": 62
   },
   {
     "home": "Panevėžys",
@@ -47261,7 +47261,7 @@ window.MATCHES = [
       "dcx2": 1.57
     },
     "h2h": null,
-    "elapsed": 57
+    "elapsed": 62
   },
   {
     "home": "Mārupe",
@@ -47461,7 +47461,7 @@ window.MATCHES = [
       "dcx2": 2.95
     },
     "h2h": null,
-    "elapsed": 60
+    "elapsed": 65
   },
   {
     "home": "BFC Daugavpils",
@@ -47663,7 +47663,7 @@ window.MATCHES = [
       "dcx2": 1.33
     },
     "h2h": null,
-    "elapsed": 57
+    "elapsed": 63
   },
   {
     "home": "Kyzyl-Zhar",
@@ -47865,7 +47865,7 @@ window.MATCHES = [
       "dcx2": 1.36
     },
     "h2h": null,
-    "elapsed": 57
+    "elapsed": 62
   },
   {
     "home": "Bumprom",
@@ -47876,7 +47876,7 @@ window.MATCHES = [
     "awayLogo": "https://media.api-sports.io/football/teams/3390.png",
     "country": "Belarus",
     "flag": "https://media.api-sports.io/flags/by.svg",
-    "status": "1H",
+    "status": "HT",
     "kickoff": "2026-07-04T13:30:00+00:00",
     "matchDate": "2026-07-04",
     "homeGoals": 1,
@@ -48063,7 +48063,7 @@ window.MATCHES = [
     "awayLogo": "https://media.api-sports.io/football/teams/580.png",
     "country": "Faroe-Islands",
     "flag": "https://media.api-sports.io/flags/fo.svg",
-    "status": "1H",
+    "status": "HT",
     "kickoff": "2026-07-04T13:30:00+00:00",
     "matchDate": "2026-07-04",
     "homeGoals": 0,
@@ -48441,7 +48441,7 @@ window.MATCHES = [
     "round": "Regular Season - 30",
     "odds": null,
     "h2h": null,
-    "elapsed": 14
+    "elapsed": 20
   },
   {
     "home": "Shorta",
@@ -48642,7 +48642,7 @@ window.MATCHES = [
     "status": "1H",
     "kickoff": "2026-07-04T14:00:00+00:00",
     "matchDate": "2026-07-04",
-    "homeGoals": 1,
+    "homeGoals": 2,
     "awayGoals": 0,
     "homePos": 9,
     "awayPos": 12,
@@ -48815,7 +48815,7 @@ window.MATCHES = [
     "round": "Regular Season - 30",
     "odds": null,
     "h2h": null,
-    "elapsed": 12
+    "elapsed": 17
   },
   {
     "home": "hodd",
@@ -48829,7 +48829,7 @@ window.MATCHES = [
     "status": "1H",
     "kickoff": "2026-07-04T14:00:00+00:00",
     "matchDate": "2026-07-04",
-    "homeGoals": 0,
+    "homeGoals": 1,
     "awayGoals": 0,
     "homePos": 8,
     "awayPos": 2,
@@ -49017,7 +49017,7 @@ window.MATCHES = [
       "dcx2": 1.07
     },
     "h2h": null,
-    "elapsed": 15
+    "elapsed": 20
   },
   {
     "home": "FC Energetik-Bgu Minsk",
@@ -49031,7 +49031,7 @@ window.MATCHES = [
     "status": "1H",
     "kickoff": "2026-07-04T14:00:00+00:00",
     "matchDate": "2026-07-04",
-    "homeGoals": 0,
+    "homeGoals": 1,
     "awayGoals": 0,
     "homePos": 2,
     "awayPos": 3,
@@ -49204,7 +49204,7 @@ window.MATCHES = [
     "round": "Regular Season - 14",
     "odds": null,
     "h2h": null,
-    "elapsed": 15
+    "elapsed": 20
   },
   {
     "home": "IA Akranes",
@@ -49406,7 +49406,7 @@ window.MATCHES = [
       "dcx2": 1.55
     },
     "h2h": null,
-    "elapsed": 12
+    "elapsed": 17
   },
   {
     "home": "Grindavik",
@@ -49608,7 +49608,7 @@ window.MATCHES = [
       "dcx2": 1.5
     },
     "h2h": null,
-    "elapsed": 14
+    "elapsed": 19
   },
   {
     "home": "Fjolnir",
@@ -49808,7 +49808,7 @@ window.MATCHES = [
       "dcx2": 1.8
     },
     "h2h": null,
-    "elapsed": 14
+    "elapsed": 19
   },
   {
     "home": "Fjardabyggd / Leiknir",
@@ -50008,7 +50008,7 @@ window.MATCHES = [
       "dcx2": 1.73
     },
     "h2h": null,
-    "elapsed": 13
+    "elapsed": 18
   },
   {
     "home": "SJK",
@@ -50210,7 +50210,7 @@ window.MATCHES = [
       "dcx2": 2.1
     },
     "h2h": null,
-    "elapsed": 16
+    "elapsed": 21
   },
   {
     "home": "FF Jaro",
@@ -50427,7 +50427,7 @@ window.MATCHES = [
     "xgReal": true,
     "xgAwayReal": 1.18,
     "awayXgAgainst": 2.61,
-    "elapsed": 15
+    "elapsed": 20
   },
   {
     "home": "KuPS Akatemia",
@@ -50442,7 +50442,7 @@ window.MATCHES = [
     "kickoff": "2026-07-04T14:00:00+00:00",
     "matchDate": "2026-07-04",
     "homeGoals": 0,
-    "awayGoals": 0,
+    "awayGoals": 1,
     "homePos": 10,
     "awayPos": 1,
     "tableSize": 12,
@@ -50629,7 +50629,7 @@ window.MATCHES = [
       "dcx2": 1.11
     },
     "h2h": null,
-    "elapsed": 15
+    "elapsed": 20
   },
   {
     "home": "HPS",
@@ -50829,7 +50829,7 @@ window.MATCHES = [
       "dcx2": 1.45
     },
     "h2h": null,
-    "elapsed": 14
+    "elapsed": 19
   },
   {
     "home": "TP-47",
@@ -51229,7 +51229,7 @@ window.MATCHES = [
       "dcx2": 1.14
     },
     "h2h": null,
-    "elapsed": 15
+    "elapsed": 20
   },
   {
     "home": "TB",
@@ -51416,7 +51416,7 @@ window.MATCHES = [
     "round": "Regular Season - 16",
     "odds": null,
     "h2h": null,
-    "elapsed": 15
+    "elapsed": 20
   },
   {
     "home": "Neman",
