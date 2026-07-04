@@ -1,5 +1,5 @@
 window.DATA_UPDATED = "2026-07-04T00:04:59.265Z";
-window.SCORES_UPDATED = "2026-07-04T02:05:31.272Z";
+window.SCORES_UPDATED = "2026-07-04T02:10:38.070Z";
 window.MATCHES = [
   {
     "home": "Santa Cruz",
@@ -20832,7 +20832,7 @@ window.MATCHES = [
     "kickoff": "2026-07-04T00:00:00+00:00",
     "matchDate": "2026-07-04",
     "homeGoals": 1,
-    "awayGoals": 1,
+    "awayGoals": 2,
     "homePos": null,
     "awayPos": null,
     "tableSize": 144,
@@ -21000,7 +21000,7 @@ window.MATCHES = [
     "round": "Group Stage",
     "odds": null,
     "h2h": null,
-    "elapsed": 89
+    "elapsed": 90
   },
   {
     "home": "Fort Worth Vaqueros",
@@ -21397,7 +21397,7 @@ window.MATCHES = [
     "xgAwayReal": 0.82,
     "awayXgAgainst": 1.3,
     "lineupConfirmed": true,
-    "elapsed": 36
+    "elapsed": 41
   },
   {
     "home": "Denver Summit W",
@@ -21610,7 +21610,7 @@ window.MATCHES = [
     "xgReal": true,
     "xgAwayReal": 0.91,
     "awayXgAgainst": 2.35,
-    "elapsed": 27
+    "elapsed": 32
   },
   {
     "home": "Midlakes United",
@@ -21806,7 +21806,7 @@ window.MATCHES = [
       "dcx2": 1.13
     },
     "h2h": null,
-    "elapsed": 32
+    "elapsed": 37
   },
   {
     "home": "Angel City W",
@@ -22213,11 +22213,11 @@ window.MATCHES = [
     "awayLogo": "https://media.api-sports.io/football/teams/25951.png",
     "country": "USA",
     "flag": "https://media.api-sports.io/flags/us.svg",
-    "status": "NS",
+    "status": "1H",
     "kickoff": "2026-07-04T02:00:00+00:00",
     "matchDate": "2026-07-04",
-    "homeGoals": null,
-    "awayGoals": null,
+    "homeGoals": 0,
+    "awayGoals": 0,
     "homePos": 2,
     "awayPos": 8,
     "tableSize": 144,
@@ -22385,7 +22385,7 @@ window.MATCHES = [
     "round": "Group Stage",
     "odds": null,
     "h2h": null,
-    "elapsed": null
+    "elapsed": 2
   },
   {
     "home": "Tacoma Stars",
@@ -22581,7 +22581,7 @@ window.MATCHES = [
       "dcx2": 1.01
     },
     "h2h": null,
-    "elapsed": 2
+    "elapsed": 7
   },
   {
     "home": "Hume City",
