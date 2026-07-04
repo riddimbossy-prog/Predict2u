@@ -1,5 +1,5 @@
 window.DATA_UPDATED = "2026-07-04T05:12:07.930Z";
-window.SCORES_UPDATED = "2026-07-04T06:55:31.882Z";
+window.SCORES_UPDATED = "2026-07-04T07:00:55.486Z";
 window.MATCHES = [
   {
     "home": "Barcelona SC",
@@ -34719,7 +34719,7 @@ window.MATCHES = [
       "bttsNo": 1.25
     },
     "h2h": null,
-    "elapsed": 78
+    "elapsed": 83
   },
   {
     "home": "Queanbeyan City",
@@ -35120,7 +35120,7 @@ window.MATCHES = [
       "dcx2": 1.65
     },
     "h2h": null,
-    "elapsed": 88
+    "elapsed": 90
   },
   {
     "home": "UNSW",
@@ -35322,7 +35322,7 @@ window.MATCHES = [
       "dcx2": 1.65
     },
     "h2h": null,
-    "elapsed": 87
+    "elapsed": 90
   },
   {
     "home": "Adelaide City",
@@ -35333,7 +35333,7 @@ window.MATCHES = [
     "awayLogo": "https://media.api-sports.io/football/teams/3794.png",
     "country": "Australia",
     "flag": "https://media.api-sports.io/flags/au.svg",
-    "status": "2H",
+    "status": "FT",
     "kickoff": "2026-07-04T05:00:00+00:00",
     "matchDate": "2026-07-04",
     "homeGoals": 2,
@@ -35519,7 +35519,7 @@ window.MATCHES = [
       "under35": null
     },
     "h2h": null,
-    "elapsed": 90
+    "elapsed": null
   },
   {
     "home": "Avondale",
@@ -35530,11 +35530,11 @@ window.MATCHES = [
     "awayLogo": "https://media.api-sports.io/football/teams/19705.png",
     "country": "Australia",
     "flag": "https://media.api-sports.io/flags/au.svg",
-    "status": "2H",
+    "status": "FT",
     "kickoff": "2026-07-04T05:00:00+00:00",
     "matchDate": "2026-07-04",
     "homeGoals": 2,
-    "awayGoals": 2,
+    "awayGoals": 3,
     "homePos": 3,
     "awayPos": 4,
     "tableSize": 14,
@@ -35721,7 +35721,7 @@ window.MATCHES = [
       "dcx2": 1.67
     },
     "h2h": null,
-    "elapsed": 90
+    "elapsed": null
   },
   {
     "home": "Altona Magic",
@@ -35923,7 +35923,7 @@ window.MATCHES = [
       "dcx2": 1.45
     },
     "h2h": null,
-    "elapsed": 80
+    "elapsed": 85
   },
   {
     "home": "Adelaide United II",
@@ -36123,7 +36123,7 @@ window.MATCHES = [
       "dcx2": 1.6
     },
     "h2h": null,
-    "elapsed": 63
+    "elapsed": 68
   },
   {
     "home": "Sturt Lions",
@@ -36323,7 +36323,7 @@ window.MATCHES = [
       "dcx2": 1.5
     },
     "h2h": null,
-    "elapsed": 66
+    "elapsed": 71
   },
   {
     "home": "Belconnen United",
@@ -36522,7 +36522,7 @@ window.MATCHES = [
       "bttsNo": 1.36
     },
     "h2h": null,
-    "elapsed": 20
+    "elapsed": 25
   },
   {
     "home": "Manly United",
