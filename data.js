@@ -1,5 +1,5 @@
 window.DATA_UPDATED = "2026-07-03T22:07:07.413Z";
-window.SCORES_UPDATED = "2026-07-04T00:10:45.494Z";
+window.SCORES_UPDATED = "2026-07-04T00:15:37.256Z";
 window.MATCHES = [
   {
     "home": "Santa Cruz",
@@ -20024,7 +20024,7 @@ window.MATCHES = [
     "xgReal": true,
     "xgAwayReal": 0.68,
     "awayXgAgainst": 1.23,
-    "elapsed": 11
+    "elapsed": 16
   },
   {
     "home": "Washington Spirit W",
@@ -20219,7 +20219,7 @@ window.MATCHES = [
     "xgReal": true,
     "xgAwayReal": 1.67,
     "awayXgAgainst": 1.64,
-    "elapsed": 2
+    "elapsed": 7
   },
   {
     "home": "Des Moines Menace",
@@ -20562,7 +20562,7 @@ window.MATCHES = [
       "dcx2": 1.75
     },
     "h2h": null,
-    "elapsed": 5
+    "elapsed": 10
   },
   {
     "home": "Lionsbridge",
@@ -20892,7 +20892,7 @@ window.MATCHES = [
     "round": "Group Stage",
     "odds": null,
     "h2h": null,
-    "elapsed": 3
+    "elapsed": 8
   },
   {
     "home": "Fort Worth Vaqueros",
@@ -61715,7 +61715,7 @@ window.MATCHES = [
     "awayLogo": "https://media.api-sports.io/football/teams/1533.png",
     "country": "World",
     "flag": null,
-    "status": "BT",
+    "status": "ET",
     "kickoff": "2026-07-03T22:00:00+00:00",
     "matchDate": "2026-07-03",
     "homeGoals": 2,
@@ -61900,7 +61900,7 @@ window.MATCHES = [
     "xgAwayReal": 0.49,
     "awayXgAgainst": 1.94,
     "lineupConfirmed": true,
-    "elapsed": null
+    "elapsed": 101
   },
   {
     "home": "Inter Gainesville",
@@ -62751,7 +62751,7 @@ window.MATCHES = [
       "dcx2": 1.02
     },
     "h2h": null,
-    "elapsed": 48
+    "elapsed": 52
   },
   {
     "home": "Loudoun United",
@@ -62931,7 +62931,7 @@ window.MATCHES = [
       "dcx2": 2.15
     },
     "h2h": null,
-    "elapsed": 34
+    "elapsed": 39
   },
   {
     "home": "Western Mass Pioneers",
@@ -63096,7 +63096,7 @@ window.MATCHES = [
     "round": "Group Stage",
     "odds": null,
     "h2h": null,
-    "elapsed": 40
+    "elapsed": 44
   },
   {
     "home": "West Chester United",
@@ -63261,7 +63261,7 @@ window.MATCHES = [
     "round": "Group Stage",
     "odds": null,
     "h2h": null,
-    "elapsed": 31
+    "elapsed": 36
   },
   {
     "home": "USA",
