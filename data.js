@@ -1,5 +1,5 @@
 window.DATA_UPDATED = "2026-07-04T00:04:59.265Z";
-window.SCORES_UPDATED = "2026-07-04T02:00:57.918Z";
+window.SCORES_UPDATED = "2026-07-04T02:05:31.272Z";
 window.MATCHES = [
   {
     "home": "Santa Cruz",
@@ -20053,10 +20053,10 @@ window.MATCHES = [
     "awayLogo": "https://media.api-sports.io/football/teams/2998.png",
     "country": "USA",
     "flag": "https://media.api-sports.io/flags/us.svg",
-    "status": "2H",
+    "status": "FT",
     "kickoff": "2026-07-04T00:00:00+00:00",
     "matchDate": "2026-07-04",
-    "homeGoals": 1,
+    "homeGoals": 2,
     "awayGoals": 1,
     "homePos": 4,
     "awayPos": 11,
@@ -20255,7 +20255,7 @@ window.MATCHES = [
     "xgReal": true,
     "xgAwayReal": 1.67,
     "awayXgAgainst": 1.64,
-    "elapsed": 90
+    "elapsed": null
   },
   {
     "home": "Des Moines Menace",
@@ -20831,8 +20831,8 @@ window.MATCHES = [
     "status": "2H",
     "kickoff": "2026-07-04T00:00:00+00:00",
     "matchDate": "2026-07-04",
-    "homeGoals": 0,
-    "awayGoals": 0,
+    "homeGoals": 1,
+    "awayGoals": 1,
     "homePos": null,
     "awayPos": null,
     "tableSize": 144,
@@ -21000,7 +21000,7 @@ window.MATCHES = [
     "round": "Group Stage",
     "odds": null,
     "h2h": null,
-    "elapsed": 84
+    "elapsed": 89
   },
   {
     "home": "Fort Worth Vaqueros",
@@ -21397,7 +21397,7 @@ window.MATCHES = [
     "xgAwayReal": 0.82,
     "awayXgAgainst": 1.3,
     "lineupConfirmed": true,
-    "elapsed": 31
+    "elapsed": 36
   },
   {
     "home": "Denver Summit W",
@@ -21610,7 +21610,7 @@ window.MATCHES = [
     "xgReal": true,
     "xgAwayReal": 0.91,
     "awayXgAgainst": 2.35,
-    "elapsed": 22
+    "elapsed": 27
   },
   {
     "home": "Midlakes United",
@@ -21624,7 +21624,7 @@ window.MATCHES = [
     "status": "1H",
     "kickoff": "2026-07-04T01:30:00+00:00",
     "matchDate": "2026-07-04",
-    "homeGoals": 0,
+    "homeGoals": 1,
     "awayGoals": 0,
     "homePos": 5,
     "awayPos": 4,
@@ -21806,7 +21806,7 @@ window.MATCHES = [
       "dcx2": 1.13
     },
     "h2h": null,
-    "elapsed": 27
+    "elapsed": 32
   },
   {
     "home": "Angel City W",
@@ -22396,11 +22396,11 @@ window.MATCHES = [
     "awayLogo": "https://media.api-sports.io/football/teams/25948.png",
     "country": "USA",
     "flag": "https://media.api-sports.io/flags/us.svg",
-    "status": "NS",
+    "status": "1H",
     "kickoff": "2026-07-04T02:00:00+00:00",
     "matchDate": "2026-07-04",
-    "homeGoals": null,
-    "awayGoals": null,
+    "homeGoals": 0,
+    "awayGoals": 0,
     "homePos": 9,
     "awayPos": 2,
     "tableSize": 144,
@@ -22581,7 +22581,7 @@ window.MATCHES = [
       "dcx2": 1.01
     },
     "h2h": null,
-    "elapsed": null
+    "elapsed": 2
   },
   {
     "home": "Hume City",
