@@ -558,6 +558,8 @@ const FINISHED = new Set(["FT","AET","PEN"]);
           // zero extra API cost. Used with OPPONENT same-market confirmation. ----
           under35:       run(s=>s.tot<=3),
           over15:        run(s=>s.tot>=2),
+          over35:        run(s=>s.tot>=4),
+          under15:       run(s=>s.tot<=1),
           btts:          run(s=>s.gf>0&&s.ga>0),   // GG streak
           noBtts:        run(s=>!(s.gf>0&&s.ga>0)),
           scored:        run(s=>s.gf>0),
