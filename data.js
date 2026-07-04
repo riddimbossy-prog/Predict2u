@@ -1,5 +1,5 @@
 window.DATA_UPDATED = "2026-07-04T20:08:29.082Z";
-window.SCORES_UPDATED = "2026-07-04T22:00:57.469Z";
+window.SCORES_UPDATED = "2026-07-04T22:05:31.679Z";
 window.MATCHES = [
   {
     "home": "Barcelona SC",
@@ -52587,7 +52587,7 @@ window.MATCHES = [
     "awayLogo": "https://media.api-sports.io/football/teams/3990.png",
     "country": "USA",
     "flag": "https://media.api-sports.io/flags/us.svg",
-    "status": "2H",
+    "status": "FT",
     "kickoff": "2026-07-04T20:00:00+00:00",
     "matchDate": "2026-07-04",
     "homeGoals": 2,
@@ -52794,7 +52794,7 @@ window.MATCHES = [
     "xgAwayReal": 1.12,
     "awayXgAgainst": 1.84,
     "lineupConfirmed": true,
-    "elapsed": 90
+    "elapsed": null
   },
   {
     "home": "San Luis",
@@ -54197,7 +54197,7 @@ window.MATCHES = [
       "dcx2": 1.57
     },
     "h2h": null,
-    "elapsed": 31
+    "elapsed": 35
   },
   {
     "home": "LDU Portoviejo",
@@ -54399,7 +54399,7 @@ window.MATCHES = [
       "dcx2": 1.4
     },
     "h2h": null,
-    "elapsed": 30
+    "elapsed": 34
   },
   {
     "home": "Confiança",
@@ -54601,7 +54601,7 @@ window.MATCHES = [
       "dcx2": 1.73
     },
     "h2h": null,
-    "elapsed": 1
+    "elapsed": 5
   },
   {
     "home": "Maringá",
@@ -54803,7 +54803,7 @@ window.MATCHES = [
       "dcx2": 2.2
     },
     "h2h": null,
-    "elapsed": 1
+    "elapsed": 5
   },
   {
     "home": "Velo Clube",
@@ -54990,7 +54990,7 @@ window.MATCHES = [
     "round": "Round of 32",
     "odds": null,
     "h2h": null,
-    "elapsed": 1
+    "elapsed": 6
   },
   {
     "home": "Tampa Bay Rowdies",
@@ -55403,7 +55403,7 @@ window.MATCHES = [
       "dcx2": 1.25
     },
     "h2h": null,
-    "elapsed": 1
+    "elapsed": 5
   },
   {
     "home": "Santa Cruz",
