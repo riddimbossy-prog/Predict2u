@@ -1,5 +1,5 @@
 window.DATA_UPDATED = "2026-07-04T22:05:04.488Z";
-window.SCORES_UPDATED = "2026-07-04T23:15:35.542Z";
+window.SCORES_UPDATED = "2026-07-04T23:20:41.541Z";
 window.MATCHES = [
   {
     "home": "Barcelona SC",
@@ -50505,7 +50505,7 @@ window.MATCHES = [
       "dcx2": 1.57
     },
     "h2h": null,
-    "elapsed": 85
+    "elapsed": 90
   },
   {
     "home": "LDU Portoviejo",
@@ -50519,7 +50519,7 @@ window.MATCHES = [
     "status": "2H",
     "kickoff": "2026-07-04T21:30:00+00:00",
     "matchDate": "2026-07-04",
-    "homeGoals": 0,
+    "homeGoals": 1,
     "awayGoals": 1,
     "homePos": 9,
     "awayPos": 1,
@@ -50707,7 +50707,7 @@ window.MATCHES = [
       "dcx2": 1.36
     },
     "h2h": null,
-    "elapsed": 82
+    "elapsed": 88
   },
   {
     "home": "Confiança",
@@ -50909,7 +50909,7 @@ window.MATCHES = [
       "dcx2": 1.75
     },
     "h2h": null,
-    "elapsed": 54
+    "elapsed": 59
   },
   {
     "home": "Maringá",
@@ -51111,7 +51111,7 @@ window.MATCHES = [
       "dcx2": 2.2
     },
     "h2h": null,
-    "elapsed": 54
+    "elapsed": 59
   },
   {
     "home": "Velo Clube",
@@ -51298,7 +51298,7 @@ window.MATCHES = [
     "round": "Round of 32",
     "odds": null,
     "h2h": null,
-    "elapsed": 55
+    "elapsed": 60
   },
   {
     "home": "Tampa Bay Rowdies",
@@ -51516,7 +51516,7 @@ window.MATCHES = [
     "xgAwayReal": 1.3,
     "awayXgAgainst": 1.36,
     "lineupConfirmed": true,
-    "elapsed": 48
+    "elapsed": 53
   },
   {
     "home": "Deportes Iquique",
@@ -51712,7 +51712,7 @@ window.MATCHES = [
       "dcx2": 1.25
     },
     "h2h": null,
-    "elapsed": 55
+    "elapsed": 61
   },
   {
     "home": "Santa Cruz",
@@ -52131,7 +52131,7 @@ window.MATCHES = [
     "xgReal": true,
     "xgAwayReal": 0.95,
     "awayXgAgainst": 1.3,
-    "elapsed": 15
+    "elapsed": 20
   },
   {
     "home": "Pittsburgh Riverhounds",
@@ -52363,7 +52363,7 @@ window.MATCHES = [
     "kickoff": "2026-07-04T23:00:00+00:00",
     "matchDate": "2026-07-04",
     "homeGoals": 0,
-    "awayGoals": 0,
+    "awayGoals": 1,
     "homePos": 2,
     "awayPos": 11,
     "tableSize": 56,
@@ -52535,7 +52535,7 @@ window.MATCHES = [
     "round": "2nd Phase - 9",
     "odds": null,
     "h2h": null,
-    "elapsed": 14
+    "elapsed": 20
   },
   {
     "home": "Guarani Campinas",
