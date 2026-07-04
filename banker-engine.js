@@ -2923,6 +2923,18 @@ function streakRecommend(m){
     else if((hs.under35||0)>=4 && (as.under35||0)>=4)
       mkCand("Under 3.5 Goals", 8+trendBoost("Under 3.5"), Math.min(hs.under35,as.under35),
         `Both sides ${hs.under35}/${as.under35} straight U3.5.`);
+    // OVER 1.5 — the safest over line; both sides seeing 2+ goal games
+    if((hs.over15||0)>=5 && (as.over15||0)>=4)
+      mkCand("Over 1.5 Goals", 9+trendBoost("Over 1.5"), Math.min(hs.over15,as.over15),
+        `Every recent game has had 2+ goals: home ${hs.over15} straight O1.5, away ${as.over15}.`);
+    // OVER 3.5 — goal-fest streaks on both sides (rarer, demands more)
+    if((hs.over35||0)>=3 && (as.over35||0)>=3)
+      mkCand("Over 3.5 Goals", 8+trendBoost("Over 3.5"), Math.min(hs.over35,as.over35),
+        `Goal-fest pattern: home ${hs.over35} straight 4+ goal games, away ${as.over35}.`);
+    // UNDER 1.5 — extreme low-scoring alignment (very strict)
+    if((hs.under15||0)>=3 && (as.under15||0)>=3 && (hs.failedToScore||0)>=1 && (as.failedToScore||0)>=1)
+      mkCand("Under 1.5 Goals", 8, Math.min(hs.under15,as.under15),
+        `Both sides in 0-1 goal games ${hs.under15}/${as.under15} straight, both struggling to score.`);
     // GG — both scoring AND both conceding streaks agree
     if((hs.btts||0)>=3 && (as.btts||0)>=3 && (hs.concededEvery||0)>=3 && (as.concededEvery||0)>=3)
       mkCand("BTTS Yes", 8+Math.min(hs.btts+as.btts-5,4)+trendBoost("BTTS Yes"), Math.min(hs.btts,as.btts),
@@ -2949,15 +2961,22 @@ function streakRecommend(m){
   if(lt&&lt.rates){
     const hAtt=m.homeScoredAtHome, aAtt=m.awayScoredAway, hDef=m.homeConcededAtHome, aDef=m.awayConcededAway;
     const u25=lr("Under 2.5"), gg=lr("BTTS Yes"), o25=lr("Over 2.5");
-    if(u25!=null&&u25>=0.58 && hAtt!=null&&aAtt!=null&&hAtt<=1.20&&aAtt<=1.10 && hDef!=null&&aDef!=null&&hDef<=1.10&&aDef<=1.20)
-      mkCand("Under 2.5 Goals", 10+(u25>=0.65?2:0), null,
+    const u35=lr("Under 3.5"), o15=lr("Over 1.5");
+    if(u25!=null&&u25>=0.55 && hAtt!=null&&aAtt!=null&&hAtt<=1.35&&aAtt<=1.25 && hDef!=null&&aDef!=null&&hDef<=1.25&&aDef<=1.35)
+      mkCand("Under 2.5 Goals", 10+(u25>=0.62?2:0), null,
         `League-trend fit: ${Math.round(u25*100)}% of this league goes under, and both teams are low-scoring/defensive.`);
-    if(gg!=null&&gg>=0.58 && hAtt!=null&&aAtt!=null&&hAtt>=1.20&&aAtt>=1.00 && hDef!=null&&aDef!=null&&hDef>=1.00&&aDef>=1.00)
-      mkCand("BTTS Yes", 10+(gg>=0.65?2:0), null,
+    if(u35!=null&&u35>=0.72 && hAtt!=null&&aAtt!=null&&(hAtt+aAtt)<=2.60)
+      mkCand("Under 3.5 Goals", 10+(u35>=0.80?2:0), null,
+        `League-trend fit: ${Math.round(u35*100)}% of this league stays under 3.5, and neither side is prolific.`);
+    if(gg!=null&&gg>=0.55 && hAtt!=null&&aAtt!=null&&hAtt>=1.10&&aAtt>=0.95 && hDef!=null&&aDef!=null&&hDef>=0.95&&aDef>=0.95)
+      mkCand("BTTS Yes", 10+(gg>=0.62?2:0), null,
         `League-trend fit: ${Math.round(gg*100)}% GG league, and both teams score and concede freely.`);
-    if(o25!=null&&o25>=0.60 && hAtt!=null&&aAtt!=null&&(hAtt+aAtt)>=2.80)
-      mkCand("Over 2.5 Goals", 10+(o25>=0.68?2:0), null,
+    if(o25!=null&&o25>=0.56 && hAtt!=null&&aAtt!=null&&(hAtt+aAtt)>=2.60)
+      mkCand("Over 2.5 Goals", 10+(o25>=0.64?2:0), null,
         `League-trend fit: ${Math.round(o25*100)}% of games go over in a goal-friendly league, and these attacks average ${(hAtt+aAtt).toFixed(1)} between them.`);
+    if(o15!=null&&o15>=0.78 && hAtt!=null&&aAtt!=null&&(hAtt+aAtt)>=2.20)
+      mkCand("Over 1.5 Goals", 10+(o15>=0.85?2:0), null,
+        `League-trend fit: ${Math.round(o15*100)}% of this league sees 2+ goals, and these sides can score.`);
   }
 
   if(!candidates.length){
