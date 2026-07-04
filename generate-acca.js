@@ -164,8 +164,12 @@ function pageSVG(legs, pageNo, pages, dstr, logo, flags, totals){
 
 (async function main(){
   let matches; try{ matches=loadMatches(); }catch(e){ console.log("no data.js:",e.message); process.exit(0); }
-  const legs=accaLegs(matches).filter(l=>isUpcoming(l.m)).sort((a,b)=>b.rating-a.rating);
+  let legs=accaLegs(matches).filter(l=>isUpcoming(l.m)).sort((a,b)=>b.rating-a.rating);
   if(!legs.length){ console.log("No qualifying acca legs today — no acca image."); process.exit(0); }
+  // HARD CAP: an acca email should be a curated slip, not the whole board.
+  // Keep only the TOP-rated legs (3 slips of 6 max). Everything else lives on the site.
+  const MAX_LEGS=18;
+  if(legs.length>MAX_LEGS){ console.log(`Capping acca: ${legs.length} qualifying legs -> top ${MAX_LEGS}.`); legs=legs.slice(0,MAX_LEGS); }
 
   let combinedOdds=1, combinedProb=1;
   legs.forEach(l=>{ combinedOdds*=l.odd; combinedProb*=Math.min(0.97,(1/l.odd)*1.05); });
