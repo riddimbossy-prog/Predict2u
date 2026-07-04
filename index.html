@@ -1961,7 +1961,7 @@ function wcConsensus(m){
 function wcTrophySVG(){ return '<svg viewBox="0 0 200 240" xmlns="http://www.w3.org/2000/svg" style="position:absolute;right:-20px;top:-10px;height:130%;opacity:.07;pointer-events:none"><g fill="#ffd54a"><path d="M60 20h80v14c22 0 34-2 34 16 0 30-24 44-36 46-8 18-22 28-30 30v22h22c8 0 12 6 12 12H58c0-6 4-12 12-12h22v-22c-8-2-22-12-30-30-12-2-36-16-36-46 0-18 12-16 34-16V20zm-8 26c-12 0-18 1-18 6 0 14 10 26 20 32-2-10-2-26-2-38zm96 0c0 12 0 28-2 38 10-6 20-18 20-32 0-5-6-6-18-6z"/><rect x="62" y="176" width="76" height="12" rx="3"/><rect x="52" y="190" width="96" height="30" rx="4"/></g></svg>'; }
 function wcHubEl(){ let el=document.getElementById('wc-hub');
   if(!el){ el=document.createElement('div'); el.id='wc-hub';
-    el.style.cssText='display:none;position:fixed;inset:0;z-index:80;background:#09090b;overflow-y:auto';
+    el.style.cssText='display:none;position:fixed;inset:0;z-index:80;background:#09090b;overflow-y:auto;-webkit-overflow-scrolling:touch;overscroll-behavior:contain';
     document.body.appendChild(el); } return el; }
 function closeWcHub(){ wcHubEl().style.display='none'; document.body.style.overflow=''; }
 // country name -> flag emoji for national teams (fallback soccer ball)
