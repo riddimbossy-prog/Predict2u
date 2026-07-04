@@ -1,5 +1,5 @@
 window.DATA_UPDATED = "2026-07-04T16:14:30.024Z";
-window.SCORES_UPDATED = "2026-07-04T17:30:54.203Z";
+window.SCORES_UPDATED = "2026-07-04T17:35:28.357Z";
 window.MATCHES = [
   {
     "home": "Barcelona SC",
@@ -46298,7 +46298,7 @@ window.MATCHES = [
     "kickoff": "2026-07-04T16:00:00+00:00",
     "matchDate": "2026-07-04",
     "homeGoals": 1,
-    "awayGoals": 0,
+    "awayGoals": 1,
     "homePos": 11,
     "awayPos": 7,
     "tableSize": 16,
@@ -46501,7 +46501,7 @@ window.MATCHES = [
     "xgAwayReal": 1,
     "awayXgAgainst": 1.91,
     "lineupConfirmed": true,
-    "elapsed": 73
+    "elapsed": 77
   },
   {
     "home": "Deportivo Camioneros",
@@ -46703,7 +46703,7 @@ window.MATCHES = [
       "dcx2": 1.8
     },
     "h2h": null,
-    "elapsed": 67
+    "elapsed": 71
   },
   {
     "home": "Lugano",
@@ -46905,7 +46905,7 @@ window.MATCHES = [
       "dcx2": 1.85
     },
     "h2h": null,
-    "elapsed": 69
+    "elapsed": 73
   },
   {
     "home": "IBV Vestmannaeyjar",
@@ -47107,7 +47107,7 @@ window.MATCHES = [
       "dcx2": 1.6
     },
     "h2h": null,
-    "elapsed": 74
+    "elapsed": 78
   },
   {
     "home": "Leiknir R.",
@@ -47121,7 +47121,7 @@ window.MATCHES = [
     "status": "2H",
     "kickoff": "2026-07-04T16:00:00+00:00",
     "matchDate": "2026-07-04",
-    "homeGoals": 1,
+    "homeGoals": 2,
     "awayGoals": 2,
     "homePos": 6,
     "awayPos": 12,
@@ -47309,7 +47309,7 @@ window.MATCHES = [
       "dcx2": 2.4
     },
     "h2h": null,
-    "elapsed": 65
+    "elapsed": 69
   },
   {
     "home": "Magni",
@@ -47509,7 +47509,7 @@ window.MATCHES = [
       "dcx2": 1.44
     },
     "h2h": null,
-    "elapsed": 75
+    "elapsed": 79
   },
   {
     "home": "Trans Narva",
@@ -47711,7 +47711,7 @@ window.MATCHES = [
       "dcx2": 1.01
     },
     "h2h": null,
-    "elapsed": 74
+    "elapsed": 78
   },
   {
     "home": "Paide",
@@ -47913,7 +47913,7 @@ window.MATCHES = [
       "dcx2": 2.6
     },
     "h2h": null,
-    "elapsed": 76
+    "elapsed": 80
   },
   {
     "home": "Metta / LU",
@@ -48110,7 +48110,7 @@ window.MATCHES = [
       "under35": 2
     },
     "h2h": null,
-    "elapsed": 75
+    "elapsed": 79
   },
   {
     "home": "AB",
@@ -48312,7 +48312,7 @@ window.MATCHES = [
       "dcx2": 1.91
     },
     "h2h": null,
-    "elapsed": 60
+    "elapsed": 64
   },
   {
     "home": "ÍF II",
@@ -48730,7 +48730,7 @@ window.MATCHES = [
     "xgAwayReal": 1.1,
     "awayXgAgainst": 1.44,
     "lineupConfirmed": true,
-    "elapsed": 30
+    "elapsed": 34
   },
   {
     "home": "Rentistas",
@@ -48932,7 +48932,7 @@ window.MATCHES = [
       "dcx2": 2
     },
     "h2h": null,
-    "elapsed": 28
+    "elapsed": 32
   },
   {
     "home": "Petrocub",
@@ -48946,7 +48946,7 @@ window.MATCHES = [
     "status": "1H",
     "kickoff": "2026-07-04T17:00:00+00:00",
     "matchDate": "2026-07-04",
-    "homeGoals": 1,
+    "homeGoals": 2,
     "awayGoals": 0,
     "homePos": 3,
     "awayPos": 5,
@@ -49132,7 +49132,7 @@ window.MATCHES = [
       "dcx2": 2.1
     },
     "h2h": null,
-    "elapsed": 30
+    "elapsed": 34
   },
   {
     "home": "Ituzaingó",
@@ -49143,11 +49143,11 @@ window.MATCHES = [
     "awayLogo": "https://media.api-sports.io/football/teams/8380.png",
     "country": "Argentina",
     "flag": "https://media.api-sports.io/flags/ar.svg",
-    "status": "NS",
+    "status": "1H",
     "kickoff": "2026-07-04T17:30:00+00:00",
     "matchDate": "2026-07-04",
-    "homeGoals": null,
-    "awayGoals": null,
+    "homeGoals": 0,
+    "awayGoals": 0,
     "homePos": 18,
     "awayPos": 10,
     "tableSize": 44,
@@ -49334,7 +49334,7 @@ window.MATCHES = [
       "dcx2": 1.42
     },
     "h2h": null,
-    "elapsed": null
+    "elapsed": 3
   },
   {
     "home": "Skála",
@@ -49345,11 +49345,11 @@ window.MATCHES = [
     "awayLogo": "https://media.api-sports.io/football/teams/4186.png",
     "country": "Faroe-Islands",
     "flag": "https://media.api-sports.io/flags/fo.svg",
-    "status": "NS",
+    "status": "1H",
     "kickoff": "2026-07-04T17:30:00+00:00",
     "matchDate": "2026-07-04",
-    "homeGoals": null,
-    "awayGoals": null,
+    "homeGoals": 0,
+    "awayGoals": 0,
     "homePos": 10,
     "awayPos": 9,
     "tableSize": 10,
@@ -49536,7 +49536,7 @@ window.MATCHES = [
       "dcx2": 1.8
     },
     "h2h": null,
-    "elapsed": null
+    "elapsed": 4
   },
   {
     "home": "Colegiales",
