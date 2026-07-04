@@ -1,5 +1,5 @@
 window.DATA_UPDATED = "2026-07-04T05:12:07.930Z";
-window.SCORES_UPDATED = "2026-07-04T06:05:30.635Z";
+window.SCORES_UPDATED = "2026-07-04T06:10:41.453Z";
 window.MATCHES = [
   {
     "home": "Barcelona SC",
@@ -34531,7 +34531,7 @@ window.MATCHES = [
     "awayLogo": "https://media.api-sports.io/football/teams/1452.png",
     "country": "Australia",
     "flag": "https://media.api-sports.io/flags/au.svg",
-    "status": "1H",
+    "status": "HT",
     "kickoff": "2026-07-04T05:00:00+00:00",
     "matchDate": "2026-07-04",
     "homeGoals": 0,
@@ -35333,7 +35333,7 @@ window.MATCHES = [
     "awayLogo": "https://media.api-sports.io/football/teams/3794.png",
     "country": "Australia",
     "flag": "https://media.api-sports.io/flags/au.svg",
-    "status": "HT",
+    "status": "2H",
     "kickoff": "2026-07-04T05:00:00+00:00",
     "matchDate": "2026-07-04",
     "homeGoals": 2,
@@ -35519,7 +35519,7 @@ window.MATCHES = [
       "under35": null
     },
     "h2h": null,
-    "elapsed": 45
+    "elapsed": 49
   },
   {
     "home": "Avondale",
@@ -35721,7 +35721,7 @@ window.MATCHES = [
       "dcx2": 1.67
     },
     "h2h": null,
-    "elapsed": 48
+    "elapsed": 53
   },
   {
     "home": "Altona Magic",
@@ -36123,7 +36123,7 @@ window.MATCHES = [
       "dcx2": 1.6
     },
     "h2h": null,
-    "elapsed": 31
+    "elapsed": 36
   },
   {
     "home": "Sturt Lions",
@@ -36323,7 +36323,7 @@ window.MATCHES = [
       "dcx2": 1.5
     },
     "h2h": null,
-    "elapsed": 32
+    "elapsed": 37
   },
   {
     "home": "Belconnen United",
