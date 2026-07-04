@@ -1,5 +1,5 @@
 window.DATA_UPDATED = "2026-07-04T18:10:30.854Z";
-window.SCORES_UPDATED = "2026-07-04T19:35:31.367Z";
+window.SCORES_UPDATED = "2026-07-04T19:40:46.711Z";
 window.MATCHES = [
   {
     "home": "Barcelona SC",
@@ -47007,7 +47007,7 @@ window.MATCHES = [
       "dcx2": 1.8
     },
     "h2h": null,
-    "elapsed": 75
+    "elapsed": 80
   },
   {
     "home": "Flandria",
@@ -47209,7 +47209,7 @@ window.MATCHES = [
       "dcx2": 1.42
     },
     "h2h": null,
-    "elapsed": 74
+    "elapsed": 80
   },
   {
     "home": "Dock Sud",
@@ -47224,7 +47224,7 @@ window.MATCHES = [
     "kickoff": "2026-07-04T18:00:00+00:00",
     "matchDate": "2026-07-04",
     "homeGoals": 3,
-    "awayGoals": 0,
+    "awayGoals": 1,
     "homePos": 14,
     "awayPos": 1,
     "tableSize": 44,
@@ -47411,7 +47411,7 @@ window.MATCHES = [
       "dcx2": 1.25
     },
     "h2h": null,
-    "elapsed": 70
+    "elapsed": 75
   },
   {
     "home": "Comunicaciones",
@@ -47613,7 +47613,7 @@ window.MATCHES = [
       "dcx2": 1.4
     },
     "h2h": null,
-    "elapsed": 73
+    "elapsed": 79
   },
   {
     "home": "Deportivo Merlo",
@@ -47815,7 +47815,7 @@ window.MATCHES = [
       "dcx2": 1.38
     },
     "h2h": null,
-    "elapsed": 55
+    "elapsed": 61
   },
   {
     "home": "Argentino Rosario",
@@ -48017,7 +48017,7 @@ window.MATCHES = [
       "dcx2": 1.45
     },
     "h2h": null,
-    "elapsed": 70
+    "elapsed": 75
   },
   {
     "home": "Estrella Del Sur",
@@ -48219,7 +48219,7 @@ window.MATCHES = [
       "dcx2": 1.85
     },
     "h2h": null,
-    "elapsed": 70
+    "elapsed": 75
   },
   {
     "home": "Leones de Rosario",
@@ -48421,7 +48421,7 @@ window.MATCHES = [
       "dcx2": 2.5
     },
     "h2h": null,
-    "elapsed": 68
+    "elapsed": 74
   },
   {
     "home": "Temperley",
@@ -48432,7 +48432,7 @@ window.MATCHES = [
     "awayLogo": "https://media.api-sports.io/football/teams/1965.png",
     "country": "Argentina",
     "flag": "https://media.api-sports.io/flags/ar.svg",
-    "status": "HT",
+    "status": "2H",
     "kickoff": "2026-07-04T18:30:00+00:00",
     "matchDate": "2026-07-04",
     "homeGoals": 1,
@@ -48623,7 +48623,7 @@ window.MATCHES = [
       "dcx2": 1.5
     },
     "h2h": null,
-    "elapsed": 45
+    "elapsed": 50
   },
   {
     "home": "Almagro",
@@ -48634,7 +48634,7 @@ window.MATCHES = [
     "awayLogo": "https://media.api-sports.io/football/teams/465.png",
     "country": "Argentina",
     "flag": "https://media.api-sports.io/flags/ar.svg",
-    "status": "HT",
+    "status": "2H",
     "kickoff": "2026-07-04T18:30:00+00:00",
     "matchDate": "2026-07-04",
     "homeGoals": 0,
@@ -48825,7 +48825,7 @@ window.MATCHES = [
       "dcx2": 1.6
     },
     "h2h": null,
-    "elapsed": 45
+    "elapsed": 50
   },
   {
     "home": "Nueva Chicago",
@@ -49229,7 +49229,7 @@ window.MATCHES = [
       "dcx2": 1.42
     },
     "h2h": null,
-    "elapsed": 47
+    "elapsed": 53
   },
   {
     "home": "Almirante Brown",
@@ -49442,7 +49442,7 @@ window.MATCHES = [
     "awayLogo": "https://media.api-sports.io/football/teams/468.png",
     "country": "Argentina",
     "flag": "https://media.api-sports.io/flags/ar.svg",
-    "status": "HT",
+    "status": "2H",
     "kickoff": "2026-07-04T18:30:00+00:00",
     "matchDate": "2026-07-04",
     "homeGoals": 0,
@@ -49633,7 +49633,7 @@ window.MATCHES = [
       "dcx2": 1.65
     },
     "h2h": null,
-    "elapsed": 45
+    "elapsed": 49
   },
   {
     "home": "Huracan Las Heras",
@@ -49831,7 +49831,7 @@ window.MATCHES = [
     "awayLogo": "https://media.api-sports.io/football/teams/23255.png",
     "country": "Argentina",
     "flag": "https://media.api-sports.io/flags/ar.svg",
-    "status": "HT",
+    "status": "2H",
     "kickoff": "2026-07-04T18:30:00+00:00",
     "matchDate": "2026-07-04",
     "homeGoals": 1,
@@ -50007,7 +50007,7 @@ window.MATCHES = [
     "round": "Regular Season - 16",
     "odds": null,
     "h2h": null,
-    "elapsed": 45
+    "elapsed": 46
   },
   {
     "home": "Longford Town",
@@ -50018,7 +50018,7 @@ window.MATCHES = [
     "awayLogo": "https://media.api-sports.io/football/teams/3844.png",
     "country": "Ireland",
     "flag": "https://media.api-sports.io/flags/ie.svg",
-    "status": "HT",
+    "status": "2H",
     "kickoff": "2026-07-04T18:30:00+00:00",
     "matchDate": "2026-07-04",
     "homeGoals": 0,
@@ -50209,7 +50209,7 @@ window.MATCHES = [
       "dcx2": 1.25
     },
     "h2h": null,
-    "elapsed": 45
+    "elapsed": 49
   },
   {
     "home": "Criciuma",
@@ -50427,7 +50427,7 @@ window.MATCHES = [
     "xgAwayReal": 1.32,
     "awayXgAgainst": 1.38,
     "lineupConfirmed": true,
-    "elapsed": 30
+    "elapsed": 36
   },
   {
     "home": "Londrina",
@@ -50645,7 +50645,7 @@ window.MATCHES = [
     "xgAwayReal": 1.21,
     "awayXgAgainst": 1.46,
     "lineupConfirmed": true,
-    "elapsed": 35
+    "elapsed": 41
   },
   {
     "home": "Novorizontino",
@@ -50862,7 +50862,7 @@ window.MATCHES = [
     "xgReal": true,
     "xgAwayReal": 1.49,
     "awayXgAgainst": 1.78,
-    "elapsed": 35
+    "elapsed": 41
   },
   {
     "home": "Cianorte",
@@ -51062,7 +51062,7 @@ window.MATCHES = [
       "dcx2": 1.55
     },
     "h2h": null,
-    "elapsed": 33
+    "elapsed": 39
   },
   {
     "home": "Imperatriz",
@@ -51262,7 +51262,7 @@ window.MATCHES = [
       "dcx2": 1.33
     },
     "h2h": null,
-    "elapsed": 31
+    "elapsed": 37
   },
   {
     "home": "Sao Jose",
@@ -51462,7 +51462,7 @@ window.MATCHES = [
       "dcx2": 1.55
     },
     "h2h": null,
-    "elapsed": 35
+    "elapsed": 41
   },
   {
     "home": "Nacional AM",
@@ -51649,7 +51649,7 @@ window.MATCHES = [
     "round": "Round of 32",
     "odds": null,
     "h2h": null,
-    "elapsed": 36
+    "elapsed": 41
   },
   {
     "home": "Trem",
@@ -51663,8 +51663,8 @@ window.MATCHES = [
     "status": "1H",
     "kickoff": "2026-07-04T19:00:00+00:00",
     "matchDate": "2026-07-04",
-    "homeGoals": 0,
-    "awayGoals": 0,
+    "homeGoals": 1,
+    "awayGoals": 1,
     "homePos": 1,
     "awayPos": 2,
     "tableSize": 96,
@@ -51836,7 +51836,7 @@ window.MATCHES = [
     "round": "Round of 32",
     "odds": null,
     "h2h": null,
-    "elapsed": 33
+    "elapsed": 39
   },
   {
     "home": "CRAC",
@@ -52036,7 +52036,7 @@ window.MATCHES = [
       "dcx2": 1.45
     },
     "h2h": null,
-    "elapsed": 33
+    "elapsed": 39
   },
   {
     "home": "Porto Velho",
@@ -52223,7 +52223,7 @@ window.MATCHES = [
     "round": "Round of 32",
     "odds": null,
     "h2h": null,
-    "elapsed": 32
+    "elapsed": 38
   },
   {
     "home": "Maguary PE",
@@ -52423,7 +52423,7 @@ window.MATCHES = [
       "dcx2": 1.57
     },
     "h2h": null,
-    "elapsed": 35
+    "elapsed": 41
   },
   {
     "home": "Ciudad de Bolívar",
@@ -52625,7 +52625,7 @@ window.MATCHES = [
       "dcx2": 1.38
     },
     "h2h": null,
-    "elapsed": 34
+    "elapsed": 40
   },
   {
     "home": "Libertad",
@@ -52842,7 +52842,7 @@ window.MATCHES = [
     "xgReal": true,
     "xgAwayReal": 0.53,
     "awayXgAgainst": 1.91,
-    "elapsed": 35
+    "elapsed": 40
   },
   {
     "home": "Magallanes",
@@ -52857,7 +52857,7 @@ window.MATCHES = [
     "kickoff": "2026-07-04T19:00:00+00:00",
     "matchDate": "2026-07-04",
     "homeGoals": 1,
-    "awayGoals": 0,
+    "awayGoals": 1,
     "homePos": null,
     "awayPos": null,
     "tableSize": 20,
@@ -53038,7 +53038,7 @@ window.MATCHES = [
       "dcx2": 1.22
     },
     "h2h": null,
-    "elapsed": 33
+    "elapsed": 38
   },
   {
     "home": "Union San Felipe",
@@ -53234,7 +53234,7 @@ window.MATCHES = [
       "dcx2": 1.38
     },
     "h2h": null,
-    "elapsed": 36
+    "elapsed": 42
   },
   {
     "home": "Serra Branca",
@@ -53421,7 +53421,7 @@ window.MATCHES = [
     "round": "Round of 32",
     "odds": null,
     "h2h": null,
-    "elapsed": 1
+    "elapsed": 7
   },
   {
     "home": "Maranhão",
