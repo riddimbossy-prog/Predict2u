@@ -1,5 +1,5 @@
 window.DATA_UPDATED = "2026-07-05T00:03:26.838Z";
-window.SCORES_UPDATED = "2026-07-05T01:40:42.968Z";
+window.SCORES_UPDATED = "2026-07-05T01:45:56.936Z";
 window.MATCHES = [
   {
     "home": "Barcelona SC",
@@ -216,7 +216,7 @@ window.MATCHES = [
     "xgReal": true,
     "xgAwayReal": 0.86,
     "awayXgAgainst": 1.16,
-    "elapsed": 79
+    "elapsed": 84
   },
   {
     "home": "Louisville City",
@@ -433,7 +433,7 @@ window.MATCHES = [
     "xgReal": true,
     "xgAwayReal": 1.37,
     "awayXgAgainst": 1.23,
-    "elapsed": 75
+    "elapsed": 80
   },
   {
     "home": "Brazos Valley",
@@ -1607,7 +1607,7 @@ window.MATCHES = [
       "dcx2": 2.95
     },
     "h2h": null,
-    "elapsed": 50
+    "elapsed": 55
   },
   {
     "home": "San Diego Wave W",
@@ -1838,7 +1838,7 @@ window.MATCHES = [
     "status": "1H",
     "kickoff": "2026-07-05T01:00:00+00:00",
     "matchDate": "2026-07-05",
-    "homeGoals": 0,
+    "homeGoals": 1,
     "awayGoals": 1,
     "homePos": 9,
     "awayPos": 6,
@@ -2041,7 +2041,7 @@ window.MATCHES = [
     "xgReal": true,
     "xgAwayReal": 1.58,
     "awayXgAgainst": 2.24,
-    "elapsed": 34
+    "elapsed": 39
   },
   {
     "home": "San Antonio",
@@ -2258,7 +2258,7 @@ window.MATCHES = [
     "xgReal": true,
     "xgAwayReal": 1.09,
     "awayXgAgainst": 2.16,
-    "elapsed": 33
+    "elapsed": 38
   },
   {
     "home": "New Mexico United",
@@ -2272,7 +2272,7 @@ window.MATCHES = [
     "status": "1H",
     "kickoff": "2026-07-05T01:30:00+00:00",
     "matchDate": "2026-07-05",
-    "homeGoals": 0,
+    "homeGoals": 1,
     "awayGoals": 0,
     "homePos": 5,
     "awayPos": 3,
@@ -2475,7 +2475,7 @@ window.MATCHES = [
     "xgReal": true,
     "xgAwayReal": 1.46,
     "awayXgAgainst": 1.83,
-    "elapsed": 2
+    "elapsed": 8
   },
   {
     "home": "Las Vegas Lights",
@@ -52104,7 +52104,7 @@ window.MATCHES = [
     "awayLogo": "https://media.api-sports.io/football/teams/4007.png",
     "country": "USA",
     "flag": "https://media.api-sports.io/flags/us.svg",
-    "status": "2H",
+    "status": "FT",
     "kickoff": "2026-07-04T23:30:00+00:00",
     "matchDate": "2026-07-04",
     "homeGoals": 1,
@@ -52311,7 +52311,7 @@ window.MATCHES = [
     "xgAwayReal": 1.2,
     "awayXgAgainst": 1.43,
     "lineupConfirmed": true,
-    "elapsed": 90
+    "elapsed": null
   },
   {
     "home": "Fortaleza EC",
