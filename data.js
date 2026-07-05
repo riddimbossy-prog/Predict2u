@@ -1,5 +1,5 @@
 window.DATA_UPDATED = "2026-07-05T02:04:07.486Z";
-window.SCORES_UPDATED = "2026-07-05T02:45:31.270Z";
+window.SCORES_UPDATED = "2026-07-05T02:50:45.157Z";
 window.MATCHES = [
   {
     "home": "Mexico",
@@ -7314,7 +7314,7 @@ window.MATCHES = [
     "awayLogo": "https://media.api-sports.io/football/teams/3003.png",
     "country": "USA",
     "flag": "https://media.api-sports.io/flags/us.svg",
-    "status": "2H",
+    "status": "FT",
     "kickoff": "2026-07-05T00:45:00+00:00",
     "matchDate": "2026-07-05",
     "homeGoals": 2,
@@ -7521,7 +7521,7 @@ window.MATCHES = [
     "xgAwayReal": 1.15,
     "awayXgAgainst": 1.65,
     "lineupConfirmed": true,
-    "elapsed": 90
+    "elapsed": null
   },
   {
     "home": "Colorado Springs",
@@ -7739,7 +7739,7 @@ window.MATCHES = [
     "xgAwayReal": 1.58,
     "awayXgAgainst": 2.24,
     "lineupConfirmed": true,
-    "elapsed": 81
+    "elapsed": 86
   },
   {
     "home": "San Antonio",
@@ -7957,7 +7957,7 @@ window.MATCHES = [
     "xgAwayReal": 1.09,
     "awayXgAgainst": 2.16,
     "lineupConfirmed": true,
-    "elapsed": 80
+    "elapsed": 85
   },
   {
     "home": "New Mexico United",
@@ -7968,7 +7968,7 @@ window.MATCHES = [
     "awayLogo": "https://media.api-sports.io/football/teams/10874.png",
     "country": "USA",
     "flag": "https://media.api-sports.io/flags/us.svg",
-    "status": "HT",
+    "status": "2H",
     "kickoff": "2026-07-05T01:30:00+00:00",
     "matchDate": "2026-07-05",
     "homeGoals": 2,
@@ -8175,7 +8175,7 @@ window.MATCHES = [
     "xgAwayReal": 1.46,
     "awayXgAgainst": 1.83,
     "lineupConfirmed": true,
-    "elapsed": 45
+    "elapsed": 49
   },
   {
     "home": "Las Vegas Lights",
@@ -8392,7 +8392,7 @@ window.MATCHES = [
     "xgReal": true,
     "xgAwayReal": 1.21,
     "awayXgAgainst": 1.57,
-    "elapsed": 8
+    "elapsed": 13
   },
   {
     "home": "Canberra FC",
