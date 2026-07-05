@@ -54,13 +54,18 @@
     font-family:'Schibsted Grotesk',system-ui,sans-serif;
     background:var(--bg); color:var(--ink); margin:0;
     background-image:
+      /* board gradient scrim so cards stay readable over the photo */
+      linear-gradient(180deg, rgba(6,10,8,.55) 0%, rgba(6,10,8,.86) 45%, rgba(6,10,8,.97) 100%),
+      /* BOARD BACKDROP — World Cup photo. AFTER THE TOURNAMENT: swap
+         'wc-bg.jpg' below for the new season image (one line, nothing else). */
+      url('wc-bg.jpg'),
       /* chalk pitch markings — the signature. Faint, fixed, everywhere. */
       url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1400 900'%3E%3Cg fill='none' stroke='%23ffffff' stroke-opacity='.045' stroke-width='2'%3E%3Cline x1='700' y1='0' x2='700' y2='900'/%3E%3Ccircle cx='700' cy='450' r='120'/%3E%3Ccircle cx='700' cy='450' r='4' fill='%23ffffff' fill-opacity='.05' stroke='none'/%3E%3Cpath d='M0 220 L170 220 L170 680 L0 680'/%3E%3Cpath d='M1400 220 L1230 220 L1230 680 L1400 680'/%3E%3Cpath d='M170 370 A105 105 0 0 1 170 530'/%3E%3Cpath d='M1230 370 A105 105 0 0 0 1230 530'/%3E%3C/g%3E%3C/svg%3E"),
       radial-gradient(1000px 520px at 15% -6%, rgba(62,207,110,.14), transparent 60%),
       radial-gradient(820px 620px at 96% 0%, rgba(62,207,110,.07), transparent 55%),
       radial-gradient(760px 760px at 50% 118%, rgba(62,207,110,.05), transparent 60%);
-    background-size:cover, auto, auto, auto;
-    background-position:center top, 0 0, 0 0, 0 0;
+    background-size:auto, cover, cover, auto, auto, auto;
+    background-position:0 0, center 15%, center top, 0 0, 0 0, 0 0;
     background-attachment:fixed;
   }
   .display{ font-family:'Saira Condensed','Schibsted Grotesk',sans-serif; letter-spacing:.015em; }
@@ -124,6 +129,18 @@
   .lg-chev{ transition:transform .2s; }
   .match-line{ transition:background .12s; }
   .match-line:hover{ background:rgba(238,244,238,.025); }
+  /* CONSENSUS-CARD LOOK — every engine row rendered as a gold-bordered card
+     (matches the World Cup hub's Consensus Bankers design). */
+  .match-item{ background:#0c0c0f; border:1px solid rgba(250,204,21,.3);
+    border-radius:16px; margin:0 0 18px 0; overflow:hidden;
+    transition:transform .25s cubic-bezier(.4,0,.2,1), border-color .25s, box-shadow .25s; }
+  .match-item:hover{ transform:translateY(-3px); border-color:rgba(250,204,21,.55);
+    box-shadow:0 10px 30px rgba(0,0,0,.45); }
+  .match-item[open]{ border-color:rgba(250,204,21,.6); }
+  .match-item .match-line{ padding-top:1rem; padding-bottom:1rem; }
+  .match-item summary::-webkit-details-marker{ display:none; }
+  /* panels holding the lists go glassy so the backdrop reads through */
+  #matches-root{ background:transparent; }
   /* banker rows carry the GOAL-LINE: gold edge + faint gold wash */
   .is-banker-row{ box-shadow:inset 3px 0 0 var(--banker);
     background-image:linear-gradient(90deg, rgba(242,193,78,.05), transparent 30%); }
@@ -808,7 +825,33 @@ function renderStrip(){
     }
     return `<button class="date-pill ${d===activeDate?'active':''}" data-date="${d}">${dayLabel(d)} <span class="opacity-60">${has}</span></button>`;
   }).join('');
-  el.querySelectorAll('.date-pill[data-date]').forEach(b=> b.addEventListener('click',()=>{ activeDate=b.dataset.date; renderAll(); }));
+  el.querySelectorAll('.date-pill[data-date]').forEach(b=> b.addEventListener('click',()=>{ activeDate=b.dataset.date; renderAll();
+
+/* ===== CLEAN BOARD: hide No Bet rows everywhere =====
+   One observer instead of editing every engine renderer: whenever any list
+   re-renders, rows whose pick is "No Bet" are hidden and a single muted count
+   keeps the honesty ("engines declined N games"). Works for all engines. */
+(function(){
+  const isNoBet = el => /\bNo Bet\b/.test((el.querySelector('summary')||el).textContent||'');
+  function sweep(root){
+    const items=[...root.querySelectorAll('.match-item')];
+    if(!items.length) return;
+    let hidden=0;
+    items.forEach(el=>{ if(isNoBet(el)&&el.dataset.banker!=='1'){ el.style.display='none'; el.dataset.nobetHidden='1'; hidden++; } });
+    const old=root.querySelector('.nobet-count'); if(old) old.remove();
+    if(hidden>0){
+      const note=document.createElement('div');
+      note.className='nobet-count';
+      note.style.cssText='color:var(--muted);font-size:.75rem;text-align:center;padding:10px 0 2px';
+      note.textContent=`Engines declined ${hidden} game${hidden>1?'s':''} today (honest No Bets) — hidden for a cleaner board.`;
+      root.appendChild(note);
+    }
+  }
+  const root=document.getElementById('matches-root');
+  if(root){ sweep(root); new MutationObserver(muts=>{
+    if(muts.some(m=>[...m.addedNodes].some(n=>n.nodeType===1&&(n.matches&&n.matches('.match-item')||n.querySelector&&n.querySelector('.match-item'))))) sweep(root);
+  }).observe(root,{childList:true,subtree:false}); }
+})(); }));
 }
 
 /* ============ TOP PREDICTION CARDS (active date bankers, top 6) ============ */
