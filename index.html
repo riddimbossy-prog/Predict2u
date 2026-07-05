@@ -282,7 +282,6 @@
           <option value="trend">League Trend</option>
           <option value="streaks">Streaks</option>
           <option value="halves">Halves (HT/FT)</option>
-          <option value="calibedges">⚡ Calibration Edges</option>
           <option value="mismatch">Mismatch</option>
         </select>
         <span style="position:absolute;right:10px;top:50%;transform:translateY(-50%);pointer-events:none;color:var(--muted);font-size:10px">▼</span>
@@ -883,7 +882,6 @@ function renderMatches(){
   if(engineMode==='trend'){ renderTrendMatches(); return; }
   if(engineMode==='streaks'){ renderStreakMatches(); return; }
   if(engineMode==='halves'){ renderHalvesMatches(); return; }
-  if(engineMode==='calibedges'){ renderCalibEdges(); return; }
   if(engineMode==='mismatch'){ renderMismatchMatches(); return; }
   if(engineMode==='acca'){ renderAccaMatches(); return; }
   const root = document.getElementById('matches-root');
@@ -1527,84 +1525,6 @@ function renderStreakMatches(){
 
 function renderHalvesMatches(){ return renderFnEngineMatches(typeof halvesRecommend!=='undefined'?halvesRecommend:null,'HT/FT'); }
 
-// CALIBRATION EDGES: scan every match's oddsCalib ledger, dedupe to unique
-// league+market+band cells, compute edge = real hit% − implied% (from the mid
-// price of the band), and rank. Positive edge = the market lands MORE than the
-// price implies here (value to back). Negative = a trap (avoid). Whole-ledger,
-// not today's card — an edge is a league property. Grows as the board runs.
-function renderCalibEdges(){
-  const host=document.getElementById('matches-root');
-  // implied prob from the midpoint of each band (rough, for edge signal only)
-  const bandMid={"1.20-1.44":1.32,"1.45-1.69":1.57,"1.70-1.99":1.84,"2.00-2.49":2.24,"2.50+":3.0};
-  const seen=new Set(); const cells=[];
-  for(const m of MATCHES){
-    if(!m||!m.oddsCalib) continue;
-    const L=m.league||"?";
-    for(const [mk,bands] of Object.entries(m.oddsCalib)){
-      for(const [band,v] of Object.entries(bands)){
-        const key=L+"|"+mk+"|"+band; if(seen.has(key)) continue; seen.add(key);
-        if(!v||v.n<5) continue;
-        const implied=1/(bandMid[band]||2); // ~ probability the price implies
-        const edge=v.hit-implied;            // + = beats the price
-        cells.push({L,mk,band,n:v.n,hit:v.hit,implied,edge});
-      }
-    }
-  }
-  if(!cells.length){
-    host.innerHTML='<div class="p-6 text-center" style="color:var(--muted)">No calibration edges yet — the ledger fills as settled games with captured odds accumulate. Deploy the calib.js fix and give it a few days of runs.</div>';
-    return;
-  }
-  cells.sort((a,b)=>b.edge-a.edge);
-  // weight confidence by sample: only surface n>=8 in the headline lists, but
-  // show all in the full table below.
-  const strong=cells.filter(c=>c.n>=8);
-  const back=strong.filter(c=>c.edge>=0.10).slice(0,15);
-  const avoid=strong.filter(c=>c.edge<=-0.10).sort((a,b)=>a.edge-b.edge).slice(0,15);
-
-  const pct=x=>Math.round(x*100)+"%";
-  const edgeCell=e=>{
-    const v=Math.round(e*100), col=e>=0.10?"#16a34a":e<=-0.10?"#dc2626":"var(--muted)";
-    return `<span style="color:${col};font-weight:700">${v>0?'+':''}${v}pts</span>`;
-  };
-  const row=c=>`<tr style="border-top:1px solid var(--line)">
-    <td style="padding:8px 10px;font-weight:600">${c.L}</td>
-    <td style="padding:8px 10px">${c.mk}</td>
-    <td style="padding:8px 10px;font-variant-numeric:tabular-nums">${c.band}</td>
-    <td style="padding:8px 10px;text-align:center;font-variant-numeric:tabular-nums">${pct(c.hit)}</td>
-    <td style="padding:8px 10px;text-align:center;font-variant-numeric:tabular-nums;color:var(--muted)">${pct(c.implied)}</td>
-    <td style="padding:8px 10px;text-align:center">${edgeCell(c.edge)}</td>
-    <td style="padding:8px 10px;text-align:center;font-variant-numeric:tabular-nums;color:var(--muted)">${c.n}</td>
-  </tr>`;
-  const tbl=rows=>`<div style="overflow-x:auto"><table style="width:100%;border-collapse:collapse;font-size:.85rem">
-    <thead><tr style="color:var(--muted);text-align:left;font-size:.72rem;text-transform:uppercase;letter-spacing:.04em">
-      <th style="padding:8px 10px">League</th><th style="padding:8px 10px">Market</th>
-      <th style="padding:8px 10px">Band</th><th style="padding:8px 10px;text-align:center">Real</th>
-      <th style="padding:8px 10px;text-align:center">Implied</th><th style="padding:8px 10px;text-align:center">Edge</th>
-      <th style="padding:8px 10px;text-align:center">Games</th></tr></thead>
-    <tbody>${rows.map(row).join('')}</tbody></table></div>`;
-
-  const sect=(title,sub,rows,accent)=> rows.length?`
-    <div class="panel" style="border-radius:14px;overflow:hidden;margin-bottom:16px;border:1px solid var(--line)">
-      <div style="padding:12px 14px;border-left:4px solid ${accent}">
-        <div style="font-weight:700">${title}</div>
-        <div style="color:var(--muted);font-size:.78rem">${sub}</div>
-      </div>${tbl(rows)}
-    </div>`:'';
-
-  host.innerHTML=`
-    <div style="color:var(--muted);font-size:.8rem;margin-bottom:14px;line-height:1.5">
-      Mined from ${cells.length} price-band cells across ${new Set(cells.map(c=>c.L)).size} leagues in your own settled history.
-      <b>Edge</b> = how far the real hit rate beats (green) or trails (red) what the band's price implies.
-      Only bands with 8+ settled games appear in the highlights. Not financial advice — verify lineups and motivation before betting.
-    </div>
-    ${sect("✅ Strongest edges to back","Markets that land far MORE often than their price implies in this league.",back,"#16a34a")}
-    ${sect("⛔ Traps to avoid","Short-priced markets that land far LESS often than the price implies — the board strips these automatically.",avoid,"#dc2626")}
-    <details style="margin-top:8px">
-      <summary style="cursor:pointer;color:var(--muted);font-size:.82rem;padding:6px 0">Show all ${cells.length} calibration cells</summary>
-      <div style="margin-top:10px">${tbl(cells)}</div>
-    </details>`;
-}
-
 function renderMismatchMatches(){ return renderFnEngineMatches(typeof mismatchRecommend!=='undefined'?mismatchRecommend:null,'mismatch-alignment'); }
 function renderFnEngineMatches(engFn,label){
   const host=document.getElementById('matches-root');
@@ -2001,7 +1921,6 @@ const ENGINE_HERO={
   trend:   {t:"Trend's pattern ", g:"bankers for today", s:"Positional history — what leaders at home, mid-table meetings and top-4 clashes actually produce in this league."},
   streaks: {t:"Streaks' pattern ", g:"bankers for today", s:"Live runs across every market — wins, goals, GG, clean sheets — confirmed by the opponent's record and the league's trend."},
   halves:  {t:"Halves' HT/FT ", g:"bankers for today", s:"Built purely from half-time behaviour — lead-holders, comeback kings, fast and slow starters. Honest No Bet when the sample's too thin."},
-  calibedges: {t:"Calibration ", g:"edges across your leagues", s:"Where a price band's REAL hit rate — from the board's own settled history — most beats or trails what the odds imply. Grows sharper every day the board runs. Back the green, avoid the red."},
   mismatch:{t:"Mismatch's aligned ", g:"bankers for today", s:"Fires only when both teams' venue profiles point the same direction — two arrows, one market."}
 };
 function updateHero(){
