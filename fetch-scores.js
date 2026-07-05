@@ -12,6 +12,7 @@ const fs = require("fs");
 const path = require("path");
 const https = require("https");
 const { buildOddsCalib } = require("./calib");
+const { updateTeamProfiles, attachProfiles } = require("./team-profiles");
 const HERE = __dirname;
 
 function readConfig() {
@@ -172,6 +173,8 @@ function loadExistingMatches() {
   // a ledger and silently wipes calibration off every match (the bug fix).
   {
     const r = buildOddsCalib(matches);
+    const tp = updateTeamProfiles(matches); const ta = attachProfiles(matches);
+    console.log(`Team profiles refreshed on scores write: ${tp.teams} teams, attached to ${ta.attached} match-sides.`);
     console.log(`Odds calibration rebuilt on scores write: ${r.leagues} leagues, attached to ${r.attached} matches.`);
   }
 
