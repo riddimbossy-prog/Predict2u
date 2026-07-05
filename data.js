@@ -1,5 +1,5 @@
 window.DATA_UPDATED = "2026-07-05T02:04:07.486Z";
-window.SCORES_UPDATED = "2026-07-05T03:25:26.378Z";
+window.SCORES_UPDATED = "2026-07-05T03:30:54.500Z";
 window.MATCHES = [
   {
     "home": "Mexico",
@@ -6931,11 +6931,11 @@ window.MATCHES = [
     "awayLogo": "https://media.api-sports.io/football/teams/25487.png",
     "country": "USA",
     "flag": "https://media.api-sports.io/flags/us.svg",
-    "status": "NS",
+    "status": "FT",
     "kickoff": "2026-07-05T00:30:00+00:00",
     "matchDate": "2026-07-05",
-    "homeGoals": null,
-    "awayGoals": null,
+    "homeGoals": 0,
+    "awayGoals": 2,
     "homePos": 5,
     "awayPos": null,
     "tableSize": 144,
@@ -8175,7 +8175,7 @@ window.MATCHES = [
     "xgAwayReal": 1.46,
     "awayXgAgainst": 1.83,
     "lineupConfirmed": true,
-    "elapsed": 84
+    "elapsed": 89
   },
   {
     "home": "Las Vegas Lights",
@@ -8186,10 +8186,10 @@ window.MATCHES = [
     "awayLogo": "https://media.api-sports.io/football/teams/3993.png",
     "country": "USA",
     "flag": "https://media.api-sports.io/flags/us.svg",
-    "status": "1H",
+    "status": "HT",
     "kickoff": "2026-07-05T02:30:00+00:00",
     "matchDate": "2026-07-05",
-    "homeGoals": 0,
+    "homeGoals": 1,
     "awayGoals": 1,
     "homePos": 11,
     "awayPos": 9,
