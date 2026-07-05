@@ -1,5 +1,5 @@
 window.DATA_UPDATED = "2026-07-05T02:04:07.486Z";
-window.SCORES_UPDATED = "2026-07-05T03:15:33.113Z";
+window.SCORES_UPDATED = "2026-07-05T03:20:47.755Z";
 window.MATCHES = [
   {
     "home": "Mexico",
@@ -8175,7 +8175,7 @@ window.MATCHES = [
     "xgAwayReal": 1.46,
     "awayXgAgainst": 1.83,
     "lineupConfirmed": true,
-    "elapsed": 74
+    "elapsed": 79
   },
   {
     "home": "Las Vegas Lights",
@@ -8392,7 +8392,7 @@ window.MATCHES = [
     "xgReal": true,
     "xgAwayReal": 1.21,
     "awayXgAgainst": 1.57,
-    "elapsed": 38
+    "elapsed": 43
   },
   {
     "home": "Canberra FC",
