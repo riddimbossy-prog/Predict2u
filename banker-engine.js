@@ -2644,38 +2644,16 @@ function trendRecommend(m){
   }
   if(!best) return trendOut(m,"No Bet",null,"NO BET",null,
     [`${cands[0].why} But the odds ladder rejected every pattern market.`]);
-  let grade=best.sc>=11?"Elite Banker":best.sc>=9?"Banker":"Strong Pick";
+  const grade=best.sc>=11?"Elite Banker":best.sc>=9?"Banker":"Strong Pick";
   const reasons=[best.why]; if(best.gateNote)reasons.push(best.gateNote);
   reasons.push(`Sample ${best.n} matches; hit rate ${Math.round(best.rate*100)}%.`);
 
-  // ---- ODDS-CALIBRATION LAYER for the Trend engine (owner spec: "the Trend
-  // engine citing it"). The tier-pattern above is a POSITIONAL read; this is a
-  // PRICE read from the board's own settled history: how THIS market at THIS
-  // price band actually landed in THIS league. If the price band historically
-  // underperforms, strip the banker; if it strongly confirms, cite it; else
-  // just note it. Same ledger every other engine uses (via oddsCalibFor).
-  let calibTag=null;
-  const tc = (typeof oddsCalibFor==='function') ? oddsCalibFor(m, best.mk) : null;
-  if(tc){
-    const pct=Math.round(tc.hit*100), imp=Math.round((1/tc.price)*100);
-    if(tc.n>=10 && tc.hit<=0.55){
-      // real, well-sampled underperformance at this price -> demote off banker
-      if(grade==="Elite Banker"||grade==="Banker") grade="Strong Pick";
-      reasons.push(`League odds history: ${best.mk} at ${tc.band} lands only ${pct}% here (${tc.n} games) — trend banker stripped.`);
-      calibTag="stripped";
-    } else if(tc.n>=8 && tc.hit>=0.78){
-      reasons.push(`League odds history backs it: ${best.mk} at ${tc.band} lands ${pct}% here vs ${imp}% implied (${tc.n} games).`);
-      calibTag="backed";
-    } else if(tc.n>=8){
-      reasons.push(`League odds history: ${best.mk} at ${tc.band} lands ${pct}% here (${tc.n} games).`);
-      calibTag="noted";
-    }
-  }
-
+  // Calibration is applied universally by withIntlFrame (applyCalibration) as the
+  // final transform, so the Trend engine — like every other — is graded by real
+  // price-band history without a bespoke block here.
   const out=trendOut(m,best.mk,grade,grade.toUpperCase(),null,reasons);
   out.bet=true; out.banker=(grade!=="Strong Pick"); out.grade=grade;
   out.confidence=best.sc>=11?10:best.sc>=9?8:7;
-  if(calibTag) out.overlay={...(out.overlay||{}), calib:calibTag};
   return out;
 }
 
@@ -3814,6 +3792,79 @@ function overlayIsTeamMarket(mk){
   return /(home|away).*(win|dnb)|^(home|away) win|dnb|double chance|ht draw.*win|team over|team under/i.test(mk)
          && !/^over|^under|^btts/i.test(mk);
 }
+// ============================================================================
+// UNIFIED CALIBRATION — the single, authoritative way price-band history shapes
+// EVERY engine's prediction. Called as the FINAL transform on every pick (via
+// withIntlFrame), so all 12 engines are graded by the same real-history input
+// rather than each annotating differently. Tiers, from the board's own settled
+// results for THIS market at THIS price band in THIS league:
+//   VETO   n>=12 & hit<=0.45  -> pick is a proven trap here; No Bet.
+//   STRIP  n>=10 & hit<=0.58  -> demote off banker, cut confidence.
+//   TRIM   n>=8  & hit< impliedPlus -> underperforms its price; -1 confidence.
+//   BOOST  n>=8  & hit>=0.80  -> strongly confirmed; +1 confidence, allow banker.
+//   BACK   n>=8  & hit>=0.72  -> confirmed; small note, no downgrade.
+//   NOTE   otherwise          -> cite the number, no score change.
+// Sample-gated so thin history never moves a pick. Confidence stays within 0..10.
+// ============================================================================
+function applyCalibration(m, mk, res){
+  if(!res || res.bet===false || !mk || mk==="No Bet") return res;
+  if(res.overlay && res.overlay.calibApplied) return res; // idempotent — never double-apply
+  const c = (typeof oddsCalibFor==='function') ? oddsCalibFor(m, mk) : null;
+  if(!c) return res;
+  const pct = Math.round(c.hit*100);
+  const implied = 1 / c.price;                 // what the price says should happen
+  const impPct = Math.round(implied*100);
+  const conf = typeof res.confidence==='number' ? res.confidence : (res.banker?8:6);
+  const tag = t => ({ ...(res.overlay||{}), calib:t, calibApplied:true });
+  const note = (extra=[]) => [...(res.reasons||[]), ...extra];
+
+  // VETO — a proven trap: lands far below even a coin-flip on a real sample.
+  if(c.n>=12 && c.hit<=0.45){
+    return { ...res, bet:false, banker:false, primary:"No Bet", market:"No Bet",
+      grade:null, confidence:0,
+      verdict:`No Bet — league odds history: ${mk} at ${c.band} has landed only ${pct}% across ${c.n} settled games here (price implies ${impPct}%). A proven trap in this league.`,
+      reasons:note([`Calibration veto: ${mk} at ${c.band} = ${pct}% over ${c.n} games (implied ${impPct}%).`]),
+      overlay:tag("veto") };
+  }
+  // STRIP — reliably underperforms: keep as a pick but off banker, cut conviction.
+  if(c.n>=10 && c.hit<=0.58){
+    return { ...res, banker:false,
+      grade:(res.grade==="Elite Banker"||res.grade==="Banker")?"Strong Pick":res.grade,
+      confidence: Math.max(4, conf-2),
+      reasons:note([`Calibration: ${mk} at ${c.band} lands only ${pct}% here (${c.n} games, implied ${impPct}%) — banker stripped, conviction cut.`]),
+      overlay:tag("stripped") };
+  }
+  // BOOST — strongly confirmed by history: raise conviction, allow banker status.
+  if(c.n>=8 && c.hit>=0.80){
+    const boosted = Math.min(10, conf+1);
+    const promote = !res.banker && c.hit>=0.85 && c.n>=10;
+    return { ...res,
+      banker: res.banker || promote,
+      grade: promote && (res.grade==="Strong Pick"||!res.grade) ? "Banker" : res.grade,
+      confidence: boosted,
+      reasons:note([`Calibration backs it: ${mk} at ${c.band} lands ${pct}% here vs ${impPct}% implied (${c.n} games)${promote?" — promoted to banker.":"."}`]),
+      overlay:tag("backed") };
+  }
+  // TRIM — below what its price implies (with a margin) on a decent sample: -1.
+  if(c.n>=8 && c.hit < (implied - 0.08)){
+    return { ...res, confidence: Math.max(4, conf-1),
+      reasons:note([`Calibration: ${mk} at ${c.band} lands ${pct}% here, under its ${impPct}% price (${c.n} games) — conviction trimmed.`]),
+      overlay:tag("trimmed") };
+  }
+  // BACK — solidly confirmed, no change beyond the cite.
+  if(c.n>=8 && c.hit>=0.72){
+    return { ...res,
+      reasons:note([`Calibration confirms: ${mk} at ${c.band} lands ${pct}% here (${c.n} games).`]),
+      overlay:tag("backed") };
+  }
+  // NOTE — enough sample to mention, not enough signal to move the pick.
+  if(c.n>=8){
+    return { ...res,
+      reasons:note([`League odds history: ${mk} at ${c.band} lands ${pct}% here (${c.n} games).`]),
+      overlay:tag("noted") };
+  }
+  return res;
+}
 function overlayApply(m, res){
   if(!res || res.bet===false || res.awaitingOdds) return res;
   const mk=String(res.primary||res.market||""); if(!mk||mk==="No Bet") return res;
@@ -3851,18 +3902,7 @@ function overlayApply(m, res){
   const backsHome=/(^|\s)home (win|dnb)|double chance 1x|ht draw \/ ft home/i.test(mk);
   const backsAway=/(^|\s)away (win|dnb)|double chance x2|ht draw \/ ft away/i.test(mk);
   if(!backsHome&&!backsAway){
-    const c=oddsCalibFor(m,mk);
-    if(c){
-      const pct=Math.round(c.hit*100);
-      if(res.banker&&c.n>=10&&c.hit<=0.55)
-        return { ...res, banker:false, grade:"Strong Pick",
-          reasons:[...(res.reasons||[]), `League odds history: ${mk} at ${c.band} lands only ${pct}% here (${c.n} games) — banker stripped.`],
-          overlay:{...(res.overlay||{}), calib:"stripped"} };
-      if(c.n>=8)
-        return { ...res, reasons:[...(res.reasons||[]), `League odds history: ${mk} at ${c.band} lands ${pct}% here (${c.n} games).`],
-          overlay:{...(res.overlay||{}), calib:c.hit>=0.78?"backed":"noted"} };
-    }
-    return res;
+    return applyCalibration(m, mk, res);
   }
   const veto=(why)=>({ ...res, bet:false, banker:false, primary:"No Bet", market:"No Bet", grade:null, confidence:0,
     verdict:`No Bet — overlay: ${why} (engine wanted ${mk}).`,
@@ -3882,30 +3922,23 @@ function overlayApply(m, res){
     return calibPass({ ...res, reasons:[...(res.reasons||[]), `Overlay: ${soft} — proceed with caution.`], overlay:{rule:"venue-soft"} });
   }
   return calibPass({ ...res, reasons:[...(res.reasons||[]), `Overlay: venue splits confirm ${mk}.`], overlay:{rule:"confirmed"} });
-  // ---- ODDS-CALIBRATION LAYER (owner spec): this league's REAL hit rate for
-  // this market at this price band, from the board's own settled history.
-  // NOTE: this function declaration sits after overlayApply's return statements
-  // on purpose — it is reached via JS function hoisting by the calibPass(...)
-  // calls above. It is NOT dead code. Do not "clean up" by moving or converting
-  // it to a const expression; that would break the calls that precede it.
+  // ---- ODDS-CALIBRATION LAYER: delegates to the single unified applyCalibration
+  // so venue-split picks are graded by the SAME price-band history logic as every
+  // other path. NOTE: reached via JS function hoisting by the calibPass(...) calls
+  // above — it is NOT dead code. Do not move or convert to a const expression.
   function calibPass(r){
-    const c=oddsCalibFor(m, mk); if(!c) return r;
-    const pct=Math.round(c.hit*100), imp=Math.round((1/c.price)*100);
-    if(r.banker && c.n>=10 && c.hit<=0.55)
-      return { ...r, banker:false, grade:"Strong Pick",
-        reasons:[...(r.reasons||[]), `League odds history: ${mk} at ${c.band} lands only ${pct}% here (${c.n} games) — banker stripped.`],
-        overlay:{...(r.overlay||{}), calib:"stripped"} };
-    if(c.n>=8 && c.hit>=0.78)
-      return { ...r, reasons:[...(r.reasons||[]), `League odds history backs it: ${mk} at ${c.band} lands ${pct}% here vs ${imp}% implied (${c.n} games).`],
-        overlay:{...(r.overlay||{}), calib:"backed"} };
-    if(c.n>=8)
-      return { ...r, reasons:[...(r.reasons||[]), `League odds history: ${mk} at ${c.band} lands ${pct}% here (${c.n} games).`],
-        overlay:{...(r.overlay||{}), calib:"noted"} };
-    return r;
+    return applyCalibration(m, mk, r);
   }
 }
 function withIntlFrame(fn){
-  return function(m){ return overlayApply(m, intlFrameApply(m, fn(m))); };
+  return function(m){
+    const res = overlayApply(m, intlFrameApply(m, fn(m)));
+    // FINAL word: unified calibration grades every engine's pick by real
+    // price-band history. Idempotent — if the overlay already applied it, this
+    // is a no-op; otherwise it applies here so no engine is missed.
+    const mk = res && String(res.primary||res.market||"");
+    return applyCalibration(m, mk, res);
+  };
 }
 const legacyRecommend = recommend;
 recommend = v3Recommend;                     // spec v3.0 replaces the Normal engine
