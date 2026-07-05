@@ -1,5 +1,5 @@
 window.DATA_UPDATED = "2026-07-05T02:04:07.486Z";
-window.SCORES_UPDATED = "2026-07-05T02:25:30.284Z";
+window.SCORES_UPDATED = "2026-07-05T02:30:56.049Z";
 window.MATCHES = [
   {
     "home": "Mexico",
@@ -7118,7 +7118,7 @@ window.MATCHES = [
     "awayLogo": "https://media.api-sports.io/football/teams/2343.png",
     "country": "Chile",
     "flag": "https://media.api-sports.io/flags/cl.svg",
-    "status": "2H",
+    "status": "FT",
     "kickoff": "2026-07-05T00:30:00+00:00",
     "matchDate": "2026-07-05",
     "homeGoals": 2,
@@ -7303,7 +7303,7 @@ window.MATCHES = [
       "dcx2": 2.95
     },
     "h2h": null,
-    "elapsed": 90
+    "elapsed": null
   },
   {
     "home": "San Diego Wave W",
@@ -7521,7 +7521,7 @@ window.MATCHES = [
     "xgAwayReal": 1.15,
     "awayXgAgainst": 1.65,
     "lineupConfirmed": true,
-    "elapsed": 77
+    "elapsed": 83
   },
   {
     "home": "Colorado Springs",
@@ -7739,7 +7739,7 @@ window.MATCHES = [
     "xgAwayReal": 1.58,
     "awayXgAgainst": 2.24,
     "lineupConfirmed": true,
-    "elapsed": 61
+    "elapsed": 66
   },
   {
     "home": "San Antonio",
@@ -7957,7 +7957,7 @@ window.MATCHES = [
     "xgAwayReal": 1.09,
     "awayXgAgainst": 2.16,
     "lineupConfirmed": true,
-    "elapsed": 59
+    "elapsed": 65
   },
   {
     "home": "New Mexico United",
@@ -7968,7 +7968,7 @@ window.MATCHES = [
     "awayLogo": "https://media.api-sports.io/football/teams/10874.png",
     "country": "USA",
     "flag": "https://media.api-sports.io/flags/us.svg",
-    "status": "1H",
+    "status": "HT",
     "kickoff": "2026-07-05T01:30:00+00:00",
     "matchDate": "2026-07-05",
     "homeGoals": 2,
