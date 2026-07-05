@@ -2644,12 +2644,38 @@ function trendRecommend(m){
   }
   if(!best) return trendOut(m,"No Bet",null,"NO BET",null,
     [`${cands[0].why} But the odds ladder rejected every pattern market.`]);
-  const grade=best.sc>=11?"Elite Banker":best.sc>=9?"Banker":"Strong Pick";
+  let grade=best.sc>=11?"Elite Banker":best.sc>=9?"Banker":"Strong Pick";
   const reasons=[best.why]; if(best.gateNote)reasons.push(best.gateNote);
   reasons.push(`Sample ${best.n} matches; hit rate ${Math.round(best.rate*100)}%.`);
+
+  // ---- ODDS-CALIBRATION LAYER for the Trend engine (owner spec: "the Trend
+  // engine citing it"). The tier-pattern above is a POSITIONAL read; this is a
+  // PRICE read from the board's own settled history: how THIS market at THIS
+  // price band actually landed in THIS league. If the price band historically
+  // underperforms, strip the banker; if it strongly confirms, cite it; else
+  // just note it. Same ledger every other engine uses (via oddsCalibFor).
+  let calibTag=null;
+  const tc = (typeof oddsCalibFor==='function') ? oddsCalibFor(m, best.mk) : null;
+  if(tc){
+    const pct=Math.round(tc.hit*100), imp=Math.round((1/tc.price)*100);
+    if(tc.n>=10 && tc.hit<=0.55){
+      // real, well-sampled underperformance at this price -> demote off banker
+      if(grade==="Elite Banker"||grade==="Banker") grade="Strong Pick";
+      reasons.push(`League odds history: ${best.mk} at ${tc.band} lands only ${pct}% here (${tc.n} games) — trend banker stripped.`);
+      calibTag="stripped";
+    } else if(tc.n>=8 && tc.hit>=0.78){
+      reasons.push(`League odds history backs it: ${best.mk} at ${tc.band} lands ${pct}% here vs ${imp}% implied (${tc.n} games).`);
+      calibTag="backed";
+    } else if(tc.n>=8){
+      reasons.push(`League odds history: ${best.mk} at ${tc.band} lands ${pct}% here (${tc.n} games).`);
+      calibTag="noted";
+    }
+  }
+
   const out=trendOut(m,best.mk,grade,grade.toUpperCase(),null,reasons);
   out.bet=true; out.banker=(grade!=="Strong Pick"); out.grade=grade;
   out.confidence=best.sc>=11?10:best.sc>=9?8:7;
+  if(calibTag) out.overlay={...(out.overlay||{}), calib:calibTag};
   return out;
 }
 
@@ -3858,6 +3884,10 @@ function overlayApply(m, res){
   return calibPass({ ...res, reasons:[...(res.reasons||[]), `Overlay: venue splits confirm ${mk}.`], overlay:{rule:"confirmed"} });
   // ---- ODDS-CALIBRATION LAYER (owner spec): this league's REAL hit rate for
   // this market at this price band, from the board's own settled history.
+  // NOTE: this function declaration sits after overlayApply's return statements
+  // on purpose — it is reached via JS function hoisting by the calibPass(...)
+  // calls above. It is NOT dead code. Do not "clean up" by moving or converting
+  // it to a const expression; that would break the calls that precede it.
   function calibPass(r){
     const c=oddsCalibFor(m, mk); if(!c) return r;
     const pct=Math.round(c.hit*100), imp=Math.round((1/c.price)*100);
