@@ -1,5 +1,5 @@
 window.DATA_UPDATED = "2026-07-05T00:03:26.838Z";
-window.SCORES_UPDATED = "2026-07-05T00:20:42.004Z";
+window.SCORES_UPDATED = "2026-07-05T00:25:27.254Z";
 window.MATCHES = [
   {
     "home": "Barcelona SC",
@@ -216,7 +216,7 @@ window.MATCHES = [
     "xgReal": true,
     "xgAwayReal": 0.86,
     "awayXgAgainst": 1.16,
-    "elapsed": 20
+    "elapsed": 25
   },
   {
     "home": "Louisville City",
@@ -433,7 +433,7 @@ window.MATCHES = [
     "xgReal": true,
     "xgAwayReal": 1.37,
     "awayXgAgainst": 1.23,
-    "elapsed": 14
+    "elapsed": 19
   },
   {
     "home": "Brazos Valley",
@@ -50848,7 +50848,7 @@ window.MATCHES = [
       "dcx2": 1.62
     },
     "h2h": null,
-    "elapsed": 88
+    "elapsed": 90
   },
   {
     "home": "Goias",
@@ -51066,7 +51066,7 @@ window.MATCHES = [
     "xgAwayReal": 0.95,
     "awayXgAgainst": 1.3,
     "lineupConfirmed": true,
-    "elapsed": 61
+    "elapsed": 66
   },
   {
     "home": "Pittsburgh Riverhounds",
@@ -51284,7 +51284,7 @@ window.MATCHES = [
     "xgAwayReal": 1.19,
     "awayXgAgainst": 1.6,
     "lineupConfirmed": true,
-    "elapsed": 14
+    "elapsed": 18
   },
   {
     "home": "Oriental",
@@ -51471,7 +51471,7 @@ window.MATCHES = [
     "round": "2nd Phase - 9",
     "odds": null,
     "h2h": null,
-    "elapsed": 60
+    "elapsed": 65
   },
   {
     "home": "Guarani Campinas",
@@ -52093,7 +52093,7 @@ window.MATCHES = [
     "xgAwayReal": 1.21,
     "awayXgAgainst": 1.48,
     "lineupConfirmed": true,
-    "elapsed": 42
+    "elapsed": 45
   },
   {
     "home": "Rhode Island",
@@ -52311,7 +52311,7 @@ window.MATCHES = [
     "xgAwayReal": 1.2,
     "awayXgAgainst": 1.43,
     "lineupConfirmed": true,
-    "elapsed": 42
+    "elapsed": 45
   },
   {
     "home": "Fortaleza EC",
