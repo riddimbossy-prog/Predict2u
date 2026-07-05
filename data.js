@@ -1,5 +1,5 @@
 window.DATA_UPDATED = "2026-07-04T22:05:04.488Z";
-window.SCORES_UPDATED = "2026-07-05T00:10:46.762Z";
+window.SCORES_UPDATED = "2026-07-05T00:15:34.818Z";
 window.MATCHES = [
   {
     "home": "Barcelona SC",
@@ -13,7 +13,7 @@ window.MATCHES = [
     "status": "1H",
     "kickoff": "2026-07-05T00:00:00+00:00",
     "matchDate": "2026-07-05",
-    "homeGoals": 0,
+    "homeGoals": 1,
     "awayGoals": 0,
     "homePos": 5,
     "awayPos": 3,
@@ -216,7 +216,7 @@ window.MATCHES = [
     "xgReal": true,
     "xgAwayReal": 0.89,
     "awayXgAgainst": 1.25,
-    "elapsed": 10
+    "elapsed": 15
   },
   {
     "home": "Louisville City",
@@ -433,7 +433,7 @@ window.MATCHES = [
     "xgReal": true,
     "xgAwayReal": 1.37,
     "awayXgAgainst": 1.23,
-    "elapsed": 4
+    "elapsed": 9
   },
   {
     "home": "Brazos Valley",
@@ -52080,7 +52080,7 @@ window.MATCHES = [
       "dcx2": 1.62
     },
     "h2h": null,
-    "elapsed": 78
+    "elapsed": 83
   },
   {
     "home": "Goias",
@@ -52297,7 +52297,7 @@ window.MATCHES = [
     "xgReal": true,
     "xgAwayReal": 0.95,
     "awayXgAgainst": 1.3,
-    "elapsed": 51
+    "elapsed": 56
   },
   {
     "home": "Pittsburgh Riverhounds",
@@ -52514,7 +52514,7 @@ window.MATCHES = [
     "xgReal": true,
     "xgAwayReal": 1.19,
     "awayXgAgainst": 1.6,
-    "elapsed": 4
+    "elapsed": 9
   },
   {
     "home": "Oriental",
@@ -52701,7 +52701,7 @@ window.MATCHES = [
     "round": "2nd Phase - 9",
     "odds": null,
     "h2h": null,
-    "elapsed": 51
+    "elapsed": 55
   },
   {
     "home": "Guarani Campinas",
@@ -52903,7 +52903,7 @@ window.MATCHES = [
       "dcx2": 2.55
     },
     "h2h": null,
-    "elapsed": 40
+    "elapsed": 44
   },
   {
     "home": "Ferroviária",
@@ -53105,7 +53105,7 @@ window.MATCHES = [
       "dcx2": 1.7
     },
     "h2h": null,
-    "elapsed": 40
+    "elapsed": 45
   },
   {
     "home": "North Carolina Courage W",
@@ -53322,7 +53322,7 @@ window.MATCHES = [
     "xgReal": true,
     "xgAwayReal": 1.21,
     "awayXgAgainst": 1.48,
-    "elapsed": 32
+    "elapsed": 37
   },
   {
     "home": "Rhode Island",
@@ -53539,7 +53539,7 @@ window.MATCHES = [
     "xgReal": true,
     "xgAwayReal": 1.2,
     "awayXgAgainst": 1.43,
-    "elapsed": 32
+    "elapsed": 37
   },
   {
     "home": "Fortaleza EC",
