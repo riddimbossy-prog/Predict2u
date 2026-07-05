@@ -20,6 +20,7 @@ const fs = require("fs");
 const path = require("path");
 const https = require("https");
 const { buildOddsCalib } = require("./calib");
+const { updateTeamProfiles, attachProfiles } = require("./team-profiles");
 const HERE = __dirname;
 
 function readConfig() {
@@ -985,6 +986,12 @@ const FINISHED = new Set(["FT","AET","PEN"]);
   {
     const r = buildOddsCalib(merged);
     console.log(`Odds calibration: ${r.leagues} league ledgers built, attached to ${r.attached} matches.`);
+    // Team-profile ledger: accumulate per-team evidence (season seed + settled
+    // rows + xG where measured), then attach each match's two profiles so the
+    // browser engine can read them from data.js (same pattern as oddsCalib).
+    const tp = updateTeamProfiles(merged);
+    const ta = attachProfiles(merged);
+    console.log(`Team profiles: ${tp.teams} teams in ledger (+${tp.rowsAdded} rows, ${tp.settledWithXg} with xG); attached to ${ta.attached} match-sides.`);
   }
 
   fs.writeFileSync(path.join(HERE, "data.js"),
