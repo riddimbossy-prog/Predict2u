@@ -84,7 +84,7 @@ function fmtDate(d){ return `${d.getFullYear()}-${String(d.getMonth()+1).padStar
 // Also assigns a league identity (Section 14) from the resulting rates.
 const LEAGUE_TREND_CACHE = {};
 const FINISHED_SET = new Set(["FT","AET","PEN","AWD","WO"]);
-async function getLeagueTrends(leagueId, season, key, sleepMs){
+async function getLeagueTrends(leagueId, season, key, sleepMs, table, tableSize){
   if (leagueId==null || !season) return null;
   const ck = `${leagueId}|${season}`;
   if (ck in LEAGUE_TREND_CACHE) return LEAGUE_TREND_CACHE[ck];
@@ -146,6 +146,40 @@ async function getLeagueTrends(leagueId, season, key, sleepMs){
       rates["Goal in Both Halves"]=R(gib,htSamp);
     }
     // rank markets ≥70% strongest-first, keep top 3 (Section 12/13)
+    // ---- TIER-PAIRING PATTERNS (owner spec): what matches between teams of
+    // specific table positions in THIS league historically produce.
+    // Tiers: LDR (1st), TOP (2-4), MID, BOT (last 4). Keyed home-first so
+    // "leader at home" patterns survive. Buckets need 6+ games to emit.
+    let tierPatterns = null;
+    if (table && tableSize) {
+      const tierOf = pos => pos==null?null : pos===1?"LDR" : pos<=4?"TOP" : pos>tableSize-4?"BOT" : "MID";
+      const B = {};
+      for (const g of games){
+        const hR=table[g.teams&&g.teams.home&&g.teams.home.id], aR=table[g.teams&&g.teams.away&&g.teams.away.id];
+        const th=tierOf(hR&&hR.rank), ta=tierOf(aR&&aR.rank);
+        if(!th||!ta) continue;
+        const h=g.goals.home, a=g.goals.away, tot=h+a;
+        const keys=[`${th}v${ta}`];
+        if((th==="LDR"||th==="TOP")&&(ta==="LDR"||ta==="TOP")) keys.push("TOP4vTOP4");
+        if(th==="LDR") keys.push("LDR_HOME");
+        for(const k of keys){
+          const b=B[k]=B[k]||{n:0,o15:0,o25:0,u25:0,u35:0,btts:0,homeWin:0,draw:0,awayWin:0,homeNoLoss:0};
+          b.n++; if(tot>=2)b.o15++; if(tot>=3)b.o25++; if(tot<=2)b.u25++; if(tot<=3)b.u35++;
+          if(h>0&&a>0)b.btts++; if(h>a)b.homeWin++; else if(h<a)b.awayWin++; else b.draw++;
+          if(h>=a)b.homeNoLoss++;
+        }
+      }
+      tierPatterns={};
+      for(const [k,b] of Object.entries(B)){
+        if(b.n<6) continue;
+        const r2=x=>Math.round((x/b.n)*100)/100;
+        tierPatterns[k]={ n:b.n, rates:{ "Over 1.5":r2(b.o15),"Over 2.5":r2(b.o25),"Under 2.5":r2(b.u25),"Under 3.5":r2(b.u35),
+          "BTTS Yes":r2(b.btts),"BTTS No":r2(b.n-b.btts),"Home Win":r2(b.homeWin),"Away Win":r2(b.awayWin),
+          "Draw":r2(b.draw),"Home No Loss":r2(b.homeNoLoss) } };
+      }
+      if(!Object.keys(tierPatterns).length) tierPatterns=null;
+    }
+
     const ranked = Object.entries(rates)
       .filter(([,v])=>v!=null && v>=0.70)
       .sort((a,b)=>b[1]-a[1]);
@@ -162,7 +196,7 @@ async function getLeagueTrends(leagueId, season, key, sleepMs){
       else if(homeWinR!=null && homeWinR>=0.50) identity="Home-Dominant";
       else if(drawR!=null && drawR>=0.32) identity="Volatile";
     }
-    result = { leagueId, season, sample:n, rates, top3, identity, gpg:gpg!=null?Math.round(gpg*100)/100:null };
+    result = { leagueId, season, sample:n, rates, top3, identity, tierPatterns, gpg:gpg!=null?Math.round(gpg*100)/100:null };
   } catch(e){ result = null; /* rate-limit or partial → NO BET for this league */ }
   LEAGUE_TREND_CACHE[ck] = result;
   return result;
@@ -730,7 +764,7 @@ const FINISHED = new Set(["FT","AET","PEN"]);
     // League Trend data (70-70-70 engine): real league-wide market hit-rates,
     // fetched once per league and cached. null if <50 matches or fetch failed.
     let leagueTrends = null;
-    try { leagueTrends = await getLeagueTrends(leagueId, seasonForStandings, cfg.API_KEY, SLEEP); requests++;
+    try { leagueTrends = await getLeagueTrends(leagueId, seasonForStandings, cfg.API_KEY, SLEEP, table, tableSize); requests++;
       if(!leagueTrends) console.log(`    trends: league ${leagueId} -> null (sample <50 or empty response)`); }
     catch(e){ leagueTrends = null; console.log(`    trends: league ${leagueId} FAILED -> ${e.message}`); }
 
@@ -890,6 +924,42 @@ const FINISHED = new Set(["FT","AET","PEN"]);
   const kept = existing.filter(x => x.matchDate && !windowSet.has(x.matchDate));
   const merged = kept.concat(out);
   merged.sort((a,b)=>{ if(a.matchDate!==b.matchDate) return (b.matchDate||"").localeCompare(a.matchDate||""); return (a.kickoff||"").localeCompare(b.kickoff||""); });
+
+  // ---- ODDS CALIBRATION LEDGER (owner spec): how markets PERFORMED at each
+  // price band in each league, mined from the board's OWN saved history —
+  // every finished match whose pre-match odds we captured. Self-accumulating:
+  // gets sharper every day the board runs. Attached to every match so engines
+  // can sanity-check a pick's price against this league's real hit rate.
+  (function buildOddsCalib(){
+    const band=o=> o<1.45?"1.20-1.44" : o<1.70?"1.45-1.69" : o<2.00?"1.70-1.99" : o<2.50?"2.00-2.49" : "2.50+";
+    const MK=[["Home Win","home",(h,a)=>h>a],["Away Win","away",(h,a)=>a>h],
+      ["Over 1.5 Goals","over15",(h,a)=>h+a>=2],["Over 2.5 Goals","over25",(h,a)=>h+a>=3],
+      ["Under 2.5 Goals","under25",(h,a)=>h+a<=2],["Under 3.5 Goals","under35",(h,a)=>h+a<=3],
+      ["BTTS Yes","bttsYes",(h,a)=>h>0&&a>0],["BTTS No","bttsNo",(h,a)=>!(h>0&&a>0)]];
+    const perLg={};
+    for(const x of merged){
+      if(x.homeGoals==null||x.awayGoals==null||!x.odds) continue;
+      const L=x.league||"?"; const C=perLg[L]=perLg[L]||{};
+      for(const [mk,f,won] of MK){
+        const o=x.odds[f]; if(o==null||o<1.05) continue;
+        const b=band(o); const cm=C[mk]=C[mk]||{}; const cb=cm[b]=cm[b]||{n:0,hit:0};
+        cb.n++; if(won(x.homeGoals,x.awayGoals)) cb.hit++;
+      }
+    }
+    const calib={};
+    for(const [L,C] of Object.entries(perLg)){
+      const out={}; let any=false;
+      for(const [mk,bands] of Object.entries(C)){
+        const bo={};
+        for(const [b,v] of Object.entries(bands)){ if(v.n>=5){ bo[b]={n:v.n,hit:Math.round((v.hit/v.n)*100)/100}; any=true; } }
+        if(Object.keys(bo).length) out[mk]=bo;
+      }
+      if(any) calib[L]=out;
+    }
+    let attached=0;
+    for(const x of merged){ const c=calib[x.league||"?"]; if(c){ x.oddsCalib=c; attached++; } else if(x.oddsCalib) delete x.oddsCalib; }
+    console.log(`Odds calibration: ${Object.keys(calib).length} league ledgers built, attached to ${attached} matches.`);
+  })();
 
   fs.writeFileSync(path.join(HERE, "data.js"),
     "/* AUTO-GENERATED by fetch-data.js on " + new Date().toLocaleString() + " — do not edit by hand. */\n\n" +
