@@ -1,5 +1,5 @@
 window.DATA_UPDATED = "2026-07-05T02:04:07.486Z";
-window.SCORES_UPDATED = "2026-07-05T02:30:56.049Z";
+window.SCORES_UPDATED = "2026-07-05T02:35:26.150Z";
 window.MATCHES = [
   {
     "home": "Mexico",
@@ -6327,11 +6327,11 @@ window.MATCHES = [
     "awayLogo": "https://media.api-sports.io/football/teams/18896.png",
     "country": "USA",
     "flag": "https://media.api-sports.io/flags/us.svg",
-    "status": "NS",
+    "status": "FT",
     "kickoff": "2026-07-05T00:00:00+00:00",
     "matchDate": "2026-07-05",
-    "homeGoals": null,
-    "awayGoals": null,
+    "homeGoals": 4,
+    "awayGoals": 0,
     "homePos": 7,
     "awayPos": 9,
     "tableSize": 144,
@@ -7521,7 +7521,7 @@ window.MATCHES = [
     "xgAwayReal": 1.15,
     "awayXgAgainst": 1.65,
     "lineupConfirmed": true,
-    "elapsed": 83
+    "elapsed": 87
   },
   {
     "home": "Colorado Springs",
@@ -7739,7 +7739,7 @@ window.MATCHES = [
     "xgAwayReal": 1.58,
     "awayXgAgainst": 2.24,
     "lineupConfirmed": true,
-    "elapsed": 66
+    "elapsed": 71
   },
   {
     "home": "San Antonio",
@@ -7957,7 +7957,7 @@ window.MATCHES = [
     "xgAwayReal": 1.09,
     "awayXgAgainst": 2.16,
     "lineupConfirmed": true,
-    "elapsed": 65
+    "elapsed": 69
   },
   {
     "home": "New Mexico United",
