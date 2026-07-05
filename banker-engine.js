@@ -3930,6 +3930,68 @@ function overlayApply(m, res){
     return applyCalibration(m, mk, r);
   }
 }
+// ============================================================================
+// QUALITY CROSS-CHECK (SOT-spec core, adapted to available data) — projects
+// expected goals from the two teams' PROFILES (season venue seed refined by
+// settled rows + xG where measured; attached by the pipeline as m.homeProfile /
+// m.awayProfile) and grades goals-market picks against the projection.
+// Spec principles kept: never invent data (silent when profiles are thin),
+// reject aggressive goals markets that quality disagrees with, sample-gated,
+// one layer applied identically to every engine. SOT slots into the same
+// profiles in August with zero redesign here.
+// ============================================================================
+function applyQualityCheck(m, mk, res){
+  if(!res || res.bet===false || !mk || mk==="No Bet") return res;
+  if(res.overlay && res.overlay.qualApplied) return res; // idempotent
+  const h=m && m.homeProfile, a=m && m.awayProfile;
+  if(!h || !a || !h.goalsFor || !h.goalsAg || !a.goalsFor || !a.goalsAg) return res;
+  if(h.goalsFor.n<4 || a.goalsFor.n<4) return res; // sample gate — stay silent when thin
+
+  // projected goals: each attack vs the opposing defense, averaged.
+  const expH = (h.goalsFor.v + a.goalsAg.v)/2;
+  const expA = (a.goalsFor.v + h.goalsAg.v)/2;
+  let total = expH + expA;
+  // conversion regression nudge (xG-derived, only when measured): a hot
+  // finisher (>1.2 goals/xG) is projected slightly down, a wasteful one up.
+  const regress = p => p && p.conversion && p.conversion.n>=2
+    ? (p.conversion.v>1.2 ? -0.15 : p.conversion.v<0.8 ? +0.15 : 0) : 0;
+  total += regress(h) + regress(a);
+  const T = Math.round(total*100)/100;
+  const tag = t => ({ ...(res.overlay||{}), qual:t, qualApplied:true });
+  const note = extra => [...(res.reasons||[]), ...extra];
+  const conf = typeof res.confidence==='number' ? res.confidence : (res.banker?8:6);
+  const cite = `Quality check: projected ${T} total goals (H ${Math.round(expH*100)/100} / A ${Math.round(expA*100)/100}) from team profiles (n=${h.goalsFor.n}/${a.goalsFor.n}).`;
+
+  // strong-disagreement rules — conservative bands, veto only at extremes.
+  const strip = why => ({ ...res, banker:false,
+    grade:(res.grade==="Elite Banker"||res.grade==="Banker")?"Strong Pick":res.grade,
+    confidence: Math.max(4, conf-2), reasons: note([why+" "+cite]), overlay: tag("stripped") });
+  const trim = why => ({ ...res, confidence: Math.max(4, conf-1),
+    reasons: note([why+" "+cite]), overlay: tag("trimmed") });
+  const back = why => ({ ...res, reasons: note([why+" "+cite]), overlay: tag("backed") });
+
+  if(/^Over 2\.5/.test(mk)){
+    if(T < 2.1) return strip("Profiles project a LOW-scoring game — Over 2.5 banker stripped.");
+    if(T < 2.5) return trim("Projection sits under the 2.5 line — conviction trimmed.");
+    if(T >= 3.1) return back("Profiles back a high-scoring game.");
+  } else if(/^Over 1\.5/.test(mk)){
+    if(T < 1.7) return strip("Profiles project a very low-scoring game — Over 1.5 banker stripped.");
+    if(T >= 2.6) return back("Comfortably clears the 1.5 line on projection.");
+  } else if(/^Under 2\.5/.test(mk)){
+    if(T > 3.0) return strip("Profiles project a HIGH-scoring game — Under 2.5 banker stripped.");
+    if(T > 2.6) return trim("Projection sits above the 2.5 line — conviction trimmed.");
+    if(T <= 2.0) return back("Profiles back a low-scoring game.");
+  } else if(/^Under 3\.5/.test(mk)){
+    if(T > 3.9) return strip("Profiles project a goal-fest — Under 3.5 banker stripped.");
+    if(T <= 2.6) return back("Well under the 3.5 line on projection.");
+  } else if(/^BTTS Yes/.test(mk)){
+    if(expH < 0.75 || expA < 0.75) return strip("One side projects too few goals for BTTS — banker stripped.");
+    if(expH >= 1.1 && expA >= 1.1) return back("Both sides project to score.");
+  } else if(/^BTTS No/.test(mk)){
+    if(expH >= 1.2 && expA >= 1.2) return strip("Both sides project to score — BTTS No banker stripped.");
+  }
+  return res; // markets we don't quality-grade (win/DNB/DC) pass through untouched
+}
 function withIntlFrame(fn){
   return function(m){
     const res = overlayApply(m, intlFrameApply(m, fn(m)));
@@ -3937,7 +3999,9 @@ function withIntlFrame(fn){
     // price-band history. Idempotent — if the overlay already applied it, this
     // is a no-op; otherwise it applies here so no engine is missed.
     const mk = res && String(res.primary||res.market||"");
-    return applyCalibration(m, mk, res);
+    const calibrated = applyCalibration(m, mk, res);
+    const mk2 = calibrated && String(calibrated.primary||calibrated.market||"");
+    return applyQualityCheck(m, mk2, calibrated);
   };
 }
 const legacyRecommend = recommend;
