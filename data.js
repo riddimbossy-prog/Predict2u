@@ -1,5 +1,5 @@
 window.DATA_UPDATED = "2026-07-05T00:03:26.838Z";
-window.SCORES_UPDATED = "2026-07-05T02:05:27.624Z";
+window.SCORES_UPDATED = "2026-07-05T02:10:46.314Z";
 window.MATCHES = [
   {
     "home": "Barcelona SC",
@@ -1607,7 +1607,7 @@ window.MATCHES = [
       "dcx2": 2.95
     },
     "h2h": null,
-    "elapsed": 75
+    "elapsed": 80
   },
   {
     "home": "San Diego Wave W",
@@ -1824,7 +1824,7 @@ window.MATCHES = [
     "xgReal": true,
     "xgAwayReal": 1.15,
     "awayXgAgainst": 1.65,
-    "elapsed": 57
+    "elapsed": 62
   },
   {
     "home": "Colorado Springs",
@@ -1835,7 +1835,7 @@ window.MATCHES = [
     "awayLogo": "https://media.api-sports.io/football/teams/4009.png",
     "country": "USA",
     "flag": "https://media.api-sports.io/flags/us.svg",
-    "status": "HT",
+    "status": "2H",
     "kickoff": "2026-07-05T01:00:00+00:00",
     "matchDate": "2026-07-05",
     "homeGoals": 1,
@@ -2041,7 +2041,7 @@ window.MATCHES = [
     "xgReal": true,
     "xgAwayReal": 1.58,
     "awayXgAgainst": 2.24,
-    "elapsed": 45
+    "elapsed": 46
   },
   {
     "home": "San Antonio",
@@ -2475,7 +2475,7 @@ window.MATCHES = [
     "xgReal": true,
     "xgAwayReal": 1.46,
     "awayXgAgainst": 1.83,
-    "elapsed": 27
+    "elapsed": 32
   },
   {
     "home": "Las Vegas Lights",
