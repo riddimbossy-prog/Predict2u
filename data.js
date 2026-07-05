@@ -1,5 +1,5 @@
 window.DATA_UPDATED = "2026-07-05T02:04:07.486Z";
-window.SCORES_UPDATED = "2026-07-05T03:40:44.954Z";
+window.SCORES_UPDATED = "2026-07-05T03:45:36.381Z";
 window.MATCHES = [
   {
     "home": "Mexico",
@@ -6714,7 +6714,7 @@ window.MATCHES = [
     "awayLogo": "https://media.api-sports.io/football/teams/4015.png",
     "country": "USA",
     "flag": "https://media.api-sports.io/flags/us.svg",
-    "status": "NS",
+    "status": "PST",
     "kickoff": "2026-07-05T00:30:00+00:00",
     "matchDate": "2026-07-05",
     "homeGoals": null,
