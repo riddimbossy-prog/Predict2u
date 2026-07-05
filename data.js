@@ -1,5 +1,5 @@
 window.DATA_UPDATED = "2026-07-05T02:04:07.486Z";
-window.SCORES_UPDATED = "2026-07-05T02:20:41.696Z";
+window.SCORES_UPDATED = "2026-07-05T02:25:30.284Z";
 window.MATCHES = [
   {
     "home": "Mexico",
@@ -7521,7 +7521,7 @@ window.MATCHES = [
     "xgAwayReal": 1.15,
     "awayXgAgainst": 1.65,
     "lineupConfirmed": true,
-    "elapsed": 72
+    "elapsed": 77
   },
   {
     "home": "Colorado Springs",
@@ -7739,7 +7739,7 @@ window.MATCHES = [
     "xgAwayReal": 1.58,
     "awayXgAgainst": 2.24,
     "lineupConfirmed": true,
-    "elapsed": 56
+    "elapsed": 61
   },
   {
     "home": "San Antonio",
@@ -7957,7 +7957,7 @@ window.MATCHES = [
     "xgAwayReal": 1.09,
     "awayXgAgainst": 2.16,
     "lineupConfirmed": true,
-    "elapsed": 55
+    "elapsed": 59
   },
   {
     "home": "New Mexico United",
@@ -8175,7 +8175,7 @@ window.MATCHES = [
     "xgAwayReal": 1.46,
     "awayXgAgainst": 1.83,
     "lineupConfirmed": true,
-    "elapsed": 42
+    "elapsed": 45
   },
   {
     "home": "Las Vegas Lights",
