@@ -2377,6 +2377,25 @@ function shareBotd(){
 }
 renderAll();
 
+/* ===== PWA SHORTCUT DEEP-LINK — when launched from the home-screen icon's
+   "Top Bankers" shortcut (?view=top), jump straight to today's top picks and
+   flash them so they're the first thing the user sees. Falls back silently on
+   normal loads. This is what makes the installed icon feel widget-like. ===== */
+(function(){
+  try{
+    const params = new URLSearchParams(location.search);
+    if(params.get('view')==='top'){
+      const sec = document.getElementById('top-bankers-section');
+      if(sec){
+        sec.scrollIntoView({behavior:'auto', block:'start'});
+        sec.style.transition='box-shadow .6s ease';
+        sec.style.boxShadow='0 0 0 2px var(--gold, #d4af37)';
+        setTimeout(()=>{ sec.style.boxShadow='none'; }, 1400);
+      }
+    }
+  }catch(e){}
+})();
+
 /* ===== LIVE-MINUTE TICKER — re-render every 60s while any match is live so
    the approximate minute advances. Display-only; never refetches data. ===== */
 (function liveTicker(){
