@@ -1,5 +1,5 @@
 window.DATA_UPDATED = "2026-07-04T22:05:04.488Z";
-window.SCORES_UPDATED = "2026-07-05T00:05:28.828Z";
+window.SCORES_UPDATED = "2026-07-05T00:10:46.762Z";
 window.MATCHES = [
   {
     "home": "Barcelona SC",
@@ -216,7 +216,7 @@ window.MATCHES = [
     "xgReal": true,
     "xgAwayReal": 0.89,
     "awayXgAgainst": 1.25,
-    "elapsed": 5
+    "elapsed": 10
   },
   {
     "home": "Louisville City",
@@ -227,11 +227,11 @@ window.MATCHES = [
     "awayLogo": "https://media.api-sports.io/football/teams/3995.png",
     "country": "USA",
     "flag": "https://media.api-sports.io/flags/us.svg",
-    "status": "NS",
+    "status": "1H",
     "kickoff": "2026-07-05T00:00:00+00:00",
     "matchDate": "2026-07-05",
-    "homeGoals": null,
-    "awayGoals": null,
+    "homeGoals": 0,
+    "awayGoals": 0,
     "homePos": 4,
     "awayPos": 7,
     "tableSize": 25,
@@ -433,7 +433,7 @@ window.MATCHES = [
     "xgReal": true,
     "xgAwayReal": 1.37,
     "awayXgAgainst": 1.23,
-    "elapsed": null
+    "elapsed": 4
   },
   {
     "home": "Brazos Valley",
@@ -51475,7 +51475,7 @@ window.MATCHES = [
     "awayLogo": "https://media.api-sports.io/football/teams/20808.png",
     "country": "USA",
     "flag": "https://media.api-sports.io/flags/us.svg",
-    "status": "2H",
+    "status": "FT",
     "kickoff": "2026-07-04T22:00:00+00:00",
     "matchDate": "2026-07-04",
     "homeGoals": 1,
@@ -51682,7 +51682,7 @@ window.MATCHES = [
     "xgAwayReal": 1.3,
     "awayXgAgainst": 1.36,
     "lineupConfirmed": true,
-    "elapsed": 90
+    "elapsed": null
   },
   {
     "home": "Deportes Iquique",
@@ -52080,7 +52080,7 @@ window.MATCHES = [
       "dcx2": 1.62
     },
     "h2h": null,
-    "elapsed": 72
+    "elapsed": 78
   },
   {
     "home": "Goias",
@@ -52297,7 +52297,7 @@ window.MATCHES = [
     "xgReal": true,
     "xgAwayReal": 0.95,
     "awayXgAgainst": 1.3,
-    "elapsed": 46
+    "elapsed": 51
   },
   {
     "home": "Pittsburgh Riverhounds",
@@ -52308,11 +52308,11 @@ window.MATCHES = [
     "awayLogo": "https://media.api-sports.io/football/teams/27252.png",
     "country": "USA",
     "flag": "https://media.api-sports.io/flags/us.svg",
-    "status": "NS",
+    "status": "1H",
     "kickoff": "2026-07-04T23:00:00+00:00",
     "matchDate": "2026-07-04",
-    "homeGoals": null,
-    "awayGoals": null,
+    "homeGoals": 0,
+    "awayGoals": 0,
     "homePos": 5,
     "awayPos": 12,
     "tableSize": 25,
@@ -52514,7 +52514,7 @@ window.MATCHES = [
     "xgReal": true,
     "xgAwayReal": 1.19,
     "awayXgAgainst": 1.6,
-    "elapsed": null
+    "elapsed": 4
   },
   {
     "home": "Oriental",
@@ -52525,10 +52525,10 @@ window.MATCHES = [
     "awayLogo": "https://media.api-sports.io/football/teams/2351.png",
     "country": "Uruguay",
     "flag": "https://media.api-sports.io/flags/uy.svg",
-    "status": "HT",
+    "status": "2H",
     "kickoff": "2026-07-04T23:00:00+00:00",
     "matchDate": "2026-07-04",
-    "homeGoals": 0,
+    "homeGoals": 1,
     "awayGoals": 1,
     "homePos": 2,
     "awayPos": 11,
@@ -52701,7 +52701,7 @@ window.MATCHES = [
     "round": "2nd Phase - 9",
     "odds": null,
     "h2h": null,
-    "elapsed": 45
+    "elapsed": 51
   },
   {
     "home": "Guarani Campinas",
@@ -52903,7 +52903,7 @@ window.MATCHES = [
       "dcx2": 2.55
     },
     "h2h": null,
-    "elapsed": 34
+    "elapsed": 40
   },
   {
     "home": "Ferroviária",
@@ -53105,7 +53105,7 @@ window.MATCHES = [
       "dcx2": 1.7
     },
     "h2h": null,
-    "elapsed": 35
+    "elapsed": 40
   },
   {
     "home": "North Carolina Courage W",
@@ -53322,7 +53322,7 @@ window.MATCHES = [
     "xgReal": true,
     "xgAwayReal": 1.21,
     "awayXgAgainst": 1.48,
-    "elapsed": 27
+    "elapsed": 32
   },
   {
     "home": "Rhode Island",
@@ -53539,7 +53539,7 @@ window.MATCHES = [
     "xgReal": true,
     "xgAwayReal": 1.2,
     "awayXgAgainst": 1.43,
-    "elapsed": 27
+    "elapsed": 32
   },
   {
     "home": "Fortaleza EC",
