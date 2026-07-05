@@ -1,5 +1,5 @@
 window.DATA_UPDATED = "2026-07-05T02:04:07.486Z";
-window.SCORES_UPDATED = "2026-07-05T03:45:36.381Z";
+window.SCORES_UPDATED = "2026-07-05T03:50:45.189Z";
 window.MATCHES = [
   {
     "home": "Mexico",
@@ -8186,7 +8186,7 @@ window.MATCHES = [
     "awayLogo": "https://media.api-sports.io/football/teams/3993.png",
     "country": "USA",
     "flag": "https://media.api-sports.io/flags/us.svg",
-    "status": "HT",
+    "status": "2H",
     "kickoff": "2026-07-05T02:30:00+00:00",
     "matchDate": "2026-07-05",
     "homeGoals": 1,
@@ -8392,7 +8392,7 @@ window.MATCHES = [
     "xgReal": true,
     "xgAwayReal": 1.21,
     "awayXgAgainst": 1.57,
-    "elapsed": 45
+    "elapsed": 50
   },
   {
     "home": "Canberra FC",
