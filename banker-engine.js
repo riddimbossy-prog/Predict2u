@@ -2654,6 +2654,9 @@ function trendRecommend(m){
   const out=trendOut(m,best.mk,grade,grade.toUpperCase(),null,reasons);
   out.bet=true; out.banker=(grade!=="Strong Pick"); out.grade=grade;
   out.confidence=best.sc>=11?10:best.sc>=9?8:7;
+  // real numbers for the card chips (replaces the old 70-70-70 layers, which
+  // this tier-pattern rewrite no longer computes — chips were showing 0%)
+  out.pattern={ pct: Math.round(best.rate*100), n: best.n };
   return out;
 }
 
@@ -3400,11 +3403,51 @@ function halvesRecommend(m){
   if(expFH>=1.30&&n(H.fhFor)>=0.70&&n(A.fhFor)>=0.50)
     C("Over 1.5 Goals",7,`Fast starts: expected first-half goals ${expFH.toFixed(2)} alone.`);
 
-  // ---- BTTS from half behaviour ----
-  if(n(H.fhBtts)>=0.40&&n(A.fhBtts)>=0.40&&n(H.htCleanSheet)<=0.35&&n(A.htCleanSheet)<=0.35)
-    C("BTTS Yes",7,`Both teams' matches see both nets ripple early (${Math.round(H.fhBtts*100)}%/${Math.round(A.fhBtts*100)}% first-half BTTS).`);
-  if((n(H.htCleanSheet)>=0.55&&n(A.fhFor)<=0.40)||(n(A.htCleanSheet)>=0.55&&n(H.fhFor)<=0.40))
-    C("BTTS No",7,`One side keeps HT clean sheets ${Math.round(Math.max(H.htCleanSheet||0,A.htCleanSheet||0)*100)}% while the opponent starts scoreless.`);
+  // ---- BTTS: HT behaviour TRIGGERS, full-time evidence must CONFIRM ----
+  // HT-only stats stretched to a 90-minute market was this board's weakest
+  // reasoning (second halves add goals). Now: the HT pattern only nominates a
+  // BTTS candidate; it must be confirmed by full-time rates (ftBtts/ftCS/ftFTS,
+  // in the data from the next full run) or, failing that, by the two teams'
+  // profile projections. HT-only with no confirmation available = low-score
+  // lean, explicitly labelled. FT evidence that DISAGREES = no candidate.
+  const prof=p=>p&&p.goalsFor&&p.goalsFor.n>=4?p:null;
+  const hp=prof(m.homeProfile), ap=prof(m.awayProfile);
+  if(n(H.fhBtts)>=0.40&&n(A.fhBtts)>=0.40&&n(H.htCleanSheet)<=0.35&&n(A.htCleanSheet)<=0.35){
+    const ht=`${Math.round(H.fhBtts*100)}%/${Math.round(A.fhBtts*100)}% first-half BTTS`;
+    if(n(H.ftBtts)!=null&&n(A.ftBtts)!=null){
+      if(H.ftBtts>=0.45&&A.ftBtts>=0.45)
+        C("BTTS Yes",8,`Both nets ripple early (${ht}) and full time confirms: BTTS lands in ${Math.round(H.ftBtts*100)}%/${Math.round(A.ftBtts*100)}% of their matches.`);
+      // else: FT rates disagree with the HT pattern -> honest silence
+    } else if(hp&&ap){
+      if(hp.goalsFor.v>=1.0&&ap.goalsFor.v>=1.0)
+        C("BTTS Yes",7,`Both nets ripple early (${ht}); team profiles confirm both sides score (${hp.goalsFor.v}/${ap.goalsFor.v} goals per game).`);
+    } else {
+      C("BTTS Yes",5,`Early-goals pattern (${ht}) but no full-time confirmation available yet — HT-only evidence, treat as a lean.`);
+    }
+  }
+  {
+    const sides=[
+      { cs:n(H.htCleanSheet), oppFh:n(A.fhFor), csFt:n(H.ftCS), oppFtsFt:n(A.ftFTS), oppProf:ap, who:"Home keeps", opp:"away" },
+      { cs:n(A.htCleanSheet), oppFh:n(H.fhFor), csFt:n(A.ftCS), oppFtsFt:n(H.ftFTS), oppProf:hp, who:"Away keeps", opp:"home" },
+    ];
+    for(const S of sides){
+      if(!(S.cs>=0.55&&S.oppFh<=0.40)) continue;
+      const ht=`HT clean sheets ${Math.round(S.cs*100)}% while the ${S.opp} side starts scoreless`;
+      if(S.csFt!=null||S.oppFtsFt!=null){
+        const csOk=S.csFt!=null&&S.csFt>=0.35, ftsOk=S.oppFtsFt!=null&&S.oppFtsFt>=0.40;
+        if(csOk||ftsOk)
+          C("BTTS No",8,`${S.who} ${ht} — and full time confirms: ${csOk?`clean sheets held in ${Math.round(S.csFt*100)}% of matches`:``}${csOk&&ftsOk?`, `:``}${ftsOk?`${S.opp} side fails to score in ${Math.round(S.oppFtsFt*100)}%`:``}.`);
+        // FT data present but below thresholds -> the 90-minute record does not
+        // support the HT pattern -> no candidate.
+      } else if(S.oppProf){
+        if(S.oppProf.goalsFor.v<=0.90)
+          C("BTTS No",7,`${S.who} ${ht}; profile confirms the ${S.opp} side manages only ${S.oppProf.goalsFor.v} goals per game.`);
+      } else {
+        C("BTTS No",5,`${S.who} ${ht} — no full-time confirmation available yet; HT-only evidence, treat as a lean.`);
+      }
+      break; // one BTTS No candidate max
+    }
+  }
 
   if(!cands.length) return halvesOut(m,"No Bet",null,null,["No HT/FT pattern strong enough — honest No Bet."]);
   cands.sort((x,y)=>y.score-x.score);
