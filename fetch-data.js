@@ -628,6 +628,27 @@ const FINISHED = new Set(["FT","AET","PEN"]);
             return { fhFor:r2(fhF), fhAg:r2(fhA), shFor:r2(shF), shAg:r2(shA),
                      fhBtts:r2(btts), htCleanSheet:r2(cs) };
           })(),
+          ...(function(){ // NATIVE HT-MARKET rates — HT evidence for HT markets,
+            // no stretching to full time. Over games with HT data.
+            let n=0,o05=0,u15=0,weh=0,dhf=0;
+            for(const g of seq){ if(g.hf==null) continue; n++;
+              const fhT=g.hf+g.ha, shF=g.gf-g.hf, shA=g.ga-g.ha;
+              if(fhT>=1)o05++; if(fhT<=1)u15++;
+              if(g.hf>g.ha || shF>shA) weh++;                 // won either half
+              if(g.hf===g.ha || g.gf===g.ga) dhf++; }          // draw at HT or FT
+            if(!n) return {};
+            const r=x=>Math.round((x/n)*100)/100;
+            return { fhOver05:r(o05), fhUnder15:r(u15), wonEitherHalf:r(weh), drawHTorFT:r(dhf) };
+          })(),
+          ...(function(){ // FULL-TIME confirmation rates over ALL sampled games —
+            // HT patterns are triggers; 90-minute markets (BTTS etc.) must be
+            // confirmed by what actually happened at full time. Zero API cost.
+            const N=seq.length; if(!N) return {};
+            let b=0,cs=0,fts=0;
+            for(const g of seq){ if(g.gf>0&&g.ga>0)b++; if(g.ga===0)cs++; if(g.gf===0)fts++; }
+            const r=x=>Math.round((x/N)*100)/100;
+            return { ftBtts:r(b), ftCS:r(cs), ftFTS:r(fts), ftSample:N };
+          })(),
         } : null;
 
         streaks={
@@ -887,8 +908,11 @@ const FINISHED = new Set(["FT","AET","PEN"]);
         awayStreaks = await getTeamStreaks(aid, seasonForStandings);
       }
 
+      const __ht = fx.score && fx.score.halftime;
       out.push({
         home: fx.teams.home.name, away: fx.teams.away.name, league: leagueName, leagueId: leagueId,
+        htHome: (__ht && __ht.home!=null) ? __ht.home : null,  // half-time score —
+        htAway: (__ht && __ht.away!=null) ? __ht.away : null,  // settles HT markets
         homeLogo: (fx.teams.home && fx.teams.home.logo) || null,
         awayLogo: (fx.teams.away && fx.teams.away.logo) || null,
         country: leagueCountry, flag: leagueFlag,
