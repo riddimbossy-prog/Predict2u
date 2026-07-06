@@ -99,7 +99,10 @@ function loadExistingMatches() {
         const el = fx.fixture && fx.fixture.status && fx.fixture.status.elapsed;
         const gh = fx.goals ? fx.goals.home : null;
         const ga = fx.goals ? fx.goals.away : null;
-        const rec = { homeGoals: gh, awayGoals: ga, status: st, elapsed: (el != null ? el : null) };
+        const __ht = fx.score && fx.score.halftime;
+        const rec = { homeGoals: gh, awayGoals: ga, status: st, elapsed: (el != null ? el : null),
+          htHome: (__ht && __ht.home!=null) ? __ht.home : null,
+          htAway: (__ht && __ht.away!=null) ? __ht.away : null };
         if (id != null) liveById[id] = rec;
         const hn = fx.teams && fx.teams.home && fx.teams.home.name;
         const an = fx.teams && fx.teams.away && fx.teams.away.name;
@@ -127,6 +130,8 @@ function loadExistingMatches() {
     if (mt.homeGoals !== newH || mt.awayGoals !== newA || mt.status !== newS || mt.elapsed !== newE) {
       // only overwrite goals if the API actually has them (don't blank existing)
       if (newH != null) mt.homeGoals = newH;
+      if (rec.htHome != null) mt.htHome = rec.htHome;   // HT score settles HT markets
+      if (rec.htAway != null) mt.htAway = rec.htAway;
       if (newA != null) mt.awayGoals = newA;
       if (newS) mt.status = newS;
       // live minute: store while in-play, clear once finished
