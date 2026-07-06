@@ -3568,11 +3568,37 @@ function mismatchRecommend(m){
   else if((hA+aA)>=2.60&&(hD+aD)>=2.40)
     C("Over 1.5 Goals", 8, `Attacks total ${(hA+aA).toFixed(1)} into defences shipping ${(hD+aD).toFixed(1)} — 2+ goals aligned.`);
 
-  // BTTS — mutual scoring vs one-way shutout (league-rate boosted/penalised via lgB)
-  if(hA>=1.30&&hD>=1.00&&aA>=1.00&&aD>=1.00)
-    C("BTTS Yes", 8+((hA>=1.6&&aA>=1.2)?1:0), `Both score and both concede at their venues — GG alignment.`);
-  if(hD<=0.80&&aA<=0.80)
-    C("BTTS No", 8-(highLg?2:0), `Home concedes only ${hD} while away scores only ${aA} on the road — same direction, one net.`);
+  // BTTS — a COMPLETE argument, not half of one. BTTS No needs the blanked side
+  // weak in attack AND the OTHER side not a reliable scorer (else it's BTTS Yes),
+  // confirmed by the team profiles' goal projections where available. Owner audit:
+  // the old rule only checked the away attack + home defence and ignored whether
+  // the home side scores — half an argument for a two-sided market.
+  const mp=p=>p&&p.goalsFor&&p.goalsFor.n>=4?p:null;
+  const mhp=mp(m.homeProfile), map=mp(m.awayProfile);
+  if(hA>=1.30&&hD>=1.00&&aA>=1.00&&aD>=1.00){
+    // BTTS Yes: both attacks live AND both defences leak — confirm both score.
+    const bothProjScore = (!mhp||!map) || (mhp.goalsFor.v>=0.95 && map.goalsFor.v>=0.95);
+    if(bothProjScore)
+      C("BTTS Yes", 8+((hA>=1.6&&aA>=1.2)?1:0), `Both score and both concede at their venues${mhp&&map?` (profiles ${mhp.goalsFor.v}/${map.goalsFor.v} goals per game)`:``} — GG alignment.`);
+  }
+  // BTTS No: identify the side likely blanked, and REQUIRE the other side is not
+  // a dependable scorer (the missing half of the old rule).
+  {
+    // case A: AWAY blanked — away weak attack + home tight defence, AND home not
+    // so prolific that it drags in a goal-fest making BTTS Yes anyway is irrelevant
+    // (BTTS No only needs ONE side to fail; the risk is the BLANKED side scoring).
+    const awayBlanked = aA<=0.80 && hD<=0.85 && (map ? map.goalsFor.v<=0.90 : true);
+    const homeBlanked = hA<=0.80 && aD<=0.85 && (mhp ? mhp.goalsFor.v<=0.90 : true);
+    if(awayBlanked){
+      const conf = map ? ` — profile confirms away manages only ${map.goalsFor.v} goals per game` : (aA<=0.80?"":"");
+      C("BTTS No", 8-(highLg?2:0), `Away side is the one likely blanked: scores just ${aA} on the road into a home defence conceding ${hD}${conf}. Home scoring makes it 1-0-type, not both-net.`);
+    } else if(homeBlanked){
+      const conf = mhp ? ` — profile confirms home manages only ${mhp.goalsFor.v} goals per game` : "";
+      C("BTTS No", 8-(highLg?2:0), `Home side is the one likely blanked: scores just ${hA} at home into an away defence conceding ${aD}${conf}.`);
+    }
+    // if profiles exist and say the "blanked" side actually scores >=1.0/game,
+    // neither branch fires -> honest No candidate rather than a half-argument.
+  }
 
   // TEAM GOALS — strong attack into a leaking defence, both pointing the same way
   if(hA>=1.80&&aD>=1.60)
