@@ -223,8 +223,7 @@
   .won-marquee::before,.won-marquee::after{ content:''; position:absolute; top:0; bottom:0; width:44px; z-index:1; pointer-events:none; }
   .won-marquee::before{ left:0; background:linear-gradient(90deg,var(--bg),transparent); }
   .won-marquee::after{ right:0; background:linear-gradient(270deg,var(--bg),transparent); }
-  .won-marquee-track{ display:inline-flex; gap:14px; white-space:nowrap; will-change:transform; animation:wonscroll 45s linear infinite; padding-left:100%; }
-  .won-marquee:hover .won-marquee-track{ animation-play-state:paused; }
+  .won-marquee-track{ display:inline-flex; gap:14px; white-space:nowrap; will-change:transform; transform:translateX(0); }
   .won-card{ display:inline-flex; align-items:center; gap:10px; padding:10px 16px; border-radius:14px; background:var(--panel); border:1px solid var(--line); }
   .won-card .wc-flag{ width:20px; height:14px; object-fit:cover; border-radius:2px; flex-shrink:0; background:var(--line); }
   .won-card .wc-crest{ width:20px; height:20px; object-fit:contain; flex-shrink:0; }
@@ -232,9 +231,7 @@
   .won-card .wc-vs{ font-size:12px; font-weight:700; letter-spacing:.04em; color:var(--brand); font-family:'Saira Condensed',sans-serif; }
   .won-card .wc-badge{ display:inline-flex; align-items:center; gap:5px; padding:4px 9px; border-radius:999px; background:rgba(34,197,94,.16); border:1px solid rgba(34,197,94,.4); font-size:12px; font-weight:700; color:#22c55e; }
   body.light .won-card .wc-badge{ background:rgba(22,163,74,.10); border-color:rgba(22,163,74,.35); color:#16a34a; }
-  @keyframes wonscroll{ from{ transform:translateX(0); } to{ transform:translateX(-100%); } }
   @media (prefers-reduced-motion: reduce){
-    .won-marquee-track{ animation:none; }
     .pred-card, .join-btn{ transition:none; }
     html{ scroll-behavior:auto; }
   }
@@ -815,6 +812,40 @@ function renderWonTicker(){
   box.innerHTML =
     `<div class="flex items-center gap-2 mb-2"><span class="text-xs uppercase tracking-wider font-semibold" style="color:var(--muted)">Today's winners</span><span class="text-xs" style="color:var(--muted)">· ${totalWins} match${totalWins>1?'es':''}${totalWins>MAX_CARDS?` (showing top ${MAX_CARDS})`:''}</span></div>`+
     `<div class="won-marquee"><div class="won-marquee-track">${items}${items}</div></div>`;
+  startWonMarquee(box);
+}
+
+/* JS-driven marquee — replaces the old CSS animation, which some phones
+   silently killed via the system "reduce motion" setting (the carousel-not-
+   scrolling bug). requestAnimationFrame is immune to that setting. Pauses on
+   hover/touch, loops seamlessly, ~40px/s. */
+let wonMarqueeRAF=null;
+function startWonMarquee(box){
+  if(wonMarqueeRAF){ cancelAnimationFrame(wonMarqueeRAF); wonMarqueeRAF=null; }
+  const wrap=box.querySelector('.won-marquee');
+  const track=box.querySelector('.won-marquee-track');
+  if(!wrap||!track) return;
+  // Guarantee enough copies for a seamless loop even with only 1-2 win cards.
+  let guard=0;
+  while(track.scrollWidth < wrap.clientWidth*2 && track.scrollWidth>0 && guard++<6){ track.innerHTML += track.innerHTML; }
+  let x=0, last=null, paused=false;
+  const SPEED=40; // px per second
+  const onEnter=()=>{paused=true;}, onLeave=()=>{paused=false;};
+  wrap.addEventListener('mouseenter',onEnter); wrap.addEventListener('mouseleave',onLeave);
+  wrap.addEventListener('touchstart',onEnter,{passive:true});
+  wrap.addEventListener('touchend',onLeave,{passive:true});
+  function step(ts){
+    if(last==null) last=ts;
+    const dt=Math.min((ts-last)/1000, 0.1); last=ts;
+    if(!paused && document.visibilityState==='visible'){
+      x-=SPEED*dt;
+      const half=track.scrollWidth/2;
+      if(half>0 && -x>=half) x+=half;
+      track.style.transform=`translateX(${x}px)`;
+    }
+    wonMarqueeRAF=requestAnimationFrame(step);
+  }
+  wonMarqueeRAF=requestAnimationFrame(step);
 }
 
 /* ============ DATE STRIP ============ */
