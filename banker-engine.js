@@ -947,6 +947,11 @@ function recommend(m) {
    homeGoals/awayGoals are the final score numbers.
    ---------------------------------------------------------------- */
 function settle(primary, homeGoals, awayGoals, status, m) {
+  // Normalise totals labels: engines emit both "Over 2.5" and "Over 2.5 Goals"
+  // for the same market. Without this, the "Goals"-suffixed form hit the switch
+  // default and NEVER settled (no Won/Lost chip, never counted) — a silent
+  // honesty gap across Mismatch/Halves/Value totals picks. One market, one grade.
+  primary = String(primary==null?"":primary).replace(/^((?:Over|Under) \d(?:\.\d)?) Goals$/, "$1");
   if (homeGoals == null || awayGoals == null) return ""; // not played yet
   // If a status is provided, only settle FINISHED matches. Live/in-play games
   // (1H, 2H, HT, ET, LIVE, P, etc.) are NOT decided yet — never settle them.
@@ -4153,6 +4158,290 @@ function applyHTArbitration(m, mk, res){
 
   return res; // no safer HT expression cleared the bar -> keep the FT pick
 }
+/* ============================================================
+   MARKET INDICATOR ODDS ENGINE  (owner spec v1.0 — 13th engine)
+   ------------------------------------------------------------
+   Cross-market prediction: one market's ODDS indicate a DIFFERENT
+   final market. 10 rules in the spec's strict priority order, a
+   master similarity rejection, balanced/unbalanced classification,
+   a minimum of THREE statistical confirmations for every pick, and
+   pairwise conflict resolution. Goals-streak markets aren't offered
+   by API-Football (probe-markets.js result), so Rules 4/8/9 use
+   transparent statistical PROXIES from venue data + team profiles,
+   labelled "(proxy)" in the reasoning. New odds fields consumed:
+   fhHome/fhDraw/fhAway, fhOver05/fhOver15/fhUnder15, gg, ng, gg2
+   (parsed by fetch-data.js from the same odds response). Every
+   price is null-guarded: a missing market is "no signal", never a
+   guessed pick. Honest No Bet whenever the odds picture, the
+   statistics, or the spec's no-bet list says so.
+   NOTE (honesty): the spec's derby detection and sharp-odds-movement
+   no-bet checks aren't implementable from this data (no rivalry map,
+   no per-match odds timeline) — they remain a human check.
+   ============================================================ */
+function indicatorOut(m, market, grade, score, reasons, rule){
+  const noStand=(typeof hasNoStandings==='function')&&hasNoStandings(m);
+  const banker= market!=="No Bet" && (grade==="Banker"||grade==="Elite Banker") && !noStand;
+  const confMap={ "Strong Pick":7, "Banker":8, "Elite Banker":10 };
+  return { match:m, engine:"indicator", primary:market, bet:market!=="No Bet",
+    banker, confidence: market==="No Bet"?0:(confMap[grade]||6), grade:grade||null,
+    score:score!=null?`${score}/12`:null, rule:rule||null,
+    verdict:`${market}${market!=="No Bet"?` (Market Indicators ${rule||""} — ${grade}, ${score}/12)`:" — No Bet"}. ${reasons.join(' ')}`,
+    reasons, humanChecks:["Cross-market odds read; confirm lineups, derby context and late odds moves before kickoff."] };
+}
+function indicatorRecommend(m){
+  const OUT=(mk,g,s,r,rule)=>indicatorOut(m,mk,g,s,r,rule);
+  if(!m) return OUT("No Bet",null,null,["No match data."]);
+  const o=m.odds||{};
+  if(o.home==null||o.away==null||o.draw==null)
+    return OUT("No Bet",null,null,["Cross-market engine needs the full 1X2 price picture — none published yet."]);
+
+  /* ---------- odds inputs (new fields + graceful fallbacks) ---------- */
+  const gg =o.gg!=null?o.gg:(o.bttsYes!=null?o.bttsYes:null);
+  const ng =o.ng!=null?o.ng:(o.bttsNo!=null?o.bttsNo:null);
+  const gg2=o.gg2!=null?o.gg2:null;
+  const fhH=o.fhHome, fhA=o.fhAway, fhD=o.fhDraw;
+  const fhO15=o.fhOver15, fhU15=o.fhUnder15;
+  const o15=o.over15;
+
+  /* ---------- favorite / classification (spec §4) ---------- */
+  const favHome=o.home<=o.away, fav=favHome?o.home:o.away, dog=favHome?o.away:o.home;
+  const favName=favHome?m.home:m.away;
+  const fhFav=(fhH!=null&&fhA!=null)?(favHome?fhH:fhA):null;
+  const balanced   =(dog-fav)<=1.20 && fav>=1.90;
+  const unbalanced = fav<1.90 && (dog-fav)>1.20;
+
+  /* ---------- statistics ---------- */
+  const hA=m.homeScoredAtHome, hD=m.homeConcededAtHome, aA=m.awayScoredAway, aD=m.awayConcededAway;
+  const favFor=favHome?hA:aA, dogFor=favHome?aA:hA, dogAg=favHome?aD:hD;
+  const favFTS=favHome?m.homeFailedToScoreRate:m.awayFailedToScoreRate;
+  const dogFTS=favHome?m.awayFailedToScoreRate:m.homeFailedToScoreRate;
+  const dogCS =favHome?m.awayCleanSheetRate:m.homeCleanSheetRate;
+  const favWR =favHome?m.homeWinRate:m.awayWinRate, dogWR=favHome?m.awayWinRate:m.homeWinRate;
+  const dogUB =favHome?m.awayUnbeatenRate:m.homeUnbeatenRate;
+  const favGD =favHome?m.homeGD:m.awayGD, dogGD=favHome?m.awayGD:m.homeGD;
+  const favForm=favHome?m.homeForm:m.awayForm, dogForm=favHome?m.awayForm:m.homeForm;
+  const posGap=(m.homePos!=null&&m.awayPos!=null)?Math.abs(m.homePos-m.awayPos):null;
+  const hPPG=venuePPG(m.homeVenuePts,m.homeVenueGames,m.homeVenueRank,m.venueTableSize!=null?m.venueTableSize:m.tableSize);
+  const aPPG=venuePPG(m.awayVenuePts,m.awayVenueGames,m.awayVenueRank,m.venueTableSize!=null?m.venueTableSize:m.tableSize);
+  const ppgGap=(hPPG!=null&&aPPG!=null)?Math.abs(hPPG-aPPG):null;
+  const favPPG=favHome?hPPG:aPPG, dogPPG=favHome?aPPG:hPPG;
+  const formPts=f=>{ if(!f) return null; let p=0,n=0; for(const c of String(f)){ if(c==='W')p+=3; else if(c==='D')p+=1; if('WDL'.indexOf(c)>=0)n++; } return n?p/n:null; };
+  const favFP=formPts(favForm), dogFP=formPts(dogForm);
+  const projTotal=(hA!=null&&hD!=null&&aA!=null&&aD!=null)?((hA+aD)/2+(aA+hD)/2):null;
+  const lt=m.leagueTrends, LR=k=>(lt&&lt.rates&&lt.rates[k]!=null)?lt.rates[k]:null;
+  const gpg=(lt&&lt.gpg!=null)?lt.gpg:null;
+  const lowLg =(LR("Under 2.5")!=null&&LR("Under 2.5")>=0.58)||(gpg!=null&&gpg<=2.35);
+  const highLg=(LR("Over 2.5")!=null&&LR("Over 2.5")>=0.58)||(gpg!=null&&gpg>=3.00);
+  const prof=p=>p&&p.goalsFor&&p.goalsFor.n>=4?p:null;
+  const hp=prof(m.homeProfile), ap=prof(m.awayProfile);
+  const favProf=favHome?hp:ap;
+  const winLbl=favHome?"Home Win":"Away Win", dnbLbl=favHome?"Home DNB":"Away DNB";
+  const dcLbl =favHome?"Double Chance 1X":"Double Chance X2";
+  const wehLbl=favHome?"Home Win Either Half":"Away Win Either Half";
+  const to15Lbl=favHome?"Home Team Over 1.5 Goals":"Away Team Over 1.5 Goals";
+
+  /* ---------- MASTER SIMILARITY REJECTION (spec §3) ---------- */
+  let simSignals=0; const simWhy=[];
+  if(posGap!=null&&posGap<=3){simSignals++;simWhy.push(`position gap ${posGap}`);}
+  if(ppgGap!=null&&ppgGap<0.30){simSignals++;simWhy.push(`PPG gap ${ppgGap.toFixed(2)}`);}
+  if(favFP!=null&&dogFP!=null&&Math.abs(favFP-dogFP)<=0.40){simSignals++;simWhy.push("near-identical form");}
+  if(favWR!=null&&dogWR!=null&&Math.abs(favWR-dogWR)<=0.10){simSignals++;simWhy.push("similar win rates");}
+  if(favGD!=null&&dogGD!=null&&Math.abs(favGD-dogGD)<=4){simSignals++;simWhy.push("similar goal difference");}
+  const similar=simSignals>=3;
+
+  /* ---------- rule evaluation → candidates ---------- */
+  // C(priority, rule, market, balancedRule, whyParts[]) — lower priority number wins
+  const cands=[]; const C=(pr,rule,mk,balRule,why)=>cands.push({pr,rule,mk,balRule,why});
+
+  // RULE 10 (priority 2) — full GG confirmation combination
+  if(gg!=null&&gg>=1.20&&gg<=1.55 && fhU15!=null&&fhU15>1.55 && balanced && o.draw>3.60 && gg2!=null&&gg2>1.30){
+    if(posGap!=null&&posGap>4){
+      const rej= (favFor!=null&&favFor<1.60) || (projTotal!=null&&projTotal<2.60) || lowLg;
+      if(!rej) C(2,"R10","Over 2.5",true,[`GG ${gg} + open first half (FHU1.5 ${fhU15}) + unprotected draw ${o.draw}, but a ${posGap}-place gap means the favorite may supply the goals — spec switches GG to Over 2.5.`]);
+    } else {
+      const rej=(favFTS!=null&&favFTS>0.35)||(dogFTS!=null&&dogFTS>0.35)||(dogCS!=null&&dogCS>0.45);
+      if(!rej) C(2,"R10","BTTS Yes",true,[`Full GG combination: GG ${gg}, first half not closed (FHU1.5 ${fhU15}), draw unprotected at ${o.draw}, GG2+ ${gg2} — balanced match where both sides contribute.`]);
+    }
+  }
+  // RULE 1 (priority 3) — FH favorite + FH Over 1.5 → Over 2.5
+  if(fhFav!=null&&fhFav>=1.20&&fhFav<=1.50 && fhO15!=null&&fhO15<=1.95){
+    const favSideO25=favHome?m.homeOver25Rate:m.awayOver25Rate;
+    const rej=(favSideO25!=null&&favSideO25<=0.40)||(dogAg!=null&&dogAg<=0.90&&dogCS!=null&&dogCS>=0.40)||lowLg;
+    if(!rej) C(3,"R1","Over 2.5",false,[`Very short first-half favorite (${favName} at ${fhFav}) plus first-half Over 1.5 at ${fhO15} — the book expects early superiority and a high goal ceiling.`]);
+  }
+  // RULE 4 (priority 4, PROXY) — strong favorite + streak proxy → favorite team Over 1.5
+  if(dog>5.00 && o.draw>3.60 && favFor!=null&&favFor>=1.70 && (!favProf||favProf.goalsFor.v>=1.50)){
+    // mandatory 3-of-6 confirmations (spec §8)
+    let c4=0; const w4=[];
+    if(favFor>=1.70){c4++;w4.push(`favorite averages ${favFor} at this venue`);}
+    if(dogAg!=null&&dogAg>=1.50){c4++;w4.push(`opponent concedes ${dogAg} per match`);}
+    if(favProf&&favProf.goalsFor.v>=1.60){c4++;w4.push(`profile projects ${favProf.goalsFor.v} goals`);}
+    if(dogCS!=null&&dogCS<=0.25){c4++;w4.push("opponent rarely keeps clean sheets");}
+    if(dogUB!=null&&dogUB<=0.45){c4++;w4.push("opponent loses regularly");}
+    if(favWR!=null&&favWR>=0.55){c4++;w4.push("strong favorite win rate");}
+    const rej=(favFTS!=null&&favFTS>=0.30)||(dogCS!=null&&dogCS>=0.40);
+    if(!rej&&c4>=3) C(4,"R4",to15Lbl,false,[`Streak proxy (goals-streak odds not offered): dominant price shape (opponent ${dog}, draw ${o.draw}) with ${c4} scoring confirmations — ${w4.join(', ')}.`]);
+  }
+  // RULE 7 (priority 5) — FH draw compression → Under 2.5 / mid-table Draw HT or FT
+  if(fhD!=null&&fhD<2.90 && ng!=null&&ng>=1.20&&ng<=1.50 && o15!=null&&o15>1.50 && balanced){
+    const size=m.tableSize||20;
+    const midTable=posGap!=null&&posGap<=4 && m.homePos>Math.ceil(size*0.2)&&m.awayPos>Math.ceil(size*0.2) && m.homePos<=size-Math.ceil(size*0.2)&&m.awayPos<=size-Math.ceil(size*0.2);
+    if(midTable && fhD<2.90){
+      const rej=(favWR!=null&&favWR>=0.60)||(favFP!=null&&dogFP!=null&&Math.abs(favFP-dogFP)>0.8);
+      if(!rej) C(5,"R7","Draw HT or FT",true,[`First-half draw compressed to ${fhD} in a true mid-table clash — cautious tempo, limited separation; the spec's mid-table variation takes Draw HT or FT.`]);
+    } else {
+      const hO25=m.homeOver25Rate, aO25=m.awayOver25Rate;
+      const rej=(hO25!=null&&aO25!=null&&hO25>=0.55&&aO25>=0.55)||(hA!=null&&aA!=null&&hA>=1.50&&aA>=1.50)||(gg!=null&&gg<=1.45)||highLg;
+      if(!rej) C(5,"R7","Under 2.5",true,[`Compressed first-half draw (${fhD}) + NG at ${ng} + Over 1.5 not automatic (${o15}) — slow tempo with one side likely blanked points Under 2.5.`]);
+    }
+  }
+  // RULE 3 (priority 6) — GG2+ as GG / Over 2.5 indicator
+  if(gg2!=null&&gg2>=1.35){
+    if(balanced){
+      const rej=(favFTS!=null&&favFTS>0.35)||(dogFTS!=null&&dogFTS>0.35)||(dogCS!=null&&dogCS>=0.45)||(hA!=null&&aA!=null&&hA<1.10&&aA<1.10)||(LR("BTTS Yes")!=null&&LR("BTTS Yes")<0.42);
+      if(!rej) C(6,"R3","BTTS Yes",true,[`GG2+ priced ${gg2} signals a high-goal environment; balanced odds mean both teams are expected to contribute.`]);
+    } else if(unbalanced){
+      const favSideO25=favHome?m.homeOver25Rate:m.awayOver25Rate;
+      const rej=(favSideO25!=null&&favSideO25<=0.40)||(projTotal!=null&&projTotal<2.50)||lowLg;
+      if(!rej) C(6,"R3","Over 2.5",false,[`GG2+ priced ${gg2} in an unbalanced match — the favorite carries the scoring burden, so Over 2.5 is safer than GG.`]);
+    }
+  }
+  // RULE 8 (priority 7, PROXY) — dominance → straight win
+  if(unbalanced && favFor!=null&&favFor>=1.60 && dogAg!=null&&dogAg>=1.30){
+    let c8=0; const w8=[];
+    if(favPPG!=null&&dogPPG!=null&&favPPG-dogPPG>=0.40){c8++;w8.push("clear PPG advantage");}
+    if(favFP!=null&&dogFP!=null&&favFP-dogFP>=0.50){c8++;w8.push("better recent form");}
+    if(favWR!=null&&dogWR!=null&&favWR-dogWR>=0.15){c8++;w8.push("better win rate");}
+    if(favGD!=null&&dogGD!=null&&favGD-dogGD>=6){c8++;w8.push("better goal difference");}
+    if(favPPG!=null&&favPPG>=1.80){c8++;w8.push("strong venue record");}
+    if(dogUB!=null&&dogUB<=0.50){c8++;w8.push("opponent has a meaningful loss rate");}
+    const rej=fav<1.30||(dogUB!=null&&dogUB>=0.70)||o.draw<=3.20||similar;
+    if(!rej&&c8>=4) C(7,"R8",winLbl,false,[`Dominance proxy (streak market not offered): sustained scoring (${favFor} per game) into a leaking opponent, with ${c8}/6 superiority confirmations — ${w8.join(', ')}.`]);
+  }
+  // RULE 5 (priority 8) — FH favorite + low NG → win either half
+  if(fhFav!=null&&fhFav>=1.60&&fhFav<=1.90 && ng!=null&&ng<1.55){
+    const fav1H=favHome?m.home1HFor:m.away1HFor, fav2H=favHome?m.home2HFor:m.away2HFor;
+    const rej=(favWR!=null&&favWR<0.35)||(dogCS!=null&&dogCS>=0.45)||(fav1H!=null&&fav2H!=null&&fav1H<0.40&&fav2H<0.40);
+    if(!rej) C(8,"R5",wehLbl,false,[`First-half price ${fhFav} shows the favorite may not dominate immediately, but NG at ${ng} says the opponent may not score at all — strong chance ${favName} takes at least one half.`]);
+  }
+  // RULE 2 (priority 9) — NG as favorite protection → DC / DNB
+  if(ng!=null&&ng>=1.20&&ng<=1.50 && (unbalanced||fav<=1.75)){
+    const rej=(favFTS!=null&&favFTS>=0.35)||(dogUB!=null&&dogUB>=0.65)||similar||(favFP!=null&&favFP<1.0);
+    if(!rej){
+      if(fav>1.60) C(9,"R2",dcLbl,false,[`NG priced ${ng} indicates one side may fail to score; with the favorite at ${fav}, Double Chance is the protected expression.`]);
+      else C(9,"R2",dnbLbl,false,[`NG priced ${ng} indicates the opponent may be blanked; favorite at ${fav} makes DNB the value-protected pick.`]);
+    }
+  }
+  // RULE 9 (priority 10, PROXY) — balanced + low GG → Over 1.5
+  if(gg!=null&&gg<1.60 && balanced && projTotal!=null&&projTotal>=2.20){
+    const hO15=m.homeOver15Rate, aO15=m.awayOver15Rate;
+    const comb15=(hO15!=null&&aO15!=null)?(hO15+aO15)/2:null;
+    const rej=(favFTS!=null&&favFTS>=0.40)||(dogFTS!=null&&dogFTS>=0.40)||(comb15!=null&&comb15<0.70)||(hA!=null&&aA!=null&&hA<1.0&&aA<1.0)||lowLg;
+    if(!rej) C(10,"R9","Over 1.5",true,[`Streak proxy: goal expectation not strong enough for Over 2.5, but GG at ${gg} in a balanced match says both attacks are live — Over 1.5 is the safer line.`]);
+  }
+  // RULE 6 (priority 11) — general Over 1.5 indicator
+  if(fhFav!=null&&fhFav>=1.60&&fhFav<=1.95 && dog<=4.90){
+    const hO15=m.homeOver15Rate, aO15=m.awayOver15Rate;
+    const comb15=(hO15!=null&&aO15!=null)?(hO15+aO15)/2:null;
+    const rej=(projTotal!=null&&projTotal<2.20)||(comb15!=null&&comb15<0.70)||lowLg||(favFTS!=null&&favFTS>=0.45)||(dogFTS!=null&&dogFTS>=0.45)||(similar&&!balanced);
+    if(!rej) C(11,"R6","Over 1.5",false,[`Favorite not dominant (FH ${fhFav}) and the weaker side not helpless (${dog}) — both contribute or the favorite scores twice; two total goals indicated.`]);
+  }
+
+  /* ---------- similarity gate: non-balanced rules invalid ---------- */
+  const usable=similar?cands.filter(c=>c.balRule):cands;
+  if(!usable.length){
+    if(similar) return OUT("No Bet",null,null,[`Master similarity rejection: teams too alike (${simWhy.join(', ')}) and no balanced-match rule fires. Spec final decision: No Bet.`]);
+    return OUT("No Bet",null,null,["No indicator rule triggered — the cross-market odds picture doesn't reveal a hidden relationship today. Honest No Bet."]);
+  }
+
+  /* ---------- no-bet: more than two conflicting markets ---------- */
+  const distinct=[...new Set(usable.map(c=>c.mk))];
+  if(distinct.length>2)
+    return OUT("No Bet",null,null,[`Conflicting signals: ${usable.length} rules point at ${distinct.length} different markets (${distinct.join(', ')}). Spec no-bet condition — the odds structure disagrees with itself.`]);
+
+  /* ---------- conflict resolution (spec §16) for known pairs ---------- */
+  usable.sort((a,b)=>a.pr-b.pr);
+  let chosenList=usable;
+  if(distinct.length===2){
+    const has=mk=>usable.find(c=>c.mk===mk);
+    const pair=(a,b)=>has(a)&&has(b);
+    if(pair("BTTS Yes","Over 2.5")){
+      const takeGG=balanced&&(posGap==null||posGap<=4)&&(favFTS==null||favFTS<0.35)&&(dogFTS==null||dogFTS<0.35);
+      chosenList=usable.filter(c=>c.mk===(takeGG?"BTTS Yes":"Over 2.5"));
+      chosenList[0].why.push(takeGG?"Conflict resolved GG-over-O2.5: balanced, tight position gap, both sides score reliably.":"Conflict resolved O2.5-over-GG: gap/imbalance means the favorite can carry the total alone.");
+    } else if(pair(winLbl,dnbLbl)){
+      const takeWin=unbalanced&&o.draw>3.60&&(dogUB==null||dogUB<=0.50);
+      chosenList=usable.filter(c=>c.mk===(takeWin?winLbl:dnbLbl));
+    } else if(pair(dnbLbl,dcLbl)){
+      chosenList=usable.filter(c=>c.mk===(fav<1.60?dnbLbl:dcLbl));
+    } else if(pair("Under 2.5","Draw HT or FT")){
+      const takeDraw=fhD!=null&&fhD<2.90&&posGap!=null&&posGap<=4;
+      chosenList=usable.filter(c=>c.mk===(takeDraw?"Draw HT or FT":"Under 2.5"));
+    }
+  }
+
+  /* ---------- minimum THREE statistical confirmations (spec §18) ---------- */
+  const confirms=mk=>{
+    const n=[]; const A=(ok,t)=>{ if(ok)n.push(t); };
+    if(mk==="Over 2.5"){
+      A(m.homeOver25Rate!=null&&m.awayOver25Rate!=null&&m.homeOver25Rate>=0.50&&m.awayOver25Rate>=0.50,"both sides over 2.5 half the time or more");
+      A(projTotal!=null&&projTotal>=2.70,`projected total ${projTotal!=null?projTotal.toFixed(2):""}`);
+      A(LR("Over 2.5")!=null&&LR("Over 2.5")>=0.52,"league runs over 2.5");
+      A(hp&&ap&&(hp.goalsFor.v+ap.goalsFor.v)>=2.50,"profiles project 2.5+ combined goals");
+      A(hD!=null&&aD!=null&&hD>=1.00&&aD>=1.00,"both defences concede");
+    } else if(mk==="Over 1.5"){
+      A(m.homeOver15Rate!=null&&m.awayOver15Rate!=null&&(m.homeOver15Rate+m.awayOver15Rate)/2>=0.70,"combined over 1.5 rate 70%+");
+      A(projTotal!=null&&projTotal>=2.30,`projected total ${projTotal!=null?projTotal.toFixed(2):""}`);
+      A(LR("Over 1.5")!=null&&LR("Over 1.5")>=0.70,"league clears 1.5 regularly");
+      A((favFTS==null||favFTS<0.40)&&(dogFTS==null||dogFTS<0.40),"neither side blanks often");
+      A(hp&&ap&&(hp.goalsFor.v+ap.goalsFor.v)>=2.20,"profiles support 2+ goals");
+    } else if(mk==="Under 2.5"){
+      A(projTotal!=null&&projTotal<=2.35,`projected total only ${projTotal!=null?projTotal.toFixed(2):""}`);
+      A(hA!=null&&aA!=null&&hA<=1.15&&aA<=1.15,"both attacks quiet");
+      A(LR("Under 2.5")!=null&&LR("Under 2.5")>=0.52,"league stays under");
+      A(m.homeCleanSheetRate!=null&&m.awayCleanSheetRate!=null&&(m.homeCleanSheetRate+m.awayCleanSheetRate)/2>=0.30,"clean sheets common");
+      A(m.homeOver25Rate!=null&&m.awayOver25Rate!=null&&m.homeOver25Rate<=0.45&&m.awayOver25Rate<=0.45,"both sides under 2.5 most weeks");
+    } else if(mk==="BTTS Yes"){
+      A((favFTS!=null&&favFTS<=0.30)&&(dogFTS!=null&&dogFTS<=0.30),"both sides score consistently");
+      A(hA!=null&&aA!=null&&hA>=1.00&&aA>=1.00,"both attacks average a goal");
+      A(LR("BTTS Yes")!=null&&LR("BTTS Yes")>=0.50,"league BTTS rate supports it");
+      A(hp&&ap&&hp.goalsFor.v>=0.95&&ap.goalsFor.v>=0.95,"profiles confirm both score");
+      A(hD!=null&&aD!=null&&hD>=1.00&&aD>=1.00,"both defences leak");
+    } else if(mk==="Draw HT or FT"){
+      A(fhD!=null&&fhD<2.90,"first-half draw compressed");
+      A(ppgGap!=null&&ppgGap<0.40,"strength near-level");
+      A(LR("Draw")!=null&&LR("Draw")>=0.26,"league draws often");
+      A(favWR!=null&&dogWR!=null&&Math.abs(favWR-dogWR)<=0.12,"win rates near-level");
+      A(projTotal!=null&&projTotal<=2.60,"low goal expectation");
+    } else if(mk===to15Lbl){
+      A(favFor!=null&&favFor>=1.70,`favorite averages ${favFor} at venue`);
+      A(dogAg!=null&&dogAg>=1.50,`opponent concedes ${dogAg}`);
+      A(favProf&&favProf.goalsFor.v>=1.50,"profile confirms scoring output");
+      A(dogCS!=null&&dogCS<=0.25,"opponent rarely blanks anyone");
+      A(favFTS!=null&&favFTS<=0.20,"favorite almost always scores");
+    } else { // winLbl / dnbLbl / dcLbl / wehLbl — favorite-result family
+      A(favPPG!=null&&dogPPG!=null&&favPPG-dogPPG>=0.30,"clear PPG advantage");
+      A(favFP!=null&&dogFP!=null&&favFP>dogFP+0.40,"form advantage");
+      A(favWR!=null&&dogWR!=null&&favWR-dogWR>=0.12,"win-rate advantage");
+      A(favGD!=null&&dogGD!=null&&favGD-dogGD>=5,"goal-difference gap");
+      A(dogUB!=null&&dogUB<=0.50,"opponent loses regularly");
+      A(favWR!=null&&favWR>=0.50,"favorite wins half its matches or more");
+    }
+    return n;
+  };
+
+  for(const c of chosenList){
+    const cf=confirms(c.mk);
+    if(cf.length>=3){
+      const grade=cf.length>=5?"Elite Banker":cf.length>=4?"Banker":"Strong Pick";
+      const score=Math.min(12,6+cf.length+(c.pr<=4?1:0));
+      return OUT(c.mk,grade,score,[...c.why,`Statistical confirmations (${cf.length}): ${cf.join('; ')}.`],c.rule);
+    }
+  }
+  const top=chosenList[0];
+  return OUT("No Bet",null,null,[`${top.rule} triggered ${top.mk} from the odds, but only ${confirms(top.mk).length} statistical confirmations found — spec forbids selecting a market from odds alone (minimum three). Honest No Bet.`]);
+}
+
 function withIntlFrame(fn){
   return function(m){
     const res = overlayApply(m, intlFrameApply(m, fn(m)));
@@ -4182,10 +4471,11 @@ trendRecommend   = withIntlFrame(trendRecommend);
 streakRecommend  = withIntlFrame(streakRecommend);
 halvesRecommend  = withIntlFrame(halvesRecommend);
 mismatchRecommend = withIntlFrame(mismatchRecommend);
+indicatorRecommend = withIntlFrame(indicatorRecommend);
 
 if (typeof module !== "undefined") module.exports = {
   analyseAll, recommend, scoreOver25, scoreBTTS, scoreWinDNB, settle,
   analyseStrict, strictRecommend, tierFromRank, streakRecommend, ultraRecommend, rulesProRecommend, apexRecommend, primeRecommend, valueRecommend, proRecommend,
-  classifyLeague, leagueContextVerdict, trendRecommend, halvesRecommend, mismatchRecommend, oddsLadderGate,
+  classifyLeague, leagueContextVerdict, trendRecommend, halvesRecommend, mismatchRecommend, oddsLadderGate, indicatorRecommend,
   intlFrameApply, isInternationalComp
 };
