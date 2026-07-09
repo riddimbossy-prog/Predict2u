@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Predict2u • Community</title>
+<link rel="manifest" href="manifest.webmanifest"/><link rel="icon" href="icon-192.png"/>
+<meta name="theme-color" content="#070d08"/>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Saira+Condensed:wght@700;800;900&family=Schibsted+Grotesk:wght@400;600;700&display=swap');
+:root{ --pitch:#070d08; --panel:#0d150e; --line:#1b2a1c; --brand:#3ecf6e; --brand-2:#7ede8f; --gold:#e8c15a; --ink:#f2f7f0; --muted:#8fa093; }
+body.light{ --pitch:#f2f6f1; --panel:#ffffff; --line:#d3ded2; --brand:#22954e; --brand-2:#1b7a3f; --ink:#152418; --muted:#4a5c4e; }
+*{ box-sizing:border-box; margin:0; }
+body{ background:var(--pitch); color:var(--ink); font-family:'Schibsted Grotesk',system-ui,sans-serif; line-height:1.55; }
+a{ color:inherit; text-decoration:none; }
+.wrap{ max-width:640px; margin:0 auto; padding:0 20px; }
+header{ position:sticky; top:0; background:var(--pitch); border-bottom:1px solid var(--line); }
+.nav{ display:flex; align-items:center; gap:12px; padding:12px 0; }
+.brand{ font-family:'Saira Condensed'; font-weight:900; font-size:22px; }
+.brand b{ color:var(--brand); }
+.nav a.lnk{ margin-left:auto; font-size:13.5px; font-weight:700; color:var(--muted); }
+h1{ font-family:'Saira Condensed'; font-weight:900; font-size:40px; text-transform:uppercase; margin:34px 0 6px; }
+.sub{ color:var(--muted); margin-bottom:24px; }
+.card{ background:var(--panel); border:1px solid var(--line); border-radius:18px; padding:22px; margin-bottom:14px; }
+.card h2{ font-family:'Saira Condensed'; font-weight:800; font-size:20px; text-transform:uppercase; letter-spacing:1px; margin-bottom:10px; }
+input{ width:100%; background:rgba(127,127,127,.08); border:1px solid var(--line); border-radius:10px; padding:12px 14px; color:inherit; font-size:15px; margin:8px 0; }
+button{ background:var(--brand); color:#06120a; border:none; border-radius:10px; padding:12px 20px; font-weight:800; font-size:14px; cursor:pointer; }
+button.ghost{ background:transparent; color:var(--muted); border:1px solid var(--line); }
+.msg{ font-size:13px; margin-top:8px; min-height:18px; }
+.note{ font-size:12px; color:var(--muted); margin-top:12px; }
+footer{ text-align:center; color:var(--muted); font-size:12.5px; padding:30px 0 90px; }
+</style>
+</head>
+<body>
+<header><div class="wrap nav">
+  <a class="brand" href="index.html">Predict<b>2u</b></a>
+  <a class="lnk" href="index.html">Home</a><a class="lnk" style="margin-left:0" href="board.html">Engines</a>
+</div></header>
+
+<main class="wrap">
+  <h1>Community</h1>
+  <div class="sub">One account, one handle, one permanent record — settled by the same engine that grades our picks. Wins and losses alike.</div>
+
+  <div class="card" id="c-signedout" style="display:none">
+    <h2>Sign in</h2>
+    <p style="font-size:14px;color:var(--muted)">No password. We email you a one-tap sign-in link.</p>
+    <input id="c-mail" type="email" placeholder="your@email.com" autocomplete="email"/>
+    <button id="c-send">Email me a sign-in link</button>
+    <div class="msg" id="c-out-msg"></div>
+    <div class="note">18+ only. Slips here are records, not wagers — no money changes hands on Predict2u.</div>
+  </div>
+
+  <div class="card" id="c-handle" style="display:none">
+    <h2>Claim your handle</h2>
+    <p style="font-size:14px;color:var(--muted)">This is your public name on slips and the leaderboard. Choose well — it's you.</p>
+    <input id="c-handle-input" maxlength="20" placeholder="e.g. AccraSharp" autocomplete="off"/>
+    <button id="c-claim">Claim handle</button>
+    <div class="msg" id="c-handle-msg"></div>
+  </div>
+
+  <div class="card" id="c-signedin" style="display:none">
+    <h2>Your account</h2>
+    <div style="font-family:'Saira Condensed';font-weight:900;font-size:30px;color:var(--brand-2)" id="c-hello">@</div>
+    <div style="font-size:13px;color:var(--muted)" id="c-email"></div>
+    <p class="note">Saving slips to your account, the public feed, and the leaderboard arrive in the next steps — your handle is reserved and ready.</p>
+    <div style="margin-top:14px"><button class="ghost" id="c-signout">Sign out</button></div>
+  </div>
+</main>
+
+<footer>Predict2u · 18+ · <a href="responsible-gambling.html" style="text-decoration:underline">Gamble responsibly</a></footer>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="community.js"></script>
+<script>/* theme follows the rest of the site */
+(function(){ try{ if(localStorage.getItem('predicto-theme')==='light') document.body.classList.add('light'); }catch(e){} })();</script>
+</body>
+</html>
