@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<meta charset="UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover"/>
 <title>Predict2u • Community</title>
 <link rel="manifest" href="manifest.webmanifest"/><link rel="icon" href="icon-192.png"/>
 <meta name="theme-color" content="#070d08"/>
@@ -9,8 +9,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Saira+Condensed:wght@700;800;900&family=Schibsted+Grotesk:wght@400;600;700&display=swap');
 :root{ --pitch:#070d08; --panel:#0d150e; --line:#1b2a1c; --brand:#3ecf6e; --brand-2:#7ede8f; --gold:#e8c15a; --ink:#f2f7f0; --muted:#8fa093; }
 body.light{ --pitch:#f2f6f1; --panel:#ffffff; --line:#d3ded2; --brand:#22954e; --brand-2:#1b7a3f; --ink:#152418; --muted:#4a5c4e; }
-*{ box-sizing:border-box; margin:0; }
-body{ background:var(--pitch); color:var(--ink); font-family:'Schibsted Grotesk',system-ui,sans-serif; line-height:1.55; }
+*{ box-sizing:border-box; margin:0; min-width:0; }
+html,body{ overflow-x:hidden; max-width:100%; }
+img{ max-width:100%; }
+body{ padding-left:env(safe-area-inset-left); padding-right:env(safe-area-inset-right); background:var(--pitch); color:var(--ink); font-family:'Schibsted Grotesk',system-ui,sans-serif; line-height:1.55; }
 a{ color:inherit; text-decoration:none; }
 .wrap{ max-width:840px; margin:0 auto; padding:0 20px; }
 header{ position:sticky; top:0; background:var(--pitch); border-bottom:1px solid var(--line); }
@@ -41,6 +43,67 @@ button.ghost{ background:transparent; color:var(--muted); border:1px solid var(-
 .follow.on{ background:var(--brand); color:#06120a; }
 .mini{ font-size:12px; padding:7px 14px; border-radius:8px; cursor:pointer; }
 .mini.ghost{ background:transparent; border:1px solid var(--line); color:var(--muted); }
+.vb{ display:inline-block; background:var(--brand); color:#06120a; font-size:10px; font-weight:900; width:15px; height:15px; line-height:15px; text-align:center; border-radius:50%; margin-left:5px; vertical-align:middle; }
+.rank-chip{ font-size:9.5px; font-weight:900; letter-spacing:.6px; text-transform:uppercase; padding:2px 7px; border-radius:6px; background:rgba(127,127,127,.15); color:var(--muted); }
+.rank-chip.r-elite{ background:rgba(232,193,90,.16); color:var(--gold); }
+.rank-chip.r-sharp{ background:rgba(62,207,110,.16); color:var(--brand-2); }
+.lb-note{ font-size:11.5px; color:var(--muted); margin-bottom:12px; }
+.lb-row{ display:flex; align-items:center; gap:10px; padding:10px 8px; border-bottom:1px solid var(--line); }
+.lb-row.me{ background:rgba(62,207,110,.06); border-radius:10px; }
+.lb-pos{ font-family:'Saira Condensed'; font-weight:900; font-size:17px; color:var(--muted); width:22px; text-align:center; }
+.lb-who{ flex:1; min-width:0; }
+.lb-h{ font-weight:700; font-size:14px; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; }
+.lb-m{ font-size:11px; color:var(--muted); margin-top:2px; }
+.lb-stat{ text-align:right; min-width:56px; }
+.lb-stat b{ display:block; font-family:'Saira Condensed'; font-size:17px; font-weight:900; }
+.lb-stat b.up{ color:var(--brand-2); } .lb-stat b.down{ color:#e07a7a; }
+.lb-stat span{ font-size:9.5px; color:var(--muted); text-transform:uppercase; letter-spacing:.5px; }
+.member .mr{ margin:4px 0 2px; }
+@media(pointer:coarse){
+  button,.follow,.tab,.mini{ min-height:40px; }
+  .slip-add{ min-height:28px; padding:4px 10px; }
+}
+.chk{ display:flex; align-items:center; gap:8px; font-size:12.5px; color:var(--ink); margin:6px 0; cursor:pointer; }
+.chk input{ width:auto; margin:0; }
+/* ===== responsive: 280px cover screens -> 1180px tablets ===== */
+@media(max-width:400px){
+  .wrap{ padding:0 12px; }
+  .card{ padding:16px 14px; }
+  h1{ font-size:32px; }
+  .pick{ padding:11px 12px; gap:9px; }
+  .pick .who{ min-width:120px; }
+  .pick .mk{ font-size:13px; padding:5px 10px; }
+  .filters input,.filters select{ min-width:100% !important; flex:1 1 100% !important; }
+  .members{ grid-template-columns:repeat(2,1fr) !important; }
+  .member{ padding:11px 8px; }
+  .slip-card{ padding:11px 10px; }
+  .leg{ font-size:12px; }
+}
+/* leaderboard: stack the two stat columns under the handle on narrow screens */
+@media(max-width:430px){
+  .lb-row{ flex-wrap:wrap; gap:8px; padding:11px 4px; }
+  .lb-who{ flex:1 1 auto; min-width:96px; }
+  .lb-stat{ min-width:auto; flex:0 0 auto; text-align:left; padding-left:32px; }
+  .lb-stat b{ font-size:15px; display:inline; }
+  .lb-stat span{ display:inline; margin-left:5px; }
+}
+@media(max-width:320px){
+  .wrap{ padding:0 8px; }
+  .card{ padding:14px 11px; }
+  h1{ font-size:27px; }
+  .members{ grid-template-columns:1fr !important; }
+  .lb-pos{ width:16px; font-size:14px; }
+  .stats{ grid-template-columns:repeat(2,1fr) !important; }
+  .pick{ flex-wrap:wrap; }
+  .pick .mk{ order:3; }
+}
+/* Z Fold open + tablets: use the room */
+@media(min-width:700px){
+  .members{ grid-template-columns:repeat(auto-fill,minmax(165px,1fr)); }
+}
+@media(min-width:900px){
+  .wrap{ max-width:920px; }
+}
 .members{ display:grid; grid-template-columns:repeat(auto-fill,minmax(150px,1fr)); gap:10px; }
 .member{ background:rgba(127,127,127,.06); border:1px solid var(--line); border-radius:14px; padding:14px 12px; text-align:center; }
 .member .av{ margin-bottom:8px; }
@@ -131,6 +194,11 @@ footer{ text-align:center; color:var(--muted); font-size:12.5px; padding:30px 0 
         <label style="font-size:12px;color:var(--muted)">Bio (160 characters)</label>
         <input id="bio-input" maxlength="160" placeholder="Say something about how you pick."/>
         <button id="bio-save">Save bio</button>
+        <div style="margin-top:14px;border-top:1px solid var(--line);padding-top:12px">
+          <div style="font-size:12px;color:var(--muted);margin-bottom:8px">Emails from Predict2u</div>
+          <label class="chk"><input type="checkbox" id="em-wins"/> <span>When my slips win (one email a day at most)</span></label>
+          <label class="chk"><input type="checkbox" id="em-digest"/> <span>Weekly summary — wins and losses</span></label>
+        </div>
         <div class="msg" id="av-msg"></div>
       </div>
     </details>
@@ -162,6 +230,12 @@ footer{ text-align:center; color:var(--muted); font-size:12.5px; padding:30px 0 
     </div>
     <div style="font-size:12px;color:var(--muted);margin:6px 0 10px" id="board-count"></div>
     <div id="board"><div class="empty">Reading the board…</div></div>
+  </div>
+
+  <div class="card">
+    <h2>Users board</h2>
+    <p style="font-size:13.5px;color:var(--muted)">Ranked by hit rate, not profit. Every number here was settled by the engine — nobody can edit a slip, mark it won, or delete a loss.</p>
+    <div id="users-board" style="margin-top:14px"><div class="empty">Loading…</div></div>
   </div>
 
   <div class="card">
