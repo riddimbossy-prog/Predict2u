@@ -4,7 +4,7 @@
 <meta charset="UTF-8" />
 <meta name="google-site-verification" content="U_u6Gmr3M3UhkEhdZOWQy0EqFpiKLZmEFlQM3XwaFrc" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
-<title>Predict2u • Full Board</title>
+<title>Predict2u • Engines</title>
 
 <!-- PWA: installable app -->
 <link rel="manifest" href="manifest.webmanifest" />
@@ -976,6 +976,50 @@ function miniBar(label,m){
   </div>`;
 }
 
+/* TOP BANKERS — every match where engines agree on a market (full list, filterable) */
+function renderTopMatches(){
+  const host=document.getElementById('matches-root');
+  const ENG=[['Normal',typeof recommend!=='undefined'?recommend:null],['Strict',typeof strictRecommend!=='undefined'?strictRecommend:null],
+    ['Ultra',typeof ultraRecommend!=='undefined'?ultraRecommend:null],['Elite',typeof rulesProRecommend!=='undefined'?rulesProRecommend:null],
+    ['Apex',typeof apexRecommend!=='undefined'?apexRecommend:null],['Prime',typeof primeRecommend!=='undefined'?primeRecommend:null],
+    ['Value',typeof valueRecommend!=='undefined'?valueRecommend:null],['Pro',typeof proRecommend!=='undefined'?proRecommend:null],
+    ['Trend',typeof trendRecommend!=='undefined'?trendRecommend:null],['Streaks',typeof streakRecommend!=='undefined'?streakRecommend:null],
+    ['Halves',typeof halvesRecommend!=='undefined'?halvesRecommend:null],['Mismatch',typeof mismatchRecommend!=='undefined'?mismatchRecommend:null],
+    ['Market Indicators',typeof indicatorRecommend!=='undefined'?indicatorRecommend:null]].filter(e=>e[1]);
+  const rows=dayRows(); const byMatch={};
+  for(const r of rows){ const m=r.match;
+    for(const [name,fn] of ENG){ let u; try{ u=fn(m); }catch(e){ continue; }
+      if(!u||!u.bet||!u.banker) continue;
+      const k=(m.id!=null?('f'+m.id):(m.home+'|'+m.away));
+      byMatch[k]=byMatch[k]||{m,mkts:{}};
+      (byMatch[k].mkts[u.primary]=byMatch[k].mkts[u.primary]||[]).push(name);
+    } }
+  const list=Object.values(byMatch).map(x=>{
+    const [market,engines]=Object.entries(x.mkts).sort((a,b)=>b[1].length-a[1].length)[0];
+    return {m:x.m, market, engines};
+  }).sort((a,b)=>b.engines.length-a.engines.length);
+  if(!list.length){ host.innerHTML='<div class="p-6 text-center" style="color:var(--muted)">No consensus bankers on this date yet - engines have not agreed on any market. Honest quiet.</div>'; return; }
+  let html='';
+  for(const c of list){ const m=c.m;
+    html+=`<details class="match-item is-banker-row" data-search="${(m.home+' '+m.away+' '+(m.league||'')).toLowerCase().replace(/"/g,'')}" data-market="${marketTag(c.market)}" data-banker="1" data-upcoming="${m.homeGoals==null?'1':'0'}" data-winodd="" data-ko="${m.kickoff?new Date(m.kickoff).getTime():''}" data-conf="${c.engines.length}">
+      <summary class="p-4 cursor-pointer">
+        <div class="flex items-center justify-between gap-3 flex-wrap">
+          <div class="min-w-0">
+            <div class="font-bold">${m.home} <span style="color:var(--brand,#6fd44a)">v</span> ${m.away}</div>
+            <div class="text-xs" style="color:var(--muted)">${m.league||''} &middot; <span style="color:var(--gold,#e8c15a);font-weight:800">${c.engines.length} engine${c.engines.length>1?'s':''} agree</span></div>
+          </div>
+          <div class="flex items-center gap-2">
+            <span class="px-2 py-1 rounded-lg text-[11px] font-semibold ${pill(c.market)}">${shortMarket(c.market)}</span>
+            ${rowSettle(m,c.market)}
+          </div>
+        </div>
+      </summary>
+      <div class="px-4 pb-4 text-xs" style="color:var(--muted)">Agreeing engines: ${c.engines.join(', ')}.</div>
+    </details>`;
+  }
+  host.innerHTML=html;
+  applyFilters();
+}
 function renderMatches(){
   if(engineMode==='strict'){ renderStrictMatches(); return; }
   if(engineMode==='ultra'){ renderUltraMatches(); return; }
@@ -989,6 +1033,8 @@ function renderMatches(){
   if(engineMode==='halves'){ renderHalvesMatches(); return; }
   if(engineMode==='mismatch'){ renderMismatchMatches(); return; }
   if(engineMode==='indicator'){ renderIndicatorMatches(); return; }
+  if(engineMode==='normal'){ renderFnEngineMatches(typeof recommend!=='undefined'?recommend:null,'normal'); return; }
+  if(engineMode==='top'){ renderTopMatches(); return; }
   if(engineMode==='acca'){ renderAccaMatches(); return; }
   const root = document.getElementById('matches-root');
   const _allRows = byDate[activeDate]||[];
@@ -2496,15 +2542,7 @@ renderAll();
 (function(){
   try{
     const params = new URLSearchParams(location.search);
-    if(params.get('view')==='top'){
-      const sec = document.getElementById('top-bankers-section');
-      if(sec){
-        sec.scrollIntoView({behavior:'auto', block:'start'});
-        sec.style.transition='box-shadow .6s ease';
-        sec.style.boxShadow='0 0 0 2px var(--gold, #d4af37)';
-        setTimeout(()=>{ sec.style.boxShadow='none'; }, 1400);
-      }
-    }
+    if(params.get('view')==='top'){ if(typeof setMode==='function') setMode('top'); }
   }catch(e){}
 })();
 
@@ -2531,9 +2569,10 @@ if ('serviceWorker' in navigator) {
   var p=new URLSearchParams(location.search).get('engine');
   if(!p) return;
   var s=document.getElementById('eng-select');
-  var ok = p==='normal' || (s && Array.prototype.some.call(s.options, function(o){return o.value===p;}));
-  if(ok && typeof setMode==='function'){ setMode(p); if(s&&p!=='normal') s.value=p; }
+  var ok = ['normal','acca','top'].indexOf(p)>=0 || (s && Array.prototype.some.call(s.options, function(o){return o.value===p;}));
+  if(ok && typeof setMode==='function'){ setMode(p); if(s&&['normal','acca','top'].indexOf(p)<0) s.value=p; }
 }catch(e){} })();
+(function(){ try{ if(new URLSearchParams(location.search).get('wc')==='open' && typeof openWcHub==='function') setTimeout(openWcHub,200); }catch(e){} })();
 </script>
 </body>
 </html>
