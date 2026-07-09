@@ -37,6 +37,7 @@
      NOTE: --gold is kept GREEN on purpose — the engine-switch JS
      paints buttons with var(--gold); true gold lives in --banker.
      ============================================================ */
+  html{ font-size:17px; } /* readability bump: scales all rem-based type ~6% */
   :root{
     --gold:#3ecf6e; --gold-deep:#2ea258;
     --brand:#3ecf6e; --brand-deep:#2ea258;
@@ -175,7 +176,7 @@
   .join-btn:hover{ transform:translateY(-1px); filter:brightness(1.08); }
 
   /* ===== LIGHT THEME — daylight pitch: chalk-white, deep-green ink ===== */
-  body.light{ --bg:#f2f5f1; --panel:#ffffff; --panel-2:#eef2ed; --line:#dbe4da; --ink:#0c130e; --muted:#586a5c;
+  body.light{ --bg:#f2f5f1; --panel:#ffffff; --panel-2:#eef2ed; --line:#d3ded2; --ink:#0b120d; --muted:#435547;
     --glass:rgba(255,255,255,.75); --glass-2:rgba(247,250,246,.72); --glass-border:rgba(12,19,14,.08);
     --brand:#22954e; --brand-deep:#1b7a3f; --gold:#22954e; --gold-deep:#1b7a3f;
     --banker:#b9861d; --banker-deep:#9a6f14; --live:#e11d48;
@@ -263,14 +264,7 @@
   <div class="max-w-[1200px] mx-auto px-4 sm:px-6 h-16 flex items-center justify-between gap-4">
     <div class="flex items-center gap-4">
       <div class="flex items-center gap-3">
-        <img src="logo.png" alt="Predict2u" height="40" style="height:40px;width:auto;display:block"
-             onerror="this.style.display='none';document.getElementById('logo-fallback').style.display='block'" />
-        <svg id="logo-fallback" height="40" viewBox="0 0 90 120" xmlns="http://www.w3.org/2000/svg" aria-label="Predict2u" style="display:none">
-          <path d="M26 22 L26 98" stroke="currentColor" stroke-width="13" stroke-linecap="round" fill="none" style="color:var(--ink)"/>
-          <path d="M26 28 L50 28 A25 25 0 0 1 50 78 L30 78" stroke="currentColor" stroke-width="13" fill="none" stroke-linecap="round" style="color:var(--ink)"/>
-          <path d="M16 86 L58 44" stroke="currentColor" stroke-width="11" stroke-linecap="round" fill="none" style="color:var(--brand)"/>
-          <polygon points="46,40 64,38 56,56" fill="currentColor" style="color:var(--brand)"/>
-        </svg>
+        
         <div class="leading-none">
           <div style="font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:1.45rem;letter-spacing:-.5px">
             <span style="color:var(--ink)">Predict</span><span style="color:var(--brand)">2u</span>
@@ -380,23 +374,7 @@
          WhatsApp: https://whatsapp.com/channel/YOUR_CHANNEL_ID
        Until then they're disabled (show a "coming soon" note).
        ============================================================ -->
-  <div class="panel rounded-2xl p-4 mb-6" style="border:1px solid rgba(76,175,39,.35);background:linear-gradient(135deg,rgba(76,175,39,.10),transparent)">
-    <div class="flex flex-col sm:flex-row sm:items-center gap-3">
-      <div class="flex-1">
-        <div class="display font-semibold text-lg flex items-center gap-2"><i class="fa-solid fa-bolt" style="color:var(--brand)"></i> Get the daily top picks free</div>
-        <div class="text-sm" style="color:var(--muted)">Join our channel — today's bankers pushed straight to your phone. No spam. 18+.</div>
-      </div>
-      <div class="flex gap-2 flex-shrink-0">
-        <a href="#" data-channel="telegram" class="join-btn flex items-center gap-2 px-4 py-2.5 rounded-xl font-semibold text-sm text-white" style="background:#229ED9" onclick="return joinClick(this,event)">
-          <i class="fa-brands fa-telegram"></i> Telegram
-        </a>
-        <a href="#" data-channel="whatsapp" class="join-btn flex items-center gap-2 px-4 py-2.5 rounded-xl font-semibold text-sm text-white" style="background:#25D366" onclick="return joinClick(this,event)">
-          <i class="fa-brands fa-whatsapp"></i> WhatsApp
-        </a>
-      </div>
-    </div>
-    <div id="join-note" class="text-xs mt-2 hidden" style="color:#b45309"></div>
-  </div>
+  
 
   <!-- TODAY'S TOP PREDICTION CARDS -->
   <div id="top-bankers-section">
@@ -525,6 +503,24 @@
   </div>
 </div>
 
+
+  <div class="max-w-6xl mx-auto px-4 mt-8 mb-2"><div class="panel rounded-2xl p-4 mb-6" style="border:1px solid rgba(76,175,39,.35);background:linear-gradient(135deg,rgba(76,175,39,.10),transparent)">
+    <div class="flex flex-col sm:flex-row sm:items-center gap-3">
+      <div class="flex-1">
+        <div class="display font-semibold text-lg flex items-center gap-2"><i class="fa-solid fa-bolt" style="color:var(--brand)"></i> Get the daily top picks free</div>
+        <div class="text-sm" style="color:var(--muted)">Join our channel — today's bankers pushed straight to your phone. No spam. 18+.</div>
+      </div>
+      <div class="flex gap-2 flex-shrink-0">
+        <a href="#" data-channel="telegram" class="join-btn flex items-center gap-2 px-4 py-2.5 rounded-xl font-semibold text-sm text-white" style="background:#229ED9" onclick="return joinClick(this,event)">
+          <i class="fa-brands fa-telegram"></i> Telegram
+        </a>
+        <a href="#" data-channel="whatsapp" class="join-btn flex items-center gap-2 px-4 py-2.5 rounded-xl font-semibold text-sm text-white" style="background:#25D366" onclick="return joinClick(this,event)">
+          <i class="fa-brands fa-whatsapp"></i> WhatsApp
+        </a>
+      </div>
+    </div>
+    <div id="join-note" class="text-xs mt-2 hidden" style="color:#b45309"></div>
+  </div></div>
 <footer class="py-8 text-center text-sm" style="color:var(--muted);border-top:1px solid var(--line)">
   Predict2u · heuristic analysis tool · data from your source<br>
   Not financial advice. Gamble responsibly. 18+<br>
@@ -2060,6 +2056,7 @@ function renderStrictMatches(){
   bv.addEventListener('click',()=>setMode('value'));
   bpro.addEventListener('click',()=>setMode('pro'));
   bac.addEventListener('click',()=>setMode('acca'));
+  window.setMode=setMode; // home-page tiles deep-link through this
   const _sel=document.getElementById('eng-select');
   if(_sel) _sel.addEventListener('change',e=>{ if(e.target.value) setMode(e.target.value); });
 })();
