@@ -33,7 +33,7 @@ a:focus-visible,button:focus-visible{ outline:2px solid var(--brand); outline-of
 header{ position:sticky; top:0; z-index:50; background:rgba(7,13,8,.9); backdrop-filter:blur(10px); border-bottom:1px solid var(--line); }
 .nav{ display:flex; align-items:center; gap:14px; padding:12px 0; }
 .brand{ display:flex; align-items:center; gap:10px; font-family:'Saira Condensed'; font-weight:900; font-size:24px; letter-spacing:.5px; }
-.brand img{ width:40px; height:40px; }
+.brand img{ height:38px; width:auto; max-width:190px; object-fit:contain; display:block; }
 .brand>span{ display:flex; flex-direction:column; line-height:1; }
 .brand .bn{ font-size:24px; }
 .brand .slogan{ font-family:'Schibsted Grotesk'; font-size:9.5px; font-weight:700; letter-spacing:2.2px; text-transform:uppercase; color:var(--muted); margin-top:3px; }
@@ -100,8 +100,9 @@ body.light .sc-cell{ background:rgba(0,0,0,.03); }
 @keyframes dayIn{ to{ opacity:1; transform:none; } }
 @media(prefers-reduced-motion:reduce){ .day{ animation:none; opacity:1; transform:none; } .btn:hover{ transform:none; } }
 .day .d{ font-size:10px; letter-spacing:1px; text-transform:uppercase; color:var(--muted); }
-.day .wl{ font-family:'Saira Condensed'; font-weight:900; font-size:20px; margin:4px 0; }
-.day .wl b{ color:var(--brand-2); } .day .wl s{ color:var(--loss); text-decoration:none; }
+.day .wl{ font-family:'Saira Condensed'; font-weight:900; font-size:19px; margin:5px 0 6px; line-height:1.15; display:flex; flex-direction:column; align-items:center; gap:1px; white-space:nowrap; }
+.day .wl b{ color:var(--brand-2); } .day .wl s{ color:var(--loss); text-decoration:none; font-size:16px; }
+.day .pct{ font-size:9.5px; color:var(--muted); letter-spacing:.5px; margin-bottom:4px; }
 .day .bar{ height:5px; border-radius:3px; background:#240f0f; overflow:hidden; }
 .day .bar i{ display:block; height:100%; background:var(--brand); }
 .day.quiet{ opacity:.55; } .day.quiet .wl{ color:var(--muted); font-size:13px; padding:4px 0; }
@@ -122,6 +123,7 @@ body.light .sc-cell{ background:rgba(0,0,0,.03); }
   .strip{ padding:16px 14px; }
   .pick{ padding:12px; gap:10px; }
   .pick .who{ min-width:130px; }
+  .brand img{ height:30px; max-width:140px; }
   .brand .bn{ font-size:20px; }
   .brand .slogan{ font-size:8.5px; letter-spacing:1.6px; }
   .brand img{ width:32px; height:32px; }
@@ -140,6 +142,7 @@ body.light .sc-cell{ background:rgba(0,0,0,.03); }
   .strip-days .day:nth-child(n+3){ display:none; }
   .pick{ flex-wrap:wrap; }
   .pick .agree{ order:3; }
+  .brand img{ height:26px; max-width:110px; }
   .nav-links a.wc{ padding:6px 8px; font-size:11px; }
 }
 @media(pointer:coarse){ .btn,.nav-links a,.tbtn{ min-height:40px; display:inline-flex; align-items:center; } }
@@ -192,7 +195,7 @@ footer a{ text-decoration:underline; }
 
 <header>
   <div class="wrap nav">
-    <a class="brand" href="index.html"><span><span class="bn">Predict<b>2u</b></span><span class="slogan">Know the game <b>— predict better</b></span></span></a>
+    <a class="brand" href="index.html"><img src="email-logo.png" alt="Predict2u — know the game, predict better" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"/><span style="display:none"><span class="bn">Predict<b>2u</b></span><span class="slogan">Know the game <b>— predict better</b></span></span></a>
     <nav class="nav-links">
       <a href="#engines" class="hide-m">Engines</a>
       <a href="board.html?engine=top" class="hide-m">Top bankers</a>
@@ -400,7 +403,7 @@ footer a{ text-decoration:underline; }
       const label = d.slice(5).replace('-','/');
       if(!(dw+dl)) return `<div class="day quiet"><div class="d">${label}</div><div class="wl">no settles</div><div class="bar"></div></div>`;
       const pct = Math.round(100*dw/(dw+dl));
-      return `<div class="day"><div class="d">${label}</div><div class="wl tnum"><b>${dw}W</b> <s>${dl}L</s></div><div class="bar"><i style="width:${pct}%"></i></div></div>`;
+      return `<div class="day"><div class="d">${label}</div><div class="wl tnum"><b>${dw}W</b><s>${dl}L</s></div><div class="pct">${pct}%</div><div class="bar"><i style="width:${pct}%"></i></div></div>`;
     }).join('');
   }
   (window.requestIdleCallback || (f=>setTimeout(f,60)))(buildStrip);
