@@ -24,7 +24,24 @@
   .slip-res.w{ background:#12240f; color:#7ede8f; } .slip-res.l{ background:#240f0f; color:#e07a7a; } .slip-res.v{ background:#1c2030; color:#8a93a6; }
   .slip-foot{ padding:12px 16px 14px; border-top:1px solid var(--line,#1b2a1c); }
   .slip-foot input{ width:90px; background:rgba(255,255,255,.05); border:1px solid var(--line,#1b2a1c); border-radius:8px; padding:6px 8px; color:inherit; }
-  .truncate{ overflow:hidden; text-overflow:ellipsis; white-space:nowrap; }`;
+  .truncate{ overflow:hidden; text-overflow:ellipsis; white-space:nowrap; }
+  /* drawer: safe on 280px cover screens, and clear of iOS home indicator */
+  #p2u-slip-drawer{ padding-bottom:env(safe-area-inset-bottom); }
+  #p2u-slip-fab{ bottom:calc(16px + env(safe-area-inset-bottom)); right:calc(16px + env(safe-area-inset-right)); }
+  @media(max-width:400px){
+    .slip-head,.slip-legs,.slip-foot{ padding-left:12px; padding-right:12px; }
+    #p2u-save-row button{ min-width:100% !important; flex:1 1 100% !important; }
+    .slip-leg{ gap:6px; font-size:12px; }
+  }
+  @media(max-width:320px){
+    #p2u-slip-fab{ width:50px; height:50px; }
+    .slip-foot input{ width:70px; }
+  }
+  /* tablets / Z Fold open: centre the drawer instead of stretching it */
+  @media(min-width:700px){
+    #p2u-slip-drawer{ left:50%; right:auto; transform:translateX(-50%); width:520px; border-radius:18px 18px 0 0; }
+  }
+  @media(pointer:coarse){ #p2u-save-row button,.lg-x,#p2u-slip-clear{ min-height:40px; } }`;
     document.head.appendChild(st);
   }
 })();
