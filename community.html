@@ -12,7 +12,7 @@ body.light{ --pitch:#f2f6f1; --panel:#ffffff; --line:#d3ded2; --brand:#22954e; -
 *{ box-sizing:border-box; margin:0; }
 body{ background:var(--pitch); color:var(--ink); font-family:'Schibsted Grotesk',system-ui,sans-serif; line-height:1.55; }
 a{ color:inherit; text-decoration:none; }
-.wrap{ max-width:640px; margin:0 auto; padding:0 20px; }
+.wrap{ max-width:840px; margin:0 auto; padding:0 20px; }
 header{ position:sticky; top:0; background:var(--pitch); border-bottom:1px solid var(--line); }
 .nav{ display:flex; align-items:center; gap:12px; padding:12px 0; }
 .brand{ font-family:'Saira Condensed'; font-weight:900; font-size:22px; }
@@ -26,6 +26,24 @@ input{ width:100%; background:rgba(127,127,127,.08); border:1px solid var(--line
 button{ background:var(--brand); color:#06120a; border:none; border-radius:10px; padding:12px 20px; font-weight:800; font-size:14px; cursor:pointer; }
 button.ghost{ background:transparent; color:var(--muted); border:1px solid var(--line); }
 .msg{ font-size:13px; margin-top:8px; min-height:18px; }
+.filters{ display:flex; gap:8px; flex-wrap:wrap; margin-top:12px; }
+.filters input,.filters select{ margin:0; }
+.pick{ display:flex; align-items:center; gap:12px; background:rgba(127,127,127,.06); border:1px solid var(--line); border-left:3px solid var(--brand); border-radius:12px; padding:12px 14px; margin-bottom:8px; flex-wrap:wrap; }
+.pick .fl{ width:20px; height:14px; object-fit:cover; border-radius:2px; }
+.pick .who{ flex:1; min-width:170px; }
+.pick .who .t{ font-weight:700; font-size:15px; }
+.pick .who .m{ font-size:12px; color:var(--muted); }
+.pick .mk{ font-family:'Saira Condensed'; font-weight:800; font-size:14px; color:var(--brand-2); background:rgba(62,207,110,.12); border:1px solid var(--brand); padding:5px 12px; border-radius:999px; white-space:nowrap; }
+.empty{ color:var(--muted); border:1px dashed var(--line); border-radius:12px; padding:20px; text-align:center; font-size:13.5px; }
+.slip-card{ border:1px solid var(--line); border-radius:12px; padding:12px 14px; margin-bottom:10px; }
+.slip-top{ display:flex; align-items:center; gap:8px; margin-bottom:8px; flex-wrap:wrap; }
+.pill,.res{ font-size:10px; font-weight:900; padding:3px 9px; border-radius:8px; }
+.pill.o,.res.o{ background:rgba(127,127,127,.15); color:var(--muted); }
+.pill.w,.res.w{ background:rgba(62,207,110,.15); color:var(--brand-2); }
+.pill.l,.res.l{ background:rgba(224,122,122,.15); color:#e07a7a; }
+.pill.v,.res.v{ background:rgba(127,127,127,.15); color:var(--muted); }
+.leg{ display:flex; justify-content:space-between; align-items:center; gap:10px; font-size:13px; padding:6px 0; border-top:1px dashed var(--line); }
+button.ghost{ background:transparent; color:var(--muted); border:1px solid var(--line); }
 .note{ font-size:12px; color:var(--muted); margin-top:12px; }
 footer{ text-align:center; color:var(--muted); font-size:12.5px; padding:30px 0 90px; }
 </style>
@@ -64,10 +82,44 @@ footer{ text-align:center; color:var(--muted); font-size:12.5px; padding:30px 0 
     <p class="note">Saving slips to your account, the public feed, and the leaderboard arrive in the next steps — your handle is reserved and ready.</p>
     <div style="margin-top:14px"><button class="ghost" id="c-signout">Sign out</button></div>
   </div>
+
+  <div class="card">
+    <h2 id="board-date">Today's bankers</h2>
+    <p style="font-size:14px;color:var(--muted)">Every banker from all 13 engines. Tap “+ Slip” to build yours — then save it. Saved slips settle themselves and stay on your record, win or lose.</p>
+    <div class="filters">
+      <input id="board-search" placeholder="Search team or league…" style="flex:2;min-width:160px"/>
+      <select id="board-min" style="flex:1;min-width:130px">
+        <option value="1">All picks</option>
+        <option value="2">2+ engines agree</option>
+        <option value="3">3+ engines agree</option>
+        <option value="4">4+ engines agree</option>
+      </select>
+    </div>
+    <div style="font-size:12px;color:var(--muted);margin:6px 0 10px" id="board-count"></div>
+    <div id="board"><div class="empty">Reading the board…</div></div>
+  </div>
+
+  <div class="card">
+    <h2>Save your slip</h2>
+    <p style="font-size:14px;color:var(--muted)">Public slips join the community record — everyone sees how they settle. Private slips are yours alone. Either way, legs freeze on save and losses are never deleted.</p>
+    <div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:12px">
+      <button id="save-public">Save &amp; post publicly</button>
+      <button class="ghost" id="save-private">Save privately</button>
+    </div>
+    <div class="msg" id="save-msg"></div>
+  </div>
+
+  <div class="card">
+    <h2>My slips</h2>
+    <div id="my-slips"><div class="empty">Sign in to save slips to your account.</div></div>
+  </div>
 </main>
 
 <footer>Predict2u · 18+ · <a href="responsible-gambling.html" style="text-decoration:underline">Gamble responsibly</a></footer>
 
+<script src="banker-engine.js"></script>
+<script src="data.js"></script>
+<script src="slip.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 <script src="community.js"></script>
 <script>/* theme follows the rest of the site */
