@@ -7,21 +7,21 @@
   if(!document.getElementById('p2u-slip-css')){
     const st=document.createElement('style'); st.id='p2u-slip-css';
     st.textContent=`
-  .slip-add{ margin-top:2px; font-size:10px; font-weight:800; letter-spacing:.4px; padding:2px 8px; border-radius:8px; border:1px solid var(--brand,#6fd44a); color:var(--brand,#6fd44a); background:transparent; cursor:pointer; }
+  .slip-add{ margin-top:2px; font-size:10px; font-weight:800; letter-spacing:.4px; padding:2px 8px; border-radius:8px; border:1px solid var(--brand,#3ecf6e); color:var(--brand,#3ecf6e); background:transparent; cursor:pointer; }
   .slip-add:active{ transform:scale(.95); }
-  #p2u-slip-fab{ position:fixed; right:16px; bottom:16px; z-index:60; width:58px; height:58px; border-radius:50%; background:var(--brand,#6fd44a); color:#06120a; font-weight:900; border:none; box-shadow:0 6px 18px rgba(0,0,0,.45); cursor:pointer; display:none; font-size:20px; }
+  #p2u-slip-fab{ position:fixed; right:16px; bottom:16px; z-index:60; width:58px; height:58px; border-radius:50%; background:var(--brand,#3ecf6e); color:#06120a; font-weight:900; border:none; box-shadow:0 6px 18px rgba(0,0,0,.45); cursor:pointer; display:none; font-size:20px; }
   #p2u-slip-fab .cnt{ position:absolute; top:-4px; right:-4px; background:#fff; color:#0a3; font-size:11px; font-weight:900; border-radius:10px; min-width:20px; height:20px; line-height:20px; }
   #p2u-slip-fab.show{ display:block; }
   #p2u-slip-fab.pulse{ animation:slipPulse .5s ease; }
   @keyframes slipPulse{ 50%{ transform:scale(1.15);} }
-  #p2u-slip-drawer{ position:fixed; left:0; right:0; bottom:0; z-index:70; background:var(--panel,#0d150e); color:var(--ink,#f2f7f0); border-top:2px solid var(--brand,#6fd44a); border-radius:18px 18px 0 0; max-height:74vh; display:none; flex-direction:column; box-shadow:0 -8px 30px rgba(0,0,0,.5); }
+  #p2u-slip-drawer{ position:fixed; left:0; right:0; bottom:0; z-index:70; background:var(--panel,#0d150e); color:var(--ink,#f2f7f0); border-top:2px solid var(--brand,#3ecf6e); border-radius:18px 18px 0 0; max-height:74vh; display:none; flex-direction:column; box-shadow:0 -8px 30px rgba(0,0,0,.5); }
   #p2u-slip-drawer.open{ display:flex; }
   .slip-head{ display:flex; align-items:center; justify-content:space-between; padding:12px 16px; border-bottom:1px solid var(--line,#1b2a1c); }
   .slip-legs{ overflow-y:auto; padding:8px 16px; flex:1; }
   .slip-leg{ display:flex; align-items:center; gap:10px; padding:10px 0; border-bottom:1px dashed var(--line,#1b2a1c); }
   .slip-leg .lg-x{ border:none; background:transparent; color:#e07a7a; font-size:18px; cursor:pointer; }
   .slip-res{ font-size:10px; font-weight:900; padding:2px 8px; border-radius:8px; }
-  .slip-res.w{ background:#12240f; color:#9be07a; } .slip-res.l{ background:#240f0f; color:#e07a7a; } .slip-res.v{ background:#1c2030; color:#8a93a6; }
+  .slip-res.w{ background:#12240f; color:#7ede8f; } .slip-res.l{ background:#240f0f; color:#e07a7a; } .slip-res.v{ background:#1c2030; color:#8a93a6; }
   .slip-foot{ padding:12px 16px 14px; border-top:1px solid var(--line,#1b2a1c); }
   .slip-foot input{ width:90px; background:rgba(255,255,255,.05); border:1px solid var(--line,#1b2a1c); border-radius:8px; padding:6px 8px; color:inherit; }
   .truncate{ overflow:hidden; text-overflow:ellipsis; white-space:nowrap; }`;
@@ -55,7 +55,7 @@ const P2USlip=(()=>{
   function toast(msg){
     let el=document.getElementById('p2u-toast');
     if(!el){ el=document.createElement('div'); el.id='p2u-toast';
-      el.style.cssText='position:fixed;left:50%;transform:translateX(-50%);bottom:88px;z-index:80;background:#0b1a0c;color:#9be07a;border:1px solid #6fd44a;border-radius:10px;padding:8px 14px;font-size:13px;font-weight:700;box-shadow:0 4px 14px rgba(0,0,0,.4)';
+      el.style.cssText='position:fixed;left:50%;transform:translateX(-50%);bottom:88px;z-index:80;background:#0b1a0c;color:#7ede8f;border:1px solid #3ecf6e;border-radius:10px;padding:8px 14px;font-size:13px;font-weight:700;box-shadow:0 4px 14px rgba(0,0,0,.4)';
       document.body.appendChild(el); }
     el.textContent=msg; el.style.display='block';
     clearTimeout(toastT); toastT=setTimeout(()=>{ el.style.display='none'; }, 1800);
@@ -100,7 +100,7 @@ const P2USlip=(()=>{
         <div style="text-align:right"><div style="font-size:11px;color:var(--muted)">Stake (units) &rarr; returns</div>
         <input id="p2u-stake" type="number" min="0" step="0.5" value="${stake}"> = <b>${s.priced? ret.toFixed(2):'—'}</b></div>
       </div>
-      ${s.status!=='empty'&&s.status!=='open'? `<div style="margin-top:8px;font-weight:800;color:${s.status==='won'?'#9be07a':s.status==='lost'?'#e07a7a':'var(--muted)'}">Slip ${s.status.toUpperCase()} · ${s.w}W-${s.l}L${s.v?('-'+s.v+'V'):''}</div>`:''}
+      ${s.status!=='empty'&&s.status!=='open'? `<div style="margin-top:8px;font-weight:800;color:${s.status==='won'?'#7ede8f':s.status==='lost'?'#e07a7a':'var(--muted)'}">Slip ${s.status.toUpperCase()} · ${s.w}W-${s.l}L${s.v?('-'+s.v+'V'):''}</div>`:''}
       <div style="display:flex;justify-content:space-between;align-items:center;margin-top:10px">
         <button id="p2u-slip-clear" style="border:1px solid var(--line);background:transparent;color:var(--muted);border-radius:8px;padding:5px 12px;font-size:12px">Clear slip</button>
         <div style="font-size:10px;color:var(--muted)">Records, not wagers · 18+ · <a href="responsible-gambling.html" style="text-decoration:underline">bet responsibly</a></div>
@@ -112,7 +112,7 @@ const P2USlip=(()=>{
   }
   function init(){
     if(document.getElementById('p2u-slip-fab')) return;
-    const fab=document.createElement('button'); fab.id='p2u-slip-fab'; fab.innerHTML='<i class="fa-solid fa-receipt"></i><span class="cnt">0</span>'; fab.title='My slip';
+    const fab=document.createElement('button'); fab.id='p2u-slip-fab'; fab.innerHTML='<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" style="display:block;margin:auto"><path d="M4 3v18l2.5-1.6L9 21l3-1.6L15 21l2.5-1.6L20 21V3l-2.5 1.6L15 3l-3 1.6L9 3 6.5 4.6 4 3z"/><line x1="8" y1="9" x2="16" y2="9"/><line x1="8" y1="13" x2="16" y2="13"/></svg><span class="cnt">0</span>'; fab.title='My slip';
     const dr=document.createElement('div'); dr.id='p2u-slip-drawer';
     dr.innerHTML=`<div class="slip-head"><div style="font-weight:900">MY SLIP <span style="font-size:11px;color:var(--muted);font-weight:600">· built from the board</span></div><button id="p2u-slip-close" style="border:none;background:transparent;color:var(--muted);font-size:22px">&times;</button></div><div class="slip-legs" id="p2u-slip-legs"></div><div class="slip-foot" id="p2u-slip-summary"></div>`;
     document.body.appendChild(fab); document.body.appendChild(dr);
