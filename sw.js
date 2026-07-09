@@ -6,12 +6,11 @@
      back to the last cached data when offline.
    Bump CACHE_VERSION whenever you ship a new index.html/banker-engine.js so
    users get the update instead of a stale cached shell. */
-const CACHE_VERSION = "predict2u-v131";
+const CACHE_VERSION = "predict2u-v132";
 const SHELL = [
   "./index.html",
   "./board.html",
   "./slip.js",
-  "./predict2u-mark.png",
   "./banker-engine.js",
   "./pedigree.js",
   "./manifest.webmanifest",
