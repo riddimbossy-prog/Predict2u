@@ -533,6 +533,162 @@ button, a, select, input { -webkit-tap-highlight-color: transparent; }
   .mobile-bottom-nav a{ min-height:42px; }
 }
 
+
+/* =========================================================
+   PHONE HOTFIX v144
+   Fixes compressed/overlapping date and engine tabs,
+   bottom-nav obstruction, and narrow-phone card controls.
+   Tablet and desktop breakpoints are unchanged.
+   ========================================================= */
+@media (max-width: 639px){
+
+  /* Horizontal date and engine controls must scroll, never shrink. */
+  #date-strip,
+  #engine-pills{
+    display:flex !important;
+    flex-wrap:nowrap !important;
+    align-items:center;
+    gap:9px !important;
+    width:auto;
+    max-width:none;
+    overflow-x:auto !important;
+    overflow-y:hidden;
+    overscroll-behavior-x:contain;
+    scroll-snap-type:x proximity;
+    -webkit-overflow-scrolling:touch;
+    scrollbar-width:none;
+    padding-top:2px;
+    padding-bottom:10px !important;
+  }
+
+  #date-strip::-webkit-scrollbar,
+  #engine-pills::-webkit-scrollbar{
+    display:none;
+  }
+
+  #date-strip .pill,
+  #engine-pills .pill{
+    flex:0 0 auto !important;
+    width:auto !important;
+    min-width:max-content !important;
+    max-width:none !important;
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    white-space:nowrap !important;
+    overflow:visible;
+    text-overflow:clip;
+    scroll-snap-align:start;
+    line-height:1;
+  }
+
+  #date-strip .pill{
+    min-height:44px;
+    padding:10px 15px;
+    font-size:13px;
+  }
+
+  #engine-pills .pill{
+    min-height:42px;
+    padding:10px 15px;
+    font-size:13px;
+  }
+
+  /* Keep the first and last pills clear of the screen edge. */
+  #date-strip::after,
+  #engine-pills::after{
+    content:"";
+    flex:0 0 5px;
+  }
+
+  /* Make filters and controls easier to scan on narrow screens. */
+  #board-title{
+    line-height:1.15;
+  }
+
+  #board-sub{
+    line-height:1.45;
+  }
+
+  /* Do not leave an empty half-button beside DETAILS. */
+  #cards article .flex.gap-2\.5.mt-5.pt-4 > span.flex-1:empty{
+    display:none !important;
+  }
+
+  #cards article .flex.gap-2\.5.mt-5.pt-4 > .btn-det:only-child,
+  #cards article .flex.gap-2\.5.mt-5.pt-4 > .btn-det:first-child{
+    min-width:0;
+  }
+
+  #cards article .btn-det{
+    min-height:46px;
+  }
+
+  /* Keep match names inside the card on very narrow phones. */
+  #cards article .t-h3{
+    overflow-wrap:anywhere;
+  }
+
+  /* The slip FAB must sit above—not on top of—the bottom navigation. */
+  #p2u-slip-fab{
+    right:14px !important;
+    bottom:calc(78px + env(safe-area-inset-bottom)) !important;
+    width:58px !important;
+    height:58px !important;
+    min-width:58px !important;
+    min-height:58px !important;
+    z-index:70 !important;
+  }
+
+  /* Reserve clean space for all four bottom navigation items. */
+  .mobile-bottom-nav .mobile-nav-inner{
+    grid-template-columns:repeat(4,minmax(0,1fr));
+    gap:4px;
+    padding:0;
+  }
+
+  .mobile-bottom-nav a{
+    min-width:0;
+    overflow:hidden;
+    white-space:nowrap;
+    text-overflow:ellipsis;
+    padding:4px 2px;
+    font-size:9.5px;
+  }
+
+  .mobile-bottom-nav a span{
+    display:block;
+    width:100%;
+    overflow:hidden;
+    text-overflow:ellipsis;
+    white-space:nowrap;
+    text-align:center;
+  }
+}
+
+/* Extra protection for very narrow cover screens. */
+@media (max-width: 380px){
+  #date-strip,
+  #engine-pills{
+    gap:8px !important;
+  }
+
+  #date-strip .pill,
+  #engine-pills .pill{
+    padding-left:13px;
+    padding-right:13px;
+    font-size:12.5px;
+  }
+
+  #p2u-slip-fab{
+    right:12px !important;
+    width:54px !important;
+    height:54px !important;
+    min-width:54px !important;
+    min-height:54px !important;
+  }
+}
+
 </style>
 </head>
 <body>
