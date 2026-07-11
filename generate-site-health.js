@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 "use strict";
 const fs=require("fs"),path=require("path");
-const HERE=__dirname,VERSION="v157";
+const HERE=__dirname,VERSION="v165";
 const read=f=>{try{return fs.readFileSync(path.join(HERE,f),"utf8");}catch(_){return"";}};
 const mtime=f=>{try{return fs.statSync(path.join(HERE,f)).mtime.toISOString();}catch(_){return null;}};
 const capture=(text,re)=>{const m=text.match(re);return m?m[1]:null;};
@@ -14,7 +14,7 @@ try{const eng=require("./banker-engine.js");engineCount=Array.isArray(eng.P2U_EN
 const LIVE=new Set(["1H","HT","2H","ET","BT","P","LIVE"]);
 const dataUpdated=capture(data,/window\.DATA_UPDATED\s*=\s*["']([^"']+)/)||mtime("data.js");
 const scoresUpdated=capture(data,/window\.SCORES_UPDATED\s*=\s*["']([^"']+)/)||null;
-const required=["board.html","engines.html","proof.html","scorecards.html","league-dna.html","community.html","trust.html","banker-engine.js","p2u-intelligence.js","site-health-widget.js"];
+const required=["board.html","engines.html","proof.html","scorecards.html","league-dna.html","community.html","trust.html","banker-engine.js","p2u-intelligence.js","site-health-widget.js","performance-freshness.js","performance-freshness.css"];
 const missing=required.filter(f=>!fs.existsSync(path.join(HERE,f)));
 const now=Date.now(),age=v=>{const t=Date.parse(v||"");return Number.isFinite(t)?now-t:Infinity;};
 let state="healthy",label="System operational";

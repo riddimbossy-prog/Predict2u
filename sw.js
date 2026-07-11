@@ -1,12 +1,13 @@
-/* Predict2u service worker — resilient offline shell + fresh match data.
+/* Predict2U service worker v165 — fast shell, bounded network waits and fresh data.
    Strategy:
-   - Navigation/HTML: network-first, then cached page fallback.
-   - data.js: network-first, then last cached data.
+   - Navigation/HTML: network-first with a short timeout, then cached fallback.
+   - data.js/site-health.json: network-first, canonical cache key, stale fallback.
    - Static assets: cache-first with background refresh.
-   - Cache entries are versioned. Bump CACHE_VERSION when releasing changes. */
+   - Optional PREFETCH_URLS message warms likely next pages. */
 
-const CACHE_VERSION = "predict2u-v164";
+const CACHE_VERSION = "predict2u-v165";
 const OFFLINE_PAGE = "./board.html";
+const NETWORK_TIMEOUT_MS = 4500;
 
 const SHELL = [
   "./index.html",
@@ -27,6 +28,8 @@ const SHELL = [
   "./site-health.json",
   "./brand-experience.js",
   "./brand-experience.css",
+  "./performance-freshness.js",
+  "./performance-freshness.css",
   "./p2u-intelligence.js",
   "./live-refresh.js",
   "./intelligence.css",
@@ -43,28 +46,43 @@ const SHELL = [
   "./apple-touch-icon.png",
   "./icon-192.png",
   "./icon-512.png",
-  "./maskable-icon.png",
+  "./maskable-icon.png"
 ];
 
-const isSuccessful = response =>
-  response && (response.ok || response.type === "opaque");
+const isSuccessful = response => response && (response.ok || response.type === "opaque");
+
+function canonicalRequest(request) {
+  const url = new URL(request.url);
+  url.search = "";
+  return new Request(url.toString(), {
+    method: "GET",
+    headers: request.headers,
+    credentials: request.credentials,
+    mode: request.mode === "navigate" ? "same-origin" : request.mode,
+    redirect: request.redirect
+  });
+}
+
+async function fetchWithTimeout(request, timeoutMs = NETWORK_TIMEOUT_MS) {
+  const controller = new AbortController();
+  const timer = setTimeout(() => controller.abort(), timeoutMs);
+  try {
+    return await fetch(request, { signal: controller.signal });
+  } finally {
+    clearTimeout(timer);
+  }
+}
 
 async function cacheShellIndividually() {
   const cache = await caches.open(CACHE_VERSION);
-
-  // Cache each file separately so one missing asset does not cancel the rest.
-  await Promise.allSettled(
-    SHELL.filter(Boolean).map(async url => {
-      try {
-        const response = await fetch(url, { cache: "reload" });
-        if (isSuccessful(response)) {
-          await cache.put(url, response);
-        }
-      } catch (_) {
-        // Installation continues even when an optional shell file is missing.
-      }
-    })
-  );
+  await Promise.allSettled(SHELL.map(async url => {
+    try {
+      const response = await fetch(url, { cache: "reload" });
+      if (isSuccessful(response)) await cache.put(url, response);
+    } catch (_) {
+      // Optional assets must never prevent installation.
+    }
+  }));
 }
 
 self.addEventListener("install", event => {
@@ -73,43 +91,30 @@ self.addEventListener("install", event => {
 });
 
 self.addEventListener("activate", event => {
-  event.waitUntil(
-    (async () => {
-      const keys = await caches.keys();
-      await Promise.all(
-        keys
-          .filter(key => key.startsWith("predict2u-") && key !== CACHE_VERSION)
-          .map(key => caches.delete(key))
-      );
-
-      // Enable navigation preload when supported.
-      if (self.registration.navigationPreload) {
-        await self.registration.navigationPreload.enable();
-      }
-
-      await self.clients.claim();
-    })()
-  );
+  event.waitUntil((async () => {
+    const keys = await caches.keys();
+    await Promise.all(keys
+      .filter(key => key.startsWith("predict2u-") && key !== CACHE_VERSION)
+      .map(key => caches.delete(key)));
+    if (self.registration.navigationPreload) await self.registration.navigationPreload.enable();
+    await self.clients.claim();
+  })());
 });
 
-async function networkFirst(request, fallbackUrl = null, preloadResponse = null) {
+async function networkFirst(request, { fallbackUrl = null, preloadResponse = null, canonical = false } = {}) {
   const cache = await caches.open(CACHE_VERSION);
-
+  const key = canonical ? canonicalRequest(request) : request;
   try {
-    const response = preloadResponse || await fetch(request);
-    if (isSuccessful(response)) {
-      await cache.put(request, response.clone());
-    }
+    const response = preloadResponse || await fetchWithTimeout(request);
+    if (isSuccessful(response)) await cache.put(key, response.clone());
     return response;
   } catch (_) {
-    const cached = await cache.match(request, { ignoreSearch: true });
+    const cached = await cache.match(key, { ignoreSearch: true });
     if (cached) return cached;
-
     if (fallbackUrl) {
       const fallback = await cache.match(fallbackUrl, { ignoreSearch: true });
       if (fallback) return fallback;
     }
-
     return new Response("You appear to be offline.", {
       status: 503,
       statusText: "Offline",
@@ -120,26 +125,20 @@ async function networkFirst(request, fallbackUrl = null, preloadResponse = null)
 
 async function cacheFirstWithRefresh(request) {
   const cache = await caches.open(CACHE_VERSION);
-  const cached = await cache.match(request, { ignoreSearch: true });
-
+  const key = canonicalRequest(request);
+  const cached = await cache.match(key, { ignoreSearch: true });
   const refresh = fetch(request)
     .then(async response => {
-      if (isSuccessful(response)) {
-        await cache.put(request, response.clone());
-      }
+      if (isSuccessful(response)) await cache.put(key, response.clone());
       return response;
     })
     .catch(() => null);
-
-  // Return cache immediately and refresh it in the background.
   if (cached) {
     refresh.catch(() => {});
     return cached;
   }
-
   const response = await refresh;
   if (response) return response;
-
   return new Response("Resource unavailable while offline.", {
     status: 503,
     statusText: "Offline",
@@ -150,34 +149,43 @@ async function cacheFirstWithRefresh(request) {
 self.addEventListener("fetch", event => {
   const request = event.request;
   const url = new URL(request.url);
-
-  // Only handle same-origin GET requests.
   if (request.method !== "GET" || url.origin !== self.location.origin) return;
 
-  // Always prefer fresh prediction data.
   if (url.pathname.endsWith("/data.js") || url.pathname.endsWith("data.js")) {
-    event.respondWith(networkFirst(request));
+    event.respondWith(networkFirst(request, { canonical: true }));
     return;
   }
 
-  // HTML navigations should update quickly after a deployment.
+  if (url.pathname.endsWith("/site-health.json") || url.pathname.endsWith("site-health.json")) {
+    event.respondWith(networkFirst(request, { canonical: true }));
+    return;
+  }
+
   if (request.mode === "navigate") {
-    event.respondWith(
-      (async () => {
-        const preload = await event.preloadResponse;
-        return networkFirst(request, OFFLINE_PAGE, preload || null);
-      })()
-    );
+    event.respondWith((async () => {
+      const preload = await event.preloadResponse;
+      return networkFirst(request, { fallbackUrl: OFFLINE_PAGE, preloadResponse: preload || null });
+    })());
     return;
   }
 
-  // Versioned app assets load from cache immediately and refresh quietly.
   event.respondWith(cacheFirstWithRefresh(request));
 });
 
-// Optional message hook: allow the page to activate a waiting worker immediately.
 self.addEventListener("message", event => {
   if (event.data === "SKIP_WAITING") {
     self.skipWaiting();
+    return;
+  }
+  if (event.data && event.data.type === "PREFETCH_URLS" && Array.isArray(event.data.urls)) {
+    const urls = event.data.urls.filter(url => typeof url === "string" && url.length < 180).slice(0, 8);
+    event.waitUntil((async () => {
+      const cache = await caches.open(CACHE_VERSION);
+      await Promise.allSettled(urls.map(async url => {
+        const request = new Request(url, { credentials: "same-origin" });
+        const response = await fetch(request);
+        if (isSuccessful(response)) await cache.put(canonicalRequest(request), response);
+      }));
+    })());
   }
 });

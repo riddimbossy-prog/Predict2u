@@ -79,6 +79,7 @@ h1{font-family:"Space Grotesk";font-size:clamp(36px,6vw,68px);line-height:1.02;l
 
 <link rel="stylesheet" href="site-health.css"/>
 <link rel="stylesheet" href="brand-experience.css"/>
+<link rel="stylesheet" href="performance-freshness.css"/>
 </head>
 <body>
 <nav class="nav"><div class="wrap navin">
@@ -134,7 +135,8 @@ h1{font-family:"Space Grotesk";font-size:clamp(36px,6vw,68px);line-height:1.02;l
   search.addEventListener("input",render);family.addEventListener("change",render);render();
 })();
 </script>
-<script src="brand-experience.js"></script>
-<script src="site-health-widget.js"></script>
+<script src="brand-experience.js" defer></script>
+<script src="site-health-widget.js" defer></script>
 <script>if("serviceWorker" in navigator)addEventListener("load",()=>navigator.serviceWorker.register("sw.js").catch(()=>{}));</script>
+<script src="performance-freshness.js" defer></script>
 </body></html>

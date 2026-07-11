@@ -563,6 +563,9 @@ details summary{ cursor:pointer; font-size:14.5px; color:var(--brand); font-weig
 .footer-green a{color:var(--em)!important}.footer-green a:hover{opacity:.85}.wl-w{color:var(--em)!important}.wl-l{color:var(--loss)!important}</style>
 <link rel="stylesheet" href="site-health.css"/>
 <link rel="stylesheet" href="brand-experience.css"/>
+<link rel="stylesheet" href="performance-freshness.css"/>
+<link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+<link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
 </head>
 <body>
 <header class="top">
@@ -726,7 +729,8 @@ if('serviceWorker' in navigator){
   window.addEventListener('load',()=>navigator.serviceWorker.register('sw.js').catch(()=>{}));
 }
 </script>
-<script src="brand-experience.js"></script>
-<script src="site-health-widget.js"></script>
+<script src="brand-experience.js" defer></script>
+<script src="site-health-widget.js" defer></script>
+<script src="performance-freshness.js" defer></script>
 </body>
 </html>

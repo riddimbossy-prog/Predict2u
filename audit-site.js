@@ -6,7 +6,7 @@ const critical=[],warnings=[],passed=[];
 const exists=f=>fs.existsSync(path.join(HERE,f));
 const read=f=>{try{return fs.readFileSync(path.join(HERE,f),"utf8");}catch(_){return"";}};
 const pages=["index.html","board.html","engines.html","proof.html","scorecards.html","league-dna.html","community.html","trust.html","responsible-gambling.html","terms.html","privacy.html","disclaimer.html","404.html"];
-const required=[...pages,"banker-engine.js","p2u-intelligence.js","intelligence.css","site-health-widget.js","site-health.css","sw.js","predict2u-logo.png","brand-experience.js","brand-experience.css","social-preview.png","favicon.ico","favicon-16x16.png","favicon-32x32.png","apple-touch-icon.png","maskable-icon.png","404.html"];
+const required=[...pages,"banker-engine.js","p2u-intelligence.js","intelligence.css","site-health-widget.js","site-health.css","sw.js","predict2u-logo.png","brand-experience.js","brand-experience.css","performance-freshness.js","performance-freshness.css","social-preview.png","favicon.ico","favicon-16x16.png","favicon-32x32.png","apple-touch-icon.png","maskable-icon.png","404.html"];
 for(const f of required){if(!exists(f))critical.push(`Missing required file: ${f}`);else passed.push(`Found ${f}`);}
 let engineCount=null;
 try{const eng=require("./banker-engine.js");engineCount=(eng.P2U_ENGINE_REGISTRY||[]).length;if(engineCount!==16)critical.push(`Engine registry has ${engineCount}; expected 16.`);else passed.push("Engine registry has 16 engines");}catch(e){critical.push(`Cannot load banker-engine.js: ${e.message}`);}
@@ -23,6 +23,7 @@ for(const page of pages){
   if(!/og:image/.test(html))critical.push(`${page}: Open Graph image metadata missing.`);
   if(!/favicon-32x32\.png/.test(html))critical.push(`${page}: favicon metadata missing.`);
   if(!/brand-experience\.(?:css|js)/.test(html))warnings.push(`${page}: Brand Experience layer not loaded.`);
+  if(!/performance-freshness\.(?:css|js)/.test(html))critical.push(`${page}: Performance/Freshness layer not loaded.`);
   let m;while((m=localRef.exec(html))){
     let ref=m[1].split(/[?#]/)[0];
     if(ref.includes("${"))continue;
@@ -44,7 +45,7 @@ if(!cacheMatch){
 }else{
   passed.push(`Service-worker cache is ${cacheMatch[1]}`);
 }
-for(const f of ["trust.html","intelligence.css","site-health-widget.js","site-health.css"]){if(!sw.includes(`./${f}`))warnings.push(`sw.js does not precache ${f}.`);}
+for(const f of ["trust.html","intelligence.css","site-health-widget.js","site-health.css","performance-freshness.js","performance-freshness.css"]){if(!sw.includes(`./${f}`))warnings.push(`sw.js does not precache ${f}.`);}
 
 for(const f of ["favicon.ico","favicon-16x16.png","favicon-32x32.png","apple-touch-icon.png","icon-192.png","icon-512.png","maskable-icon.png","social-preview.png"]){if(!exists(f))critical.push(`Missing brand asset: ${f}`);else passed.push(`Found brand asset ${f}`);}
 const board=read("board.html"),full=read("engines.html");
@@ -65,7 +66,7 @@ if(exists("data.js")){
   }catch(e){critical.push(`data.js MATCHES JSON cannot be parsed: ${e.message}`);}
 }else if(!PACKAGE_MODE)warnings.push("data.js is not present; live repository audit cannot validate fixtures.");
 const uniqueWarnings=[...new Set(warnings)];
-const report={generatedAt:new Date().toISOString(),auditVersion:"v164",cacheVersion:cacheMatch?cacheMatch[1]:null,engineCount,critical,warnings:uniqueWarnings,passedCount:passed.length};
+const report={generatedAt:new Date().toISOString(),auditVersion:"v165",cacheVersion:cacheMatch?cacheMatch[1]:null,engineCount,critical,warnings:uniqueWarnings,passedCount:passed.length};
 fs.writeFileSync(path.join(HERE,"site-audit.json"),JSON.stringify(report,null,2)+"\n");
 console.log(`Audit: ${critical.length} critical, ${uniqueWarnings.length} warning(s), ${passed.length} checks passed.`);
 for(const x of critical)console.error("CRITICAL:",x);

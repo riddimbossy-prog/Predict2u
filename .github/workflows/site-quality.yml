@@ -26,6 +26,10 @@ jobs:
           test -f audit-site.js
           test -f intelligence.css
           test -f site-health.css
+          test -f performance-freshness.css
+          test -f performance-freshness.js
+          test -f performance-budget.js
+          test -f tests/performance-freshness.spec.js
           test -f trust.html
           echo "Quality-test and shared UI files found. npm cache is intentionally disabled because this repository has no lock file."
 
@@ -33,6 +37,9 @@ jobs:
         run: npm install --no-audit --no-fund --package-lock=false
       - name: Run repository completeness preflight
         run: node repository-preflight.js
+
+      - name: Run deterministic performance budget
+        run: node performance-budget.js
 
       - name: Generate public health snapshot
         run: node generate-site-health.js
@@ -53,3 +60,4 @@ jobs:
             test-results
             site-audit.json
             site-health.json
+            performance-budget.json

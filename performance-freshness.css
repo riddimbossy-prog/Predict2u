@@ -1,0 +1,118 @@
+/* Predict2U v165 — speed, freshness and quiet loading states */
+:root{
+  --p2u-fresh:#34d399;
+  --p2u-fresh-muted:#8a93a6;
+  --p2u-fresh-amber:#fbbf24;
+  --p2u-fresh-panel:#11141a;
+  --p2u-fresh-line:#252936;
+}
+
+/* Lower sections stay out of the initial rendering workload until approached. */
+#engines,#performance,#world-cup,#transparency,footer{
+  content-visibility:auto;
+  contain-intrinsic-size:1px 700px;
+}
+
+/* Compact freshness indicator. Deliberately not a full-width warning banner. */
+#p2u-freshness-line{
+  display:flex;
+  align-items:center;
+  flex-wrap:wrap;
+  gap:7px;
+  width:max-content;
+  max-width:100%;
+  margin-top:10px;
+  color:var(--p2u-fresh-muted);
+  font:650 10px/1.35 Inter,system-ui,sans-serif;
+  letter-spacing:.025em;
+}
+#p2u-freshness-line .p2u-fresh-dot{
+  width:7px;
+  height:7px;
+  flex:0 0 7px;
+  border-radius:50%;
+  background:var(--p2u-fresh);
+  box-shadow:0 0 0 3px rgba(52,211,153,.10);
+}
+#p2u-freshness-line[data-state="aging"] .p2u-fresh-dot,
+#p2u-freshness-line[data-state="updating"] .p2u-fresh-dot{
+  background:var(--p2u-fresh-amber);
+  box-shadow:0 0 0 3px rgba(251,191,36,.10);
+}
+#p2u-freshness-line[data-state="offline"] .p2u-fresh-dot,
+#p2u-freshness-line[data-state="unavailable"] .p2u-fresh-dot{
+  background:var(--p2u-fresh-muted);
+  box-shadow:none;
+}
+#p2u-freshness-line button{
+  appearance:none;
+  border:0;
+  background:transparent;
+  color:var(--p2u-fresh);
+  padding:0;
+  font:800 10px/1.35 Inter,system-ui,sans-serif;
+  cursor:pointer;
+}
+#p2u-freshness-line button:focus-visible{
+  outline:2px solid var(--p2u-fresh);
+  outline-offset:3px;
+  border-radius:4px;
+}
+
+/* CSS-only loading placeholders for the board's first paint. */
+html.p2u-booting #cards:empty{
+  display:grid;
+  grid-template-columns:repeat(4,minmax(0,1fr));
+  gap:16px;
+  min-height:260px;
+}
+html.p2u-booting #cards:empty::before{
+  content:"";
+  grid-column:1 / -1;
+  min-height:250px;
+  border:1px solid var(--p2u-fresh-line);
+  border-radius:22px;
+  background:
+    linear-gradient(90deg,transparent 0,rgba(255,255,255,.035) 45%,rgba(255,255,255,.07) 50%,rgba(255,255,255,.035) 55%,transparent 100%) 0 0/220% 100%,
+    linear-gradient(var(--p2u-fresh-panel),var(--p2u-fresh-panel));
+  animation:p2uSkeleton 1.35s linear infinite;
+}
+@keyframes p2uSkeleton{to{background-position:-220% 0,0 0}}
+
+.p2u-data-fallback{
+  grid-column:1/-1;
+  border:1px solid var(--p2u-fresh-line);
+  border-radius:22px;
+  background:var(--p2u-fresh-panel);
+  padding:34px 22px;
+  text-align:center;
+  color:var(--p2u-fresh-muted);
+  font-size:13px;
+}
+.p2u-data-fallback strong{display:block;color:#f7f8fa;font-size:16px;margin-bottom:6px}
+.p2u-data-fallback button{
+  margin-top:16px;
+  border:1px solid rgba(52,211,153,.28);
+  border-radius:12px;
+  background:rgba(52,211,153,.10);
+  color:var(--p2u-fresh);
+  padding:9px 13px;
+  font-weight:800;
+  cursor:pointer;
+}
+
+/* Faster image decoding and safer intrinsic sizing. */
+img{content-visibility:auto}
+img[loading="lazy"]{contain-intrinsic-size:48px 48px}
+
+@media(max-width:1024px){
+  html.p2u-booting #cards:empty{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+@media(max-width:640px){
+  #p2u-freshness-line{width:100%;overflow-wrap:anywhere}
+  html.p2u-booting #cards:empty{grid-template-columns:1fr;min-height:220px}
+  html.p2u-booting #cards:empty::before{min-height:210px}
+}
+@media(prefers-reduced-motion:reduce){
+  html.p2u-booting #cards:empty::before{animation:none}
+}

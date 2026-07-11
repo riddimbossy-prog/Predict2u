@@ -2,6 +2,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+<script>document.documentElement.classList.add('p2u-booting')</script>
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover"/>
 <title>Predict2u • Know the game. Predict better.</title>
@@ -25,6 +26,12 @@
 <meta name="twitter:image" content="https://predict2u.com/social-preview.png"/>
 <link rel="canonical" href="https://predict2u.com/"/>
 <meta name="theme-color" content="#0a0a0f"/>
+<link rel="preconnect" href="https://cdn.tailwindcss.com" crossorigin>
+<link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+<link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+<link rel="dns-prefetch" href="https://cdn.tailwindcss.com">
+<link rel="dns-prefetch" href="https://cdnjs.cloudflare.com">
+<link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
 <script src="https://cdn.tailwindcss.com"></script>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
 <style>
@@ -162,6 +169,7 @@ a{ color:inherit; text-decoration:none; }
 </style>
 <link rel="stylesheet" href="site-health.css"/>
 <link rel="stylesheet" href="brand-experience.css"/>
+<link rel="stylesheet" href="performance-freshness.css"/>
 </head>
 <body>
 <nav class="sticky top-0 z-50" style="background:var(--bg);border-bottom:1px solid var(--line)">
@@ -428,7 +436,7 @@ a{ color:inherit; text-decoration:none; }
    A headline rate reads as a promise. A record reads as a record.
    =========================================================================== */
 (function(){
-  const M = window.MATCHES || [];
+  let M = Array.isArray(window.MATCHES) ? window.MATCHES : [];
   const $ = id => document.getElementById(id);
   const esc = t => String(t==null?'':t).replace(/[<>&"]/g,c=>({'<':'&lt;','>':'&gt;','&':'&amp;','"':'&quot;'}[c]));
   const shortMk = mk => String(mk||'')
@@ -445,10 +453,19 @@ a{ color:inherit; text-decoration:none; }
   const intelFor=m=>INTEL_CACHE[keyOf(m)]||(INTEL_CACHE[keyOf(m)]=window.P2UIntelligence?P2UIntelligence.analyseMatch(m):null);
 
   const todayISO = new Date().toISOString().slice(0,10);
-  const byDate = {};
-  M.forEach(m=>{ const d=m.matchDate||'Undated'; (byDate[d]=byDate[d]||[]).push(m); });
-  const dates = Object.keys(byDate).filter(d=>d!=='Undated').sort();
-  let activeDate = dates.includes(todayISO) ? todayISO : (dates.find(d=>d>todayISO)||dates[dates.length-1]||todayISO);
+  let byDate = {};
+  let dates = [];
+  let activeDate = todayISO;
+  function rebuildDataIndex(preserveDate=true){
+    const previous=activeDate;
+    byDate={};
+    M.forEach(m=>{ const d=m.matchDate||'Undated'; (byDate[d]=byDate[d]||[]).push(m); });
+    dates=Object.keys(byDate).filter(d=>d!=='Undated').sort();
+    activeDate=preserveDate&&byDate[previous]
+      ? previous
+      : (dates.includes(todayISO)?todayISO:(dates.find(d=>d>todayISO)||dates[dates.length-1]||todayISO));
+  }
+  rebuildDataIndex(false);
   const dayMatches = ()=> byDate[activeDate]||[];
 
   const params = new URLSearchParams(location.search);
@@ -519,6 +536,12 @@ a{ color:inherit; text-decoration:none; }
     if(q) rows=rows.filter(p=>(p.m.home+' '+p.m.away+' '+(p.m.league||'')).toLowerCase().includes(q));
     if(league!=='all') rows=rows.filter(p=>p.m.league===league);
     $('board-analysed').textContent=`${dayMatches().length} matches analysed`;
+    if(!M.length){
+      $('cards').innerHTML='<div class="p2u-data-fallback"><strong>Board data is temporarily unavailable</strong><span>The interface is ready, but the latest fixture file could not be loaded.</span><br><button type="button" id="p2u-data-retry">Try again</button></div>';
+      $('show-all').style.display='none';
+      const retry=$('p2u-data-retry'); if(retry)retry.addEventListener('click',()=>location.reload());
+      return;
+    }
     if(mode==='acca'){ renderAcca(rows); $('show-all').style.display='none'; return; }
     $('acca-root').style.display='none';
     const total=rows.length;
@@ -816,6 +839,20 @@ a{ color:inherit; text-decoration:none; }
     }catch(e){}
   }
 
+  function refreshBoardData(){
+    const next=Array.isArray(window.MATCHES)?window.MATCHES:[];
+    if(!next.length&&M.length)return false;
+    M=next;
+    Object.keys(INTEL_CACHE).forEach(k=>delete INTEL_CACHE[k]);
+    Object.keys(REG).forEach(k=>delete REG[k]);
+    rebuildDataIndex(true);
+    showAll=false;
+    renderDates(); renderLeagues(); renderPills(); syncBoard(); renderStats(); renderCarousel(); renderCards(); renderBoardRankReason(); renderWC();
+    (window.requestIdleCallback||(f=>setTimeout(f,60)))(()=>{ renderEngines(); renderPerf(); });
+    return true;
+  }
+  window.P2UBoardRefresh=refreshBoardData;
+
   $('f-search').addEventListener('input',e=>{ q=e.target.value.toLowerCase().trim(); showAll=false; renderCards(); });
   $('f-league').addEventListener('change',e=>{ league=e.target.value; showAll=false; renderCards(); });
   document.querySelectorAll('[data-jump]').forEach(a=>a.addEventListener('click',e=>{
@@ -829,7 +866,8 @@ a{ color:inherit; text-decoration:none; }
 <script>
 if('serviceWorker' in navigator) window.addEventListener('load',()=>navigator.serviceWorker.register('sw.js').catch(()=>{}));
 </script>
-<script src="brand-experience.js"></script>
-<script src="site-health-widget.js"></script>
+<script src="brand-experience.js" defer></script>
+<script src="site-health-widget.js" defer></script>
+<script src="performance-freshness.js" defer></script>
 </body>
 </html>
