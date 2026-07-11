@@ -50,7 +50,7 @@ for(const f of ["favicon.ico","favicon-16x16.png","favicon-32x32.png","apple-tou
 const board=read("board.html"),full=read("engines.html");
 if(!/p2u-onboarding-v157/.test(read("brand-experience.js")))critical.push("First-visit onboarding is missing.");else passed.push("First-visit onboarding is wired");
 if(!/board-rank-reason/.test(board)||!/ranked-explainer/.test(full))critical.push("Ranked #1 explanation is incomplete.");else passed.push("Ranked #1 explanation is present on both boards");
-if(!/p2u-system-alert/.test(read("brand-experience.js")))critical.push("Update-failure alert is missing.");else passed.push("Update-failure alert is wired");
+if(/p2u-system-alert|Core match data is more than 36 hours old|View system status/.test(read("brand-experience.js")))critical.push("Removed public status banner is still present.");else passed.push("Public status banner is removed; Trust Center status remains available");
 
 const proof=read("proof.html");
 if(!/p2u-intelligence\.js/.test(proof)||!/proof-root/.test(proof))critical.push("Proof page wiring is incomplete.");
@@ -65,7 +65,7 @@ if(exists("data.js")){
   }catch(e){critical.push(`data.js MATCHES JSON cannot be parsed: ${e.message}`);}
 }else if(!PACKAGE_MODE)warnings.push("data.js is not present; live repository audit cannot validate fixtures.");
 const uniqueWarnings=[...new Set(warnings)];
-const report={generatedAt:new Date().toISOString(),auditVersion:"v161",cacheVersion:cacheMatch?cacheMatch[1]:null,engineCount,critical,warnings:uniqueWarnings,passedCount:passed.length};
+const report={generatedAt:new Date().toISOString(),auditVersion:"v164",cacheVersion:cacheMatch?cacheMatch[1]:null,engineCount,critical,warnings:uniqueWarnings,passedCount:passed.length};
 fs.writeFileSync(path.join(HERE,"site-audit.json"),JSON.stringify(report,null,2)+"\n");
 console.log(`Audit: ${critical.length} critical, ${uniqueWarnings.length} warning(s), ${passed.length} checks passed.`);
 for(const x of critical)console.error("CRITICAL:",x);

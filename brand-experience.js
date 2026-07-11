@@ -1,15 +1,25 @@
-/* Predict2U Brand & Experience v157 */
+/* Predict2U Brand & Experience v164 */
 (function(){
   "use strict";
-  const VERSION="v157";
-  const LIVE=new Set(["1H","HT","2H","ET","BT","P","LIVE"]);
-  const parse=v=>{const t=Date.parse(v||"");return Number.isFinite(t)?t:null;};
-  const age=v=>{const t=parse(v);return t==null?Infinity:Date.now()-t;};
-  const localHealth=()=>{const m=Array.isArray(window.MATCHES)?window.MATCHES:[];return{version:VERSION,dataUpdated:window.DATA_UPDATED||null,scoresUpdated:window.SCORES_UPDATED||null,engineCount:Array.isArray(window.P2U_ENGINE_REGISTRY)?window.P2U_ENGINE_REGISTRY.length:null,matchCount:m.length,liveMatches:m.filter(x=>LIVE.has(String(x.status||"").toUpperCase())).length};};
-  async function health(){try{const r=await fetch(`site-health.json?bx=${Date.now()}`,{cache:"no-store"});if(r.ok)return{...localHealth(),...(await r.json())};}catch(_){}return localHealth();}
-  function classify(h){const engineBad=h.engineCount!=null&&h.engineCount!==16;const workflowFailed=/fail|error/i.test(String(h.workflowStatus||h.lastRunStatus||""));const dataAge=age(h.dataUpdated),scoreAge=age(h.scoresUpdated),oddsAge=age(h.oddsUpdated);if(workflowFailed)return{level:"critical",text:"The latest update workflow reported a failure. Some public information may be outdated."};if(engineBad)return{level:"critical",text:`Only ${h.engineCount} of 16 engines loaded. The board may be incomplete.`};if(dataAge>36*3600000)return{level:"critical",text:"Core match data is more than 36 hours old. Treat the board as temporarily unavailable."};if(dataAge>12*3600000)return{level:"warning",text:"Core match data is delayed. The board may not include the newest fixtures."};if((Number(h.liveMatches)||0)>0&&scoreAge>20*60000)return{level:"warning",text:"Live-score updates are delayed while matches are in progress."};if(h.oddsStatus==="unavailable"||(h.oddsUpdated&&oddsAge>24*3600000))return{level:"warning",text:"Odds enrichment is temporarily unavailable or out of date."};return null;}
-  function ensureAlert(){let el=document.getElementById("p2u-system-alert");if(el)return el;el=document.createElement("div");el.id="p2u-system-alert";el.className="p2u-system-alert";const nav=document.querySelector("nav");if(nav&&nav.parentNode)nav.insertAdjacentElement("afterend",el);else document.body.prepend(el);return el;}
-  async function renderAlert(){const h=await health(),c=classify(h),el=ensureAlert();if(!c){el.className="p2u-system-alert";el.innerHTML="";return;}el.className=`p2u-system-alert show ${c.level}`;el.innerHTML=`<span>${c.text}</span><span style="display:flex;gap:10px;align-items:center"><a href="trust.html#system-status">View system status →</a><button type="button" aria-label="Dismiss system warning">×</button></span>`;el.querySelector("button").addEventListener("click",()=>el.classList.remove("show"));}
-  function onboarding(){if(!/\/(?:index|board)\.html$/.test(location.pathname)&&location.pathname!=="/"&&location.pathname!=="")return;try{if(localStorage.getItem("p2u-onboarding-v157")==="seen")return;}catch(_){}const modal=document.createElement("div");modal.className="p2u-onboard-backdrop";modal.setAttribute("role","dialog");modal.setAttribute("aria-modal","true");modal.setAttribute("aria-label","How Predict2U works");modal.innerHTML=`<section class="p2u-onboard"><img class="p2u-onboard-logo" src="predict2u-logo.png" alt="Predict2u.com"><div class="eyebrow" style="margin-top:22px">A transparent prediction board</div><h2>Every pick has proof.</h2><p>Predict2U does not hide engine disagreement or remove settled losses. Start with these three steps.</p><div class="p2u-steps"><div class="p2u-step"><b>01 · ANALYSE</b><span>Sixteen engines examine the same fixture using different rules and data.</span></div><div class="p2u-step"><b>02 · COMPARE</b><span>Exact-market agreement, conflict and data reliability are measured separately.</span></div><div class="p2u-step"><b>03 · VERIFY</b><span>Open Proof Mode to inspect every vote and keep the final result on record.</span></div></div><div class="p2u-onboard-actions"><a class="p2u-onboard-primary" href="#board">Explore Today’s Board</a><a class="p2u-onboard-secondary" href="trust.html">See How It Works</a><button class="p2u-onboard-secondary" type="button" data-close>Continue</button></div><p class="p2u-onboard-note">For adults 18+. Analytical records are not guaranteed outcomes.</p></section>`;document.body.appendChild(modal);const close=()=>{try{localStorage.setItem("p2u-onboarding-v157","seen");}catch(_){}modal.remove();};modal.querySelector("[data-close]").addEventListener("click",close);modal.querySelector('a[href="#board"]').addEventListener("click",close);modal.addEventListener("click",e=>{if(e.target===modal)close();});document.addEventListener("keydown",function esc(e){if(e.key==="Escape"){close();document.removeEventListener("keydown",esc);}});setTimeout(()=>modal.querySelector("[data-close]").focus(),50);}
-  if(document.readyState==="loading")document.addEventListener("DOMContentLoaded",()=>{renderAlert();onboarding();});else{renderAlert();onboarding();}
+
+  function onboarding(){
+    if(!/\/(?:index|board)\.html$/.test(location.pathname)&&location.pathname!=="/"&&location.pathname!=="")return;
+    try{if(localStorage.getItem("p2u-onboarding-v157")==="seen")return;}catch(_){}
+    const modal=document.createElement("div");
+    modal.className="p2u-onboard-backdrop";
+    modal.setAttribute("role","dialog");
+    modal.setAttribute("aria-modal","true");
+    modal.setAttribute("aria-label","How Predict2U works");
+    modal.innerHTML=`<section class="p2u-onboard"><img class="p2u-onboard-logo" src="predict2u-logo.png" alt="Predict2u.com"><div class="eyebrow" style="margin-top:22px">A transparent prediction board</div><h2>Every pick has proof.</h2><p>Predict2U does not hide engine disagreement or remove settled losses. Start with these three steps.</p><div class="p2u-steps"><div class="p2u-step"><b>01 · ANALYSE</b><span>Sixteen engines examine the same fixture using different rules and data.</span></div><div class="p2u-step"><b>02 · COMPARE</b><span>Exact-market agreement, conflict and data reliability are measured separately.</span></div><div class="p2u-step"><b>03 · VERIFY</b><span>Open Proof Mode to inspect every vote and keep the final result on record.</span></div></div><div class="p2u-onboard-actions"><a class="p2u-onboard-primary" href="#board">Explore Today’s Board</a><a class="p2u-onboard-secondary" href="trust.html">See How It Works</a><button class="p2u-onboard-secondary" type="button" data-close>Continue</button></div><p class="p2u-onboard-note">For adults 18+. Analytical records are not guaranteed outcomes.</p></section>`;
+    document.body.appendChild(modal);
+    const close=()=>{try{localStorage.setItem("p2u-onboarding-v157","seen");}catch(_){}modal.remove();};
+    modal.querySelector("[data-close]").addEventListener("click",close);
+    modal.querySelector('a[href="#board"]').addEventListener("click",close);
+    modal.addEventListener("click",e=>{if(e.target===modal)close();});
+    document.addEventListener("keydown",function esc(e){if(e.key==="Escape"){close();document.removeEventListener("keydown",esc);}});
+    setTimeout(()=>modal.querySelector("[data-close]").focus(),50);
+  }
+
+  if(document.readyState==="loading")document.addEventListener("DOMContentLoaded",onboarding);
+  else onboarding();
 })();
