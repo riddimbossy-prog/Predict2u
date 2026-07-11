@@ -32,7 +32,7 @@
     const engineBad=h.engineCount!=null&&h.engineCount!==16;
     const workflowFailed=/fail|error/i.test(String(h.workflowStatus||h.lastRunStatus||""));
     if(workflowFailed)return{state:"critical",label:"Workflow failed"};
-    if(engineBad||dataAge>36*3600000)return{state:"critical",label:"Action needed"};
+    if(engineBad||dataAge>36*3600000)return{state:"critical",label:"Data delayed"};
     if(dataAge>12*3600000)return{state:"stale",label:"Core data stale"};
     if(h.liveMatches>0&&scoreAge>20*60000)return{state:"degraded",label:"Live scores delayed"};
     if(h.oddsStatus==="unavailable"||(h.oddsUpdated&&oddsAge>24*3600000))return{state:"degraded",label:"Odds unavailable"};

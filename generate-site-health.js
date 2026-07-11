@@ -18,7 +18,7 @@ const required=["board.html","engines.html","proof.html","scorecards.html","leag
 const missing=required.filter(f=>!fs.existsSync(path.join(HERE,f)));
 const now=Date.now(),age=v=>{const t=Date.parse(v||"");return Number.isFinite(t)?now-t:Infinity;};
 let state="healthy",label="System operational";
-if(missing.length||(engineCount!=null&&engineCount!==16)||age(dataUpdated)>36*3600000){state="critical";label="Action needed";}
+if(missing.length||(engineCount!=null&&engineCount!==16)||age(dataUpdated)>36*3600000){state="critical";label="Data delayed";}
 else if(age(dataUpdated)>12*3600000){state="stale";label="Data stale";}
 else if(matches.some(m=>LIVE.has(String(m.status||"").toUpperCase()))&&age(scoresUpdated)>20*60000){state="degraded";label="Live scores delayed";}
 const out={version:VERSION,generatedAt:new Date().toISOString(),state,label,dataUpdated,scoresUpdated,engineCount,matchCount:matches.length,liveMatches:matches.filter(m=>LIVE.has(String(m.status||"").toUpperCase())).length,missingRequiredFiles:missing};

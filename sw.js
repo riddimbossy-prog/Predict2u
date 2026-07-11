@@ -5,7 +5,7 @@
    - Static assets: cache-first with background refresh.
    - Optional PREFETCH_URLS message warms likely next pages. */
 
-const CACHE_VERSION = "predict2u-v169";
+const CACHE_VERSION = "predict2u-v170";
 const OFFLINE_PAGE = "./board.html";
 const NETWORK_TIMEOUT_MS = 4500;
 
@@ -31,6 +31,8 @@ const SHELL = [
   "./404.html",
   "./site-health-widget.js",
   "./site-health.css",
+  "mobile-app-nav.js",
+  "mobile-app-nav.css",
   "./site-health.json",
   "./brand-experience.js",
   "./brand-experience.css",

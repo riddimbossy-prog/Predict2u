@@ -6,7 +6,7 @@ const critical=[],warnings=[],passed=[];
 const exists=f=>fs.existsSync(path.join(HERE,f));
 const read=f=>{try{return fs.readFileSync(path.join(HERE,f),"utf8");}catch(_){return"";}};
 const pages=["index.html","board.html","engines.html","proof.html","scorecards.html","league-dna.html","community.html","trust.html","responsible-gambling.html","terms.html","privacy.html","disclaimer.html","404.html"];
-const required=[...pages,"banker-engine.js","p2u-intelligence.js","intelligence.css","site-health-widget.js","site-health.css","sw.js","predict2u-logo.png","brand-experience.js","brand-experience.css","performance-freshness.js","performance-freshness.css","personalization.js","personalization.css","smart-alerts.js","smart-alerts.css","admin.html","admin-control.js","admin-control.css","admin-config.js","site-controls.js","site-controls.css","social-preview.png","favicon.ico","favicon-16x16.png","favicon-32x32.png","apple-touch-icon.png","maskable-icon.png","404.html"];
+const required=[...pages,"banker-engine.js","p2u-intelligence.js","intelligence.css","site-health-widget.js","site-health.css","sw.js","predict2u-logo.png","brand-experience.js","brand-experience.css","performance-freshness.js","performance-freshness.css","personalization.js","personalization.css","smart-alerts.js","smart-alerts.css","admin.html","admin-control.js","admin-control.css","admin-config.js","site-controls.js","site-controls.css","mobile-app-nav.js","mobile-app-nav.css","social-preview.png","favicon.ico","favicon-16x16.png","favicon-32x32.png","apple-touch-icon.png","maskable-icon.png","404.html"];
 for(const f of required){if(!exists(f))critical.push(`Missing required file: ${f}`);else passed.push(`Found ${f}`);}
 let engineCount=null;
 try{const eng=require("./banker-engine.js");engineCount=(eng.P2U_ENGINE_REGISTRY||[]).length;if(engineCount!==16)critical.push(`Engine registry has ${engineCount}; expected 16.`);else passed.push("Engine registry has 16 engines");}catch(e){critical.push(`Cannot load banker-engine.js: ${e.message}`);}
@@ -100,3 +100,7 @@ console.log(`Audit: ${critical.length} critical, ${uniqueWarnings.length} warnin
 for(const x of critical)console.error("CRITICAL:",x);
 for(const x of uniqueWarnings)console.warn("WARNING:",x);
 if(critical.length)process.exit(1);
+const mobileNav=read("mobile-app-nav.js"),mobileNavCss=read("mobile-app-nav.css");
+if(!/Board/.test(mobileNav)||!/Games/.test(mobileNav)||!/Results/.test(mobileNav)||!/Community/.test(mobileNav))critical.push("Global mobile navigation is incomplete.");else passed.push("Global mobile navigation contains all four destinations");
+if(!/#p2u-health-button\[data-state=/.test(mobileNavCss)||!/display:none!important/.test(mobileNavCss))critical.push("Mobile Action Needed suppression is missing.");else passed.push("Mobile non-healthy status badge is suppressed");
+for(const page of pages){const html=read(page);if(!/mobile-app-nav\.js/.test(html)||!/mobile-app-nav\.css/.test(html))critical.push(`${page}: global mobile navigation assets not loaded.`);else passed.push(`${page}: global mobile navigation loaded`);}
