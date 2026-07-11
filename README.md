@@ -64,3 +64,7 @@ See `ENGINE_INTEGRATION_v148.md` for the updated automation and tracking scripts
 ## v149 advanced data
 
 See `ADVANCED_DATA_SETUP_v149.md`.
+
+
+## v180 Accounts & Cloud Sync
+See `ACCOUNTS_CLOUD_SYNC_v180.md` and run `SUPABASE_CLOUD_SETUP_v180.sql` once.

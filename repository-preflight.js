@@ -11,7 +11,7 @@ const required=[
   "favicon.ico","favicon-16x16.png","favicon-32x32.png","apple-touch-icon.png",
   "icon-192.png","icon-512.png","maskable-icon.png","manifest.webmanifest",
   "predict2u-logo.png","predict2u-mark.png","performance-budget.js","sw.js",
-  "growth-sharing.js","growth-sharing.css","share.html","admin.html","admin-control.js","admin-control.css","admin-config.js","site-controls.js","site-controls.css","community-freshness.js"
+  "growth-sharing.js","growth-sharing.css","share.html","account.html","profile.html","cloud-config.js","account-cloud.js","account-cloud.css","SUPABASE_CLOUD_SETUP_v180.sql","admin.html","admin-control.js","admin-control.css","admin-config.js","site-controls.js","site-controls.css","community-freshness.js"
 ];
 const missing=required.filter(f=>!fs.existsSync(path.join(root,f)));
 if(missing.length){

@@ -57,7 +57,8 @@ const P2USlip=(()=>{
   let tailedFrom=null, tailedHandle=null; try{ const t=JSON.parse(localStorage.getItem('p2u_tail_v1')||'null'); if(t){ tailedFrom=t.id; tailedHandle=t.handle; } }catch(e){}
   let stake=parseFloat(localStorage.getItem(SKEY)||'1')||1;
   const save=()=>{ try{ localStorage.setItem(KEY, JSON.stringify(legs)); localStorage.setItem(SKEY,String(stake));
-    if(tailedFrom) localStorage.setItem('p2u_tail_v1', JSON.stringify({id:tailedFrom,handle:tailedHandle})); else localStorage.removeItem('p2u_tail_v1'); }catch(e){} };
+    if(tailedFrom) localStorage.setItem('p2u_tail_v1', JSON.stringify({id:tailedFrom,handle:tailedHandle})); else localStorage.removeItem('p2u_tail_v1'); }catch(e){}
+    try{ window.dispatchEvent(new CustomEvent('p2u:slip-changed',{detail:{version:'v180',legs:legs.slice(),stake,tail:tailedFrom?{id:tailedFrom,handle:tailedHandle}:null}})); }catch(e){} };
   const esc=t=>String(t==null?'':t).replace(/[<>&"]/g,c=>({'<':'&lt;','>':'&gt;','&':'&amp;','"':'&quot;'}[c]));
   const mKey=m=> (m && m.id!=null) ? 'f'+m.id : ((m&&m.home||'')+'|'+(m&&m.away||'')+'|'+(m&&m.matchDate||''));
   const findMatch=leg=> (window.MATCHES||[]).find(m=> mKey(m)===leg.k) || null;
@@ -201,6 +202,8 @@ const P2USlip=(()=>{
     get legs(){ return legs.slice(); },
     get stake(){ return stake; },
     get tailedFrom(){ return tailedFrom; },
+    getDraft(){ return {legs:legs.slice(),stake,tail:tailedFrom?{id:tailedFrom,handle:tailedHandle}:null}; },
+    replaceDraft(draft){ const d=draft&&typeof draft==='object'?draft:{}; legs=Array.isArray(d.legs)?d.legs.slice(0,MAX):[]; stake=Math.max(0,Number(d.stake)||1); const t=d.tail&&typeof d.tail==='object'?d.tail:null; tailedFrom=t&&t.id?t.id:null; tailedHandle=t&&t.handle?t.handle:null; save(); render(); return this.getDraft(); },
     state: slipState,
     clear(){ legs=[]; tailedFrom=null; tailedHandle=null; save(); render(); },
     /* the page registers a save handler; without one the buttons point at the community page */

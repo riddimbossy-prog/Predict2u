@@ -41,6 +41,13 @@ jobs:
           test -f site-controls.css
           test -f site-controls.js
           test -f tests/admin-control.spec.js
+          test -f account.html
+          test -f profile.html
+          test -f cloud-config.js
+          test -f account-cloud.css
+          test -f account-cloud.js
+          test -f SUPABASE_CLOUD_SETUP_v180.sql
+          test -f tests/account-cloud.spec.js
           test -f performance-budget.js
           test -f tests/performance-freshness.spec.js
           test -f trust.html

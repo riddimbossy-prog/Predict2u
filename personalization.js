@@ -3,7 +3,7 @@
 (function () {
   'use strict';
 
-  const VERSION = 'v176';
+  const VERSION = 'v180';
   const STORAGE_KEY = 'p2u-personalization-v167';
   const MAX_RECENT = 8;
   const DEFAULTS = {
@@ -83,6 +83,7 @@
     }
     applyView();
     updateBar();
+    try { window.dispatchEvent(new CustomEvent('p2u:personalization-changed', { detail: { version: VERSION, prefs: clone(prefs) } })); } catch (_) {}
   }
 
   function update(patch, refresh = true) {

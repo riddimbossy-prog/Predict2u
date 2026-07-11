@@ -3,7 +3,7 @@
 (function(){
   "use strict";
 
-  const VERSION="v176";
+  const VERSION="v180";
   const STORE="p2u-smart-alerts-v168";
   const MATCH_STORE="p2u-smart-alerts-match-snapshot-v168";
   const COMMUNITY_STORE="p2u-smart-alerts-community-seen-v168";
@@ -47,7 +47,7 @@
       return Object.assign({},defaults,saved,{alerts});
     }catch(_){ return Object.assign({},defaults); }
   }
-  function persist(){ try{localStorage.setItem(STORE,JSON.stringify(state));}catch(_){} }
+  function persist(){ try{localStorage.setItem(STORE,JSON.stringify(state));}catch(_){} try{window.dispatchEvent(new CustomEvent('p2u:smart-alerts-changed',{detail:{version:VERSION,state:JSON.parse(JSON.stringify(state))}}));}catch(_){} }
   function esc(value){ return String(value==null?"":value).replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;","\"":"&quot;","'":"&#39;"}[c])); }
   function clean(value,max=190){
     return String(value||"")

@@ -24,7 +24,11 @@ const budgets={
   "admin-control.js":50000,
   "admin-control.css":30000,
   "site-controls.js":15000,
-  "site-controls.css":8000
+  "site-controls.css":8000,
+  "account-cloud.js":65000,
+  "account-cloud.css":26000,
+  "account.html":18000,
+  "profile.html":12000
 };
 for(const [file,limit] of Object.entries(budgets)){
   if(!exists(file)){errors.push(`Missing budgeted file: ${file}`);continue;}
@@ -49,7 +53,7 @@ const sw=read("sw.js");
 const cacheMatch=sw.match(/CACHE_VERSION\s*=\s*["'](predict2u-v\d+)["']/);
 if(!cacheMatch)errors.push("sw.js is missing a valid predict2u-vN cache version.");
 else passed.push(`sw.js cache: ${cacheMatch[1]}`);
-for(const token of ["NETWORK_TIMEOUT_MS","canonicalRequest","performance-freshness.js","performance-freshness.css","personalization.js","personalization.css","smart-alerts.js","smart-alerts.css","admin.html","admin-control.js","admin-control.css","admin-config.js","site-controls.js","site-controls.css"]){
+for(const token of ["NETWORK_TIMEOUT_MS","canonicalRequest","performance-freshness.js","performance-freshness.css","personalization.js","personalization.css","smart-alerts.js","smart-alerts.css","admin.html","admin-control.js","admin-control.css","admin-config.js","site-controls.js","site-controls.css","account.html","profile.html","cloud-config.js","account-cloud.js","account-cloud.css"]){
   if(!sw.includes(token))errors.push(`sw.js missing ${token}`);
 }
 for(const page of ["index.html","board.html"]){
@@ -84,13 +88,20 @@ for(const token of ["communityWin","verifiedOnly","followedUsers","trendingWins"
 }
 
 
-for(const token of ["admin.html","admin-control.js","admin-control.css","admin-config.js","site-controls.js","site-controls.css"]){
+for(const token of ["admin.html","admin-control.js","admin-control.css","admin-config.js","site-controls.js","site-controls.css","account.html","profile.html","cloud-config.js","account-cloud.js","account-cloud.css"]){
   if(!sw.includes(token))errors.push(`sw.js missing ${token}`);
 }
 const admin=read("admin.html"),adminControl=read("admin-control.js");
 if(!/meta name="robots" content="noindex,nofollow,noarchive"/.test(admin))errors.push("admin.html must remain noindex/nofollow.");
 for(const token of ["p2u-admin-pin-v169","downloadConfig","site-health.json","site-audit.json"]){if(!adminControl.includes(token))errors.push(`admin-control.js missing ${token}`);}
 if(!read("robots.txt").includes("Disallow: /admin.html"))errors.push("robots.txt does not disallow admin.html.");
+
+
+for(const page of ["index.html","board.html","community.html","account.html"]){
+  const html=read(page);
+  if(!/account-cloud\.css/.test(html)||!/account-cloud\.js/.test(html))errors.push(`${page}: account cloud layer is not loaded.`);
+}
+for(const token of ["p2u_cloud_state","p2u_follows","signInWithOtp","syncNow","toggleFollow"]){if(!read("account-cloud.js").includes(token))errors.push(`account-cloud.js missing ${token}`);}
 
 const buildVersion=exists("BUILD_VERSION.txt")?read("BUILD_VERSION.txt").trim():"unknown";
 const report={

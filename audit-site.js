@@ -81,6 +81,14 @@ for(const token of ["noindex,nofollow","admin-control.css","banker-engine.js","a
 for(const token of ["p2u-admin-pin-v169","P2U_ADMIN_CONFIG","downloadConfig","Support bundle","community.verifiedIds"]){if(!adminJs.includes(token))critical.push(`admin-control.js missing ${token}.`);else passed.push(`Admin control supports ${token}`);}
 for(const token of ["p2u-board-unpublished","P2USiteControls","hiddenIds","verifiedIds"]){if(!siteControls.includes(token))critical.push(`site-controls.js missing ${token}.`);else passed.push(`Public controls support ${token}`);}
 if(/API_KEY|GITHUB_TOKEN|ghp_[A-Za-z0-9]/.test(read("admin-config.js")))critical.push("admin-config.js appears to contain a secret-like value.");else passed.push("Admin configuration contains no secret-like values");
+
+for(const f of ["account.html","profile.html","cloud-config.js","account-cloud.js","account-cloud.css","SUPABASE_CLOUD_SETUP_v180.sql"]){if(!exists(f))critical.push(`Missing account/cloud file: ${f}`);else passed.push(`Found account/cloud file ${f}`);}
+const accountHtml=read("account.html"),accountCloud=read("account-cloud.js"),cloudConfig=read("cloud-config.js"),cloudSql=read("SUPABASE_CLOUD_SETUP_v180.sql");
+if(!/noindex,nofollow/.test(accountHtml))critical.push("account.html must remain noindex/nofollow.");else passed.push("Account center is noindex/nofollow");
+for(const token of ["signInWithOtp","p2u_cloud_state","p2u_follows","syncNow","toggleFollow","requestDeletion"]){if(!accountCloud.includes(token))critical.push(`account-cloud.js missing ${token}.`);else passed.push(`Account cloud supports ${token}`);}
+for(const token of ["enable row level security","auth.uid() = user_id","p2u_account_deletion_requests"]){if(!cloudSql.toLowerCase().includes(token.toLowerCase()))critical.push(`Supabase cloud setup missing ${token}.`);else passed.push(`Supabase setup includes ${token}`);}
+if(/service[_-]?role\s*[:=]/i.test(cloudConfig)||/SUPABASE_SECRET/i.test(cloudConfig))critical.push("cloud-config.js appears to contain a server secret.");else passed.push("Cloud config contains no server secret");
+
 const proof=read("proof.html");
 if(!/p2u-intelligence\.js/.test(proof)||!/proof-root/.test(proof))critical.push("Proof page wiring is incomplete.");
 if(exists("data.js")){
@@ -94,7 +102,7 @@ if(exists("data.js")){
   }catch(e){critical.push(`data.js MATCHES JSON cannot be parsed: ${e.message}`);}
 }else if(!PACKAGE_MODE)warnings.push("data.js is not present; live repository audit cannot validate fixtures.");
 const uniqueWarnings=[...new Set(warnings)];
-const report={generatedAt:new Date().toISOString(),auditVersion:"v169",cacheVersion:cacheMatch?cacheMatch[1]:null,engineCount,critical,warnings:uniqueWarnings,passedCount:passed.length};
+const report={generatedAt:new Date().toISOString(),auditVersion:"v180",cacheVersion:cacheMatch?cacheMatch[1]:null,engineCount,critical,warnings:uniqueWarnings,passedCount:passed.length};
 fs.writeFileSync(path.join(HERE,"site-audit.json"),JSON.stringify(report,null,2)+"\n");
 console.log(`Audit: ${critical.length} critical, ${uniqueWarnings.length} warning(s), ${passed.length} checks passed.`);
 for(const x of critical)console.error("CRITICAL:",x);
