@@ -124,6 +124,9 @@ a{ color:inherit; text-decoration:none; }
 @keyframes livePulse{70%{box-shadow:0 0 0 7px rgba(255,92,103,0)}100%{box-shadow:0 0 0 0 rgba(255,92,103,0)}}
 .live-score-board{display:flex;align-items:baseline;gap:9px;margin-top:10px;font-family:'Space Grotesk',Inter,sans-serif;font-size:27px;font-weight:800;font-variant-numeric:tabular-nums}
 .live-score-board small{font-family:Inter,sans-serif;font-size:11px;letter-spacing:.08em;color:var(--live)}
+.tag-pend{background:linear-gradient(135deg,rgba(251,191,36,.20),rgba(251,191,36,.10));border:1px solid rgba(251,191,36,.24);box-shadow:0 0 0 1px rgba(251,191,36,.05)}
+.tag-live{background:linear-gradient(135deg,rgba(255,92,103,.22),rgba(255,92,103,.10));border:1px solid var(--live-line);box-shadow:0 0 0 1px rgba(255,92,103,.08),0 0 20px rgba(255,92,103,.12);font-weight:800}
+.footer-green a{color:var(--em)!important}.footer-green a:hover{opacity:.85}.wl-w{color:var(--em)!important}.wl-l{color:var(--loss)!important}.tele-btn:hover{filter:brightness(1.06)}
 
 
 /* v153 polish */
@@ -185,7 +188,7 @@ a{ color:inherit; text-decoration:none; }
     <span class="t-lbl" style="color:var(--ink-2)">16 Engines · Honesty First</span>
   </div>
 
-  <h1 class="t-hero">Know the game.<br/><span style="color:var(--muted)">Predict better.</span></h1>
+  <h1 class="t-hero">Know the game.<br/><span style="color:var(--em)">Predict better.</span></h1>
 
   <div class="flex flex-wrap items-center justify-between gap-8 mt-7">
     <p class="t-lead max-w-[420px]">Sixteen specialized engines. Full transparency. Real results — wins and losses on the record.</p>
@@ -194,7 +197,7 @@ a{ color:inherit; text-decoration:none; }
         Open Today's Board <i class="fa-solid fa-arrow-right text-[11px]"></i>
       </a>
       <a href="https://t.me/Predict2ucomm" target="_blank" rel="noopener"
-         class="flex items-center gap-3 px-7 py-4 rounded-full font-semibold text-[14.5px] card">
+         class="tele-btn flex items-center gap-3 px-7 py-4 rounded-full font-semibold text-[14.5px]" style="background:#229ED9;color:#fff;border:1px solid rgba(34,158,217,.45);box-shadow:0 10px 26px rgba(34,158,217,.16)">
         <i class="fa-brands fa-telegram text-[15px]"></i> Join Telegram
       </a>
     </div>
@@ -632,7 +635,7 @@ a{ color:inherit; text-decoration:none; }
 
     const wk=weekRecord();
     $('s-record').innerHTML=(wk.w+wk.l)
-      ? `${wk.w}<span style="font-size:20px;color:var(--muted);font-weight:600">W</span> <span style="color:var(--muted);font-size:22px">—</span> ${wk.l}<span style="font-size:20px;color:var(--muted);font-weight:600">L</span>`
+      ? `${wk.w}<span class="wl-w" style="font-size:20px;font-weight:700">W</span> <span style="color:var(--muted);font-size:22px">—</span> ${wk.l}<span class="wl-l" style="font-size:20px;font-weight:700">L</span>`
       : '—';
     $('s-record-sub').textContent=(wk.w+wk.l)
       ? `${Math.round(100*wk.w/(wk.w+wk.l))}% of ${wk.w+wk.l} settled consensus bankers`
