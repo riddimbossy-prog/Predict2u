@@ -27,6 +27,8 @@ const budgets={
   "site-controls.css":8000,
   "account-cloud.js":65000,
   "account-cloud.css":26000,
+  "push-notifications.js":36000,
+  "push-notifications.css":18000,
   "account.html":18000,
   "profile.html":12000
 };
@@ -53,7 +55,7 @@ const sw=read("sw.js");
 const cacheMatch=sw.match(/CACHE_VERSION\s*=\s*["'](predict2u-v\d+)["']/);
 if(!cacheMatch)errors.push("sw.js is missing a valid predict2u-vN cache version.");
 else passed.push(`sw.js cache: ${cacheMatch[1]}`);
-for(const token of ["NETWORK_TIMEOUT_MS","canonicalRequest","performance-freshness.js","performance-freshness.css","personalization.js","personalization.css","smart-alerts.js","smart-alerts.css","admin.html","backend-admin.js","backend-admin.css","admin-config.js","site-controls.js","site-controls.css","account.html","profile.html","cloud-config.js","account-cloud.js","account-cloud.css"]){
+for(const token of ["NETWORK_TIMEOUT_MS","canonicalRequest","performance-freshness.js","performance-freshness.css","personalization.js","personalization.css","smart-alerts.js","smart-alerts.css","admin.html","backend-admin.js","backend-admin.css","admin-config.js","site-controls.js","site-controls.css","account.html","profile.html","cloud-config.js","account-cloud.js","account-cloud.css","push-notifications.js","push-notifications.css"]){
   if(!sw.includes(token))errors.push(`sw.js missing ${token}`);
 }
 for(const page of ["index.html","board.html"]){
@@ -88,7 +90,7 @@ for(const token of ["communityWin","verifiedOnly","followedUsers","trendingWins"
 }
 
 
-for(const token of ["admin.html","backend-admin.js","backend-admin.css","admin-config.js","site-controls.js","site-controls.css","account.html","profile.html","cloud-config.js","account-cloud.js","account-cloud.css"]){
+for(const token of ["admin.html","backend-admin.js","backend-admin.css","admin-config.js","site-controls.js","site-controls.css","account.html","profile.html","cloud-config.js","account-cloud.js","account-cloud.css","push-notifications.js","push-notifications.css"]){
   if(!sw.includes(token))errors.push(`sw.js missing ${token}`);
 }
 const admin=read("admin.html"),adminControl=read("backend-admin.js"),adminSql=read("SUPABASE_BACKEND_ADMIN_v181.sql");
@@ -103,6 +105,11 @@ for(const page of ["index.html","board.html","community.html","account.html"]){
   if(!/account-cloud\.css/.test(html)||!/account-cloud\.js/.test(html))errors.push(`${page}: account cloud layer is not loaded.`);
 }
 for(const token of ["p2u_cloud_state","p2u_follows","signInWithOtp","syncNow","toggleFollow"]){if(!read("account-cloud.js").includes(token))errors.push(`account-cloud.js missing ${token}`);}
+
+const pushClient=read("push-notifications.js"),pushSql=read("SUPABASE_PUSH_SETUP_v183.sql");
+for(const token of ["PushManager","p2u_register_push_subscription","p2u_save_push_preferences","quiet_enabled"]){if(!pushClient.includes(token))errors.push(`push-notifications.js missing ${token}`);}
+for(const token of ["p2u_push_subscriptions","p2u_push_preferences","p2u_push_jobs","p2u_push_delivery_log"]){if(!pushSql.includes(token))errors.push(`push setup SQL missing ${token}`);}
+if(!read("account-cloud.js").includes("push-notifications.js"))errors.push("account-cloud.js does not load the push layer.");
 
 const buildVersion=exists("BUILD_VERSION.txt")?read("BUILD_VERSION.txt").trim():"unknown";
 const report={

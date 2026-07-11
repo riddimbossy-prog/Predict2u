@@ -1,11 +1,11 @@
-/* Predict2U service worker v181 — fast shell, bounded network waits and fresh data.
+/* Predict2U service worker v183 — fast shell, bounded network waits and fresh data.
    Strategy:
    - Navigation/HTML: network-first with a short timeout, then cached fallback.
    - data.js/site-health.json: network-first, canonical cache key, stale fallback.
    - Static assets: cache-first with background refresh.
    - Optional PREFETCH_URLS message warms likely next pages. */
 
-const CACHE_VERSION = "predict2u-v181";
+const CACHE_VERSION = "predict2u-v183";
 const OFFLINE_PAGE = "./board.html";
 const NETWORK_TIMEOUT_MS = 4500;
 
@@ -28,7 +28,12 @@ const SHELL = [
   "./cloud-config.js",
   "./account-cloud.js",
   "./account-cloud.css",
+  "./push-notifications.js",
+  "./push-notifications.css",
+  "./SUPABASE_PUSH_SETUP_v183.sql",
+  "./PUSH_NOTIFICATIONS_v183.md",
   "./SUPABASE_BACKEND_ADMIN_v181.sql",
+  "./BACKEND_ADMIN_UI_v182.md",
   "./trust.html",
   "./responsible-gambling.html",
   "./terms.html",
@@ -211,17 +216,58 @@ self.addEventListener("message", event => {
   }
 });
 
+
+
+self.addEventListener("push", event => {
+  event.waitUntil((async () => {
+    let payload = {};
+    try { payload = event.data ? event.data.json() : {}; } catch (_) {
+      try { payload = { body: event.data ? event.data.text() : "" }; } catch (_) {}
+    }
+    const title = String(payload.title || "Predict2U update").slice(0, 100);
+    const body = String(payload.body || "").slice(0, 240);
+    const data = Object.assign({}, payload.data || {}, {
+      url: payload.url || (payload.data && payload.data.url) || "./index.html",
+      category: payload.category || "system",
+      pushId: payload.id || ""
+    });
+    await self.registration.showNotification(title, {
+      body,
+      icon: payload.icon || "./icon-192.png",
+      badge: payload.badge || "./favicon-48x48.png",
+      tag: payload.id || `p2u-${payload.category || "system"}`,
+      renotify: false,
+      requireInteraction: payload.category === "match",
+      data,
+      actions: [{ action: "open", title: "Open Predict2U" }]
+    });
+    const windows = await self.clients.matchAll({ type: "window", includeUncontrolled: true });
+    for (const client of windows) client.postMessage({ type: "P2U_PUSH_RECEIVED", payload: Object.assign({}, payload, { data }) });
+  })());
+});
+
+self.addEventListener("notificationclose", event => {
+  const data = event.notification && event.notification.data || {};
+  event.waitUntil((async () => {
+    const windows = await self.clients.matchAll({ type: "window", includeUncontrolled: true });
+    for (const client of windows) {
+      client.postMessage({ type: "P2U_PUSH_CLOSED", id: data.pushId || "", category: data.category || "system" });
+    }
+  })());
+});
+
 self.addEventListener("notificationclick", event => {
   event.notification.close();
-  const target = event.notification.data && event.notification.data.url ? event.notification.data.url : "./community.html";
+  const target = event.notification.data && event.notification.data.url ? event.notification.data.url : "./index.html";
+  const targetUrl = new URL(target, self.location.origin).href;
   event.waitUntil((async () => {
     const windows = await self.clients.matchAll({ type: "window", includeUncontrolled: true });
     for (const client of windows) {
       if ("focus" in client) {
-        if ("navigate" in client) await client.navigate(target);
+        if ("navigate" in client) await client.navigate(targetUrl);
         return client.focus();
       }
     }
-    if (self.clients.openWindow) return self.clients.openWindow(target);
+    if (self.clients.openWindow) return self.clients.openWindow(targetUrl);
   })());
 });

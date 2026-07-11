@@ -1,9 +1,9 @@
-/* Predict2U v180 Accounts, Cloud Sync & Follow System.
+/* Predict2U v183 Accounts, Cloud Sync, Follow & Push loader.
    Uses only the public Supabase publishable key. RLS in SUPABASE_CLOUD_SETUP_v180.sql
    protects each user's cloud state. Never place a service-role key in browser code. */
 (function(){
   'use strict';
-  const VERSION='v181';
+  const VERSION='v183';
   const CONFIG=window.P2U_CLOUD_CONFIG||{};
   const META_KEY='p2u-cloud-local-meta-v180';
   const LOCAL_FOLLOWS_KEY='p2u-local-follows-v180';
@@ -24,6 +24,11 @@
   const now=()=>Date.now();
   const isLocalHost=()=>/^(localhost|127\.0\.0\.1)$/i.test(location.hostname);
   const cloudEnabled=()=>CONFIG.enabled!==false&&!isLocalHost()&&CONFIG.url&&CONFIG.publishableKey;
+
+  function loadPushLayer(){
+    if(!document.querySelector('link[data-p2u-push-css]')){const l=document.createElement('link');l.rel='stylesheet';l.href='push-notifications.css';l.dataset.p2uPushCss='1';document.head.appendChild(l)}
+    if(!document.querySelector('script[data-p2u-push-js]')){const s=document.createElement('script');s.src='push-notifications.js';s.defer=true;s.dataset.p2uPushJs='1';document.head.appendChild(s)}
+  }
 
   function meta(){return Object.assign({preferences:0,alerts:0,slip:0,lastSync:0},record(safeParse(localStorage.getItem(META_KEY),{})))}
   function writeMeta(next){try{localStorage.setItem(META_KEY,JSON.stringify(Object.assign(meta(),next)))}catch(_){}}
@@ -257,7 +262,7 @@
     if(Object.keys(patch).length)writeMeta(patch);
   }
   async function init(){
-    if(mounted)return;mounted=true;seedLocalMeta();mountDrawer();mountLauncher();
+    if(mounted)return;mounted=true;loadPushLayer();seedLocalMeta();mountDrawer();mountLauncher();
     const observer=new MutationObserver(()=>{decorateFollowButtons();decorateProfileLinks()});observer.observe(document.body,{childList:true,subtree:true});
     const sb=await getClient();
     if(sb){

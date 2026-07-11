@@ -68,3 +68,7 @@ See `ADVANCED_DATA_SETUP_v149.md`.
 
 ## v180 Accounts & Cloud Sync
 See `ACCOUNTS_CLOUD_SYNC_v180.md` and run `SUPABASE_CLOUD_SETUP_v180.sql` once.
+
+
+## v183 Real Push Notifications
+See `PUSH_NOTIFICATIONS_v183.md`, run `SUPABASE_PUSH_SETUP_v183.sql`, and deploy `supabase/functions/p2u-push-dispatch/index.ts`.
