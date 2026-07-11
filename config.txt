@@ -3,6 +3,8 @@
 # Easiest way to set your key: double-click set-key.bat
 # ============================================================
 API_KEY=2cb35fde84fba4666ba4eec002554318
+STATS_API_KEY=fapi_49mir8hXVG9pmTG95ZxMu9FVdM9XHcEm
+
 SEASON=2026
 
 # ------------------------------------------------------------
@@ -19,6 +21,9 @@ DAYS_FWD=1
 MAX_LEAGUES=120
 MAX_PROBES=400
 REQUEST_BUDGET=60000
+SOT_LOOKBACK=8
+SOT_CALL_BUDGET=120
+SOT_SLEEP_MS=250
 
 # Full league list. With Ultra + SLEEP_MS=1500 + the fast empty-skip,
 # the off-season cost of checking inactive leagues is small. In August
