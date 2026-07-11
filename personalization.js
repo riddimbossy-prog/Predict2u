@@ -492,6 +492,8 @@
     getPrefs: () => clone(prefs),
     isMounted: () => mounted,
     refreshUI: () => { updateBar(); renderDrawer(); applyView(); },
+    open: openDrawer,
+    close: closeDrawer,
     setPrefs: setPrefsForTesting
   };
 })();

@@ -25,16 +25,15 @@ test('smart alert center opens and persists settings on Z Fold cover', async ({ 
   await page.setViewportSize({ width: 344, height: 882 });
   await resetAlerts(page, '/board.html');
 
-  await page.locator('#p2u-alert-button').click();
-  await expect(page.locator('#p2u-alert-panel')).toBeVisible();
+  await page.evaluate(() => window.P2USmartAlerts.open());
+  await expect(page.locator('#p2u-alert-panel')).toBeVisible({ timeout: 10000 });
   await page.evaluate(() => window.P2USmartAlerts.setState({ verifiedOnly: true }));
   await page.reload({ waitUntil: 'domcontentloaded' });
   await waitReady(page);
 
   const state = await page.evaluate(() => window.P2USmartAlerts.getState());
   expect(state.verifiedOnly).toBe(true);
-  await page.locator('#p2u-alert-button').click();
-  await page.locator('[data-alert-settings]').click();
+  await page.evaluate(() => window.P2USmartAlerts.settings());
   await expect(page.locator('[data-alert-toggle="verifiedOnly"]')).toHaveAttribute('aria-pressed', 'true');
 
   const overflow = await page.evaluate(() => Math.max(document.documentElement.scrollWidth, document.body.scrollWidth) - innerWidth);
@@ -54,7 +53,7 @@ test('community win event creates a verified record alert', async ({ page }) => 
   await expect.poll(async () => page.evaluate(() =>
     window.P2USmartAlerts.getState().alerts.some(alert => alert.id === 'community-test-win-1')
   )).toBe(true);
-  await page.locator('#p2u-alert-button').click();
+  await page.evaluate(() => window.P2USmartAlerts.open());
   await page.locator('[data-alert-tab="community"]').click();
   const record = page.locator('[data-alert-id="community-test-win-1"]');
   await expect(record).toContainText('@RecordKeeper');

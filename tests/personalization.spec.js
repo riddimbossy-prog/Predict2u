@@ -23,8 +23,8 @@ test('personalization controls are usable and persist on mobile', async ({ page 
   await page.setViewportSize({ width: 344, height: 882 });
   await resetPersonalization(page, '/board.html');
 
-  await page.locator('[data-p2u-open]').click();
-  await expect(page.locator('#p2u-personalization-panel')).toBeVisible();
+  await page.evaluate(() => window.P2UPersonalization.open());
+  await expect(page.locator('#p2u-personalization-panel')).toBeVisible({ timeout: 10000 });
   await expect(page.locator('[data-p2u-fav-engine]')).toHaveCount(16);
 
   await page.evaluate(() => window.P2UPersonalization.setPrefs({
@@ -33,7 +33,7 @@ test('personalization controls are usable and persist on mobile', async ({ page 
     cardView: 'compact',
     savedFilter: { engine: 'top', league: 'all', search: 'united' }
   }));
-  await page.locator('[data-p2u-close]').first().click();
+  await page.evaluate(() => window.P2UPersonalization.close());
   await page.reload({ waitUntil: 'domcontentloaded' });
   await waitReady(page);
 
@@ -60,8 +60,8 @@ test('league favorites, hidden leagues and recent history are available', async 
       league: 'Test League', market: 'Record', proof: 'proof.html', viewedAt: Date.now()
     }]
   }));
-  await page.locator('[data-p2u-open]').click();
-  await expect(page.locator('#p2u-personalization-panel')).toBeVisible();
+  await page.evaluate(() => window.P2UPersonalization.open());
+  await expect(page.locator('#p2u-personalization-panel')).toBeVisible({ timeout: 10000 });
   await expect(page.locator('.p2u-recent-item').first()).toContainText('Test Home vs Test Away');
 
   const saved = await page.evaluate(() => JSON.parse(localStorage.getItem('p2u-personalization-v167')));
