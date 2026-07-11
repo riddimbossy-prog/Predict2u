@@ -19,7 +19,12 @@ const budgets={
   "personalization.js":30000,
   "personalization.css":18000,
   "smart-alerts.js":42000,
-  "smart-alerts.css":22000
+  "smart-alerts.css":22000,
+  "admin.html":30000,
+  "admin-control.js":50000,
+  "admin-control.css":30000,
+  "site-controls.js":15000,
+  "site-controls.css":8000
 };
 for(const [file,limit] of Object.entries(budgets)){
   if(!exists(file)){errors.push(`Missing budgeted file: ${file}`);continue;}
@@ -44,7 +49,7 @@ const sw=read("sw.js");
 const cacheMatch=sw.match(/CACHE_VERSION\s*=\s*["'](predict2u-v\d+)["']/);
 if(!cacheMatch)errors.push("sw.js is missing a valid predict2u-vN cache version.");
 else passed.push(`sw.js cache: ${cacheMatch[1]}`);
-for(const token of ["NETWORK_TIMEOUT_MS","canonicalRequest","performance-freshness.js","performance-freshness.css","personalization.js","personalization.css","smart-alerts.js","smart-alerts.css"]){
+for(const token of ["NETWORK_TIMEOUT_MS","canonicalRequest","performance-freshness.js","performance-freshness.css","personalization.js","personalization.css","smart-alerts.js","smart-alerts.css","admin.html","admin-control.js","admin-control.css","admin-config.js","site-controls.js","site-controls.css"]){
   if(!sw.includes(token))errors.push(`sw.js missing ${token}`);
 }
 for(const page of ["index.html","board.html"]){
@@ -77,6 +82,15 @@ for(const page of ["index.html","board.html","community.html"]){
 for(const token of ["communityWin","verifiedOnly","followedUsers","trendingWins","p2u:community-win"]){
   if(!read("smart-alerts.js").includes(token))errors.push(`smart-alerts.js missing ${token}`);
 }
+
+
+for(const token of ["admin.html","admin-control.js","admin-control.css","admin-config.js","site-controls.js","site-controls.css"]){
+  if(!sw.includes(token))errors.push(`sw.js missing ${token}`);
+}
+const admin=read("admin.html"),adminControl=read("admin-control.js");
+if(!/meta name="robots" content="noindex,nofollow,noarchive"/.test(admin))errors.push("admin.html must remain noindex/nofollow.");
+for(const token of ["p2u-admin-pin-v169","downloadConfig","site-health.json","site-audit.json"]){if(!adminControl.includes(token))errors.push(`admin-control.js missing ${token}`);}
+if(!read("robots.txt").includes("Disallow: /admin.html"))errors.push("robots.txt does not disallow admin.html.");
 
 const buildVersion=exists("BUILD_VERSION.txt")?read("BUILD_VERSION.txt").trim():"unknown";
 const report={

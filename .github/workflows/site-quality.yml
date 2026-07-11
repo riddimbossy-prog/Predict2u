@@ -34,6 +34,13 @@ jobs:
           test -f smart-alerts.css
           test -f smart-alerts.js
           test -f tests/smart-alerts.spec.js
+          test -f admin.html
+          test -f admin-control.css
+          test -f admin-control.js
+          test -f admin-config.js
+          test -f site-controls.css
+          test -f site-controls.js
+          test -f tests/admin-control.spec.js
           test -f performance-budget.js
           test -f tests/performance-freshness.spec.js
           test -f trust.html

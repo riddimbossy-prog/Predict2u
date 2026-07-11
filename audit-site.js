@@ -6,7 +6,7 @@ const critical=[],warnings=[],passed=[];
 const exists=f=>fs.existsSync(path.join(HERE,f));
 const read=f=>{try{return fs.readFileSync(path.join(HERE,f),"utf8");}catch(_){return"";}};
 const pages=["index.html","board.html","engines.html","proof.html","scorecards.html","league-dna.html","community.html","trust.html","responsible-gambling.html","terms.html","privacy.html","disclaimer.html","404.html"];
-const required=[...pages,"banker-engine.js","p2u-intelligence.js","intelligence.css","site-health-widget.js","site-health.css","sw.js","predict2u-logo.png","brand-experience.js","brand-experience.css","performance-freshness.js","performance-freshness.css","personalization.js","personalization.css","smart-alerts.js","smart-alerts.css","social-preview.png","favicon.ico","favicon-16x16.png","favicon-32x32.png","apple-touch-icon.png","maskable-icon.png","404.html"];
+const required=[...pages,"banker-engine.js","p2u-intelligence.js","intelligence.css","site-health-widget.js","site-health.css","sw.js","predict2u-logo.png","brand-experience.js","brand-experience.css","performance-freshness.js","performance-freshness.css","personalization.js","personalization.css","smart-alerts.js","smart-alerts.css","admin.html","admin-control.js","admin-control.css","admin-config.js","site-controls.js","site-controls.css","social-preview.png","favicon.ico","favicon-16x16.png","favicon-32x32.png","apple-touch-icon.png","maskable-icon.png","404.html"];
 for(const f of required){if(!exists(f))critical.push(`Missing required file: ${f}`);else passed.push(`Found ${f}`);}
 let engineCount=null;
 try{const eng=require("./banker-engine.js");engineCount=(eng.P2U_ENGINE_REGISTRY||[]).length;if(engineCount!==16)critical.push(`Engine registry has ${engineCount}; expected 16.`);else passed.push("Engine registry has 16 engines");}catch(e){critical.push(`Cannot load banker-engine.js: ${e.message}`);}
@@ -45,7 +45,7 @@ if(!cacheMatch){
 }else{
   passed.push(`Service-worker cache is ${cacheMatch[1]}`);
 }
-for(const f of ["trust.html","intelligence.css","site-health-widget.js","site-health.css","performance-freshness.js","performance-freshness.css","personalization.js","personalization.css","smart-alerts.js","smart-alerts.css"]){if(!sw.includes(`./${f}`))warnings.push(`sw.js does not precache ${f}.`);}
+for(const f of ["trust.html","intelligence.css","site-health-widget.js","site-health.css","performance-freshness.js","performance-freshness.css","personalization.js","personalization.css","smart-alerts.js","smart-alerts.css","admin.html","admin-control.js","admin-control.css","admin-config.js","site-controls.js","site-controls.css"]){if(!sw.includes(`./${f}`))warnings.push(`sw.js does not precache ${f}.`);}
 
 for(const f of ["favicon.ico","favicon-16x16.png","favicon-32x32.png","apple-touch-icon.png","icon-192.png","icon-512.png","maskable-icon.png","social-preview.png"]){if(!exists(f))critical.push(`Missing brand asset: ${f}`);else passed.push(`Found brand asset ${f}`);}
 const board=read("board.html"),full=read("engines.html");
@@ -71,6 +71,16 @@ const alerts=read("smart-alerts.js");
 for(const token of ["communityWin","verifiedOnly","followedUsers","trendingWins","matchStatus","boardUpdates","Mute for today"]){if(!alerts.includes(token))critical.push(`smart-alerts.js missing ${token}.`);else passed.push(`Smart Alerts supports ${token}`);}
 if(!/p2u-community-alert-card/.test(read("community.html"))&&!/mountCommunityCard/.test(alerts))critical.push("Community win alert controls are missing.");else passed.push("Community win alert controls are present");
 
+
+for(const page of pages){
+  const html=read(page);
+  if(!/site-controls\.css/.test(html)||!/admin-config\.js/.test(html)||!/site-controls\.js/.test(html))critical.push(`${page}: public site controls are not loaded.`);else passed.push(`${page}: public site controls loaded`);
+}
+const adminHtml=read("admin.html"),adminJs=read("admin-control.js"),siteControls=read("site-controls.js");
+for(const token of ["noindex,nofollow","admin-control.css","banker-engine.js","admin-config.js","admin-control.js"]){if(!adminHtml.includes(token))critical.push(`admin.html missing ${token}.`);else passed.push(`Admin page includes ${token}`);}
+for(const token of ["p2u-admin-pin-v169","P2U_ADMIN_CONFIG","downloadConfig","Support bundle","community.verifiedIds"]){if(!adminJs.includes(token))critical.push(`admin-control.js missing ${token}.`);else passed.push(`Admin control supports ${token}`);}
+for(const token of ["p2u-board-unpublished","P2USiteControls","hiddenIds","verifiedIds"]){if(!siteControls.includes(token))critical.push(`site-controls.js missing ${token}.`);else passed.push(`Public controls support ${token}`);}
+if(/API_KEY|GITHUB_TOKEN|ghp_[A-Za-z0-9]/.test(read("admin-config.js")))critical.push("admin-config.js appears to contain a secret-like value.");else passed.push("Admin configuration contains no secret-like values");
 const proof=read("proof.html");
 if(!/p2u-intelligence\.js/.test(proof)||!/proof-root/.test(proof))critical.push("Proof page wiring is incomplete.");
 if(exists("data.js")){
@@ -84,7 +94,7 @@ if(exists("data.js")){
   }catch(e){critical.push(`data.js MATCHES JSON cannot be parsed: ${e.message}`);}
 }else if(!PACKAGE_MODE)warnings.push("data.js is not present; live repository audit cannot validate fixtures.");
 const uniqueWarnings=[...new Set(warnings)];
-const report={generatedAt:new Date().toISOString(),auditVersion:"v168",cacheVersion:cacheMatch?cacheMatch[1]:null,engineCount,critical,warnings:uniqueWarnings,passedCount:passed.length};
+const report={generatedAt:new Date().toISOString(),auditVersion:"v169",cacheVersion:cacheMatch?cacheMatch[1]:null,engineCount,critical,warnings:uniqueWarnings,passedCount:passed.length};
 fs.writeFileSync(path.join(HERE,"site-audit.json"),JSON.stringify(report,null,2)+"\n");
 console.log(`Audit: ${critical.length} critical, ${uniqueWarnings.length} warning(s), ${passed.length} checks passed.`);
 for(const x of critical)console.error("CRITICAL:",x);

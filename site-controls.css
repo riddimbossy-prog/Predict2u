@@ -1,0 +1,16 @@
+/* Predict2U v169 public controls. Quiet by design: no full-width red warning banners. */
+.p2u-operator-note{max-width:1120px;margin:10px auto 0;padding:0 18px;position:relative;z-index:35}
+.p2u-operator-note-inner{display:flex;align-items:center;justify-content:center;gap:10px;width:max-content;max-width:100%;margin:0 auto;padding:8px 12px;border:1px solid rgba(255,255,255,.12);border-radius:999px;background:rgba(16,17,23,.92);box-shadow:0 8px 28px rgba(0,0,0,.22);color:#d7d7dc;font-size:12.5px;font-weight:650;line-height:1.35}
+.p2u-operator-note[data-tone="success"] .p2u-operator-dot{background:#34d399}
+.p2u-operator-note[data-tone="warning"] .p2u-operator-dot{background:#fbbf24}
+.p2u-operator-note[data-tone="info"] .p2u-operator-dot{background:#60a5fa}
+.p2u-operator-dot{width:7px;height:7px;flex:0 0 auto;border-radius:50%;background:#60a5fa;box-shadow:0 0 0 4px rgba(96,165,250,.12)}
+.p2u-operator-note a{color:#34d399;text-decoration:none;font-weight:800;white-space:nowrap}
+.p2u-operator-note button{border:0;background:transparent;color:#9898a2;padding:2px 3px;min-width:25px;min-height:25px;border-radius:50%;font-size:14px}
+.p2u-board-unpublished{padding:22px;margin:0 0 22px;border:1px solid rgba(251,191,36,.24);border-radius:18px;background:linear-gradient(145deg,rgba(251,191,36,.08),rgba(18,18,24,.92));text-align:center;color:#d7d7dc}
+.p2u-board-unpublished i{display:block;font-size:24px;color:#fbbf24;margin-bottom:9px}
+.p2u-board-unpublished h2{font-size:19px;font-weight:850;margin:0 0 5px;color:#fff}
+.p2u-board-unpublished p{margin:0 auto;max-width:640px;color:#a7a7b0;font-size:13.5px}
+.p2u-community-verified-admin{display:inline-flex;align-items:center;gap:4px;margin-left:7px;padding:3px 7px;border-radius:999px;background:rgba(52,211,153,.12);border:1px solid rgba(52,211,153,.24);color:#34d399;font-size:10px;font-weight:850;letter-spacing:.03em;vertical-align:middle}
+@media(max-width:520px){.p2u-operator-note{padding:0 12px}.p2u-operator-note-inner{width:100%;border-radius:14px;justify-content:flex-start}.p2u-operator-note-message{min-width:0;overflow-wrap:anywhere}.p2u-operator-note a{white-space:normal}.p2u-board-unpublished{padding:18px 14px}}
+@media(prefers-reduced-motion:reduce){.p2u-operator-note-inner{scroll-behavior:auto}}

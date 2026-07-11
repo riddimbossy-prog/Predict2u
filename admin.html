@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"/>
+<meta name="robots" content="noindex,nofollow,noarchive"/>
+<meta name="theme-color" content="#090a0f"/>
+<title>Predict2U Operator Console</title>
+<link rel="icon" href="favicon-32x32.png" sizes="32x32"/>
+<link rel="apple-touch-icon" href="apple-touch-icon.png"/>
+<link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
+<link rel="stylesheet" href="admin-control.css"/>
+</head>
+<body>
+<div class="admin-shell">
+  <section class="admin-gate" id="admin-gate">
+    <form class="gate-card" id="gate-form" autocomplete="off">
+      <img src="predict2u-logo.png" alt="Predict2U" class="gate-logo"/>
+      <div class="eyebrow">Operator Console · v169</div>
+      <h1 id="gate-title">Unlock administration</h1>
+      <p id="gate-copy">Enter the local operator PIN for this device.</p>
+      <div class="field"><label for="admin-pin">Operator PIN</label><input id="admin-pin" type="password" inputmode="numeric" minlength="4" maxlength="12" required placeholder="4–12 digits"/></div>
+      <div class="field hidden" id="confirm-wrap"><label for="admin-pin-confirm">Confirm PIN</label><input id="admin-pin-confirm" type="password" inputmode="numeric" minlength="4" maxlength="12" placeholder="Repeat PIN"/></div>
+      <button class="btn" type="submit" id="gate-submit"><i class="fa-solid fa-lock-open"></i> Unlock</button>
+      <div class="gate-note">This PIN is a local privacy lock, not server authentication. Never enter a GitHub token, API key or account password here.</div>
+    </form>
+  </section>
+
+  <div class="admin-layout hidden" id="admin-app">
+    <div class="mobile-nav-backdrop" id="mobile-backdrop"></div>
+    <aside class="sidebar" id="sidebar">
+      <img src="predict2u-logo.png" class="sidebar-logo" alt="Predict2U"/>
+      <div class="version">ADMIN CONTROL CENTER · v169</div>
+      <nav class="nav-list" aria-label="Admin sections">
+        <button class="nav-btn active" data-section="overview"><i class="fa-solid fa-chart-line"></i> Overview</button>
+        <button class="nav-btn" data-section="publishing"><i class="fa-solid fa-toggle-on"></i> Publishing</button>
+        <button class="nav-btn" data-section="community"><i class="fa-solid fa-users-gear"></i> Community</button>
+        <button class="nav-btn" data-section="operations"><i class="fa-solid fa-gears"></i> Operations</button>
+        <button class="nav-btn" data-section="audit"><i class="fa-solid fa-clipboard-check"></i> Audit trail</button>
+      </nav>
+      <div class="sidebar-bottom">
+        <a class="btn secondary small" href="index.html" target="_blank"><i class="fa-solid fa-arrow-up-right-from-square"></i> Open site</a>
+        <button class="btn secondary small" id="lock-admin"><i class="fa-solid fa-lock"></i> Lock console</button>
+      </div>
+    </aside>
+
+    <div class="main">
+      <header class="topbar">
+        <div class="topbar-left"><button class="btn secondary small mobile-menu" id="mobile-menu" aria-label="Open admin navigation"><i class="fa-solid fa-bars"></i></button><div><b id="top-title">Overview</b><div class="muted" style="font-size:11px" id="top-subtitle">System status and release information</div></div></div>
+        <div class="top-status"><span class="status-dot" id="top-status-dot"></span><span id="top-status-text">Reading health…</span><button class="btn secondary small" id="save-draft"><i class="fa-solid fa-floppy-disk"></i> Save draft</button></div>
+      </header>
+
+      <main class="content">
+        <section class="section active" data-section-panel="overview">
+          <div class="section-head"><div><div class="eyebrow">System overview</div><h1>Control room</h1><p>Live health, release state and engine coverage in one place.</p></div><div class="btn-row"><button class="btn secondary" id="refresh-status"><i class="fa-solid fa-rotate"></i> Refresh status</button><button class="btn" id="download-support"><i class="fa-solid fa-file-arrow-down"></i> Support bundle</button></div></div>
+          <div class="grid kpis">
+            <article class="card"><div class="kpi-label">Build</div><div class="kpi-value" id="kpi-build">v169</div><div class="kpi-meta" id="kpi-cache">Cache checking…</div></article>
+            <article class="card"><div class="kpi-label">Engines</div><div class="kpi-value good" id="kpi-engines">16/16</div><div class="kpi-meta">Registry coverage</div></article>
+            <article class="card"><div class="kpi-label">Data freshness</div><div class="kpi-value" id="kpi-freshness">—</div><div class="kpi-meta" id="kpi-freshness-meta">Reading health snapshot</div></article>
+            <article class="card"><div class="kpi-label">Audit</div><div class="kpi-value" id="kpi-audit">—</div><div class="kpi-meta" id="kpi-audit-meta">Reading site audit</div></article>
+          </div>
+          <div class="grid two">
+            <article class="card"><h2>Health signals</h2><p class="card-copy">Public files only. No secrets are read by this dashboard.</p><div class="health-list" id="health-list"><div class="no-data">Loading health information…</div></div></article>
+            <article class="card"><h2>Release readiness</h2><p class="card-copy">Current configuration and safe publishing checks.</p><div class="health-list" id="readiness-list"></div></article>
+          </div>
+        </section>
+
+        <section class="section" data-section-panel="publishing">
+          <div class="section-head"><div><div class="eyebrow">Publishing controls</div><h1>Board and announcements</h1><p>Prepare a safe configuration file for the public site.</p></div><div class="btn-row"><button class="btn secondary" id="preview-config"><i class="fa-solid fa-eye"></i> Preview</button><button class="btn" id="download-config"><i class="fa-solid fa-download"></i> Download config</button></div></div>
+          <div class="grid two">
+            <article class="card"><h2>Daily board</h2><p class="card-copy">Unpublishing hides board cards but keeps Trust, Proof and legal pages available.</p><div class="control-row"><div><strong>Board published</strong><span>Show current board records to visitors</span></div><label class="switch"><input type="checkbox" id="board-published"/><span></span></label></div><div class="field"><label for="board-message">Unpublished message</label><textarea id="board-message" maxlength="220"></textarea></div></article>
+            <article class="card"><h2>Quiet announcement</h2><p class="card-copy">A compact neutral note, never a large full-width warning banner.</p><div class="control-row"><div><strong>Announcement enabled</strong><span>Show on public pages until dismissed or expired</span></div><label class="switch"><input type="checkbox" id="announcement-enabled"/><span></span></label></div><div class="field"><label for="announcement-tone">Tone</label><select id="announcement-tone"><option value="info">Information</option><option value="success">Success</option><option value="warning">Notice</option></select></div><div class="field"><label for="announcement-message">Message</label><textarea id="announcement-message" maxlength="180"></textarea></div><div class="grid two"><div class="field"><label for="announcement-link-label">Link label</label><input id="announcement-link-label" maxlength="30"/></div><div class="field"><label for="announcement-link-url">Link URL</label><input id="announcement-link-url" maxlength="160" placeholder="trust.html"/></div></div><div class="field"><label for="announcement-expires">Expiry (optional)</label><input id="announcement-expires" type="datetime-local"/></div><div id="announcement-preview"></div></article>
+            <article class="card"><h2>Featured engines</h2><p class="card-copy">Select engines to highlight in future homepage modules and alerts.</p><div class="engine-grid" id="engine-grid"></div></article>
+            <article class="card"><h2>Featured leagues</h2><p class="card-copy">One league per line. These values are exposed to the board personalization layer.</p><div class="field"><label for="featured-leagues">Leagues</label><textarea id="featured-leagues" placeholder="Premier League&#10;La Liga"></textarea></div><div class="tag-list" id="league-tags"></div></article>
+          </div>
+        </section>
+
+        <section class="section" data-section-panel="community">
+          <div class="section-head"><div><div class="eyebrow">Community moderation</div><h1>Public record controls</h1><p>Mark settled records verified or hide records by public slip ID.</p></div><button class="btn" id="download-config-community"><i class="fa-solid fa-download"></i> Download config</button></div>
+          <div class="grid two">
+            <article class="card"><h2>Verify a record</h2><p class="card-copy">Adds a visible verified marker to matching Community cards.</p><div class="field"><label for="verify-id">Public slip ID</label><input id="verify-id" placeholder="slip-12345"/></div><button class="btn" id="add-verified"><i class="fa-solid fa-circle-check"></i> Add verified ID</button><div class="moderation-list" id="verified-list"></div></article>
+            <article class="card danger-zone"><h2>Hide a record</h2><p class="card-copy">Hides matching Community cards after the configuration is committed.</p><div class="field"><label for="hide-id">Public slip ID</label><input id="hide-id" placeholder="slip-12345"/></div><button class="btn danger" id="add-hidden"><i class="fa-solid fa-eye-slash"></i> Add hidden ID</button><div class="moderation-list" id="hidden-list"></div></article>
+            <article class="card"><h2>Moderation policy</h2><div class="health-list"><div class="health-row"><div><b>Verified means settled evidence</b><span>Do not use verification as a future-performance guarantee.</span></div><span class="health-pill good">Required</span></div><div class="health-row"><div><b>Stake and payout privacy</b><span>Smart Alerts keep financial values out of notifications.</span></div><span class="health-pill good">Enabled</span></div><div class="health-row"><div><b>18+ records only</b><span>Community entries remain informational public records.</span></div><span class="health-pill good">Enabled</span></div></div></article>
+            <article class="card"><h2>Configuration counts</h2><div class="grid kpis" style="grid-template-columns:1fr 1fr;margin:0"><div><div class="kpi-label">Verified IDs</div><div class="kpi-value good" id="verified-count">0</div></div><div><div class="kpi-label">Hidden IDs</div><div class="kpi-value bad" id="hidden-count">0</div></div></div></article>
+          </div>
+        </section>
+
+        <section class="section" data-section-panel="operations">
+          <div class="section-head"><div><div class="eyebrow">Operations</div><h1>Workflows and export</h1><p>Open trusted GitHub actions and prepare deployment files.</p></div><button class="btn secondary" id="reset-draft"><i class="fa-solid fa-arrow-rotate-left"></i> Reset local draft</button></div>
+          <div class="grid two">
+            <article class="card"><h2>GitHub workflows</h2><div class="action-card"><div><h3>Site Quality</h3><p>Audit, budgets and mobile regression tests.</p></div><a class="btn secondary small" id="quality-link" target="_blank" rel="noopener">Open</a></div><div class="action-card"><div><h3>Live Scores</h3><p>Refresh scores, settle records and update public health.</p></div><a class="btn secondary small" id="scores-link" target="_blank" rel="noopener">Open</a></div><div class="action-card"><div><h3>Repository</h3><p>Commit downloaded admin-config.js at the repository root.</p></div><a class="btn secondary small" id="repo-link" target="_blank" rel="noopener">Open</a></div></article>
+            <article class="card"><h2>Deployment file</h2><p class="card-copy">The console never stores tokens. Download the generated file, replace <b>admin-config.js</b> in the repository, commit and push.</p><div class="btn-row"><button class="btn" id="download-config-2"><i class="fa-solid fa-file-code"></i> Download admin-config.js</button><button class="btn secondary" id="copy-config"><i class="fa-regular fa-copy"></i> Copy configuration</button></div><div class="codebox" id="config-preview" style="margin-top:13px"></div></article>
+            <article class="card"><h2>Current package</h2><div class="health-list"><div class="health-row"><div><b>Release</b><span>Predict2U Admin Control Center</span></div><span class="health-pill good">v169</span></div><div class="health-row"><div><b>Service worker</b><span>Static shell and admin assets</span></div><span class="health-pill good" id="operation-cache">v169</span></div><div class="health-row"><div><b>Secrets in browser</b><span>Tokens and API keys are never requested</span></div><span class="health-pill good">None</span></div></div></article>
+            <article class="card danger-zone"><h2>Local console data</h2><p class="card-copy">Clears this device’s draft, action log and local operator PIN. It does not change the live website.</p><button class="btn danger" id="clear-local"><i class="fa-solid fa-trash"></i> Clear local admin data</button></article>
+          </div>
+        </section>
+
+        <section class="section" data-section-panel="audit">
+          <div class="section-head"><div><div class="eyebrow">Audit trail</div><h1>Operator activity</h1><p>Local actions recorded on this device plus the latest site audit snapshot.</p></div><button class="btn secondary" id="clear-log"><i class="fa-solid fa-broom"></i> Clear local log</button></div>
+          <div class="grid two">
+            <article class="card"><h2>Latest site audit</h2><div class="audit-summary" id="audit-summary"></div><div class="health-list" id="audit-details"><div class="no-data">Loading site-audit.json…</div></div></article>
+            <article class="card"><h2>Local operator log</h2><div class="log-list" id="log-list"><div class="no-data">No local actions yet.</div></div></article>
+          </div>
+        </section>
+      </main>
+    </div>
+  </div>
+</div>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+<script src="banker-engine.js"></script>
+<script src="admin-config.js"></script>
+<script src="admin-control.js"></script>
+</body>
+</html>
