@@ -5,7 +5,7 @@
    - Static assets: cache-first with background refresh.
    - Cache entries are versioned. Bump CACHE_VERSION when releasing changes. */
 
-const CACHE_VERSION = "predict2u-v156";
+const CACHE_VERSION = "predict2u-v158";
 const OFFLINE_PAGE = "./board.html";
 
 const SHELL = [
@@ -15,28 +15,35 @@ const SHELL = [
   "./proof.html",
   "./scorecards.html",
   "./league-dna.html",
+  "./community.html",
+  "./trust.html",
   "./responsible-gambling.html",
   "./terms.html",
   "./privacy.html",
   "./disclaimer.html",
-  "./trust.html",
+  "./404.html",
   "./site-health-widget.js",
   "./site-health.css",
   "./site-health.json",
+  "./brand-experience.js",
+  "./brand-experience.css",
   "./p2u-intelligence.js",
   "./live-refresh.js",
   "./intelligence.css",
   "./predict2u-logo.png",
   "./predict2u-logo.webp",
+  "./predict2u-mark.png",
+  "./social-preview.png",
   "./slip.js",
-  "./community.html",
-  "./community.js",
   "./banker-engine.js",
-
-  "./pedigree.js",
   "./manifest.webmanifest",
+  "./favicon.ico",
+  "./favicon-16x16.png",
+  "./favicon-32x32.png",
+  "./apple-touch-icon.png",
   "./icon-192.png",
-  "./icon-512.png"
+  "./icon-512.png",
+  "./maskable-icon.png",
 ];
 
 const isSuccessful = response =>

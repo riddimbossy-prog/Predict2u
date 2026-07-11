@@ -1,19 +1,84 @@
 const { test, expect } = require('@playwright/test');
-const pages=['board.html','engines.html','proof.html','scorecards.html','league-dna.html','community.html','trust.html','responsible-gambling.html','terms.html','privacy.html','disclaimer.html'];
-const sizes=[{name:'cover-280',width:280,height:653},{name:'small-320',width:320,height:700},{name:'iphone-375',width:375,height:812},{name:'android-390',width:390,height:844},{name:'tablet-768',width:768,height:1024},{name:'desktop-1440',width:1440,height:1000}];
-for(const size of sizes){
-  for(const path of pages){
-    test(`${path} · ${size.name} has no horizontal overflow`,async({page})=>{
-      await page.setViewportSize({width:size.width,height:size.height});
-      await page.goto('/'+path,{waitUntil:'domcontentloaded'});
-      await page.waitForTimeout(300);
-      const overflow=await page.evaluate(()=>Math.max(document.documentElement.scrollWidth,document.body.scrollWidth)-window.innerWidth);
+
+const pages = [
+  'index.html', 'board.html', 'engines.html', 'proof.html', 'scorecards.html',
+  'league-dna.html', 'community.html', 'trust.html',
+  'responsible-gambling.html', 'terms.html', 'privacy.html',
+  'disclaimer.html', '404.html'
+];
+
+const sizes = [
+  { name: 'very-small-280', width: 280, height: 653 },
+  { name: 'small-320', width: 320, height: 700 },
+  { name: 'zfold-cover-344', width: 344, height: 882 },
+  { name: 'android-360', width: 360, height: 800 },
+  { name: 'iphone-375', width: 375, height: 812 },
+  { name: 'android-390', width: 390, height: 844 },
+  { name: 'large-phone-412', width: 412, height: 915 },
+  { name: 'small-tablet-600', width: 600, height: 960 },
+  { name: 'tablet-768', width: 768, height: 1024 },
+  { name: 'tablet-820', width: 820, height: 1180 },
+  { name: 'zfold-inner-768x904', width: 768, height: 904 },
+  { name: 'zfold-landscape-904x768', width: 904, height: 768 },
+  { name: 'tablet-landscape-1024', width: 1024, height: 768 },
+  { name: 'desktop-1440', width: 1440, height: 1000 }
+];
+
+for (const size of sizes) {
+  for (const path of pages) {
+    test(`${path} · ${size.name} has no horizontal overflow`, async ({ page }) => {
+      await page.setViewportSize({ width: size.width, height: size.height });
+      await page.goto('/' + path, { waitUntil: 'domcontentloaded' });
+      await page.waitForTimeout(400);
+
+      const overflow = await page.evaluate(() =>
+        Math.max(document.documentElement.scrollWidth, document.body.scrollWidth) - window.innerWidth
+      );
       expect(overflow).toBeLessThanOrEqual(3);
-      const title=await page.title();expect(title.length).toBeGreaterThan(2);
-      const dup=await page.evaluate(()=>{const ids=[...document.querySelectorAll('[id]')].map(x=>x.id);return [...new Set(ids.filter((x,i)=>ids.indexOf(x)!==i))];});
-      expect(dup).toEqual([]);
+
+      const title = await page.title();
+      expect(title.length).toBeGreaterThan(2);
+
+      const duplicates = await page.evaluate(() => {
+        const ids = [...document.querySelectorAll('[id]')].map(x => x.id);
+        return [...new Set(ids.filter((x, i) => ids.indexOf(x) !== i))];
+      });
+      expect(duplicates).toEqual([]);
     });
   }
 }
-test('official logo loads',async({page})=>{await page.goto('/board.html');const img=page.locator('img[src*="predict2u-logo"]').first();await expect(img).toBeVisible();expect(await img.evaluate(x=>x.naturalWidth)).toBeGreaterThan(10);});
-test('health widget and Trust Center are reachable',async({page})=>{await page.goto('/board.html');await expect(page.locator('#p2u-health-button')).toBeVisible();await page.goto('/trust.html');await expect(page.getByText('How every verdict is built—and checked.')).toBeVisible();});
+
+test('official logo loads', async ({ page }) => {
+  await page.goto('/board.html');
+  const img = page.locator('img[src*="predict2u-logo"]').first();
+  await expect(img).toBeVisible();
+  expect(await img.evaluate(x => x.naturalWidth)).toBeGreaterThan(10);
+});
+
+test('health widget and Trust Center are reachable', async ({ page }) => {
+  await page.goto('/board.html');
+  await expect(page.locator('#p2u-health-button')).toBeVisible();
+  await page.goto('/trust.html');
+  await expect(page.getByText('How every verdict is built—and checked.')).toBeVisible();
+});
+
+test('brand experience features are present', async ({ page }) => {
+  await page.goto('/board.html');
+  const onboarding = page.locator('.p2u-onboard-backdrop');
+  if (await onboarding.isVisible()) await page.locator('[data-close]').click();
+  await expect(page.locator('#board-rank-reason')).toBeAttached();
+  await page.goto('/engines.html');
+  await expect(page.locator('#ranked-explainer')).toBeAttached();
+});
+
+test('favicon and social metadata are present', async ({ page }) => {
+  await page.goto('/board.html');
+  expect(await page.locator('link[rel="icon"][sizes="32x32"]').count()).toBeGreaterThan(0);
+  expect(await page.locator('meta[property="og:image"]').getAttribute('content')).toContain('social-preview.png');
+});
+
+test('404 page is branded', async ({ page }) => {
+  await page.goto('/404.html');
+  await expect(page.getByText('This page could not be found.')).toBeVisible();
+  await expect(page.locator('img[src="predict2u-logo.png"]')).toBeVisible();
+});
