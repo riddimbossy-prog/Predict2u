@@ -6,7 +6,7 @@ const critical=[],warnings=[],passed=[];
 const exists=f=>fs.existsSync(path.join(HERE,f));
 const read=f=>{try{return fs.readFileSync(path.join(HERE,f),"utf8");}catch(_){return"";}};
 const pages=["index.html","board.html","engines.html","proof.html","scorecards.html","league-dna.html","community.html","trust.html","responsible-gambling.html","terms.html","privacy.html","disclaimer.html","404.html"];
-const required=[...pages,"banker-engine.js","p2u-intelligence.js","intelligence.css","site-health-widget.js","site-health.css","sw.js","predict2u-logo.png","brand-experience.js","brand-experience.css","performance-freshness.js","performance-freshness.css","social-preview.png","favicon.ico","favicon-16x16.png","favicon-32x32.png","apple-touch-icon.png","maskable-icon.png","404.html"];
+const required=[...pages,"banker-engine.js","p2u-intelligence.js","intelligence.css","site-health-widget.js","site-health.css","sw.js","predict2u-logo.png","brand-experience.js","brand-experience.css","performance-freshness.js","performance-freshness.css","personalization.js","personalization.css","social-preview.png","favicon.ico","favicon-16x16.png","favicon-32x32.png","apple-touch-icon.png","maskable-icon.png","404.html"];
 for(const f of required){if(!exists(f))critical.push(`Missing required file: ${f}`);else passed.push(`Found ${f}`);}
 let engineCount=null;
 try{const eng=require("./banker-engine.js");engineCount=(eng.P2U_ENGINE_REGISTRY||[]).length;if(engineCount!==16)critical.push(`Engine registry has ${engineCount}; expected 16.`);else passed.push("Engine registry has 16 engines");}catch(e){critical.push(`Cannot load banker-engine.js: ${e.message}`);}
@@ -45,13 +45,22 @@ if(!cacheMatch){
 }else{
   passed.push(`Service-worker cache is ${cacheMatch[1]}`);
 }
-for(const f of ["trust.html","intelligence.css","site-health-widget.js","site-health.css","performance-freshness.js","performance-freshness.css"]){if(!sw.includes(`./${f}`))warnings.push(`sw.js does not precache ${f}.`);}
+for(const f of ["trust.html","intelligence.css","site-health-widget.js","site-health.css","performance-freshness.js","performance-freshness.css","personalization.js","personalization.css"]){if(!sw.includes(`./${f}`))warnings.push(`sw.js does not precache ${f}.`);}
 
 for(const f of ["favicon.ico","favicon-16x16.png","favicon-32x32.png","apple-touch-icon.png","icon-192.png","icon-512.png","maskable-icon.png","social-preview.png"]){if(!exists(f))critical.push(`Missing brand asset: ${f}`);else passed.push(`Found brand asset ${f}`);}
 const board=read("board.html"),full=read("engines.html");
 if(!/p2u-onboarding-v157/.test(read("brand-experience.js")))critical.push("First-visit onboarding is missing.");else passed.push("First-visit onboarding is wired");
 if(!/board-rank-reason/.test(board)||!/ranked-explainer/.test(full))critical.push("Ranked #1 explanation is incomplete.");else passed.push("Ranked #1 explanation is present on both boards");
 if(/p2u-system-alert|Core match data is more than 36 hours old|View system status/.test(read("brand-experience.js")))critical.push("Removed public status banner is still present.");else passed.push("Public status banner is removed; Trust Center status remains available");
+
+
+for(const page of ["index.html","board.html"]){
+  const html=read(page);
+  if(!/personalization\.css/.test(html)||!/personalization\.js/.test(html))critical.push(`${page}: Personalization layer not loaded.`);else passed.push(`${page}: Personalization layer loaded`);
+  for(const token of ["P2UPersonalization","data-p2u-match-key","savePersonalState"]){if(!html.includes(token))critical.push(`${page}: personalization integration missing ${token}.`);}
+}
+const personalization=read("personalization.js");
+for(const token of ["favoriteEngines","favoriteLeagues","hiddenLeagues","recentMatches","rememberFilters","cardView","My Board"]){if(!personalization.includes(token))critical.push(`personalization.js missing ${token}.`);else passed.push(`Personalization supports ${token}`);}
 
 const proof=read("proof.html");
 if(!/p2u-intelligence\.js/.test(proof)||!/proof-root/.test(proof))critical.push("Proof page wiring is incomplete.");
@@ -66,7 +75,7 @@ if(exists("data.js")){
   }catch(e){critical.push(`data.js MATCHES JSON cannot be parsed: ${e.message}`);}
 }else if(!PACKAGE_MODE)warnings.push("data.js is not present; live repository audit cannot validate fixtures.");
 const uniqueWarnings=[...new Set(warnings)];
-const report={generatedAt:new Date().toISOString(),auditVersion:"v166",cacheVersion:cacheMatch?cacheMatch[1]:null,engineCount,critical,warnings:uniqueWarnings,passedCount:passed.length};
+const report={generatedAt:new Date().toISOString(),auditVersion:"v167",cacheVersion:cacheMatch?cacheMatch[1]:null,engineCount,critical,warnings:uniqueWarnings,passedCount:passed.length};
 fs.writeFileSync(path.join(HERE,"site-audit.json"),JSON.stringify(report,null,2)+"\n");
 console.log(`Audit: ${critical.length} critical, ${uniqueWarnings.length} warning(s), ${passed.length} checks passed.`);
 for(const x of critical)console.error("CRITICAL:",x);

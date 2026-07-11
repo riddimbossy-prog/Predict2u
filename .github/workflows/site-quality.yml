@@ -28,6 +28,9 @@ jobs:
           test -f site-health.css
           test -f performance-freshness.css
           test -f performance-freshness.js
+          test -f personalization.css
+          test -f personalization.js
+          test -f tests/personalization.spec.js
           test -f performance-budget.js
           test -f tests/performance-freshness.spec.js
           test -f trust.html

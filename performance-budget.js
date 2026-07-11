@@ -15,7 +15,9 @@ const budgets={
   "p2u-intelligence.js":35000,
   "brand-experience.css":22000,
   "performance-freshness.js":18000,
-  "performance-freshness.css":14000
+  "performance-freshness.css":14000,
+  "personalization.js":30000,
+  "personalization.css":18000
 };
 for(const [file,limit] of Object.entries(budgets)){
   if(!exists(file)){errors.push(`Missing budgeted file: ${file}`);continue;}
@@ -40,7 +42,7 @@ const sw=read("sw.js");
 const cacheMatch=sw.match(/CACHE_VERSION\s*=\s*["'](predict2u-v\d+)["']/);
 if(!cacheMatch)errors.push("sw.js is missing a valid predict2u-vN cache version.");
 else passed.push(`sw.js cache: ${cacheMatch[1]}`);
-for(const token of ["NETWORK_TIMEOUT_MS","canonicalRequest","performance-freshness.js","performance-freshness.css"]){
+for(const token of ["NETWORK_TIMEOUT_MS","canonicalRequest","performance-freshness.js","performance-freshness.css","personalization.js","personalization.css"]){
   if(!sw.includes(token))errors.push(`sw.js missing ${token}`);
 }
 for(const page of ["index.html","board.html"]){
@@ -55,6 +57,15 @@ if(!/P2UBoardRefresh/.test(read("index.html"))||!/P2UBoardRefresh/.test(read("bo
   errors.push("In-place board refresh hook is missing.");
 if(/p2u-system-alert|Core match data is more than 36 hours old/.test(read("brand-experience.js")))
   errors.push("Removed full-width status banner returned.");
+
+
+for(const page of ["index.html","board.html"]){
+  const html=read(page);
+  if(!/personalization\.css/.test(html)||!/personalization\.js/.test(html))errors.push(`${page}: personalization layer is not loaded.`);
+}
+for(const token of ["favoriteEngines","favoriteLeagues","hiddenLeagues","recentMatches","cardView"]){
+  if(!read("personalization.js").includes(token))errors.push(`personalization.js missing ${token}`);
+}
 
 const buildVersion=exists("BUILD_VERSION.txt")?read("BUILD_VERSION.txt").trim():"unknown";
 const report={
