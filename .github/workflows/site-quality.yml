@@ -31,6 +31,9 @@ jobs:
 
       - name: Install quality tools
         run: npm install --no-audit --no-fund --package-lock=false
+      - name: Run repository completeness preflight
+        run: node repository-preflight.js
+
       - name: Generate public health snapshot
         run: node generate-site-health.js
       - name: Run repository consistency audit

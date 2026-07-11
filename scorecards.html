@@ -4,7 +4,25 @@
 <meta charset="UTF-8"/><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"/>
 <title>Predict2U Engine Scorecards</title>
 <meta name="description" content="Public forward-tracked scorecards for every Predict2U engine."/>
-<link rel="icon" href="icon-192.png"/><meta name="theme-color" content="#08090d"/>
+<link rel="icon" href="favicon.ico" sizes="any"/>
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png"/>
+<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png"/>
+<link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png"/>
+<link rel="manifest" href="manifest.webmanifest"/>
+<meta property="og:type" content="website"/>
+<meta property="og:site_name" content="Predict2u.com"/>
+<meta property="og:title" content="Predict2u Engine Scorecards"/>
+<meta property="og:description" content="Forward-tracked wins, losses, samples and calibration status for every Predict2u engine."/>
+<meta property="og:url" content="https://predict2u.com/scorecards.html"/>
+<meta property="og:image" content="https://predict2u.com/social-preview.png"/>
+<meta property="og:image:width" content="1200"/>
+<meta property="og:image:height" content="630"/>
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:title" content="Predict2u Engine Scorecards"/>
+<meta name="twitter:description" content="Forward-tracked wins, losses, samples and calibration status for every Predict2u engine."/>
+<meta name="twitter:image" content="https://predict2u.com/social-preview.png"/>
+<link rel="canonical" href="https://predict2u.com/scorecards.html"/>
+<meta name="theme-color" content="#08090d"/>
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap');
 :root{
@@ -60,6 +78,7 @@ h1{font-family:"Space Grotesk";font-size:clamp(36px,6vw,68px);line-height:1.02;l
 </style>
 
 <link rel="stylesheet" href="site-health.css"/>
+<link rel="stylesheet" href="brand-experience.css"/>
 </head>
 <body>
 <nav class="nav"><div class="wrap navin">
@@ -115,6 +134,7 @@ h1{font-family:"Space Grotesk";font-size:clamp(36px,6vw,68px);line-height:1.02;l
   search.addEventListener("input",render);family.addEventListener("change",render);render();
 })();
 </script>
+<script src="brand-experience.js"></script>
 <script src="site-health-widget.js"></script>
 <script>if("serviceWorker" in navigator)addEventListener("load",()=>navigator.serviceWorker.register("sw.js").catch(()=>{}));</script>
 </body></html>

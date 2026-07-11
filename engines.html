@@ -5,8 +5,24 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover"/>
 <title>Predict2u • The Full Board</title>
 <meta name="description" content="Every engine, every pick, every reason. The full Predict2u board with filters."/>
+<link rel="icon" href="favicon.ico" sizes="any"/>
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png"/>
+<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png"/>
+<link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png"/>
 <link rel="manifest" href="manifest.webmanifest"/>
-<link rel="icon" href="icon-192.png"/>
+<meta property="og:type" content="website"/>
+<meta property="og:site_name" content="Predict2u.com"/>
+<meta property="og:title" content="Predict2u Full Board — Every Pick, Every Reason"/>
+<meta property="og:description" content="Compare all sixteen engines, market agreement, conflict, data reliability and Proof Mode."/>
+<meta property="og:url" content="https://predict2u.com/engines.html"/>
+<meta property="og:image" content="https://predict2u.com/social-preview.png"/>
+<meta property="og:image:width" content="1200"/>
+<meta property="og:image:height" content="630"/>
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:title" content="Predict2u Full Board — Every Pick, Every Reason"/>
+<meta name="twitter:description" content="Compare all sixteen engines, market agreement, conflict, data reliability and Proof Mode."/>
+<meta name="twitter:image" content="https://predict2u.com/social-preview.png"/>
+<link rel="canonical" href="https://predict2u.com/engines.html"/>
 <meta name="theme-color" content="#0a0a0f"/>
 <script src="https://cdn.tailwindcss.com"></script>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
@@ -127,12 +143,13 @@ a{ color:inherit; text-decoration:none; }
 
 </style>
 <link rel="stylesheet" href="site-health.css"/>
+<link rel="stylesheet" href="brand-experience.css"/>
 </head>
 <body>
 
 <nav class="sticky top-0 z-50" style="background:rgba(10,10,15,.94);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)">
   <div class="max-w-screen-2xl mx-auto px-5 lg:px-8 h-[62px] flex items-center gap-6">
-    <a href="board.html" class="flex items-center gap-3 shrink-0">
+    <a href="index.html" class="flex items-center gap-3 shrink-0">
       <img src="predict2u-logo.png" alt="Predict2u — every pick, every result" class="nav-logo"/>
     </a>
     <div class="hidden lg:flex items-center gap-7 text-[14px] mx-auto" style="color:var(--ink-2)">
@@ -181,7 +198,7 @@ a{ color:inherit; text-decoration:none; }
       See all <span id="see-all-n" class="mx-1">—</span> <i class="fa-solid fa-arrow-right ml-1 text-[11px]"></i>
     </button>
   </div>
-  <div id="top-bankers-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-4"></div>
+  <div id="top-bankers-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-4"></div><div id="ranked-explainer"></div>
 </div>
 
 <div id="board" class="max-w-screen-2xl mx-auto px-5 lg:px-8 pb-20">
@@ -365,6 +382,17 @@ a{ color:inherit; text-decoration:none; }
         <div class="flex items-center gap-2 flex-wrap tb-actions">${btn}<a class="proof-link" href="${P2UIntelligence.proofHref(p.m)}"><i class="fa-solid fa-shield-halved"></i> Proof</a></div>
       </div>`;
     }).join(''):'<div class="col-span-full glass rounded-3xl p-8 text-center text-sm" style="color:var(--ink-2)">No multi-engine consensus bankers on this date yet.</div>';
+    const host=$('ranked-explainer');
+    const p=cons[0];
+    if(host){
+      if(!p)host.innerHTML='';
+      else{
+        const c=p.intel.conflict,cv=p.intel.coverage,alt=(c.groups||[]).filter(g=>g.market!==p.market).reduce((a,g)=>Math.max(a,g.count||0),0);
+        const why=[`<b>${p.engines.length}/${TOTAL}</b> exact-market supporters`,`Data reliability <b>${cv.score}%</b>`,alt?`Best alternative has <b>${alt}</b> vote${alt===1?'':'s'}`:`No meaningful opposing market`,`Conflict status: <b>${esc(c.label)}</b>`];
+        host.innerHTML=`<section class="p2u-rank-card"><div class="text-[10.5px] uppercase tracking-[.12em] font-semibold" style="color:var(--em)">WHY THIS IS RANKED #1</div><h3>${esc(p.m.home)} vs ${esc(p.m.away)} · ${esc(shortMk(p.market))}</h3><div class="p2u-rank-grid">${why.map((x,i)=>`<div class="p2u-rank-reason"><b>0${i+1}</b><br>${x}</div>`).join('')}</div></section>`;
+      }
+    }
+
   }
 
   /* ---------- the full grid ---------- */
@@ -381,7 +409,7 @@ a{ color:inherit; text-decoration:none; }
       const id='m'+i; REG[id]=p;
       const price=priceOf(p.m,p.market);
       const btn=(p.m.homeGoals==null&&typeof P2USlip!=='undefined')?P2USlip.btn(p.m,p.market):'';
-      return `<div class="glass card-h rounded-3xl p-5 flex flex-col rise" style="animation-delay:${Math.min(i*25,250)}ms">
+      return `<div class="glass card-h rounded-3xl p-5 rise p2u-standard-card" style="animation-delay:${Math.min(i*25,250)}ms">
         <div class="flex justify-between items-start mb-4 gap-2">
           <div style="min-width:0">
             <div class="flex items-center gap-2 text-[12px]">
@@ -488,6 +516,7 @@ a{ color:inherit; text-decoration:none; }
 <script>
 if('serviceWorker' in navigator) window.addEventListener('load',()=>navigator.serviceWorker.register('sw.js').catch(()=>{}));
 </script>
+<script src="brand-experience.js"></script>
 <script src="site-health-widget.js"></script>
 </body>
 </html>

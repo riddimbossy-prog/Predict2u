@@ -6,7 +6,8 @@
     "health": "node generate-site-health.js",
     "audit": "node audit-site.js",
     "test:mobile": "playwright test",
-    "quality": "npm run health && npm run audit && npm run test:mobile"
+    "quality": "npm run preflight && npm run audit && playwright test",
+    "preflight": "node repository-preflight.js"
   },
   "devDependencies": {
     "@playwright/test": "^1.53.0",

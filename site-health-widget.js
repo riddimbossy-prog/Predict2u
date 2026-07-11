@@ -1,7 +1,7 @@
 /* Predict2U site-health-widget.js — read-only public freshness/status display. */
 (function(){
   "use strict";
-  const VERSION="v155";
+  const VERSION="v157";
   const LIVE=new Set(["1H","HT","2H","ET","BT","P","LIVE"]);
   const num=v=>Number.isFinite(Number(v))?Number(v):null;
   const parse=v=>{const n=Date.parse(v||"");return Number.isFinite(n)?n:null;};
@@ -28,10 +28,14 @@
   function classify(h){
     const dataAge=h.dataUpdated?Date.now()-Date.parse(h.dataUpdated):Infinity;
     const scoreAge=h.scoresUpdated?Date.now()-Date.parse(h.scoresUpdated):Infinity;
+    const oddsAge=h.oddsUpdated?Date.now()-Date.parse(h.oddsUpdated):Infinity;
     const engineBad=h.engineCount!=null&&h.engineCount!==16;
+    const workflowFailed=/fail|error/i.test(String(h.workflowStatus||h.lastRunStatus||""));
+    if(workflowFailed)return{state:"critical",label:"Workflow failed"};
     if(engineBad||dataAge>36*3600000)return{state:"critical",label:"Action needed"};
-    if(dataAge>12*3600000)return{state:"stale",label:"Data stale"};
+    if(dataAge>12*3600000)return{state:"stale",label:"Core data stale"};
     if(h.liveMatches>0&&scoreAge>20*60000)return{state:"degraded",label:"Live scores delayed"};
+    if(h.oddsStatus==="unavailable"||(h.oddsUpdated&&oddsAge>24*3600000))return{state:"degraded",label:"Odds unavailable"};
     if(!Number.isFinite(dataAge))return{state:"unknown",label:"Checking data"};
     return{state:"healthy",label:"System operational"};
   }
