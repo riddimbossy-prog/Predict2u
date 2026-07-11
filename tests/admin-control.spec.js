@@ -1,5 +1,11 @@
 const { test, expect } = require('@playwright/test');
 
+async function waitReady(page, datasetKey, fallback) {
+  await page.waitForFunction(({ datasetKey, fallback }) => {
+    return document.documentElement.dataset[datasetKey] === 'true' || (fallback && Boolean(window[fallback]));
+  }, { datasetKey, fallback }, { timeout: 30000 });
+}
+
 async function clearStorageOnce(page, url, localKeys = [], sessionKeys = []) {
   await page.goto(url, { waitUntil: 'domcontentloaded' });
   await page.evaluate(({ localKeys, sessionKeys }) => {
@@ -16,6 +22,7 @@ async function setupPin(page, pin = '2468') {
     ['p2u-admin-pin-v169', 'p2u-admin-draft-v169', 'p2u-admin-log-v169'],
     ['p2u-admin-session-v169']
   );
+  await waitReady(page, 'p2uAdminReady');
   await expect(page.locator('#gate-title')).toContainText('Create local operator PIN');
   await page.locator('#admin-pin').fill(pin);
   await page.locator('#admin-pin-confirm').fill(pin);

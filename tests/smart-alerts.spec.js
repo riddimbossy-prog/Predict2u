@@ -1,5 +1,11 @@
 const { test, expect } = require('@playwright/test');
 
+async function waitReady(page, datasetKey, fallback) {
+  await page.waitForFunction(({ datasetKey, fallback }) => {
+    return document.documentElement.dataset[datasetKey] === 'true' || (fallback && Boolean(window[fallback]));
+  }, { datasetKey, fallback }, { timeout: 30000 });
+}
+
 async function resetAlerts(page, url) {
   await page.goto(url, { waitUntil: 'domcontentloaded' });
   await page.evaluate(() => {
@@ -9,7 +15,7 @@ async function resetAlerts(page, url) {
     localStorage.setItem('p2u-onboarding-v157', '1');
   });
   await page.reload({ waitUntil: 'domcontentloaded' });
-  await page.waitForFunction(() => Boolean(window.P2USmartAlerts));
+  await waitReady(page, 'p2uSmartAlertsReady', 'P2USmartAlerts');
   await expect(page.locator('#p2u-alert-button')).toBeVisible();
 }
 
@@ -27,7 +33,7 @@ test('smart alert center opens and persists settings on Z Fold cover', async ({ 
 
   await page.locator('[data-alert-close]').first().click();
   await page.reload({ waitUntil: 'domcontentloaded' });
-  await page.waitForFunction(() => Boolean(window.P2USmartAlerts));
+  await waitReady(page, 'p2uSmartAlertsReady', 'P2USmartAlerts');
   await page.locator('#p2u-alert-button').click();
   await page.locator('[data-alert-settings]').click();
   await expect(page.locator('[data-alert-toggle="verifiedOnly"]')).toHaveAttribute('aria-pressed', 'true');

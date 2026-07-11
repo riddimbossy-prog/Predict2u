@@ -167,6 +167,8 @@
     else {trigger.classList.add("p2u-alert-trigger-floating");document.body.appendChild(trigger);}
     trigger.addEventListener("click",()=>open("list"));
     updateBadge();
+    document.documentElement.dataset.p2uSmartAlertsReady='true';
+    window.dispatchEvent(new CustomEvent('p2u:smart-alerts-ready',{detail:{version:VERSION}}));
   }
   function mountPanel(){
     if(backdrop)return;

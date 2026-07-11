@@ -1,5 +1,11 @@
 const { test, expect } = require('@playwright/test');
 
+async function waitReady(page, datasetKey, fallback) {
+  await page.waitForFunction(({ datasetKey, fallback }) => {
+    return document.documentElement.dataset[datasetKey] === 'true' || (fallback && Boolean(window[fallback]));
+  }, { datasetKey, fallback }, { timeout: 30000 });
+}
+
 async function resetPersonalization(page, url) {
   await page.goto(url, { waitUntil: 'domcontentloaded' });
   await page.evaluate(() => {
@@ -7,7 +13,7 @@ async function resetPersonalization(page, url) {
     localStorage.setItem('p2u-onboarding-v157', '1');
   });
   await page.reload({ waitUntil: 'domcontentloaded' });
-  await page.waitForFunction(() => Boolean(window.P2UPersonalization && window.P2UPersonalization.isMounted()));
+  await waitReady(page, 'p2uPersonalizationReady', 'P2UPersonalization');
   await expect(page.locator('#p2u-personalization-bar')).toBeVisible();
 }
 
@@ -38,7 +44,7 @@ test('personalization controls are usable and persist on mobile', async ({ page 
   })).toBe('united');
 
   await page.reload({ waitUntil: 'domcontentloaded' });
-  await page.waitForFunction(() => Boolean(window.P2UPersonalization && window.P2UPersonalization.isMounted()));
+  await waitReady(page, 'p2uPersonalizationReady', 'P2UPersonalization');
 
   await expect(page.locator('body')).toHaveAttribute('data-p2u-card-view', 'compact');
   await expect(page.locator('[data-p2u-scope]')).toHaveAttribute('aria-pressed', 'true');

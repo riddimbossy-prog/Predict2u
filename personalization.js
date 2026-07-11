@@ -350,6 +350,8 @@
     updateBar();
     renderDrawer();
     mounted = true;
+    document.documentElement.dataset.p2uPersonalizationReady = 'true';
+    window.dispatchEvent(new CustomEvent('p2u:personalization-ready', { detail: { version: VERSION } }));
   }
 
   function recordMatch(article) {

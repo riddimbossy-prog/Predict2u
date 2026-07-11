@@ -180,6 +180,7 @@
     $("#reset-draft").addEventListener("click",resetDraft);$("#clear-local").addEventListener("click",clearLocal);$("#clear-log").addEventListener("click",()=>{writeLogs([]);renderLogs();toast("Local log cleared");});
     addEventListener("keydown",e=>{if(e.key==="Escape")closeSidebar();});
   }
-  function init(){bind();configureGate();if(sessionStorage.getItem(SESSION_STORE)==="1")showApp();}
+  function signalReady(){document.documentElement.dataset.p2uAdminReady='true';window.dispatchEvent(new CustomEvent('p2u:admin-ready',{detail:{version:VERSION}}));}
+  function init(){bind();configureGate();if(sessionStorage.getItem(SESSION_STORE)==="1")showApp();signalReady();}
   if(document.readyState==="loading")document.addEventListener("DOMContentLoaded",init,{once:true});else init();
 })();
