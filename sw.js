@@ -1,10 +1,10 @@
-/* Predict2U service worker v200 — launch-candidate app shell, bounded runtime caches,
+/* Predict2U service worker v201 — launch-candidate app shell, bounded runtime caches,
    exact push deep links and recoverable offline navigation. */
-const VERSION='v200';
-const CACHE_VERSION='predict2u-v200';
+const VERSION='v201';
+const CACHE_VERSION='predict2u-v201';
 const APP_CACHE=CACHE_VERSION;
-const RUNTIME_CACHE='predict2u-runtime-v200';
-const IMAGE_CACHE='predict2u-images-v200';
+const RUNTIME_CACHE='predict2u-runtime-v201';
+const IMAGE_CACHE='predict2u-images-v201';
 const IMAGE_LIMIT=220;
 const NETWORK_TIMEOUT=4200;
 const NETWORK_TIMEOUT_MS=NETWORK_TIMEOUT;
@@ -20,7 +20,7 @@ const SHELL=[
   './account-cloud.js','./account-cloud.css','./cloud-config.js','./push-notifications.js','./push-notifications.css',
   './backend-admin.js','./backend-admin.css','./admin-config.js','./site-controls.js','./site-controls.css',
   './analytics.js','./analytics.css','./product-analytics.js','./product-analytics.css',
-  './news.js','./news-app-v198.js','./news.css','./football-assets.js','./brand-performance.css','./community-consistency.js',
+  './news.js','./news-app-v201.js','./news.css','./news-comments-v201.css','./football-assets.js','./brand-performance.css','./community-consistency.js',
   './predict2u-logo.png','./predict2u-mark.png','./social-preview.png','./predict2u-transfers.webp','./predict2u-transfers-thumb.webp',
   './favicon.ico','./favicon-16x16.png','./favicon-32x32.png','./favicon-48x48.png','./apple-touch-icon.png',
   './icon-192.png','./icon-512.png','./maskable-icon.png'

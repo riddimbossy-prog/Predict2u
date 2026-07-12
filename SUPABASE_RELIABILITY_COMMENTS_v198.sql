@@ -54,7 +54,8 @@ begin
     raise exception 'Duplicate comment';
   end if;
 
-  if clean_body ~* '(https?://[^ ]+.*https?://|telegram|whatsapp me|guaranteed win|free money|dm me for|contact me on|(.)\1{11,})' then
+  if clean_body ~* 'https?://[^ ]+.*https?://|telegram|whatsapp me|guaranteed win|free money|dm me for|contact me on'
+     or clean_body ~ '(.)\1{11,}' then
     raise exception 'Comment looks like spam';
   end if;
 
