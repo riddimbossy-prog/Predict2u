@@ -348,10 +348,41 @@
     return raw||'Comment could not be posted. Please try again.';
   }
 
+  async function queueOffline(kind,payload){
+    if(!window.P2UPWA||!window.P2UPWA.enqueue)return false;
+    try{await window.P2UPWA.enqueue({kind,payload});return true}catch(_){return false}
+  }
+
+  async function replayOfflineAction(event){
+    const detail=event&&event.detail||{},item=detail.item||{},payload=item.payload||{};
+    if(!['news-comment','news-bookmark','news-follow'].includes(item.kind))return;
+    const sb=await getClient();const active=sb?await resolveActiveSession(sb):null;if(!sb||!active)return;
+    try{
+      let error=null;
+      if(item.kind==='news-comment'){({error}=await sb.rpc('p2u_news_post_comment',{p_article_id:String(payload.articleId),p_body:clean(payload.body,600)}));}
+      if(item.kind==='news-bookmark'){
+        if(payload.saved)({error}=await sb.from(BOOKMARKS).upsert({user_id:active.user.id,article_id:Number(payload.articleId)},{onConflict:'user_id,article_id'}));
+        else({error}=await sb.from(BOOKMARKS).delete().eq('user_id',active.user.id).eq('article_id',Number(payload.articleId)));
+      }
+      if(item.kind==='news-follow'){
+        if(payload.following)({error}=await sb.from(FOLLOWS).upsert({user_id:active.user.id,entity_type:clean(payload.type,20),entity_value:clean(payload.value,100)},{onConflict:'user_id,entity_type,normalized_value'}));
+        else({error}=await sb.from(FOLLOWS).delete().eq('user_id',active.user.id).eq('entity_type',clean(payload.type,20)).eq('normalized_value',normalize(payload.value)));
+      }
+      if(error)throw error;
+      if(typeof detail.complete==='function')detail.complete();
+      showToast(item.kind==='news-comment'?'Queued comment posted.':'Offline change synced.');
+      if(item.kind==='news-comment'&&currentArticle&&String(currentArticle.id)===String(payload.articleId)){const panel=$('#news-discussion-panel');if(panel)panel.innerHTML=await discussionHtml(currentArticle);}
+    }catch(_){/* Keep the item queued for the next online retry. */}
+  }
+
   async function postComment(articleId,button=null){
     const textarea=$('#news-comment-body'),message=$('.p2u-news-comment-message'),body=clean(textarea&&textarea.value,600);
     if(!body){if(message)message.textContent='Write a comment before posting.';textarea&&textarea.focus();return;}
     if(body.length<2){if(message)message.textContent='Comment must be at least 2 characters.';return;}
+    if(!navigator.onLine){
+      const queued=await queueOffline('news-comment',{articleId:String(articleId),body});
+      if(queued){if(textarea)textarea.value='';if(message){message.textContent='Comment queued. It will post after you reconnect.';message.dataset.state='success';}showToast('Comment saved for sync.');return;}
+    }
     const sb=await getClient();const active=sb?await resolveActiveSession(sb):null;
     if(!sb||!active){if(message)message.textContent='Sign in before posting.';return;}
     const btn=button||$('[data-news-comment-submit]');if(btn){btn.disabled=true;btn.dataset.originalText=btn.textContent;btn.textContent='Posting…';}
@@ -392,6 +423,7 @@
     const key=String(id),was=isSaved(key);
     if(was)bookmarks.delete(key);else bookmarks.add(key);saveLocalState();applyFilter();
     if(!session){showToast(was?'Removed from Read Later on this device.':'Saved on this device. Sign in to sync.');return}
+    if(!navigator.onLine){await queueOffline('news-bookmark',{articleId:Number(id),saved:!was});showToast(was?'Removed on this device. Cloud update queued.':'Saved on this device. Cloud update queued.');return}
     const sb=await getClient();
     const {data,error}=await sb.rpc('p2u_news_toggle_bookmark',{p_article_id:Number(id)});
     if(error){showToast(was?'Removed on this device. Cloud sync is temporarily unavailable.':'Saved on this device. Cloud sync is temporarily unavailable.','warn');return}
@@ -403,6 +435,7 @@
     const exists=following(type,value);
     const localToggle=()=>{if(exists)follows=follows.filter(f=>!(f.entity_type===type&&normalize(f.entity_value)===normalize(value)));else follows.unshift({entity_type:type,entity_value:value,created_at:new Date().toISOString()});saveLocalState();renderFollowBar();applyFilter();};
     if(!session){localToggle();showToast(`${exists?'Unfollowed':'Following'} ${value} on this device.${original&&normalize(original)!==normalize(value)?` Corrected from “${original}”.`:''}`);return}
+    if(!navigator.onLine){localToggle();await queueOffline('news-follow',{type,value,following:!exists});showToast(`${exists?'Unfollowed':'Following'} ${value} on this device. Cloud update queued.`);return}
     const sb=await getClient();const {data,error}=await sb.rpc('p2u_news_toggle_follow',{p_entity_type:type,p_entity_value:value});
     if(error){localToggle();showToast(`${exists?'Unfollowed':'Following'} ${value} on this device. Cloud sync is temporarily unavailable.`,'warn');return}
     if(data&&data.following)follows.unshift({entity_type:type,entity_value:value,created_at:new Date().toISOString()});
@@ -474,6 +507,7 @@
     document.documentElement.dataset.p2uNewsReady='true';window.dispatchEvent(new CustomEvent('p2u:news-ready',{detail:{version:VERSION,count:articles.length,follows:follows.length,saved:bookmarks.size}}));
   }
 
+  window.addEventListener('p2u:offline-action',replayOfflineAction);
   window.P2UNews={version:VERSION,refresh:fetchArticles,open:openDiscussion,postComment,getArticles:()=>articles.slice(),getFollows:()=>follows.slice(),getBookmarks:()=>[...bookmarks]};
   if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',init,{once:true});else init();
 })();
