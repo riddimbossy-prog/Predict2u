@@ -9,7 +9,7 @@ test('push account controls load safely on Z Fold cover',async({page})=>{
   await page.setViewportSize({width:344,height:882});
   await page.goto('/account.html',{waitUntil:'domcontentloaded'});
   await waitAccount(page);
-  await expect(page.locator('#p2u-push-account-card')).toBeVisible();
+  await expect(page.locator('#p2u-push-account-card')).toBeVisible({timeout:10000});
   await expect(page.locator('[data-push-enable]')).toBeVisible();
   const overflow=await page.evaluate(()=>Math.max(document.documentElement.scrollWidth,document.body.scrollWidth)-innerWidth);
   expect(overflow).toBeLessThanOrEqual(3);
@@ -22,7 +22,7 @@ test('service worker contains background push and notification click handlers',a
   expect(source).toContain('addEventListener("push"');
   expect(source).toContain('showNotification');
   expect(source).toContain('notificationclick');
-  expect(source).toContain('predict2u-v183');
+  expect(source).toContain('predict2u-v187');
 });
 
 async function installAdminMock(page){

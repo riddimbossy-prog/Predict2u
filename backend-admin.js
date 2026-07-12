@@ -2,7 +2,7 @@
    Uses Supabase Auth + RLS/RPC. No service-role key is present in browser code. */
 (function(){
   'use strict';
-  const VERSION='v186';
+  const VERSION='v187';
   const CONFIG=window.P2U_CLOUD_CONFIG||{};
   const ROLE_RANK={moderator:1,admin:2,owner:3};
   let client=null,session=null,roleRow=null,settings=null,moderation=[],audit=[],deletions=[],roles=[],pushConfig=null,pushJobs=[],pushError='',pushMetrics={active_devices:0,pending_jobs:0,sent_total:0,failed_total:0,last_dispatch:null};
@@ -281,6 +281,6 @@
     }catch(e){showGate('unauthorized',e.message||'Could not verify admin access.');toast(e.message||'Admin connection failed.','bad')}
   }
 
-  window.P2UBackendAdmin={version:VERSION,refresh:refreshAll,getRole:()=>roleRow&&roleRow.role,getSettings:()=>settings,isReady:()=>document.documentElement.dataset.p2uBackendAdminReady==='true'};
+  window.P2UBackendAdmin={version:VERSION,refresh:refreshAll,openTab:activateTab,getRole:()=>roleRow&&roleRow.role,getSettings:()=>settings,isReady:()=>document.documentElement.dataset.p2uBackendAdminReady==='true'};
   if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',init,{once:true});else init();
 })();

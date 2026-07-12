@@ -3,7 +3,7 @@
    The VAPID private key never appears in browser code. */
 (function(){
   'use strict';
-  const VERSION='v183';
+  const VERSION='v187';
   const CONFIG=window.P2U_CLOUD_CONFIG||{};
   const LOCAL_KEY='p2u-push-local-v183';
   const PREF_KEY='p2u-personalization-v167';
@@ -120,14 +120,26 @@
       `</section>`;
   }
   async function render(){
-    const root=document.getElementById('p2u-account-page-root');if(!root)return;
-    const grid=root.querySelector('.p2u-account-grid');if(!grid)return;
+    const root=document.getElementById('p2u-account-page-root');if(!root)return false;
+    const grid=root.querySelector('.p2u-account-grid');if(!grid)return false;
     let card=document.getElementById('p2u-push-account-card');
     const html=await cardHtml();
     if(card){const wrap=document.createElement('div');wrap.innerHTML=html;card.replaceWith(wrap.firstElementChild)}else grid.insertAdjacentHTML('beforeend',html);
+    return Boolean(document.getElementById('p2u-push-account-card'));
+  }
+  function markReady(){
+    document.documentElement.dataset.p2uPushReady='true';
+    window.dispatchEvent(new CustomEvent('p2u:push-ready',{detail:{version:VERSION,signedIn:Boolean(session),configured:Boolean(publicConfig?.enabled)}}));
   }
   function scheduleRender(){clearTimeout(renderTimer);renderTimer=setTimeout(()=>render().catch(()=>{}),40)}
-  async function refresh(){await loadCloud();scheduleRender();document.documentElement.dataset.p2uPushReady='true';window.dispatchEvent(new CustomEvent('p2u:push-ready',{detail:{version:VERSION,signedIn:Boolean(session),configured:Boolean(publicConfig?.enabled)}}));}
+  async function refresh(){
+    await loadCloud();
+    const root=document.getElementById('p2u-account-page-root');
+    const rendered=await render();
+    if(root&&!rendered)return false;
+    markReady();
+    return true;
+  }
   function setMessage(card,message,type=''){const el=card&&card.querySelector('[data-push-message]');if(el){el.textContent=message;el.className=`p2u-push-message ${type}`}}
   document.addEventListener('click',async e=>{
     const card=e.target.closest('#p2u-push-account-card');if(!card)return;
@@ -138,7 +150,7 @@
   document.addEventListener('change',e=>{if(e.target.closest('#p2u-push-account-card')&&e.target.matches('[data-push-pref]')){preferences=Object.assign({},preferences||local(),{[e.target.dataset.pushPref]:e.target.type==='checkbox'?e.target.checked:e.target.value});saveLocal(preferences)}});
   window.addEventListener('p2u:account-ready',refresh);window.addEventListener('p2u:cloud-synced',()=>savePreferences().catch(()=>{}));window.addEventListener('p2u:personalization-changed',()=>savePreferences().catch(()=>{}));
   if(navigator.serviceWorker)navigator.serviceWorker.addEventListener('message',event=>{const msg=record(event.data);if(msg.type!=='P2U_PUSH_RECEIVED')return;const payload=record(msg.payload);if(window.P2USmartAlerts&&window.P2USmartAlerts.add)window.P2USmartAlerts.add({id:payload.id||`remote-${Date.now()}`,kind:payload.category==='community'?'community':payload.category==='match'?'match':'system',category:payload.category||'system',title:payload.title||'Predict2U update',body:payload.body||'',url:payload.url||'index.html',createdAt:payload.createdAt||Date.now()},{force:true});});
-  const observer=new MutationObserver(()=>{if(!document.getElementById('p2u-push-account-card'))scheduleRender()});
+  const observer=new MutationObserver(()=>{if(!document.getElementById('p2u-push-account-card'))refresh().catch(()=>{})});
   async function init(){if(mounted)return;mounted=true;const root=document.getElementById('p2u-account-page-root');if(root)observer.observe(root,{childList:true,subtree:false});await refresh()}
   window.P2UPush={version:VERSION,enable,disable,refresh,savePreferences,isSubscribed,getPublicConfig:()=>record(publicConfig),isReady:()=>document.documentElement.dataset.p2uPushReady==='true'};
   if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',init,{once:true});else init();

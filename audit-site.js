@@ -69,6 +69,6 @@ for(const token of ['Global Privacy Control','Do Not Track','p2u_ingest_analytic
 for(const token of ['p2u_analytics_events','p2u_ingest_analytics_events','p2u_admin_analytics_overview','enable row level security','security definer']){if(!analyticsSql.toLowerCase().includes(token.toLowerCase()))critical.push(`Analytics SQL missing ${token}.`);else passed.push(`Analytics SQL includes ${token}`)}
 if(!adminHtml.includes('data-admin-tab="analytics"')||!adminHtml.includes('data-admin-panel="analytics"')||!productAnalytics.includes('p2u_admin_analytics_overview'))critical.push('Admin Product Intelligence dashboard is incomplete.');else passed.push('Admin Product Intelligence dashboard is present');
 
-const uniqueWarnings=[...new Set(warnings)],report={generatedAt:new Date().toISOString(),auditVersion:'v186',cacheVersion:cacheMatch?cacheMatch[1]:null,engineCount,critical,warnings:uniqueWarnings,passedCount:passed.length};
+const uniqueWarnings=[...new Set(warnings)],report={generatedAt:new Date().toISOString(),auditVersion:'v187',cacheVersion:cacheMatch?cacheMatch[1]:null,engineCount,critical,warnings:uniqueWarnings,passedCount:passed.length};
 fs.writeFileSync(path.join(HERE,'site-audit.json'),JSON.stringify(report,null,2)+'\n');
 console.log(`Audit: ${critical.length} critical, ${uniqueWarnings.length} warning(s), ${passed.length} checks passed.`);for(const x of critical)console.error('CRITICAL:',x);for(const x of uniqueWarnings)console.warn('WARNING:',x);if(critical.length)process.exit(1);
