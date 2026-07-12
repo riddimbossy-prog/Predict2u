@@ -1,14 +1,15 @@
-/* Predict2U v166 — quiet freshness display, in-place board updates and fallbacks. */
+/* Predict2U v202 — quiet freshness with reduced background work and duplicate prefetch removal. */
 (function(){
   "use strict";
 
-  const VERSION="v166";
+  const VERSION="v202";
   const DATA_FILE="data.js";
   const LIVE=new Set(["1H","HT","2H","ET","BT","P","LIVE"]);
   const DATA_PAGE=/(?:^|\/)(?:index|board|engines|proof|scorecards|league-dna|trust)\.html$/i.test(location.pathname)||location.pathname==="/"||location.pathname==="";
   let currentStamp=Math.max(Date.parse(window.DATA_UPDATED||"")||0,Date.parse(window.SCORES_UPDATED||"")||0);
   let checking=false;
   let timer=null;
+  let lastChecked=0;
   let ui=null;
 
   const hasBoard=()=>Boolean(document.getElementById("cards"));
@@ -106,8 +107,9 @@
   }
 
   async function checkNow(){
-    if(checking||document.hidden)return;
+    if(checking||document.hidden||!navigator.onLine)return;
     checking=true;
+    lastChecked=Date.now();
     render("Checking for fresh data…","updating");
     try{
       const response=await fetch(`${DATA_FILE}?check=${Date.now()}`,{cache:"no-store"});
@@ -129,7 +131,7 @@
 
   function schedule(){
     clearTimeout(timer);
-    const delay=isLiveWindow()?90000:300000;
+    const delay=isLiveWindow()?120000:480000;
     timer=setTimeout(checkNow,delay);
   }
 
@@ -143,31 +145,15 @@
     if(btn)btn.addEventListener("click",()=>location.reload());
   }
 
-  function warmLikelyPages(){
-    if(!("serviceWorker" in navigator))return;
-    const urls=[...document.querySelectorAll("nav a[href],footer a[href]")]
-      .map(a=>a.getAttribute("href"))
-      .filter(h=>h&&/^[a-z0-9-]+\.html(?:[?#].*)?$/i.test(h))
-      .map(h=>new URL(h,location.href).href)
-      .filter((h,i,a)=>a.indexOf(h)===i)
-      .slice(0,8);
-    if(!urls.length)return;
-    navigator.serviceWorker.ready.then(reg=>{
-      const worker=reg.active||navigator.serviceWorker.controller;
-      if(worker)worker.postMessage({type:"PREFETCH_URLS",urls});
-    }).catch(()=>{});
-  }
 
   function init(){
     createUi();
     render(ageLabel(currentStamp),stateFor(currentStamp));
     requestAnimationFrame(()=>requestAnimationFrame(fallbackIfNeeded));
     schedule();
-    (window.requestIdleCallback||(f=>setTimeout(f,1200)))(warmLikelyPages);
-
     window.addEventListener("online",()=>{render(ageLabel(currentStamp),stateFor(currentStamp));checkNow();});
     window.addEventListener("offline",()=>render("Offline · showing saved data","offline"));
-    document.addEventListener("visibilitychange",()=>{if(!document.hidden)checkNow();});
+    document.addEventListener("visibilitychange",()=>{if(!document.hidden&&Date.now()-lastChecked>120000)checkNow();});
   }
 
   if(document.readyState==="loading")document.addEventListener("DOMContentLoaded",init,{once:true});

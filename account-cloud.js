@@ -3,7 +3,7 @@
    protects each user's cloud state. Never place a service-role key in browser code. */
 (function(){
   'use strict';
-  const VERSION='v189';
+  const VERSION='v202';
   const CONFIG=window.P2U_CLOUD_CONFIG||{};
   const META_KEY='p2u-cloud-local-meta-v180';
   const LOCAL_FOLLOWS_KEY='p2u-local-follows-v180';
@@ -261,14 +261,47 @@
     if(!current.slip&&localStorage.getItem(SLIP_KEY))patch.slip=stamp;
     if(Object.keys(patch).length)writeMeta(patch);
   }
+  const idle=(fn,timeout=4200)=>(window.requestIdleCallback||((cb,opt)=>setTimeout(()=>cb({didTimeout:true,timeRemaining:()=>0}),Math.min((opt&&opt.timeout)||timeout,timeout))))(fn,{timeout});
+  let decorateTimer=null;
+  function scheduleAccountDecoration(){
+    clearTimeout(decorateTimer);
+    decorateTimer=setTimeout(()=>{decorateFollowButtons();decorateProfileLinks();},90);
+  }
+  async function hydrateAccountState(){
+    if(!session||!client)return;
+    await Promise.all([loadFollows(),loadSavedSlips()]);
+    await syncNow('merge');
+    renderAll();
+  }
   async function init(){
-    if(mounted)return;mounted=true;loadPushLayer();seedLocalMeta();mountDrawer();mountLauncher();
-    const observer=new MutationObserver(()=>{decorateFollowButtons();decorateProfileLinks()});observer.observe(document.body,{childList:true,subtree:true});
+    if(mounted)return;
+    mounted=true;
+    loadPushLayer();seedLocalMeta();mountDrawer();mountLauncher();
+    const observer=new MutationObserver(scheduleAccountDecoration);
+    observer.observe(document.body,{childList:true,subtree:true});
     const sb=await getClient();
     if(sb){
-      const {data}=await sb.auth.getSession();session=data&&data.session||null;
-      sb.auth.onAuthStateChange(async(_event,next)=>{session=next||null;if(session){await loadProfile();await Promise.all([loadFollows(),loadSavedSlips()]);await syncNow('merge')}else{profile=null;syncState='local'}renderAll()});
-      if(session){await loadProfile();await Promise.all([loadFollows(),loadSavedSlips()]);await syncNow('merge')}
+      const {data}=await sb.auth.getSession();
+      session=data&&data.session||null;
+      sb.auth.onAuthStateChange(async(_event,next)=>{
+        session=next||null;
+        if(session){
+          await loadProfile();
+          renderAll();
+          await hydrateAccountState();
+        }else{
+          profile=null;syncState='local';follows=new Map();savedSlips=[];
+        }
+        renderAll();
+      });
+      if(session){
+        // Profile/launcher appears quickly. Multi-table sync moves off the critical render path.
+        await loadProfile();
+        renderAll();
+        const needsImmediate=/\/(?:account|profile|community|news)\.html$/i.test(location.pathname);
+        if(needsImmediate)idle(()=>hydrateAccountState(),1200);
+        else idle(()=>hydrateAccountState(),5200);
+      }
     }
     renderAll();renderProfilePage();
     document.documentElement.dataset.p2uAccountReady=cloudEnabled()?'true':'local';

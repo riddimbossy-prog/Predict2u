@@ -1,9 +1,8 @@
 /* Predict2U v171 — Growth & Sharing */
 (function(){
   "use strict";
-  const VERSION="v171", REF_KEY="p2u_referral_code", METRIC_KEY="p2u_share_metrics_v171";
+  const VERSION="v202", REF_KEY="p2u_referral_code", METRIC_KEY="p2u_share_metrics_v171";
   const icon='<svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><path d="m8.6 10.7 6.8-4.1M8.6 13.3l6.8 4.1"/></svg>';
-  let deferredInstall=null;
   const esc=s=>String(s||'').replace(/[&<>\"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','\"':'&quot;'}[c]));
   function referral(){const u=new URL(location.href);const r=(u.searchParams.get('ref')||'').replace(/[^a-zA-Z0-9_-]/g,'').slice(0,32);if(r)localStorage.setItem(REF_KEY,r);return r||localStorage.getItem(REF_KEY)||''}
   function withRef(raw){const u=new URL(raw,location.href);const r=referral();if(r)u.searchParams.set('ref',r);return u.toString()}
@@ -25,7 +24,37 @@
   function button(){const b=document.createElement('button');b.type='button';b.className='p2u-share-card-btn';b.innerHTML=icon+'<span>Share</span>';b.setAttribute('aria-label','Share this record');b.addEventListener('click',()=>openSheet(b));return b}
   function decorate(root=document){let count=0;root.querySelectorAll('[data-p2u-match-key],.slip-card,[data-slip-id]').forEach(card=>{if(card.dataset.p2uShareReady)return;card.dataset.p2uShareReady='1';const host=card.querySelector('.p2u-card-actions,.slip-actions,.actions')||card;host.appendChild(button());count++});if(count)window.dispatchEvent(new CustomEvent('p2u:growth-decorated',{detail:{count}}));return count}
   function schema(){if(document.querySelector('script[data-p2u-growth-schema]'))return;const s=document.createElement('script');s.type='application/ld+json';s.dataset.p2uGrowthSchema='1';s.textContent=JSON.stringify({'@context':'https://schema.org','@type':'WebSite',name:'Predict2U',url:location.origin+'/',description:document.querySelector('meta[name="description"]')?.content||'Transparent football records and engine analysis.',potentialAction:{'@type':'SearchAction',target:location.origin+location.pathname+'?q={search_term_string}','query-input':'required name=search_term_string'}});document.head.appendChild(s);let canonical=document.querySelector('link[rel="canonical"]');if(!canonical){canonical=document.createElement('link');canonical.rel='canonical';document.head.appendChild(canonical)}canonical.href=location.origin+location.pathname;let og=document.querySelector('meta[property="og:url"]');if(!og){og=document.createElement('meta');og.setAttribute('property','og:url');document.head.appendChild(og)}og.content=location.href}
-  function install(){if(window.P2UPWA)return;window.addEventListener('beforeinstallprompt',e=>{e.preventDefault();deferredInstall=e;let b=document.querySelector('.p2u-install-chip');if(!b){b=document.createElement('button');b.className='p2u-install-chip';b.type='button';b.textContent='Install Predict2U';document.body.appendChild(b);b.addEventListener('click',async()=>{if(!deferredInstall)return;deferredInstall.prompt();const r=await deferredInstall.userChoice;metric('install-'+r.outcome,'app');deferredInstall=null;b.classList.remove('is-ready')})}b.classList.add('is-ready')});window.addEventListener('appinstalled',()=>toast('Predict2U installed'))}
-  function init(){referral();schema();decorate();new MutationObserver(m=>m.forEach(x=>x.addedNodes.forEach(n=>{if(n.nodeType===1)decorate(n.matches?.('[data-p2u-match-key],.slip-card,[data-slip-id]')?n.parentElement:n)}))).observe(document.body,{childList:true,subtree:true});document.addEventListener('click',e=>{const t=e.target.closest('[data-p2u-share-page]');if(t)openSheet(t)});install();window.P2UGrowthSharing={version:VERSION,share:openSheet,withReferral:withRef,decorate,metrics:()=>JSON.parse(localStorage.getItem(METRIC_KEY)||'{}')};document.documentElement.dataset.p2uGrowthReady='true';window.dispatchEvent(new CustomEvent('p2u:growth-ready',{detail:{version:VERSION}}))}
+  const decorateRoots=new Set();
+  let decorateQueued=false;
+  function scheduleDecorate(root=document){
+    decorateRoots.add(root||document);
+    if(decorateQueued)return;
+    decorateQueued=true;
+    requestAnimationFrame(()=>{
+      decorateQueued=false;
+      const work=[...decorateRoots];decorateRoots.clear();
+      work.forEach(node=>decorate(node&&node.querySelectorAll?node:document));
+    });
+  }
+  function install(){
+    // v202 owns the install prompt centrally. Keeping a second beforeinstallprompt
+    // listener caused prompt races and instruction screens on supported browsers.
+    window.addEventListener('appinstalled',()=>toast('Predict2U installed'));
+  }
+  function init(){
+    referral();schema();decorate();
+    new MutationObserver(mutations=>{
+      for(const mutation of mutations){
+        for(const node of mutation.addedNodes){
+          if(node.nodeType===1)scheduleDecorate(node.matches?.('[data-p2u-match-key],.slip-card,[data-slip-id]')?node.parentElement:node);
+        }
+      }
+    }).observe(document.body,{childList:true,subtree:true});
+    document.addEventListener('click',e=>{const t=e.target.closest('[data-p2u-share-page]');if(t)openSheet(t)});
+    install();
+    window.P2UGrowthSharing={version:VERSION,share:openSheet,withReferral:withRef,decorate,metrics:()=>JSON.parse(localStorage.getItem(METRIC_KEY)||'{}')};
+    document.documentElement.dataset.p2uGrowthReady='true';
+    window.dispatchEvent(new CustomEvent('p2u:growth-ready',{detail:{version:VERSION}}));
+  }
   if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',init,{once:true});else init();
 })();

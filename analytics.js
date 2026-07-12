@@ -4,7 +4,7 @@
 (function(){
   'use strict';
 
-  const VERSION='v186';
+  const VERSION='v202';
   const CONFIG=window.P2U_CLOUD_CONFIG||{};
   const CONSENT_KEY='p2uAnalyticsConsent';
   const SESSION_KEY='p2uAnalyticsSession';
@@ -293,8 +293,13 @@
   function init(){
     if(ready)return;ready=true;loadQueue();document.documentElement.dataset.p2uAnalyticsConsent=consent;
     injectPrivacyButton();injectConsent();injectAccountSettings();
-    const observer=new MutationObserver(()=>injectAccountSettings());observer.observe(document.body,{childList:true,subtree:true});
-    bindClicks();bindSearchAndFilters();bindProductEvents();observeVitals();updateConsentUi();
+    if(/(?:^|\/)account\.html$/i.test(location.pathname)){
+      const observer=new MutationObserver(()=>injectAccountSettings());
+      observer.observe(document.body,{childList:true,subtree:true});
+    }
+    observeVitals();updateConsentUi();
+    const bindLater=()=>{bindClicks();bindSearchAndFilters();bindProductEvents();};
+    (window.requestIdleCallback||((fn)=>setTimeout(fn,700)))(bindLater,{timeout:1800});
     if(consent==='accepted')track('page_view',{source:'load'});
     document.addEventListener('visibilitychange',()=>{if(document.visibilityState==='hidden'){track('navigation',{action:'page_hidden',value:Math.round(performance.now()-pageStarted)});flush()}},{passive:true});
     window.addEventListener('pagehide',()=>flush(),{passive:true});

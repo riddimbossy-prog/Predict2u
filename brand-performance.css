@@ -119,3 +119,16 @@ table .p2u-team-pair-prefix,
 .slip-add:focus-visible,[data-add-slip]:focus-visible,#acca-add:focus-visible{outline:3px solid rgba(255,255,255,.92)!important;outline-offset:2px!important}
 .slip-add[disabled],[data-add-slip][disabled],#acca-add[disabled]{opacity:.48!important;cursor:not-allowed!important}
 @media(max-width:360px){.slip-add,[data-add-slip],#acca-add{font-size:12px!important;padding:8px 10px!important}}
+
+/* Predict2U v202 — render only what is near the viewport on long feeds. */
+@supports(content-visibility:auto){
+  .news-card,.p2u-news-card,.p2u-news-story,.engine-card,.learning-card,
+  .community-pick,.community-record,.lb-row,.member,.proof-ledger>*,
+  #feed>.slip-card,#board>.slip-card,#top-picks>*{
+    content-visibility:auto;
+    contain-intrinsic-size:auto 280px;
+  }
+}
+/* Avoid expensive compositing on dozens of repeated cards. */
+.news-card,.p2u-news-card,.slip-card,#cards>article{transform:translateZ(0)}
+@media(prefers-reduced-motion:reduce){.news-card,.p2u-news-card,.slip-card,#cards>article{transform:none}}

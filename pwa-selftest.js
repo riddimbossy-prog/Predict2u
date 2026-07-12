@@ -64,7 +64,7 @@ check('update prompt', pwa.includes('SKIP_WAITING'));
 check('network state', pwa.includes("addEventListener('offline'") || pwa.includes('addEventListener("offline"'));
 check('app badge API', pwa.includes('setAppBadge'));
 // The IndexedDB name is intentionally stable so queued offline actions survive app releases.
-check('offline outbox', pwa.includes("indexedDB.open('p2u-app-v200'") || pwa.includes('indexedDB.open("p2u-app-v200"'));
+check('offline outbox', pwa.includes("IDB_NAME='p2u-app-v200'") || pwa.includes('IDB_NAME="p2u-app-v200"') || pwa.includes("indexedDB.open('p2u-app-v200'"));
 
 const pages = ['index.html', 'board.html', 'engines.html', 'proof.html', 'community.html', 'news.html', 'account.html'];
 pages.forEach(file => {
