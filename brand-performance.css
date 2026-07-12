@@ -88,3 +88,22 @@ img.p2u-team-crest,img.p2u-league-flag,img.crest-sm,img.lflag{content-visibility
   .p2u-league-flag,.lflag{width:20px;height:14px;flex-basis:20px}
   .p2u-identity-prefix{margin-right:5px;gap:4px}
 }
+
+
+/* Predict2U v188 — crest balance.
+   Primary match cards keep one crest per team. Dense tables and repeated Community rows stay text-first. */
+:root{--p2u-crest-size:22px;--p2u-crest-pair-size:19px}
+.p2u-team-crest,.crest-sm{width:var(--p2u-crest-size)!important;height:var(--p2u-crest-size)!important;flex-basis:var(--p2u-crest-size)!important}
+.p2u-team-pair-prefix .p2u-team-crest,.p2u-team-pair-prefix .p2u-crest-fallback{width:var(--p2u-crest-pair-size)!important;height:var(--p2u-crest-pair-size)!important;flex-basis:var(--p2u-crest-pair-size)!important}
+.p2u-card-teams>.crest-sm{margin-right:5px}
+.p2u-community-page #board .p2u-team-pair-prefix,
+.p2u-community-page #board .p2u-identity-prefix:has(.p2u-team-crest),
+.p2u-community-page #users-board .p2u-team-pair-prefix,
+.p2u-community-page #members .p2u-team-pair-prefix,
+.p2u-community-page .lb-row .p2u-team-pair-prefix,
+.p2u-community-page .member .p2u-team-pair-prefix,
+table .p2u-team-pair-prefix,
+.engine-grid .p2u-team-pair-prefix{display:none!important}
+.p2u-community-page #top-picks .p2u-team-pair-prefix,
+.p2u-community-page #popular .p2u-team-pair-prefix{display:inline-flex!important}
+@media(max-width:639px){:root{--p2u-crest-size:20px;--p2u-crest-pair-size:17px}.p2u-card-teams{line-height:1.35}}

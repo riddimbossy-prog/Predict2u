@@ -28,7 +28,7 @@
 :root{
   --bg:#0a0a0f; --card:#0f0f13; --panel:#111114; --line:#16161b; --line-2:#28282b;
   --ink:#ffffff; --ink-2:#b8b8b9; --muted:#676769;
-  --brand:#34d399; --brand-2:#34d399; --gold:#fbbf24; --loss:#f4636e; --pitch:#0a0a0f;
+  --brand:#77c41c; --brand-2:#77c41c; --gold:#fbbf24; --loss:#f4636e; --pitch:#0a0a0f;
 }
 *{ box-sizing:border-box; margin:0; min-width:0; }
 html,body{ overflow-x:hidden; max-width:100%; } img{ max-width:100%; }
@@ -64,8 +64,8 @@ label{ font-size:13px; font-weight:600; color:var(--ink-2); }
 .pick .who{ flex:1; min-width:130px; }
 .pick .t{ font-weight:700; font-size:16.5px; }
 .pick .m{ font-size:13px; font-weight:500; color:var(--muted); margin-top:3px; }
-.pick .mk{ font-size:14px; font-weight:700; color:var(--brand); background:rgba(52,211,153,.12);
-  border:1px solid rgba(52,211,153,.25); border-radius:8px; padding:6px 13px; white-space:nowrap; }
+.pick .mk{ font-size:14px; font-weight:700; color:var(--brand); background:rgba(119,196,28,.12);
+  border:1px solid rgba(119,196,28,.25); border-radius:8px; padding:6px 13px; white-space:nowrap; }
 .pick .fl{ width:20px; height:14px; object-fit:cover; border-radius:2px; }
 .rank{ font-weight:800; font-size:22px; color:var(--gold); width:24px; text-align:center; }
 #top-picks .pick{ border-left-color:var(--gold); }
@@ -76,11 +76,11 @@ label{ font-size:13px; font-weight:600; color:var(--ink-2); }
 .res{ font-size:10.5px; font-weight:800; letter-spacing:.05em; padding:3px 9px; border-radius:6px; }
 .res.w{ background:var(--brand); color:#062e20; } .res.l{ background:var(--loss); color:#fff; }
 .res.v{ background:rgba(103,103,105,.2); color:var(--ink-2); }
-.res.o{ background:rgba(52,211,153,.12); color:var(--brand); border:1px solid rgba(52,211,153,.3); }
+.res.o{ background:rgba(119,196,28,.12); color:var(--brand); border:1px solid rgba(119,196,28,.3); }
 .pill{ font-size:11px; font-weight:800; letter-spacing:.05em; padding:4px 11px; border-radius:999px; }
 .pill.w{ background:var(--brand); color:#062e20; } .pill.l{ background:var(--loss); color:#fff; }
 .pill.v{ background:rgba(103,103,105,.2); color:var(--ink-2); }
-.pill.o{ background:rgba(52,211,153,.12); color:var(--brand); border:1px solid rgba(52,211,153,.3); }
+.pill.o{ background:rgba(119,196,28,.12); color:var(--brand); border:1px solid rgba(119,196,28,.3); }
 .pill.gold{ background:rgba(251,191,36,.15); color:var(--gold); }
 .credit{ font-size:11.5px; font-weight:600; color:var(--muted); background:var(--card); border:1px solid var(--line); border-radius:6px; padding:3px 8px; }
 .credit b{ color:var(--brand); }
@@ -112,10 +112,10 @@ label{ font-size:13px; font-weight:600; color:var(--ink-2); }
 .vb{ display:inline-block; background:var(--brand); color:#062e20; font-size:10px; font-weight:900; width:16px; height:16px; line-height:16px; text-align:center; border-radius:50%; margin-left:5px; vertical-align:middle; }
 .rank-chip{ font-size:10px; font-weight:800; letter-spacing:.06em; text-transform:uppercase; padding:3px 8px; border-radius:6px; background:rgba(103,103,105,.15); color:var(--ink-2); }
 .rank-chip.r-elite{ background:rgba(251,191,36,.16); color:var(--gold); }
-.rank-chip.r-sharp{ background:rgba(52,211,153,.16); color:var(--brand); }
+.rank-chip.r-sharp{ background:rgba(119,196,28,.16); color:var(--brand); }
 .lb-note{ font-size:12.5px; font-weight:500; color:var(--muted); margin-bottom:14px; }
 .lb-row{ display:flex; align-items:center; gap:12px; padding:13px 8px; border-bottom:1px solid var(--line); }
-.lb-row.me{ background:rgba(52,211,153,.05); border-radius:10px; }
+.lb-row.me{ background:rgba(119,196,28,.05); border-radius:10px; }
 .lb-pos{ font-weight:800; font-size:19px; color:var(--muted); width:24px; text-align:center; }
 .lb-who{ flex:1; min-width:0; }
 .lb-h{ font-weight:800; font-size:16px; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; }
@@ -508,7 +508,7 @@ details summary{ cursor:pointer; font-size:14.5px; color:var(--brand); font-weig
 
   .community-mobile-nav a.active{
     color:var(--brand);
-    background:rgba(52,211,153,.10);
+    background:rgba(119,196,28,.10);
   }
 }
 
@@ -575,7 +575,7 @@ details summary{ cursor:pointer; font-size:14.5px; color:var(--brand); font-weig
 <style>
 #p2u-community-freshness{display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin:10px 0 12px;color:var(--muted);font-size:12px;font-weight:600}
 #p2u-community-freshness strong{color:var(--brand-2);font-size:12.5px}
-.p2u-community-fresh-dot{width:8px;height:8px;border-radius:50%;background:var(--brand);box-shadow:0 0 0 4px rgba(52,211,153,.12)}
+.p2u-community-fresh-dot{width:8px;height:8px;border-radius:50%;background:var(--brand);box-shadow:0 0 0 4px rgba(119,196,28,.12)}
 .p2u-community-empty{display:flex;flex-direction:column;gap:8px}.p2u-community-empty strong{color:var(--ink);font-size:16px}.p2u-community-empty span{color:var(--muted)}.p2u-community-empty a{color:var(--brand);font-weight:800;text-decoration:none}
 #top-picks>.pick[hidden]{display:none!important}
 </style>
@@ -656,6 +656,7 @@ details summary{ cursor:pointer; font-size:14.5px; color:var(--brand); font-weig
     </details>
   </div>
 
+  <div class="p2u-community-feature-grid">
   <div class="card">
     <h2>Top 6 picks, backed by users</h2>
     <p style="font-size:13.5px;color:var(--muted)">Which picks the community is actually putting on public slips right now. One user, one vote per pick — counts can't be inflated.</p>
@@ -666,6 +667,7 @@ details summary{ cursor:pointer; font-size:14.5px; color:var(--brand); font-weig
     <h2>Most popular slip</h2>
     <p style="font-size:13.5px;color:var(--muted)">The most-copied public slip of the last 7 days.</p>
     <div id="popular" style="margin-top:12px"><div class="empty">Loading…</div></div>
+  </div>
   </div>
 
   <div class="card">
@@ -714,27 +716,6 @@ details summary{ cursor:pointer; font-size:14.5px; color:var(--brand); font-weig
 <footer>Predict2u · 18+ · <a href="trust.html" class="hover:text-white transition-colors">Trust Center</a>
       <a href="responsible-gambling.html" style="text-decoration:underline">Gamble responsibly</a></footer>
 
-<nav class="community-mobile-nav" aria-label="Mobile navigation">
-  <div class="community-mobile-nav-inner">
-    <a href="board.html">
-      <i class="fa-solid fa-list-check"></i>
-      <span>Board</span>
-    </a>
-    <a href="engines.html">
-      <i class="fa-solid fa-microchip"></i>
-      <span>Games</span>
-    </a>
-    <a href="engines.html#performance">
-      <i class="fa-solid fa-chart-line"></i>
-      <span>Results</span>
-    </a>
-    <a href="community.html" class="active" aria-current="page">
-      <i class="fa-solid fa-users"></i>
-      <span>Community</span>
-    </a>
-  </div>
-</nav>
-
 
 <script src="banker-engine.js"></script>
 <script src="data.js"></script>
@@ -742,6 +723,7 @@ details summary{ cursor:pointer; font-size:14.5px; color:var(--brand); font-weig
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 <script src="community.js"></script>
 <script src="community-freshness.js" defer></script>
+<script src="community-consistency.js" defer></script>
 <script>/* theme follows the rest of the site */
 (function(){ try{ if(localStorage.getItem('predicto-theme')==='light') document.body.classList.add('light'); }catch(e){} })();</script>
 <script>

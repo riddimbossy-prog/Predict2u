@@ -180,3 +180,25 @@
     font-size: 10px;
   }
 }
+
+
+/* Predict2U v188 — Community design consistency. */
+.p2u-community-page{--community-surface:#101116;--community-surface-2:#14161d;--community-line:#252936}
+.p2u-community-page main.wrap{max-width:1120px}
+.p2u-community-page .p2u-community-feature-grid{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(320px,.85fr);gap:16px;align-items:start}
+.p2u-community-page .p2u-community-feature-grid>.card{height:100%;margin-bottom:0}
+.p2u-community-page .p2u-community-section{background:linear-gradient(180deg,var(--community-surface-2),var(--community-surface));border-color:var(--community-line);box-shadow:0 16px 42px rgba(0,0,0,.16)}
+.p2u-community-page .p2u-community-section>h2{display:flex;align-items:center;gap:9px;margin-bottom:4px}
+.p2u-community-page .p2u-community-section>h2:before{content:"";width:8px;height:8px;border-radius:50%;background:var(--p2u-brand-green);box-shadow:0 0 0 5px rgba(var(--p2u-brand-green-rgb),.10);flex:0 0 auto}
+.p2u-community-page .community-section-featured>h2:before{background:var(--gold);box-shadow:0 0 0 5px rgba(251,191,36,.10)}
+.p2u-community-page .filters{padding:10px;background:#0d0f14;border:1px solid var(--community-line);border-radius:14px}
+.p2u-community-page .pick{border-color:var(--community-line);background:#0e1015}
+.p2u-community-page .pick .mk{background:rgba(var(--p2u-brand-green-rgb),.10);border-color:rgba(var(--p2u-brand-green-rgb),.30);color:var(--p2u-brand-green)}
+.p2u-community-page .member,.p2u-community-page .slip-card,.p2u-community-page .stat{background:#0e1015;border-color:var(--community-line)}
+.p2u-community-page .p2u-community-board-controls{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-top:14px;padding-top:14px;border-top:1px solid var(--community-line);color:var(--muted);font-size:12px;font-weight:700}
+.p2u-community-page .p2u-community-board-controls button{min-height:40px;padding:9px 16px;border-radius:10px}
+.p2u-community-page #board>.pick[hidden]{display:none!important}
+.p2u-community-page .community-mobile-nav{display:none!important}
+.p2u-community-page footer{margin-top:28px}
+@media(max-width:840px){.p2u-community-page .p2u-community-feature-grid{grid-template-columns:1fr}.p2u-community-page .p2u-community-feature-grid>.card{height:auto}}
+@media(max-width:639px){.p2u-community-page main.wrap{padding-top:4px}.p2u-community-page h1{font-size:clamp(38px,11vw,48px);margin-top:18px}.p2u-community-page .sub{font-size:15px;line-height:1.5;margin-bottom:18px}.p2u-community-page .card{padding:16px 14px;border-radius:15px}.p2u-community-page .p2u-community-section>h2{font-size:21px}.p2u-community-page .p2u-community-board-controls{position:sticky;bottom:calc(76px + env(safe-area-inset-bottom));z-index:8;margin:12px -2px 0;padding:10px 12px;background:rgba(13,15,20,.94);border:1px solid var(--community-line);border-radius:12px;backdrop-filter:blur(12px)}}
