@@ -1,37 +1,86 @@
 name: Predict2U Football News Sync
 
 on:
+  workflow_dispatch:
+
   schedule:
     - cron: "7,27,47 * * * *"
-  workflow_dispatch:
 
 permissions:
   contents: read
 
 concurrency:
-  group: predict2u-news-sync
+  group: predict2u-football-news-sync
   cancel-in-progress: false
 
 jobs:
   sync-news:
+    name: Sync football news feeds
     runs-on: ubuntu-latest
-    timeout-minutes: 8
+    timeout-minutes: 10
+
     steps:
+      - name: Validate required secrets
+        env:
+          SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
+          SUPABASE_SECRET_KEY: ${{ secrets.SUPABASE_SECRET_KEY }}
+          NEWS_SYNC_SECRET: ${{ secrets.NEWS_SYNC_SECRET }}
+
+        run: |
+          set -euo pipefail
+
+          if [ -z "${SUPABASE_URL:-}" ]; then
+            echo "Missing GitHub secret: SUPABASE_URL"
+            exit 1
+          fi
+
+          if [ -z "${SUPABASE_SECRET_KEY:-}" ]; then
+            echo "Missing GitHub secret: SUPABASE_SECRET_KEY"
+            exit 1
+          fi
+
+          if [ -z "${NEWS_SYNC_SECRET:-}" ]; then
+            echo "Missing GitHub secret: NEWS_SYNC_SECRET"
+            exit 1
+          fi
+
+          echo "Required GitHub secrets are configured."
+
       - name: Sync football news feeds
         env:
           SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
-          SUPABASE_SERVICE_ROLE_KEY: ${{ secrets.SUPABASE_SERVICE_ROLE_KEY }}
+          SUPABASE_SECRET_KEY: ${{ secrets.SUPABASE_SECRET_KEY }}
           NEWS_SYNC_SECRET: ${{ secrets.NEWS_SYNC_SECRET }}
+
         run: |
           set -euo pipefail
-          test -n "$SUPABASE_URL"
-          test -n "$SUPABASE_SERVICE_ROLE_KEY"
-          test -n "$NEWS_SYNC_SECRET"
-          curl --fail-with-body --silent --show-error \
-            --retry 2 --retry-delay 3 \
-            -X POST "$SUPABASE_URL/functions/v1/p2u-news-sync" \
-            -H "Authorization: Bearer $SUPABASE_SERVICE_ROLE_KEY" \
-            -H "apikey: $SUPABASE_SERVICE_ROLE_KEY" \
-            -H "Content-Type: application/json" \
-            -H "x-p2u-news-secret: $NEWS_SYNC_SECRET" \
-            --data '{"sourceLimit":20}'
+
+          RESPONSE_FILE="$(mktemp)"
+          HTTP_STATUS="$(
+            curl \
+              --silent \
+              --show-error \
+              --location \
+              --retry 2 \
+              --retry-delay 3 \
+              --output "$RESPONSE_FILE" \
+              --write-out "%{http_code}" \
+              --request POST \
+              "${SUPABASE_URL}/functions/v1/p2u-news-sync" \
+              --header "Authorization: Bearer ${SUPABASE_SECRET_KEY}" \
+              --header "apikey: ${SUPABASE_SECRET_KEY}" \
+              --header "Content-Type: application/json" \
+              --header "x-p2u-news-secret: ${NEWS_SYNC_SECRET}" \
+              --data '{"sourceLimit":20}'
+          )"
+
+          echo "HTTP status: ${HTTP_STATUS}"
+          cat "$RESPONSE_FILE"
+          echo
+
+          if [ "$HTTP_STATUS" -lt 200 ] || [ "$HTTP_STATUS" -ge 300 ]; then
+            echo "Football news sync failed."
+            exit 1
+          fi
+
+          echo "Football news sync completed successfully."
