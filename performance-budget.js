@@ -29,6 +29,10 @@ const budgets={
   "account-cloud.css":26000,
   "push-notifications.js":36000,
   "push-notifications.css":18000,
+  "analytics.js":36000,
+  "analytics.css":14000,
+  "product-analytics.js":26000,
+  "product-analytics.css":14000,
   "account.html":18000,
   "profile.html":12000
 };
@@ -55,7 +59,7 @@ const sw=read("sw.js");
 const cacheMatch=sw.match(/CACHE_VERSION\s*=\s*["'](predict2u-v\d+)["']/);
 if(!cacheMatch)errors.push("sw.js is missing a valid predict2u-vN cache version.");
 else passed.push(`sw.js cache: ${cacheMatch[1]}`);
-for(const token of ["NETWORK_TIMEOUT_MS","canonicalRequest","performance-freshness.js","performance-freshness.css","personalization.js","personalization.css","smart-alerts.js","smart-alerts.css","admin.html","backend-admin.js","backend-admin.css","admin-config.js","site-controls.js","site-controls.css","account.html","profile.html","cloud-config.js","account-cloud.js","account-cloud.css","push-notifications.js","push-notifications.css"]){
+for(const token of ["NETWORK_TIMEOUT_MS","canonicalRequest","performance-freshness.js","performance-freshness.css","personalization.js","personalization.css","smart-alerts.js","smart-alerts.css","admin.html","backend-admin.js","backend-admin.css","admin-config.js","site-controls.js","site-controls.css","account.html","profile.html","cloud-config.js","account-cloud.js","account-cloud.css","push-notifications.js","push-notifications.css","analytics.js","analytics.css","product-analytics.js","product-analytics.css"]){
   if(!sw.includes(token))errors.push(`sw.js missing ${token}`);
 }
 for(const page of ["index.html","board.html"]){
@@ -90,7 +94,7 @@ for(const token of ["communityWin","verifiedOnly","followedUsers","trendingWins"
 }
 
 
-for(const token of ["admin.html","backend-admin.js","backend-admin.css","admin-config.js","site-controls.js","site-controls.css","account.html","profile.html","cloud-config.js","account-cloud.js","account-cloud.css","push-notifications.js","push-notifications.css"]){
+for(const token of ["admin.html","backend-admin.js","backend-admin.css","admin-config.js","site-controls.js","site-controls.css","account.html","profile.html","cloud-config.js","account-cloud.js","account-cloud.css","push-notifications.js","push-notifications.css","analytics.js","analytics.css","product-analytics.js","product-analytics.css"]){
   if(!sw.includes(token))errors.push(`sw.js missing ${token}`);
 }
 const admin=read("admin.html"),adminControl=read("backend-admin.js"),adminSql=read("SUPABASE_BACKEND_ADMIN_v181.sql");

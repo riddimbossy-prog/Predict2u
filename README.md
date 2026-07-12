@@ -72,3 +72,8 @@ See `ACCOUNTS_CLOUD_SYNC_v180.md` and run `SUPABASE_CLOUD_SETUP_v180.sql` once.
 
 ## v183 Real Push Notifications
 See `PUSH_NOTIFICATIONS_v183.md`, run `SUPABASE_PUSH_SETUP_v183.sql`, and deploy `supabase/functions/p2u-push-dispatch/index.ts`.
+
+
+## v186 Analytics & Product Intelligence
+
+Privacy-first first-party analytics, real-user performance monitoring and an admin Product Intelligence dashboard. Run `SUPABASE_ANALYTICS_v186.sql` after deploying the v186 files.

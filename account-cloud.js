@@ -1,9 +1,9 @@
-/* Predict2U v183 Accounts, Cloud Sync, Follow & Push loader.
+/* Predict2U v186 Accounts, Cloud Sync, Follow & Push loader.
    Uses only the public Supabase publishable key. RLS in SUPABASE_CLOUD_SETUP_v180.sql
    protects each user's cloud state. Never place a service-role key in browser code. */
 (function(){
   'use strict';
-  const VERSION='v183';
+  const VERSION='v186';
   const CONFIG=window.P2U_CLOUD_CONFIG||{};
   const META_KEY='p2u-cloud-local-meta-v180';
   const LOCAL_FOLLOWS_KEY='p2u-local-follows-v180';

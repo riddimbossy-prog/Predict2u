@@ -10,6 +10,7 @@
   <link rel="apple-touch-icon" href="apple-touch-icon.png"/>
   <link rel="stylesheet" href="backend-admin.css"/>
   <link rel="stylesheet" href="account-cloud.css"/>
+  <link rel="stylesheet" href="product-analytics.css"/>
   <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin/>
   <script src="https://kit.fontawesome.com/a2e0e9f1b8.js" crossorigin="anonymous"></script>
 
@@ -23,7 +24,7 @@
     <div class="admin-topbar-inner">
       <a class="admin-brand" href="index.html" aria-label="Predict2U home">
         <img src="predict2u-logo.png" alt="Predict2U"/>
-        <span class="admin-brand-copy"><strong>Backend Admin</strong><span>Operations console · v183</span></span>
+        <span class="admin-brand-copy"><strong>Backend Admin</strong><span>Operations console · v186</span></span>
       </a>
       <div class="admin-top-actions">
         <span class="admin-chip" aria-label="Current admin role"><i class="fa-solid fa-shield-halved"></i><span id="top-role">CHECKING</span></span>
@@ -54,6 +55,7 @@
       <button class="active" data-admin-tab="overview"><i class="fa-solid fa-gauge-high"></i> Overview</button>
       <button data-admin-tab="publishing" data-min-role="admin"><i class="fa-solid fa-tower-broadcast"></i> Publishing</button>
       <button data-admin-tab="push" data-min-role="admin"><i class="fa-regular fa-bell"></i> Push</button>
+      <button data-admin-tab="analytics"><i class="fa-solid fa-chart-line"></i> Analytics</button>
       <button data-admin-tab="community"><i class="fa-solid fa-people-group"></i> Community</button>
       <button data-admin-tab="accounts" data-min-role="admin"><i class="fa-solid fa-user-shield"></i> Accounts</button>
       <button data-admin-tab="roles" data-min-role="owner"><i class="fa-solid fa-key"></i> Roles</button>
@@ -126,6 +128,38 @@
         <article class="card" style="margin-top:16px"><div class="card-title-row"><div><div class="eyebrow muted-eyebrow">Delivery history</div><h2>Recent push jobs</h2></div><span class="status-pill good" id="push-last-dispatch">No dispatch yet</span></div><div class="table-wrap"><table class="admin-table"><thead><tr><th>Time</th><th>Category</th><th>Title</th><th>Status</th><th>Sent</th><th>Failed</th></tr></thead><tbody id="push-jobs-body"></tbody></table></div></article>
       </section>
 
+
+      <section class="admin-panel" data-admin-panel="analytics">
+        <div class="panel-head">
+          <div><div class="eyebrow">Product intelligence</div><h1>Analytics and performance</h1><p>Privacy-first first-party insights for product usage, speed and reliability.</p></div>
+          <div class="actions"><button class="admin-button secondary" id="export-analytics" data-analytics-admin-action><i class="fa-solid fa-download"></i> Export CSV</button><button class="admin-button primary" id="refresh-analytics" data-analytics-admin-action><i class="fa-solid fa-rotate"></i> Refresh</button></div>
+        </div>
+        <div class="analytics-toolbar">
+          <div class="analytics-range" aria-label="Analytics date range"><button type="button" data-analytics-days="7">7 days</button><button type="button" class="active" data-analytics-days="30">30 days</button><button type="button" data-analytics-days="90">90 days</button></div>
+          <div><strong id="analytics-range-label">Last 30 days</strong><div id="analytics-state" class="analytics-state">Open this tab to load analytics.</div></div>
+        </div>
+        <div class="grid analytics-metric-grid" style="margin-top:16px">
+          <article class="card metric-card analytics-metric"><div class="metric-label">Sessions</div><div id="analytics-sessions" class="metric-value"><strong>—</strong></div></article>
+          <article class="card metric-card analytics-metric"><div class="metric-label">Page views</div><div id="analytics-pageviews" class="metric-value"><strong>—</strong></div></article>
+          <article class="card metric-card analytics-metric"><div class="metric-label">Feature actions</div><div id="analytics-actions" class="metric-value"><strong>—</strong></div></article>
+          <article class="card metric-card analytics-metric"><div class="metric-label">Engagement</div><div id="analytics-engagement" class="metric-value"><strong>—</strong></div></article>
+          <article class="card metric-card analytics-metric"><div class="metric-label">Client errors</div><div id="analytics-errors" class="metric-value"><strong>—</strong></div></article>
+          <article class="card metric-card analytics-metric"><div class="metric-label">Push opt-ins</div><div id="analytics-push-optins" class="metric-value"><strong>—</strong></div></article>
+        </div>
+        <div class="grid two" style="margin-top:16px">
+          <article class="card"><div class="eyebrow muted-eyebrow">Trend</div><h2>Daily page views</h2><div id="analytics-trend" class="analytics-chart"></div></article>
+          <article class="card"><div class="eyebrow muted-eyebrow">Journey</div><h2>Product funnel</h2><div id="analytics-funnel" class="analytics-funnel"></div></article>
+        </div>
+        <article class="card" style="margin-top:16px"><div class="card-title-row"><div><div class="eyebrow muted-eyebrow">Real user monitoring</div><h2>Core Web Vitals · p75</h2></div></div><div class="analytics-vitals"><div class="analytics-vital"><span>LCP</span><div id="analytics-lcp"><strong>—</strong></div></div><div class="analytics-vital"><span>INP</span><div id="analytics-inp"><strong>—</strong></div></div><div class="analytics-vital"><span>CLS</span><div id="analytics-cls"><strong>—</strong></div></div><div class="analytics-vital"><span>FCP</span><div id="analytics-fcp"><strong>—</strong></div></div></div></article>
+        <div class="grid two" style="margin-top:16px">
+          <article class="card"><h2>Top pages</h2><div class="table-wrap"><table class="admin-table analytics-table"><thead><tr><th>Page</th><th>Views</th><th>Share</th></tr></thead><tbody id="analytics-pages-body"></tbody></table></div></article>
+          <article class="card"><h2>Top feature events</h2><div class="table-wrap"><table class="admin-table analytics-table"><thead><tr><th>Event</th><th>Count</th><th>Share</th></tr></thead><tbody id="analytics-events-body"></tbody></table></div></article>
+          <article class="card"><h2>Top leagues, engines and matches</h2><div class="table-wrap"><table class="admin-table"><thead><tr><th>Type</th><th>Key</th><th>Actions</th></tr></thead><tbody id="analytics-entities-body"></tbody></table></div></article>
+          <article class="card"><h2>Device mix</h2><div class="table-wrap"><table class="admin-table"><thead><tr><th>Device</th><th>Sessions</th><th>Share</th></tr></thead><tbody id="analytics-device-body"></tbody></table></div></article>
+        </div>
+        <article class="card" style="margin-top:16px"><div class="analytics-privacy-note"><strong>Privacy design:</strong> events require user consent and contain no raw IP address, email, payment information, bookmaker credentials, full user agent or advertising identifier. Browser Global Privacy Control and Do Not Track are respected.</div><div class="actions" style="margin-top:14px"><button class="admin-button danger" id="purge-analytics" data-analytics-admin-action data-min-role="admin"><i class="fa-solid fa-trash-can"></i> Delete data older than 13 months</button></div></article>
+      </section>
+
       <section class="admin-panel" data-admin-panel="community">
         <div class="panel-head"><div><div class="eyebrow">Community moderation</div><h1>Public record controls</h1><p>Verify, hide, review or clear Community records by public slip ID.</p></div></div>
         <div class="grid two">
@@ -160,6 +194,7 @@
 <script src="cloud-config.js"></script>
 <script src="account-cloud.js" defer></script>
 <script src="backend-admin.js" defer></script>
+<script src="product-analytics.js" defer></script>
 <script src="football-assets.js" defer></script>
 </body>
 </html>
