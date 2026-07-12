@@ -37,3 +37,12 @@
 @media(max-width:900px){.p2u-news-hero{grid-template-columns:1fr}.p2u-news-hero-art{min-height:330px}.p2u-news-hero-art::after{background:linear-gradient(0deg,rgba(7,9,13,.9),transparent 48%)}}
 @media(max-width:620px){.p2u-news-hero{border-radius:20px}.p2u-news-hero-copy{padding:24px 19px}.p2u-news-hero-topline{align-items:flex-start;flex-direction:column}.p2u-news-live--hero{width:100%;justify-content:flex-start}.p2u-news-hero h1{font-size:42px}.p2u-news-hero-actions{display:grid;grid-template-columns:1fr 1fr;width:100%;gap:8px}.p2u-news-hero-action{width:100%;padding:9px 10px}.p2u-news-hero-proof{gap:11px 15px;margin-top:20px}.p2u-news-hero-art{min-height:260px}.p2u-news-hero-art figcaption{left:14px;right:14px;bottom:14px}.p2u-news-tabs button{padding:9px 12px}}
 @media(max-width:360px){.p2u-news-hero h1{font-size:36px}.p2u-news-hero-actions{grid-template-columns:1fr}.p2u-news-hero-art{min-height:230px}.p2u-news-hero-proof span{width:100%}}
+
+/* Predict2U v191 — real publisher story images with resilient branded fallbacks */
+.p2u-news-real-media{position:relative;width:100%;height:100%;overflow:hidden;background:#0b0f14}
+.p2u-news-real-media>.p2u-news-media-fallback,.p2u-news-real-media>.p2u-news-transfer-fallback{position:absolute;inset:0;width:100%;height:100%}
+.p2u-news-source-image{position:absolute;inset:0;z-index:1;width:100%;height:100%;object-fit:cover;display:block;background:#0b0f14;transition:transform .35s ease,filter .2s ease}
+.p2u-news-card:hover .p2u-news-source-image{transform:scale(1.025)}
+.p2u-news-feature-card .p2u-news-source-image{filter:saturate(.96) contrast(1.02)}
+.p2u-news-card-media,.p2u-news-feature-media{isolation:isolate}
+@media(prefers-reduced-motion:reduce){.p2u-news-source-image{transition:none}.p2u-news-card:hover .p2u-news-source-image{transform:none}}

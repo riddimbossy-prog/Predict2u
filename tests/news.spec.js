@@ -1,3 +1,5 @@
+const fs = require('fs');
+const path = require('path');
 const { test, expect } = require('@playwright/test');
 
 test('global football news page exposes filters and discussion', async ({ page }) => {
@@ -32,4 +34,13 @@ test('Add to Slip uses a solid high contrast brand button', async ({ page }) => 
     expect(style.opacity).toBe(1);
     expect(style.height).toBeGreaterThanOrEqual(38);
   }
+});
+
+
+test('news sync can enrich real publisher images', async () => {
+  const code = fs.readFileSync(path.join(__dirname, '..', 'supabase', 'functions', 'p2u-news-sync', 'index.ts'), 'utf8');
+  expect(code).toContain('og:image');
+  expect(code).toContain('twitter:image');
+  expect(code).toContain('imageFromArticlePage');
+  expect(code).toContain('ignoreDuplicates: false');
 });

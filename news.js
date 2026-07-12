@@ -1,10 +1,10 @@
-/* Predict2U v190 — Global Football News, transfers and community discussion.
+/* Predict2U v191 — Global Football News, real story images and community discussion.
    Browser code uses only the public Supabase key and RLS-protected tables.
    Full stories remain on the original publisher's site; Predict2U displays
    short attributed summaries and user comments. */
 (function(){
   'use strict';
-  const VERSION='v190';
+  const VERSION='v191';
   const CONFIG=window.P2U_CLOUD_CONFIG||{};
   const TABLE=CONFIG.newsArticlesTable||'p2u_news_articles';
   const COMMENTS=CONFIG.newsCommentsTable||'p2u_news_comments';
@@ -48,14 +48,19 @@
     if(a.region)badges.push(`<span class="p2u-news-badge">${regionFlag(a.region)} ${esc(a.region)}</span>`);
     return badges.join('');
   }
-  function mediaHtml(a,feature=false){
-    const src=image(a.image_url);
-    if(src)return `<img src="${esc(src)}" alt="" loading="${feature?'eager':'lazy'}" decoding="async" referrerpolicy="no-referrer" onerror="this.remove()">`;
+  function fallbackMediaHtml(a,feature=false){
     if(a.category==='transfer'){
       const asset=feature?'predict2u-transfers.webp':'predict2u-transfers-thumb.webp';
-      return `<img class="p2u-news-transfer-fallback" src="${asset}" alt="Predict2U Transfers" loading="${feature?'eager':'lazy'}" decoding="async">`;
+      return `<img class="p2u-news-transfer-fallback" src="${asset}" alt="Predict2U Transfer Desk" loading="${feature?'eager':'lazy'}" decoding="async">`;
     }
     return `<div class="p2u-news-media-fallback"><span>${regionFlag(a.region)}</span><b>FOOTBALL</b></div>`;
+  }
+  function mediaHtml(a,feature=false){
+    const src=image(a.image_url);
+    const fallback=fallbackMediaHtml(a,feature);
+    if(!src)return fallback;
+    const alt=clean(`${a.title||'Football story'} — ${a.source_name||'source image'}`,160);
+    return `<div class="p2u-news-real-media">${fallback}<img class="p2u-news-source-image" data-news-source-image src="${esc(src)}" alt="${esc(alt)}" loading="${feature?'eager':'lazy'}" ${feature?'fetchpriority="high"':''} decoding="async" referrerpolicy="no-referrer"></div>`;
   }
   function metaHtml(a){
     return `<span>${esc(a.source_name||'Football source')}</span><span>•</span><time datetime="${esc(a.published_at||'')}">${when(a.published_at)}</time>${Number(a.comment_count||0)?`<span>•</span><span><i class="fa-regular fa-comment"></i> ${Number(a.comment_count||0)}</span>`:''}`;
@@ -153,6 +158,7 @@
   }
 
   function bind(){
+    document.addEventListener('error',e=>{const target=e.target;if(target&&target.matches&&target.matches('img[data-news-source-image]'))target.remove();},true);
     document.addEventListener('click',e=>{
       const filter=e.target.closest('[data-news-filter]');if(filter){document.querySelectorAll('[data-news-filter]').forEach(b=>b.classList.toggle('is-active',b===filter));activeFilter=filter.dataset.newsFilter||'all';visible=PAGE_SIZE;applyFilter();return;}
       const heroFilter=e.target.closest('[data-news-hero-filter]');if(heroFilter){const target=heroFilter.dataset.newsHeroFilter||'all';const tab=document.querySelector(`[data-news-filter="${target}"]`);document.querySelectorAll('[data-news-filter]').forEach(b=>b.classList.toggle('is-active',b===tab));activeFilter=target;visible=PAGE_SIZE;applyFilter();document.querySelector('.p2u-news-controls')?.scrollIntoView({behavior:'smooth',block:'start'});return;}
