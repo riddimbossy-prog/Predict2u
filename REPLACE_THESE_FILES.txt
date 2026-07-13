@@ -1,17 +1,6 @@
-REPLACE:
-fetch-data.js
-.github/workflows/future-fixtures.yml
-
-ADD:
 discover-all-games.js
-merge-fixture-shards.js
-rebuild-derived-data.js
-
-KEEP:
-data.js
-community.js
-config.txt
-all existing GitHub secrets
-
-IMPORTANT:
-Replace the old future-fixtures.yml. Do not keep both old and new future-fixture workflows enabled.
+fetch-data.js
+verify-week-data.js
+.github/workflows/future-fixtures.yml
+board.html
+bankers.html

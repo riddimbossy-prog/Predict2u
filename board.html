@@ -211,6 +211,14 @@ a{ color:inherit; text-decoration:none; }
   .date-chip-date{ font-size:12.5px; }
 }
 
+
+/* v242 fixture date visibility */
+.p2u-match-meta-right{display:flex;align-items:center;justify-content:flex-end;gap:7px;flex-wrap:wrap}
+.p2u-card-date{font-size:10px;font-weight:800;letter-spacing:.075em;color:var(--em);white-space:nowrap}
+@media(max-width:639px){
+  .p2u-match-meta-right{gap:5px 7px}
+  .p2u-card-date{order:-1;width:100%;text-align:right;font-size:9.5px}
+}
 </style>
 <link rel="stylesheet" href="site-health.css"/>
 <link rel="stylesheet" href="brand-experience.css"/>
@@ -522,13 +530,24 @@ a{ color:inherit; text-decoration:none; }
   const intelFor=m=>INTEL_CACHE[keyOf(m)]||(INTEL_CACHE[keyOf(m)]=window.P2UIntelligence?P2UIntelligence.analyseMatch(m):null);
 
   const todayISO = new Date().toISOString().slice(0,10);
+  const matchDateOf=m=>{
+    const raw=String(m&&m.matchDate||'');
+    if(/^\d{4}-\d{2}-\d{2}$/.test(raw))return raw;
+    const kickoff=String(m&&m.kickoff||'').slice(0,10);
+    return /^\d{4}-\d{2}-\d{2}$/.test(kickoff)?kickoff:'Undated';
+  };
+  const cardDate=m=>{
+    const d=matchDateOf(m);if(d==='Undated')return' date TBD';
+    try{return new Date(d+'T12:00:00').toLocaleDateString('en-GB',{weekday:'short',day:'2-digit',month:'short'}).toUpperCase();}
+    catch(_){return d;}
+  };
   let byDate = {};
   let dates = [];
   let activeDate = todayISO;
   function rebuildDataIndex(preserveDate=true){
     const previous=activeDate;
     byDate={};
-    M.forEach(m=>{ const d=m.matchDate||'Undated'; (byDate[d]=byDate[d]||[]).push(m); });
+    M.forEach(m=>{ const d=matchDateOf(m); (byDate[d]=byDate[d]||[]).push(m); });
     dates=Object.keys(byDate).filter(d=>d!=='Undated').sort();
     activeDate=preserveDate&&byDate[previous]
       ? previous
@@ -758,7 +777,7 @@ a{ color:inherit; text-decoration:none; }
       return `<article class="card card-h rise p2u-standard-card" style="animation-delay:${Math.min(i*30,240)}ms" data-p2u-match-key="${esc(keyOf(p.m))}" data-p2u-home="${esc(p.m.home)}" data-p2u-away="${esc(p.m.away)}" data-p2u-league="${esc(p.m.league||'')}" data-p2u-market="${esc(p.market)}" data-p2u-engines="${esc(p.engines.join('|'))}" data-p2u-proof="${proof}">
         <div class="p2u-match-meta">
           <div class="p2u-match-league">${crest(p.m.flag,'lflag')}<span>${esc(p.m.league||'League')}</span></div>
-          <div class="p2u-match-meta-right"><span class="p2u-kickoff">${ko(p.m)||'TBD'}</span><span class="p2u-card-status">${statusTag(p.m,p.market)}</span></div>
+          <div class="p2u-match-meta-right"><span class="p2u-card-date">${cardDate(p.m)}</span><span class="p2u-kickoff">${ko(p.m)||'TBD'}</span><span class="p2u-card-status">${statusTag(p.m,p.market)}</span></div>
         </div>
         <div class="p2u-matchup">
           <div class="p2u-team p2u-team-home">${crest(p.m.homeLogo,'p2u-team-crest')}<span class="p2u-team-name">${esc(p.m.home)}</span></div>

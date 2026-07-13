@@ -106,6 +106,8 @@ async function pool(items, limit, worker) {
 
   const leagueWeights = new Map();
   const seenFixtures = new Set();
+  const discoveredFixtures = [];
+  const dateCounts = {};
   let fixtureCount = 0;
   for (const day of perDate) {
     for (const fx of day.fixtures) {
@@ -116,6 +118,8 @@ async function pool(items, limit, worker) {
       if (seenFixtures.has(uniqueKey)) continue;
       seenFixtures.add(uniqueKey);
       fixtureCount += 1;
+      dateCounts[day.date] = (dateCounts[day.date] || 0) + 1;
+      discoveredFixtures.push({ date: day.date, fixture: fx });
       leagueWeights.set(Number(leagueId), (leagueWeights.get(Number(leagueId)) || 0) + 1);
     }
   }
@@ -145,11 +149,18 @@ async function pool(items, limit, worker) {
     generatedAt: new Date().toISOString(),
     dates,
     fixtureCount,
+    dateCounts,
     activeLeagueCount: leagueWeights.size,
     shardCount: include.length,
     shards: include
   };
   fs.writeFileSync("all-games-discovery.json", JSON.stringify(manifest, null, 2) + "\n");
+  fs.writeFileSync("all-games-fixtures.json", JSON.stringify({
+    generatedAt: manifest.generatedAt,
+    dates,
+    fixtureCount,
+    fixtures: discoveredFixtures
+  }) + "\n");
   fs.writeFileSync("all-games-matrix.json", JSON.stringify({ include }) + "\n");
   console.log(`Discovered ${fixtureCount} unique fixture(s) in ${leagueWeights.size} active league(s), balanced across ${include.length} shard(s).`);
 })().catch(error => {

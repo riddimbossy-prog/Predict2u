@@ -46,6 +46,7 @@ jobs:
           name: all-games-discovery
           path: |
             all-games-discovery.json
+            all-games-fixtures.json
             all-games-matrix.json
           if-no-files-found: error
           retention-days: 2
@@ -155,6 +156,7 @@ jobs:
         if: env.HAS_WORK == 'true'
         env:
           P2U_FAST_SHARD: "1"
+          P2U_DISCOVERY_FILE: "discovery/all-games-fixtures.json"
         run: node fetch-data.js
 
       - name: Upload shard data
@@ -211,6 +213,8 @@ jobs:
         run: node rebuild-derived-data.js
 
       - name: Verify seven-day coverage
+        env:
+          P2U_MIN_DISCOVERY_COVERAGE: "0.95"
         run: node verify-week-data.js
 
       - name: Generate public health snapshot

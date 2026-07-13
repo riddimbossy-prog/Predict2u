@@ -37,7 +37,13 @@ function main() {
 
   const dates = Array.from({ length: 7 }, (_, index) => utcDate(index));
   const rows = dates.map((date) => {
-    const dayMatches = matches.filter((item) => item && item.matchDate === date);
+    const dayMatches = matches.filter((item) => {
+      if (!item) return false;
+      const matchDate = /^\d{4}-\d{2}-\d{2}$/.test(String(item.matchDate || ""))
+        ? String(item.matchDate)
+        : String(item.kickoff || "").slice(0, 10);
+      return matchDate === date;
+    });
     return {
       date,
       games: dayMatches.length,
@@ -47,6 +53,20 @@ function main() {
     };
   });
 
+  let discovery = null;
+  const discoveryFile = path.join(HERE, "all-games-discovery.json");
+  if (fs.existsSync(discoveryFile)) {
+    try { discovery = JSON.parse(fs.readFileSync(discoveryFile, "utf8")); } catch (_) {}
+  }
+  const discoveredByDate = discovery && discovery.dateCounts && typeof discovery.dateCounts === "object"
+    ? discovery.dateCounts
+    : {};
+  for (const row of rows) {
+    row.discovered = Number(discoveredByDate[row.date] || 0);
+    row.missingFromDiscovery = Math.max(0, row.discovered - row.games);
+    row.discoveryCoverage = row.discovered > 0 ? Math.round((row.games / row.discovered) * 10000) / 100 : null;
+  }
+
   const report = {
     generatedAt: new Date().toISOString(),
     windowStart: dates[0],
@@ -55,6 +75,8 @@ function main() {
     totalGamesInWindow: rows.reduce((sum, row) => sum + row.games, 0),
     daysWithGames: rows.filter((row) => row.games > 0).length,
     daysWithoutGames: rows.filter((row) => row.games === 0).map((row) => row.date),
+    totalDiscoveredFixtures: rows.reduce((sum, row) => sum + row.discovered, 0),
+    totalMissingFromDiscovery: rows.reduce((sum, row) => sum + row.missingFromDiscovery, 0),
     dates: rows,
   };
 
@@ -66,7 +88,19 @@ function main() {
     console.log(`${row.date}: ${row.games} game(s), ${row.leagues} league(s)`);
   }
   console.log(`\nSaved ${report.totalGamesInWindow} game(s) across ${report.daysWithGames}/7 day(s).`);
+  if (report.totalDiscoveredFixtures) {
+    console.log(`Discovery expected ${report.totalDiscoveredFixtures} fixture(s); ${report.totalMissingFromDiscovery} are missing after enrichment.`);
+  }
   console.log(`Report written to ${path.basename(REPORT_FILE)}.`);
+
+  const minCoverage = Math.max(0, Math.min(1, Number(process.env.P2U_MIN_DISCOVERY_COVERAGE || "0")));
+  if (minCoverage > 0 && report.totalDiscoveredFixtures > 0) {
+    const coverage = report.totalGamesInWindow / report.totalDiscoveredFixtures;
+    if (coverage < minCoverage) {
+      console.error(`Coverage check failed: ${(coverage * 100).toFixed(1)}% saved; minimum is ${(minCoverage * 100).toFixed(0)}%.`);
+      process.exit(2);
+    }
+  }
 }
 
 main();

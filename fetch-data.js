@@ -377,7 +377,49 @@ const FINISHED = new Set(["FT","AET","PEN"]);
   // -----------------------------------------------------------------
   const leagueGroups = [];
 
-  if (ALL_MODE) {
+  // v242: when the discovery job supplies the exact raw fixtures, use those
+  // instead of probing each league/season again. This preserves every future
+  // date discovered by API-Football and avoids season-rollover drops.
+  const discoveryFile = String(process.env.P2U_DISCOVERY_FILE || "").trim();
+  let loadedExactDiscovery = false;
+  if (discoveryFile && fs.existsSync(discoveryFile)) {
+    try {
+      const payload = JSON.parse(fs.readFileSync(discoveryFile, "utf8"));
+      const rows = Array.isArray(payload) ? payload : (Array.isArray(payload.fixtures) ? payload.fixtures : []);
+      const allowed = new Set((cfg.LEAGUES || []).map(Number));
+      const grouped = new Map();
+      const seen = new Set();
+      for (const row of rows) {
+        const fx = row && row.fixture ? row.fixture : row;
+        if (!fx || !fx.fixture || !fx.league || !fx.teams) continue;
+        const leagueId = Number(fx.league.id);
+        if (!leagueId) continue;
+        if (!ALL_MODE && allowed.size && !allowed.has(leagueId)) continue;
+        const date = String((row && row.date) || fx.fixture.date || "").slice(0, 10);
+        if (!DATE_WINDOW.includes(date)) continue;
+        const fixtureId = fx.fixture.id;
+        const unique = fixtureId || `${date}|${leagueId}|${fx.teams.home && fx.teams.home.id}|${fx.teams.away && fx.teams.away.id}`;
+        if (seen.has(unique)) continue;
+        seen.add(unique);
+        const seasonId = String(fx.league.season || season);
+        const groupKey = `${leagueId}|${seasonId}|${date}`;
+        if (!grouped.has(groupKey)) grouped.set(groupKey, { id: leagueId, season: seasonId, date, fixtures: [] });
+        grouped.get(groupKey).fixtures.push(fx);
+      }
+      leagueGroups.push(...grouped.values());
+      loadedExactDiscovery = leagueGroups.length > 0;
+      if (loadedExactDiscovery) {
+        console.log(`Exact discovery mode: loaded ${seen.size} fixture(s) across ${leagueGroups.length} league-day group(s).`);
+      }
+    } catch (e) {
+      console.log(`Exact discovery file could not be used (${e.message}); falling back to league probes.`);
+    }
+  }
+
+  if (loadedExactDiscovery) {
+    // No additional fixture discovery calls are needed. Enrichment continues
+    // below using the exact dates and seasons returned by the discovery job.
+  } else if (ALL_MODE) {
     for (const date of DATE_WINDOW) {
       let gotForThisDate = false;
       for (const s of [...new Set([season, String(parseInt(season,10)-1), String(parseInt(season,10)+1)])]) {
