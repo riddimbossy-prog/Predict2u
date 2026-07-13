@@ -17,8 +17,7 @@ jobs:
     name: Discover every active league
     runs-on: ubuntu-latest
     timeout-minutes: 20
-    outputs:
-      matrix: ${{ steps.matrix.outputs.matrix }}
+
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
@@ -41,11 +40,6 @@ jobs:
           DISCOVERY_CONCURRENCY: "3"
         run: node discover-all-games.js
 
-      - name: Export shard matrix
-        id: matrix
-        shell: bash
-        run: echo "matrix=$(cat all-games-matrix.json)" >> "$GITHUB_OUTPUT"
-
       - name: Upload discovery manifest
         uses: actions/upload-artifact@v4
         with:
@@ -53,6 +47,7 @@ jobs:
           path: |
             all-games-discovery.json
             all-games-matrix.json
+          if-no-files-found: error
           retention-days: 2
 
   enrich:
@@ -63,7 +58,8 @@ jobs:
     strategy:
       fail-fast: false
       max-parallel: 6
-      matrix: ${{ fromJSON(needs.discover.outputs.matrix) }}
+      matrix:
+        index: [0, 1, 2, 3, 4, 5]
 
     steps:
       - name: Checkout repository
@@ -76,7 +72,47 @@ jobs:
         with:
           node-version: "20"
 
+      - name: Download discovery manifest
+        uses: actions/download-artifact@v4
+        with:
+          name: all-games-discovery
+          path: discovery
+
+      - name: Resolve this shard from the discovery manifest
+        env:
+          SHARD_INDEX: ${{ matrix.index }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          node <<'NODE'
+          const fs = require('fs');
+          const path = require('path');
+
+          const manifestPath = path.join('discovery', 'all-games-discovery.json');
+          const manifest = JSON.parse(fs.readFileSync(manifestPath, 'utf8'));
+          const index = Number(process.env.SHARD_INDEX);
+          const shard = Array.isArray(manifest.shards)
+            ? manifest.shards.find(item => Number(item.index) === index)
+            : null;
+
+          const envFile = process.env.GITHUB_ENV;
+          if (!envFile) throw new Error('GITHUB_ENV is not available.');
+
+          if (!shard || !String(shard.leagues || '').trim()) {
+            fs.appendFileSync(envFile, 'HAS_WORK=false\n');
+            fs.appendFileSync(envFile, 'SHARD_LEAGUES=\n');
+            fs.appendFileSync(envFile, 'EXPECTED_FIXTURES=0\n');
+            console.log(`Shard ${index} has no work and will be skipped.`);
+          } else {
+            fs.appendFileSync(envFile, 'HAS_WORK=true\n');
+            fs.appendFileSync(envFile, `SHARD_LEAGUES=${String(shard.leagues).trim()}\n`);
+            fs.appendFileSync(envFile, `EXPECTED_FIXTURES=${Number(shard.expectedFixtures || 0)}\n`);
+            console.log(`Shard ${index}: ${Number(shard.expectedFixtures || 0)} expected fixture(s).`);
+          }
+          NODE
+
       - name: Build shard configuration
+        if: env.HAS_WORK == 'true'
         shell: bash
         env:
           API_FOOTBALL_KEY: ${{ secrets.API_FOOTBALL_KEY }}
@@ -89,7 +125,6 @@ jobs:
           H2H: ${{ secrets.H2H }}
           REQUEST_BUDGET: ${{ secrets.REQUEST_BUDGET }}
           SLEEP_MS: ${{ secrets.SLEEP_MS }}
-          SHARD_LEAGUES: ${{ matrix.leagues }}
         run: |
           set -euo pipefail
           football_key="${API_FOOTBALL_KEY:-${API_KEY:-}}"
@@ -97,6 +132,7 @@ jobs:
             echo "Missing API_FOOTBALL_KEY or API_KEY"
             exit 1
           fi
+
           cat > config.txt <<EOF
           API_KEY=${football_key}
           STATS_API_KEY=${STATS_API_KEY:-}
@@ -112,14 +148,17 @@ jobs:
           REQUEST_BUDGET=${REQUEST_BUDGET:-12000}
           SLEEP_MS=${SLEEP_MS:-1500}
           EOF
-          echo "Shard ${{ matrix.index }}: ${{ matrix.expectedFixtures }} expected fixture(s) across ${SHARD_LEAGUES}"
+
+          echo "Shard ${{ matrix.index }} will process ${EXPECTED_FIXTURES} expected fixture(s)."
 
       - name: Pull and enrich shard
+        if: env.HAS_WORK == 'true'
         env:
           P2U_FAST_SHARD: "1"
         run: node fetch-data.js
 
       - name: Upload shard data
+        if: env.HAS_WORK == 'true'
         uses: actions/upload-artifact@v4
         with:
           name: fixture-shard-${{ matrix.index }}
@@ -188,6 +227,7 @@ jobs:
           set -euo pipefail
           git config user.name "Predict2U Fixture Bot"
           git config user.email "actions@users.noreply.github.com"
+
           git add \
             data.js \
             api-cache.json \
@@ -209,6 +249,7 @@ jobs:
             echo "No all-games changes to commit."
             exit 0
           fi
+
           git commit -m "Fast update of all seven-day fixtures"
           git pull --rebase
           git push
