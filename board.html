@@ -236,6 +236,7 @@ a{ color:inherit; text-decoration:none; }
 <script src="pwa-launch.js" defer></script>
 <link rel="stylesheet" href="device-responsive-v207.css"/>
 <link rel="stylesheet" href="acca-mobile-v209.css"/>
+<link rel="stylesheet" href="mobile-polish-v211.css"/>
 </head>
 <body>
 <nav class="sticky top-0 z-50" style="background:var(--bg);border-bottom:1px solid var(--line)">
@@ -838,10 +839,10 @@ a{ color:inherit; text-decoration:none; }
     if(active.length){
       const avatars=active.slice(0,3).map((x,i)=>{
         const name=x.engine[1];
-        return `<span title="${esc(name)} · ${x.count} pick${x.count===1?'':'s'}" class="w-6 h-6 rounded-full flex items-center justify-center text-[9px] font-bold" style="background:${i===0?'var(--em)':'var(--panel)'};color:${i===0?'#062e20':'var(--muted)'};border:1px solid var(--line);margin-left:${i?'-6px':'0'}">${esc(name[0])}</span>`;
+        return `<span title="${esc(name)} · ${x.count} pick${x.count===1?'':'s'}" class="p2u-engine-avatar${i===0?' is-primary':''}">${esc(name[0])}</span>`;
       }).join('');
-      const more=active.length>3?`<span class="w-6 h-6 rounded-full flex items-center justify-center text-[9px] font-bold" style="background:var(--panel);color:var(--muted);border:1px solid var(--line);margin-left:-6px">+${active.length-3}</span>`:'';
-      $('s-engines-sub').innerHTML=avatars+more+`<span class="t-xs" style="margin-left:6px">publishing today</span>`;
+      const more=active.length>3?`<span class="p2u-engine-avatar p2u-engine-avatar-more">+${active.length-3}</span>`:'';
+      $('s-engines-sub').innerHTML=`<span class="p2u-engine-avatar-stack">${avatars}${more}</span><span class="p2u-engine-activity-copy t-xs">publishing today</span>`;
     }else{
       $('s-engines-sub').innerHTML='<span class="t-xs">No qualified engine picks today</span>';
     }
