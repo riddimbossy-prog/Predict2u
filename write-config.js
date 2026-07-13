@@ -10,7 +10,7 @@ try{old=fs.readFileSync(file,"utf8");}catch(_){}
 const defaults={
   SEASON:"2026",
   LEAGUES:"1,2,3,39,140,135,78,61,88,94,144,203,71,128,253,307",
-  DAYS_BACK:"1",DAYS_FWD:"3",ODDS:"true",H2H:"true",STATS:"true",
+  DAYS_BACK:"1",DAYS_FWD:"6",ODDS:"true",H2H:"true",STATS:"true",
   SOT_LOOKBACK:"8",SOT_CALL_BUDGET:"120",SOT_SLEEP_MS:"250"
 };
 const values={...defaults};
