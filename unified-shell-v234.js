@@ -25,7 +25,7 @@
   const isActive=item=>active===item.href;
 
   const nav=document.createElement('nav');
-  nav.className='p2u-v227-nav-wrap p2u-simple-nav';
+  nav.className='p2u-v227-nav-wrap p2u-simple-nav p2u-primary-v234';
   nav.setAttribute('aria-label','Primary navigation');
   nav.innerHTML=`
     <div class="p2u-v227-shell">
