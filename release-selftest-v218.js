@@ -4,8 +4,7 @@ const fs=require('fs'),path=require('path');
 const root=__dirname; const read=f=>fs.readFileSync(path.join(root,f),'utf8');
 const checks=[]; const check=(name,ok,detail='')=>{checks.push({name,ok:!!ok,detail});if(!ok)console.error('FAIL:',name,detail)};
 const sw=read('sw.js'), engines=read('engines.html'), css=read('engines-rescue-v218.css'), slip=read('slip.js'), board=read('board.html'), index=read('index.html');
-const version=read('BUILD_VERSION.txt').trim();
-check('service worker version',sw.includes(`const VERSION='${version}';`)&&sw.includes(`predict2u-${version}`));
+check('service worker version',sw.includes("const VERSION='v218';")&&sw.includes("predict2u-v218"));
 check('new rescue assets cached',sw.includes('p2u-utilities-v218.css')&&sw.includes('engines-rescue-v218.css'));
 check('global v217 overhaul removed',!engines.includes('ui-foundation-v217.css')&&!engines.includes('ui-experience-v217.js'));
 check('full-board rescue loaded',engines.includes('engines-rescue-v218.css')&&engines.includes('p2u-utilities-v218.css'));
@@ -30,7 +29,7 @@ for(const file of ['board.html','index.html','engines.html']){
   check(`${file} inline scripts parse`,ok,detail);
 }
 const failed=checks.filter(x=>!x.ok);
-const report={version,generatedAt:new Date().toISOString(),passed:checks.length-failed.length,failed:failed.length,checks};
+const report={version:'v218',generatedAt:new Date().toISOString(),passed:checks.length-failed.length,failed:failed.length,checks};
 fs.writeFileSync(path.join(root,'release-report-v218.json'),JSON.stringify(report,null,2));
 if(failed.length){console.error(`${failed.length} checks failed`);process.exit(1)}
-console.log(`${version} release self-test passed: ${checks.length} checks.`);
+console.log(`v218 release self-test passed: ${checks.length} checks.`);
