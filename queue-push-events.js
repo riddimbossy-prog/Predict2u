@@ -1,14 +1,14 @@
 #!/usr/bin/env node
 'use strict';
 /* Predict2U v183 — queue meaningful match-status push jobs from data.js.
-   Intended for GitHub Actions. Uses SUPABASE_SERVICE_ROLE_KEY only in the runner.
+   Intended for GitHub Actions. Uses SUPABASE_SECRET_KEY only in the runner.
    The key is never written to the repository or public browser files. */
 const fs=require('fs'),path=require('path');
 const HERE=__dirname;
 const SNAPSHOT=path.join(HERE,'push-event-snapshot.json');
 const DATA=path.join(HERE,'data.js');
 const URL=(process.env.SUPABASE_URL||'').replace(/\/$/,'');
-const SERVICE_KEY=process.env.SUPABASE_SERVICE_ROLE_KEY||'';
+const SERVICE_KEY=process.env.SUPABASE_SECRET_KEY||process.env.SUPABASE_SERVICE_ROLE_KEY||'';
 const DISPATCH_SECRET=process.env.PUSH_DISPATCH_SECRET||'';
 
 function readMatches(){

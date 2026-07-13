@@ -9,13 +9,14 @@ permissions:
   contents: write
 
 concurrency:
-  group: predict2u-live-scores
-  cancel-in-progress: true
+  # Shared with future-fixtures.yml so both jobs never write data.js together.
+  group: predict2u-data-write
+  cancel-in-progress: false
 
 jobs:
   update-live-scores:
     runs-on: ubuntu-latest
-    timeout-minutes: 10
+    timeout-minutes: 15
 
     steps:
       - name: Checkout repository
@@ -28,28 +29,36 @@ jobs:
         with:
           node-version: "20"
 
-      - name: Create score-update config
+      - name: Create score-update configuration
         shell: bash
         env:
+          # Exact secret names already present in your repository.
           API_FOOTBALL_KEY: ${{ secrets.API_FOOTBALL_KEY }}
+          API_KEY: ${{ secrets.API_KEY }}
+          SEASON: ${{ secrets.SEASON }}
+          DAYS_BACK: ${{ secrets.DAYS_BACK }}
         run: |
-          if [ -z "$API_FOOTBALL_KEY" ]; then
-            echo "Missing API_FOOTBALL_KEY repository secret."
+          set -euo pipefail
+
+          football_key="${API_FOOTBALL_KEY:-${API_KEY:-}}"
+          if [[ -z "$football_key" ]]; then
+            echo "Missing repository secret: API_FOOTBALL_KEY or API_KEY"
             exit 1
           fi
+
           cat > config.txt <<EOF
-          API_KEY=$API_FOOTBALL_KEY
-          SEASON=2026
-          DAYS_BACK=1
+          API_KEY=${football_key}
+          SEASON=${SEASON:-$(date -u +%Y)}
+          DAYS_BACK=${DAYS_BACK:-1}
           EOF
 
       - name: Fetch current scores and match minutes
         run: node fetch-scores.js
 
-      - name: Queue favorite match push events
+      - name: Queue favorite-match push events
         env:
           SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
-          SUPABASE_SERVICE_ROLE_KEY: ${{ secrets.SUPABASE_SERVICE_ROLE_KEY }}
+          SUPABASE_SECRET_KEY: ${{ secrets.SUPABASE_SECRET_KEY }}
           PUSH_DISPATCH_SECRET: ${{ secrets.PUSH_DISPATCH_SECRET }}
         run: node queue-push-events.js
         continue-on-error: true
@@ -64,20 +73,36 @@ jobs:
 
       - name: Generate public system health
         run: node generate-site-health.js
+        continue-on-error: true
 
       - name: Run consistency audit
         run: node audit-site.js
+        continue-on-error: true
 
       - name: Commit score snapshot
         shell: bash
         run: |
+          set -euo pipefail
           git config user.name "Predict2U Live Bot"
           git config user.email "actions@users.noreply.github.com"
-          git add data.js track-log.json model-calibration.json team-profiles.json odds-calib.json engine-learning-ledger.json engine-learning-report.json site-health.json site-audit.json push-event-snapshot.json 2>/dev/null || true
+
+          git add \
+            data.js \
+            track-log.json \
+            model-calibration.json \
+            team-profiles.json \
+            odds-calib.json \
+            engine-learning-ledger.json \
+            engine-learning-report.json \
+            site-health.json \
+            site-audit.json \
+            push-event-snapshot.json 2>/dev/null || true
+
           if git diff --cached --quiet; then
             echo "No live-score changes."
             exit 0
           fi
+
           git commit -m "Update live scores and match clock"
           git pull --rebase
           git push

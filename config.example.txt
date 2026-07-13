@@ -1,22 +1,19 @@
-# Predict2U local configuration template
-# Copy this file to config.txt and add your own keys.
-# Never commit config.txt.
+# Predict2U configuration template
+# Copy this to config.txt for local runs. Never commit your real keys.
 
-API_KEY=PASTE_NEW_API_FOOTBALL_KEY_HERE
-STATS_API_KEY=PASTE_THE_STATS_API_KEY_HERE
+API_KEY=PASTE_API_FOOTBALL_KEY_HERE
+STATS_API_KEY=PASTE_STATS_API_KEY_HERE
 SEASON=2026
-SLEEP_MS=1500
-H2H=false
-ODDS=true
-STATS=true
+LEAGUES=1,2,3,39,140,135,78,61,88,94,144,203,71,128,253,307
 DAYS_BACK=1
-DAYS_FWD=1
+DAYS_FWD=6
+ODDS=true
+H2H=true
+STATS=true
 MAX_LEAGUES=120
 MAX_PROBES=400
-REQUEST_BUDGET=60000
+REQUEST_BUDGET=6000
+SLEEP_MS=1500
 SOT_LOOKBACK=8
 SOT_CALL_BUDGET=120
 SOT_SLEEP_MS=250
-
-# Keep your current LEAGUES list here.
-LEAGUES=
