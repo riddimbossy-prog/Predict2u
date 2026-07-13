@@ -40,23 +40,15 @@
 <link rel="manifest" href="manifest.webmanifest"/>
 <link rel="stylesheet" href="device-responsive-v207.css"/>
 <link rel="stylesheet" href="news-actions-v208.css"/>
+<link rel="preload" as="image" href="predict2u-logo.png"/>
 <link rel="stylesheet" href="phase2-shell-v225.css"/>
 <link rel="stylesheet" href="phase3-polish-v226.css"/>
+<link rel="stylesheet" href="unified-shell-v227.css"/>
+<link rel="stylesheet" href="responsive-qa-v227.css"/>
 </head>
 <body class="p2u-news-page">
-<header class="p2u-news-top">
-  <div class="p2u-news-top-inner">
-    <a href="index.html" class="p2u-news-brand"><img src="predict2u-logo.png" alt="Predict2U"/></a>
-    <nav class="top-nav" aria-label="Desktop navigation">
-      <a href="index.html">Board</a>
-      <a href="engines.html">Games</a>
-      <a href="scorecards.html">Results</a>
-      <a href="community.html">Community</a>
-      <a href="news.html" aria-current="page">News</a>
-    </nav>
-    <a id="user-chip" class="p2u-news-account" href="account.html"><span id="user-name">Sign in</span><span id="user-av"><i class="fa-solid fa-user"></i></span></a>
-  </div>
-</header>
+<script src="unified-shell-v227.js"></script>
+
 
 <main class="p2u-news-wrap">
   <section class="p2u-news-hero" aria-labelledby="news-hero-title">
@@ -156,6 +148,5 @@
 <script src="growth-sharing.js" defer></script>
 <script src="analytics.js" defer></script>
 <script>if('serviceWorker' in navigator){window.addEventListener('load',()=>navigator.serviceWorker.register('sw.js').catch(()=>{}));}</script>
-<script src="phase2-shell-v225.js" defer></script>
 </body>
 </html>

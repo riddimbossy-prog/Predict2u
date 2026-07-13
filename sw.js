@@ -1,10 +1,10 @@
-/* Predict2U service worker v223 — fast core install, bounded caches,
+/* Predict2U service worker v227 — fast core install, bounded caches,
    native-install support, exact push deep links and recoverable offline navigation. */
-const VERSION='v223';
-const CACHE_VERSION='predict2u-v223';
+const VERSION='v227';
+const CACHE_VERSION='predict2u-v227';
 const APP_CACHE=CACHE_VERSION;
-const RUNTIME_CACHE='predict2u-runtime-v223';
-const IMAGE_CACHE='predict2u-images-v223';
+const RUNTIME_CACHE='predict2u-runtime-v227';
+const IMAGE_CACHE='predict2u-images-v227';
 const IMAGE_LIMIT=90;
 const RUNTIME_LIMIT=90;
 const NETWORK_TIMEOUT=2800;
@@ -14,19 +14,31 @@ const OFFLINE_URL='./offline.html';
 // Keep install light. Other pages are cached only after they are opened or quietly prefetched.
 const CORE_SHELL=[
   './','./index.html','./board.html','./offline.html','./manifest.webmanifest',
-  './pwa-launch.js','./pwa-launch.css','./mobile-app-nav.js','./mobile-app-nav.css','./device-responsive-v207.css','./acca-mobile-v209.css','./mobile-polish-v211.css','./board-redesign-v220.css','./header-redesign-v221.css','./global-shell-v223.css','./global-shell-v223.js','./p2u-utilities-v218.css','./engines-rescue-v218.css','./slip.js',
+  './pwa-launch.js','./pwa-launch.css','./unified-shell-v227.css','./unified-shell-v227.js','./responsive-qa-v227.css','./mobile-app-nav.js','./mobile-app-nav.css','./device-responsive-v207.css','./acca-mobile-v209.css','./mobile-polish-v211.css','./p2u-utilities-v218.css','./engines-rescue-v218.css','./slip.js',
   './predict2u-logo.png','./predict2u-mark.png','./favicon.ico',
   './icon-192.png','./icon-512.png','./maskable-icon.png'
 ];
 
 // Listed for release validation and optional idle prefetch. These do not block install.
 const OPTIONAL_SHELL=[
+  './board-redesign-v220.css',
+  './theme-refresh-v224.css',
+  './phase3-polish-v226.css',
+  './news.js',
+  './news.css',
+  './football-assets.js',
+  './community-consistency.js',
+  './brand-performance.css',
+  './intelligence.css',
+  './site-health-widget.js',
+  './site-health.css',
   './performance-freshness.js','./performance-freshness.css',
   './personalization.js','./personalization.css',
   './smart-alerts.js','./smart-alerts.css',
   './admin.html','./backend-admin.js','./backend-admin.css','./admin-config.js',
   './site-controls.js','./site-controls.css','./account.html','./profile.html',
   './cloud-config.js','./account-cloud.js','./account-cloud.css',
+  './engines.html','./proof.html','./scorecards.html','./league-dna.html','./community.html','./news.html','./trust.html','./account.html','./profile.html',
   './push-notifications.js','./push-notifications.css',
   './analytics.js','./analytics.css','./product-analytics.js','./product-analytics.css'
 ];

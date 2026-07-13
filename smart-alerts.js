@@ -163,7 +163,7 @@
     trigger.id="p2u-alert-button";
     trigger.className="p2u-alert-trigger";
     trigger.setAttribute("aria-haspopup","dialog");
-    trigger.innerHTML='<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M18 8a6 6 0 0 0-12 0c0 7-3 7-3 9h18c0-2-3-2-3-9"/><path d="M10 21h4"/></svg><span class="p2u-alert-badge" aria-hidden="true">0</span>';
+    trigger.innerHTML='<i class="fa-regular fa-bell" aria-hidden="true"></i><span class="p2u-alert-badge" aria-hidden="true">0</span>';
     const user=document.getElementById("user-chip");
     const topInner=document.querySelector("header.top .top-inner");
     const desktopNav=document.querySelector("nav.sticky>div, nav.nav .navin, nav.trust-nav .trust-navin, nav.legal-nav .legal-navin");

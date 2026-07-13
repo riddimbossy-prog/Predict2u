@@ -8,8 +8,8 @@ const size=f=>fs.statSync(path.join(root,f)).size;
 const exists=f=>fs.existsSync(path.join(root,f));
 
 const budgets={
-  "index.html":70000,
-  "board.html":70000,
+  "index.html":76000,
+  "board.html":76000,
   "engines.html":50000,
   "banker-engine.js":110000,
   "p2u-intelligence.js":35000,

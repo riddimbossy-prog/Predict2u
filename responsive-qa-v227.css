@@ -1,0 +1,41 @@
+/* Predict2U v227 — explicit responsive fallback and page consistency */
+*{box-sizing:border-box;min-width:0}img,video,canvas,svg{max-width:100%}button,input,select,textarea{max-width:100%}
+body.p2u-v227-ready .max-w-\[1240px\],body.p2u-v227-ready .max-w-screen-2xl{width:min(1320px,calc(100% - 24px))!important;margin-left:auto!important;margin-right:auto!important}
+body.p2u-v227-ready main.max-w-\[1240px\]{width:min(1240px,calc(100% - 24px))!important}
+body.p2u-v227-ready header#top{width:min(1240px,calc(100% - 24px))!important;margin-inline:auto!important}
+body.p2u-v227-ready #board.p2u-board-shell{width:100%;margin-inline:0!important}
+/* Home / board */
+body.p2u-v227-ready #engines-grid{display:grid!important;grid-template-columns:repeat(5,minmax(0,1fr));gap:14px!important}
+body.p2u-v227-ready #perf-bars{display:flex!important;overflow-x:auto!important;scroll-snap-type:x proximity;padding-bottom:8px!important}
+body.p2u-v227-ready #perf-bars>.bar-col{scroll-snap-align:start;flex:1 0 76px!important}
+body.p2u-v227-ready .p2u-promo-grid{display:grid!important;grid-template-columns:repeat(2,minmax(0,1fr))!important}
+body.p2u-v227-ready .p2u-feature-grid{display:grid!important;grid-template-columns:repeat(4,minmax(0,1fr))!important}
+/* Full Board */
+body.p2u-v227-ready #snapshot,body.p2u-v227-ready #bankers,body.p2u-v227-ready #board{width:min(1480px,calc(100% - 24px))!important;margin-inline:auto!important}
+body.p2u-v227-ready #snapshot .stat-grid{display:grid!important;grid-template-columns:repeat(3,minmax(0,1fr))!important}
+body.p2u-v227-ready #top-bankers-grid{display:grid!important;grid-template-columns:repeat(5,minmax(0,1fr))!important}
+body.p2u-v227-ready #board>.grid{display:grid!important;grid-template-columns:300px minmax(0,1fr)!important}
+body.p2u-v227-ready #matches-grid{display:grid!important;grid-template-columns:repeat(3,minmax(0,1fr))!important}
+body.p2u-v227-ready #board aside{position:sticky!important;top:104px!important;max-height:calc(100vh - 120px);overflow:auto}
+/* Proof / scorecards / league */
+body.p2u-v227-ready .wrap{width:min(1180px,calc(100% - 24px))!important;margin-inline:auto!important}
+body.p2u-v227-ready .grid.grid4{display:grid!important;grid-template-columns:repeat(4,minmax(0,1fr))!important}
+body.p2u-v227-ready .grid.grid3{display:grid!important;grid-template-columns:repeat(3,minmax(0,1fr))!important}
+body.p2u-v227-ready .grid.grid2{display:grid!important;grid-template-columns:repeat(2,minmax(0,1fr))!important}
+body.p2u-v227-ready .stickybar{top:104px!important}
+/* Community */
+body.p2u-v227-ready .members{display:grid!important;grid-template-columns:repeat(4,minmax(0,1fr))!important}
+body.p2u-v227-ready .pick,body.p2u-v227-ready .leg,body.p2u-v227-ready .slip-top{overflow-wrap:anywhere}
+/* News */
+body.p2u-v227-ready .p2u-news-wrap{width:min(1240px,calc(100% - 24px))!important;margin-inline:auto!important}
+body.p2u-v227-ready .p2u-news-hero{display:grid!important;grid-template-columns:minmax(0,1.05fr) minmax(320px,.95fr)!important;gap:24px!important}
+body.p2u-v227-ready .p2u-news-grid{display:grid!important;grid-template-columns:repeat(3,minmax(0,1fr))!important}
+body.p2u-v227-ready .p2u-news-controls{display:grid!important;gap:12px!important}
+/* Legal / account / profile */
+body.p2u-v227-ready .legal-grid{display:grid!important;grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:14px!important}
+body.p2u-v227-ready .p2u-account-grid{display:grid!important;grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:14px!important}
+body.p2u-v227-ready .p2u-account-page,body.p2u-v227-ready .p2u-profile-page{width:min(1100px,calc(100% - 24px))!important;margin-inline:auto!important}
+@media(max-width:1240px){body.p2u-v227-ready #engines-grid{grid-template-columns:repeat(3,minmax(0,1fr))!important}body.p2u-v227-ready #top-bankers-grid{grid-template-columns:repeat(3,minmax(0,1fr))!important}body.p2u-v227-ready #matches-grid{grid-template-columns:repeat(2,minmax(0,1fr))!important}body.p2u-v227-ready .p2u-feature-grid{grid-template-columns:repeat(2,minmax(0,1fr))!important}body.p2u-v227-ready .p2u-news-grid{grid-template-columns:repeat(2,minmax(0,1fr))!important}}
+@media(max-width:900px){body.p2u-v227-ready #board>.grid{grid-template-columns:1fr!important}body.p2u-v227-ready #board aside{position:relative!important;top:auto!important;max-height:none!important}body.p2u-v227-ready .grid.grid4{grid-template-columns:repeat(2,minmax(0,1fr))!important}body.p2u-v227-ready .grid.grid3{grid-template-columns:repeat(2,minmax(0,1fr))!important}body.p2u-v227-ready .members{grid-template-columns:repeat(2,minmax(0,1fr))!important}body.p2u-v227-ready .p2u-news-hero{grid-template-columns:1fr!important}body.p2u-v227-ready .p2u-news-hero-art{max-height:380px;overflow:hidden}body.p2u-v227-ready .p2u-news-hero-art img{width:100%;height:100%;object-fit:cover}body.p2u-v227-ready .p2u-promo-grid{grid-template-columns:1fr!important}}
+@media(max-width:700px){body.p2u-v227-ready .max-w-\[1240px\],body.p2u-v227-ready .max-w-screen-2xl,body.p2u-v227-ready main.max-w-\[1240px\],body.p2u-v227-ready header#top,body.p2u-v227-ready #snapshot,body.p2u-v227-ready #bankers,body.p2u-v227-ready #board,body.p2u-v227-ready .wrap,body.p2u-v227-ready .p2u-news-wrap,body.p2u-v227-ready .p2u-account-page,body.p2u-v227-ready .p2u-profile-page{width:calc(100% - 16px)!important}body.p2u-v227-ready #engines-grid,body.p2u-v227-ready #top-bankers-grid,body.p2u-v227-ready #matches-grid,body.p2u-v227-ready .grid.grid4,body.p2u-v227-ready .grid.grid3,body.p2u-v227-ready .grid.grid2,body.p2u-v227-ready .members,body.p2u-v227-ready .p2u-news-grid,body.p2u-v227-ready .p2u-feature-grid,body.p2u-v227-ready .legal-grid,body.p2u-v227-ready .p2u-account-grid{grid-template-columns:1fr!important}body.p2u-v227-ready #snapshot .stat-grid{grid-template-columns:repeat(3,minmax(0,1fr))!important;gap:8px!important}body.p2u-v227-ready #snapshot .stat-grid>div{padding:14px!important}body.p2u-v227-ready #snapshot .stat-grid .text-5xl{font-size:30px!important}body.p2u-v227-ready #performance .flex.items-start.justify-between{display:grid!important;grid-template-columns:1fr!important}body.p2u-v227-ready #performance .text-right{text-align:left!important}body.p2u-v227-ready #perf-headline{font-size:40px!important}body.p2u-v227-ready .p2u-board-head{display:grid!important;grid-template-columns:1fr!important}body.p2u-v227-ready .p2u-board-toolbar{width:100%!important}body.p2u-v227-ready .p2u-news-tabs{overflow-x:auto!important;flex-wrap:nowrap!important}body.p2u-v227-ready .p2u-news-search{width:100%!important}body.p2u-v227-ready .p2u-news-follow-form{grid-template-columns:1fr!important}body.p2u-v227-ready footer .flex{gap:14px!important}}
+@media(max-width:390px){body.p2u-v227-ready #snapshot .stat-grid{grid-template-columns:1fr!important}body.p2u-v227-ready #snapshot .stat-grid>div{display:flex!important;align-items:center!important;justify-content:space-between!important}body.p2u-v227-ready .p2u-board-heading{align-items:flex-start!important}body.p2u-v227-ready .p2u-board-icon{width:42px!important;height:42px!important;flex-basis:42px!important}body.p2u-v227-ready .p2u-news-hero h1{font-size:34px!important}body.p2u-v227-ready .p2u-news-hero-proof{grid-template-columns:1fr!important}}
