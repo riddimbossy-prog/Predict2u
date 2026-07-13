@@ -259,7 +259,7 @@ a{ color:inherit; text-decoration:none; }
 <link rel="stylesheet" href="phase3-polish-v226.css"/>
 <link rel="stylesheet" href="unified-shell-v227.css"/>
 <link rel="stylesheet" href="responsive-qa-v227.css"/>
-<link rel="stylesheet" href="mobile-board-v228.css"/>
+<link rel="stylesheet" href="mobile-board-v229.css"/>
 </head>
 <body>
 <script src="unified-shell-v227.js"></script>
@@ -369,6 +369,55 @@ a{ color:inherit; text-decoration:none; }
         </button>
       </div>
     </div>
+
+      <div class="p2u-mobile-board-controls" aria-label="Mobile board controls">
+        <div class="p2u-mobile-control-label">Board view</div>
+        <div class="p2u-mobile-view-tabs" role="group" aria-label="Choose board view">
+          <button type="button" class="p2u-mobile-view-tab is-active" data-board-view="all" aria-pressed="true">
+            <span class="p2u-mobile-view-icon"><i class="fa-regular fa-rectangle-list"></i></span>
+            <span class="p2u-mobile-view-copy"><strong>All</strong><small>Every pick</small></span>
+            <span class="p2u-mobile-view-count" data-mobile-board-count="all">0</span>
+          </button>
+          <button type="button" class="p2u-mobile-view-tab" data-board-view="value" aria-pressed="false">
+            <span class="p2u-mobile-view-icon"><i class="fa-solid fa-chart-line"></i></span>
+            <span class="p2u-mobile-view-copy"><strong>Value</strong><small>Better odds</small></span>
+            <span class="p2u-mobile-view-count" data-mobile-board-count="value">0</span>
+          </button>
+          <button type="button" class="p2u-mobile-view-tab" data-board-view="confidence" aria-pressed="false">
+            <span class="p2u-mobile-view-icon"><i class="fa-solid fa-shield-halved"></i></span>
+            <span class="p2u-mobile-view-copy"><strong>Safe</strong><small>High support</small></span>
+            <span class="p2u-mobile-view-count" data-mobile-board-count="confidence">0</span>
+          </button>
+        </div>
+        <button type="button" class="p2u-mobile-filter-launch" id="p2u-mobile-filter-open" aria-haspopup="dialog" aria-controls="p2u-mobile-filter-sheet">
+          <span class="p2u-mobile-filter-launch-icon"><i class="fa-solid fa-sliders"></i></span>
+          <span class="p2u-mobile-filter-launch-copy"><strong>Filter matches</strong><small id="p2u-mobile-filter-summary">All leagues · no search</small></span>
+          <i class="fa-solid fa-chevron-right p2u-mobile-filter-chevron"></i>
+        </button>
+      </div>
+
+      <div class="p2u-mobile-filter-sheet" id="p2u-mobile-filter-sheet" aria-hidden="true">
+        <button type="button" class="p2u-mobile-filter-backdrop" data-mobile-filter-close aria-label="Close filters"></button>
+        <section class="p2u-mobile-filter-panel" role="dialog" aria-modal="true" aria-labelledby="p2u-mobile-filter-title">
+          <div class="p2u-mobile-filter-handle" aria-hidden="true"></div>
+          <div class="p2u-mobile-filter-head">
+            <div><span class="p2u-mobile-filter-kicker">TODAY'S BOARD</span><h3 id="p2u-mobile-filter-title">Filter matches</h3></div>
+            <button type="button" class="p2u-mobile-filter-close" data-mobile-filter-close aria-label="Close filters"><i class="fa-solid fa-xmark"></i></button>
+          </div>
+          <label class="p2u-mobile-filter-field">
+            <span><i class="fa-solid fa-shield-halved"></i> League</span>
+            <select id="f-league-mobile" aria-label="Filter mobile board by league"></select>
+          </label>
+          <label class="p2u-mobile-filter-field">
+            <span><i class="fa-solid fa-magnifying-glass"></i> Search</span>
+            <input id="f-search-mobile" type="search" placeholder="Team or league…" autocomplete="off"/>
+          </label>
+          <div class="p2u-mobile-filter-actions">
+            <button type="button" class="p2u-mobile-filter-reset" id="p2u-mobile-filter-reset">Reset</button>
+            <button type="button" class="p2u-mobile-filter-done" data-mobile-filter-close>Show matches</button>
+          </div>
+        </section>
+      </div>
 
     <div class="p2u-board-search-panel" id="board-filter-panel">
       <div class="p2u-search-wrap">
@@ -680,6 +729,10 @@ a{ color:inherit; text-decoration:none; }
     if(cAll)cAll.textContent=counts.all;
     if(cValue)cValue.textContent=counts.value;
     if(cConfidence)cConfidence.textContent=counts.confidence;
+    document.querySelectorAll('[data-mobile-board-count]').forEach(node=>{
+      const key=node.dataset.mobileBoardCount;
+      if(Object.prototype.hasOwnProperty.call(counts,key))node.textContent=counts[key];
+    });
     document.querySelectorAll('[data-board-view]').forEach(button=>{
       const active=button.dataset.boardView===boardView;
       button.classList.toggle('is-active',active);
@@ -808,6 +861,35 @@ a{ color:inherit; text-decoration:none; }
     filterToggle.setAttribute('aria-expanded',open?'true':'false');
     filterToggle.setAttribute('aria-label',open?'Close match search':'Open match search');
     if(open)setTimeout(()=>$('f-search')&&$('f-search').focus(),30);
+  });
+
+  const mobileFilterSheet=$('p2u-mobile-filter-sheet');
+  if(mobileFilterSheet&&mobileFilterSheet.parentElement!==document.body)document.body.appendChild(mobileFilterSheet);
+  const openMobileFilters=()=>{
+    if(!mobileFilterSheet)return;
+    mobileFilterSheet.classList.add('is-open');
+    mobileFilterSheet.setAttribute('aria-hidden','false');
+    document.body.classList.add('p2u-mobile-filter-open');
+    setTimeout(()=>{const el=$('f-search-mobile');if(el)el.focus({preventScroll:true});},80);
+  };
+  const closeMobileFilters=()=>{
+    if(!mobileFilterSheet)return;
+    mobileFilterSheet.classList.remove('is-open');
+    mobileFilterSheet.setAttribute('aria-hidden','true');
+    document.body.classList.remove('p2u-mobile-filter-open');
+  };
+  const mobileFilterOpen=$('p2u-mobile-filter-open');
+  if(mobileFilterOpen)mobileFilterOpen.addEventListener('click',openMobileFilters);
+  document.querySelectorAll('[data-mobile-filter-close]').forEach(button=>button.addEventListener('click',closeMobileFilters));
+  document.addEventListener('keydown',event=>{if(event.key==='Escape'&&mobileFilterSheet&&mobileFilterSheet.classList.contains('is-open'))closeMobileFilters();});
+  const mobileReset=$('p2u-mobile-filter-reset');
+  if(mobileReset)mobileReset.addEventListener('click',()=>{
+    league='all';q='';showAll=false;
+    if($('f-league'))$('f-league').value='all';
+    if($('f-league-mobile'))$('f-league-mobile').value='all';
+    if($('f-search'))$('f-search').value='';
+    if($('f-search-mobile'))$('f-search-mobile').value='';
+    updateMobileFilterSummary();renderCards();
   });
 
   function renderAcca(rows){
@@ -1013,11 +1095,22 @@ a{ color:inherit; text-decoration:none; }
       if(current) current.scrollIntoView({block:'nearest',inline:'nearest',behavior:'smooth'});
     });
   }
+  function updateMobileFilterSummary(){
+    const summary=$('p2u-mobile-filter-summary');
+    if(!summary)return;
+    const leagueText=league==='all'?'All leagues':league;
+    const searchText=q?'search active':'no search';
+    summary.textContent=`${leagueText} · ${searchText}`;
+  }
   function renderLeagues(){
     const ls=[...new Set(dayMatches().map(m=>m.league).filter(Boolean))].sort();
-    $('f-league').innerHTML='<option value="all">All Leagues</option>'+ls.map(l=>`<option value="${esc(l)}">${esc(l)}</option>`).join('');
+    const options='<option value="all">All Leagues</option>'+ls.map(l=>`<option value="${esc(l)}">${esc(l)}</option>`).join('');
+    $('f-league').innerHTML=options;
     $('f-league').value=ls.includes(league)?league:'all';
     if(!ls.includes(league)) league='all';
+    const mobileLeague=$('f-league-mobile');
+    if(mobileLeague){mobileLeague.innerHTML=options;mobileLeague.value=league;}
+    updateMobileFilterSummary();
   }
 
   const isWC=m=>{ if(!m) return false;
@@ -1090,8 +1183,10 @@ a{ color:inherit; text-decoration:none; }
   }
   window.P2UBoardRefresh=refreshBoardData;
 
-  $('f-search').addEventListener('input',e=>{ q=e.target.value.toLowerCase().trim(); showAll=false; renderCards(); });
-  $('f-league').addEventListener('change',e=>{ league=e.target.value; showAll=false; renderCards(); });
+  $('f-search').addEventListener('input',e=>{ q=e.target.value.toLowerCase().trim(); showAll=false; if($('f-search-mobile'))$('f-search-mobile').value=e.target.value; updateMobileFilterSummary(); renderCards(); });
+  $('f-league').addEventListener('change',e=>{ league=e.target.value; showAll=false; if($('f-league-mobile'))$('f-league-mobile').value=league; updateMobileFilterSummary(); renderCards(); });
+  if($('f-search-mobile'))$('f-search-mobile').addEventListener('input',e=>{ q=e.target.value.toLowerCase().trim(); showAll=false; if($('f-search'))$('f-search').value=e.target.value; updateMobileFilterSummary(); renderCards(); });
+  if($('f-league-mobile'))$('f-league-mobile').addEventListener('change',e=>{ league=e.target.value; showAll=false; if($('f-league'))$('f-league').value=league; updateMobileFilterSummary(); renderCards(); });
   document.querySelectorAll('[data-jump]').forEach(a=>a.addEventListener('click',e=>{
     e.preventDefault(); const t=document.getElementById(a.dataset.jump);
     if(t) t.scrollIntoView({behavior:'smooth',block:'start'}); }));
