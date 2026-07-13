@@ -1,0 +1,78 @@
+
+/* Predict2U v231 — compact Full Board cards, matching Today's Board on mobile */
+.p2u-fullboard-toggle{display:none}
+.p2u-fullboard-card{position:relative;overflow:hidden}
+.p2u-fullboard-summary{min-width:0}
+.p2u-fullboard-meta{display:flex;align-items:flex-start;justify-content:space-between;gap:12px;margin-bottom:16px}
+.p2u-fullboard-meta-copy{min-width:0;display:flex;align-items:center;gap:8px;color:var(--ink-2);font-size:11px}
+.p2u-fullboard-time{color:var(--em);font-family:ui-monospace,'SF Mono',Menlo,monospace;font-weight:700;white-space:nowrap}
+.p2u-fullboard-league{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.p2u-fullboard-matchup{display:grid;grid-template-columns:minmax(0,1fr) 38px minmax(0,1fr);gap:10px;align-items:center;margin:10px 0 16px}
+.p2u-fullboard-team{font-size:18px;font-weight:800;line-height:1.2;color:#f6f8fb;overflow-wrap:anywhere}
+.p2u-fullboard-team.away{text-align:right}
+.p2u-fullboard-vs{width:36px;height:36px;border-radius:50%;display:grid;place-items:center;background:#0a1b2a;border:1px solid #24384b;color:#c7d0db;font-size:10px;font-weight:900;text-transform:uppercase}
+.p2u-fullboard-prediction{display:grid;grid-template-columns:minmax(0,1fr) 92px;border:1px solid #263a4f;border-radius:15px;background:linear-gradient(180deg,rgba(10,28,43,.86),rgba(8,23,36,.88));overflow:hidden}
+.p2u-fullboard-pred-main,.p2u-fullboard-odds{padding:14px 15px}
+.p2u-fullboard-odds{border-left:1px solid #263a4f;text-align:center}
+.p2u-fullboard-label{display:block;color:#8391a2;font-size:9px;font-weight:850;letter-spacing:.08em;text-transform:uppercase}
+.p2u-fullboard-market{display:block;margin-top:5px;color:#b7ef31;font-size:18px;font-weight:900;line-height:1.15;letter-spacing:-.025em}
+.p2u-fullboard-price{display:block;margin-top:5px;color:#b7ef31;font-size:20px;font-weight:900;line-height:1;font-variant-numeric:tabular-nums}
+.p2u-fullboard-panel{margin-top:14px}
+.p2u-fullboard-signals{display:flex;align-items:center;gap:7px;flex-wrap:wrap}
+.p2u-fullboard-actions{display:flex;align-items:center;justify-content:flex-end;gap:7px;flex-wrap:wrap;margin-top:13px}
+.p2u-fullboard-actions .slip-add,.p2u-fullboard-actions .proof-link,.p2u-fullboard-actions .btn-info{min-height:40px;border-radius:12px!important}
+.p2u-fullboard-top-card .p2u-fullboard-panel{padding-top:2px}
+
+@media(max-width:719px){
+  #matches-grid{grid-template-columns:1fr!important;gap:13px!important}
+  #top-bankers-grid{grid-template-columns:1fr!important;gap:13px!important}
+  #matches-grid>.p2u-fullboard-card,#top-bankers-grid>.p2u-fullboard-card{
+    min-height:0!important;
+    padding:16px!important;
+    border-radius:22px!important;
+    background:linear-gradient(160deg,rgba(9,28,43,.96),rgba(6,19,31,.98))!important;
+    border:1px solid #26384b!important;
+  }
+  #matches-grid>.p2u-fullboard-card::before,#top-bankers-grid>.p2u-fullboard-card::before{
+    content:'';position:absolute;left:0;top:14px;bottom:14px;width:3px;border-radius:0 3px 3px 0;background:linear-gradient(180deg,#b7ef31,#77c41c);
+  }
+  .p2u-fullboard-meta{margin-bottom:12px}
+  .p2u-fullboard-meta-copy{font-size:10.5px;max-width:68%}
+  .p2u-fullboard-matchup{margin:12px 0 14px;grid-template-columns:minmax(0,1fr) 32px minmax(0,1fr);gap:7px}
+  .p2u-fullboard-team{font-size:17px}
+  .p2u-fullboard-vs{width:31px;height:31px;font-size:9px}
+  .p2u-fullboard-prediction{grid-template-columns:minmax(0,1fr) 82px}
+  .p2u-fullboard-pred-main,.p2u-fullboard-odds{padding:13px 12px}
+  .p2u-fullboard-market{font-size:19px}
+  .p2u-fullboard-price{font-size:20px}
+  .p2u-fullboard-toggle{
+    width:100%;min-height:44px;margin-top:14px;padding:10px 14px;
+    border:1px solid rgba(183,239,49,.24);border-radius:14px;
+    background:linear-gradient(180deg,rgba(119,196,28,.08),rgba(7,20,32,.84));
+    color:#caff49;display:flex;align-items:center;justify-content:center;gap:9px;
+    font-size:12px;font-weight:850;letter-spacing:.01em;
+  }
+  .p2u-fullboard-toggle svg{width:16px;height:16px;fill:none;stroke:currentColor;stroke-width:2;transition:transform .18s ease}
+  .p2u-fullboard-card:not(.is-mobile-expanded) .p2u-fullboard-panel{display:none!important}
+  .p2u-fullboard-card.is-mobile-expanded .p2u-fullboard-panel{display:block!important}
+  .p2u-fullboard-card.is-mobile-expanded .p2u-fullboard-toggle svg{transform:rotate(180deg)}
+  .p2u-fullboard-card.is-mobile-expanded .p2u-fullboard-toggle{background:rgba(183,239,49,.10)}
+  .p2u-fullboard-signals{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}
+  .p2u-fullboard-signals>*{min-width:0;justify-content:center;text-align:center}
+  .p2u-fullboard-actions{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px}
+  .p2u-fullboard-actions>*{width:100%!important;min-width:0!important;justify-content:center!important}
+  .p2u-fullboard-actions .btn-info{font-size:0!important}
+  .p2u-fullboard-actions .btn-info::after{content:'Details';font-size:11px;font-weight:800}
+  .p2u-fullboard-card .coverage-line{margin-top:13px}
+  .p2u-fullboard-card .details.open{max-height:none}
+}
+@media(max-width:389px){
+  #matches-grid>.p2u-fullboard-card,#top-bankers-grid>.p2u-fullboard-card{padding:14px!important;border-radius:20px!important}
+  .p2u-fullboard-team{font-size:15px}
+  .p2u-fullboard-prediction{grid-template-columns:minmax(0,1fr) 74px}
+  .p2u-fullboard-market{font-size:17px}
+  .p2u-fullboard-price{font-size:18px}
+  .p2u-fullboard-signals{grid-template-columns:1fr}
+  .p2u-fullboard-actions{grid-template-columns:1fr 1fr}
+  .p2u-fullboard-actions .btn-info{grid-column:1/-1}
+}

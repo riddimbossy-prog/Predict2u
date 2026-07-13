@@ -24,10 +24,9 @@
   };
 
   const links=[
-    {href:'index.html',label:'Overview',icon:'overview'},
     {href:'board.html',label:"Today's Board",icon:'board'},
     {href:'engines.html',label:'Full Board',icon:'full'},
-    {href:'index.html#engines',label:'Engines',icon:'engines',match:'engines-section'},
+    {href:'board.html#engines',label:'Engines',icon:'engines',match:'engines-section'},
     {href:'proof.html',label:'Proof',icon:'proof'},
     {href:'scorecards.html',label:'Scorecards',icon:'scores'},
     {href:'league-dna.html',label:'League DNA',icon:'dna'},
@@ -35,8 +34,7 @@
     {href:'news.html',label:'News',icon:'news'}
   ];
   const isActive=(item)=>{
-    if(item.match==='engines-section') return active==='index.html' && location.hash==='#engines';
-    if(active==='index.html' && item.href==='index.html') return !location.hash || location.hash!=='#engines';
+    if(item.match==='engines-section') return active==='board.html' && location.hash==='#engines';
     return active===item.href;
   };
 
@@ -45,7 +43,7 @@
   nav.setAttribute('aria-label','Primary navigation');
   nav.innerHTML=`
     <div class="p2u-v227-shell">
-      <a class="p2u-v227-brand" href="index.html" aria-label="Predict2U home">
+      <a class="p2u-v227-brand" href="board.html" aria-label="Predict2U home">
         <img src="predict2u-logo.png" alt="Predict2U"/>
       </a>
       <div class="p2u-v227-rail" role="navigation">
@@ -64,7 +62,7 @@
   const dock=document.createElement('nav');
   dock.className='p2u-v227-dock';
   dock.setAttribute('aria-label','Mobile navigation');
-  const dockItems=[links[0],links[1],links[2],links[4]];
+  const dockItems=[links[0],links[1],links[3],links[4]];
   dock.innerHTML=dockItems.map(item=>`<a href="${item.href}" class="${isActive(item)?'is-active':''}">${svg(item.icon)}<span>${item.label.replace("Today's ",'')}</span></a>`).join('')+
     `<button type="button" class="p2u-v227-more-btn" aria-expanded="false" aria-controls="p2u-v227-more">${svg('more')}<span>More</span></button>`;
   document.body.appendChild(dock);

@@ -177,6 +177,7 @@ a{ color:inherit; text-decoration:none; }
 <link rel="stylesheet" href="phase3-polish-v226.css"/>
 <link rel="stylesheet" href="unified-shell-v227.css"/>
 <link rel="stylesheet" href="responsive-qa-v227.css"/>
+<link rel="stylesheet" href="fullboard-compact-v231.css"/>
 </head>
 <body>
 <script src="unified-shell-v227.js"></script>
@@ -398,19 +399,28 @@ a{ color:inherit; text-decoration:none; }
     $('top-bankers-grid').innerHTML=cons.length?cons.map((p,i)=>{
       const price=priceOf(p.m,p.market);
       const btn=(p.m.homeGoals==null&&typeof P2USlip!=='undefined')?P2USlip.btn(p.m,p.market):'';
-      return `<div class="glass card-h rounded-3xl p-5 rise top-banker-card" style="animation-delay:${i*45}ms;border-color:var(--em-line)">
-        <div class="flex items-start justify-between gap-2 mb-3 tb-head">
-          <div class="flex items-center gap-1.5 flex-wrap"><span class="ebadge">${p.engines.length}/${TOTAL} engines</span><span class="conflict-pill ${p.intel.conflict.level}">${esc(p.intel.conflict.label)}</span>${learningSignal(p.m)}</div>
-          ${statusTag(p.m,p.market)}
+      return `<div class="glass card-h rounded-3xl p-5 rise top-banker-card p2u-fullboard-card p2u-fullboard-top-card" style="animation-delay:${i*45}ms;border-color:var(--em-line)">
+        <div class="p2u-fullboard-summary">
+          <div class="p2u-fullboard-meta">
+            <div class="p2u-fullboard-meta-copy"><span class="p2u-fullboard-time">${ko(p.m)||'TBD'}</span><span>•</span><span class="p2u-fullboard-league">${esc(p.m.league||'')}</span></div>
+            ${statusTag(p.m,p.market)}
+          </div>
+          <div class="p2u-fullboard-matchup">
+            <div class="p2u-fullboard-team">${esc(p.m.home)}</div>
+            <span class="p2u-fullboard-vs">vs</span>
+            <div class="p2u-fullboard-team away">${esc(p.m.away)}</div>
+          </div>
+          ${liveScoreHtml(p.m)}
+          <div class="p2u-fullboard-prediction">
+            <div class="p2u-fullboard-pred-main"><span class="p2u-fullboard-label">Our prediction</span><strong class="p2u-fullboard-market">${esc(shortMk(p.market))}</strong></div>
+            <div class="p2u-fullboard-odds"><span class="p2u-fullboard-label">Odds</span><strong class="p2u-fullboard-price">${price?price.toFixed(2):'—'}</strong></div>
+          </div>
         </div>
-        <div class="font-semibold text-[16px] leading-snug tb-teams">${esc(p.m.home)}<br/><span style="color:var(--em)">vs</span> ${esc(p.m.away)}</div>
-        ${liveScoreHtml(p.m)}
-        <div class="text-[12px] mt-1.5 trunc" style="color:var(--muted)">${esc(p.m.league||'')}</div>
-        <div class="flex items-center justify-between gap-2 mt-4 tb-market">
-          <span class="font-semibold text-[14px]" style="color:var(--em)">${esc(shortMk(p.market))}</span>
-          <span class="mono">${price?price.toFixed(2):'—'}</span>
+        <button type="button" class="p2u-fullboard-toggle" data-fullboard-toggle aria-expanded="false"><span>Details & actions</span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></button>
+        <div class="p2u-fullboard-panel">
+          <div class="p2u-fullboard-signals"><span class="ebadge">${p.engines.length}/${TOTAL} engines</span><span class="conflict-pill ${p.intel.conflict.level}">${esc(p.intel.conflict.label)}</span>${learningSignal(p.m)}</div>
+          <div class="p2u-fullboard-actions">${btn}<a class="proof-link" href="${P2UIntelligence.proofHref(p.m)}"><i class="fa-solid fa-shield-halved"></i> Proof</a></div>
         </div>
-        <div class="flex items-center gap-2 flex-wrap tb-actions">${btn}<a class="proof-link" href="${P2UIntelligence.proofHref(p.m)}"><i class="fa-solid fa-shield-halved"></i> Proof</a></div>
       </div>`;
     }).join(''):'<div class="col-span-full glass rounded-3xl p-8 text-center text-sm" style="color:var(--ink-2)">No multi-engine consensus bankers on this date yet.</div>';
     const host=$('ranked-explainer');
@@ -423,7 +433,6 @@ a{ color:inherit; text-decoration:none; }
         host.innerHTML=`<section class="p2u-rank-card"><div class="text-[10.5px] uppercase tracking-[.12em] font-semibold" style="color:var(--em)">WHY THIS IS RANKED #1</div><h3>${esc(p.m.home)} vs ${esc(p.m.away)} · ${esc(shortMk(p.market))}</h3><div class="p2u-rank-grid">${why.map((x,i)=>`<div class="p2u-rank-reason"><b>0${i+1}</b><br>${x}</div>`).join('')}</div></section>`;
       }
     }
-
   }
 
   /* ---------- the full grid ---------- */
@@ -440,36 +449,35 @@ a{ color:inherit; text-decoration:none; }
       const id='m'+i; REG[id]=p;
       const price=priceOf(p.m,p.market);
       const btn=(p.m.homeGoals==null&&typeof P2USlip!=='undefined')?P2USlip.btn(p.m,p.market):'';
-      return `<div class="glass card-h rounded-3xl p-5 rise p2u-standard-card" style="animation-delay:${Math.min(i*25,250)}ms">
-        <div class="flex justify-between items-start mb-4 gap-2">
-          <div style="min-width:0">
-            <div class="flex items-center gap-2 text-[12px]">
-              <span class="mono" style="color:var(--em)">${ko(p.m)||''}</span>
-              ${ko(p.m)?'<span style="color:var(--muted)">•</span>':''}
-              <span class="trunc" style="color:var(--ink-2)">${esc(p.m.league||'')}</span>
-            </div>
-            <div class="font-semibold text-[17px] leading-tight mt-1.5">${esc(p.m.home)}<br/><span style="color:var(--em)">vs</span> ${esc(p.m.away)}</div>
-            ${liveScoreHtml(p.m)}
+      return `<div class="glass card-h rounded-3xl p-5 rise p2u-standard-card p2u-fullboard-card" style="animation-delay:${Math.min(i*25,250)}ms">
+        <div class="p2u-fullboard-summary">
+          <div class="p2u-fullboard-meta">
+            <div class="p2u-fullboard-meta-copy"><span class="p2u-fullboard-time">${ko(p.m)||'TBD'}</span><span>•</span><span class="p2u-fullboard-league">${esc(p.m.league||'')}</span></div>
+            ${statusTag(p.m,p.market)}
           </div>
-          ${statusTag(p.m,p.market)}
+          <div class="p2u-fullboard-matchup">
+            <div class="p2u-fullboard-team">${esc(p.m.home)}</div>
+            <span class="p2u-fullboard-vs">vs</span>
+            <div class="p2u-fullboard-team away">${esc(p.m.away)}</div>
+          </div>
+          ${liveScoreHtml(p.m)}
+          <div class="p2u-fullboard-prediction">
+            <div class="p2u-fullboard-pred-main"><span class="p2u-fullboard-label">Our prediction</span><strong class="p2u-fullboard-market">${esc(shortMk(p.market))}</strong></div>
+            <div class="p2u-fullboard-odds"><span class="p2u-fullboard-label">Odds</span><strong class="p2u-fullboard-price">${price?price.toFixed(2):'—'}</strong></div>
+          </div>
         </div>
-        <div class="mt-auto">
-          <div class="flex justify-between items-end gap-3">
-            <div style="min-width:0">
-              <div class="font-semibold" style="color:var(--em)">${esc(shortMk(p.market))}</div>
-              <div class="flex items-center gap-1.5 text-[12px] mt-1.5 flex-wrap">
-                <span class="ebadge">${p.engines.length}/${TOTAL} engine${p.engines.length>1?'s':''}</span>
-                <span class="conflict-pill ${p.intel.conflict.level}">${esc(p.intel.conflict.label)}</span>
-                ${learningSignal(p.m)}
-                <span style="color:var(--muted)">•</span>
-                <span class="mono">${price?price.toFixed(2):'—'}</span>
-              </div>
-            </div>
-            <div class="flex gap-1.5 shrink-0">
-              ${btn}
-              <a class="proof-link" href="${P2UIntelligence.proofHref(p.m)}" title="Open Proof Mode"><i class="fa-solid fa-shield-halved"></i><span class="hidden sm:inline">Proof</span></a>
-              <button class="btn-info" data-det="${id}" title="Why this pick"><i class="fa-solid fa-info text-[11px]"></i></button>
-            </div>
+        <button type="button" class="p2u-fullboard-toggle" data-fullboard-toggle aria-expanded="false"><span>Details & actions</span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></button>
+        <div class="p2u-fullboard-panel">
+          <div class="p2u-fullboard-signals">
+            <span class="ebadge">${p.engines.length}/${TOTAL} engine${p.engines.length>1?'s':''}</span>
+            <span class="conflict-pill ${p.intel.conflict.level}">${esc(p.intel.conflict.label)}</span>
+            ${learningSignal(p.m)}
+            <span class="ebadge">Data ${p.intel.coverage.score}%</span>
+          </div>
+          <div class="p2u-fullboard-actions">
+            ${btn}
+            <a class="proof-link" href="${P2UIntelligence.proofHref(p.m)}" title="Open Proof Mode"><i class="fa-solid fa-shield-halved"></i><span>Proof</span></a>
+            <button class="btn-info" data-det="${id}" title="Why this pick" aria-expanded="false"><i class="fa-solid fa-info text-[11px]"></i></button>
           </div>
           <div class="coverage-line" title="Data reliability ${p.intel.coverage.score}%"><span style="width:${p.intel.coverage.score}%"></span></div>
           <div class="flex justify-between text-[10.5px] mt-1.5" style="color:var(--muted)"><span>${esc(p.intel.coverage.label)}</span><span>${p.intel.coverage.score}%</span></div>
@@ -480,7 +488,7 @@ a{ color:inherit; text-decoration:none; }
 
     $('matches-grid').querySelectorAll('[data-det]').forEach(b=>b.addEventListener('click',()=>{
       const el=$(b.dataset.det), p=REG[b.dataset.det];
-      if(el.classList.contains('open')){ el.classList.remove('open'); el.innerHTML=''; return; }
+      if(el.classList.contains('open')){ el.classList.remove('open'); el.innerHTML=''; b.setAttribute('aria-expanded','false'); return; }
       const o=p.out||{};
       const reasons=(o.reasons||[]).map(r=>`<div class="reason">${esc(r)}</div>`).join('');
       const checks=(o.humanChecks||[]).length?`<div class="reason" style="color:var(--amber)">Before kickoff: ${esc(o.humanChecks.join(' '))}</div>`:'';
@@ -495,6 +503,7 @@ a{ color:inherit; text-decoration:none; }
         <div class="reason" style="font-size:11.5px;color:var(--muted)">Engines: ${esc(p.engines.join(', '))}. A qualified pick is not a guaranteed result. <a href="${P2UIntelligence.proofHref(p.m)}" style="color:var(--em)">Open full proof →</a></div>
       </div>`;
       el.classList.add('open');
+      b.setAttribute('aria-expanded','true');
     }));
   }
 
@@ -570,5 +579,6 @@ if('serviceWorker' in navigator) window.addEventListener('load',()=>navigator.se
 <script src="account-cloud.js" defer></script>
 <script src="football-assets.js" defer></script>
 <script src="analytics.js" defer></script>
+<script src="fullboard-compact-v231.js" defer></script>
 </body>
 </html>
