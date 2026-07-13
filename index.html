@@ -251,6 +251,7 @@ a{ color:inherit; text-decoration:none; }
 <link rel="stylesheet" href="pwa-launch.css"/>
 <script src="pwa-launch.js" defer></script>
 <link rel="stylesheet" href="device-responsive-v207.css"/>
+<link rel="stylesheet" href="acca-mobile-v209.css"/>
 </head>
 <body>
 <nav class="sticky top-0 z-50" style="background:var(--bg);border-bottom:1px solid var(--line)">
@@ -709,28 +710,34 @@ a{ color:inherit; text-decoration:none; }
     if(!legs.length){ host.innerHTML=`<div class="card p-12 text-center t-sm">No upcoming consensus bankers to build an acca from right now.</div>`; return; }
     let comb=1,priced=0;
     legs.forEach(l=>{ l.price=priceOf(l.m,l.market); if(l.price){ comb*=l.price; priced++; } });
-    host.innerHTML=`<div class="card p-7">
-      <div class="flex gap-3.5 rounded-xl p-4 mb-6 t-sm" style="background:var(--amber-dim);border:1px solid rgba(251,191,36,.2);line-height:1.6">
-        <i class="fa-solid fa-triangle-exclamation mt-0.5" style="color:var(--amber)"></i>
-        <div><b style="color:var(--amber)">Accumulators are high-risk.</b> Every leg must win. Each added leg multiplies the bookmaker's margin against you — more legs means a bigger potential return but a much lower chance of winning. This is a combination of today's consensus bankers; it is not advice or a prediction. 18+.</div>
-      </div>
-      ${legs.map((l,i)=>`<div class="flex items-center gap-4 py-3.5" style="border-bottom:1px solid var(--line)">
-        <span class="t-xs" style="width:16px">${i+1}</span>
-        <div style="flex:1;min-width:0">
-          <div class="t-h3 trunc">${esc(l.m.home)} v ${esc(l.m.away)}</div>
-          <div class="t-xs trunc mt-1">${esc(l.m.league||'')} · ${l.engines.length}/${TOTAL} engines</div>
+    host.innerHTML=`<div class="card p-7 p2u-acca-card">
+      <div class="p2u-acca-warning" role="note" aria-label="Accumulator risk warning">
+        <span class="p2u-acca-warning-icon" aria-hidden="true">!</span>
+        <div class="p2u-acca-warning-copy">
+          <strong>Accumulators are high-risk.</strong>
+          <span class="p2u-acca-warning-full">Every leg must win. Each added leg multiplies the bookmaker's margin against you — more legs means a bigger potential return but a much lower chance of winning. This is a combination of today's consensus bankers; it is not advice or a prediction. 18+.</span>
+          <span class="p2u-acca-warning-mobile">Every selection must win. Adding more legs lowers the chance of winning. This is not betting advice. 18+.</span>
         </div>
-        <span class="mkt">${esc(shortMk(l.market))}</span>
-        <span class="odds" style="min-width:44px;text-align:right">${l.price?l.price.toFixed(2):'—'}</span>
-      </div>`).join('')}
-      <div class="flex items-center justify-between gap-5 flex-wrap pt-6">
-        <div>
+      </div>
+      <div class="p2u-acca-legs">
+        ${legs.map((l,i)=>`<div class="p2u-acca-leg">
+          <span class="p2u-acca-leg-number" aria-label="Leg ${i+1}">${i+1}</span>
+          <div class="p2u-acca-fixture">
+            <div class="p2u-acca-teams">${esc(l.m.home)} <span aria-hidden="true">v</span> ${esc(l.m.away)}</div>
+            <div class="p2u-acca-meta">${esc(l.m.league||'')} · ${l.engines.length}/${TOTAL} engines</div>
+          </div>
+          <span class="mkt p2u-acca-market">${esc(shortMk(l.market))}</span>
+          <span class="odds p2u-acca-odds" aria-label="${l.price?`Odds ${l.price.toFixed(2)}`:'Odds unavailable'}">${l.price?l.price.toFixed(2):'—'}</span>
+        </div>`).join('')}
+      </div>
+      <div class="p2u-acca-summary">
+        <div class="p2u-acca-total">
           <div class="t-lbl">Combined odds${priced<legs.length?` · ${legs.length-priced} unpriced`:''}</div>
-          <div class="t-num mt-1.5" style="color:var(--em)">${priced?comb.toFixed(2):'—'}</div>
+          <div class="p2u-acca-total-value${priced?'':' is-unpriced'}">${priced?comb.toFixed(2):'Not priced'}</div>
         </div>
-        <button id="acca-add" class="slip-add" style="flex:0 0 auto;padding:13px 26px;font-size:12.5px">ADD ALL ${legs.length} TO MY SLIP</button>
+        <button id="acca-add" class="slip-add p2u-acca-add">ADD ALL ${legs.length} TO MY SLIP</button>
       </div>
-      <div class="t-xs text-center mt-6">Records, not wagers. Predict2u takes no bets and handles no money — place bets with your own bookmaker. 18+ · <a href="responsible-gambling.html" class="underline">bet responsibly</a></div>
+      <div class="p2u-acca-disclaimer">Records, not wagers. Predict2u takes no bets and handles no money — place bets with your own bookmaker. 18+ · <a href="responsible-gambling.html">Bet responsibly</a></div>
     </div>`;
     $('acca-add').addEventListener('click',()=>{
       legs.forEach(l=>{ if(typeof P2USlip!=='undefined') P2USlip.add(l.m,l.market,'consensus'); });
