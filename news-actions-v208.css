@@ -1,0 +1,79 @@
+/* Predict2U v208: always-visible news card actions.
+   Text labels remain usable even when the remote icon font is blocked or slow. */
+.p2u-news-actions>a,
+.p2u-news-actions>button{
+  min-height:44px;
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  gap:8px;
+  line-height:1.15;
+  text-align:center;
+  overflow:hidden;
+}
+.p2u-news-actions>a>span,
+.p2u-news-actions>button>span{
+  display:inline!important;
+  min-width:0;
+  overflow:hidden;
+  text-overflow:ellipsis;
+  white-space:nowrap;
+}
+.p2u-news-actions .p2u-news-source-action{
+  background:var(--news-green);
+  border-color:var(--news-green);
+  color:#101a04;
+}
+.p2u-news-actions .p2u-news-discuss-action{
+  background:#151a22;
+  border-color:#303845;
+  color:var(--news-ink);
+}
+.p2u-news-actions .p2u-news-bookmark-action{
+  background:rgba(119,196,28,.07);
+  border-color:rgba(119,196,28,.42);
+  color:#dfffb8;
+}
+.p2u-news-actions .p2u-news-bookmark-action.is-saved{
+  background:rgba(119,196,28,.18);
+  border-color:var(--news-green);
+  color:var(--news-green);
+}
+.p2u-news-actions .p2u-news-report-action{
+  background:rgba(255,112,120,.055);
+  border-color:rgba(255,112,120,.28);
+  color:#ffb0b5;
+}
+@media(max-width:620px){
+  .p2u-news-feature-card .p2u-news-actions,
+  .p2u-news-card .p2u-news-actions{
+    display:grid!important;
+    grid-template-columns:repeat(2,minmax(0,1fr))!important;
+    gap:10px!important;
+    width:100%;
+  }
+  .p2u-news-feature-card .p2u-news-actions>a,
+  .p2u-news-feature-card .p2u-news-actions>button,
+  .p2u-news-card .p2u-news-actions>a,
+  .p2u-news-card .p2u-news-actions>button{
+    width:100%!important;
+    min-width:0!important;
+    min-height:48px;
+    padding:11px 12px;
+    justify-self:stretch!important;
+  }
+  .p2u-news-feature-card .p2u-news-actions .p2u-news-report-action,
+  .p2u-news-card .p2u-news-actions .p2u-news-report-action{
+    grid-column:1/-1;
+  }
+}
+@media(max-width:340px){
+  .p2u-news-feature-card .p2u-news-actions,
+  .p2u-news-card .p2u-news-actions{
+    grid-template-columns:minmax(0,1fr)!important;
+  }
+  .p2u-news-feature-card .p2u-news-actions .p2u-news-report-action,
+  .p2u-news-card .p2u-news-actions .p2u-news-report-action{
+    grid-column:auto;
+  }
+}
