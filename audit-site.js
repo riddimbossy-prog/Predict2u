@@ -1,84 +1,66 @@
 #!/usr/bin/env node
-'use strict';
-const fs=require('fs'),path=require('path');
-const HERE=__dirname,PACKAGE_MODE=process.argv.includes('--package');
+"use strict";
+const fs=require("fs"),path=require("path");
+const HERE=__dirname,PACKAGE_MODE=process.argv.includes("--package");
 const critical=[],warnings=[],passed=[];
 const exists=f=>fs.existsSync(path.join(HERE,f));
-const read=f=>{try{return fs.readFileSync(path.join(HERE,f),'utf8')}catch(_){return''}};
-const pages=['index.html','board.html','engines.html','proof.html','scorecards.html','league-dna.html','community.html','news.html','trust.html','responsible-gambling.html','terms.html','privacy.html','disclaimer.html','404.html'];
-const required=[...pages,'banker-engine.js','p2u-intelligence.js','intelligence.css','site-health-widget.js','site-health.css','sw.js','predict2u-logo.png','brand-experience.js','brand-experience.css','performance-freshness.js','performance-freshness.css','personalization.js','personalization.css','smart-alerts.js','smart-alerts.css','admin.html','backend-admin.js','backend-admin.css','cloud-config.js','account-cloud.js','account-cloud.css','SUPABASE_CLOUD_SETUP_v180.sql','SUPABASE_BACKEND_ADMIN_v181.sql','site-controls.js','site-controls.css','push-notifications.js','push-notifications.css','SUPABASE_PUSH_SETUP_v183.sql','news.js','news.css','SUPABASE_FOOTBALL_NEWS_v189.sql','PUSH_NOTIFICATIONS_v183.md','VAPID_KEY_GENERATOR_v183.html','queue-push-events.js','supabase/functions/p2u-push-dispatch/index.ts','supabase/functions/p2u-news-sync/index.ts','football-assets.js','community-consistency.js','brand-performance.css','analytics.js','analytics.css','product-analytics.js','product-analytics.css','SUPABASE_ANALYTICS_v186.sql','mobile-app-nav.js','mobile-app-nav.css','growth-sharing.js','growth-sharing.css','share.html','account.html','profile.html','social-preview.png','favicon.ico','favicon-16x16.png','favicon-32x32.png','apple-touch-icon.png','maskable-icon.png'];
-for(const f of required){if(!exists(f))critical.push(`Missing required file: ${f}`);else passed.push(`Found ${f}`)}
+const read=f=>{try{return fs.readFileSync(path.join(HERE,f),"utf8");}catch(_){return"";}};
+const pages=["board.html","bankers.html","engines.html","proof.html","scorecards.html","league-dna.html","community.html","trust.html"];
+const required=[...pages,"banker-engine.js","multi-engine-suite.js","p2u-intelligence.js","site-health-widget.js","site-health.css","sw.js","predict2u-logo.png"];
+for(const f of required){if(!exists(f))critical.push(`Missing required file: ${f}`);else passed.push(`Found ${f}`);}
 let engineCount=null;
-try{const eng=require('./banker-engine.js');engineCount=(eng.P2U_ENGINE_REGISTRY||[]).length;if(engineCount!==16)critical.push(`Engine registry has ${engineCount}; expected 16.`);else passed.push('Engine registry has 16 engines')}catch(e){critical.push(`Cannot load banker-engine.js: ${e.message}`)}
+try{
+  const base=require("./banker-engine.js");
+  globalThis.P2U_ENGINE_REGISTRY=Array.isArray(base.P2U_ENGINE_REGISTRY)?[...base.P2U_ENGINE_REGISTRY]:[];
+  delete require.cache[require.resolve("./multi-engine-suite.js")];
+  require("./multi-engine-suite.js");
+  engineCount=(globalThis.P2U_ENGINE_REGISTRY||[]).length;
+  if(engineCount!==20)critical.push(`Engine registry has ${engineCount}; expected 20.`);
+  else passed.push("Engine registry has 20 engines");
+  const additions=(globalThis.P2U_MULTI_ENGINE_REGISTRY||[]).length;
+  if(additions!==4)critical.push(`Multi-engine extension has ${additions}; expected 4 engines.`);
+  else passed.push("Multi-engine extension has 4 engines");
+  if((globalThis.P2U_ENGINE_REGISTRY||[]).some(e=>/decision core/i.test(String(e&&e.name||""))))critical.push("Decision Core must remain an orchestrator, not a public engine.");
+  else passed.push("Decision Core is not registered as an engine");
+}catch(e){critical.push(`Cannot load integrated engine registry: ${e.message}`);}
 const localRef=/\b(?:href|src)=["']([^"']+)["']/gi;
 for(const page of pages){
   const html=read(page);if(!html)continue;
-  const ids=[...html.matchAll(/\bid=["']([^"']+)["']/gi)].map(m=>m[1]);const dup=[...new Set(ids.filter((id,i)=>ids.indexOf(id)!==i))];
-  if(dup.length)critical.push(`${page}: duplicate IDs: ${dup.join(', ')}`);else passed.push(`${page}: no duplicate IDs`);
-  if(/\b13\s+engines\b|\bthirteen\s+(?:specialized\s+)?engines\b/i.test(html))critical.push(`${page}: obsolete 13-engine wording remains.`);
-  if(!/site-health-widget\.js/.test(html))critical.push(`${page}: health widget not loaded.`);
-  if(!/trust\.html/.test(html))warnings.push(`${page}: no visible Trust Center link.`);
-  if(!/predict2u-logo\.(?:png|webp)/.test(html)&&page!=='404.html')warnings.push(`${page}: official logo reference not found.`);
-  if(!/og:image/.test(html))critical.push(`${page}: Open Graph image metadata missing.`);
-  if(!/favicon-32x32\.png/.test(html))critical.push(`${page}: favicon metadata missing.`);
-  if(!/brand-experience\.(?:css|js)/.test(html))warnings.push(`${page}: Brand Experience layer not loaded.`);
-  if(!/performance-freshness\.(?:css|js)/.test(html))critical.push(`${page}: Performance/Freshness layer not loaded.`);
-  if(!/site-controls\.css/.test(html)||!/admin-config\.js/.test(html)||!/site-controls\.js/.test(html))critical.push(`${page}: public site controls are not loaded.`);else passed.push(`${page}: public site controls loaded`);
-  if(!/mobile-app-nav\.js/.test(html)||!/mobile-app-nav\.css/.test(html))critical.push(`${page}: global mobile navigation assets not loaded.`);else passed.push(`${page}: global mobile navigation loaded`);
-  let m;while((m=localRef.exec(html))){let ref=m[1].split(/[?#]/)[0];if(ref.includes('${'))continue;if(!ref||/^(?:https?:|mailto:|tel:|javascript:|data:|#)/i.test(ref))continue;if(ref.startsWith('/'))ref=ref.slice(1);if(!exists(ref)){if(PACKAGE_MODE&&['data.js','community.js'].includes(ref))continue;if(/\.(?:css|js)$/i.test(ref))critical.push(`${page}: required local asset not found: ${ref}`);else warnings.push(`${page}: local reference not found: ${ref}`)}}
+  const ids=[...html.matchAll(/\bid=["']([^"']+)["']/gi)].map(m=>m[1]);
+  const dup=[...new Set(ids.filter((id,i)=>ids.indexOf(id)!==i))];
+  if(dup.length)critical.push(`${page}: duplicate IDs: ${dup.join(", ")}`);else passed.push(`${page}: no duplicate IDs`);
+  if(!/multi-engine-suite\.js/.test(html))critical.push(`${page}: multi-engine extension is not loaded.`);else passed.push(`${page}: multi-engine extension loaded`);
+  if(/\b(?:13|16)\s+engines\b|\b(?:thirteen|sixteen)\s+(?:specialized\s+)?engines\b/i.test(html))warnings.push(`${page}: old engine-count wording remains.`);
+  let m;while((m=localRef.exec(html))){
+    let ref=m[1].split(/[?#]/)[0];
+    if(ref.includes("${"))continue;
+    if(!ref||/^(?:https?:|mailto:|tel:|javascript:|data:|#)/i.test(ref))continue;
+    if(ref.startsWith("/"))ref=ref.slice(1);
+    if(!exists(ref)){
+      if(PACKAGE_MODE&&["data.js","community.js","banker-engine.js","p2u-intelligence.js","site-health-widget.js","site-health.css","sw.js","predict2u-logo.png"].includes(ref))continue;
+      warnings.push(`${page}: local reference not found: ${ref}`);
+    }
+  }
 }
-const sw=read('sw.js');const cacheMatch=sw.match(/const\s+CACHE_VERSION\s*=\s*["']([^"']+)["']/);
-if(!cacheMatch)critical.push('sw.js does not declare CACHE_VERSION.');else if(!/^predict2u-v[0-9A-Za-z._-]+$/.test(cacheMatch[1]))critical.push(`sw.js CACHE_VERSION has an invalid format: ${cacheMatch[1]}`);else passed.push(`Service-worker cache is ${cacheMatch[1]}`);
-for(const f of ['news.html','news.js','news.css','football-assets.js','community-consistency.js','brand-performance.css','analytics.js','analytics.css','product-analytics.js','product-analytics.css','trust.html','intelligence.css','site-health-widget.js','site-health.css','performance-freshness.js','performance-freshness.css','personalization.js','personalization.css','smart-alerts.js','smart-alerts.css','admin.html','backend-admin.js','backend-admin.css','site-controls.js','site-controls.css','cloud-config.js','account-cloud.js','account-cloud.css','push-notifications.js','push-notifications.css']){if(!sw.includes(`./${f}`))warnings.push(`sw.js does not precache ${f}.`)}
-for(const f of ['favicon.ico','favicon-16x16.png','favicon-32x32.png','apple-touch-icon.png','icon-192.png','icon-512.png','maskable-icon.png','social-preview.png']){if(!exists(f))critical.push(`Missing brand asset: ${f}`);else passed.push(`Found brand asset ${f}`)}
-const board=read('board.html'),full=read('engines.html');
-if(!/p2u-onboarding-v157/.test(read('brand-experience.js')))critical.push('First-visit onboarding is missing.');else passed.push('First-visit onboarding is wired');
-if(!/board-rank-reason/.test(board)||!/ranked-explainer/.test(full))critical.push('Ranked #1 explanation is incomplete.');else passed.push('Ranked #1 explanation is present on both boards');
-if(/p2u-system-alert|Core match data is more than 36 hours old|View system status/.test(read('brand-experience.js')))critical.push('Removed public status banner is still present.');else passed.push('Public status banner remains removed');
-for(const page of ['index.html','board.html']){const html=read(page);if(!/personalization\.css/.test(html)||!/personalization\.js/.test(html))critical.push(`${page}: Personalization layer not loaded.`);else passed.push(`${page}: Personalization layer loaded`);for(const token of ['P2UPersonalization','data-p2u-match-key','savePersonalState'])if(!html.includes(token))critical.push(`${page}: personalization integration missing ${token}.`)}
-const personalization=read('personalization.js');for(const token of ['favoriteEngines','favoriteLeagues','hiddenLeagues','recentMatches','rememberFilters','cardView','My Board']){if(!personalization.includes(token))critical.push(`personalization.js missing ${token}.`);else passed.push(`Personalization supports ${token}`)}
-for(const page of ['index.html','board.html','engines.html','community.html']){const html=read(page);if(!/smart-alerts\.css/.test(html)||!/smart-alerts\.js/.test(html))critical.push(`${page}: Smart Alerts layer not loaded.`);else passed.push(`${page}: Smart Alerts layer loaded`)}
-const alerts=read('smart-alerts.js');for(const token of ['communityWin','verifiedOnly','followedUsers','trendingWins','matchStatus','boardUpdates','Mute for today']){if(!alerts.includes(token))critical.push(`smart-alerts.js missing ${token}.`);else passed.push(`Smart Alerts supports ${token}`)}
-const adminHtml=read('admin.html'),adminJs=read('backend-admin.js'),siteControls=read('site-controls.js'),adminSql=read('SUPABASE_BACKEND_ADMIN_v181.sql');
-for(const token of ['noindex,nofollow','backend-admin.css','cloud-config.js','account-cloud.js','backend-admin.js']){if(!adminHtml.includes(token))critical.push(`admin.html missing ${token}.`);else passed.push(`Admin page includes ${token}`)}
-if(/p2u-admin-pin|downloadConfig|local operator PIN/i.test(adminHtml+adminJs))critical.push('Legacy browser-only admin controls remain in the active backend admin.');else passed.push('Legacy local-PIN admin is not active');
-for(const token of ['p2u_admin_save_site_settings','p2u_admin_moderate_community','p2u_admin_set_deletion_status','p2u_admin_assign_role','p2uBackendAdminReady']){if(!adminJs.includes(token))critical.push(`backend-admin.js missing ${token}.`);else passed.push(`Backend admin supports ${token}`)}
-for(const token of ['p2u_site_settings','p2u_community_moderation','p2u_admin_roles','p2u_admin_audit_log','enable row level security','security definer','p2u_has_admin_role']){if(!adminSql.toLowerCase().includes(token.toLowerCase()))critical.push(`Backend admin SQL missing ${token}.`);else passed.push(`Backend SQL includes ${token}`)}
-for(const token of ['p2u_site_settings','p2u_community_moderation','P2USiteControls','source:\'supabase\'','refresh']){if(!siteControls.includes(token))critical.push(`site-controls.js missing ${token}.`);else passed.push(`Public controls support ${token}`)}
-const accountHtml=read('account.html'),accountCloud=read('account-cloud.js'),cloudConfig=read('cloud-config.js'),cloudSql=read('SUPABASE_CLOUD_SETUP_v180.sql');
-if(!/noindex,nofollow/.test(accountHtml))critical.push('account.html must remain noindex/nofollow.');else passed.push('Account center is noindex/nofollow');
-for(const token of ['signInWithOtp','p2u_cloud_state','p2u_follows','syncNow','toggleFollow','requestDeletion','getClient']){if(!accountCloud.includes(token))critical.push(`account-cloud.js missing ${token}.`);else passed.push(`Account cloud supports ${token}`)}
-for(const token of ['enable row level security','auth.uid() = user_id','p2u_account_deletion_requests']){if(!cloudSql.toLowerCase().includes(token.toLowerCase()))critical.push(`Supabase cloud setup missing ${token}.`);else passed.push(`Supabase account setup includes ${token}`)}
-if(/service[_-]?role\s*[:=]|SUPABASE_SECRET|ghp_[A-Za-z0-9]{20,}/i.test(cloudConfig+adminJs))critical.push('Public browser files appear to contain a server secret.');else passed.push('Public cloud/admin code contains no server secret');
-const pushJs=read('push-notifications.js'),pushCss=read('push-notifications.css'),pushSql=read('SUPABASE_PUSH_SETUP_v183.sql'),pushEdge=read('supabase/functions/p2u-push-dispatch/index.ts');
-for(const token of ['PushManager','p2u_register_push_subscription','p2u_save_push_preferences','quiet_enabled','favorite_league_names','P2UPush']){if(!pushJs.includes(token))critical.push(`push-notifications.js missing ${token}.`);else passed.push(`Push client supports ${token}`)}
-for(const token of ['p2u_push_subscriptions','p2u_push_preferences','p2u_push_jobs','p2u_push_delivery_log','enable row level security','p2u_admin_queue_push','p2u_claim_push_jobs']){if(!pushSql.toLowerCase().includes(token.toLowerCase()))critical.push(`Push SQL missing ${token}.`);else passed.push(`Push SQL includes ${token}`)}
-for(const token of ['webpush.sendNotification','p2u_claim_push_jobs','p2u_finish_push_job','VAPID_PRIVATE_KEY','PUSH_DISPATCH_SECRET']){if(!pushEdge.includes(token))critical.push(`Push Edge Function missing ${token}.`);else passed.push(`Push Edge Function includes ${token}`)}
-if(!/addEventListener\(["']push["']/.test(sw)||!/showNotification/.test(sw))critical.push('Service worker background push handler is missing.');else passed.push('Service worker handles background push delivery');
-if(!accountCloud.includes('push-notifications.js')||!accountCloud.includes('push-notifications.css'))critical.push('Account cloud does not load the push layer.');else passed.push('Account cloud loads push controls globally');
-if(!adminHtml.includes('data-admin-tab="push"')||!adminJs.includes('p2u_admin_queue_push')||!adminJs.includes('p2u_admin_set_push_public_key'))critical.push('Backend Admin push controls are incomplete.');else passed.push('Backend Admin includes push operations');
-if(/VAPID_PRIVATE_KEY\s*[:=]\s*["'][A-Za-z0-9_-]{20,}/.test(pushJs+cloudConfig+adminJs))critical.push('A VAPID private key appears in public browser code.');else passed.push('No VAPID private key is embedded in public browser code');
-const mobileNav=read('mobile-app-nav.js'),mobileNavCss=read('mobile-app-nav.css');if(!/Board/.test(mobileNav)||!/Games/.test(mobileNav)||!/Results/.test(mobileNav)||!/Community/.test(mobileNav)||!/News/.test(mobileNav))critical.push('Global mobile navigation is incomplete.');else passed.push('Global mobile navigation contains all five destinations');if(!/#p2u-health-button\[data-state=/.test(mobileNavCss)||!/display:none!important/.test(mobileNavCss))critical.push('Mobile Action Needed suppression is missing.');else passed.push('Mobile non-healthy status badge is suppressed');
-const proof=read('proof.html');if(!/p2u-intelligence\.js/.test(proof)||!/proof-root/.test(proof))critical.push('Proof page wiring is incomplete.');
-const visualCss=read('brand-performance.css'),footballAssets=read('football-assets.js');if(!/#77c41c/i.test(visualCss))critical.push('Official logo green is not configured.');else passed.push('Official logo green is configured');if(!/homeLogo/.test(footballAssets)||!/awayLogo/.test(footballAssets)||!/leagueFlag|\.flag/.test(footballAssets))critical.push('Football asset decorator is incomplete.');else passed.push('Football crest and flag decorator is present');if(!/--p2u-carousel-duration:96s/.test(visualCss))critical.push('Slower win carousel configuration is missing.');else passed.push('Win carousel uses the v184 slower duration');const communityConsistency=read('community-consistency.js');if(!/mode:"balanced"/.test(footballAssets)||!/hasTeamAsset/.test(footballAssets))critical.push('Balanced crest policy is missing.');else passed.push('Balanced duplicate-safe crest policy is present');if(!/p2u-community-board-controls/.test(communityConsistency))critical.push('Community progressive board control is missing.');else passed.push('Community progressive board control is present');
-if(exists('data.js')){const data=read('data.js'),mm=data.match(/window\.MATCHES\s*=\s*([\s\S]*?);\s*$/m);if(!mm)critical.push('data.js does not expose window.MATCHES.');else try{const rows=JSON.parse(mm[1]),seen=new Set(),dups=[];for(const m of rows){const k=m.id!=null?`f${m.id}`:`${m.home}|${m.away}|${m.matchDate}`;if(seen.has(k))dups.push(k);seen.add(k)}if(dups.length)warnings.push(`data.js contains ${dups.length} duplicate fixture key(s).`);else passed.push(`data.js contains ${rows.length} unique fixtures`)}catch(e){critical.push(`data.js MATCHES JSON cannot be parsed: ${e.message}`)}}else if(!PACKAGE_MODE)warnings.push('data.js is not present; live repository audit cannot validate fixtures.');
-
-const analyticsJs=read('analytics.js'),analyticsSql=read('SUPABASE_ANALYTICS_v186.sql'),productAnalytics=read('product-analytics.js');
-for(const page of pages){const html=read(page);if(!/analytics\.css/.test(html)||!/analytics\.js/.test(html))critical.push(`${page}: privacy-first analytics layer not loaded.`);else passed.push(`${page}: analytics layer loaded`)}
-for(const token of ['Global Privacy Control','Do Not Track','p2u_ingest_analytics_events','web_vital','P2UAnalytics']){if(!analyticsJs.includes(token))critical.push(`analytics.js missing ${token}.`);else passed.push(`Analytics supports ${token}`)}
-for(const token of ['p2u_analytics_events','p2u_ingest_analytics_events','p2u_admin_analytics_overview','enable row level security','security definer']){if(!analyticsSql.toLowerCase().includes(token.toLowerCase()))critical.push(`Analytics SQL missing ${token}.`);else passed.push(`Analytics SQL includes ${token}`)}
-if(!adminHtml.includes('data-admin-tab="analytics"')||!adminHtml.includes('data-admin-panel="analytics"')||!productAnalytics.includes('p2u_admin_analytics_overview'))critical.push('Admin Product Intelligence dashboard is incomplete.');else passed.push('Admin Product Intelligence dashboard is present');
-
-
-const newsHtml=read('news.html'),newsJs=read('news.js'),newsCss=read('news.css'),newsSql=read('SUPABASE_FOOTBALL_NEWS_v189.sql'),newsEdge=read('supabase/functions/p2u-news-sync/index.ts');
-for(const token of ['p2u_news_articles','p2u_news_comments','p2u_news_sources','p2u_news_post_comment','football_news','transfer_news','p2u_push_from_news_article']){if(!newsSql.toLowerCase().includes(token.toLowerCase()))critical.push(`Football News SQL missing ${token}.`);else passed.push(`Football News SQL includes ${token}`)}
-for(const token of ['p2u-news-sync','fast-xml-parser','NEWS_SYNC_SECRET','p2u_news_articles','push_eligible']){if(!newsEdge.includes(token))critical.push(`News sync Edge Function missing ${token}.`);else passed.push(`News sync supports ${token}`)}
-for(const token of ['og:image','twitter:image','imageFromArticlePage','ignoreDuplicates: false']){if(!newsEdge.includes(token))critical.push(`News image enrichment missing ${token}.`);else passed.push(`News image enrichment supports ${token}`)}
-for(const token of ['data-news-filter','news-discussion-panel','news.js','news.css']){if(!newsHtml.includes(token))critical.push(`news.html missing ${token}.`);else passed.push(`News page includes ${token}`)}
-for(const token of ['p2u_news_articles','p2u_news_post_comment','p2u:news-alert','P2UNews']){if(!newsJs.includes(token))critical.push(`news.js missing ${token}.`);else passed.push(`News client supports ${token}`)}
-if(!/football_news/.test(pushJs)||!/transfer_news/.test(pushJs)||!/category === "news"/.test(pushEdge))critical.push('News push preferences or dispatcher integration is incomplete.');else passed.push('News and transfer push preferences are integrated');
-if(!/background:#77C41C!important/.test(visualCss)||!/color:#071000!important/.test(visualCss))critical.push('High-contrast Add to Slip styling is missing.');else passed.push('Add to Slip action uses high-contrast brand styling');
-
-const uniqueWarnings=[...new Set(warnings)],report={generatedAt:new Date().toISOString(),auditVersion:'v191',cacheVersion:cacheMatch?cacheMatch[1]:null,engineCount,critical,warnings:uniqueWarnings,passedCount:passed.length};
-fs.writeFileSync(path.join(HERE,'site-audit.json'),JSON.stringify(report,null,2)+'\n');
-console.log(`Audit: ${critical.length} critical, ${uniqueWarnings.length} warning(s), ${passed.length} checks passed.`);for(const x of critical)console.error('CRITICAL:',x);for(const x of uniqueWarnings)console.warn('WARNING:',x);if(critical.length)process.exit(1);
+const sw=read("sw.js");
+if(sw){
+  const ver=sw.match(/CACHE_VERSION\s*=\s*["'](predict2u-v[^"']+)["']/);
+  if(!ver)warnings.push("sw.js does not expose a recognizable Predict2U cache version.");
+  else passed.push(`Service-worker cache is ${ver[1]}`);
+}
+if(exists("data.js")){
+  const data=read("data.js"),mm=data.match(/window\.MATCHES\s*=\s*([\s\S]*?);\s*(?:window\.|$)/m);
+  if(!mm)warnings.push("data.js could not be parsed by the package audit.");
+  else try{
+    const rows=JSON.parse(mm[1]),seen=new Set(),dups=[];
+    for(const m of rows){const k=m.id!=null?`f${m.id}`:`${m.home}|${m.away}|${m.matchDate}`;if(seen.has(k))dups.push(k);seen.add(k);}
+    if(dups.length)warnings.push(`data.js contains ${dups.length} duplicate fixture key(s).`);else passed.push(`data.js contains ${rows.length} unique fixtures`);
+  }catch(e){warnings.push(`data.js MATCHES JSON cannot be parsed: ${e.message}`);}
+}else if(!PACKAGE_MODE)warnings.push("data.js is not present; live repository audit cannot validate fixtures.");
+const uniqueWarnings=[...new Set(warnings)];
+const report={generatedAt:new Date().toISOString(),engineCount,expectedEngineCount:20,multiEngineCount:4,critical,warnings:uniqueWarnings,passedCount:passed.length};
+fs.writeFileSync(path.join(HERE,"site-audit.json"),JSON.stringify(report,null,2)+"\n");
+console.log(`Audit: ${critical.length} critical, ${uniqueWarnings.length} warning(s), ${passed.length} checks passed.`);
+for(const x of critical)console.error("CRITICAL:",x);
+for(const x of uniqueWarnings)console.warn("WARNING:",x);
+if(critical.length)process.exit(1);

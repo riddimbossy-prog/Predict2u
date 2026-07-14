@@ -1,11 +1,36 @@
-REPLACE:
-  merge-fixture-shards.js
-  verify-week-data.js
-  .github/workflows/future-fixtures.yml
+PREDICT2U MULTI-ENGINE v243 — FINAL REPLACEMENT LIST
 
-KEEP:
-  data.js (the workflow will regenerate it)
-  discover-all-games.js
-  fetch-data.js
+ADD:
   multi-engine-suite.js
-  all GitHub secrets
+  config/engine-weights.json
+  config/league-profile-example.json
+  config/no-bet-reasons.json
+  docs/*
+  schemas/*
+  pseudocode/*
+  tests/multi-engine-suite.test.js
+  tests/Test_Plan.md
+
+REPLACE:
+  board.html
+  bankers.html
+  engines.html
+  proof.html
+  scorecards.html
+  league-dna.html
+  community.html
+  trust.html
+  audit-site.js
+  generate-site-health.js
+
+KEEP — DO NOT DELETE OR REPLACE:
+  banker-engine.js
+  data.js
+  community.js
+  config.txt
+  .github/workflows/future-fixtures.yml
+  GitHub secrets
+
+RESULT:
+  16 existing engines + 4 new engines = 20 public engines.
+  Decision Core remains an orchestrator and is not counted as an engine.

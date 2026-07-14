@@ -134,7 +134,7 @@ body{font-family:Inter,system-ui,sans-serif}
 <main class="wrap">
 <section class="trust-callout"><div class="row between wraprow"><div><div class="label">Core promise</div><h2 class="display" style="font-size:30px;margin:6px 0 0">Every pick has proof.</h2></div><a class="btn primary" href="proof.html">Open Proof Mode</a></div><p class="ink2" style="margin-bottom:0">A prediction should be inspectable: which engines supported it, which engines abstained, what data was present, where conflict existed, and how the result settled.</p></section>
 <section class="section"><div class="trust-grid">
-<article class="trust-card"><div class="trust-number">1</div><h2>How predictions are generated</h2><p>Sixteen engines analyse the same fixture from different perspectives, including PPG strength, league tendencies, streaks, mismatch structure, halves, momentum, odds intelligence and value.</p><ul><li>One qualified market per engine</li><li>Strict thresholds and explicit No Bet outcomes</li><li>Exact-market agreement counted separately from fixture agreement</li></ul></article>
+<article class="trust-card"><div class="trust-number">1</div><h2>How predictions are generated</h2><p>Twenty engines analyse the same fixture from different perspectives, including PPG strength, league tendencies, streaks, mismatch structure, halves, momentum, odds intelligence and value.</p><ul><li>One qualified market per engine</li><li>Strict thresholds and explicit No Bet outcomes</li><li>Exact-market agreement counted separately from fixture agreement</li></ul></article>
 <article class="trust-card"><div class="trust-number">2</div><h2>What confidence means</h2><p>Confidence is a rule-strength score produced by an engine. It is not a guarantee and should not be read as a promised probability unless a forward-calibrated probability interval is explicitly shown.</p><ul><li>Data quality is displayed separately</li><li>Small samples remain labelled</li><li>Calibration requires forward-settled evidence</li></ul></article>
 <article class="trust-card"><div class="trust-number">3</div><h2>Why matches receive No Bet</h2><p>No Bet is a successful filter decision, not a missing prediction. Common reasons include weak samples, engine conflict, insufficient opponent strength, unavailable line movement or a market failing the engine threshold.</p></article>
 <article class="trust-card"><div class="trust-number">4</div><h2>How results are settled</h2><p>Predictions are settled from final fixture scores using the same shared settlement function across engines, result graphics, tracking logs and public slips. Live matches remain open until the provider marks them finished.</p></article>
@@ -152,7 +152,7 @@ body{font-family:Inter,system-ui,sans-serif}
 </main>
 <footer class="footer"><div class="wrap row between wraprow"><span>© Predict2U 2026 · Trust Center</span><span><a class="em" href="responsible-gambling.html">Responsible Gambling</a> · <a class="em" href="terms.html">Terms</a> · <a class="em" href="privacy.html">Privacy</a> · <a class="em" href="disclaimer.html">Disclaimer</a></span></div></footer>
 <script src="learning-supervisor.js"></script><script src="governance-supervisor.js"></script><script src="engine-consensus.js"></script><script src="match-context-intelligence.js"></script><script src="context-supervisor.js"></script>
-<script src="banker-engine.js"></script><script src="data.js"></script><script src="brand-experience.js" defer></script>
+<script src="banker-engine.js"></script><script src="multi-engine-suite.js"></script><script src="data.js"></script><script src="brand-experience.js" defer></script>
 <script src="site-health-widget.js" defer></script>
 <script>
 (function(){
@@ -161,7 +161,7 @@ body{font-family:Inter,system-ui,sans-serif}
   async function load(){
     box.innerHTML='<div class="status-cell"><div class="k">Status</div><div class="v">Checking…</div></div>';
     let h={};try{const r=await fetch(`site-health.json?t=${Date.now()}`,{cache:'no-store'});if(r.ok)h=await r.json();}catch(_){}
-    const rows=[['Status',h.label||'Checking browser data'],['Core data',age(h.dataUpdated||window.DATA_UPDATED)],['Live scores',age(h.scoresUpdated||window.SCORES_UPDATED)],['Engine registry',`${h.engineCount||(window.P2U_ENGINE_REGISTRY||[]).length||16}/16`],['Fixtures',String(h.matchCount||(window.MATCHES||[]).length||0)],['Live fixtures',String(h.liveMatches||0)],['Build',h.version||'v157'],['Health generated',age(h.generatedAt)]];
+    const rows=[['Status',h.label||'Checking browser data'],['Core data',age(h.dataUpdated||window.DATA_UPDATED)],['Live scores',age(h.scoresUpdated||window.SCORES_UPDATED)],['Engine registry',`${h.engineCount||(window.P2U_ENGINE_REGISTRY||[]).length||20}/20`],['Fixtures',String(h.matchCount||(window.MATCHES||[]).length||0)],['Live fixtures',String(h.liveMatches||0)],['Build',h.version||'v157'],['Health generated',age(h.generatedAt)]];
     box.innerHTML=rows.map(([k,v])=>`<div class="status-cell"><div class="k">${k}</div><div class="v">${v}</div></div>`).join('');
   }
   btn.addEventListener('click',load);load();
