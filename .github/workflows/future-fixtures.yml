@@ -201,7 +201,7 @@ jobs:
           path: discovery
 
       - name: Merge every shard
-        run: node merge-fixture-shards.js shards discovery/all-games-discovery.json
+        run: node merge-fixture-shards.js shards discovery/all-games-discovery.json discovery/all-games-fixtures.json
 
       - name: Enrich merged data with Stats API
         env:
@@ -214,7 +214,7 @@ jobs:
 
       - name: Verify seven-day coverage
         env:
-          P2U_MIN_DISCOVERY_COVERAGE: "0.95"
+          P2U_MIN_DISCOVERY_COVERAGE: "1"
         run: node verify-week-data.js
 
       - name: Generate public health snapshot
@@ -237,6 +237,7 @@ jobs:
             api-cache.json \
             all-games-discovery.json \
             week-fixture-report.json \
+            fixture-coverage-report.json \
             team-profiles.json \
             odds-calib.json \
             model-calibration.json \

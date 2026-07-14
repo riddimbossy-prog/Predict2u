@@ -1,6 +1,11 @@
-discover-all-games.js
-fetch-data.js
-verify-week-data.js
-.github/workflows/future-fixtures.yml
-board.html
-bankers.html
+REPLACE:
+  merge-fixture-shards.js
+  verify-week-data.js
+  .github/workflows/future-fixtures.yml
+
+KEEP:
+  data.js (the workflow will regenerate it)
+  discover-all-games.js
+  fetch-data.js
+  multi-engine-suite.js
+  all GitHub secrets
