@@ -1,0 +1,103 @@
+name: Predict2U Site Quality
+on:
+  push:
+    branches: [ main, master ]
+  pull_request:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  audit-and-mobile:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: "24"
+
+      - name: Verify quality-test files
+        shell: bash
+        run: |
+          test -f package.json
+          test -f playwright.config.js
+          test -f tests/mobile-layout.spec.js
+          test -f audit-site.js
+          test -f intelligence.css
+          test -f site-health.css
+          test -f performance-freshness.css
+          test -f performance-freshness.js
+          test -f personalization.css
+          test -f personalization.js
+          test -f tests/personalization.spec.js
+          test -f smart-alerts.css
+          test -f smart-alerts.js
+          test -f tests/smart-alerts.spec.js
+          test -f admin.html
+          test -f admin-control.css
+          test -f admin-control.js
+          test -f admin-config.js
+          test -f site-controls.css
+          test -f site-controls.js
+          test -f tests/admin-control.spec.js
+          test -f account.html
+          test -f profile.html
+          test -f cloud-config.js
+          test -f account-cloud.css
+          test -f account-cloud.js
+          test -f SUPABASE_CLOUD_SETUP_v180.sql
+          test -f tests/account-cloud.spec.js
+          test -f learning-supervisor.js
+          test -f engine-learning.js
+          test -f engine-learning-selftest.js
+          test -f engine-learning-admin.js
+          test -f engine-learning-admin.css
+          test -f engine-learning-ui.css
+          test -f tests/engine-learning.spec.js
+          test -f performance-budget.js
+          test -f tests/performance-freshness.spec.js
+          test -f trust.html
+          test -f pwa-launch.js
+          test -f pwa-launch.css
+          test -f offline.html
+          test -f app-readiness-admin.js
+          test -f app-readiness-admin.css
+          test -f pwa-selftest.js
+          test -f tests/pwa-readiness.spec.js
+          echo "Quality-test and shared UI files found. npm cache is intentionally disabled because this repository has no lock file."
+
+      - name: Install quality tools
+        run: npm install --no-audit --no-fund --package-lock=false
+      - name: Run repository completeness preflight
+        run: node repository-preflight.js
+
+      - name: Run deterministic performance budget
+        run: node performance-budget.js
+
+      - name: Run engine learning self-test
+        run: node engine-learning-selftest.js
+
+      - name: Run PWA readiness self-test
+        run: node pwa-selftest.js
+
+      - name: Generate public health snapshot
+        run: node generate-site-health.js
+      - name: Run repository consistency audit
+        run: node audit-site.js
+      - name: Install Chromium
+        run: npx playwright install --with-deps chromium
+      - name: Run mobile and desktop regression tests
+        run: npx playwright test
+      - name: Upload test report on failure
+        if: failure()
+        uses: actions/upload-artifact@v4
+        with:
+          name: predict2u-quality-report
+          if-no-files-found: ignore
+          path: |
+            playwright-report
+            test-results
+            site-audit.json
+            site-health.json
+            performance-budget.json

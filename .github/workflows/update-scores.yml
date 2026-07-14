@@ -1,0 +1,118 @@
+# v248: legacy workflow kept for emergency manual use only.
+name: Update scores (fast)
+# Lightweight: updates ONLY match scores/status from the API every 15 minutes,
+# so finished games settle quickly without waiting for the slow full fetch.
+# Does NOT refetch stats/odds/standings. Runs in ~1-2 minutes.
+on:
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+# CONCURRENCY (fixed): this scheduled job runs in its OWN group so it can never
+# cancel a manual "Publish daily image" deploy that is mid-flight. If a scores
+# run is already going, a new scores run just waits (does not pile up), and it
+# never touches the publish lane. This ends the "higher priority waiting
+# request for pages-deploy" cancellations.
+concurrency:
+  group: predict2u-data-write
+  cancel-in-progress: false
+jobs:
+  scores:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out the repository
+        uses: actions/checkout@v4
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+      - name: Inject secret keys into config.txt (preserve committed LEAGUES etc.)
+        run: |
+          # The repo's committed config.txt holds LEAGUES, SEASON, DAYS_*, budgets.
+          # We must NOT overwrite it — only append the secret API keys so the
+          # fetcher has credentials. Appended keys win (parser takes last value).
+          if [ ! -f config.txt ]; then echo "WARNING: config.txt missing from repo"; fi
+          {
+            echo "";
+            echo "API_KEY=${{ secrets.API_KEY }}";
+            echo "STATS_API_KEY=${{ secrets.STATS_API_KEY }}";
+          } >> config.txt
+
+      - name: Update scores only
+        run: node fetch-scores.js || echo "scores update skipped"
+      - name: Update forward tracker (settle + record bankers)
+        run: node track-log.js || echo "track-log skipped"
+      - name: Restore clean config.txt before commit
+        run: |
+          # config.txt was modified in-place (secret keys appended). It must NOT be
+          # committed AND must not be left dirty, or the rebase below aborts with
+          # exit 128 ("cannot rebase: you have unstaged changes"). Restore the
+          # committed version from HEAD; if it isn't tracked, just remove it.
+          if git ls-files --error-unmatch config.txt >/dev/null 2>&1; then
+            git checkout HEAD -- config.txt
+          else
+            rm -f config.txt
+          fi
+          git status --porcelain config.txt || true
+      - name: Commit updated scores (if changed)
+        run: |
+          git config user.name "predicto-bot"
+          git config user.email "bot@users.noreply.github.com"
+          if [ -z "$(git status --porcelain data.js track-log.json)" ]; then
+            echo "No changes."; exit 0
+          fi
+          # Add each output individually. A single `git add` with both paths dies
+          # with exit 128 if either doesn't exist (e.g. track-log.json missing
+          # because track-log.js was skipped). Guard per path, confirm staged.
+          for p in data.js track-log.json; do
+            git add -- "$p" 2>/dev/null || echo "note: $p not present - skipped"
+          done
+          if git diff --staged --quiet; then echo "Nothing staged."; exit 0; fi
+          git commit -m "Update scores + forward tracker"
+          # Guarantee a CLEAN tree before rebase. Anything not part of this commit
+          # (restored config.txt, node_modules, stray build files) is discarded here
+          # so `git rebase` can't abort with exit 128 on a dirty tree.
+          git stash -u 2>/dev/null || true
+          git stash drop 2>/dev/null || true
+          # data.js / track-log.json are GENERATED — on a race with the full data
+          # fetch, take OUR fresh copy. NOTE: during a rebase, --ours/--theirs are
+          # INVERTED (--ours = origin's side), so the old `git checkout --ours`
+          # kept the STALE remote files. `git rebase -X theirs` favors THIS run's.
+          PUSHED=0
+          for i in 1 2 3 4 5; do
+            git fetch origin main
+            if ! git rebase -X theirs origin/main; then
+              echo "Rebase failed even with -X theirs — aborting and retrying."
+              git rebase --abort 2>/dev/null || true
+              sleep $((5 * i)); continue
+            fi
+            if git push origin HEAD:main; then echo "pushed (attempt $i)."; PUSHED=1; break; fi
+            echo "Push attempt $i failed (remote moved) — syncing and retrying..."; sleep $((5 * i))
+          done
+          if [ "$PUSHED" != "1" ]; then
+            echo "ERROR: failed to push after 5 attempts — updates NOT published."
+            exit 1
+          fi
+      - name: Configure Pages
+        uses: actions/configure-pages@v5
+      - name: Upload site as Pages artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: "."
+  deploy:
+    needs: scores
+    runs-on: ubuntu-latest
+    # This deploy shares the DEPLOY lane with the manual publish, but WAITS for
+    # an in-flight publish instead of cancelling it (cancel-in-progress:false).
+    concurrency:
+      group: "pages-deploy"
+      cancel-in-progress: false
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4

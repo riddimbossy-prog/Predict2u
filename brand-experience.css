@@ -1,0 +1,105 @@
+/* Predict2U Brand & Experience v157 */
+:root{--brand-green:#34d399;--brand-blue:#229ED9;--brand-live:#ff5c67;--brand-pending:#fbbf24;--brand-bg:#08090d;--brand-card:#11131a;--brand-line:#252936;--brand-muted:#8a93a6}
+.p2u-system-alert{display:none;width:min(1240px,calc(100% - 32px));margin:12px auto 0;border-radius:16px;padding:12px 14px;align-items:center;justify-content:space-between;gap:14px;border:1px solid rgba(251,191,36,.3);background:rgba(251,191,36,.09);color:#f8dfa2;font:600 12px/1.45 Inter,system-ui,sans-serif}.p2u-system-alert.show{display:flex}.p2u-system-alert.critical{border-color:rgba(255,92,103,.36);background:rgba(255,92,103,.1);color:#ffd4d8}.p2u-system-alert a{color:var(--brand-green);font-weight:800;white-space:nowrap}.p2u-system-alert button{border:0;background:transparent;color:inherit;cursor:pointer;font-weight:800}
+.p2u-onboard-backdrop{position:fixed;inset:0;z-index:120;background:rgba(0,0,0,.78);display:grid;place-items:center;padding:18px;backdrop-filter:blur(10px)}.p2u-onboard{width:min(760px,100%);border:1px solid var(--brand-line);border-radius:28px;background:linear-gradient(145deg,#11141a,#0b0d12);box-shadow:0 30px 90px rgba(0,0,0,.7);padding:28px;color:#f7f8fa}.p2u-onboard-logo{height:54px;width:auto;max-width:240px;object-fit:contain}.p2u-onboard h2{font:700 clamp(30px,6vw,48px)/1.03 'Space Grotesk',Inter,sans-serif;letter-spacing:-.04em;margin:24px 0 10px}.p2u-onboard p{color:#b9bec9;font-size:15px;max-width:620px}.p2u-steps{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;margin:22px 0}.p2u-step{border:1px solid var(--brand-line);border-radius:17px;background:#0e1016;padding:15px}.p2u-step b{display:block;color:var(--brand-green);font-size:12px;margin-bottom:7px}.p2u-step span{color:#e5e7eb;font-size:13px;line-height:1.45}.p2u-onboard-actions{display:flex;gap:10px;flex-wrap:wrap}.p2u-onboard-actions a,.p2u-onboard-actions button{border-radius:14px;padding:12px 16px;font-weight:800;font-size:13px;cursor:pointer;text-decoration:none}.p2u-onboard-primary{background:var(--brand-green);color:#052e22;border:1px solid var(--brand-green)}.p2u-onboard-secondary{background:transparent;color:#f7f8fa;border:1px solid var(--brand-line)}.p2u-onboard-note{font-size:10px!important;color:#737b8a!important;margin:14px 0 0!important}
+.p2u-rank-card{border:1px solid rgba(52,211,153,.28);background:linear-gradient(135deg,rgba(52,211,153,.10),rgba(52,211,153,.025));border-radius:22px;padding:18px;margin-top:14px}.p2u-rank-card h3{font:700 22px/1.2 'Space Grotesk',Inter,sans-serif;margin:4px 0 12px}.p2u-rank-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:9px}.p2u-rank-reason{border:1px solid rgba(52,211,153,.18);background:rgba(5,46,34,.18);border-radius:14px;padding:11px;color:#d7f9eb;font-size:12px;line-height:1.45}.p2u-rank-reason b{color:var(--brand-green)}
+.p2u-standard-card{display:flex;flex-direction:column;height:100%}.p2u-card-meta{display:flex;align-items:center;gap:7px;color:var(--brand-muted);font-size:11px;min-height:22px}.p2u-card-status{margin-left:auto}.p2u-card-teams{font-weight:800;font-size:17px;line-height:1.3;margin-top:9px}.p2u-card-market{margin-top:16px;color:var(--brand-green);font-weight:800}.p2u-card-signals{display:flex;flex-wrap:wrap;gap:6px;margin-top:10px}.p2u-signal{display:inline-flex;align-items:center;border:1px solid var(--brand-line);border-radius:999px;padding:5px 8px;color:#aeb5c1;font-size:10px;font-weight:800}.p2u-signal.agree{color:var(--brand-green);border-color:rgba(52,211,153,.27);background:rgba(52,211,153,.08)}.p2u-signal.conflict{color:var(--brand-live);border-color:rgba(255,92,103,.28);background:rgba(255,92,103,.08)}.p2u-signal.coverage{color:#d1d5db}.p2u-card-actions{display:flex;align-items:center;gap:8px;margin-top:auto;padding-top:15px;border-top:1px solid #1d2028}.p2u-proof-button{display:inline-flex;align-items:center;justify-content:center;gap:7px;border-radius:13px;padding:10px 13px;border:1px solid rgba(52,211,153,.28);background:rgba(52,211,153,.10);color:var(--brand-green);font-size:12px;font-weight:800;text-decoration:none}.p2u-live-red{color:var(--brand-live)!important}.p2u-pending-amber{color:var(--brand-pending)!important}.p2u-w{color:var(--brand-green)!important}.p2u-l{color:var(--brand-live)!important}
+.p2u-404{min-height:100vh;display:grid;place-items:center;background:radial-gradient(circle at 50% 30%,rgba(52,211,153,.11),transparent 34%),#08090d;color:#f7f8fa;padding:24px;text-align:center}.p2u-404-card{width:min(720px,100%);border:1px solid var(--brand-line);border-radius:30px;background:rgba(17,19,26,.94);padding:38px}.p2u-404-card img{height:72px;max-width:280px;object-fit:contain}.p2u-404-code{font:800 clamp(72px,18vw,150px)/.9 'Space Grotesk',Inter,sans-serif;color:var(--brand-green);letter-spacing:-.06em;margin:28px 0 15px}.p2u-404-actions{display:flex;justify-content:center;gap:10px;flex-wrap:wrap;margin-top:24px}
+@media(max-width:800px){.p2u-rank-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.p2u-steps{grid-template-columns:1fr}.p2u-onboard{padding:21px}.p2u-system-alert{width:calc(100% - 22px);align-items:flex-start}.p2u-system-alert a{white-space:normal}.p2u-rank-card{border-radius:18px;padding:15px}}
+@media(max-width:480px){.p2u-rank-grid{grid-template-columns:1fr}.p2u-onboard-actions>*{width:100%;text-align:center}.p2u-404-card{padding:25px 18px;border-radius:22px}}
+@media(prefers-reduced-motion:reduce){.p2u-onboard-backdrop{backdrop-filter:none}}
+
+
+/* Predict2U Mobile Assurance v158 */
+.p2u-onboard-backdrop{padding:calc(18px + env(safe-area-inset-top)) calc(18px + env(safe-area-inset-right)) calc(18px + env(safe-area-inset-bottom)) calc(18px + env(safe-area-inset-left))}
+.p2u-onboard{max-height:calc(100dvh - 36px - env(safe-area-inset-top) - env(safe-area-inset-bottom));overflow:auto;overscroll-behavior:contain}
+.p2u-standard-card,.p2u-rank-card,.p2u-rank-reason,.p2u-step{min-width:0;overflow-wrap:anywhere}
+.p2u-card-actions{flex-wrap:wrap}.p2u-card-actions>*{min-width:0}.p2u-proof-button{flex:1 1 auto}
+.p2u-system-alert{overflow-wrap:anywhere}
+.p2u-404{padding:calc(24px + env(safe-area-inset-top)) calc(24px + env(safe-area-inset-right)) calc(24px + env(safe-area-inset-bottom)) calc(24px + env(safe-area-inset-left))}
+
+/* Galaxy Z Fold cover / very narrow phones */
+@media(max-width:360px){
+  .p2u-onboard-backdrop{padding:10px}
+  .p2u-onboard{padding:17px;border-radius:20px;max-height:calc(100dvh - 20px)}
+  .p2u-onboard-logo{height:42px;max-width:190px}
+  .p2u-onboard h2{font-size:30px;margin-top:18px}
+  .p2u-step{padding:12px}
+  .p2u-rank-card{padding:13px;border-radius:16px}
+  .p2u-card-actions{gap:6px}
+  .p2u-card-actions>*{flex:1 1 100%;justify-content:center;text-align:center}
+  .p2u-system-alert{width:calc(100% - 16px);margin-top:8px;padding:10px 11px}
+  .p2u-404{padding:12px}
+}
+
+/* Fold inner display and tablets */
+@media(min-width:600px) and (max-width:1024px){
+  .p2u-onboard{width:min(700px,calc(100% - 28px))}
+  .p2u-steps{grid-template-columns:repeat(3,minmax(0,1fr))}
+  .p2u-rank-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .p2u-card-actions{gap:8px}
+}
+
+/* Fold/tablet landscape with limited height */
+@media(max-height:720px) and (min-width:600px){
+  .p2u-onboard{padding:18px;max-height:calc(100dvh - 20px)}
+  .p2u-onboard-logo{height:40px}
+  .p2u-onboard h2{font-size:30px;margin:14px 0 8px}
+  .p2u-steps{margin:14px 0}
+  .p2u-step{padding:11px}
+}
+
+
+/* Predict2U v162 — narrow-screen overflow hardening */
+html,body{width:100%;max-width:100%;overflow-x:clip}
+img,svg,video,canvas{max-width:100%;height:auto}
+select,input,button,a{min-width:0}
+
+/* The Overview stats were still two columns on 280–360px screens. The long
+   7-day W/L line could become wider than its card and enlarge the document. */
+@media(max-width:360px){
+  #top > .grid.grid-cols-2{grid-template-columns:minmax(0,1fr)!important}
+  #top .t-num{font-size:46px!important;overflow-wrap:anywhere;word-break:normal}
+  #s-record{display:flex!important;align-items:baseline;flex-wrap:wrap;gap:3px 5px}
+
+  /* Keep the header within a Fold cover screen after safe-area padding. */
+  nav img[src*="predict2u-logo"]{height:38px!important;max-width:145px!important}
+  nav>div{width:100%!important;max-width:100%!important}
+  nav #user-chip{flex:0 0 auto}
+
+  /* Filters and hero actions may not preserve desktop intrinsic widths. */
+  #board .relative,#f-search,#f-league{width:100%!important;max-width:100%!important}
+  #top a[href="#board"],#top a[href*="t.me/"]{width:100%;justify-content:center;text-align:center}
+
+  /* Modal children must never contribute to document width. */
+  .p2u-onboard-backdrop,.p2u-onboard,.p2u-onboard *{max-width:100%}
+}
+
+@media(min-width:361px) and (max-width:420px){
+  #top .t-num{font-size:48px!important}
+  #s-record{display:flex!important;align-items:baseline;flex-wrap:wrap;gap:3px 5px}
+  nav img[src*="predict2u-logo"]{max-width:175px!important}
+  #board .relative,#f-search,#f-league{max-width:100%!important}
+}
+
+
+/* Predict2U v175: hard stop for 280–320px viewport overflow on Overview and Board. */
+@media (max-width:320px){
+  html,body{width:100%!important;max-width:100%!important;overflow-x:hidden!important}
+  body>*:not(.p2u-mobile-app-nav):not(.p2u-onboard-backdrop):not(.p2u-personalization-backdrop):not(.p2u-alert-backdrop){max-width:100vw!important}
+  main,section,header,nav,.wrap,.container,.max-w-7xl,.max-w-6xl,.max-w-5xl,.max-w-4xl{min-width:0!important;max-width:100%!important}
+  nav.sticky>div,header.top .top-inner{width:100%!important;max-width:100%!important;padding-left:10px!important;padding-right:10px!important}
+  nav img[src*="predict2u-logo"],header img[src*="predict2u-logo"]{max-width:132px!important;height:auto!important}
+  #date-strip{display:flex!important;width:100%!important;max-width:100%!important;min-width:0!important;margin-left:0!important;margin-right:0!important;padding-left:2px!important;padding-right:2px!important;overflow-x:auto!important;overflow-y:hidden!important;scrollbar-width:none}
+  #date-strip::-webkit-scrollbar{display:none}
+  #date-strip .date-chip{flex:0 0 72px!important;width:72px!important;min-width:72px!important;max-width:72px!important;padding-left:5px!important;padding-right:5px!important}
+  #engine-pills,.engine-pills,.filter-row,.filters{width:100%!important;max-width:100%!important;min-width:0!important;overflow-x:auto!important}
+  #f-search,#f-league,.p2u-personalization-bar,.p2u-personal-left,.p2u-view-switch{min-width:0!important;max-width:100%!important}
+  .p2u-personalization-bar{overflow:hidden!important;padding-left:8px!important;padding-right:8px!important}
+  .p2u-personal-left{grid-template-columns:minmax(0,1fr) minmax(0,1fr)!important}
+  .p2u-personal-summary{grid-column:1/-1;overflow-wrap:anywhere}
+  .p2u-mobile-app-nav__inner{padding-left:4px!important;padding-right:4px!important;gap:2px!important}
+  .p2u-mobile-app-nav a{padding-left:2px!important;padding-right:2px!important;font-size:10px!important}
+  .p2u-standard-card,.match-card,.acca-card,.card{min-width:0!important;max-width:100%!important;overflow:hidden}
+  .p2u-standard-card *,.match-card *,.acca-card *{min-width:0;overflow-wrap:anywhere}
+}
