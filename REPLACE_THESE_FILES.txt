@@ -1,16 +1,10 @@
-REPLACE:
-index.html
-unified-shell-v234.js
-unified-shell-v227.js
-unified-shell-v227.css
-sw.js
-manifest.webmanifest
+REPLACE
+.github/workflows/future-fixtures.yml
+merge-fixture-shards.js
+verify-week-data.js
 
-ADD:
-all-engines.html
-unified-shell-v245.js
-unified-shell-v245.css
-overview-engines-v245.css
-
-KEEP OR REPLACE:
+DO NOT REPLACE
+data.js
+config.txt
+community.js
 multi-engine-suite.js

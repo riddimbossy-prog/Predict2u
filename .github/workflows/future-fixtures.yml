@@ -217,6 +217,25 @@ jobs:
           P2U_MIN_DISCOVERY_COVERAGE: "1"
         run: node verify-week-data.js
 
+      - name: Confirm generated fixture reports
+        shell: bash
+        run: |
+          set -euo pipefail
+          required=(
+            data.js
+            all-games-discovery.json
+            fixture-coverage-report.json
+            week-fixture-report.json
+          )
+          for file in "${required[@]}"; do
+            if [[ ! -s "$file" ]]; then
+              echo "Missing or empty required output: $file"
+              exit 1
+            fi
+          done
+          echo "Generated fixture outputs:"
+          ls -lh "${required[@]}"
+
       - name: Generate public health snapshot
         run: node generate-site-health.js
         continue-on-error: true
@@ -232,29 +251,40 @@ jobs:
           git config user.name "Predict2U Fixture Bot"
           git config user.email "actions@users.noreply.github.com"
 
-          git add \
+          # Force-add generated JSON files even when the repository ignores
+          # generated reports in .gitignore.
+          git add -f -- \
             data.js \
             api-cache.json \
             all-games-discovery.json \
             week-fixture-report.json \
-            fixture-coverage-report.json \
-            team-profiles.json \
-            odds-calib.json \
-            model-calibration.json \
-            engine-learning-ledger.json \
-            engine-learning-report.json \
-            engine-consensus-report.json \
-            match-context-report.json \
-            model-governance-report.json \
-            model-governance-audit.json \
-            site-health.json \
-            site-audit.json 2>/dev/null || true
+            fixture-coverage-report.json
+
+          optional=(
+            team-profiles.json
+            odds-calib.json
+            model-calibration.json
+            engine-learning-ledger.json
+            engine-learning-report.json
+            engine-consensus-report.json
+            match-context-report.json
+            model-governance-report.json
+            model-governance-audit.json
+            site-health.json
+            site-audit.json
+          )
+          for file in "${optional[@]}"; do
+            [[ -e "$file" ]] && git add -f -- "$file"
+          done
+
+          echo "Files staged for publication:"
+          git status --short
 
           if git diff --cached --quiet; then
-            echo "No all-games changes to commit."
+            echo "Generated reports already match the repository. Nothing to commit."
             exit 0
           fi
 
-          git commit -m "Fast update of all seven-day fixtures"
+          git commit -m "Publish seven-day fixture data and reports"
           git pull --rebase
           git push
