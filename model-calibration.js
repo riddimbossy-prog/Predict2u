@@ -183,7 +183,7 @@ function attachToDataFile(dataFile=path.join(HERE,"data.js"),opts={}){
   if(!m)throw new Error("Could not parse window.MATCHES in "+dataFile);
   const matches=JSON.parse(m[1]);
   const result=attachModelCalibration(matches,opts);
-  const replacement=`window.MATCHES = ${JSON.stringify(matches,null,2)};`;
+  const replacement=`window.MATCHES = ${JSON.stringify(matches)};`;
   const out=raw.replace(/window\.MATCHES\s*=\s*[\s\S]*?;\s*$/m,replacement+"\n");
   fs.writeFileSync(dataFile,out,"utf8");
   return result;

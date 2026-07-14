@@ -56,6 +56,9 @@ jobs:
             rm -f config.txt
           fi
           git status --porcelain config.txt || true
+      - name: Compact generated match data
+        run: node compact-generated-data.js
+
       - name: Commit updated scores (if changed)
         run: |
           git config user.name "predicto-bot"

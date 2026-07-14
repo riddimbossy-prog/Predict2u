@@ -260,7 +260,7 @@ function loadMatches(){
   const out =
     `window.DATA_UPDATED = ${JSON.stringify(updated)};\n` +
     `window.ENRICHED_AT = "${new Date().toISOString()}";\n` +
-    `window.MATCHES = ${JSON.stringify(matches, null, 2)};\n`;
+    `window.MATCHES = ${JSON.stringify(matches)};\n`;
   fs.writeFileSync(path.join(HERE,"data.js"), out, "utf8");
   console.log(`Enrichment done: ${matchedGames} games matched, ${enriched} got real xG, ${multiBookMatches} got 4+ timestamped books, in ${calls} calls.`);
 })();

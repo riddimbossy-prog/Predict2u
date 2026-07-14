@@ -73,6 +73,15 @@ jobs:
         with:
           node-version: "20"
 
+      - name: Restore API response cache outside Git
+        if: env.HAS_WORK != 'false'
+        uses: actions/cache/restore@v4
+        with:
+          path: api-cache.json
+          key: p2u-api-cache-${{ runner.os }}-${{ github.run_id }}-${{ matrix.index }}
+          restore-keys: |
+            p2u-api-cache-${{ runner.os }}-
+
       - name: Download discovery manifest
         uses: actions/download-artifact@v4
         with:
@@ -206,6 +215,12 @@ jobs:
       - name: Merge every shard
         run: node merge-fixture-shards.js shards discovery/all-games-discovery.json discovery/all-games-fixtures.json
 
+      - name: Save merged API response cache outside Git
+        uses: actions/cache/save@v4
+        with:
+          path: api-cache.json
+          key: p2u-api-cache-${{ runner.os }}-${{ github.run_id }}
+
       - name: Enrich merged data with Stats API
         env:
           STATS_API_KEY: ${{ secrets.STATS_API_KEY }}
@@ -247,6 +262,9 @@ jobs:
         run: node audit-site.js
         continue-on-error: true
 
+      - name: Compact generated match data
+        run: node compact-generated-data.js
+
       - name: Commit updated all-games data
         shell: bash
         run: |
@@ -254,11 +272,11 @@ jobs:
           git config user.name "Predict2U Fixture Bot"
           git config user.email "actions@users.noreply.github.com"
 
-          # Force-add generated JSON files even when the repository ignores
-          # generated reports in .gitignore.
+          # api-cache.json is a runtime cache, not a publishable site file.
+          # Remove an older tracked copy, then publish only web/report outputs.
+          git rm --cached -f --ignore-unmatch api-cache.json 2>/dev/null || true
           git add -f -- \
             data.js \
-            api-cache.json \
             all-games-discovery.json \
             week-fixture-report.json \
             fixture-coverage-report.json
@@ -299,7 +317,12 @@ jobs:
               continue
             fi
             node repair-generated-conflicts.js
+            node compact-generated-data.js
+            git rm --cached -f --ignore-unmatch api-cache.json 2>/dev/null || true
             git add -f -- data.js track-log.json 2>/dev/null || true
+            if ! git diff --cached --quiet; then
+              git commit --amend --no-edit
+            fi
             if git push origin "HEAD:${GITHUB_REF_NAME}"; then
               pushed=1
               break

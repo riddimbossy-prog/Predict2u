@@ -111,7 +111,7 @@ function loadMatches(file=DATA_FILE){
   return{raw,matches:JSON.parse(m[1])};
 }
 function saveMatches(raw,matches,file=DATA_FILE){
-  const replacement=`window.MATCHES = ${JSON.stringify(matches,null,2)};`;
+  const replacement=`window.MATCHES = ${JSON.stringify(matches)};`;
   fs.writeFileSync(file,raw.replace(/window\.MATCHES\s*=\s*[\s\S]*?;\s*$/m,replacement+"\n"),"utf8");
 }
 function stat(){return{sample:0,wins:0,draws:0,losses:0,weight:0,winWeight:0,drawWeight:0,lossWeight:0};}

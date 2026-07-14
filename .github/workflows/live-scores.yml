@@ -82,6 +82,9 @@ jobs:
         run: node audit-site.js
         continue-on-error: true
 
+      - name: Compact generated match data
+        run: node compact-generated-data.js
+
       - name: Commit score snapshot
         shell: bash
         run: |
@@ -117,7 +120,11 @@ jobs:
               continue
             fi
             node repair-generated-conflicts.js
+            node compact-generated-data.js
             git add -f -- data.js track-log.json 2>/dev/null || true
+            if ! git diff --cached --quiet; then
+              git commit --amend --no-edit
+            fi
             if git push origin "HEAD:${GITHUB_REF_NAME}"; then
               pushed=1
               break

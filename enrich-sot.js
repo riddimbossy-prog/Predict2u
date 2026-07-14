@@ -134,7 +134,7 @@ function profile(ledger,id,league,venue){
     }
   }
   ledger.updated=new Date().toISOString();fs.writeFileSync(LEDGER,JSON.stringify(ledger,null,2),"utf8");
-  const out=raw.replace(/window\.MATCHES\s*=\s*[\s\S]*?;\s*$/m,`window.SOT_ENRICHED_AT = "${new Date().toISOString()}";\nwindow.MATCHES = ${JSON.stringify(matches,null,2)};\n`);
+  const out=raw.replace(/window\.MATCHES\s*=\s*[\s\S]*?;\s*$/m,`window.SOT_ENRICHED_AT = "${new Date().toISOString()}";\nwindow.MATCHES = ${JSON.stringify(matches)};\n`);
   fs.writeFileSync(path.join(HERE,"data.js"),out,"utf8");
   console.log(`SOT enrichment: ${collected} new fixture(s), ${attached} team-side profile attachment(s), ${calls}/${cfg.SOT_CALL_BUDGET} API calls.`);
 })().catch(e=>{console.error("enrich-sot:",e.message);process.exitCode=1;});

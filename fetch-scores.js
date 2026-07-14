@@ -222,7 +222,7 @@ function loadExistingMatches() {
   const out =
     `window.DATA_UPDATED = ${JSON.stringify(existingUpdated)};\n` +
     `window.SCORES_UPDATED = "${new Date().toISOString()}";\n` +
-    `window.MATCHES = ${JSON.stringify(matches, null, 2)};\n`;
+    `window.MATCHES = ${JSON.stringify(matches)};\n`;
   fs.writeFileSync(path.join(HERE, "data.js"), out, "utf8");
   try {
     const lr = engineLearning.runBuild();
