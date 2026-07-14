@@ -1,12 +1,11 @@
+# v248: legacy workflow kept for emergency manual use only.
 name: Update scores (fast)
 # Lightweight: updates ONLY match scores/status from the API every 15 minutes,
 # so finished games settle quickly without waiting for the slow full fetch.
 # Does NOT refetch stats/odds/standings. Runs in ~1-2 minutes.
 on:
-  schedule:
-    - cron: "*/15 * * * *"   # every 15 minutes (GitHub cron is best-effort;
-                              # also pinged by cron-job.org for reliability)
   workflow_dispatch: {}
+
 permissions:
   contents: write
   pages: write
@@ -17,7 +16,7 @@ permissions:
 # never touches the publish lane. This ends the "higher priority waiting
 # request for pages-deploy" cancellations.
 concurrency:
-  group: "pages-scores"
+  group: predict2u-data-write
   cancel-in-progress: false
 jobs:
   scores:

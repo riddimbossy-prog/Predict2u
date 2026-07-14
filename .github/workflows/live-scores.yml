@@ -52,6 +52,9 @@ jobs:
           DAYS_BACK=${DAYS_BACK:-1}
           EOF
 
+      - name: Repair generated files before score update
+        run: node repair-generated-conflicts.js
+
       - name: Fetch current scores and match minutes
         run: node fetch-scores.js
 
@@ -104,5 +107,21 @@ jobs:
           fi
 
           git commit -m "Update live scores and match clock"
-          git pull --rebase
-          git push
+
+          pushed=0
+          for attempt in 1 2 3 4 5; do
+            git fetch origin "${GITHUB_REF_NAME}"
+            if ! git rebase -X theirs "origin/${GITHUB_REF_NAME}"; then
+              git rebase --abort 2>/dev/null || true
+              sleep $((attempt * 5))
+              continue
+            fi
+            node repair-generated-conflicts.js
+            git add -f -- data.js track-log.json 2>/dev/null || true
+            if git push origin "HEAD:${GITHUB_REF_NAME}"; then
+              pushed=1
+              break
+            fi
+            sleep $((attempt * 5))
+          done
+          [[ "$pushed" == "1" ]] || { echo "Could not publish after five attempts."; exit 1; }

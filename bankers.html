@@ -256,6 +256,8 @@ a{ color:inherit; text-decoration:none; }
 <link rel="stylesheet" href="simple-ui-v232.css"/>
 <link rel="stylesheet" href="primary-nav-v234.css"/>
 <link rel="stylesheet" href="mobile-picks-week-v235.css"/>
+<link rel="stylesheet" href="fixture-feed-v247.css"/>
+<link rel="stylesheet" href="engine-bankers-v249.css"/>
 </head>
 <body>
 <script src="unified-shell-v234.js"></script>
@@ -297,7 +299,7 @@ a{ color:inherit; text-decoration:none; }
     </div>
     <div class="card p-5">
       <div class="flex items-start justify-between gap-2">
-        <div class="t-lbl">Consensus bankers</div>
+        <div class="t-lbl">Engine banker packs</div>
         <i class="fa-solid fa-gauge-high text-[15px]" style="color:var(--em)"></i>
       </div>
       <div class="t-num mt-3" id="s-bankers">—</div>
@@ -332,6 +334,8 @@ a{ color:inherit; text-decoration:none; }
 </header>
 
 <main class="max-w-[1240px] mx-auto px-6">
+
+  <section id="engine-bankers-v249" class="p2u-engine-accas" aria-label="Top picks from each prediction engine"></section>
   <section id="board" class="p2u-board-shell pb-16">
     <div class="p2u-board-head">
       <div class="p2u-board-heading">
@@ -494,10 +498,15 @@ a{ color:inherit; text-decoration:none; }
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 <script src="learning-supervisor.js"></script><script src="governance-supervisor.js"></script><script src="engine-consensus.js"></script><script src="match-context-intelligence.js"></script><script src="context-supervisor.js"></script>
 <script src="banker-engine.js"></script><script src="multi-engine-suite.js"></script>
+<script src="fixtures.js"></script>
 <script src="data.js"></script>
+<script src="fixture-overlay.js"></script>
 <script src="slip.js"></script>
 <script src="personalization.js"></script>
 <script src="p2u-intelligence.js"></script>
+<script src="engine-experience-v249.js"></script>
+<script src="engine-bankers-v249.js"></script>
+
 <script>
 /* ===========================================================================
    BOARD — the design, matched. The numbers, real.
@@ -1049,7 +1058,7 @@ a{ color:inherit; text-decoration:none; }
         </div>
       </button>`).join('');
     $('engines-grid').querySelectorAll('[data-eng]').forEach(b=>b.addEventListener('click',()=>{
-      location.href='engines.html?engine='+b.dataset.eng;
+      location.href='engine.html?engine='+b.dataset.eng;
     }));
   }
 
@@ -1057,10 +1066,17 @@ a{ color:inherit; text-decoration:none; }
     const activity=activityFor(dayMatches());
     const activeKeys=new Set(activity.active.map(x=>x.engine[0]));
     if(mode!=='top'&&mode!=='acca'&&!activeKeys.has(mode)) mode='top';
-    const modes=[['top','All Active Engines'],['acca','Today’s Acca']].concat(activity.active.map(x=>[x.engine[0],x.engine[1]]));
+    const modes=[['top','All Active Engines'],['acca','Engine Accas']].concat(activity.active.map(x=>[x.engine[0],x.engine[1]]));
     $('engine-pills').innerHTML=modes.map(([k,n])=>`<button class="pill${k===mode?' on':''}" data-mode="${k}">${esc(n)}</button>`).join('');
     $('engine-pills').querySelectorAll('[data-mode]').forEach(b=>b.addEventListener('click',()=>{
-      mode=b.dataset.mode; showAll=false; syncBoard(); renderPills(); renderCards();
+      const next=b.dataset.mode;
+      if(next!=='top'&&next!=='acca'){ location.href='engine.html?engine='+encodeURIComponent(next); return; }
+      if(next==='acca'&&IS_BANKERS_PAGE){
+        const target=document.getElementById('engine-bankers-v249');
+        if(target)target.scrollIntoView({behavior:'smooth',block:'start'});
+        return;
+      }
+      mode=next; showAll=false; syncBoard(); renderPills(); renderCards();
       history.replaceState(null,'','?engine='+mode); }));
   }
   function syncBoard(){

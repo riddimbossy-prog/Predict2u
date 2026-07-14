@@ -27,7 +27,9 @@
     "fixtures": "node fetch-data.js",
     "fixtures:week": "node fetch-data.js && node verify-week-data.js",
     "scores": "node fetch-scores.js",
-    "verify:week": "node verify-week-data.js"
+    "verify:week": "node verify-week-data.js",
+    "fixtures:snapshot": "node fetch-fixtures-snapshot.js",
+    "verify:fixtures": "node verify-fixture-snapshot.js"
   },
   "devDependencies": {
     "@playwright/test": "^1.53.0",

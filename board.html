@@ -256,6 +256,7 @@ a{ color:inherit; text-decoration:none; }
 <link rel="stylesheet" href="simple-ui-v232.css"/>
 <link rel="stylesheet" href="primary-nav-v234.css"/>
 <link rel="stylesheet" href="mobile-picks-week-v235.css"/>
+<link rel="stylesheet" href="fixture-feed-v247.css"/>
 </head>
 <body>
 <script src="unified-shell-v234.js"></script>
@@ -494,7 +495,9 @@ a{ color:inherit; text-decoration:none; }
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 <script src="learning-supervisor.js"></script><script src="governance-supervisor.js"></script><script src="engine-consensus.js"></script><script src="match-context-intelligence.js"></script><script src="context-supervisor.js"></script>
 <script src="banker-engine.js"></script><script src="multi-engine-suite.js"></script>
+<script src="fixtures.js"></script>
 <script src="data.js"></script>
+<script src="fixture-overlay.js"></script>
 <script src="slip.js"></script>
 <script src="personalization.js"></script>
 <script src="p2u-intelligence.js"></script>
@@ -1049,7 +1052,7 @@ a{ color:inherit; text-decoration:none; }
         </div>
       </button>`).join('');
     $('engines-grid').querySelectorAll('[data-eng]').forEach(b=>b.addEventListener('click',()=>{
-      location.href='engines.html?engine='+b.dataset.eng;
+      location.href='engine.html?engine='+b.dataset.eng;
     }));
   }
 
@@ -1060,7 +1063,9 @@ a{ color:inherit; text-decoration:none; }
     const modes=[['top','All Active Engines'],['acca','Today’s Acca']].concat(activity.active.map(x=>[x.engine[0],x.engine[1]]));
     $('engine-pills').innerHTML=modes.map(([k,n])=>`<button class="pill${k===mode?' on':''}" data-mode="${k}">${esc(n)}</button>`).join('');
     $('engine-pills').querySelectorAll('[data-mode]').forEach(b=>b.addEventListener('click',()=>{
-      mode=b.dataset.mode; showAll=false; syncBoard(); renderPills(); renderCards();
+      const next=b.dataset.mode;
+      if(next!=='top'&&next!=='acca'){ location.href='engine.html?engine='+encodeURIComponent(next); return; }
+      mode=next; showAll=false; syncBoard(); renderPills(); renderCards();
       history.replaceState(null,'','?engine='+mode); }));
   }
   function syncBoard(){

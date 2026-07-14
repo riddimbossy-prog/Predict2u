@@ -181,6 +181,7 @@ a{ color:inherit; text-decoration:none; }
 <link rel="stylesheet" href="simple-ui-v232.css"/>
 <link rel="stylesheet" href="simple-fullboard-v233.css"/>
 <link rel="stylesheet" href="primary-nav-v234.css"/>
+<link rel="stylesheet" href="fixture-feed-v247.css"/>
 </head>
 <body>
 <script src="unified-shell-v234.js"></script>
@@ -278,7 +279,9 @@ a{ color:inherit; text-decoration:none; }
 </footer>
 <script src="learning-supervisor.js"></script><script src="governance-supervisor.js"></script><script src="engine-consensus.js"></script><script src="match-context-intelligence.js"></script><script src="context-supervisor.js"></script>
 <script src="banker-engine.js"></script><script src="multi-engine-suite.js"></script>
+<script src="fixtures.js"></script>
 <script src="data.js"></script>
+<script src="fixture-overlay.js"></script>
 <script src="slip.js"></script>
 <script src="p2u-intelligence.js"></script>
 <script>
@@ -320,22 +323,63 @@ a{ color:inherit; text-decoration:none; }
   const leagueQ=params.get('league')||'';
   const keyOf=m=>(m.id!=null?'f'+m.id:m.home+'|'+m.away+'|'+m.matchDate);
 
-  /* every engine's opinion, grouped by exact market */
+  /* Every loaded fixture appears on Full Board. Engine opinions are grouped
+     by exact market; a fixture with no completed/qualified output receives a
+     single transparent status row instead of disappearing. */
+  function fallbackIntel(m,analysisPending){
+    return {
+      match:m,
+      key:keyOf(m),
+      votes:[],
+      coverage:{score:0,label:analysisPending?'Fixture loaded':'No qualified market'},
+      conflict:{
+        code:'NO_BET',
+        label:analysisPending?'Analysis pending':'No qualified pick',
+        level:'quiet',
+        reason:analysisPending
+          ?'The fixture feed is live. Detailed engine enrichment is still pending.'
+          :'The match was analysed, but no exact market passed the strict thresholds.',
+        groups:[],active:0,silent:TOTAL,total:TOTAL
+      }
+    };
+  }
   function allPicks(){
     const by={};
     for(const m of dayMatches()){
       if(leagueQ&&m.league!==leagueQ) continue;
-      const intel=intelOf(m);
-      for(const v of intel.votes.filter(x=>x.bet)){
+      const analysisPending=!!(m&&(
+        m.analysisPending===true ||
+        m.fixtureOnly===true ||
+        m.enrichmentStatus==='fixture-only'
+      ));
+      let intel;
+      try{ intel=intelOf(m); }
+      catch(_){ intel=fallbackIntel(m,analysisPending); }
+      const votes=intel&&Array.isArray(intel.votes)?intel.votes.filter(x=>x&&x.bet):[];
+      let published=0;
+      for(const v of votes){
         const k=keyOf(m)+'|'+v.market;
-        by[k]=by[k]||{m,market:v.market,engines:[],engineKeys:[],outputs:[],out:v.out,banker:false,intel};
+        by[k]=by[k]||{m,market:v.market,engines:[],engineKeys:[],outputs:[],out:v.out,banker:false,intel,pending:false};
         by[k].engines.push(v.name);
         by[k].engineKeys.push(v.key);
         by[k].outputs.push(v);
         if(v.out&&v.out.banker)by[k].banker=true;
+        published+=1;
+      }
+      if(!published){
+        const statusIntel=fallbackIntel(m,analysisPending);
+        const market=analysisPending?'Analysis pending':'No qualified pick';
+        by[keyOf(m)+'|__status__']={
+          m,market,engines:[],engineKeys:[],outputs:[],out:null,banker:false,
+          intel:statusIntel,pending:true,analysisPending
+        };
       }
     }
-    return Object.values(by).sort((a,b)=>b.engines.length-a.engines.length);
+    return Object.values(by).sort((a,b)=>
+      (a.pending?1:0)-(b.pending?1:0) ||
+      b.engines.length-a.engines.length ||
+      String(a.m&&a.m.kickoff||'').localeCompare(String(b.m&&b.m.kickoff||''))
+    );
   }
 
   function activeEngines(){
@@ -417,7 +461,7 @@ a{ color:inherit; text-decoration:none; }
     const cons=allPicks().filter(p=>p.banker&&p.engines.length>1).slice(0,5);
     $('top-bankers-grid').innerHTML=cons.length?cons.map((p,i)=>{
       const price=priceOf(p.m,p.market);
-      const btn=(p.m.homeGoals==null&&typeof P2USlip!=='undefined')?P2USlip.btn(p.m,p.market):'';
+      const btn=(!p.pending&&p.m.homeGoals==null&&typeof P2USlip!=='undefined')?P2USlip.btn(p.m,p.market):'';
       return `<div class="glass card-h rounded-3xl p-5 rise top-banker-card p2u-fullboard-card p2u-fullboard-top-card" style="animation-delay:${i*45}ms;border-color:var(--em-line)">
         <div class="p2u-fullboard-summary">
           <div class="p2u-fullboard-meta">
@@ -469,8 +513,8 @@ a{ color:inherit; text-decoration:none; }
     $('matches-grid').innerHTML=rows.map((p,i)=>{
       const id='m'+i; REG[id]=p;
       const price=priceOf(p.m,p.market);
-      const btn=(p.m.homeGoals==null&&typeof P2USlip!=='undefined')?P2USlip.btn(p.m,p.market):'';
-      return `<div class="glass card-h rounded-3xl p-5 rise p2u-standard-card p2u-fullboard-card" style="animation-delay:${Math.min(i*25,250)}ms">
+      const btn=(!p.pending&&p.m.homeGoals==null&&typeof P2USlip!=='undefined')?P2USlip.btn(p.m,p.market):'';
+      return `<div class="glass card-h rounded-3xl p-5 rise p2u-standard-card p2u-fullboard-card" data-analysis-pending="${p.analysisPending?'true':'false'}" style="animation-delay:${Math.min(i*25,250)}ms">
         <div class="p2u-fullboard-summary">
           <div class="p2u-fullboard-meta">
             <div class="p2u-fullboard-meta-copy"><span class="p2u-fullboard-time">${ko(p.m)||'TBD'}</span><span>•</span><span class="p2u-fullboard-league">${esc(p.m.league||'')}</span></div>
@@ -516,7 +560,7 @@ a{ color:inherit; text-decoration:none; }
       el.innerHTML=`<div class="pt-4 mt-3" style="border-top:1px solid var(--line)">
         <div class="text-[10.5px] uppercase tracking-[.12em] font-medium mb-2" style="color:var(--muted)">Why this pick</div>
         ${(o.grade||o.score||o.rule)?`<div class="text-[12px] mb-1" style="color:var(--muted)">${o.grade?`Grade <span style="color:var(--ink)">${esc(o.grade)}</span>`:''}${o.score?` · ${esc(o.score)}`:''}${o.rule?` · rule ${esc(o.rule)}`:''}</div>`:''}
-        ${reasons||'<div class="reason">Published without extended reasoning.</div>'}
+        ${reasons||(p.pending?'<div class="reason">'+esc(p.intel.conflict.reason)+'</div>':'<div class="reason">Published without extended reasoning.</div>')}
         ${checks}
         <div class="reason"><b style="color:var(--ink)">Conflict detector:</b> ${esc(p.intel.conflict.label)} — ${esc(p.intel.conflict.reason)}</div>
         <div class="reason"><b style="color:var(--ink)">Alternative exact markets:</b> ${esc(p.intel.conflict.groups.filter(g=>g.market!==p.market).map(g=>`${g.market} (${g.count})`).join(', ')||'None')}</div>
@@ -547,7 +591,7 @@ a{ color:inherit; text-decoration:none; }
     }else{
       $('page-tag').textContent='FULL BOARD';
       $('page-title').textContent='Full Board';
-      $('page-sub').textContent=`Every qualified prediction from ${active.length}/${TOTAL} active engines.`;
+      $('page-sub').textContent=`Every loaded fixture. Qualified predictions appear from ${active.length}/${TOTAL} active engines as analysis completes.`;
     }
   }
 
@@ -568,11 +612,17 @@ a{ color:inherit; text-decoration:none; }
     $('conflict-filters').innerHTML=cfs.map(([k,n])=>`<button class="fchip${k===conflictF?' on':''}" data-cf="${k}">${n}</button>`).join('');
     $('conflict-filters').querySelectorAll('[data-cf]').forEach(b=>b.addEventListener('click',()=>{
       conflictF=b.dataset.cf; renderFilters(); renderMatches(); }));
-    const win=dates.filter(d=>Math.abs((new Date(d)-new Date(todayISO))/864e5)<=3).slice(0,7);
+    const anchor=new Date(todayISO+'T12:00:00');
+    const monday=new Date(anchor);
+    const weekday=monday.getDay();
+    monday.setDate(monday.getDate()-(weekday===0?6:weekday-1));
+    const iso=d=>`${d.getFullYear()}-${String(d.getMonth()+1).padStart(2,'0')}-${String(d.getDate()).padStart(2,'0')}`;
+    const win=Array.from({length:7},(_,index)=>{const d=new Date(monday);d.setDate(monday.getDate()+index);return iso(d);});
     $('date-filters').innerHTML=win.map(d=>{
       const n=(byDate[d]||[]).length;
-      const label=d===todayISO?'TODAY':new Date(d+'T12:00:00').toLocaleDateString([],{day:'numeric',month:'short'}).toUpperCase();
-      return `<button class="fchip${d===activeDate?' on':''}" data-df="${d}" ${n?'':'style="opacity:.3;pointer-events:none"'}>${label}</button>`;
+      const dt=new Date(d+'T12:00:00');
+      const label=d===todayISO?'TODAY':dt.toLocaleDateString([],{weekday:'short',day:'numeric',month:'short'}).toUpperCase();
+      return `<button class="fchip${d===activeDate?' on':''}" data-df="${d}" ${n?'':'disabled style="opacity:.3"'}>${label}<small style="display:block;font-size:9px;margin-top:2px">${n?`${n} games`:'No games'}</small></button>`;
     }).join('');
     $('date-filters').querySelectorAll('[data-df]').forEach(b=>b.addEventListener('click',()=>{
       activeDate=b.dataset.df; renderFilters(); renderStats(); renderTop(); syncSimpleFullBoardFilters(); renderMatches(); }));

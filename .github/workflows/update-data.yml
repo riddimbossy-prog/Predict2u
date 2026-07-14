@@ -1,13 +1,12 @@
+# v248: legacy workflow kept for emergency manual use only.
 name: Update Predicto data
 # FULL fetch: fixtures, odds, standings, team stats, streaks (fetch-data.js),
 # then real-xG enrichment (enrich-xg.js) and the branded daily image
 # (generate-image.js). This is the SLOW one — can run 30-90+ minutes depending
 # on how many leagues have games. Commits data.js / xg.js / today.png when done.
 on:
-  schedule:
-    - cron: "0 21 * * *"    # 21:00 UTC - finishes ~23:00, fresh data for the 01:00 GMT kickoffs. Also
-                            # triggerable manually below.
   workflow_dispatch: {}
+
 permissions:
   contents: write
   pages: write
@@ -17,7 +16,7 @@ permissions:
 # (that was killing the run at ~40 min before the commit step). cancel-in-progress
 # is false: if a data run is already going, a new one waits instead of clobbering.
 concurrency:
-  group: "predicto-data"
+  group: predict2u-data-write
   cancel-in-progress: false
 jobs:
   build:

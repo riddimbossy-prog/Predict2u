@@ -187,6 +187,9 @@ jobs:
         with:
           node-version: "20"
 
+      - name: Repair generated files before merge
+        run: node repair-generated-conflicts.js
+
       - name: Download all fixture shards
         uses: actions/download-artifact@v4
         with:
@@ -286,5 +289,21 @@ jobs:
           fi
 
           git commit -m "Publish seven-day fixture data and reports"
-          git pull --rebase
-          git push
+
+          pushed=0
+          for attempt in 1 2 3 4 5; do
+            git fetch origin "${GITHUB_REF_NAME}"
+            if ! git rebase -X theirs "origin/${GITHUB_REF_NAME}"; then
+              git rebase --abort 2>/dev/null || true
+              sleep $((attempt * 5))
+              continue
+            fi
+            node repair-generated-conflicts.js
+            git add -f -- data.js track-log.json 2>/dev/null || true
+            if git push origin "HEAD:${GITHUB_REF_NAME}"; then
+              pushed=1
+              break
+            fi
+            sleep $((attempt * 5))
+          done
+          [[ "$pushed" == "1" ]] || { echo "Could not publish after five attempts."; exit 1; }

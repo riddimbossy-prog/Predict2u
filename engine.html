@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"/>
+<title>Engine • Predict2U</title>
+<meta name="theme-color" content="#070a0f"/>
+<link rel="manifest" href="manifest.webmanifest"/>
+<link rel="icon" href="favicon-32x32.png"/>
+<link rel="stylesheet" href="unified-shell-v227.css"/>
+<link rel="stylesheet" href="engine-page-v249.css"/>
+</head>
+<body>
+<script src="unified-shell-v234.js"></script>
+<main class="engine-page">
+  <section class="engine-hero">
+    <div class="engine-brand-row"><div class="engine-mark" id="engine-mark">E</div><div><div class="engine-kicker" id="engine-family">Prediction Engine</div><h1 class="engine-title" id="engine-name">Engine</h1></div></div>
+    <p class="engine-description" id="engine-description"></p>
+    <div class="engine-meta"><span class="engine-chip" id="engine-chip-family"></span><span class="engine-chip" id="engine-chip-version"></span><span class="engine-chip" id="engine-chip-status"></span></div>
+    <label class="engine-switch"><span class="engine-kicker">Switch engine</span><select id="engine-switcher" aria-label="Switch engine"></select></label>
+  </section>
+
+  <section class="engine-stats" aria-label="Engine daily statistics">
+    <article class="engine-stat"><small>Fixtures loaded</small><strong id="stat-fixtures">—</strong></article>
+    <article class="engine-stat"><small>Qualified picks</small><strong id="stat-picks">—</strong></article>
+    <article class="engine-stat"><small>Bankers</small><strong id="stat-bankers">—</strong></article>
+    <article class="engine-stat"><small>Top acca legs</small><strong id="stat-top">—</strong></article>
+  </section>
+
+  <div class="engine-section-head"><div><div class="engine-kicker">Daily board</div><h2 id="engine-date-label">Today</h2></div><a class="engine-chip" href="all-engines.html">All engines →</a></div>
+  <div class="engine-date-rail" id="engine-date-rail"></div>
+
+  <section class="engine-section engine-acca" id="engine-acca"></section>
+
+  <section class="engine-section">
+    <div class="engine-section-head"><div><h2 id="engine-picks-title">Engine picks</h2><p id="engine-picks-copy"></p></div><a class="engine-chip" href="bankers.html">Today’s bankers →</a></div>
+    <div class="engine-grid" id="engine-picks-grid"></div>
+  </section>
+  <p class="engine-footer-note">A qualified pick is not a guaranteed result. Predict2U publishes rejections instead of forcing selections. 18+.</p>
+</main>
+<script src="banker-engine.js"></script>
+<script src="multi-engine-suite.js"></script>
+<script src="fixtures.js"></script>
+<script src="data.js"></script>
+<script src="fixture-overlay.js"></script>
+<script src="slip.js"></script>
+<script src="engine-experience-v249.js"></script>
+<script src="engine-page-v249.js"></script>
+<script>if('serviceWorker' in navigator)window.addEventListener('load',()=>navigator.serviceWorker.register('sw.js').catch(()=>{}));</script>
+</body>
+</html>
