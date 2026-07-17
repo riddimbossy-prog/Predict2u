@@ -3,9 +3,6 @@ name: Predict2U Football News Sync
 on:
   workflow_dispatch:
 
-  schedule:
-    - cron: "7,27,47 * * * *"
-
 permissions:
   contents: read
 

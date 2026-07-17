@@ -1,16 +1,13 @@
 name: Predict2U Live Scores
 
 on:
-  schedule:
-    - cron: "*/5 * * * *"
   workflow_dispatch:
 
 permissions:
   contents: write
 
 concurrency:
-  # Shared with future-fixtures.yml so both jobs never write data.js together.
-  group: predict2u-data-write
+  group: predict2u-live-scores
   cancel-in-progress: false
 
 jobs:

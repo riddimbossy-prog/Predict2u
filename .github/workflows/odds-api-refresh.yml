@@ -7,7 +7,7 @@ permissions:
   contents: write
 
 concurrency:
-  group: predict2u-data-write
+  group: predict2u-odds-htft-refresh
   cancel-in-progress: false
 
 jobs:

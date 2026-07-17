@@ -1,15 +1,13 @@
 name: Predict2U Fast All Games
 
 on:
-  schedule:
-    - cron: "30 2,14 * * *"
   workflow_dispatch:
 
 permissions:
   contents: write
 
 concurrency:
-  group: predict2u-data-write
+  group: predict2u-fast-all-games
   cancel-in-progress: false
 
 jobs:
