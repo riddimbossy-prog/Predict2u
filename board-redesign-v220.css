@@ -203,3 +203,29 @@ body #p2u-slip-fab{width:54px!important;height:54px!important;min-width:54px!imp
   #board .p2u-card-actions>*{font-size:10px!important}
   #board .p2u-card-actions .slip-add::after{font-size:10px}
 }
+
+/* Predict2U v260 — desktop board rail cleanup */
+@media (min-width:900px){
+  #board .date-strip{
+    display:flex!important;flex-wrap:wrap!important;gap:12px!important;align-items:stretch!important;
+    overflow:visible!important;padding-bottom:0!important;margin-bottom:18px!important
+  }
+  #board .date-chip{
+    min-width:106px!important;min-height:72px!important;padding:12px 14px!important;
+    display:grid!important;place-items:center!important;flex:0 0 auto!important
+  }
+  #board #engine-pills{
+    display:flex!important;flex-wrap:wrap!important;overflow:visible!important;gap:10px!important;
+    align-items:center!important;margin-bottom:18px!important;padding-bottom:0!important
+  }
+  #board #engine-pills .pill{
+    min-height:42px!important;padding:0 16px!important;display:inline-flex!important;align-items:center!important;
+    justify-content:center!important;border-radius:14px!important;font-size:12px!important;font-weight:800!important;
+    white-space:nowrap!important;line-height:1!important
+  }
+  #board #engine-pills .pill.on{box-shadow:0 10px 24px rgba(119,196,28,.14)!important}
+}
+@media (min-width:900px) and (max-width:1199px){
+  #board .date-chip{min-width:98px!important}
+  #board #engine-pills .pill{padding:0 14px!important;font-size:11px!important}
+}

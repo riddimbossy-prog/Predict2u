@@ -111,3 +111,21 @@ html{scrollbar-gutter:stable}body{background:#050a12}a{overflow-wrap:anywhere}
   .p2u-v245-dock a,.p2u-v245-dock button{font-size:10px!important}
   .p2u-section-head h2{font-size:23px!important}
 }
+
+/* Predict2U v260 — board rail and Z Fold news refinement */
+@media (min-width:1100px){
+  #board.p2u-board-shell{padding:32px!important}
+  .p2u-page{max-width:1320px!important}
+}
+@media (min-width:701px) and (max-width:980px) and (pointer:coarse){
+  .p2u-news-page .p2u-news-wrap{width:min(calc(100% - 20px),940px)!important}
+  .p2u-news-page .p2u-news-controls{display:grid!important;grid-template-columns:1fr!important;gap:10px!important}
+  .p2u-news-page .p2u-news-tabs{padding-bottom:4px!important}
+  .p2u-news-page .p2u-news-grid{grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:12px!important}
+  .p2u-news-page .p2u-news-card{display:block!important}
+  .p2u-news-page .p2u-news-card-media{width:100%!important;height:180px!important;min-height:180px!important}
+  .p2u-news-page .p2u-news-card-body{padding:12px!important}
+}
+@media (min-width:900px){
+  #board .p2u-simple-filterbar{margin-bottom:18px!important}
+}
