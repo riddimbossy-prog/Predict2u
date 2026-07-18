@@ -1,10 +1,10 @@
 {
   "version": "v193",
-  "updated": "2026-07-18T08:13:28.284Z",
+  "updated": "2026-07-18T09:21:26.286Z",
   "summary": {
-    "settledFixtures": 132,
-    "settledDecisions": 277,
-    "reviewedLosses": 46,
+    "settledFixtures": 137,
+    "settledDecisions": 286,
+    "reviewedLosses": 51,
     "teamProfiles": 66,
     "leagueProfiles": 13,
     "matchupProfiles": 34,
@@ -19,7 +19,7 @@
   "commonMissCauses": [
     {
       "cause": "INPUT_COVERAGE_GAP",
-      "count": 46
+      "count": 51
     },
     {
       "cause": "GOAL_SPIKE",
@@ -30,11 +30,11 @@
       "count": 10
     },
     {
-      "cause": "BOTH_ATTACKS_BROKE_SUPPRESSION",
-      "count": 5
+      "cause": "DRAW_TRAP",
+      "count": 8
     },
     {
-      "cause": "DRAW_TRAP",
+      "cause": "BOTH_ATTACKS_BROKE_SUPPRESSION",
       "count": 5
     },
     {
@@ -47,6 +47,69 @@
     }
   ],
   "recentLossReviews": [
+    {
+      "matchDate": "2026-07-18",
+      "home": "Launceston U21",
+      "away": "Ulverstone U21",
+      "league": "Tasmania Northern Championship",
+      "engine": "Halves",
+      "market": "Second Half Over 0.5",
+      "score": "0-1",
+      "causes": [
+        "INPUT_COVERAGE_GAP"
+      ]
+    },
+    {
+      "matchDate": "2026-07-18",
+      "home": "Lambton Jaffas",
+      "away": "Maitland",
+      "league": "Northern NSW NPL",
+      "engine": "Normal",
+      "market": "Away Win",
+      "score": "0-0",
+      "causes": [
+        "DRAW_TRAP",
+        "INPUT_COVERAGE_GAP"
+      ]
+    },
+    {
+      "matchDate": "2026-07-18",
+      "home": "Lambton Jaffas",
+      "away": "Maitland",
+      "league": "Northern NSW NPL",
+      "engine": "Trend",
+      "market": "Away Team Over 0.5 Goals",
+      "score": "0-0",
+      "causes": [
+        "DRAW_TRAP",
+        "INPUT_COVERAGE_GAP"
+      ]
+    },
+    {
+      "matchDate": "2026-07-18",
+      "home": "Lambton Jaffas",
+      "away": "Maitland",
+      "league": "Northern NSW NPL",
+      "engine": "Halves",
+      "market": "First Half Over 0.5",
+      "score": "0-0",
+      "causes": [
+        "INPUT_COVERAGE_GAP"
+      ]
+    },
+    {
+      "matchDate": "2026-07-18",
+      "home": "Lambton Jaffas",
+      "away": "Maitland",
+      "league": "Northern NSW NPL",
+      "engine": "League Bias",
+      "market": "Away Team Over 0.5 Goals",
+      "score": "0-0",
+      "causes": [
+        "DRAW_TRAP",
+        "INPUT_COVERAGE_GAP"
+      ]
+    },
     {
       "matchDate": "2026-07-15",
       "home": "Sutjeska",
@@ -364,71 +427,6 @@
       "score": "3-1",
       "causes": [
         "BOTH_ATTACKS_BROKE_SUPPRESSION",
-        "INPUT_COVERAGE_GAP"
-      ]
-    },
-    {
-      "matchDate": "2026-07-02",
-      "home": "Hattiesburg",
-      "away": "Louisiana Krewe",
-      "league": "USL League Two",
-      "engine": "Prime",
-      "market": "Under 3.5",
-      "score": "1-3",
-      "causes": [
-        "GOAL_SPIKE",
-        "INPUT_COVERAGE_GAP"
-      ]
-    },
-    {
-      "matchDate": "2026-07-02",
-      "home": "Marin",
-      "away": "Almaden",
-      "league": "USL League Two",
-      "engine": "Elite",
-      "market": "Over 1.5",
-      "score": "0-1",
-      "causes": [
-        "TEMPO_COLLAPSE",
-        "INPUT_COVERAGE_GAP"
-      ]
-    },
-    {
-      "matchDate": "2026-07-02",
-      "home": "Marin",
-      "away": "Almaden",
-      "league": "USL League Two",
-      "engine": "Apex",
-      "market": "Over 1.5",
-      "score": "0-1",
-      "causes": [
-        "TEMPO_COLLAPSE",
-        "INPUT_COVERAGE_GAP"
-      ]
-    },
-    {
-      "matchDate": "2026-07-02",
-      "home": "Birmingham Legion II",
-      "away": "Columbus United",
-      "league": "USL League Two",
-      "engine": "Prime",
-      "market": "BTTS No",
-      "score": "1-1",
-      "causes": [
-        "BOTH_ATTACKS_BROKE_SUPPRESSION",
-        "INPUT_COVERAGE_GAP"
-      ]
-    },
-    {
-      "matchDate": "2026-07-01",
-      "home": "Memphis 901",
-      "away": "Mississippi Brilla",
-      "league": "USL League Two",
-      "engine": "Normal",
-      "market": "Under 2.5",
-      "score": "1-3",
-      "causes": [
-        "GOAL_SPIKE",
         "INPUT_COVERAGE_GAP"
       ]
     }
