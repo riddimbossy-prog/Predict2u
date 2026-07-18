@@ -1,11 +1,11 @@
 {
   "version": "v251",
-  "generatedAt": "2026-07-18T19:49:13.150Z",
+  "generatedAt": "2026-07-18T19:54:55.638Z",
   "provider": "The Odds API v4",
   "keyPresent": true,
   "regions": "uk",
-  "sportsAvailable": 64,
-  "soccerSportsAvailable": 37,
+  "sportsAvailable": 66,
+  "soccerSportsAvailable": 38,
   "sportMappings": [
     {
       "league": "Friendlies Clubs",
@@ -752,6 +752,30 @@
       "matches": 2
     },
     {
+      "league": "Ekstraklasa",
+      "country": "Poland",
+      "sportKey": "soccer_poland_ekstraklasa",
+      "sportTitle": "Ekstraklasa - Poland",
+      "score": 1,
+      "matches": 2
+    },
+    {
+      "league": "I Liga",
+      "country": "Poland",
+      "sportKey": "soccer_poland_ekstraklasa",
+      "sportTitle": "Ekstraklasa - Poland",
+      "score": 0.347,
+      "matches": 2
+    },
+    {
+      "league": "II Liga - East",
+      "country": "Poland",
+      "sportKey": "soccer_poland_ekstraklasa",
+      "sportTitle": "Ekstraklasa - Poland",
+      "score": 0.323,
+      "matches": 1
+    },
+    {
       "league": "Cup",
       "country": "Austria",
       "sportKey": "soccer_england_efl_cup",
@@ -1146,28 +1170,10 @@
       "bestScore": 0.143
     },
     {
-      "league": "Ekstraklasa",
-      "country": "Poland",
-      "reason": "No matching soccer sport key",
-      "bestScore": 0
-    },
-    {
-      "league": "I Liga",
-      "country": "Poland",
-      "reason": "No matching soccer sport key",
-      "bestScore": 0.143
-    },
-    {
       "league": "FNL",
       "country": "Czech-Republic",
       "reason": "No matching soccer sport key",
       "bestScore": 0
-    },
-    {
-      "league": "II Liga - East",
-      "country": "Poland",
-      "reason": "No matching soccer sport key",
-      "bestScore": 0.125
     },
     {
       "league": "NB I",
@@ -2350,6 +2356,36 @@
       "home": "Hellas Verona",
       "away": "Virtus Verona",
       "reason": "No event/team match"
+    },
+    {
+      "league": "Friendlies Clubs",
+      "home": "Vysoké Mýto",
+      "away": "Pardubice II",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Friendlies Clubs",
+      "home": "Lecce",
+      "away": "FC Politehnica Timisoara",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Friendlies Clubs",
+      "home": "Liège",
+      "away": "St. Truiden",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Friendlies Clubs",
+      "home": "Rodez",
+      "away": "Nimes",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Friendlies Clubs",
+      "home": "Stade Brestois 29",
+      "away": "Al Wakrah",
+      "reason": "No event/team match"
     }
   ],
   "unsupportedMarkets": [
@@ -2615,6 +2651,18 @@
     },
     {
       "sportKey": "soccer_denmark_superliga",
+      "market": "double_chance"
+    },
+    {
+      "sportKey": "soccer_poland_ekstraklasa",
+      "market": "btts"
+    },
+    {
+      "sportKey": "soccer_poland_ekstraklasa",
+      "market": "draw_no_bet"
+    },
+    {
+      "sportKey": "soccer_poland_ekstraklasa",
       "market": "double_chance"
     },
     {
@@ -3194,6 +3242,31 @@
       "statusCode": 422
     },
     {
+      "label": "soccer_poland_ekstraklasa:base-combined",
+      "error": "Markets not supported by this endpoint: btts, double_chance, draw_no_bet",
+      "statusCode": 422
+    },
+    {
+      "label": "soccer_poland_ekstraklasa:base-core",
+      "error": "Invalid commenceTimeFrom parameter. The format must be YYYY-MM-DDTHH:MM:SSZ, for example 2020-11-24T16:05:00Z",
+      "statusCode": 422
+    },
+    {
+      "label": "soccer_poland_ekstraklasa:btts",
+      "error": "Markets not supported by this endpoint: btts",
+      "statusCode": 422
+    },
+    {
+      "label": "soccer_poland_ekstraklasa:draw_no_bet",
+      "error": "Markets not supported by this endpoint: draw_no_bet",
+      "statusCode": 422
+    },
+    {
+      "label": "soccer_poland_ekstraklasa:double_chance",
+      "error": "Markets not supported by this endpoint: double_chance",
+      "statusCode": 422
+    },
+    {
       "label": "soccer_switzerland_superleague:base-combined",
       "error": "Markets not supported by this endpoint: btts, double_chance, draw_no_bet",
       "statusCode": 422
@@ -3251,5 +3324,5 @@
   },
   "skipped": false,
   "skipReason": null,
-  "completedAt": "2026-07-18T19:49:19.534Z"
+  "completedAt": "2026-07-18T19:55:14.452Z"
 }
