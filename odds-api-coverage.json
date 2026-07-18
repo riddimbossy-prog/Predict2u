@@ -1,6 +1,6 @@
 {
   "version": "v251",
-  "generatedAt": "2026-07-18T04:54:41.336Z",
+  "generatedAt": "2026-07-18T05:04:23.783Z",
   "provider": "The Odds API v4",
   "keyPresent": true,
   "regions": "uk",
@@ -32,12 +32,12 @@
       "matches": 11
     },
     {
-      "league": "Major League Soccer",
-      "country": "USA",
-      "sportKey": "soccer_usa_mls",
-      "sportTitle": "MLS",
-      "score": 1,
-      "matches": 16
+      "league": "Copa Argentina",
+      "country": "Argentina",
+      "sportKey": "soccer_argentina_primera_division",
+      "sportTitle": "Primera División - Argentina",
+      "score": 0.347,
+      "matches": 1
     },
     {
       "league": "Liga MX",
@@ -45,7 +45,31 @@
       "sportKey": "soccer_mexico_ligamx",
       "sportTitle": "Liga MX",
       "score": 1,
-      "matches": 7
+      "matches": 9
+    },
+    {
+      "league": "Primera Division",
+      "country": "Nicaragua",
+      "sportKey": "soccer_spain_la_liga",
+      "sportTitle": "La Liga - Spain",
+      "score": 0.5,
+      "matches": 4
+    },
+    {
+      "league": "Primera División",
+      "country": "Peru",
+      "sportKey": "soccer_argentina_primera_division",
+      "sportTitle": "Primera División - Argentina",
+      "score": 0.653,
+      "matches": 8
+    },
+    {
+      "league": "USL League One",
+      "country": "USA",
+      "sportKey": "soccer_usa_mls",
+      "sportTitle": "MLS",
+      "score": 0.466,
+      "matches": 11
     },
     {
       "league": "Major League Soccer",
@@ -320,14 +344,6 @@
       "matches": 7
     },
     {
-      "league": "Primera División",
-      "country": "Peru",
-      "sportKey": "soccer_argentina_primera_division",
-      "sportTitle": "Primera División - Argentina",
-      "score": 0.653,
-      "matches": 7
-    },
-    {
       "league": "USL Championship",
       "country": "USA",
       "sportKey": "soccer_usa_mls",
@@ -496,14 +512,6 @@
       "matches": 8
     },
     {
-      "league": "USL League One",
-      "country": "USA",
-      "sportKey": "soccer_usa_mls",
-      "sportTitle": "MLS",
-      "score": 0.466,
-      "matches": 10
-    },
-    {
       "league": "World Cup",
       "country": "World",
       "sportKey": "soccer_fifa_world_cup",
@@ -526,14 +534,6 @@
       "sportTitle": "La Liga - Spain",
       "score": 0.5,
       "matches": 1
-    },
-    {
-      "league": "Primera Division",
-      "country": "Nicaragua",
-      "sportKey": "soccer_spain_la_liga",
-      "sportTitle": "La Liga - Spain",
-      "score": 0.5,
-      "matches": 3
     },
     {
       "league": "Second League A - Division A Gold",
@@ -864,7 +864,7 @@
       "matches": 3
     }
   ],
-  "matchesConsidered": 1655,
+  "matchesConsidered": 1662,
   "matchesMatched": 0,
   "matchesUpdated": 0,
   "fieldsFilled": 0,
@@ -1250,12 +1250,6 @@
       "country": "Colombia",
       "reason": "No matching soccer sport key",
       "bestScore": 0.143
-    },
-    {
-      "league": "Friendlies Clubs",
-      "home": "Lebring",
-      "away": "Mooskirchen",
-      "reason": "No event/team match"
     },
     {
       "league": "Friendlies Clubs",
@@ -2372,6 +2366,12 @@
       "home": "Cliftonville FC",
       "away": "Newington Youth",
       "reason": "No event/team match"
+    },
+    {
+      "league": "Friendlies Clubs",
+      "home": "Dundela",
+      "away": "Ballymena United",
+      "reason": "No event/team match"
     }
   ],
   "unsupportedMarkets": [
@@ -2424,6 +2424,18 @@
       "market": "double_chance"
     },
     {
+      "sportKey": "soccer_spain_la_liga",
+      "market": "btts"
+    },
+    {
+      "sportKey": "soccer_spain_la_liga",
+      "market": "draw_no_bet"
+    },
+    {
+      "sportKey": "soccer_spain_la_liga",
+      "market": "double_chance"
+    },
+    {
       "sportKey": "soccer_epl",
       "market": "btts"
     },
@@ -2589,18 +2601,6 @@
     },
     {
       "sportKey": "soccer_brazil_serie_b",
-      "market": "double_chance"
-    },
-    {
-      "sportKey": "soccer_spain_la_liga",
-      "market": "btts"
-    },
-    {
-      "sportKey": "soccer_spain_la_liga",
-      "market": "draw_no_bet"
-    },
-    {
-      "sportKey": "soccer_spain_la_liga",
       "market": "double_chance"
     },
     {
@@ -3141,31 +3141,6 @@
       "statusCode": 422
     },
     {
-      "label": "soccer_spain_la_liga:base-combined",
-      "error": "Markets not supported by this endpoint: btts, double_chance, draw_no_bet",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_spain_la_liga:base-core",
-      "error": "Invalid commenceTimeFrom parameter. The format must be YYYY-MM-DDTHH:MM:SSZ, for example 2020-11-24T16:05:00Z",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_spain_la_liga:btts",
-      "error": "Markets not supported by this endpoint: btts",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_spain_la_liga:draw_no_bet",
-      "error": "Markets not supported by this endpoint: draw_no_bet",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_spain_la_liga:double_chance",
-      "error": "Markets not supported by this endpoint: double_chance",
-      "statusCode": 422
-    },
-    {
       "label": "soccer_uefa_champs_league_qualification:base-combined",
       "error": "Markets not supported by this endpoint: btts, double_chance, draw_no_bet",
       "statusCode": 422
@@ -3298,5 +3273,5 @@
   },
   "skipped": false,
   "skipReason": null,
-  "completedAt": "2026-07-18T04:54:46.146Z"
+  "completedAt": "2026-07-18T05:04:32.164Z"
 }
