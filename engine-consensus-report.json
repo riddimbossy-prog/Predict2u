@@ -1,6 +1,6 @@
 {
   "version": "v195",
-  "updated": "2026-07-18T21:17:55.643Z",
+  "updated": "2026-07-18T22:01:33.031Z",
   "summary": {
     "fixtures": 300,
     "qualified": 0,
@@ -4680,21 +4680,6 @@
       "reason": "Consensus rejected: support, independence or conflict threshold failed."
     },
     {
-      "id": 1540202,
-      "date": "2026-07-18",
-      "home": "Floresta CE U20",
-      "away": "Caucaia U20",
-      "league": "Cearense U20",
-      "version": "v195",
-      "bet": false,
-      "market": "No Bet",
-      "score": 0,
-      "reason": "No engine produced a qualified candidate.",
-      "supporters": [],
-      "conflictIndex": 0,
-      "independence": 0
-    },
-    {
       "id": 1540203,
       "date": "2026-07-18",
       "home": "Atlético Cearense U20",
@@ -5072,66 +5057,6 @@
       "reason": "Consensus rejected: support, independence or conflict threshold failed."
     },
     {
-      "id": 1549415,
-      "date": "2026-07-18",
-      "home": "Atletico Grau",
-      "away": "UTC Cajamarca",
-      "league": "Primera División",
-      "version": "v195",
-      "bet": false,
-      "market": "No Bet",
-      "score": 0,
-      "reason": "No engine produced a qualified candidate.",
-      "supporters": [],
-      "conflictIndex": 0,
-      "independence": 0
-    },
-    {
-      "id": 1520771,
-      "date": "2026-07-18",
-      "home": "Atletico Goianiense",
-      "away": "Athletic Club",
-      "league": "Serie B",
-      "version": "v195",
-      "bet": false,
-      "market": "No Bet",
-      "candidate": "Under 3.5 Goals",
-      "score": 81.4,
-      "support": 1.56,
-      "supporters": [
-        "Trend",
-        "League Bias"
-      ],
-      "independence": 2,
-      "exactSupport": 2,
-      "conflictIndex": 0,
-      "alternatives": [
-        {
-          "market": "First Half Under 1.5",
-          "support": 0.37,
-          "engines": [
-            "Halves"
-          ]
-        }
-      ],
-      "reason": "Consensus rejected: support, independence or conflict threshold failed."
-    },
-    {
-      "id": 1591865,
-      "date": "2026-07-18",
-      "home": "France",
-      "away": "England",
-      "league": "World Cup",
-      "version": "v195",
-      "bet": false,
-      "market": "No Bet",
-      "score": 0,
-      "reason": "No engine produced a qualified candidate.",
-      "supporters": [],
-      "conflictIndex": 0,
-      "independence": 0
-    },
-    {
       "id": 1519413,
       "date": "2026-07-18",
       "home": "LDU de Quito",
@@ -5462,6 +5387,113 @@
           ]
         }
       ],
+      "reason": "Consensus rejected: support, independence or conflict threshold failed."
+    },
+    {
+      "id": 1513229,
+      "date": "2026-07-18",
+      "home": "St. Louis City II",
+      "away": "Portland Timbers II",
+      "league": "MLS Next Pro",
+      "version": "v195",
+      "bet": false,
+      "market": "No Bet",
+      "candidate": "Second Half Over 0.5",
+      "score": 76.4,
+      "support": 0.71,
+      "supporters": [
+        "Halves"
+      ],
+      "independence": 1,
+      "exactSupport": 1,
+      "conflictIndex": 0,
+      "alternatives": [],
+      "reason": "Consensus rejected: support, independence or conflict threshold failed."
+    },
+    {
+      "id": 1493577,
+      "date": "2026-07-18",
+      "home": "Detroit City",
+      "away": "Indy Eleven",
+      "league": "USL Championship",
+      "version": "v195",
+      "bet": false,
+      "market": "No Bet",
+      "candidate": "Double Chance 1X",
+      "score": 76.3,
+      "support": 0.68,
+      "supporters": [
+        "Trend"
+      ],
+      "independence": 1,
+      "exactSupport": 1,
+      "conflictIndex": 0,
+      "alternatives": [
+        {
+          "market": "Second Half Over 0.5",
+          "support": 0.55,
+          "engines": [
+            "Halves"
+          ]
+        },
+        {
+          "market": "Home Team Over 0.5 Goals",
+          "support": 0.39,
+          "engines": [
+            "League Bias"
+          ]
+        }
+      ],
+      "reason": "Consensus rejected: support, independence or conflict threshold failed."
+    },
+    {
+      "id": 1493579,
+      "date": "2026-07-18",
+      "home": "Loudoun United",
+      "away": "Tampa Bay Rowdies",
+      "league": "USL Championship",
+      "version": "v195",
+      "bet": false,
+      "market": "No Bet",
+      "candidate": "Away Win",
+      "score": 77,
+      "support": 0.85,
+      "supporters": [
+        "PurePPG Normal"
+      ],
+      "independence": 1,
+      "exactSupport": 1,
+      "conflictIndex": 0,
+      "alternatives": [
+        {
+          "market": "Second Half Over 0.5",
+          "support": 0.56,
+          "engines": [
+            "Halves"
+          ]
+        }
+      ],
+      "reason": "Consensus rejected: support, independence or conflict threshold failed."
+    },
+    {
+      "id": 1493584,
+      "date": "2026-07-18",
+      "home": "Sporting JAX",
+      "away": "Brooklyn",
+      "league": "USL Championship",
+      "version": "v195",
+      "bet": false,
+      "market": "No Bet",
+      "candidate": "Second Half Over 0.5",
+      "score": 75.8,
+      "support": 0.55,
+      "supporters": [
+        "Halves"
+      ],
+      "independence": 1,
+      "exactSupport": 1,
+      "conflictIndex": 0,
+      "alternatives": [],
       "reason": "Consensus rejected: support, independence or conflict threshold failed."
     }
   ]
