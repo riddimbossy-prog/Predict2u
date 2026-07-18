@@ -1,7 +1,7 @@
 {
   "version": "v193",
   "schemaVersion": 1,
-  "updated": "2026-07-18T10:29:32.305Z",
+  "updated": "2026-07-18T11:35:40.940Z",
   "minimumSamples": {
     "teamFavorite": 5,
     "teamUnderdog": 5,
@@ -12,10 +12,10 @@
   },
   "decayHalfLifeDays": 120,
   "summary": {
-    "settledFixtures": 138,
-    "settledDecisions": 288,
+    "settledFixtures": 143,
+    "settledDecisions": 303,
     "reviewedLosses": 51,
-    "attachedUpcoming": 1785,
+    "attachedUpcoming": 1770,
     "highRiskUpcoming": 0,
     "stableUpcoming": 0
   },
@@ -4288,7 +4288,7 @@
             "mid": 1,
             "upper": 1
           },
-          "decayedWeight": 1.96
+          "decayedWeight": 1.95
         },
         "1.86-2.25": {
           "sample": 1,
@@ -5383,7 +5383,7 @@
           "mid": 0.5,
           "upper": 0.9055
         },
-        "decayedWeight": 1.96
+        "decayedWeight": 1.95
       },
       "bands": {
         "1.61-1.85": {
@@ -8261,15 +8261,15 @@
       "hardVeto": false
     },
     "*|Trend|Away Team Over 0.5 Goals|unknown|other": {
-      "sample": 7,
-      "wins": 6,
+      "sample": 9,
+      "wins": 8,
       "losses": 1,
-      "winRate": 0.8571,
-      "lossRate": 0.1429,
+      "winRate": 0.8889,
+      "lossRate": 0.1111,
       "wilson": {
-        "lower": 0.4869,
-        "mid": 0.8571,
-        "upper": 0.9743
+        "lower": 0.565,
+        "mid": 0.8889,
+        "upper": 0.9801
       },
       "adjustment": 0,
       "hardVeto": false
@@ -8289,15 +8289,15 @@
       "hardVeto": false
     },
     "*|Halves|Second Half Over 0.5|unknown|other": {
-      "sample": 34,
-      "wins": 29,
+      "sample": 38,
+      "wins": 33,
       "losses": 5,
-      "winRate": 0.8529,
-      "lossRate": 0.1471,
+      "winRate": 0.8684,
+      "lossRate": 0.1316,
       "wilson": {
-        "lower": 0.6987,
-        "mid": 0.8529,
-        "upper": 0.9355
+        "lower": 0.7267,
+        "mid": 0.8684,
+        "upper": 0.9425
       },
       "adjustment": 2,
       "hardVeto": false
@@ -8569,15 +8569,15 @@
       "hardVeto": false
     },
     "*|League Bias|Away Team Over 0.5 Goals|unknown|other": {
-      "sample": 3,
-      "wins": 2,
+      "sample": 6,
+      "wins": 5,
       "losses": 1,
-      "winRate": 0.6667,
-      "lossRate": 0.3333,
+      "winRate": 0.8333,
+      "lossRate": 0.1667,
       "wilson": {
-        "lower": 0.2077,
-        "mid": 0.6667,
-        "upper": 0.9385
+        "lower": 0.4365,
+        "mid": 0.8333,
+        "upper": 0.9699
       },
       "adjustment": 0,
       "hardVeto": false
@@ -8597,13 +8597,13 @@
       "hardVeto": false
     },
     "*|Halves|First Half Over 0.5|unknown|other": {
-      "sample": 3,
-      "wins": 3,
+      "sample": 4,
+      "wins": 4,
       "losses": 0,
       "winRate": 1,
       "lossRate": 0,
       "wilson": {
-        "lower": 0.4385,
+        "lower": 0.5101,
         "mid": 1,
         "upper": 1
       },
@@ -8681,13 +8681,13 @@
       "hardVeto": false
     },
     "*|Ultra|Double Chance X2|unknown|other": {
-      "sample": 1,
-      "wins": 1,
+      "sample": 2,
+      "wins": 2,
       "losses": 0,
       "winRate": 1,
       "lossRate": 0,
       "wilson": {
-        "lower": 0.2065,
+        "lower": 0.3424,
         "mid": 1,
         "upper": 1
       },
@@ -9633,6 +9633,20 @@
       "hardVeto": false
     },
     "victoria premier league 2|Halves|Second Half Over 0.5|unknown|other": {
+      "sample": 2,
+      "wins": 2,
+      "losses": 0,
+      "winRate": 1,
+      "lossRate": 0,
+      "wilson": {
+        "lower": 0.3424,
+        "mid": 1,
+        "upper": 1
+      },
+      "adjustment": 0,
+      "hardVeto": false
+    },
+    "victoria premier league 2|Ultra|Double Chance 1X|unknown|other": {
       "sample": 1,
       "wins": 1,
       "losses": 0,
@@ -9640,6 +9654,174 @@
       "lossRate": 0,
       "wilson": {
         "lower": 0.2065,
+        "mid": 1,
+        "upper": 1
+      },
+      "adjustment": 0,
+      "hardVeto": false
+    },
+    "*|Ultra|Double Chance 1X|unknown|other": {
+      "sample": 1,
+      "wins": 1,
+      "losses": 0,
+      "winRate": 1,
+      "lossRate": 0,
+      "wilson": {
+        "lower": 0.2065,
+        "mid": 1,
+        "upper": 1
+      },
+      "adjustment": 0,
+      "hardVeto": false
+    },
+    "victoria premier league 2|Apex|Home DNB|unknown|other": {
+      "sample": 1,
+      "wins": 1,
+      "losses": 0,
+      "winRate": 1,
+      "lossRate": 0,
+      "wilson": {
+        "lower": 0.2065,
+        "mid": 1,
+        "upper": 1
+      },
+      "adjustment": 0,
+      "hardVeto": false
+    },
+    "*|Apex|Home DNB|unknown|other": {
+      "sample": 1,
+      "wins": 1,
+      "losses": 0,
+      "winRate": 1,
+      "lossRate": 0,
+      "wilson": {
+        "lower": 0.2065,
+        "mid": 1,
+        "upper": 1
+      },
+      "adjustment": 0,
+      "hardVeto": false
+    },
+    "western australia state league 1|Trend|Away Team Over 0.5 Goals|unknown|other": {
+      "sample": 2,
+      "wins": 2,
+      "losses": 0,
+      "winRate": 1,
+      "lossRate": 0,
+      "wilson": {
+        "lower": 0.3424,
+        "mid": 1,
+        "upper": 1
+      },
+      "adjustment": 0,
+      "hardVeto": false
+    },
+    "western australia state league 1|Halves|First Half Over 0.5|unknown|other": {
+      "sample": 1,
+      "wins": 1,
+      "losses": 0,
+      "winRate": 1,
+      "lossRate": 0,
+      "wilson": {
+        "lower": 0.2065,
+        "mid": 1,
+        "upper": 1
+      },
+      "adjustment": 0,
+      "hardVeto": false
+    },
+    "western australia state league 1|League Bias|Away Team Over 0.5 Goals|unknown|other": {
+      "sample": 3,
+      "wins": 3,
+      "losses": 0,
+      "winRate": 1,
+      "lossRate": 0,
+      "wilson": {
+        "lower": 0.4385,
+        "mid": 1,
+        "upper": 1
+      },
+      "adjustment": 0,
+      "hardVeto": false
+    },
+    "western australia state league 1|Ultra|Double Chance X2|unknown|other": {
+      "sample": 1,
+      "wins": 1,
+      "losses": 0,
+      "winRate": 1,
+      "lossRate": 0,
+      "wilson": {
+        "lower": 0.2065,
+        "mid": 1,
+        "upper": 1
+      },
+      "adjustment": 0,
+      "hardVeto": false
+    },
+    "western australia state league 1|Elite|Away DNB|unknown|other": {
+      "sample": 1,
+      "wins": 1,
+      "losses": 0,
+      "winRate": 1,
+      "lossRate": 0,
+      "wilson": {
+        "lower": 0.2065,
+        "mid": 1,
+        "upper": 1
+      },
+      "adjustment": 0,
+      "hardVeto": false
+    },
+    "*|Elite|Away DNB|unknown|other": {
+      "sample": 1,
+      "wins": 1,
+      "losses": 0,
+      "winRate": 1,
+      "lossRate": 0,
+      "wilson": {
+        "lower": 0.2065,
+        "mid": 1,
+        "upper": 1
+      },
+      "adjustment": 0,
+      "hardVeto": false
+    },
+    "western australia state league 1|Apex|Double Chance X2|unknown|other": {
+      "sample": 1,
+      "wins": 1,
+      "losses": 0,
+      "winRate": 1,
+      "lossRate": 0,
+      "wilson": {
+        "lower": 0.2065,
+        "mid": 1,
+        "upper": 1
+      },
+      "adjustment": 0,
+      "hardVeto": false
+    },
+    "*|Apex|Double Chance X2|unknown|other": {
+      "sample": 1,
+      "wins": 1,
+      "losses": 0,
+      "winRate": 1,
+      "lossRate": 0,
+      "wilson": {
+        "lower": 0.2065,
+        "mid": 1,
+        "upper": 1
+      },
+      "adjustment": 0,
+      "hardVeto": false
+    },
+    "western australia state league 1|Halves|Second Half Over 0.5|unknown|other": {
+      "sample": 3,
+      "wins": 3,
+      "losses": 0,
+      "winRate": 1,
+      "lossRate": 0,
+      "wilson": {
+        "lower": 0.4385,
         "mid": 1,
         "upper": 1
       },
