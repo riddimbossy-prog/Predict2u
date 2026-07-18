@@ -1,7 +1,7 @@
 {
   "version": "v193",
   "schemaVersion": 1,
-  "updated": "2026-07-18T07:06:43.648Z",
+  "updated": "2026-07-18T08:13:28.284Z",
   "minimumSamples": {
     "teamFavorite": 5,
     "teamUnderdog": 5,
@@ -12,10 +12,10 @@
   },
   "decayHalfLifeDays": 120,
   "summary": {
-    "settledFixtures": 130,
-    "settledDecisions": 274,
+    "settledFixtures": 132,
+    "settledDecisions": 277,
     "reviewedLosses": 46,
-    "attachedUpcoming": 1830,
+    "attachedUpcoming": 1811,
     "highRiskUpcoming": 0,
     "stableUpcoming": 0
   },
@@ -5249,7 +5249,7 @@
           "mid": 0.6,
           "upper": 0.8824
         },
-        "decayedWeight": 4.7
+        "decayedWeight": 4.69
       },
       "bands": {
         "1.01-1.35": {
@@ -8289,15 +8289,15 @@
       "hardVeto": false
     },
     "*|Halves|Second Half Over 0.5|unknown|other": {
-      "sample": 28,
-      "wins": 24,
+      "sample": 30,
+      "wins": 26,
       "losses": 4,
-      "winRate": 0.8571,
-      "lossRate": 0.1429,
+      "winRate": 0.8667,
+      "lossRate": 0.1333,
       "wilson": {
-        "lower": 0.6851,
-        "mid": 0.8571,
-        "upper": 0.943
+        "lower": 0.7032,
+        "mid": 0.8667,
+        "upper": 0.9469
       },
       "adjustment": 2,
       "hardVeto": false
@@ -8471,17 +8471,17 @@
       "hardVeto": false
     },
     "*|Trend|Home Team Over 0.5 Goals|unknown|other": {
-      "sample": 11,
-      "wins": 11,
+      "sample": 12,
+      "wins": 12,
       "losses": 0,
       "winRate": 1,
       "lossRate": 0,
       "wilson": {
-        "lower": 0.7412,
+        "lower": 0.7575,
         "mid": 1,
         "upper": 1
       },
-      "adjustment": 0,
+      "adjustment": 2,
       "hardVeto": false
     },
     "usl league two|Halves|Second Half Over 0.5|unknown|other": {
@@ -9444,6 +9444,34 @@
       "lossRate": 0,
       "wilson": {
         "lower": 0.2065,
+        "mid": 1,
+        "upper": 1
+      },
+      "adjustment": 0,
+      "hardVeto": false
+    },
+    "tasmania southern championship|Trend|Home Team Over 0.5 Goals|unknown|other": {
+      "sample": 1,
+      "wins": 1,
+      "losses": 0,
+      "winRate": 1,
+      "lossRate": 0,
+      "wilson": {
+        "lower": 0.2065,
+        "mid": 1,
+        "upper": 1
+      },
+      "adjustment": 0,
+      "hardVeto": false
+    },
+    "tasmania southern championship|Halves|Second Half Over 0.5|unknown|other": {
+      "sample": 2,
+      "wins": 2,
+      "losses": 0,
+      "winRate": 1,
+      "lossRate": 0,
+      "wilson": {
+        "lower": 0.3424,
         "mid": 1,
         "upper": 1
       },
