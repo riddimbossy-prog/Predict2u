@@ -1,7 +1,7 @@
 {
   "version": "v193",
   "schemaVersion": 1,
-  "updated": "2026-07-18T16:44:14.870Z",
+  "updated": "2026-07-18T17:35:10.175Z",
   "minimumSamples": {
     "teamFavorite": 5,
     "teamUnderdog": 5,
@@ -12,10 +12,10 @@
   },
   "decayHalfLifeDays": 120,
   "summary": {
-    "settledFixtures": 154,
-    "settledDecisions": 320,
+    "settledFixtures": 157,
+    "settledDecisions": 325,
     "reviewedLosses": 54,
-    "attachedUpcoming": 1488,
+    "attachedUpcoming": 1432,
     "highRiskUpcoming": 0,
     "stableUpcoming": 0
   },
@@ -8464,15 +8464,15 @@
       "hardVeto": false
     },
     "*|Halves|Second Half Over 0.5|unknown|other": {
-      "sample": 41,
-      "wins": 36,
+      "sample": 42,
+      "wins": 37,
       "losses": 5,
-      "winRate": 0.878,
-      "lossRate": 0.122,
+      "winRate": 0.881,
+      "lossRate": 0.119,
       "wilson": {
-        "lower": 0.7446,
-        "mid": 0.878,
-        "upper": 0.9468
+        "lower": 0.75,
+        "mid": 0.881,
+        "upper": 0.9481
       },
       "adjustment": 2,
       "hardVeto": false
@@ -8492,13 +8492,13 @@
       "hardVeto": false
     },
     "*|League Bias|Under 3.5 Goals|unknown|other": {
-      "sample": 6,
-      "wins": 6,
+      "sample": 7,
+      "wins": 7,
       "losses": 0,
       "winRate": 1,
       "lossRate": 0,
       "wilson": {
-        "lower": 0.6097,
+        "lower": 0.6457,
         "mid": 1,
         "upper": 1
       },
@@ -8576,13 +8576,13 @@
       "hardVeto": false
     },
     "*|Trend|Under 3.5 Goals|unknown|other": {
-      "sample": 2,
-      "wins": 2,
+      "sample": 3,
+      "wins": 3,
       "losses": 0,
       "winRate": 1,
       "lossRate": 0,
       "wilson": {
-        "lower": 0.3424,
+        "lower": 0.4385,
         "mid": 1,
         "upper": 1
       },
@@ -9570,13 +9570,13 @@
       "hardVeto": false
     },
     "*|League Bias|Over 1.5 Goals|unknown|other": {
-      "sample": 4,
-      "wins": 4,
+      "sample": 5,
+      "wins": 5,
       "losses": 0,
       "winRate": 1,
       "lossRate": 0,
       "wilson": {
-        "lower": 0.5101,
+        "lower": 0.5655,
         "mid": 1,
         "upper": 1
       },
@@ -10116,13 +10116,13 @@
       "hardVeto": false
     },
     "friendlies clubs|League Bias|Over 1.5 Goals|unknown|other": {
-      "sample": 3,
-      "wins": 3,
+      "sample": 4,
+      "wins": 4,
       "losses": 0,
       "winRate": 1,
       "lossRate": 0,
       "wilson": {
-        "lower": 0.4385,
+        "lower": 0.5101,
         "mid": 1,
         "upper": 1
       },
@@ -10144,27 +10144,13 @@
       "hardVeto": false
     },
     "friendlies clubs|Halves|Second Half Over 0.5|unknown|other": {
-      "sample": 1,
-      "wins": 1,
+      "sample": 2,
+      "wins": 2,
       "losses": 0,
       "winRate": 1,
       "lossRate": 0,
       "wilson": {
-        "lower": 0.2065,
-        "mid": 1,
-        "upper": 1
-      },
-      "adjustment": 0,
-      "hardVeto": false
-    },
-    "friendlies clubs|Halves|Second Half Over 0.5|unknown|other": {
-      "sample": 1,
-      "wins": 1,
-      "losses": 0,
-      "winRate": 1,
-      "lossRate": 0,
-      "wilson": {
-        "lower": 0.2065,
+        "lower": 0.3424,
         "mid": 1,
         "upper": 1
       },
@@ -10173,6 +10159,62 @@
     },
     "friendlies clubs|Trend|Home Team Over 0.5 Goals|unknown|other": {
       "sample": 2,
+      "wins": 1,
+      "losses": 1,
+      "winRate": 0.5,
+      "lossRate": 0.5,
+      "wilson": {
+        "lower": 0.0945,
+        "mid": 0.5,
+        "upper": 0.9055
+      },
+      "adjustment": 0,
+      "hardVeto": false
+    },
+    "super league|Trend|Under 3.5 Goals|unknown|other": {
+      "sample": 1,
+      "wins": 1,
+      "losses": 0,
+      "winRate": 1,
+      "lossRate": 0,
+      "wilson": {
+        "lower": 0.2065,
+        "mid": 1,
+        "upper": 1
+      },
+      "adjustment": 0,
+      "hardVeto": false
+    },
+    "super league|Halves|First Half Under 1.5|unknown|other": {
+      "sample": 1,
+      "wins": 1,
+      "losses": 0,
+      "winRate": 1,
+      "lossRate": 0,
+      "wilson": {
+        "lower": 0.2065,
+        "mid": 1,
+        "upper": 1
+      },
+      "adjustment": 0,
+      "hardVeto": false
+    },
+    "*|Halves|First Half Under 1.5|unknown|other": {
+      "sample": 1,
+      "wins": 1,
+      "losses": 0,
+      "winRate": 1,
+      "lossRate": 0,
+      "wilson": {
+        "lower": 0.2065,
+        "mid": 1,
+        "upper": 1
+      },
+      "adjustment": 0,
+      "hardVeto": false
+    },
+    "super league|League Bias|Under 3.5 Goals|unknown|other": {
+      "sample": 1,
       "wins": 1,
       "losses": 1,
       "winRate": 0.5,
