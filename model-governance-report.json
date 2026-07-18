@@ -1,9 +1,9 @@
 {
   "version": "v194",
-  "updated": "2026-07-18T01:29:19.430Z",
+  "updated": "2026-07-18T02:36:11.883Z",
   "summary": {
-    "settled": 268,
-    "winRate": 0.8284,
+    "settled": 269,
+    "winRate": 0.829,
     "engines": 12,
     "approved": 0,
     "shadow": 12,
@@ -45,7 +45,7 @@
         "distributionShift": 0.5,
         "status": "STABLE"
       },
-      "updated": "2026-07-18T01:29:19.428Z"
+      "updated": "2026-07-18T02:36:11.881Z"
     },
     "Prime": {
       "engine": "Prime",
@@ -78,7 +78,7 @@
         "distributionShift": 0.293,
         "status": "STABLE"
       },
-      "updated": "2026-07-18T01:29:19.429Z"
+      "updated": "2026-07-18T02:36:11.882Z"
     },
     "Value": {
       "engine": "Value",
@@ -111,7 +111,7 @@
         "distributionShift": 0.8,
         "status": "STABLE"
       },
-      "updated": "2026-07-18T01:29:19.429Z"
+      "updated": "2026-07-18T02:36:11.882Z"
     },
     "Pro": {
       "engine": "Pro",
@@ -144,7 +144,7 @@
         "distributionShift": 0.8,
         "status": "STABLE"
       },
-      "updated": "2026-07-18T01:29:19.429Z"
+      "updated": "2026-07-18T02:36:11.882Z"
     },
     "Ultra": {
       "engine": "Ultra",
@@ -177,7 +177,7 @@
         "distributionShift": 0.5,
         "status": "STABLE"
       },
-      "updated": "2026-07-18T01:29:19.429Z"
+      "updated": "2026-07-18T02:36:11.882Z"
     },
     "Elite": {
       "engine": "Elite",
@@ -210,7 +210,7 @@
         "distributionShift": 0.5,
         "status": "STABLE"
       },
-      "updated": "2026-07-18T01:29:19.429Z"
+      "updated": "2026-07-18T02:36:11.882Z"
     },
     "Apex": {
       "engine": "Apex",
@@ -243,17 +243,17 @@
         "distributionShift": 0.5,
         "status": "STABLE"
       },
-      "updated": "2026-07-18T01:29:19.429Z"
+      "updated": "2026-07-18T02:36:11.882Z"
     },
     "Halves": {
       "engine": "Halves",
       "state": "SHADOW",
       "reason": "Needs a larger forward validation sample.",
       "train": {
-        "sample": 27,
-        "wins": 23,
+        "sample": 28,
+        "wins": 24,
         "losses": 4,
-        "rate": 0.8519
+        "rate": 0.8571
       },
       "validation": {
         "sample": 12,
@@ -261,8 +261,8 @@
         "losses": 1,
         "rate": 0.9167
       },
-      "validationDelta": 0.0648,
-      "calibrationError": 0.0388,
+      "validationDelta": 0.0596,
+      "calibrationError": 0.0409,
       "shadow": {
         "eligible": 0,
         "avoidedLosses": 0,
@@ -271,12 +271,12 @@
       },
       "drift": {
         "recentSample": 30,
-        "priorSample": 9,
-        "confidenceShift": 6.97,
-        "distributionShift": 0.111,
+        "priorSample": 10,
+        "confidenceShift": 6.34,
+        "distributionShift": 0.1,
         "status": "STABLE"
       },
-      "updated": "2026-07-18T01:29:19.429Z"
+      "updated": "2026-07-18T02:36:11.882Z"
     },
     "Streaks": {
       "engine": "Streaks",
@@ -309,7 +309,7 @@
         "distributionShift": 0.5,
         "status": "STABLE"
       },
-      "updated": "2026-07-18T01:29:19.429Z"
+      "updated": "2026-07-18T02:36:11.882Z"
     },
     "Trend": {
       "engine": "Trend",
@@ -342,7 +342,7 @@
         "distributionShift": 0.5,
         "status": "STABLE"
       },
-      "updated": "2026-07-18T01:29:19.429Z"
+      "updated": "2026-07-18T02:36:11.882Z"
     },
     "League Bias": {
       "engine": "League Bias",
@@ -375,7 +375,7 @@
         "distributionShift": 0.273,
         "status": "STABLE"
       },
-      "updated": "2026-07-18T01:29:19.429Z"
+      "updated": "2026-07-18T02:36:11.882Z"
     },
     "Strict": {
       "engine": "Strict",
@@ -408,7 +408,7 @@
         "distributionShift": 0.5,
         "status": "STABLE"
       },
-      "updated": "2026-07-18T01:29:19.429Z"
+      "updated": "2026-07-18T02:36:11.882Z"
     }
   },
   "marketScorecards": [
@@ -430,11 +430,11 @@
     },
     {
       "marketFamily": "OTHER",
-      "sample": 38,
-      "wins": 33,
+      "sample": 39,
+      "wins": 34,
       "losses": 5,
-      "rate": 0.8684,
-      "calibrationError": 0.0194
+      "rate": 0.8718,
+      "calibrationError": 0.0161
     },
     {
       "marketFamily": "AWAY_RESULT",
@@ -627,6 +627,13 @@
     },
     {
       "league": "Oberliga - Bayern Süd",
+      "sample": 1,
+      "wins": 1,
+      "losses": 0,
+      "rate": 1
+    },
+    {
+      "league": "Brasileiro Women",
       "sample": 1,
       "wins": 1,
       "losses": 0,
