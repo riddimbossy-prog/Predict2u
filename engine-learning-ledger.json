@@ -1,7 +1,7 @@
 {
   "version": "v193",
   "schemaVersion": 1,
-  "updated": "2026-07-18T14:49:07.216Z",
+  "updated": "2026-07-18T15:46:26.839Z",
   "minimumSamples": {
     "teamFavorite": 5,
     "teamUnderdog": 5,
@@ -12,10 +12,10 @@
   },
   "decayHalfLifeDays": 120,
   "summary": {
-    "settledFixtures": 147,
-    "settledDecisions": 312,
+    "settledFixtures": 148,
+    "settledDecisions": 313,
     "reviewedLosses": 51,
-    "attachedUpcoming": 1659,
+    "attachedUpcoming": 1538,
     "highRiskUpcoming": 0,
     "stableUpcoming": 0
   },
@@ -4350,7 +4350,7 @@
           "mid": 0.6667,
           "upper": 0.8794
         },
-        "decayedWeight": 8.79
+        "decayedWeight": 8.78
       },
       "bands": {
         "1.61-1.85": {
@@ -6716,7 +6716,7 @@
         "mid": 0.4667,
         "upper": 0.6988
       },
-      "decayedWeight": 14.51
+      "decayedWeight": 14.5
     },
     "1.01-1.35": {
       "sample": 6,
@@ -6779,7 +6779,7 @@
         "mid": 0.5,
         "upper": 0.7848
       },
-      "decayedWeight": 7.81
+      "decayedWeight": 7.8
     }
   },
   "contexts": {
@@ -8464,15 +8464,15 @@
       "hardVeto": false
     },
     "*|Halves|Second Half Over 0.5|unknown|other": {
-      "sample": 40,
-      "wins": 35,
+      "sample": 41,
+      "wins": 36,
       "losses": 5,
-      "winRate": 0.875,
-      "lossRate": 0.125,
+      "winRate": 0.878,
+      "lossRate": 0.122,
       "wilson": {
-        "lower": 0.7389,
-        "mid": 0.875,
-        "upper": 0.9454
+        "lower": 0.7446,
+        "mid": 0.878,
+        "upper": 0.9468
       },
       "adjustment": 2,
       "hardVeto": false
@@ -10116,6 +10116,20 @@
       "hardVeto": false
     },
     "friendlies clubs|League Bias|Over 1.5 Goals|unknown|other": {
+      "sample": 1,
+      "wins": 1,
+      "losses": 0,
+      "winRate": 1,
+      "lossRate": 0,
+      "wilson": {
+        "lower": 0.2065,
+        "mid": 1,
+        "upper": 1
+      },
+      "adjustment": 0,
+      "hardVeto": false
+    },
+    "friendlies clubs|Halves|Second Half Over 0.5|unknown|other": {
       "sample": 1,
       "wins": 1,
       "losses": 0,
