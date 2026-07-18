@@ -1,6 +1,6 @@
 {
   "version": "v251",
-  "generatedAt": "2026-07-18T00:14:37.127Z",
+  "generatedAt": "2026-07-18T00:19:33.326Z",
   "provider": "The Odds API v4",
   "keyPresent": true,
   "regions": "uk",
@@ -30,14 +30,6 @@
       "sportTitle": "Brazil Série B",
       "score": 0.466,
       "matches": 8
-    },
-    {
-      "league": "Primera Nacional",
-      "country": "Argentina",
-      "sportKey": "soccer_argentina_primera_division",
-      "sportTitle": "Primera División - Argentina",
-      "score": 0.513,
-      "matches": 15
     },
     {
       "league": "USL League Two",
@@ -86,6 +78,14 @@
       "sportTitle": "Primera División - Argentina",
       "score": 0.286,
       "matches": 7
+    },
+    {
+      "league": "Primera Nacional",
+      "country": "Argentina",
+      "sportKey": "soccer_argentina_primera_division",
+      "sportTitle": "Primera División - Argentina",
+      "score": 0.513,
+      "matches": 14
     },
     {
       "league": "Serie A",
@@ -728,7 +728,7 @@
       "matches": 2
     }
   ],
-  "matchesConsidered": 1472,
+  "matchesConsidered": 1471,
   "matchesMatched": 0,
   "matchesUpdated": 0,
   "fieldsFilled": 0,
@@ -1147,6 +1147,12 @@
     },
     {
       "league": "Friendlies Clubs",
+      "home": "Lokomotiv",
+      "away": "Rubin",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Friendlies Clubs",
       "home": "Spišská Nová Ves",
       "away": "Rimavská Sobota",
       "reason": "No event/team match"
@@ -1293,6 +1299,12 @@
       "league": "Friendlies Clubs",
       "home": "Busko-Zdroj",
       "away": "Naprzód",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Friendlies Clubs",
+      "home": "Kisvarda FC",
+      "away": "Zemplín Michalovce",
       "reason": "No event/team match"
     },
     {
@@ -1489,12 +1501,6 @@
     },
     {
       "league": "Friendlies Clubs",
-      "home": "Kisvarda FC",
-      "away": "Zemplín Michalovce",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Friendlies Clubs",
       "home": "Optik Rathenow",
       "away": "Ludwigsfelde",
       "reason": "No event/team match"
@@ -1533,6 +1539,12 @@
       "league": "Friendlies Clubs",
       "home": "Tasmania Berlin",
       "away": "Schoneiche",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Friendlies Clubs",
+      "home": "Twente",
+      "away": "Gent",
       "reason": "No event/team match"
     },
     {
@@ -2179,6 +2191,12 @@
     },
     {
       "league": "Friendlies Clubs",
+      "home": "Karlsruher SC",
+      "away": "Shimizu S-pulse",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Friendlies Clubs",
       "home": "Lausanne",
       "away": "Yverdon Sport",
       "reason": "No event/team match"
@@ -2218,24 +2236,6 @@
       "home": "Slovácko",
       "away": "Skalica",
       "reason": "No event/team match"
-    },
-    {
-      "league": "Friendlies Clubs",
-      "home": "Sochaux",
-      "away": "Grenoble",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Friendlies Clubs",
-      "home": "Barockstadt Fulda-Lehn.",
-      "away": "Rot-Weiß Walldorf",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Friendlies Clubs",
-      "home": "H&W Welders",
-      "away": "Carrick Rangers",
-      "reason": "No event/team match"
     }
   ],
   "unsupportedMarkets": [
@@ -2261,18 +2261,6 @@
     },
     {
       "sportKey": "soccer_brazil_serie_b",
-      "market": "double_chance"
-    },
-    {
-      "sportKey": "soccer_argentina_primera_division",
-      "market": "btts"
-    },
-    {
-      "sportKey": "soccer_argentina_primera_division",
-      "market": "draw_no_bet"
-    },
-    {
-      "sportKey": "soccer_argentina_primera_division",
       "market": "double_chance"
     },
     {
@@ -2540,31 +2528,6 @@
     },
     {
       "label": "soccer_brazil_serie_b:double_chance",
-      "error": "Markets not supported by this endpoint: double_chance",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_argentina_primera_division:base-combined",
-      "error": "Markets not supported by this endpoint: btts, double_chance, draw_no_bet",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_argentina_primera_division:base-core",
-      "error": "Invalid commenceTimeFrom parameter. The format must be YYYY-MM-DDTHH:MM:SSZ, for example 2020-11-24T16:05:00Z",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_argentina_primera_division:btts",
-      "error": "Markets not supported by this endpoint: btts",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_argentina_primera_division:draw_no_bet",
-      "error": "Markets not supported by this endpoint: draw_no_bet",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_argentina_primera_division:double_chance",
       "error": "Markets not supported by this endpoint: double_chance",
       "statusCode": 422
     },
@@ -3026,5 +2989,5 @@
   },
   "skipped": false,
   "skipReason": null,
-  "completedAt": "2026-07-18T00:14:41.669Z"
+  "completedAt": "2026-07-18T00:19:47.250Z"
 }
