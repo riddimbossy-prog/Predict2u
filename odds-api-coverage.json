@@ -1,6 +1,6 @@
 {
   "version": "v251",
-  "generatedAt": "2026-07-19T05:45:05.948Z",
+  "generatedAt": "2026-07-19T05:54:53.914Z",
   "provider": "The Odds API v4",
   "keyPresent": true,
   "regions": "uk",
@@ -86,22 +86,6 @@
       "sportTitle": "La Liga - Spain",
       "score": 0.5,
       "matches": 1
-    },
-    {
-      "league": "USL Championship",
-      "country": "USA",
-      "sportKey": "soccer_usa_mls",
-      "sportTitle": "MLS",
-      "score": 0.323,
-      "matches": 9
-    },
-    {
-      "league": "Liga MX",
-      "country": "Mexico",
-      "sportKey": "soccer_mexico_ligamx",
-      "sportTitle": "Liga MX",
-      "score": 1,
-      "matches": 6
     },
     {
       "league": "Queensland Premier League",
@@ -552,6 +536,14 @@
       "matches": 10
     },
     {
+      "league": "Liga MX",
+      "country": "Mexico",
+      "sportKey": "soccer_mexico_ligamx",
+      "sportTitle": "Liga MX",
+      "score": 1,
+      "matches": 5
+    },
+    {
       "league": "UEFA Champions League Women",
       "country": "World",
       "sportKey": "soccer_uefa_champs_league_qualification",
@@ -590,6 +582,14 @@
       "sportTitle": "Brazil Série A",
       "score": 0.43,
       "matches": 2
+    },
+    {
+      "league": "USL Championship",
+      "country": "USA",
+      "sportKey": "soccer_usa_mls",
+      "sportTitle": "MLS",
+      "score": 0.323,
+      "matches": 8
     },
     {
       "league": "Major League Soccer",
@@ -1024,7 +1024,7 @@
       "matches": 2
     }
   ],
-  "matchesConsidered": 1770,
+  "matchesConsidered": 1766,
   "matchesMatched": 0,
   "matchesUpdated": 0,
   "fieldsFilled": 0,
@@ -1047,12 +1047,6 @@
     },
     {
       "league": "Northern NSW NPL",
-      "country": "Australia",
-      "reason": "No matching soccer sport key",
-      "bestScore": 0
-    },
-    {
-      "league": "Npl Nsw U20",
       "country": "Australia",
       "reason": "No matching soccer sport key",
       "bestScore": 0
@@ -1272,6 +1266,12 @@
       "country": "Colombia",
       "reason": "No matching soccer sport key",
       "bestScore": 0.143
+    },
+    {
+      "league": "Npl Nsw U20",
+      "country": "Australia",
+      "reason": "No matching soccer sport key",
+      "bestScore": 0
     },
     {
       "league": "Victoria NPL",
@@ -2620,18 +2620,6 @@
       "market": "double_chance"
     },
     {
-      "sportKey": "soccer_mexico_ligamx",
-      "market": "btts"
-    },
-    {
-      "sportKey": "soccer_mexico_ligamx",
-      "market": "draw_no_bet"
-    },
-    {
-      "sportKey": "soccer_mexico_ligamx",
-      "market": "double_chance"
-    },
-    {
       "sportKey": "soccer_epl",
       "market": "btts"
     },
@@ -2725,6 +2713,18 @@
     },
     {
       "sportKey": "soccer_sweden_allsvenskan",
+      "market": "double_chance"
+    },
+    {
+      "sportKey": "soccer_mexico_ligamx",
+      "market": "btts"
+    },
+    {
+      "sportKey": "soccer_mexico_ligamx",
+      "market": "draw_no_bet"
+    },
+    {
+      "sportKey": "soccer_mexico_ligamx",
       "market": "double_chance"
     },
     {
@@ -3025,31 +3025,6 @@
       "statusCode": 422
     },
     {
-      "label": "soccer_mexico_ligamx:base-combined",
-      "error": "Markets not supported by this endpoint: btts, double_chance, draw_no_bet",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_mexico_ligamx:base-core",
-      "error": "Invalid commenceTimeFrom parameter. The format must be YYYY-MM-DDTHH:MM:SSZ, for example 2020-11-24T16:05:00Z",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_mexico_ligamx:btts",
-      "error": "Markets not supported by this endpoint: btts",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_mexico_ligamx:draw_no_bet",
-      "error": "Markets not supported by this endpoint: draw_no_bet",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_mexico_ligamx:double_chance",
-      "error": "Markets not supported by this endpoint: double_chance",
-      "statusCode": 422
-    },
-    {
       "label": "soccer_epl:base-combined",
       "error": "Markets not supported by this endpoint: btts, double_chance, draw_no_bet",
       "statusCode": 422
@@ -3246,6 +3221,31 @@
     },
     {
       "label": "soccer_sweden_allsvenskan:double_chance",
+      "error": "Markets not supported by this endpoint: double_chance",
+      "statusCode": 422
+    },
+    {
+      "label": "soccer_mexico_ligamx:base-combined",
+      "error": "Markets not supported by this endpoint: btts, double_chance, draw_no_bet",
+      "statusCode": 422
+    },
+    {
+      "label": "soccer_mexico_ligamx:base-core",
+      "error": "Invalid commenceTimeFrom parameter. The format must be YYYY-MM-DDTHH:MM:SSZ, for example 2020-11-24T16:05:00Z",
+      "statusCode": 422
+    },
+    {
+      "label": "soccer_mexico_ligamx:btts",
+      "error": "Markets not supported by this endpoint: btts",
+      "statusCode": 422
+    },
+    {
+      "label": "soccer_mexico_ligamx:draw_no_bet",
+      "error": "Markets not supported by this endpoint: draw_no_bet",
+      "statusCode": 422
+    },
+    {
+      "label": "soccer_mexico_ligamx:double_chance",
       "error": "Markets not supported by this endpoint: double_chance",
       "statusCode": 422
     },
@@ -3507,5 +3507,5 @@
   },
   "skipped": false,
   "skipReason": null,
-  "completedAt": "2026-07-19T05:45:16.686Z"
+  "completedAt": "2026-07-19T05:54:59.434Z"
 }
