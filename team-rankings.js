@@ -35,7 +35,11 @@
     }
   };
   rules.season.attackBest={...rules.edge.attackBest,title:'Season Attack — Best',copy:'Best reliable venue attacks in the current fixture window.'};rules.season.attackWorst={...rules.edge.attackWorst,title:'Season Attack — Worst',copy:'Weakest reliable venue attacks in the current fixture window.'};rules.season.defenceBest={...rules.edge.defenceBest,title:'Season Defence — Best',copy:'Strongest reliable venue defences in the current fixture window.'};rules.season.defenceWorst={...rules.edge.defenceWorst,title:'Season Defence — Worst',copy:'Weakest reliable venue defences in the current fixture window.'};
-  let view='edge',category='best',polarity='Best',query='',league='all';const key=()=>category==='attack'?`attack${polarity}`:category==='defence'?`defence${polarity}`:category;
+  const params=new URLSearchParams(location.search);
+  let view=['edge','season'].includes(params.get('view'))?params.get('view'):'edge';
+  let category=['best','worst','attack','defence'].includes(params.get('category'))?params.get('category'):'best';
+  let polarity=['Best','Worst'].includes(params.get('polarity'))?params.get('polarity'):'Best',query='',league='all';
+  const key=()=>category==='attack'?`attack${polarity}`:category==='defence'?`defence${polarity}`:category;
   const fmt=v=>v===null?'—':Number(v).toFixed(2),pct=v=>v===null?'—':`${Math.round(v*100)}%`;
   function card(r,cfg){const reason=cfg.reasons(r).map(x=>`<li>${esc(x)}</li>`).join('');return `<article class="p2u-team-rank-card"><div class="p2u-team-rank-number">${r.position&&r.tableSize?`${r.position}/${r.tableSize}`:'—'}</div><div class="p2u-team-rank-head">${r.logo?`<img src="${esc(r.logo)}" alt="" loading="lazy">`:''}<div><h3>${esc(r.team)}</h3><p>${esc(r.league)}${r.country?` · ${esc(r.country)}`:''}</p></div></div><div class="p2u-team-rank-metrics"><span><b>${fmt(r.ppg)}</b><small>PPG</small></span><span><b>${fmt(r.gf)}</b><small>Scores</small></span><span><b>${fmt(r.ga)}</b><small>Concedes</small></span><span><b>${pct(r.cs)}</b><small>Clean sheets</small></span><span><b>${r.games}</b><small>Venue sample</small></span><span><b>${r.odds?Number(r.odds).toFixed(2):'—'}</b><small>Next odds</small></span></div><ul class="p2u-team-rank-reasons">${reason}</ul><div class="p2u-team-rank-footer"><span>${r.matchDate}</span><span>vs ${esc(r.opponent||'TBD')}</span></div></article>`;}
   function render(){

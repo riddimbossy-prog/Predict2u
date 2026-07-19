@@ -20,7 +20,7 @@
 <link rel="stylesheet" href="app-launch-v264.css"/>
 <link rel="stylesheet" href="first-run-v264.css"/>
 <link rel="stylesheet" href="stability-v264.css"/>
-</head>
+<link rel="stylesheet" href="mobile-responsive-v265.css" data-p2u-responsive-v265="true"/></head>
 <body>
 <script src="unified-shell-v234.js"></script>
 <main class="p2u-page">
@@ -28,7 +28,7 @@
     <span class="p2u-eyebrow">Predict2U Home</span>
     <h1>Know the game.<br><span style="color:var(--ov-accent)">Predict better.</span></h1>
     <p>A faster, stricter starting point for current picks, qualified bankers and public proof. Related engine versions no longer inflate agreement.</p>
-    <div class="p2u-hero-actions"><a class="p2u-btn primary" href="board.html">View Today’s Picks</a><a class="p2u-btn" href="bankers.html">View Bankers</a></div>
+    <div class="p2u-hero-actions"><a class="p2u-btn primary" href="board.html">View Today’s Picks</a><a class="p2u-btn" href="bankers.html">View Bankers</a><a class="p2u-btn teams" href="team-rankings.html">Team Intelligence</a></div>
     <div class="p2u-stats">
       <article class="p2u-stat"><small>Data status</small><strong id="ov-status">Checking</strong><span id="ov-updated">Reading update time</span></article>
       <article class="p2u-stat"><small>Matches today</small><strong id="ov-matches">—</strong><span id="ov-date">Current board</span></article>
@@ -36,6 +36,21 @@
       <article class="p2u-stat"><small>Model families active</small><strong id="ov-families">—</strong><span>Independent evidence only</span></article>
     </div>
     <div class="p2u-overview-trust"><span><b id="ov-record">—</b> settled 30-day record</span><span><b id="ov-public-engines">—</b> governed public engines</span><button type="button" data-p2u-install>Install Predict2U</button></div>
+  </section>
+
+  <section class="p2u-team-home-panel" aria-labelledby="p2u-team-home-title">
+    <div class="p2u-team-home-copy">
+      <span class="p2u-team-home-kicker">Team Intelligence</span>
+      <h2 id="p2u-team-home-title">Best and worst teams, attack and defence.</h2>
+      <p>Use strict venue samples to separate season power from genuine next-match edges. Best-team candidates require 2.20+ PPG, 2.00+ goals, a top-four position and odds no higher than 1.55.</p>
+      <div class="p2u-team-home-actions"><a class="primary" href="team-rankings.html">Open Team Intelligence</a><a href="team-rankings.html?view=season&category=best">View season power</a></div>
+    </div>
+    <div class="p2u-team-home-grid" aria-label="Team Intelligence categories">
+      <a class="p2u-team-home-tile" href="team-rankings.html?view=edge&category=best"><small>Next Match Edge</small><strong>Best Teams</strong><span>Open →</span></a>
+      <a class="p2u-team-home-tile" href="team-rankings.html?view=edge&category=worst"><small>Next Match Edge</small><strong>Worst Teams</strong><span>Open →</span></a>
+      <a class="p2u-team-home-tile" href="team-rankings.html?view=season&category=attack&polarity=Best"><small>Season Power</small><strong>Best Attack</strong><span>Open →</span></a>
+      <a class="p2u-team-home-tile" href="team-rankings.html?view=season&category=defence&polarity=Best"><small>Season Power</small><strong>Best Defence</strong><span>Open →</span></a>
+    </div>
   </section>
 
   <section class="p2u-section">
