@@ -1,6 +1,6 @@
 {
   "version": "v195",
-  "updated": "2026-07-19T20:46:24.395Z",
+  "updated": "2026-07-19T21:47:24.462Z",
   "summary": {
     "fixtures": 300,
     "qualified": 0,
@@ -4708,7 +4708,7 @@
       "alternatives": [
         {
           "market": "Double Chance X2",
-          "support": 0.61,
+          "support": 0.6,
           "engines": [
             "Trend"
           ]
@@ -5082,8 +5082,8 @@
       "bet": false,
       "market": "No Bet",
       "candidate": "Under 3.5 Goals",
-      "score": 76.2,
-      "support": 0.64,
+      "score": 76.1,
+      "support": 0.63,
       "supporters": [
         "League Bias"
       ],
@@ -5184,7 +5184,7 @@
       "market": "No Bet",
       "candidate": "Under 3.5 Goals",
       "score": 81,
-      "support": 1.44,
+      "support": 1.45,
       "supporters": [
         "Trend",
         "League Bias"
@@ -5254,44 +5254,6 @@
       "reason": "Consensus rejected: support, independence or conflict threshold failed."
     },
     {
-      "id": 1548248,
-      "date": "2026-07-19",
-      "home": "Doze",
-      "away": "Linhares",
-      "league": "Capixaba B",
-      "version": "v195",
-      "bet": false,
-      "market": "No Bet",
-      "score": 0,
-      "reason": "No engine produced a qualified candidate.",
-      "supporters": [],
-      "conflictIndex": 0,
-      "independence": 0
-    },
-    {
-      "id": 1559522,
-      "date": "2026-07-19",
-      "home": "Santos",
-      "away": "Deportivo Binacional",
-      "league": "Segunda División",
-      "version": "v195",
-      "bet": false,
-      "market": "No Bet",
-      "candidate": "Under 3.5 Goals",
-      "score": 83.5,
-      "support": 1.68,
-      "supporters": [
-        "Trend",
-        "Streaks",
-        "League Bias"
-      ],
-      "independence": 3,
-      "exactSupport": 3,
-      "conflictIndex": 0,
-      "alternatives": [],
-      "reason": "Consensus rejected: support, independence or conflict threshold failed."
-    },
-    {
       "id": 1519411,
       "date": "2026-07-19",
       "home": "Guayaquil City FC",
@@ -5302,7 +5264,7 @@
       "market": "No Bet",
       "candidate": "Under 3.5 Goals",
       "score": 76.5,
-      "support": 0.73,
+      "support": 0.74,
       "supporters": [
         "League Bias"
       ],
@@ -5415,14 +5377,14 @@
       "alternatives": [
         {
           "market": "Under 3.5 Goals",
-          "support": 0.54,
+          "support": 0.55,
           "engines": [
             "League Bias"
           ]
         },
         {
           "market": "Second Half Over 0.5",
-          "support": 0.42,
+          "support": 0.43,
           "engines": [
             "Halves"
           ]
@@ -5663,6 +5625,97 @@
           "support": 0.56,
           "engines": [
             "Halves"
+          ]
+        }
+      ],
+      "reason": "Consensus rejected: support, independence or conflict threshold failed."
+    },
+    {
+      "id": 1519412,
+      "date": "2026-07-20",
+      "home": "Independiente del Valle",
+      "away": "Emelec",
+      "league": "Liga Pro",
+      "version": "v195",
+      "bet": false,
+      "market": "No Bet",
+      "candidate": "Double Chance 1X",
+      "score": 80.1,
+      "support": 1.22,
+      "supporters": [
+        "PurePPG Ultra",
+        "PurePPG Elite",
+        "PurePPG Apex",
+        "Trend"
+      ],
+      "independence": 2,
+      "exactSupport": 4,
+      "conflictIndex": 0,
+      "alternatives": [
+        {
+          "market": "Under 3.5 Goals",
+          "support": 0.65,
+          "engines": [
+            "League Bias"
+          ]
+        }
+      ],
+      "reason": "Consensus rejected: support, independence or conflict threshold failed."
+    },
+    {
+      "id": 1538393,
+      "date": "2026-07-20",
+      "home": "Blooming",
+      "away": "Real Tomayapo",
+      "league": "Primera División",
+      "version": "v195",
+      "bet": false,
+      "market": "No Bet",
+      "candidate": "Double Chance 1X",
+      "score": 76.8,
+      "support": 0.8,
+      "supporters": [
+        "Trend"
+      ],
+      "independence": 1,
+      "exactSupport": 1,
+      "conflictIndex": 0,
+      "alternatives": [
+        {
+          "market": "Second Half Over 0.5",
+          "support": 0.74,
+          "engines": [
+            "Halves"
+          ]
+        }
+      ],
+      "reason": "Consensus rejected: support, independence or conflict threshold failed."
+    },
+    {
+      "id": 1513232,
+      "date": "2026-07-20",
+      "home": "Real Monarchs",
+      "away": "Tacoma Defiance",
+      "league": "MLS Next Pro",
+      "version": "v195",
+      "bet": false,
+      "market": "No Bet",
+      "candidate": "Second Half Over 0.5",
+      "score": 76,
+      "support": 0.61,
+      "supporters": [
+        "Halves"
+      ],
+      "independence": 1,
+      "exactSupport": 1,
+      "conflictIndex": 0,
+      "alternatives": [
+        {
+          "market": "Double Chance 1X",
+          "support": 0.58,
+          "engines": [
+            "PurePPG Normal",
+            "PurePPG Ultra"
           ]
         }
       ],
