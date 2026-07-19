@@ -1,4 +1,4 @@
-/* Predict2U v266 — team trend explorer and strict matchup lab. */
+/* Predict2U v268 — team trend explorer, strict matchup lab and global fixture-date filter. */
 (function(){
   'use strict';
   const $=id=>document.getElementById(id);
@@ -23,6 +23,10 @@
   const loadedPool=allMatches.filter(unresolved).sort((a,b)=>String(dateOf(b)).localeCompare(String(dateOf(a))));
   const fixturePool=currentPool.length?currentPool:loadedPool;
   const usingFallback=!currentPool.length&&loadedPool.length>0;
+  const availableDates=[...new Set(fixturePool.map(dateOf).filter(validDate))].sort();
+  const requestedDate=new URLSearchParams(location.search).get('date');
+  let selectedDate=validDate(requestedDate)&&availableDates.includes(requestedDate)?requestedDate:'all';
+  const selectedFixturePool=()=>selectedDate==='all'?fixturePool:fixturePool.filter(m=>dateOf(m)===selectedDate);
 
   function sideRow(m,side){
     const home=side==='home',st=m&&m[`${side}Streaks`]||{},htft=st.htft||{},advanced=st.advanced||{};
@@ -49,9 +53,9 @@
     const odds=first(m&&m.odds&&m.odds[home?'home':'away']);
     return {fixture:m,team,league:m&&m.league||'Unknown league',country:m&&m.country||'',logo:m&&m[`${side}Logo`]||'',side,games,ppg,gf,ga,cs,fts,win,draw,loss,unbeaten,over15,over25,over35,under15:over15===null?null:1-over15,under25:over25===null?null:1-over25,under35:over35===null?null:1-over35,btts,noBtts,scored,conceded,noLoss,noWin,noDraw,winStreak,lossStreak,position,tableSize,odds,opponent:m&&m[home?'away':'home'],kickoff:m&&m.kickoff||'',matchDate:dateOf(m)};
   }
-  function latestProfiles(){
+  function latestProfiles(pool=selectedFixturePool()){
     const map=new Map();
-    for(const m of fixturePool){
+    for(const m of pool){
       for(const side of ['home','away']){
         const r=sideRow(m,side);if(!r.team)continue;
         const key=`${r.league}|${r.team}|${r.side}`;const old=map.get(key);
@@ -105,12 +109,42 @@
   let trend=trends[params.get('trend')]?params.get('trend'):'unbeaten';
   let rankQuery='',rankLeague='all',trendQuery='',trendLeague='all';
   const rankKey=()=>category==='attack'?`attack${polarity}`:category==='defence'?`defence${polarity}`:category;
-  const profiles=latestProfiles();
+  const allProfiles=latestProfiles(fixturePool);
+  const activeProfiles=()=>latestProfiles(selectedFixturePool());
 
   function setOptions(select,values,current='all'){
     if(!select)return;
     select.innerHTML='<option value="all">All leagues</option>'+values.map(x=>`<option value="${esc(x)}">${esc(x)}</option>`).join('');
     select.value=values.includes(current)?current:'all';
+  }
+  function friendlyDate(d){
+    if(!validDate(d))return 'All loaded dates';
+    const label=new Intl.DateTimeFormat(undefined,{weekday:'short',day:'numeric',month:'short',year:'numeric',timeZone:'UTC'}).format(new Date(`${d}T00:00:00Z`));
+    return d===today?`Today · ${label}`:label;
+  }
+  function dateMatchCount(d){return fixturePool.filter(m=>dateOf(m)===d).length;}
+  function populateDateFilter(){
+    const select=$('team-date-filter');if(!select)return;
+    select.innerHTML='<option value="all">All loaded dates</option>'+availableDates.map(d=>`<option value="${d}">${esc(friendlyDate(d))} · ${dateMatchCount(d)} match${dateMatchCount(d)===1?'':'es'}</option>`).join('');
+    select.value=selectedDate;
+  }
+  function updateDateSummary(){
+    const pool=selectedFixturePool(),summary=$('team-date-summary');
+    if(summary)summary.textContent=selectedDate==='all'?`All loaded dates · ${pool.length} matches`:`${friendlyDate(selectedDate)} · ${pool.length} matches`;
+    const windowCopy=$('team-rank-window');
+    if(!windowCopy)return;
+    if(selectedDate!=='all')windowCopy.textContent=`Fixture date: ${friendlyDate(selectedDate)} · ${pool.length} loaded match${pool.length===1?'':'es'}`;
+    else windowCopy.textContent=currentPool.length?`Current fixture window: ${today} to ${windowEnd} · ${currentPool.length} loaded matches`:`Latest loaded unresolved fixtures shown · data source updated ${window.P2U_DATA_META&&window.P2U_DATA_META.sourceUpdatedAt?new Date(window.P2U_DATA_META.sourceUpdatedAt).toLocaleString():'unknown'}`;
+  }
+  function refreshLeagueFilters(){
+    const leagues=[...new Set(activeProfiles().map(r=>r.league))].sort();
+    setOptions($('team-rank-league'),leagues,rankLeague);rankLeague=$('team-rank-league')?$('team-rank-league').value:'all';
+    setOptions($('team-trend-league'),leagues,trendLeague);trendLeague=$('team-trend-league')?$('team-trend-league').value:'all';
+  }
+  function setSelectedDate(value){
+    selectedDate=validDate(value)&&availableDates.includes(value)?value:'all';
+    const url=new URL(location.href);if(selectedDate==='all')url.searchParams.delete('date');else url.searchParams.set('date',selectedDate);history.replaceState(null,'',url);
+    refreshLeagueFilters();updateDateSummary();renderRankings();renderTrends();populateLabMatches();
   }
   function rankCard(r,cfg){
     const reason=cfg.reasons(r).map(x=>`<li>${esc(x)}</li>`).join('');
@@ -123,7 +157,7 @@
 
   function renderRankings(){
     const cfg=rankingRules[view][rankKey()];
-    let rows=profiles.filter(cfg.filter);
+    let rows=activeProfiles().filter(cfg.filter);
     if(rankLeague!=='all')rows=rows.filter(r=>r.league===rankLeague);
     if(rankQuery)rows=rows.filter(r=>`${r.team} ${r.league} ${r.country}`.toLowerCase().includes(rankQuery));
     rows.sort((a,b)=>String(a.league).localeCompare(String(b.league))||cfg.sort(a,b));
@@ -135,7 +169,7 @@
     document.querySelectorAll('[data-rank-polarity]').forEach(b=>b.classList.toggle('is-active',b.dataset.rankPolarity===polarity));
   }
   function renderTrends(){
-    const cfg=trends[trend];let rows=profiles.filter(cfg.filter);
+    const cfg=trends[trend];let rows=activeProfiles().filter(cfg.filter);
     if(trendLeague!=='all')rows=rows.filter(r=>r.league===trendLeague);
     if(trendQuery)rows=rows.filter(r=>`${r.team} ${r.league} ${r.country}`.toLowerCase().includes(trendQuery));
     rows.sort((a,b)=>String(a.league).localeCompare(String(b.league))||cfg.sort(a,b));
@@ -147,7 +181,7 @@
   function traitPass(row,key){const cfg=trends[key];return !!(cfg&&row&&row.games>=MIN_SAMPLE&&cfg.filter(row));}
   function labMatches(){
     const homeTrait=$('lab-home-trait').value,awayTrait=$('lab-away-trait').value;
-    return fixturePool.map(m=>({m,home:sideRow(m,'home'),away:sideRow(m,'away')})).filter(x=>traitPass(x.home,homeTrait)&&traitPass(x.away,awayTrait));
+    return selectedFixturePool().map(m=>({m,home:sideRow(m,'home'),away:sideRow(m,'away')})).filter(x=>traitPass(x.home,homeTrait)&&traitPass(x.away,awayTrait));
   }
   function populateLabMatches(){
     const rows=labMatches(),homeSelect=$('lab-home-team'),awaySelect=$('lab-away-team');
@@ -222,8 +256,7 @@
     const url=new URL(location.href);url.searchParams.set('mode',mode);history.replaceState(null,'',url);
   }
   function init(){
-    const leagues=[...new Set(profiles.map(r=>r.league))].sort();setOptions($('team-rank-league'),leagues,rankLeague);setOptions($('team-trend-league'),leagues,trendLeague);
-    $('team-rank-window').textContent=currentPool.length?`Current fixture window: ${today} to ${windowEnd} · ${currentPool.length} loaded matches`:`Latest loaded unresolved fixtures shown · data source updated ${window.P2U_DATA_META&&window.P2U_DATA_META.sourceUpdatedAt?new Date(window.P2U_DATA_META.sourceUpdatedAt).toLocaleString():'unknown'}`;
+    populateDateFilter();refreshLeagueFilters();updateDateSummary();
     $('team-trend-chips').innerHTML=Object.entries(trends).map(([key,cfg])=>`<button data-trend="${key}">${esc(cfg.label)}</button>`).join('');
     const traitOptions=Object.entries(trends).map(([key,cfg])=>`<option value="${key}">${esc(cfg.label)}</option>`).join('');$('lab-home-trait').innerHTML=traitOptions;$('lab-away-trait').innerHTML=traitOptions;$('lab-home-trait').value='winless';$('lab-away-trait').value='nodraws';
     document.querySelectorAll('[data-team-mode]').forEach(b=>b.onclick=()=>setMode(b.dataset.teamMode));
@@ -231,6 +264,7 @@
     document.querySelectorAll('[data-rank-category]').forEach(b=>b.onclick=()=>{category=b.dataset.rankCategory;renderRankings();});
     document.querySelectorAll('[data-rank-polarity]').forEach(b=>b.onclick=()=>{polarity=b.dataset.rankPolarity;renderRankings();});
     document.querySelectorAll('[data-trend]').forEach(b=>b.onclick=()=>{trend=b.dataset.trend;renderTrends();});
+    $('team-date-filter').onchange=e=>setSelectedDate(e.target.value);
     $('team-rank-search').oninput=e=>{rankQuery=String(e.target.value||'').trim().toLowerCase();renderRankings();};
     $('team-rank-league').onchange=e=>{rankLeague=e.target.value;renderRankings();};
     $('team-trend-search').oninput=e=>{trendQuery=String(e.target.value||'').trim().toLowerCase();renderTrends();};

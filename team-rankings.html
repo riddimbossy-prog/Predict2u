@@ -17,6 +17,7 @@
   <link rel="stylesheet" href="stability-v264.css">
   <link rel="stylesheet" href="mobile-responsive-v265.css" data-p2u-responsive-v265="true">
   <link rel="stylesheet" href="controls-v267.css" data-p2u-controls-v267="true">
+  <link rel="stylesheet" href="team-date-filter-v268.css" data-p2u-team-date-v268="true">
 </head>
 <body>
 <script src="unified-shell-v234.js"></script>
@@ -33,6 +34,20 @@
     <button data-team-mode="trends">Trend lists</button>
     <button data-team-mode="lab">Matchup Lab</button>
   </nav>
+
+  <section class="p2u-team-date-filter" aria-label="Team Intelligence fixture date filter">
+    <div class="p2u-team-date-copy">
+      <span>Fixture date</span>
+      <strong id="team-date-summary">All loaded dates</strong>
+      <small>Applies to Power Rankings, Trend Lists and Matchup Lab.</small>
+    </div>
+    <label class="p2u-team-date-field" for="team-date-filter">
+      <span>Select date</span>
+      <select id="team-date-filter" aria-label="Filter Team Intelligence by fixture date">
+        <option value="all">All loaded dates</option>
+      </select>
+    </label>
+  </section>
 
   <section id="team-panel-rankings" class="p2u-team-panel is-active" data-team-panel="rankings">
     <section class="p2u-team-rank-controls">

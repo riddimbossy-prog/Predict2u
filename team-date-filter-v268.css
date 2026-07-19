@@ -1,0 +1,26 @@
+/* Predict2U v268 — global fixture-date filter for Team Intelligence. */
+.p2u-team-date-filter{
+  display:flex;align-items:center;justify-content:space-between;gap:18px;
+  margin:12px 0 16px;padding:14px 16px;border:1px solid rgba(139,176,211,.18);
+  border-radius:17px;background:linear-gradient(180deg,rgba(9,21,34,.96),rgba(5,13,22,.96));
+  box-shadow:0 12px 30px rgba(0,0,0,.14)
+}
+.p2u-team-date-copy{display:grid;gap:3px;min-width:0}
+.p2u-team-date-copy>span,.p2u-team-date-field>span{
+  color:#91a2b5;font-size:9px;font-weight:900;letter-spacing:.10em;text-transform:uppercase
+}
+.p2u-team-date-copy strong{color:#f2f7fb;font-size:13px;line-height:1.25}
+.p2u-team-date-copy small{color:#7f91a6;font-size:10px;line-height:1.4}
+.p2u-team-date-field{display:grid;gap:6px;min-width:min(320px,44vw)}
+.p2u-team-date-field select{
+  width:100%;min-width:0;height:44px;padding:0 38px 0 14px;border:1px solid rgba(139,176,211,.20);
+  border-radius:13px;background:#07111d;color:#eef4fa;outline:0;font:750 12px/1 inherit;
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.018)
+}
+.p2u-team-date-field select:focus{border-color:rgba(183,239,49,.42);box-shadow:0 0 0 3px rgba(183,239,49,.08)}
+@media(max-width:720px){
+  .p2u-team-date-filter{align-items:stretch;flex-direction:column;gap:11px;padding:12px;margin-top:10px;border-radius:15px}
+  .p2u-team-date-field{min-width:0;width:100%}
+  .p2u-team-date-field select{font-size:16px}
+}
+@media(max-width:340px){.p2u-team-date-filter{padding:10px}.p2u-team-date-copy small{font-size:9px}}
