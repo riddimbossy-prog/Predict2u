@@ -1,6 +1,6 @@
 {
   "version": "v251",
-  "generatedAt": "2026-07-19T03:55:11.915Z",
+  "generatedAt": "2026-07-19T04:05:49.154Z",
   "provider": "The Odds API v4",
   "keyPresent": true,
   "regions": "uk",
@@ -8,20 +8,20 @@
   "soccerSportsAvailable": 38,
   "sportMappings": [
     {
-      "league": "Friendlies Clubs",
-      "country": "World",
-      "sportKey": "soccer_fifa_world_cup",
-      "sportTitle": "FIFA World Cup",
-      "score": 0.323,
-      "matches": 254
-    },
-    {
       "league": "Primera B",
       "country": "Chile",
       "sportKey": "soccer_chile_campeonato",
       "sportTitle": "Primera División - Chile",
       "score": 0.466,
       "matches": 8
+    },
+    {
+      "league": "Friendlies Clubs",
+      "country": "World",
+      "sportKey": "soccer_fifa_world_cup",
+      "sportTitle": "FIFA World Cup",
+      "score": 0.323,
+      "matches": 251
     },
     {
       "league": "Baiano U20",
@@ -832,7 +832,7 @@
       "matches": 3
     }
   ],
-  "matchesConsidered": 985,
+  "matchesConsidered": 982,
   "matchesMatched": 0,
   "matchesUpdated": 0,
   "fieldsFilled": 0,
@@ -1166,21 +1166,57 @@
       "bestScore": 0.143
     },
     {
-      "league": "Friendlies Clubs",
-      "home": "Schwarz-Weiß Bregenz",
-      "away": "Imst",
+      "league": "Primera B",
+      "home": "Deportes Copiapo",
+      "away": "D. Puerto Montt",
       "reason": "No event/team match"
     },
     {
-      "league": "Friendlies Clubs",
-      "home": "MVV",
-      "away": "Racing FC Union Luxembourg",
+      "league": "Primera B",
+      "home": "Union San Felipe",
+      "away": "Deportes Iquique",
       "reason": "No event/team match"
     },
     {
-      "league": "Friendlies Clubs",
-      "home": "Wiener Viktoria",
-      "away": "Stockerau",
+      "league": "Primera B",
+      "home": "Deportes Temuco",
+      "away": "Cobreloa",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Primera B",
+      "home": "Recoleta",
+      "away": "Santiago Wanderers",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Primera B",
+      "home": "Antofagasta",
+      "away": "Rangers de Talca",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Primera B",
+      "home": "Magallanes",
+      "away": "Curico Unido",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Primera B",
+      "home": "Deportes Santa Cruz",
+      "away": "San Marcos de Arica",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Primera B",
+      "home": "San Luis",
+      "away": "Union Espanola",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Primera División",
+      "home": "Union La Calera",
+      "away": "Everton de Vina",
       "reason": "No event/team match"
     },
     {
@@ -2304,67 +2340,31 @@
       "home": "Stevenage",
       "away": "West Ham",
       "reason": "No event/team match"
-    },
-    {
-      "league": "Friendlies Clubs",
-      "home": "Eastleigh",
-      "away": "Valenciennes",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Friendlies Clubs",
-      "home": "Rangers",
-      "away": "Saint Etienne",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Friendlies Clubs",
-      "home": "Tenerife",
-      "away": "Getafe",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Friendlies Clubs",
-      "home": "FC Liefering",
-      "away": "Eintracht Braunschweig",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Friendlies Clubs",
-      "home": "Al Diriyah",
-      "away": "FA 2000",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Friendlies Clubs",
-      "home": "Sampdoria",
-      "away": "Cagliari",
-      "reason": "No event/team match"
     }
   ],
   "unsupportedMarkets": [
     {
-      "sportKey": "soccer_fifa_world_cup",
+      "sportKey": "soccer_chile_campeonato",
       "market": "btts"
     },
     {
-      "sportKey": "soccer_fifa_world_cup",
+      "sportKey": "soccer_chile_campeonato",
       "market": "draw_no_bet"
     },
     {
-      "sportKey": "soccer_fifa_world_cup",
+      "sportKey": "soccer_chile_campeonato",
       "market": "double_chance"
     },
     {
-      "sportKey": "soccer_chile_campeonato",
+      "sportKey": "soccer_fifa_world_cup",
       "market": "btts"
     },
     {
-      "sportKey": "soccer_chile_campeonato",
+      "sportKey": "soccer_fifa_world_cup",
       "market": "draw_no_bet"
     },
     {
-      "sportKey": "soccer_chile_campeonato",
+      "sportKey": "soccer_fifa_world_cup",
       "market": "double_chance"
     },
     {
@@ -2646,31 +2646,6 @@
   ],
   "requestErrors": [
     {
-      "label": "soccer_fifa_world_cup:base-combined",
-      "error": "Markets not supported by this endpoint: btts, double_chance, draw_no_bet",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_fifa_world_cup:base-core",
-      "error": "Invalid commenceTimeFrom parameter. The format must be YYYY-MM-DDTHH:MM:SSZ, for example 2020-11-24T16:05:00Z",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_fifa_world_cup:btts",
-      "error": "Markets not supported by this endpoint: btts",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_fifa_world_cup:draw_no_bet",
-      "error": "Markets not supported by this endpoint: draw_no_bet",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_fifa_world_cup:double_chance",
-      "error": "Markets not supported by this endpoint: double_chance",
-      "statusCode": 422
-    },
-    {
       "label": "soccer_chile_campeonato:base-combined",
       "error": "Markets not supported by this endpoint: btts, double_chance, draw_no_bet",
       "statusCode": 422
@@ -2692,6 +2667,31 @@
     },
     {
       "label": "soccer_chile_campeonato:double_chance",
+      "error": "Markets not supported by this endpoint: double_chance",
+      "statusCode": 422
+    },
+    {
+      "label": "soccer_fifa_world_cup:base-combined",
+      "error": "Markets not supported by this endpoint: btts, double_chance, draw_no_bet",
+      "statusCode": 422
+    },
+    {
+      "label": "soccer_fifa_world_cup:base-core",
+      "error": "Invalid commenceTimeFrom parameter. The format must be YYYY-MM-DDTHH:MM:SSZ, for example 2020-11-24T16:05:00Z",
+      "statusCode": 422
+    },
+    {
+      "label": "soccer_fifa_world_cup:btts",
+      "error": "Markets not supported by this endpoint: btts",
+      "statusCode": 422
+    },
+    {
+      "label": "soccer_fifa_world_cup:draw_no_bet",
+      "error": "Markets not supported by this endpoint: draw_no_bet",
+      "statusCode": 422
+    },
+    {
+      "label": "soccer_fifa_world_cup:double_chance",
       "error": "Markets not supported by this endpoint: double_chance",
       "statusCode": 422
     },
@@ -3278,5 +3278,5 @@
   },
   "skipped": false,
   "skipReason": null,
-  "completedAt": "2026-07-19T03:55:20.190Z"
+  "completedAt": "2026-07-19T04:06:04.636Z"
 }
