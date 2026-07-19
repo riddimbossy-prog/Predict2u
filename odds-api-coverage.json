@@ -1,6 +1,6 @@
 {
   "version": "v251",
-  "generatedAt": "2026-07-19T00:55:39.875Z",
+  "generatedAt": "2026-07-19T01:05:03.340Z",
   "provider": "The Odds API v4",
   "keyPresent": true,
   "regions": "uk",
@@ -13,7 +13,7 @@
       "sportKey": "soccer_fifa_world_cup",
       "sportTitle": "FIFA World Cup",
       "score": 0.323,
-      "matches": 262
+      "matches": 260
     },
     {
       "league": "Second League A - Division A Silver",
@@ -848,7 +848,7 @@
       "matches": 3
     }
   ],
-  "matchesConsidered": 1027,
+  "matchesConsidered": 1024,
   "matchesMatched": 0,
   "matchesUpdated": 0,
   "fieldsFilled": 0,
@@ -857,12 +857,6 @@
   "derivedHtftMatches": 0,
   "bookmakerRows": 0,
   "unmatched": [
-    {
-      "league": "Primeira Divisão",
-      "country": "Macao",
-      "reason": "No matching soccer sport key",
-      "bestScore": 0
-    },
     {
       "league": "Botola 2",
       "country": "Morocco",
@@ -964,6 +958,12 @@
       "country": "Latvia",
       "reason": "No matching soccer sport key",
       "bestScore": 0.143
+    },
+    {
+      "league": "Primeira Divisão",
+      "country": "Macao",
+      "reason": "No matching soccer sport key",
+      "bestScore": 0
     },
     {
       "league": "1 Lyga",
@@ -1180,18 +1180,6 @@
       "country": "Colombia",
       "reason": "No matching soccer sport key",
       "bestScore": 0.143
-    },
-    {
-      "league": "Friendlies Clubs",
-      "home": "Jong PSV U21",
-      "away": "KRC Genk II",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Friendlies Clubs",
-      "home": "Todesfelde",
-      "away": "Lübeck II",
-      "reason": "No event/team match"
     },
     {
       "league": "Friendlies Clubs",
@@ -2356,6 +2344,18 @@
       "home": "Burton Albion",
       "away": "Birmingham",
       "reason": "No event/team match"
+    },
+    {
+      "league": "Friendlies Clubs",
+      "home": "Peterborough Sports",
+      "away": "Peterborough",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Friendlies Clubs",
+      "home": "Stevenage",
+      "away": "West Ham",
+      "reason": "No event/team match"
     }
   ],
   "unsupportedMarkets": [
@@ -3294,5 +3294,5 @@
   },
   "skipped": false,
   "skipReason": null,
-  "completedAt": "2026-07-19T00:55:49.840Z"
+  "completedAt": "2026-07-19T01:05:08.578Z"
 }
