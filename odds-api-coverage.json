@@ -1,6 +1,6 @@
 {
   "version": "v251",
-  "generatedAt": "2026-07-19T03:35:06.013Z",
+  "generatedAt": "2026-07-19T03:45:10.111Z",
   "provider": "The Odds API v4",
   "keyPresent": true,
   "regions": "uk",
@@ -96,28 +96,20 @@
       "matches": 3
     },
     {
+      "league": "MLS Next Pro",
+      "country": "USA",
+      "sportKey": "soccer_usa_mls",
+      "sportTitle": "MLS",
+      "score": 1,
+      "matches": 8
+    },
+    {
       "league": "USL Championship",
       "country": "USA",
       "sportKey": "soccer_usa_mls",
       "sportTitle": "MLS",
       "score": 0.323,
-      "matches": 5
-    },
-    {
-      "league": "NWSL Women",
-      "country": "USA",
-      "sportKey": "soccer_usa_mls",
-      "sportTitle": "MLS",
-      "score": 0.323,
-      "matches": 2
-    },
-    {
-      "league": "Primera Division",
-      "country": "Nicaragua",
-      "sportKey": "soccer_spain_la_liga",
-      "sportTitle": "La Liga - Spain",
-      "score": 0.5,
-      "matches": 1
+      "matches": 3
     },
     {
       "league": "Liga MX",
@@ -125,15 +117,7 @@
       "sportKey": "soccer_mexico_ligamx",
       "sportTitle": "Liga MX",
       "score": 1,
-      "matches": 5
-    },
-    {
-      "league": "MLS Next Pro",
-      "country": "USA",
-      "sportKey": "soccer_usa_mls",
-      "sportTitle": "MLS",
-      "score": 1,
-      "matches": 8
+      "matches": 3
     },
     {
       "league": "Queensland Premier League",
@@ -381,6 +365,14 @@
       "sportKey": "soccer_fifa_world_cup",
       "sportTitle": "FIFA World Cup",
       "score": 0.9,
+      "matches": 1
+    },
+    {
+      "league": "NWSL Women",
+      "country": "USA",
+      "sportKey": "soccer_usa_mls",
+      "sportTitle": "MLS",
+      "score": 0.323,
       "matches": 1
     },
     {
@@ -840,7 +832,7 @@
       "matches": 3
     }
   ],
-  "matchesConsidered": 992,
+  "matchesConsidered": 985,
   "matchesMatched": 0,
   "matchesUpdated": 0,
   "fieldsFilled": 0,
@@ -860,12 +852,6 @@
       "country": "Canada",
       "reason": "No matching soccer sport key",
       "bestScore": 0.25
-    },
-    {
-      "league": "Segunda División",
-      "country": "Peru",
-      "reason": "No matching soccer sport key",
-      "bestScore": 0.143
     },
     {
       "league": "NNSW League 1",
@@ -1002,6 +988,12 @@
     {
       "league": "A Lyga",
       "country": "Lithuania",
+      "reason": "No matching soccer sport key",
+      "bestScore": 0.143
+    },
+    {
+      "league": "Segunda División",
+      "country": "Peru",
       "reason": "No matching soccer sport key",
       "bestScore": 0.143
     },
@@ -3286,5 +3278,5 @@
   },
   "skipped": false,
   "skipReason": null,
-  "completedAt": "2026-07-19T03:35:23.112Z"
+  "completedAt": "2026-07-19T03:45:27.743Z"
 }
