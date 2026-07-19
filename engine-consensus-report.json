@@ -1,6 +1,6 @@
 {
   "version": "v195",
-  "updated": "2026-07-19T03:12:46.343Z",
+  "updated": "2026-07-19T04:18:39.229Z",
   "summary": {
     "fixtures": 300,
     "qualified": 1,
@@ -4844,35 +4844,6 @@
       "reason": "Consensus rejected: support, independence or conflict threshold failed."
     },
     {
-      "id": 1493580,
-      "date": "2026-07-19",
-      "home": "Phoenix Rising",
-      "away": "Monterey Bay",
-      "league": "USL Championship",
-      "version": "v195",
-      "bet": false,
-      "market": "No Bet",
-      "candidate": "Second Half Over 0.5",
-      "score": 76.3,
-      "support": 0.67,
-      "supporters": [
-        "Halves"
-      ],
-      "independence": 1,
-      "exactSupport": 1,
-      "conflictIndex": 0,
-      "alternatives": [
-        {
-          "market": "Home Team Over 0.5 Goals",
-          "support": 0.37,
-          "engines": [
-            "League Bias"
-          ]
-        }
-      ],
-      "reason": "Consensus rejected: support, independence or conflict threshold failed."
-    },
-    {
       "id": 1532599,
       "date": "2026-07-19",
       "home": "South Cardiff",
@@ -4939,72 +4910,6 @@
         }
       ],
       "reason": "Consensus rejected: support, independence or conflict threshold failed."
-    },
-    {
-      "id": 1549338,
-      "date": "2026-07-19",
-      "home": "Blacktown City U20",
-      "away": "St. George City U20",
-      "league": "Npl Nsw U20",
-      "version": "v195",
-      "bet": false,
-      "market": "No Bet",
-      "candidate": "Away Team Over 0.5 Goals",
-      "score": 79.8,
-      "support": 1.16,
-      "supporters": [
-        "Trend",
-        "League Bias"
-      ],
-      "independence": 2,
-      "exactSupport": 2,
-      "conflictIndex": 0,
-      "alternatives": [
-        {
-          "market": "Second Half Over 0.5",
-          "support": 0.76,
-          "engines": [
-            "Halves"
-          ]
-        }
-      ],
-      "reason": "Consensus rejected: support, independence or conflict threshold failed."
-    },
-    {
-      "id": 1549339,
-      "date": "2026-07-19",
-      "home": "Marconi S. U20",
-      "away": "Sydney Utd U20",
-      "league": "Npl Nsw U20",
-      "version": "v195",
-      "bet": false,
-      "market": "No Bet",
-      "candidate": "Second Half Over 0.5",
-      "score": 76.3,
-      "support": 0.67,
-      "supporters": [
-        "Halves"
-      ],
-      "independence": 1,
-      "exactSupport": 1,
-      "conflictIndex": 0,
-      "alternatives": [],
-      "reason": "Consensus rejected: support, independence or conflict threshold failed."
-    },
-    {
-      "id": 1550902,
-      "date": "2026-07-19",
-      "home": "Club Queretaro",
-      "away": "Club America",
-      "league": "Liga MX",
-      "version": "v195",
-      "bet": false,
-      "market": "No Bet",
-      "score": 0,
-      "reason": "No engine produced a qualified candidate.",
-      "supporters": [],
-      "conflictIndex": 0,
-      "independence": 0
     },
     {
       "id": 1522147,
@@ -5643,6 +5548,140 @@
       "exactSupport": 1,
       "conflictIndex": 0,
       "alternatives": [],
+      "reason": "Consensus rejected: support, independence or conflict threshold failed."
+    },
+    {
+      "id": 1507002,
+      "date": "2026-07-19",
+      "home": "FC Anyang",
+      "away": "Gwangju FC",
+      "league": "K League 1",
+      "version": "v195",
+      "bet": false,
+      "market": "No Bet",
+      "candidate": "Under 3.5 Goals",
+      "score": 76.3,
+      "support": 0.67,
+      "supporters": [
+        "League Bias"
+      ],
+      "independence": 1,
+      "exactSupport": 1,
+      "conflictIndex": 0,
+      "alternatives": [
+        {
+          "market": "Second Half Over 0.5",
+          "support": 0.59,
+          "engines": [
+            "Halves"
+          ]
+        }
+      ],
+      "reason": "Consensus rejected: support, independence or conflict threshold failed."
+    },
+    {
+      "id": 1507003,
+      "date": "2026-07-19",
+      "home": "Bucheon FC 1995",
+      "away": "FC Seoul",
+      "league": "K League 1",
+      "version": "v195",
+      "bet": false,
+      "market": "No Bet",
+      "candidate": "Double Chance X2",
+      "score": 81.1,
+      "support": 1.47,
+      "supporters": [
+        "PurePPG Ultra",
+        "Trend"
+      ],
+      "independence": 2,
+      "exactSupport": 2,
+      "conflictIndex": 0,
+      "alternatives": [
+        {
+          "market": "Away Win",
+          "support": 0.85,
+          "engines": [
+            "PurePPG Normal",
+            "PurePPG Strict"
+          ]
+        },
+        {
+          "market": "Under 3.5 Goals",
+          "support": 0.64,
+          "engines": [
+            "League Bias"
+          ]
+        },
+        {
+          "market": "Away DNB",
+          "support": 0.62,
+          "engines": [
+            "PurePPG Elite",
+            "PurePPG Apex"
+          ]
+        }
+      ],
+      "reason": "Consensus rejected: support, independence or conflict threshold failed."
+    },
+    {
+      "id": 1510383,
+      "date": "2026-07-19",
+      "home": "Cheongju",
+      "away": "Cheonan City",
+      "league": "K League 2",
+      "version": "v195",
+      "bet": false,
+      "market": "No Bet",
+      "candidate": "Home Team Over 0.5 Goals",
+      "score": 80,
+      "support": 1.2,
+      "supporters": [
+        "Trend",
+        "League Bias"
+      ],
+      "independence": 2,
+      "exactSupport": 2,
+      "conflictIndex": 0,
+      "alternatives": [
+        {
+          "market": "Second Half Over 0.5",
+          "support": 0.54,
+          "engines": [
+            "Halves"
+          ]
+        }
+      ],
+      "reason": "Consensus rejected: support, independence or conflict threshold failed."
+    },
+    {
+      "id": 1510384,
+      "date": "2026-07-19",
+      "home": "Gyeongnam FC",
+      "away": "Ansan Greeners",
+      "league": "K League 2",
+      "version": "v195",
+      "bet": false,
+      "market": "No Bet",
+      "candidate": "Second Half Over 0.5",
+      "score": 75.8,
+      "support": 0.54,
+      "supporters": [
+        "Halves"
+      ],
+      "independence": 1,
+      "exactSupport": 1,
+      "conflictIndex": 0,
+      "alternatives": [
+        {
+          "market": "Home Team Over 0.5 Goals",
+          "support": 0.39,
+          "engines": [
+            "League Bias"
+          ]
+        }
+      ],
       "reason": "Consensus rejected: support, independence or conflict threshold failed."
     }
   ]
