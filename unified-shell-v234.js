@@ -46,11 +46,11 @@
     {href:'index.html',label:'Home',icon:'overview'},
     {href:'board.html',label:'Today',icon:'picks'},
     {href:'bankers.html',label:'Bankers',icon:'bankers'},
-    {href:'all-engines.html',label:'Engines',icon:'engines'},
-    {href:'proof.html',label:'Proof',icon:'proof'}
+    {href:'all-engines.html',label:'Engines',icon:'engines'}
   ];
   const moreLinks=[
     {href:'team-rankings.html',label:'Teams',icon:'rankings'},
+    {href:'proof.html',label:'Proof',icon:'proof'},
     {href:'engines.html',label:'Full Board',icon:'fullboard'},
     {href:'scorecards.html',label:'Scorecards',icon:'score'},
     {href:'league-dna.html',label:'League DNA',icon:'dna'},

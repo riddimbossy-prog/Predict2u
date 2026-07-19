@@ -1,1 +1,104 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><title>Team Intelligence — Predict2U</title><meta name="description" content="Reliable best, worst, attack and defence team profiles using current fixtures and minimum split samples."><meta name="theme-color" content="#07111d"><link rel="manifest" href="manifest.webmanifest"><link rel="icon" href="favicon-32x32.png"><link rel="stylesheet" href="intelligence.css"><link rel="stylesheet" href="brand-experience.css"><link rel="stylesheet" href="unified-shell-v245.css"><link rel="stylesheet" href="mobile-zfold-v257.css"><link rel="stylesheet" href="team-rankings.css"><link rel="stylesheet" href="data-freshness-v264.css"><link rel="stylesheet" href="stability-v264.css"><link rel="stylesheet" href="mobile-responsive-v265.css" data-p2u-responsive-v265="true"/></head><body><script src="unified-shell-v234.js"></script><main class="p2u-team-rank-page"><section class="p2u-team-rank-hero"><span class="p2u-team-rank-kicker">TEAM INTELLIGENCE</span><h1>Best, worst, attack & defence</h1><p>Two honest views: Season Power describes the underlying venue profile; Next Match Edge also requires the upcoming fixture and price. Every list uses at least eight venue matches.</p><small id="team-rank-window"></small></section><section class="p2u-team-rank-controls"><div class="p2u-team-rank-view" role="group"><button class="is-active" data-rank-view="edge">Next Match Edge</button><button data-rank-view="season">Season Power</button></div><div class="p2u-team-rank-tabs" role="tablist"><button class="is-active" data-rank-category="best">Best</button><button data-rank-category="worst">Worst</button><button data-rank-category="attack">Attack</button><button data-rank-category="defence">Defence</button></div><div class="p2u-team-rank-polarity" hidden><button class="is-active" data-rank-polarity="Best">Best</button><button data-rank-polarity="Worst">Worst</button></div><div class="p2u-team-rank-fields"><select id="team-rank-league" aria-label="League"><option value="all">All leagues</option></select><input id="team-rank-search" class="p2u-team-rank-search" type="search" placeholder="Search team, league or country…"></div></section><div class="p2u-team-rank-section-head"><div><h2 id="team-rank-title">Best Team Edges</h2><p id="team-rank-copy"></p></div><span id="team-rank-count" class="p2u-team-rank-count">0 qualified</span></div><section id="team-rank-grid" class="p2u-team-rank-grid"><div class="p2u-team-rank-empty">Reading reliable team profiles…</div></section></main><script src="current-data.js"></script><script src="data-freshness-v264.js"></script><script src="team-rankings.js"></script><script src="football-assets.js" defer></script><script src="pwa-launch.js" defer></script></body></html>
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <title>Team Intelligence — Predict2U</title>
+  <meta name="description" content="Explore team trends, compare matchup profiles and generate a strict data-led market suggestion from the next loaded fixture.">
+  <meta name="theme-color" content="#07111d">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="icon" href="favicon-32x32.png">
+  <link rel="stylesheet" href="intelligence.css">
+  <link rel="stylesheet" href="brand-experience.css">
+  <link rel="stylesheet" href="unified-shell-v245.css">
+  <link rel="stylesheet" href="mobile-zfold-v257.css">
+  <link rel="stylesheet" href="team-rankings.css">
+  <link rel="stylesheet" href="data-freshness-v264.css">
+  <link rel="stylesheet" href="stability-v264.css">
+  <link rel="stylesheet" href="mobile-responsive-v265.css" data-p2u-responsive-v265="true">
+</head>
+<body>
+<script src="unified-shell-v234.js"></script>
+<main class="p2u-team-rank-page">
+  <section class="p2u-team-rank-hero">
+    <span class="p2u-team-rank-kicker">TEAM INTELLIGENCE LAB</span>
+    <h1>Rank teams. Read trends. Test matchups.</h1>
+    <p>Explore reliable home and away split profiles, then combine two opposing team trends—such as a winless home team against a no-draw away team—to produce one strict data-led match suggestion.</p>
+    <small id="team-rank-window"></small>
+  </section>
+
+  <nav class="p2u-team-mode-tabs" aria-label="Team Intelligence sections">
+    <button class="is-active" data-team-mode="rankings">Power rankings</button>
+    <button data-team-mode="trends">Trend lists</button>
+    <button data-team-mode="lab">Matchup Lab</button>
+  </nav>
+
+  <section id="team-panel-rankings" class="p2u-team-panel is-active" data-team-panel="rankings">
+    <section class="p2u-team-rank-controls">
+      <div class="p2u-team-rank-view" role="group" aria-label="Ranking view">
+        <button class="is-active" data-rank-view="edge">Next Match Edge</button>
+        <button data-rank-view="season">Season Power</button>
+      </div>
+      <div class="p2u-team-rank-tabs" role="tablist" aria-label="Ranking category">
+        <button class="is-active" data-rank-category="best">Best</button>
+        <button data-rank-category="worst">Worst</button>
+        <button data-rank-category="attack">Attack</button>
+        <button data-rank-category="defence">Defence</button>
+      </div>
+      <div class="p2u-team-rank-polarity" hidden>
+        <button class="is-active" data-rank-polarity="Best">Best</button>
+        <button data-rank-polarity="Worst">Worst</button>
+      </div>
+      <div class="p2u-team-rank-fields">
+        <select id="team-rank-league" aria-label="League"><option value="all">All leagues</option></select>
+        <input id="team-rank-search" class="p2u-team-rank-search" type="search" placeholder="Search team, league or country…">
+      </div>
+    </section>
+    <div class="p2u-team-rank-section-head">
+      <div><h2 id="team-rank-title">Best Team Edges</h2><p id="team-rank-copy"></p></div>
+      <span id="team-rank-count" class="p2u-team-rank-count">0 qualified</span>
+    </div>
+    <section id="team-rank-grid" class="p2u-team-rank-grid"><div class="p2u-team-rank-empty">Reading reliable team profiles…</div></section>
+  </section>
+
+  <section id="team-panel-trends" class="p2u-team-panel" data-team-panel="trends" hidden>
+    <section class="p2u-team-trend-controls">
+      <div id="team-trend-chips" class="p2u-team-trend-chips" role="tablist" aria-label="Team trend"></div>
+      <div class="p2u-team-rank-fields">
+        <select id="team-trend-league" aria-label="Trend league"><option value="all">All leagues</option></select>
+        <input id="team-trend-search" class="p2u-team-rank-search" type="search" placeholder="Search trend teams…">
+      </div>
+    </section>
+    <div class="p2u-team-rank-section-head">
+      <div><h2 id="team-trend-title">Unbeaten teams</h2><p id="team-trend-copy"></p></div>
+      <span id="team-trend-count" class="p2u-team-rank-count">0 qualified</span>
+    </div>
+    <section id="team-trend-grid" class="p2u-team-rank-grid"><div class="p2u-team-rank-empty">Reading trend profiles…</div></section>
+  </section>
+
+  <section id="team-panel-lab" class="p2u-team-panel" data-team-panel="lab" hidden>
+    <section class="p2u-matchup-lab">
+      <div class="p2u-matchup-lab-head">
+        <span class="p2u-team-rank-kicker">MATCHUP LAB</span>
+        <h2>Combine two opposite team profiles</h2>
+        <p>Choose a home-team trend and an away-team trend. The Lab only offers loaded fixtures where both teams meet the selected profiles, then checks form, split PPG, attack, defence, goal lines, BTTS, league context and available odds.</p>
+      </div>
+      <div class="p2u-matchup-builder">
+        <label><span>Home-team profile</span><select id="lab-home-trait"></select></label>
+        <label><span>Away-team profile</span><select id="lab-away-trait"></select></label>
+        <label><span>Home team</span><select id="lab-home-team"></select></label>
+        <label><span>Away team</span><select id="lab-away-team" disabled></select></label>
+        <button id="lab-analyse" type="button">Analyse matchup</button>
+      </div>
+      <div id="lab-match-count" class="p2u-lab-match-count"></div>
+    </section>
+    <section id="lab-result" class="p2u-lab-result" aria-live="polite"><div class="p2u-team-rank-empty">Select two profiles and a loaded fixture to generate a strict matchup analysis.</div></section>
+  </section>
+</main>
+<script src="current-data.js"></script>
+<script src="data-freshness-v264.js"></script>
+<script src="team-rankings.js"></script>
+<script src="football-assets.js" defer></script>
+<script src="pwa-launch.js" defer></script>
+</body>
+</html>
