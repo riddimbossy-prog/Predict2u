@@ -19,7 +19,7 @@
 ## Repository installation
 
 1. Extract `Predict2U_Real_Story_Images_v191_CHANGED_FILES.zip`.
-2. Copy everything into the root of `golden-banker-v2`.
+2. Copy everything into the root of `predict2u-my-banker-v2`.
 3. Choose **Replace files in destination**.
 4. Commit and push with:
 

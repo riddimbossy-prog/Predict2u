@@ -1,7 +1,7 @@
 # Install Predict2U v257
 
 1. Extract the patch ZIP.
-2. Copy all files into the root of `golden-banker-v2`.
+2. Copy all files into the root of `predict2u-my-banker-v2`.
 3. Choose **Replace files in the destination**.
 4. Commit with: `Install Predict2U v257 mobile and Z Fold repair`
 5. Push to `main`.

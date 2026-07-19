@@ -150,7 +150,7 @@ The full fixture refresh also rebuilds the ledger after writing `data.js`.
 ## Installation
 
 1. Extract `Predict2U_Engine_Learning_v193_CHANGED_FILES.zip`.
-2. Copy everything into the root of `golden-banker-v2`.
+2. Copy everything into the root of `predict2u-my-banker-v2`.
 3. Choose **Replace files in destination**.
 4. Commit and push:
 

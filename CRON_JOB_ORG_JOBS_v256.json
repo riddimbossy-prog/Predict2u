@@ -1,7 +1,7 @@
 {
   "version": "v256",
   "timezone": "UTC",
-  "repository": "riddimbossy-prog/golden-banker-v2",
+  "repository": "riddimbossy-prog/predict2u-my-banker-v2",
   "method": "POST",
   "body": { "ref": "main" },
   "headers": {
@@ -14,31 +14,31 @@
     {
       "name": "Predict2U Fast All Games",
       "workflow": "future-fixtures.yml",
-      "url": "https://api.github.com/repos/riddimbossy-prog/golden-banker-v2/actions/workflows/future-fixtures.yml/dispatches",
+      "url": "https://api.github.com/repos/riddimbossy-prog/predict2u-my-banker-v2/actions/workflows/future-fixtures.yml/dispatches",
       "cron": "30 2,14 * * *"
     },
     {
       "name": "Predict2U Fast Fixture Snapshot",
       "workflow": "fixture-snapshot.yml",
-      "url": "https://api.github.com/repos/riddimbossy-prog/golden-banker-v2/actions/workflows/fixture-snapshot.yml/dispatches",
+      "url": "https://api.github.com/repos/riddimbossy-prog/predict2u-my-banker-v2/actions/workflows/fixture-snapshot.yml/dispatches",
       "cron": "20 0,6,12,18 * * *"
     },
     {
       "name": "Predict2U Football News Sync",
       "workflow": "news-sync.yml",
-      "url": "https://api.github.com/repos/riddimbossy-prog/golden-banker-v2/actions/workflows/news-sync.yml/dispatches",
+      "url": "https://api.github.com/repos/riddimbossy-prog/predict2u-my-banker-v2/actions/workflows/news-sync.yml/dispatches",
       "cron": "7,27,47 * * * *"
     },
     {
       "name": "Predict2U Live Scores",
       "workflow": "live-scores.yml",
-      "url": "https://api.github.com/repos/riddimbossy-prog/golden-banker-v2/actions/workflows/live-scores.yml/dispatches",
+      "url": "https://api.github.com/repos/riddimbossy-prog/predict2u-my-banker-v2/actions/workflows/live-scores.yml/dispatches",
       "cron": "5,20,35,50 0-1,5-13,17-23 * * *"
     },
     {
       "name": "Predict2U Odds + HTFT Refresh",
       "workflow": "odds-api-refresh.yml",
-      "url": "https://api.github.com/repos/riddimbossy-prog/golden-banker-v2/actions/workflows/odds-api-refresh.yml/dispatches",
+      "url": "https://api.github.com/repos/riddimbossy-prog/predict2u-my-banker-v2/actions/workflows/odds-api-refresh.yml/dispatches",
       "cron": "10 5,17 * * *"
     }
   ]

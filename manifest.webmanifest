@@ -1,7 +1,7 @@
 {
   "name": "Predict2U \u2014 Know the Game. Predict Better.",
   "short_name": "Predict2U",
-  "description": "Twenty transparent football analysis engines, qualified picks, bankers, global football news and Community discussion.",
+  "description": "Fresh football predictions from governed independent model families, strict bankers and a transparent proof record.",
   "id": "./",
   "start_url": "./index.html?source=pwa",
   "scope": "./",
@@ -17,7 +17,6 @@
   "theme_color": "#08090d",
   "categories": [
     "sports",
-    "news",
     "utilities"
   ],
   "prefer_related_applications": false,
@@ -61,22 +60,9 @@
   ],
   "shortcuts": [
     {
-      "name": "Overview",
-      "short_name": "Overview",
-      "description": "Open the Predict2U overview",
-      "url": "./index.html?source=shortcut",
-      "icons": [
-        {
-          "src": "icon-192.png",
-          "sizes": "192x192",
-          "type": "image/png"
-        }
-      ]
-    },
-    {
-      "name": "Today\u2019s Board",
-      "short_name": "Board",
-      "description": "Open today\u2019s published Board",
+      "name": "Today\u2019s Picks",
+      "short_name": "Today",
+      "description": "Open current qualified picks",
       "url": "./board.html?source=shortcut",
       "icons": [
         {
@@ -87,10 +73,10 @@
       ]
     },
     {
-      "name": "Football News",
-      "short_name": "News",
-      "description": "Open football news and transfers",
-      "url": "./news.html?source=shortcut",
+      "name": "Bankers",
+      "short_name": "Bankers",
+      "description": "Open strict qualified banker selections",
+      "url": "./bankers.html?source=shortcut",
       "icons": [
         {
           "src": "icon-192.png",
@@ -100,9 +86,9 @@
       ]
     },
     {
-      "name": "All Engines",
+      "name": "Engine Hub",
       "short_name": "Engines",
-      "description": "Browse every Predict2U prediction engine",
+      "description": "Browse active and shadow prediction engines",
       "url": "./all-engines.html?source=shortcut",
       "icons": [
         {
@@ -113,22 +99,9 @@
       ]
     },
     {
-      "name": "Community",
-      "short_name": "Community",
-      "description": "Open Community records and discussion",
-      "url": "./community.html?source=shortcut",
-      "icons": [
-        {
-          "src": "icon-192.png",
-          "sizes": "192x192",
-          "type": "image/png"
-        }
-      ]
-    },
-    {
-      "name": "Proof Mode",
+      "name": "Proof",
       "short_name": "Proof",
-      "description": "Review engine evidence and settlements",
+      "description": "Review settled public results",
       "url": "./proof.html?source=shortcut",
       "icons": [
         {
@@ -148,5 +121,14 @@
       "text": "text",
       "url": "url"
     }
-  }
+  },
+  "screenshots": [
+    {
+      "src": "pwa-splash-v264.jpg",
+      "sizes": "720x1279",
+      "type": "image/jpeg",
+      "form_factor": "narrow",
+      "label": "Predict2U branded football and prediction-engine splash"
+    }
+  ]
 }

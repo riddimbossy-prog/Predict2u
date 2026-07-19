@@ -47,6 +47,9 @@ jobs:
       - name: Compact generated match data
         run: node compact-generated-data.js
 
+      - name: Rebuild compact public data bundle
+        run: node build-public-data.js
+
       - name: Save Odds API cache outside Git
         if: ${{ hashFiles('odds-api-cache.json') != '' }}
         uses: actions/cache/save@v4
@@ -61,7 +64,7 @@ jobs:
           git config user.name "Predict2U Odds Bot"
           git config user.email "actions@users.noreply.github.com"
           git rm --cached -f --ignore-unmatch odds-api-cache.json 2>/dev/null || true
-          git add -f -- data.js odds-api-coverage.json
+          git add -f -- data.js current-data.js data-meta.json odds-api-coverage.json
           if git diff --cached --quiet; then
             echo "Odds data already matches the repository."
             exit 0

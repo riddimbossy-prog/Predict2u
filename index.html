@@ -3,89 +3,82 @@
 <head>
 <meta charset="utf-8"/>
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"/>
-<title>Predict2U • Overview</title>
+<title>Predict2U • Home</title>
+<meta name="description" content="Fresh football predictions from independent model families, strict bankers and a public proof record."/>
 <meta name="theme-color" content="#060a12"/>
 <link rel="manifest" href="manifest.webmanifest"/>
 <link rel="icon" href="favicon-32x32.png"/>
+<link rel="apple-touch-icon" href="apple-touch-icon.png"/>
 <link rel="stylesheet" href="unified-shell-v227.css"/>
 <link rel="stylesheet" href="overview-engines-v245.css"/>
 <link rel="stylesheet" href="fixture-feed-v247.css"/>
 <link rel="stylesheet" href="smart-alerts.css" data-p2u-smart-alerts-style="true"/>
+<link rel="stylesheet" href="pwa-launch.css"/>
 <link rel="stylesheet" href="mobile-zfold-v257.css" data-p2u-mobile-zfold-v257="true"/>
 <link rel="stylesheet" href="ui-polish-v259.css" data-p2u-ui-v259="true"/>
+<link rel="stylesheet" href="data-freshness-v264.css"/>
+<link rel="stylesheet" href="app-launch-v264.css"/>
+<link rel="stylesheet" href="first-run-v264.css"/>
+<link rel="stylesheet" href="stability-v264.css"/>
 </head>
 <body>
 <script src="unified-shell-v234.js"></script>
 <main class="p2u-page">
   <section class="p2u-hero">
-    <span class="p2u-eyebrow">Predict2U Overview</span>
+    <span class="p2u-eyebrow">Predict2U Home</span>
     <h1>Know the game.<br><span style="color:var(--ov-accent)">Predict better.</span></h1>
-    <p>Your clean starting point for qualified picks, strongest bankers, the complete board, all prediction engines, football news and community activity.</p>
-    <div class="p2u-hero-actions"><a class="p2u-btn primary" href="board.html">Open Picks</a><a class="p2u-btn" href="bankers.html">View Bankers</a><a class="p2u-btn" href="all-engines.html">Explore Engines</a><a class="p2u-btn teams" href="team-rankings.html">Best &amp; Worst Teams</a></div>
+    <p>A faster, stricter starting point for current picks, qualified bankers and public proof. Related engine versions no longer inflate agreement.</p>
+    <div class="p2u-hero-actions"><a class="p2u-btn primary" href="board.html">View Today’s Picks</a><a class="p2u-btn" href="bankers.html">View Bankers</a></div>
     <div class="p2u-stats">
-      <article class="p2u-stat"><small>Matches loaded</small><strong id="ov-matches">—</strong><span id="ov-date">Current board</span></article>
+      <article class="p2u-stat"><small>Data status</small><strong id="ov-status">Checking</strong><span id="ov-updated">Reading update time</span></article>
+      <article class="p2u-stat"><small>Matches today</small><strong id="ov-matches">—</strong><span id="ov-date">Current board</span></article>
       <article class="p2u-stat"><small>Qualified picks</small><strong id="ov-picks">—</strong><span>Exact-market outputs</span></article>
-      <article class="p2u-stat"><small>Bankers</small><strong id="ov-bankers">—</strong><span>Strongest selections</span></article>
-      <article class="p2u-stat"><small>Engines active</small><strong id="ov-engines">—</strong><span>Across the selected date</span></article>
+      <article class="p2u-stat"><small>Model families active</small><strong id="ov-families">—</strong><span>Independent evidence only</span></article>
     </div>
+    <div class="p2u-overview-trust"><span><b id="ov-record">—</b> settled 30-day record</span><span><b id="ov-public-engines">—</b> governed public engines</span><button type="button" data-p2u-install>Install Predict2U</button></div>
   </section>
 
   <section class="p2u-section">
-    <div class="p2u-section-head"><div><h2>Top picks</h2><p>The strongest agreement on the active board.</p></div><a href="board.html">See all picks →</a></div>
+    <div class="p2u-section-head"><div><h2>Top current picks</h2><p>Ranked by independent model-family agreement, not duplicate engine generations.</p></div><a href="board.html">See today →</a></div>
     <div class="p2u-pick-grid" id="ov-picks-grid"><div class="p2u-empty">Reading the latest board…</div></div>
   </section>
 
   <section class="p2u-section">
-    <div class="p2u-section-head"><div><h2>Bankers</h2><p>Selections marked strongest by the engines.</p></div><a href="bankers.html">Open bankers →</a></div>
+    <div class="p2u-section-head"><div><h2>Qualified bankers</h2><p>The strictest available selections. The page can publish fewer than three.</p></div><a href="bankers.html">Open bankers →</a></div>
     <div class="p2u-pick-grid" id="ov-bankers-grid"><div class="p2u-empty">Checking banker selections…</div></div>
   </section>
 
   <section class="p2u-section">
-    <div class="p2u-section-head"><div><h2>Explore Predict2U</h2><p>Everything important, without the noise.</p></div></div>
+    <div class="p2u-section-head"><div><h2>Explore Predict2U</h2><p>Prediction tools first. News and Community remain under More.</p></div></div>
     <div class="p2u-link-grid">
-      <a class="p2u-link-card" href="engines.html"><span>01</span><h3>Full Board</h3><p>Every discovered match and every available prediction.</p></a>
-      <a class="p2u-link-card" href="all-engines.html"><span>22</span><h3>All Engines</h3><p>Browse the full prediction-engine suite and open any engine directly.</p></a>
-      <a class="p2u-link-card p2u-team-link-card" href="team-rankings.html"><span>02</span><h3>Best &amp; Worst Teams</h3><p>Open the strict best, worst, offensive and defensive team rankings.</p></a>
-      <a class="p2u-link-card" href="news.html"><span>03</span><h3>News</h3><p>Football stories, transfers and updates in one clean feed.</p></a>
-      <a class="p2u-link-card" href="community.html"><span>04</span><h3>Community</h3><p>Public slips, discussions, records and winning selections.</p></a>
+      <a class="p2u-link-card" href="all-engines.html"><span>01</span><h3>Engine Hub</h3><p>See active and shadow engines, their specialties and governance status.</p></a>
+      <a class="p2u-link-card p2u-team-link-card" href="team-rankings.html"><span>02</span><h3>Team Intelligence</h3><p>Separate season power from next-match edges using reliable samples.</p></a>
+      <a class="p2u-link-card" href="proof.html"><span>03</span><h3>Proof</h3><p>Review settled wins, losses, voids and the public record.</p></a>
     </div>
   </section>
 </main>
 <script src="odds-engine-guard.js"></script><script src="banker-engine.js"></script>
-<script src="multi-engine-suite.js"></script><script src="specialist-engines-v262.js"></script>
-<script src="fixtures.js"></script>
-<script src="data.js"></script>
-<script src="fixture-overlay.js"></script>
+<script src="multi-engine-suite.js"></script><script src="specialist-engines-v262.js"></script><script src="engine-governance-v264.js"></script>
+<script src="fixtures.js"></script><script src="current-data.js"></script><script src="data-freshness-v264.js"></script><script src="fixture-overlay.js"></script>
 <script>
 (function(){
   'use strict';
   const esc=value=>String(value==null?'':value).replace(/[<>&"]/g,char=>({'<':'&lt;','>':'&gt;','&':'&amp;','"':'&quot;'}[char]));
-  const matches=Array.isArray(window.MATCHES)?window.MATCHES:[];
-  const registry=(window.P2U_ENGINE_REGISTRY||[]).filter(engine=>typeof window[engine.fn]==='function');
-  const dateOf=match=>{const raw=String(match&&match.matchDate||'');if(/^\d{4}-\d{2}-\d{2}$/.test(raw))return raw;const kickoff=String(match&&match.kickoff||'').slice(0,10);return /^\d{4}-\d{2}-\d{2}$/.test(kickoff)?kickoff:'Undated';};
-  const today=new Date().toISOString().slice(0,10);
-  const dates=[...new Set(matches.map(dateOf).filter(date=>date!=='Undated'))].sort();
-  const activeDate=dates.includes(today)?today:(dates.find(date=>date>today)||dates[0]||today);
-  const dayMatches=matches.filter(match=>dateOf(match)===activeDate);
-  const by={};const activeEngines=new Set();
-  dayMatches.forEach(match=>registry.forEach(engine=>{let result=null;try{result=window[engine.fn](match);}catch(_){return;}if(!result||!result.bet||!result.primary)return;activeEngines.add(engine.key);const key=(match.id!=null?'f'+match.id:(match.home+'|'+match.away+'|'+activeDate))+'|'+result.primary;const row=by[key]||(by[key]={match,market:result.primary,engines:[],banker:false,confidence:0});row.engines.push(engine.name);row.banker=row.banker||!!result.banker;const conf=Number(result.confidence);if(Number.isFinite(conf))row.confidence=Math.max(row.confidence,conf);}));
-  const picks=Object.values(by).sort((a,b)=>b.engines.length-a.engines.length||(b.banker?1:0)-(a.banker?1:0)||b.confidence-a.confidence);
-  const bankers=picks.filter(row=>row.banker).sort((a,b)=>b.engines.length-a.engines.length||b.confidence-a.confidence);
-  const priceMap={'Home Win':'home','Draw':'draw','Away Win':'away','Over 1.5':'over15','Over 2.5':'over25','Over 3.5':'over35','Under 1.5':'under15','Under 2.5':'under25','Under 3.5':'under35','BTTS Yes':'bttsYes','BTTS No':'bttsNo','Double Chance 1X':'dc1x','Double Chance 12':'dc12','Double Chance X2':'dcx2','First Half Over 0.5':'fhOver05','First Half Under 1.5':'fhUnder15'};
-  const priceOf=row=>{const key=priceMap[String(row.market).replace(/ Goals$/,'')];const value=key&&row.match.odds?row.match.odds[key]:null;return typeof value==='number'&&value>1?value:null;};
-  const timeOf=match=>{if(!match.kickoff)return'';try{return new Date(match.kickoff).toLocaleTimeString([],{hour:'2-digit',minute:'2-digit',hour12:false})+' GMT';}catch(_){return'';}};
-  const prettyDate=date=>{try{return new Date(date+'T12:00:00').toLocaleDateString('en-GB',{weekday:'long',day:'2-digit',month:'short'});}catch(_){return date;}};
-  const card=row=>{const price=priceOf(row);return `<article class="p2u-pick"><div class="p2u-pick-top"><span>${esc(row.match.league||'Football')}</span><span>${esc(timeOf(row.match))}</span></div><div class="p2u-pick-match"><strong>${esc(row.match.home||'Home')}</strong><span class="p2u-vs">VS</span><strong>${esc(row.match.away||'Away')}</strong></div><div class="p2u-market"><div><small>Prediction</small><strong>${esc(row.market)}</strong></div><div class="odds"><small>Odds</small><strong>${price?price.toFixed(2):'—'}</strong></div></div><div class="p2u-support"><span><b>${row.engines.length}</b> engine${row.engines.length===1?'':'s'} agree</span><span>${row.banker?'Banker':'Qualified'}</span></div></article>`;};
-  document.getElementById('ov-matches').textContent=dayMatches.length;
-  document.getElementById('ov-picks').textContent=picks.length;
-  document.getElementById('ov-bankers').textContent=bankers.length;
-  document.getElementById('ov-engines').textContent=activeEngines.size+'/'+registry.length;
-  document.getElementById('ov-date').textContent=prettyDate(activeDate);
-  document.getElementById('ov-picks-grid').innerHTML=picks.length?picks.slice(0,6).map(card).join(''):'<div class="p2u-empty">No qualified picks are available for this date yet.</div>';
-  document.getElementById('ov-bankers-grid').innerHTML=bankers.length?bankers.slice(0,3).map(card).join(''):'<div class="p2u-empty">No banker selections currently pass the strict filters.</div>';
+  const matches=Array.isArray(window.MATCHES)?window.MATCHES:[];const registry=(window.P2U_ENGINE_REGISTRY||[]).filter(e=>typeof window[e.fn]==='function');const status=window.P2UDataFreshness?P2UDataFreshness.status:{blocked:false};
+  const dateOf=m=>{const raw=String(m&&m.matchDate||m&&m.kickoff||'').slice(0,10);return /^\d{4}-\d{2}-\d{2}$/.test(raw)?raw:'Undated';};
+  const today=new Date().toISOString().slice(0,10);const activeDate=today;const dayMatches=status.blocked?[]:matches.filter(m=>dateOf(m)===activeDate&&m.homeGoals==null);
+  const groups={};const activeFamilies=new Set();
+  for(const match of dayMatches){for(const engine of registry){let out=null;try{out=window[engine.fn](match);}catch(_){continue;}if(!out||!out.bet||!out.primary)continue;const family=engine.independentFamily||engine.family||engine.key;activeFamilies.add(family);const id=(match.id!=null?'f'+match.id:`${match.home}|${match.away}|${activeDate}`)+'|'+out.primary;const row=groups[id]||(groups[id]={match,market:out.primary,families:new Map(),banker:false,confidence:0});if(!row.families.has(family))row.families.set(family,engine.name);row.banker=row.banker||!!out.banker;const c=Number(out.confidence);if(Number.isFinite(c))row.confidence=Math.max(row.confidence,c);}}
+  const picks=Object.values(groups).map(r=>({...r,familyNames:[...r.families.values()],familyCount:r.families.size})).sort((a,b)=>b.familyCount-a.familyCount||(b.banker?1:0)-(a.banker?1:0)||b.confidence-a.confidence);const bankers=picks.filter(r=>r.banker);
+  const priceMap={'Home Win':'home','Draw':'draw','Away Win':'away','Over 1.5':'over15','Over 1.5 Goals':'over15','Over 2.5':'over25','Over 2.5 Goals':'over25','Over 3.5':'over35','Over 3.5 Goals':'over35','Under 2.5':'under25','Under 2.5 Goals':'under25','Under 3.5':'under35','Under 3.5 Goals':'under35','BTTS Yes':'bttsYes','BTTS No':'bttsNo','Double Chance 1X':'dc1x','Double Chance 12':'dc12','Double Chance X2':'dcx2'};
+  const priceOf=row=>{const key=priceMap[row.market];const value=key&&row.match.odds?Number(row.match.odds[key]):null;return Number.isFinite(value)&&value>1?value:null;};
+  const timeOf=m=>{try{return new Date(m.kickoff).toLocaleTimeString([],{hour:'2-digit',minute:'2-digit',hour12:false})+' GMT';}catch(_){return'';}};
+  const card=row=>{const price=priceOf(row);return `<article class="p2u-pick"><div class="p2u-pick-top"><span>${esc(row.match.league||'Football')}</span><span>${esc(timeOf(row.match))}</span></div><div class="p2u-pick-match"><strong>${esc(row.match.home)}</strong><span class="p2u-vs">VS</span><strong>${esc(row.match.away)}</strong></div><div class="p2u-market"><div><small>Prediction</small><strong>${esc(String(row.market).replace(/ Goals$/,''))}</strong></div><div class="odds"><small>Odds</small><strong>${price?price.toFixed(2):'—'}</strong></div></div><div class="p2u-support"><span><b>${row.familyCount}</b> independent famil${row.familyCount===1?'y':'ies'} agree</span><span>${row.banker?'Banker':'Qualified'}</span></div></article>`;};
+  document.getElementById('ov-status').textContent=status.blocked?'Paused':'Current';document.getElementById('ov-updated').textContent=status.sourceUpdated?new Date(status.sourceUpdated).toLocaleString([],{dateStyle:'medium',timeStyle:'short'}):'Update time unavailable';document.getElementById('ov-matches').textContent=dayMatches.length;document.getElementById('ov-date').textContent=new Date(today+'T12:00:00').toLocaleDateString('en-GB',{weekday:'long',day:'2-digit',month:'short'});document.getElementById('ov-picks').textContent=picks.length;document.getElementById('ov-families').textContent=activeFamilies.size+'/'+(window.P2U_ENGINE_FAMILIES||[]).length;document.getElementById('ov-public-engines').textContent=registry.length;
+  const paused='<div class="p2u-publication-paused"><strong>Publishing paused</strong><p>Current fixtures are not fresh enough. No old picks will be presented as today’s selections.</p></div>';
+  document.getElementById('ov-picks-grid').innerHTML=status.blocked?paused:(picks.length?picks.slice(0,6).map(card).join(''):'<div class="p2u-empty">No qualified picks are available today.</div>');document.getElementById('ov-bankers-grid').innerHTML=status.blocked?paused:(bankers.length?bankers.slice(0,3).map(card).join(''):'<div class="p2u-empty">No banker selections currently pass the strict filters.</div>');
+  fetch('track-log.json',{cache:'no-store'}).then(r=>r.ok?r.json():null).then(data=>{if(!data||!Array.isArray(data.picks))return;const cutoff=Date.now()-30*86400000;const rows=data.picks.filter(p=>new Date((p.matchDate||p.recordedAt||'')+'T00:00:00Z').getTime()>=cutoff&&['Won','Lost'].includes(String(p.result||'')));const w=rows.filter(p=>p.result==='Won').length,l=rows.filter(p=>p.result==='Lost').length;document.getElementById('ov-record').textContent=rows.length?`${w}W–${l}L`:'No sample';}).catch(()=>{});
 })();
 </script>
-<script>if('serviceWorker' in navigator)window.addEventListener('load',()=>navigator.serviceWorker.register('sw.js').catch(()=>{}));</script>
-<script src="cloud-config.js"></script><script src="account-cloud.js" defer></script><script src="smart-alerts.js" defer></script>
-</body>
-</html>
+<script src="app-launch-v264.js"></script><script src="first-run-v264.js"></script><script src="pwa-launch.js" defer></script><script src="cloud-config.js"></script><script src="account-cloud.js" defer></script><script src="smart-alerts.js" defer></script>
+</body></html>

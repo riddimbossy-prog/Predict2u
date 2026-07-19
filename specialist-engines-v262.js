@@ -6,7 +6,7 @@
 })(typeof window!=="undefined"?window:globalThis,function(root){
   "use strict";
 
-  const VERSION="2026.07-v262";
+  const VERSION="2026.07-v264";
   const num=v=>v===null||v===undefined||v===""||!Number.isFinite(Number(v))?null:Number(v);
   const rate=v=>{const n=num(v);return n===null?null:(n>1.00001?n/100:n);};
   const first=(...v)=>{for(const x of v){const n=num(x);if(n!==null)return n;}return null;};
@@ -40,6 +40,7 @@
     const win=rate(first(m&&m[`${side}WinRate`]));
     const scoring=fts===null?null:1-fts;
     const conceding=cs===null?null:1-cs;
+    const bttsRate=rate(first(getNum(m,[`${side}Streaks.htft.ftBtts`,`${side}BttsRate`,`${side}BTTSRate`])));
     const noLoss=first(getNum(m,[`${side}Streaks.noLoss`]),0);
     const noWin=first(getNum(m,[`${side}Streaks.noWin`]),0);
     const winStreak=first(getNum(m,[`${side}Streaks.win`]),0);
@@ -49,7 +50,7 @@
     const firstHalfFor=rate(first(m&&m[`${side}1HFor`],getNum(m,[`${side}Streaks.htft.fhFor`])));
     const firstHalfAgainst=rate(first(m&&m[`${side}1HAgainst`],getNum(m,[`${side}Streaks.htft.fhAg`])));
     const wonEitherHalf=rate(first(getNum(m,[`${side}Streaks.htft.wonEitherHalf`])));
-    return {side,venueGames,totalGames,venuePPG,overallPPG,ppg,gf,ga,cs,fts,unbeaten,win,scoring,conceding,noLoss,noWin,winStreak,lossStreak,position,tableSize,firstHalfFor,firstHalfAgainst,wonEitherHalf};
+    return {side,venueGames,totalGames,venuePPG,overallPPG,ppg,gf,ga,cs,fts,unbeaten,win,scoring,conceding,bttsRate,noLoss,noWin,winStreak,lossStreak,position,tableSize,firstHalfFor,firstHalfAgainst,wonEitherHalf};
   }
   function dataQuality(m,h,a){
     const missing=[];
@@ -78,7 +79,9 @@
       ["Home scores in at least 70%",h.scoring,h.scoring!==null&&h.scoring>=.70],
       ["Away scores in at least 70%",a.scoring,a.scoring!==null&&a.scoring>=.70],
       ["Home concedes in at least 70%",h.conceding,h.conceding!==null&&h.conceding>=.70],
+      ["Home direct BTTS rate at least 70%",h.bttsRate,h.bttsRate!==null&&h.bttsRate>=.70],
       ["Away concedes in at least 70%",a.conceding,a.conceding!==null&&a.conceding>=.70],
+      ["Away direct BTTS rate at least 70%",a.bttsRate,a.bttsRate!==null&&a.bttsRate>=.70],
       ["Home clean sheets below 20%",h.cs,h.cs!==null&&h.cs<.20],
       ["Away clean sheets below 20%",a.cs,a.cs!==null&&a.cs<.20],
       ["Home split PPG at least 1.50",h.ppg,h.ppg!==null&&h.ppg>=1.50],
@@ -90,10 +93,10 @@
     ];
     const failed=checks.filter(x=>!x[2]);
     if(failed.length)return noBet(m,id,name,version,`GG Machine rejected: ${failed[0][0]} failed.`,{dataQuality:q.score,failed:failed.map(x=>({rule:x[0],actual:round(x[1],2)})),home:h,away:a,bttsYesOdds:btts,under35Odds:u35});
-    const margins=(h.scoring-.70)+(a.scoring-.70)+(h.conceding-.70)+(a.conceding-.70)+(1.70-btts)+(u35-1.57);
+    const margins=(h.scoring-.70)+(a.scoring-.70)+(h.conceding-.70)+(a.conceding-.70)+(h.bttsRate-.70)+(a.bttsRate-.70)+(1.70-btts)+(u35-1.57);
     const score=clamp(86+margins*8+(h.ppg>=1.8&&a.ppg>=1.8?2:0),86,94);
     return result(m,id,name,version,"BTTS Yes",score,[
-      `Both split profiles score and concede at the required 70% floor.`,
+      `Both split profiles score, concede and record direct BTTS at the required 70% floor.`,
       `Clean-sheet rates are ${Math.round(h.cs*100)}% and ${Math.round(a.cs*100)}%, both below 20%.`,
       `Split PPG is ${round(h.ppg,2)} vs ${round(a.ppg,2)}; BTTS ${round(btts,2)}, Under 3.5 ${round(u35,2)}.`
     ],{dataQuality:q.score,home:h,away:a,bttsYesOdds:btts,under35Odds:u35,checks:checks.map(x=>({rule:x[0],actual:round(x[1],2),pass:x[2]}))});
@@ -120,8 +123,6 @@
     add("Away Team Over 0.5 Goals",87,[a.scoring>=.85,h.conceding>=.80,a.fts<=.15,h.cs<.20,a.ppg>=1.50,odd(m,"Away Team Over 0.5 Goals")<=1.35],"Elite away scoring frequency faces a defence that rarely keeps clean sheets.");
     add("Home Team Over 1.5 Goals",89,[h.gf>=1.80,a.ga>=1.60,h.scoring>=.80,a.conceding>=.80,odd(m,"Home Team Over 1.5 Goals")>=1.40,odd(m,"Home Team Over 1.5 Goals")<=2.00],"Strong home attack and weak away defence pass every team-goal mismatch gate.");
     add("Away Team Over 1.5 Goals",89,[a.gf>=1.80,h.ga>=1.60,a.scoring>=.80,h.conceding>=.80,odd(m,"Away Team Over 1.5 Goals")>=1.40,odd(m,"Away Team Over 1.5 Goals")<=2.00],"Strong away attack and weak home defence pass every team-goal mismatch gate.");
-    add("Over 1.5 Goals",86,[h.gf+a.gf>=2.20,h.ga+a.ga>=2.20,(h.scoring>=.75||a.scoring>=.75),(h.conceding>=.70||a.conceding>=.70),odd(m,"Over 1.5 Goals")<=1.35],"Attacking and conceding directions are clearly aligned for the safer total.");
-    add("Under 3.5 Goals",86,[h.gf+a.gf<=2.40,h.ga+a.ga<=2.60,h.gf<=2.00,a.gf<=2.00,odd(m,"Under 3.5 Goals")<=1.45],"Both profiles are clearly compressed below the four-goal line.");
     add("BTTS No",88,[((h.cs>=.50&&a.fts>=.55&&a.gf<=.80&&h.ga<=.90)||(a.cs>=.50&&h.fts>=.55&&h.gf<=.80&&a.ga<=.90)),odd(m,"BTTS No")<=1.75],"One attack is clearly weak while the opposing defence is clearly strong.");
     add("Home Win Either Half",88,[h.wonEitherHalf>=.70,a.wonEitherHalf!==null&&a.wonEitherHalf<=.35,h.ppg>=1.65,a.ppg<=1.10,h.firstHalfFor>=.55,a.firstHalfAgainst>=.55,odd(m,"Home Win Either Half")<=1.70],"Home half dominance and away half weakness are opposite without a borderline signal.");
     add("Away Win Either Half",88,[a.wonEitherHalf>=.70,h.wonEitherHalf!==null&&h.wonEitherHalf<=.35,a.ppg>=1.65,h.ppg<=1.10,a.firstHalfFor>=.55,h.firstHalfAgainst>=.55,odd(m,"Away Win Either Half")<=1.70],"Away half dominance and home half weakness are opposite without a borderline signal.");
@@ -134,7 +135,7 @@
 
   const ADDITIONS=[
     {key:"ggMachine",name:"GG Machine",fn:"ggMachineRecommend",family:"Specialist",version:"1.0",description:"Strict BTTS Yes machine using 70% split scoring/conceding, low clean sheets, PPG and odds confirmation."},
-    {key:"mismatchEngine",name:"Mismatch Engine",fn:"mismatchEngineRecommend",family:"Specialist",version:"2.0",description:"No-borderline opposite-stat engine across result, team-goal, total-goal, BTTS and half markets."}
+    {key:"mismatchEngine",name:"Mismatch Engine",fn:"mismatchEngineRecommend",family:"Specialist",version:"2.0",description:"No-borderline opposite-stat engine for result, team-goal, BTTS No and half markets; total-goal routes are handled by Goal Compression."}
   ];
   const existing=Array.isArray(root.P2U_ENGINE_REGISTRY)?root.P2U_ENGINE_REGISTRY:[];
   const keys=new Set(ADDITIONS.map(x=>x.key));

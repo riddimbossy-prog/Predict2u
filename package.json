@@ -1,12 +1,12 @@
 {
   "name": "predict2u-site-quality",
   "private": true,
-  "version": "2.5.1",
+  "version": "2.6.4",
   "scripts": {
     "health": "node generate-site-health.js",
     "audit": "node audit-site.js",
     "test:mobile": "playwright test",
-    "quality": "npm run preflight && npm run budget && npm run audit && playwright test",
+    "quality": "npm run build:public && npm run release:security && npm run release:gate && npm run budget && npm run test:pwa && npm run preflight && npm run audit",
     "preflight": "node repository-preflight.js",
     "budget": "node performance-budget.js",
     "test:push": "playwright test tests/push-notifications.spec.js",
@@ -23,7 +23,7 @@
     "test:health": "node system-health-selftest.js",
     "quality:reliability": "npm run test:news-comments && npm run test:health",
     "test:pwa": "node pwa-selftest.js",
-    "quality:launch": "npm run preflight && npm run budget && npm run test:pwa && npm run audit",
+    "quality:launch": "npm run quality",
     "fixtures": "node fetch-data.js",
     "fixtures:week": "node fetch-data.js && node verify-week-data.js",
     "scores": "node fetch-scores.js",
@@ -33,7 +33,10 @@
     "odds:enrich": "node enrich-odds-api.js",
     "test:odds": "node tests/odds-api-integration.test.js",
     "quality:odds": "npm run test:odds",
-    "audit:odds-engines": "node audit-odds-engines-v251.js"
+    "audit:odds-engines": "node audit-odds-engines-v251.js",
+    "build:public": "node build-public-data.js",
+    "release:security": "node release-security-scan.js",
+    "release:gate": "node release-gate-v264.js"
   },
   "devDependencies": {
     "@playwright/test": "^1.53.0",

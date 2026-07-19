@@ -36,31 +36,29 @@
   };
 
   const desktopLinks=[
-    {href:'index.html',label:'Overview',icon:'overview'},
-    {href:'board.html',label:'Picks',icon:'picks'},
+    {href:'index.html',label:'Home',icon:'overview'},
+    {href:'board.html',label:'Today',icon:'picks'},
     {href:'bankers.html',label:'Bankers',icon:'bankers'},
-    {href:'engines.html',label:'Full Board',icon:'fullboard'},
     {href:'all-engines.html',label:'Engines',icon:'engines'},
-    {href:'team-rankings.html',label:'Teams',icon:'rankings'},
-    {href:'news.html',label:'News',icon:'news'},
-    {href:'community.html',label:'Community',icon:'community'}
+    {href:'proof.html',label:'Proof',icon:'proof'}
   ];
   const mobileLinks=[
-    {href:'index.html',label:'Overview',mobileLabel:'Home',icon:'overview'},
-    {href:'board.html',label:'Picks',icon:'picks'},
+    {href:'index.html',label:'Home',icon:'overview'},
+    {href:'board.html',label:'Today',icon:'picks'},
     {href:'bankers.html',label:'Bankers',icon:'bankers'},
-    {href:'all-engines.html',label:'Engines',icon:'engines'}
+    {href:'all-engines.html',label:'Engines',icon:'engines'},
+    {href:'proof.html',label:'Proof',icon:'proof'}
   ];
   const moreLinks=[
+    {href:'team-rankings.html',label:'Teams',icon:'rankings'},
     {href:'engines.html',label:'Full Board',icon:'fullboard'},
-    {href:'news.html',label:'News',icon:'news'},
-    {href:'community.html',label:'Community',icon:'community'},
-    {href:'proof.html',label:'Proof',icon:'proof'},
     {href:'scorecards.html',label:'Scorecards',icon:'score'},
     {href:'league-dna.html',label:'League DNA',icon:'dna'},
-    {href:'team-rankings.html',label:'Best/Worst Teams',icon:'rankings'},
+    {href:'news.html',label:'News',icon:'news'},
+    {href:'community.html',label:'Community',icon:'community'},
     {href:'trust.html',label:'Trust Center',icon:'trust'},
-    {href:'account.html',label:'Account',icon:'account'}
+    {href:'account.html',label:'Account',icon:'account'},
+    {href:'index.html?tour=1',label:'Replay walkthrough',icon:'overview'}
   ];
   const isActive=item=>active===item.href;
   const moreActive=moreLinks.some(isActive);
@@ -95,7 +93,7 @@
   backdrop.id='p2u-v245-more-panel';
   backdrop.setAttribute('aria-hidden','true');
   backdrop.innerHTML=`<section class="p2u-v245-more-panel" role="dialog" aria-modal="true" aria-label="More navigation">
-    <div class="p2u-v245-more-head"><div><strong>More</strong><small>Teams, full board, news and account tools</small></div><button type="button" class="p2u-v245-more-close" aria-label="Close">×</button></div>
+    <div class="p2u-v245-more-head"><div><strong>More</strong><small>Teams, full board, records and account tools</small></div><button type="button" class="p2u-v245-more-close" aria-label="Close">×</button></div>
     <div class="p2u-v245-more-grid">${moreLinks.map(item=>`<a href="${item.href}" class="${isActive(item)?'is-active':''}">${svg(item.icon)}<span>${item.label}</span></a>`).join('')}</div>
   </section>`;
   document.body.appendChild(backdrop);

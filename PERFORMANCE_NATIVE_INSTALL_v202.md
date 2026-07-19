@@ -30,7 +30,7 @@ A website cannot silently install itself. The browser must show a user confirmat
 
 ## Install
 
-1. Extract the changed-files ZIP into the root of `golden-banker-v2`.
+1. Extract the changed-files ZIP into the root of `predict2u-my-banker-v2`.
 2. Choose **Replace files in destination**.
 3. Commit and push:
 

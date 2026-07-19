@@ -9,7 +9,8 @@
   let key=params.get('engine')||registry[0]&&registry[0].key;
   let engine=registry.find(item=>item.key===key)||registry[0];
   if(!engine){document.body.innerHTML='<div class="engine-empty">No engine registry is available.</div>';return;}
-  const matches=Array.isArray(window.MATCHES)?window.MATCHES:[];
+  const blocked=!!(window.P2UDataFreshness&&window.P2UDataFreshness.status&&window.P2UDataFreshness.status.blocked);
+  const matches=blocked?[]:(Array.isArray(window.MATCHES)?window.MATCHES:[]);
   const today=new Date().toISOString().slice(0,10);
   let activeDate=/^\d{4}-\d{2}-\d{2}$/.test(params.get('date')||'')?params.get('date'):today;
   const dates=[...new Set([today,...matches.map(X.dateOf).filter(Boolean)])].sort().filter(date=>date>=today).slice(0,7);
@@ -20,12 +21,12 @@
   document.documentElement.style.setProperty('--engine-dark',palette[1]);
   document.title=`${engine.name} Engine • Predict2U`;
   $('engine-mark').textContent=X.initials(engine.name);
-  $('engine-family').textContent=`${engine.family||'Prediction Engine'} · v${engine.version||'1.0'}`;
+  $('engine-family').textContent=`${engine.familyLabel||engine.family||'Prediction Engine'} · v${engine.version||'1.0'}`;
   $('engine-name').textContent=`${engine.name} Engine`;
   $('engine-description').textContent=engine.description||'Specialized Predict2U football prediction engine.';
-  $('engine-chip-family').textContent=engine.family||'Engine';
+  $('engine-chip-family').textContent=engine.familyLabel||engine.family||'Engine';
   $('engine-chip-version').textContent=`Version ${engine.version||'1.0'}`;
-  $('engine-chip-status').textContent='Active model';
+  $('engine-chip-status').textContent='Active public model';
 
   const switcher=$('engine-switcher');
   switcher.innerHTML=registry.map(item=>`<option value="${esc(item.key)}"${item.key===engine.key?' selected':''}>${esc(item.name)}</option>`).join('');
@@ -100,7 +101,7 @@
       acca.innerHTML='<div class="engine-empty"><strong>No engine acca today</strong>No selection passed this engine’s rules for this date.</div>';
     }
     const grid=$('engine-picks-grid');
-    grid.innerHTML=rows.length?rows.map(pickCard).join(''):'<div class="engine-empty" style="grid-column:1/-1"><strong>No qualified picks</strong>The engine rejected every fixture rather than forcing a selection.</div>';
+    grid.innerHTML=rows.length?rows.map(pickCard).join(''):(blocked?'<div class="engine-empty" style="grid-column:1/-1"><strong>Publishing paused</strong>The current data window is stale, so this engine will not present old matches as today’s picks.</div>':'<div class="engine-empty" style="grid-column:1/-1"><strong>No qualified picks</strong>The engine rejected every fixture rather than forcing a selection.</div>');
     grid.querySelectorAll('[data-add]').forEach(button=>button.addEventListener('click',()=>addOne(rows[Number(button.dataset.add)])));
   }
   renderDates();render();

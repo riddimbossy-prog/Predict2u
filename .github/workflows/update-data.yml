@@ -32,21 +32,46 @@ jobs:
         with:
           node-version: "20"
 
-      - name: Inject secret keys into config.txt (preserve committed LEAGUES etc.)
+      - name: Build temporary configuration from repository secrets
+        shell: bash
+        env:
+          API_FOOTBALL_KEY: ${{ secrets.API_FOOTBALL_KEY }}
+          API_KEY: ${{ secrets.API_KEY }}
+          STATS_API_KEY: ${{ secrets.STATS_API_KEY }}
+          SEASON: ${{ secrets.SEASON }}
+          LEAGUES: ${{ secrets.LEAGUES }}
+          DAYS_BACK: ${{ secrets.DAYS_BACK }}
+          DAYS_FWD: ${{ secrets.DAYS_FWD }}
+          ODDS: ${{ secrets.ODDS }}
+          H2H: ${{ secrets.H2H }}
+          REQUEST_BUDGET: ${{ secrets.REQUEST_BUDGET }}
+          SLEEP_MS: ${{ secrets.SLEEP_MS }}
         run: |
-          # The repo's committed config.txt holds LEAGUES, SEASON, DAYS_*, budgets.
-          # Overwriting it wipes LEAGUES and the fetcher finds no games. So we only
-          # APPEND the secret API keys; the parser takes the LAST value per key, so
-          # these fill in credentials while your committed settings stay intact.
-          if [ ! -f config.txt ]; then
-            echo "ERROR: config.txt missing from repo (must be committed with LEAGUES)."; exit 1
+          set -euo pipefail
+          football_key="${API_FOOTBALL_KEY:-${API_KEY:-}}"
+          if [[ -z "$football_key" ]]; then
+            echo "Missing API_FOOTBALL_KEY or API_KEY"
+            exit 1
           fi
-          {
-            echo ""
-            echo "API_KEY=${{ secrets.API_KEY }}"
-            echo "STATS_API_KEY=${{ secrets.STATS_API_KEY }}"
-          } >> config.txt
-          echo "LEAGUES line present:"; grep -c "^LEAGUES=" config.txt || echo "0 — WARNING no LEAGUES"
+          if [[ -z "${LEAGUES:-}" ]]; then
+            echo "Missing LEAGUES repository secret for the legacy full fetch."
+            exit 1
+          fi
+          cat > config.txt <<EOF
+          API_KEY=${football_key}
+          STATS_API_KEY=${STATS_API_KEY:-}
+          SEASON=${SEASON:-$(date -u +%Y)}
+          LEAGUES=${LEAGUES}
+          DAYS_BACK=${DAYS_BACK:-0}
+          DAYS_FWD=${DAYS_FWD:-6}
+          ODDS=${ODDS:-true}
+          H2H=${H2H:-true}
+          STATS=true
+          MAX_LEAGUES=0
+          MAX_PROBES=10000
+          REQUEST_BUDGET=${REQUEST_BUDGET:-12000}
+          SLEEP_MS=${SLEEP_MS:-1500}
+          EOF
 
       - name: Run the fetcher (fixtures, odds, standings, stats)
         run: node fetch-data.js || echo "fetch-data skipped/partial"
@@ -59,34 +84,27 @@ jobs:
           npm install sharp --no-save || echo "sharp install issue"
           node generate-image.js || echo "image generation skipped"
 
-      - name: Restore clean config.txt before commit (never commit the API key)
-        run: |
-          # config.txt was modified in-place (secret keys appended). It must NOT be
-          # committed AND must not be left dirty, or the rebase below aborts with
-          # exit 128 ("cannot rebase: you have unstaged changes"). Restore the
-          # committed version from HEAD; if it isn't tracked, just remove it.
-          if git ls-files --error-unmatch config.txt >/dev/null 2>&1; then
-            git checkout HEAD -- config.txt
-          else
-            rm -f config.txt
-          fi
-          git status --porcelain config.txt || true
+      - name: Remove temporary secret configuration
+        run: rm -f config.txt
 
       - name: Compact generated match data
         run: node compact-generated-data.js
+
+      - name: Build compact public data bundle
+        run: node build-public-data.js
 
       - name: Commit updated data.js (if changed)
         run: |
           git config user.name "predicto-bot"
           git config user.email "bot@users.noreply.github.com"
-          if [ -z "$(git status --porcelain data.js xg.js today.png today.svg daily/ 2>/dev/null)" ]; then
+          if [ -z "$(git status --porcelain data.js current-data.js data-meta.json xg.js today.png today.svg daily/ 2>/dev/null)" ]; then
             echo "No changes."; exit 0
           fi
           # Add each output individually. A single `git add` with ALL paths dies
           # with a SILENT exit 128 if ANY one path doesn't exist ("fatal: pathspec
           # did not match" is hidden by 2>/dev/null but the exit code still kills
           # the -e shell). Guard per path, then confirm something is staged.
-          for p in data.js xg.js today.png today.svg today-*.png today-*.svg acca.png acca.svg acca-*.png acca-*.svg daily/; do
+          for p in data.js current-data.js data-meta.json xg.js today.png today.svg today-*.png today-*.svg acca.png acca.svg acca-*.png acca-*.svg daily/; do
             git add -- $p 2>/dev/null || echo "note: $p not present - skipped"
           done
           if git diff --staged --quiet; then echo "Nothing staged."; exit 0; fi

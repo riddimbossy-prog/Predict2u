@@ -16,7 +16,7 @@ GitHub rejected the workflow push because `api-cache.json` reached about 115.70 
 ## Recommended installation
 
 1. Abort any local merge in GitHub Desktop.
-2. Use a clean clone of `golden-banker-v2`.
+2. Use a clean clone of `predict2u-my-banker-v2`.
 3. Copy the contents of the v250 PATCH folder into the clean clone and replace matching files.
 4. Commit with: `Install Predict2U v250 large-file fix`.
 5. Push to `main`.

@@ -23,7 +23,7 @@
 
 ## Installation
 
-1. Extract `Predict2U_Comment_Social_v201_CHANGED_FILES.zip` into the root of `golden-banker-v2`.
+1. Extract `Predict2U_Comment_Social_v201_CHANGED_FILES.zip` into the root of `predict2u-my-banker-v2`.
 2. Replace files when prompted.
 3. Commit and push the repository changes.
 4. Open Supabase → SQL Editor → New query.

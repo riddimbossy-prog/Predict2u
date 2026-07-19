@@ -9,8 +9,8 @@ window.P2U_ADMIN_CONFIG = Object.freeze({
   featured: { engines: [], leagues: [] },
   community: { hiddenIds: [], verifiedIds: [] },
   operations: {
-    repository: "https://github.com/riddimbossy-prog/golden-banker-v2",
-    qualityWorkflow: "https://github.com/riddimbossy-prog/golden-banker-v2/actions/workflows/site-quality.yml",
-    liveScoresWorkflow: "https://github.com/riddimbossy-prog/golden-banker-v2/actions/workflows/live-scores.yml"
+    repository: "https://github.com/riddimbossy-prog/predict2u-my-banker-v2",
+    qualityWorkflow: "https://github.com/riddimbossy-prog/predict2u-my-banker-v2/actions/workflows/site-quality.yml",
+    liveScoresWorkflow: "https://github.com/riddimbossy-prog/predict2u-my-banker-v2/actions/workflows/live-scores.yml"
   }
 });

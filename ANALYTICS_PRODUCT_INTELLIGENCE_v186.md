@@ -29,7 +29,7 @@ It does not use Google Analytics, Meta Pixel, advertising cookies, raw IP storag
 ## Install website files
 
 1. Extract `Predict2U_Analytics_Intelligence_v186_CHANGED_FILES.zip`.
-2. Copy everything into the current `golden-banker-v2` repository.
+2. Copy everything into the current `predict2u-my-banker-v2` repository.
 3. Replace matching files.
 4. Commit:
 

@@ -3,7 +3,7 @@
 - Product build: v202.2
 - Maintenance package: v202.3 quality-budget alignment
 - Prepared: 12 July 2026
-- Repository: riddimbossy-prog/golden-banker-v2
+- Repository: riddimbossy-prog/predict2u-my-banker-v2
 - Branch: main
 
 ## Consolidated overlays

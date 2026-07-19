@@ -26,14 +26,10 @@
 <meta name="twitter:image" content="https://predict2u.com/social-preview.png"/>
 <link rel="canonical" href="https://predict2u.com/"/>
 <meta name="theme-color" content="#0a0a0f"/>
-<link rel="preconnect" href="https://cdn.tailwindcss.com" crossorigin>
 <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
-<link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
-<link rel="dns-prefetch" href="https://cdn.tailwindcss.com">
 <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com">
-<link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
-<script src="https://cdn.tailwindcss.com"></script>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
+<link rel="stylesheet" href="tailwind-lite-v264.css"/>
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
 /* palette sampled directly from the design */
@@ -260,6 +256,7 @@ a{ color:inherit; text-decoration:none; }
 <link rel="stylesheet" href="engine-bankers-v249.css"/>
 <link rel="stylesheet" href="mobile-zfold-v257.css" data-p2u-mobile-zfold-v257="true"/>
 <link rel="stylesheet" href="ui-polish-v259.css" data-p2u-ui-v259="true"/>
+<link rel="stylesheet" href="data-freshness-v264.css"><link rel="stylesheet" href="stability-v264.css">
 </head>
 <body>
 <script src="unified-shell-v234.js"></script>
@@ -499,9 +496,10 @@ a{ color:inherit; text-decoration:none; }
 </footer>
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 <script src="learning-supervisor.js"></script><script src="governance-supervisor.js"></script><script src="engine-consensus.js"></script><script src="match-context-intelligence.js"></script><script src="context-supervisor.js"></script>
-<script src="odds-engine-guard.js"></script><script src="banker-engine.js"></script><script src="multi-engine-suite.js"></script><script src="specialist-engines-v262.js"></script>
+<script src="odds-engine-guard.js"></script><script src="banker-engine.js"></script><script src="multi-engine-suite.js"></script><script src="specialist-engines-v262.js"></script><script src="engine-governance-v264.js"></script>
 <script src="fixtures.js"></script>
-<script src="data.js"></script>
+<script src="current-data.js"></script>
+<script src="data-freshness-v264.js"></script>
 <script src="fixture-overlay.js"></script>
 <script src="slip.js"></script>
 <script src="personalization.js"></script>
@@ -525,6 +523,7 @@ a{ color:inherit; text-decoration:none; }
    =========================================================================== */
 (function(){
   let M = Array.isArray(window.MATCHES) ? window.MATCHES : [];
+  const DATA_BLOCKED=!!(window.P2UDataFreshness&&window.P2UDataFreshness.status&&window.P2UDataFreshness.status.blocked);
   const $ = id => document.getElementById(id);
   const esc = t => String(t==null?'':t).replace(/[<>&"]/g,c=>({'<':'&lt;','>':'&gt;','&':'&amp;','"':'&quot;'}[c]));
   const shortMk = mk => String(mk||'')
@@ -534,9 +533,9 @@ a{ color:inherit; text-decoration:none; }
     .replace('Double Chance 1X','Double Chance 1X').replace('Double Chance X2','Double Chance X2')
     .replace(/ Goals$/,'');
 
-  const ENG = (window.P2U_ENGINE_REGISTRY || []).map(e => [e.key, e.name, e.fn, e.description])
+  const ENG = (window.P2U_ENGINE_REGISTRY || []).map(e => [e.key, e.name, e.fn, e.description, e.independentFamily||e.family||e.key, e.familyLabel||e.family||e.key])
     .filter(e => typeof window[e[2]] === 'function');
-  const TOTAL = ENG.length;
+  const TOTAL = new Set(ENG.map(e=>e[4])).size;
   const INTEL_CACHE={};
   const intelFor=m=>INTEL_CACHE[keyOf(m)]||(INTEL_CACHE[keyOf(m)]=window.P2UIntelligence?P2UIntelligence.analyseMatch(m):null);
 
@@ -565,7 +564,8 @@ a{ color:inherit; text-decoration:none; }
       : (dates.includes(todayISO)?todayISO:(dates.find(d=>d>todayISO)||dates[dates.length-1]||todayISO));
   }
   rebuildDataIndex(false);
-  const dayMatches = ()=> byDate[activeDate]||[];
+  if(DATA_BLOCKED){activeDate=todayISO;dates=[todayISO];byDate[todayISO]=[];}
+  const dayMatches = ()=> DATA_BLOCKED?[]:(byDate[activeDate]||[]);
 
   const params = new URLSearchParams(location.search);
   const IS_BANKERS_PAGE=/bankers\.html$/i.test(location.pathname);
@@ -590,12 +590,14 @@ a{ color:inherit; text-decoration:none; }
       if(!r||!r.bet||!r.banker) continue;
       const k=keyOf(m);
       by[k]=by[k]||{m,mk:{},out:{}};
-      (by[k].mk[r.primary]=by[k].mk[r.primary]||[]).push(e[1]);
+      const bucket=(by[k].mk[r.primary]=by[k].mk[r.primary]||[]);
+      if(!bucket.some(v=>v.family===e[4]))bucket.push({name:e[1],family:e[4]});
       by[k].out[e[1]]=r;
     }
     return Object.values(by).map(x=>{
-      const [market,engines]=Object.entries(x.mk).sort((a,b)=>b[1].length-a[1].length)[0];
-      return { m:x.m, market, engines, out:x.out[engines[0]], banker:true, conf:Number((x.out[engines[0]]||{}).confidence)||0 };
+      const [market,votes]=Object.entries(x.mk).sort((a,b)=>b[1].length-a[1].length)[0];
+      const engines=votes.map(v=>v.name),firstName=engines[0];
+      return { m:x.m, market, engines, families:votes.map(v=>v.family), out:x.out[firstName], banker:true, conf:Number((x.out[firstName]||{}).confidence)||0 };
     }).sort((a,b)=>b.engines.length-a.engines.length);
   }
   /* v210: calculate the engines that actually publish for the selected date,
@@ -617,10 +619,11 @@ a{ color:inherit; text-decoration:none; }
         if(!counts.has(v.key)) continue;
         counts.set(v.key,counts.get(v.key)+1);
         const k=keyOf(m)+'|'+v.market;
-        const g=groups[k]||(groups[k]={m,market:v.market,engines:[],engineKeys:[],out:v.out||null,banker:false,conf:0});
-        if(!g.engineKeys.includes(v.key)){
-          g.engineKeys.push(v.key);
-          g.engines.push(v.name||((ENG.find(e=>e[0]===v.key)||[])[1])||v.key);
+        const g=groups[k]||(groups[k]={m,market:v.market,engines:[],engineKeys:[],families:[],out:v.out||null,banker:false,conf:0});
+        const meta=ENG.find(e=>e[0]===v.key)||[],family=meta[4]||v.key;
+        if(!g.families.includes(family)){
+          g.families.push(family);g.engineKeys.push(v.key);
+          g.engines.push(v.name||meta[1]||v.key);
         }
         if(v.out&&v.out.banker) g.banker=true;
         const conf=Number(v.confidence!=null?v.confidence:(v.out&&v.out.confidence));
@@ -628,7 +631,9 @@ a{ color:inherit; text-decoration:none; }
         if(!g.out&&v.out) g.out=v.out;
       }
     }
-    const active=ENG.map(engine=>({engine,count:counts.get(engine[0])||0})).filter(x=>x.count>0);
+    const familyActive=new Map();
+    ENG.forEach(engine=>{const count=counts.get(engine[0])||0;if(count>0&&!familyActive.has(engine[4]))familyActive.set(engine[4],{engine,count});});
+    const active=[...familyActive.values()];
     const picks=Object.values(groups).sort((a,b)=>
       b.engines.length-a.engines.length ||
       (b.banker?1:0)-(a.banker?1:0) ||
@@ -809,7 +814,7 @@ a{ color:inherit; text-decoration:none; }
           <div class="p2u-support-track"><div class="p2u-support-fill" style="width:${pct}%"></div></div>
         </div>
         <div class="p2u-card-signals">
-          <span class="p2u-signal agree"><i class="fa-solid fa-users"></i>${n} engine${n===1?'':'s'} agree</span>
+          <span class="p2u-signal agree"><i class="fa-solid fa-users"></i>${n} model famil${n===1?'y':'ies'} agree</span>
           ${conflict?`<span class="p2u-signal ${/CONFLICT/.test(conflict.code)?'conflict':'coverage'}"><i class="fa-solid ${/CONFLICT/.test(conflict.code)?'fa-triangle-exclamation':'fa-shield-halved'}"></i>${esc(conflict.label)}</span>`:'<span class="p2u-signal coverage"><i class="fa-solid fa-shield-halved"></i>Exact Agreement</span>'}
           ${coverage?`<span class="p2u-signal coverage"><i class="fa-solid fa-signal"></i>Data ${coverage.score}%</span>`:'<span class="p2u-signal coverage"><i class="fa-solid fa-signal"></i>Data checked</span>'}
           ${learningSignal(p.m)}
@@ -854,7 +859,7 @@ a{ color:inherit; text-decoration:none; }
     const intel=intelFor(p.m),conf=intel&&intel.conflict,cov=intel&&intel.coverage;
     const alt=conf&&conf.groups?conf.groups.filter(g=>g.market!==p.market).reduce((a,g)=>Math.max(a,g.count||0),0):0;
     const reasons=[
-      `<b>${p.engines.length}/${TOTAL}</b> engines selected the exact same market`,
+      `<b>${p.engines.length}/${TOTAL}</b> model families selected the exact same market`,
       cov?`Data reliability is <b>${cov.score}%</b> (${esc(cov.label)})`:'The fixture passed the available data checks',
       alt?`The strongest alternative market has only <b>${alt}</b> supporter${alt===1?'':'s'}`:'No opposing exact market gained meaningful support',
       conf?`Conflict detector: <b>${esc(conf.label)}</b>`:'No material engine conflict was detected'
@@ -927,7 +932,7 @@ a{ color:inherit; text-decoration:none; }
           <span class="p2u-acca-leg-number" aria-label="Leg ${i+1}">${i+1}</span>
           <div class="p2u-acca-fixture">
             <div class="p2u-acca-teams">${esc(l.m.home)} <span aria-hidden="true">v</span> ${esc(l.m.away)}</div>
-            <div class="p2u-acca-meta">${esc(l.m.league||'')} · ${l.engines.length}/${TOTAL} engines</div>
+            <div class="p2u-acca-meta">${esc(l.m.league||'')} · ${l.engines.length}/${TOTAL} model families</div>
           </div>
           <span class="mkt p2u-acca-market">${esc(shortMk(l.market))}</span>
           <span class="odds p2u-acca-odds" aria-label="${l.price?`Odds ${l.price.toFixed(2)}`:'Odds unavailable'}">${l.price?l.price.toFixed(2):'—'}</span>
@@ -1016,7 +1021,7 @@ a{ color:inherit; text-decoration:none; }
         return `<span title="${esc(name)} · ${x.count} pick${x.count===1?'':'s'}" class="p2u-engine-avatar${i===0?' is-primary':''}">${esc(name[0])}</span>`;
       }).join('');
       const more=active.length>3?`<span class="p2u-engine-avatar p2u-engine-avatar-more">+${active.length-3}</span>`:'';
-      $('s-engines-sub').innerHTML=`<span class="p2u-engine-avatar-stack">${avatars}${more}</span><span class="p2u-engine-activity-copy t-xs">publishing today</span>`;
+      $('s-engines-sub').innerHTML=`<span class="p2u-engine-avatar-stack">${avatars}${more}</span><span class="p2u-engine-activity-copy t-xs">model families active</span>`;
     }else{
       $('s-engines-sub').innerHTML='<span class="t-xs">No qualified engine picks today</span>';
     }
@@ -1172,7 +1177,7 @@ a{ color:inherit; text-decoration:none; }
       <div class="flex items-center justify-between gap-4 flex-wrap mt-6">
         ${c ? `<div class="flex items-center gap-3 flex-wrap">
                  <span class="mkt">${esc(shortMk(c.market))}</span>
-                 <span class="t-xs">${c.engines.length}/${TOTAL} engines agree · ${esc(c.engines.slice(0,2).join(', '))}</span>
+                 <span class="t-xs">${c.engines.length}/${TOTAL} model families agree · ${esc(c.engines.slice(0,2).join(', '))}</span>
                </div>
                ${typeof P2USlip!=='undefined'?P2USlip.btn(m,c.market):''}`
             : `<span class="mkt" style="background:rgba(103,103,105,.15);color:var(--ink-2);border-color:var(--line-2)">NO BET</span>

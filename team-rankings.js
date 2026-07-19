@@ -1,62 +1,48 @@
-/* Predict2U v262 — Best/Worst and attack/defence team lists. */
+/* Predict2U v264 — reliable team intelligence with samples, date window and separate views. */
 (function(){
-  "use strict";
-  const $=id=>document.getElementById(id);
-  const esc=s=>String(s??"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
-  const num=v=>v===null||v===undefined||v===""||!Number.isFinite(Number(v))?null:Number(v);
-  const rate=v=>{const n=num(v);return n===null?null:(n>1.00001?n/100:n);};
-  const first=(...v)=>{for(const x of v){const n=num(x);if(n!==null)return n;}return null;};
-  const div=(a,b)=>num(a)!==null&&num(b)!==null&&Number(b)!==0?Number(a)/Number(b):null;
-  const dateOf=m=>String(m&&m.matchDate||m&&m.kickoff||"").slice(0,10);
-  const upcoming=m=>m&&m.homeGoals==null&&!["FT","AET","PEN","PST","CANC"].includes(String(m.status||"").toUpperCase());
+  'use strict';
+  const $=id=>document.getElementById(id);const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':'&quot;',"'":'&#39;'}[c]));
+  const num=v=>v===null||v===undefined||v===''||!Number.isFinite(Number(v))?null:Number(v);const rate=v=>{const n=num(v);return n===null?null:(n>1.00001?n/100:n);};
+  const first=(...v)=>{for(const x of v){const n=num(x);if(n!==null)return n;}return null;};const div=(a,b)=>num(a)!==null&&num(b)!==null&&Number(b)!==0?Number(a)/Number(b):null;
+  const dateOf=m=>String(m&&m.matchDate||m&&m.kickoff||'').slice(0,10);const add=(d,n)=>{const x=new Date(d+'T00:00:00Z');x.setUTCDate(x.getUTCDate()+n);return x.toISOString().slice(0,10);};
+  const MIN_SAMPLE=8,HORIZON_DAYS=7;
+  const today=new Date().toISOString().slice(0,10),windowEnd=add(today,HORIZON_DAYS);const activeWindow=m=>{const d=dateOf(m),st=String(m&&m.status||'').toUpperCase();return d>=today&&d<=windowEnd&&m&&m.homeGoals==null&&!['FT','AET','PEN','PST','CANC'].includes(st);};
   function sideRow(m,side){
-    const home=side==="home",team=m&&m[side],games=first(m&&m[`${side}VenueGames`],m&&m[`${side}Streaks`]&&m[`${side}Streaks`].sample);
+    const home=side==='home',team=m&&m[side],games=first(m&&m[`${side}VenueGames`],m&&m[`${side}Streaks`]&&m[`${side}Streaks`].advanced&&m[`${side}Streaks`].advanced.samples&&m[`${side}Streaks`].advanced.samples.splitVenue);
     const ppg=first(div(m&&m[`${side}VenuePts`],games),m&&m[`${side}Recent10PPG`]);
     const gf=home?first(m&&m.homeScoredAtHome,m&&m.homeProfile&&m.homeProfile.goalsFor&&m.homeProfile.goalsFor.v):first(m&&m.awayScoredAway,m&&m.awayProfile&&m.awayProfile.goalsFor&&m.awayProfile.goalsFor.v);
     const ga=home?first(m&&m.homeConcededAtHome,m&&m.homeProfile&&m.homeProfile.goalsAg&&m.homeProfile.goalsAg.v):first(m&&m.awayConcededAway,m&&m.awayProfile&&m.awayProfile.goalsAg&&m.awayProfile.goalsAg.v);
-    const cs=rate(first(m&&m[`${side}CleanSheetRate`],m&&m[`${side}Streaks`]&&m[`${side}Streaks`].htft&&m[`${side}Streaks`].htft.ftCS));
-    const fts=rate(first(m&&m[`${side}FailedToScoreRate`],m&&m[`${side}Streaks`]&&m[`${side}Streaks`].htft&&m[`${side}Streaks`].htft.ftFTS));
-    const unbeaten=rate(m&&m[`${side}UnbeatenRate`]);
-    const win=rate(m&&m[`${side}WinRate`]);
-    const noLoss=first(m&&m[`${side}Streaks`]&&m[`${side}Streaks`].noLoss,0),noWin=first(m&&m[`${side}Streaks`]&&m[`${side}Streaks`].noWin,0);
-    const position=first(m&&m[`${side}Pos`]),tableSize=first(m&&m.tableSize,m&&m.venueTableSize);
-    const odds=first(m&&m.odds&&m.odds[home?"home":"away"]);
-    return {team,league:m&&m.league||"Unknown league",country:m&&m.country||"",logo:m&&m[`${side}Logo`]||"",side,ppg,gf,ga,cs,fts,unbeaten,win,noLoss,noWin,position,tableSize,odds,opponent:m&&m[home?"away":"home"],kickoff:m&&m.kickoff||"",matchDate:dateOf(m)};
+    const cs=rate(first(m&&m[`${side}CleanSheetRate`],m&&m[`${side}Streaks`]&&m[`${side}Streaks`].htft&&m[`${side}Streaks`].htft.ftCS));const fts=rate(first(m&&m[`${side}FailedToScoreRate`],m&&m[`${side}Streaks`]&&m[`${side}Streaks`].htft&&m[`${side}Streaks`].htft.ftFTS));
+    const unbeaten=rate(m&&m[`${side}UnbeatenRate`]),win=rate(m&&m[`${side}WinRate`]);const noLoss=first(m&&m[`${side}Streaks`]&&m[`${side}Streaks`].noLoss,0),noWin=first(m&&m[`${side}Streaks`]&&m[`${side}Streaks`].noWin,0);
+    const position=first(m&&m[`${side}Pos`]),tableSize=first(m&&m.tableSize,m&&m.venueTableSize),odds=first(m&&m.odds&&m.odds[home?'home':'away']);
+    return {team,league:m&&m.league||'Unknown league',country:m&&m.country||'',logo:m&&m[`${side}Logo`]||'',side,games,ppg,gf,ga,cs,fts,unbeaten,win,noLoss,noWin,position,tableSize,odds,opponent:m&&m[home?'away':'home'],kickoff:m&&m.kickoff||'',matchDate:dateOf(m)};
   }
-  function uniqueTeams(){
-    const map=new Map();
-    for(const m of (window.MATCHES||[])){
-      if(!upcoming(m))continue;
-      for(const side of ["home","away"]){const r=sideRow(m,side);if(!r.team)continue;const k=`${r.league}|${r.team}`;const old=map.get(k);if(!old||String(r.kickoff)<String(old.kickoff))map.set(k,r);}
+  function profiles(){const map=new Map();for(const m of (window.MATCHES||[])){if(!activeWindow(m))continue;for(const side of ['home','away']){const r=sideRow(m,side);if(!r.team)continue;const k=`${r.league}|${r.team}`;const old=map.get(k);if(!old||String(r.kickoff)<String(old.kickoff))map.set(k,r);}}return [...map.values()].filter(r=>r.games!==null&&r.games>=MIN_SAMPLE);}
+  const top4=r=>r.position!==null&&r.position<=4,bottom4=r=>r.position!==null&&r.tableSize!==null&&r.position>=Math.max(1,r.tableSize-3);
+  const rules={
+    edge:{
+      best:{title:'Best Team Edges',copy:'Next-match qualifiers: PPG 2.20+, scores 2.00+, top four, unbeaten profile and odds 1.55 or shorter.',filter:r=>r.ppg>=2.20&&r.gf>=2&&top4(r)&&r.odds!==null&&r.odds<=1.55&&(r.noLoss>=5||(r.unbeaten||0)>=.80),sort:(a,b)=>b.ppg-a.ppg||b.gf-a.gf,reasons:r=>[`PPG ${r.ppg.toFixed(2)} ≥ 2.20`,`Scores ${r.gf.toFixed(2)} ≥ 2.00`,`Top ${r.position}`,`Odds ${r.odds.toFixed(2)} ≤ 1.55`,r.noLoss>=5?`${r.noLoss} unbeaten`:`${Math.round((r.unbeaten||0)*100)}% unbeaten`]},
+      worst:{title:'Worst Team Edges',copy:'Next-match qualifiers: PPG 0.80 or lower, scores 0.80 or less, bottom four, winless profile and odds 4.50 or bigger.',filter:r=>r.ppg<=.80&&r.gf<=.80&&bottom4(r)&&r.odds!==null&&r.odds>=4.50&&(r.noWin>=5||(r.win??1)<=.20),sort:(a,b)=>a.ppg-b.ppg||a.gf-b.gf,reasons:r=>[`PPG ${r.ppg.toFixed(2)} ≤ 0.80`,`Scores ${r.gf.toFixed(2)} ≤ 0.80`,`Bottom ${r.tableSize-r.position+1}`,`Odds ${r.odds.toFixed(2)} ≥ 4.50`,r.noWin>=5?`${r.noWin} winless`:`${Math.round((r.win||0)*100)}% win rate`]},
+      attackBest:{title:'Best Offensive Edges',copy:'Reliable venue samples with 2.00+ scoring and failed-to-score no higher than 20%.',filter:r=>r.gf>=2&&r.fts!==null&&r.fts<=.20,sort:(a,b)=>b.gf-a.gf||b.ppg-a.ppg,reasons:r=>[`Scores ${r.gf.toFixed(2)}`,`FTS ${Math.round(r.fts*100)}%`,`Sample ${r.games}`]},
+      attackWorst:{title:'Worst Offensive Edges',copy:'Reliable venue samples with 0.80 or lower scoring and failed-to-score at least 40%.',filter:r=>r.gf<=.80&&r.fts!==null&&r.fts>=.40,sort:(a,b)=>a.gf-b.gf||b.fts-a.fts,reasons:r=>[`Scores ${r.gf.toFixed(2)}`,`FTS ${Math.round(r.fts*100)}%`,`Sample ${r.games}`]},
+      defenceBest:{title:'Best Defensive Edges',copy:'Concedes no more than 0.80 with a clean-sheet rate of at least 40%.',filter:r=>r.ga<=.80&&r.cs!==null&&r.cs>=.40,sort:(a,b)=>a.ga-b.ga||b.cs-a.cs,reasons:r=>[`Concedes ${r.ga.toFixed(2)}`,`Clean sheets ${Math.round(r.cs*100)}%`,`Sample ${r.games}`]},
+      defenceWorst:{title:'Worst Defensive Edges',copy:'Concedes at least 2.00 and keeps clean sheets in under 20%.',filter:r=>r.ga>=2&&r.cs!==null&&r.cs<.20,sort:(a,b)=>b.ga-a.ga||a.cs-b.cs,reasons:r=>[`Concedes ${r.ga.toFixed(2)}`,`Clean sheets ${Math.round(r.cs*100)}%`,`Sample ${r.games}`]}
+    },
+    season:{
+      best:{title:'Season Power — Best',copy:'Strong venue power profiles independent of the next-match price.',filter:r=>r.ppg>=2&&r.gf>=1.70&&top4(r),sort:(a,b)=>b.ppg-a.ppg||b.gf-a.gf,reasons:r=>[`PPG ${r.ppg.toFixed(2)}`,`Scores ${r.gf.toFixed(2)}`,`League position ${r.position}`]},
+      worst:{title:'Season Power — Worst',copy:'Weak venue power profiles independent of the next-match price.',filter:r=>r.ppg<=1&&r.gf<=1&&bottom4(r),sort:(a,b)=>a.ppg-b.ppg||a.gf-b.gf,reasons:r=>[`PPG ${r.ppg.toFixed(2)}`,`Scores ${r.gf.toFixed(2)}`,`League position ${r.position}`]},
+      attackBest:null,attackWorst:null,defenceBest:null,defenceWorst:null
     }
-    return [...map.values()];
-  }
-  const top4=r=>r.position!==null&&r.position<=4;
-  const bottom4=r=>r.position!==null&&r.tableSize!==null&&r.position>=Math.max(1,r.tableSize-3);
-  const best=r=>r.ppg!==null&&r.ppg>=2.20&&r.gf!==null&&r.gf>=2.00&&top4(r)&&r.odds!==null&&r.odds<=1.55&&(r.noLoss>=5||(r.unbeaten!==null&&r.unbeaten>=.80));
-  const worst=r=>r.ppg!==null&&r.ppg<=.80&&r.gf!==null&&r.gf<=.80&&bottom4(r)&&r.odds!==null&&r.odds>=4.50&&(r.noWin>=5||(r.win!==null&&r.win<=.20));
-  const configs={
-    best:{title:"Best Teams",copy:"PPG 2.20+, scores 2.00+ per match, top four, unbeaten profile and match odds 1.55 or shorter.",filter:best,sort:(a,b)=>b.ppg-a.ppg||b.gf-a.gf},
-    worst:{title:"Worst Teams",copy:"PPG 0.80 or lower, scores 0.80 or less, bottom four, winless profile and match odds 4.50 or bigger.",filter:worst,sort:(a,b)=>a.ppg-b.ppg||a.gf-b.gf},
-    attack:{title:"Best Offensive Teams",copy:"Highest verified split scoring averages with reliable scoring frequency.",filter:r=>r.gf!==null&&r.gf>=2.00&&r.fts!==null&&r.fts<=.20,sort:(a,b)=>b.gf-a.gf||b.ppg-a.ppg},
-    weakAttack:{title:"Worst Offensive Teams",copy:"Lowest split scoring averages and frequent failed-to-score records.",filter:r=>r.gf!==null&&r.gf<=.80&&r.fts!==null&&r.fts>=.40,sort:(a,b)=>a.gf-b.gf||b.fts-a.fts},
-    defence:{title:"Best Defensive Teams",copy:"Concedes no more than 0.80 per split match with at least a 40% clean-sheet rate.",filter:r=>r.ga!==null&&r.ga<=.80&&r.cs!==null&&r.cs>=.40,sort:(a,b)=>a.ga-b.ga||b.cs-a.cs},
-    weakDefence:{title:"Worst Defensive Teams",copy:"Concedes at least 2.00 per split match and keeps clean sheets in under 20%.",filter:r=>r.ga!==null&&r.ga>=2.00&&r.cs!==null&&r.cs<.20,sort:(a,b)=>b.ga-a.ga||a.cs-b.cs}
   };
-  let mode="best",query="";
-  function pct(v){return v===null?"—":`${Math.round(v*100)}%`;}
-  function n(v){return v===null?"—":Number(v).toFixed(2);}
-  function card(r,i){return `<article class="p2u-team-rank-card"><div class="p2u-team-rank-number">${i+1}</div><div class="p2u-team-rank-head">${r.logo?`<img src="${esc(r.logo)}" alt="" loading="lazy">`:""}<div><h3>${esc(r.team)}</h3><p>${esc(r.league)}${r.country?` · ${esc(r.country)}`:""}</p></div></div><div class="p2u-team-rank-metrics"><span><b>${n(r.ppg)}</b><small>PPG</small></span><span><b>${n(r.gf)}</b><small>Scores</small></span><span><b>${n(r.ga)}</b><small>Concedes</small></span><span><b>${pct(r.cs)}</b><small>Clean sheets</small></span><span><b>${r.position&&r.tableSize?`${r.position}/${r.tableSize}`:"—"}</b><small>Position</small></span><span><b>${r.odds?Number(r.odds).toFixed(2):"—"}</b><small>Next odds</small></span></div><div class="p2u-team-rank-footer"><span>${r.noLoss?`${r.noLoss} unbeaten`:r.noWin?`${r.noWin} winless`:"Current split form"}</span><span>vs ${esc(r.opponent||"TBD")}</span></div></article>`;}
+  rules.season.attackBest={...rules.edge.attackBest,title:'Season Attack — Best',copy:'Best reliable venue attacks in the current fixture window.'};rules.season.attackWorst={...rules.edge.attackWorst,title:'Season Attack — Worst',copy:'Weakest reliable venue attacks in the current fixture window.'};rules.season.defenceBest={...rules.edge.defenceBest,title:'Season Defence — Best',copy:'Strongest reliable venue defences in the current fixture window.'};rules.season.defenceWorst={...rules.edge.defenceWorst,title:'Season Defence — Worst',copy:'Weakest reliable venue defences in the current fixture window.'};
+  let view='edge',category='best',polarity='Best',query='',league='all';const key=()=>category==='attack'?`attack${polarity}`:category==='defence'?`defence${polarity}`:category;
+  const fmt=v=>v===null?'—':Number(v).toFixed(2),pct=v=>v===null?'—':`${Math.round(v*100)}%`;
+  function card(r,cfg){const reason=cfg.reasons(r).map(x=>`<li>${esc(x)}</li>`).join('');return `<article class="p2u-team-rank-card"><div class="p2u-team-rank-number">${r.position&&r.tableSize?`${r.position}/${r.tableSize}`:'—'}</div><div class="p2u-team-rank-head">${r.logo?`<img src="${esc(r.logo)}" alt="" loading="lazy">`:''}<div><h3>${esc(r.team)}</h3><p>${esc(r.league)}${r.country?` · ${esc(r.country)}`:''}</p></div></div><div class="p2u-team-rank-metrics"><span><b>${fmt(r.ppg)}</b><small>PPG</small></span><span><b>${fmt(r.gf)}</b><small>Scores</small></span><span><b>${fmt(r.ga)}</b><small>Concedes</small></span><span><b>${pct(r.cs)}</b><small>Clean sheets</small></span><span><b>${r.games}</b><small>Venue sample</small></span><span><b>${r.odds?Number(r.odds).toFixed(2):'—'}</b><small>Next odds</small></span></div><ul class="p2u-team-rank-reasons">${reason}</ul><div class="p2u-team-rank-footer"><span>${r.matchDate}</span><span>vs ${esc(r.opponent||'TBD')}</span></div></article>`;}
   function render(){
-    const all=uniqueTeams(),cfg=configs[mode];let rows=all.filter(cfg.filter).sort(cfg.sort);
-    if(query)rows=rows.filter(r=>`${r.team} ${r.league} ${r.country}`.toLowerCase().includes(query));
-    $("team-rank-title").textContent=cfg.title;$("team-rank-copy").textContent=cfg.copy;$("team-rank-count").textContent=`${rows.length} qualified`;
-    $("team-rank-grid").innerHTML=rows.length?rows.slice(0,60).map(card).join(""):`<div class="p2u-team-rank-empty">No teams meet every strict threshold in the current seven-day fixture window.</div>`;
-    document.querySelectorAll("[data-rank-mode]").forEach(b=>b.classList.toggle("is-active",b.dataset.rankMode===mode));
+    const all=profiles(),leagues=[...new Set(all.map(r=>r.league))].sort();const select=$('team-rank-league');if(select&&select.options.length!==leagues.length+1){select.innerHTML='<option value="all">All leagues</option>'+leagues.map(x=>`<option>${esc(x)}</option>`).join('');select.value=league;}
+    const cfg=rules[view][key()];let rows=all.filter(cfg.filter);if(league!=='all')rows=rows.filter(r=>r.league===league);if(query)rows=rows.filter(r=>`${r.team} ${r.league} ${r.country}`.toLowerCase().includes(query));rows.sort((a,b)=>String(a.league).localeCompare(String(b.league))||cfg.sort(a,b));
+    $('team-rank-title').textContent=cfg.title;$('team-rank-copy').textContent=cfg.copy;$('team-rank-count').textContent=`${rows.length} qualified · sample 8+`;$('team-rank-window').textContent=`Fixtures ${today} to ${windowEnd}`;$('team-rank-grid').innerHTML=rows.length?rows.slice(0,80).map(r=>card(r,cfg)).join(''):`<div class="p2u-team-rank-empty">No teams pass every threshold in the current seven-day window. This is a valid no-qualification result.</div>`;
+    document.querySelectorAll('[data-rank-view]').forEach(b=>b.classList.toggle('is-active',b.dataset.rankView===view));document.querySelectorAll('[data-rank-category]').forEach(b=>b.classList.toggle('is-active',b.dataset.rankCategory===category));document.querySelector('.p2u-team-rank-polarity').hidden=!['attack','defence'].includes(category);document.querySelectorAll('[data-rank-polarity]').forEach(b=>b.classList.toggle('is-active',b.dataset.rankPolarity===polarity));
   }
-  document.addEventListener("DOMContentLoaded",()=>{
-    document.querySelectorAll("[data-rank-mode]").forEach(b=>b.addEventListener("click",()=>{mode=b.dataset.rankMode;render();}));
-    $("team-rank-search").addEventListener("input",e=>{query=String(e.target.value||"").trim().toLowerCase();render();});
-    render();
-  });
+  document.addEventListener('DOMContentLoaded',()=>{document.querySelectorAll('[data-rank-view]').forEach(b=>b.onclick=()=>{view=b.dataset.rankView;render();});document.querySelectorAll('[data-rank-category]').forEach(b=>b.onclick=()=>{category=b.dataset.rankCategory;render();});document.querySelectorAll('[data-rank-polarity]').forEach(b=>b.onclick=()=>{polarity=b.dataset.rankPolarity;render();});$('team-rank-search').oninput=e=>{query=String(e.target.value||'').trim().toLowerCase();render();};$('team-rank-league').onchange=e=>{league=e.target.value;render();};render();});
 })();

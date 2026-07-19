@@ -82,6 +82,12 @@ jobs:
       - name: Compact generated match data
         run: node compact-generated-data.js
 
+      - name: Rebuild compact public data bundle
+        run: node build-public-data.js
+
+      - name: Remove temporary secret configuration
+        run: rm -f config.txt
+
       - name: Commit score snapshot
         shell: bash
         run: |
@@ -91,6 +97,8 @@ jobs:
 
           git add \
             data.js \
+            current-data.js \
+            data-meta.json \
             track-log.json \
             model-calibration.json \
             team-profiles.json \
@@ -118,7 +126,8 @@ jobs:
             fi
             node repair-generated-conflicts.js
             node compact-generated-data.js
-            git add -f -- data.js track-log.json 2>/dev/null || true
+            node build-public-data.js
+            git add -f -- data.js current-data.js data-meta.json track-log.json 2>/dev/null || true
             if ! git diff --cached --quiet; then
               git commit --amend --no-edit
             fi

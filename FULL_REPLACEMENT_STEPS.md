@@ -21,7 +21,7 @@ This ZIP is the complete clean repository replacement through v162, packaged as 
 - Private generated ledgers such as `track-log.json`
 
 ## Safest replacement method
-1. Clone a fresh copy of `riddimbossy-prog/golden-banker-v2`.
+1. Clone a fresh copy of `riddimbossy-prog/predict2u-my-banker-v2`.
 2. Extract this ZIP.
 3. Open the inner `Predict2U_FULL_REPLACEMENT_v163` folder.
 4. Copy everything inside it into the freshly cloned repository folder.

@@ -1,7 +1,7 @@
 {
-  "version": "v251",
-  "expected_cache": "predict2u-v251",
-  "generated_at": "2026-07-15T02:37:25.880Z",
+  "version": "v264",
+  "expected_cache": "predict2u-v264",
+  "generated_at": "2026-07-19T10:00:23.884Z",
   "checks": [
     {
       "name": "required file manifest.webmanifest",
@@ -61,7 +61,7 @@
     {
       "name": "build version available",
       "ok": true,
-      "detail": "v251"
+      "detail": "v264"
     },
     {
       "name": "standalone display",
@@ -71,7 +71,7 @@
     {
       "name": "four app shortcuts",
       "ok": true,
-      "detail": "6"
+      "detail": "4"
     },
     {
       "name": "share target",
@@ -84,14 +84,14 @@
       "detail": ""
     },
     {
-      "name": "v251 worker cache",
+      "name": "v264 worker cache",
       "ok": true,
-      "detail": "expected predict2u-v251"
+      "detail": "expected predict2u-v264"
     },
     {
       "name": "worker version matches build",
       "ok": true,
-      "detail": "expected v251"
+      "detail": "expected v264"
     },
     {
       "name": "offline navigation fallback",
@@ -145,7 +145,7 @@
     },
     {
       "name": "index.html app controller",
-      "ok": false,
+      "ok": true,
       "detail": ""
     },
     {
@@ -239,6 +239,6 @@
       "detail": ""
     }
   ],
-  "passed": 46,
-  "failed": 1
+  "passed": 47,
+  "failed": 0
 }

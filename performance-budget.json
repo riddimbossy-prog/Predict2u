@@ -1,152 +1,72 @@
 {
-  "generatedAt": "2026-07-15T02:37:18.293Z",
-  "version": "v251",
-  "errors": [
-    "board.html is 82990 bytes; budget is 76000.",
-    "index.html: missing preconnect for cdn.tailwindcss.com",
-    "index.html: missing preconnect for cdnjs.cloudflare.com",
-    "index.html: missing preconnect for cdn.jsdelivr.net",
-    "index.html: performance/freshness layer is not loaded correctly.",
-    "index.html: CSS loading state is not armed in the head.",
-    "index.html: mobile date rail missing date-strip",
-    "index.html: mobile date rail missing date-chip",
-    "index.html: mobile date rail missing date-chip-day",
-    "index.html: mobile date rail missing date-chip-date",
-    "index.html: mobile date rail missing date-chip-count",
-    "In-place board refresh hook is missing.",
-    "index.html: personalization layer is not loaded.",
-    "index.html: Smart Alerts layer is not loaded correctly.",
-    "index.html: account cloud layer is not loaded."
-  ],
+  "generatedAt": "2026-07-19T10:00:23.639Z",
+  "version": "v264",
+  "errors": [],
   "warnings": [],
-  "passedCount": 32,
+  "passedCount": 93,
   "budgets": {
     "index.html": {
-      "bytes": 7957,
-      "limit": 76000
+      "bytes": 9869,
+      "limit": 90000
     },
     "board.html": {
-      "bytes": 82990,
-      "limit": 76000
+      "bytes": 84800,
+      "limit": 100000
     },
-    "engines.html": {
-      "bytes": 47099,
-      "limit": 50000
+    "bankers.html": {
+      "bytes": 84958,
+      "limit": 100000
     },
-    "banker-engine.js": {
-      "bytes": 83479,
-      "limit": 110000
+    "all-engines.html": {
+      "bytes": 5205,
+      "limit": 60000
     },
-    "p2u-intelligence.js": {
-      "bytes": 17164,
-      "limit": 35000
+    "team-rankings.html": {
+      "bytes": 2772,
+      "limit": 60000
     },
-    "brand-experience.css": {
-      "bytes": 11204,
-      "limit": 22000
+    "current-data.js": {
+      "bytes": 3388904,
+      "limit": 6291456
     },
-    "performance-freshness.js": {
-      "bytes": 6232,
+    "tailwind-lite-v264.css": {
+      "bytes": 6584,
+      "limit": 16000
+    },
+    "stability-v264.css": {
+      "bytes": 3632,
+      "limit": 24000
+    },
+    "data-freshness-v264.js": {
+      "bytes": 2957,
       "limit": 18000
     },
-    "performance-freshness.css": {
-      "bytes": 3441,
-      "limit": 14000
-    },
-    "personalization.js": {
-      "bytes": 21700,
-      "limit": 30000
-    },
-    "personalization.css": {
-      "bytes": 9527,
+    "engine-governance-v264.js": {
+      "bytes": 3067,
       "limit": 18000
     },
-    "smart-alerts.js": {
-      "bytes": 27433,
-      "limit": 42000
-    },
-    "smart-alerts.css": {
-      "bytes": 10246,
-      "limit": 22000
-    },
-    "admin.html": {
-      "bytes": 29199,
-      "limit": 30000
-    },
-    "backend-admin.js": {
-      "bytes": 24542,
-      "limit": 42000
-    },
-    "backend-admin.css": {
-      "bytes": 17864,
-      "limit": 32000
-    },
-    "site-controls.js": {
-      "bytes": 10474,
-      "limit": 22000
-    },
-    "site-controls.css": {
-      "bytes": 2278,
-      "limit": 8000
-    },
-    "account-cloud.js": {
-      "bytes": 31168,
-      "limit": 65000
-    },
-    "account-cloud.css": {
-      "bytes": 8519,
-      "limit": 26000
-    },
-    "push-notifications.js": {
-      "bytes": 15450,
-      "limit": 36000
-    },
-    "push-notifications.css": {
-      "bytes": 4469,
-      "limit": 18000
-    },
-    "analytics.js": {
-      "bytes": 16925,
-      "limit": 36000
-    },
-    "analytics.css": {
-      "bytes": 3465,
-      "limit": 14000
-    },
-    "product-analytics.js": {
-      "bytes": 8835,
-      "limit": 26000
-    },
-    "product-analytics.css": {
-      "bytes": 3274,
-      "limit": 14000
-    },
-    "account.html": {
-      "bytes": 2637,
-      "limit": 18000
-    },
-    "profile.html": {
-      "bytes": 1986,
+    "app-launch-v264.js": {
+      "bytes": 1499,
       "limit": 12000
     },
-    "news.html": {
-      "bytes": 9363,
-      "limit": 18000
+    "app-launch-v264.css": {
+      "bytes": 2005,
+      "limit": 12000
     },
-    "news.js": {
-      "bytes": 734,
-      "limit": 28000
-    },
-    "news.css": {
-      "bytes": 24528,
+    "first-run-v264.js": {
+      "bytes": 3565,
       "limit": 26000
     },
-    "predict2u-transfers.webp": {
-      "bytes": 145272,
-      "limit": 180000
+    "first-run-v264.css": {
+      "bytes": 3441,
+      "limit": 24000
     },
-    "predict2u-transfers-thumb.webp": {
-      "bytes": 28360,
+    "team-rankings.js": {
+      "bytes": 10351,
+      "limit": 50000
+    },
+    "sw.js": {
+      "bytes": 12738,
       "limit": 30000
     }
   }

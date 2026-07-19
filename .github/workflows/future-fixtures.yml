@@ -288,6 +288,9 @@ jobs:
       - name: Compact generated match data
         run: node compact-generated-data.js
 
+      - name: Build compact public data bundle
+        run: node build-public-data.js
+
       - name: Commit updated all-games data
         shell: bash
         run: |
@@ -300,6 +303,8 @@ jobs:
           git rm --cached -f --ignore-unmatch api-cache.json 2>/dev/null || true
           git add -f -- \
             data.js \
+            current-data.js \
+            data-meta.json \
             all-games-discovery.json \
             week-fixture-report.json \
             fixture-coverage-report.json
@@ -342,8 +347,9 @@ jobs:
             fi
             node repair-generated-conflicts.js
             node compact-generated-data.js
+            node build-public-data.js
             git rm --cached -f --ignore-unmatch api-cache.json 2>/dev/null || true
-            git add -f -- data.js track-log.json 2>/dev/null || true
+            git add -f -- data.js current-data.js data-meta.json track-log.json 2>/dev/null || true
             if ! git diff --cached --quiet; then
               git commit --amend --no-edit
             fi
