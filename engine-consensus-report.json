@@ -1,6 +1,6 @@
 {
   "version": "v195",
-  "updated": "2026-07-20T17:16:06.228Z",
+  "updated": "2026-07-20T18:18:22.900Z",
   "summary": {
     "fixtures": 300,
     "qualified": 5,
@@ -4948,109 +4948,6 @@
       "independence": 0
     },
     {
-      "id": 1551052,
-      "date": "2026-07-20",
-      "home": "Slavia Sofia",
-      "away": "CSKA Sofia",
-      "league": "First League",
-      "version": "v195",
-      "bet": false,
-      "market": "No Bet",
-      "score": 0,
-      "reason": "No engine produced a qualified candidate.",
-      "supporters": [],
-      "conflictIndex": 0,
-      "independence": 0
-    },
-    {
-      "id": 1577449,
-      "date": "2026-07-20",
-      "home": "Rotor Volgograd",
-      "away": "Ska-khabarovsk",
-      "league": "First League",
-      "version": "v195",
-      "bet": false,
-      "market": "No Bet",
-      "score": 0,
-      "reason": "No engine produced a qualified candidate.",
-      "supporters": [],
-      "conflictIndex": 0,
-      "independence": 0
-    },
-    {
-      "id": 1494214,
-      "date": "2026-07-20",
-      "home": "Kalmar FF",
-      "away": "Malmo FF",
-      "league": "Allsvenskan",
-      "version": "v195",
-      "bet": false,
-      "market": "No Bet",
-      "candidate": "First Half Over 0.5",
-      "score": 75.2,
-      "support": 0.41,
-      "supporters": [
-        "Halves"
-      ],
-      "independence": 1,
-      "exactSupport": 1,
-      "conflictIndex": 0,
-      "alternatives": [],
-      "reason": "Consensus rejected: support, independence or conflict threshold failed."
-    },
-    {
-      "id": 1494216,
-      "date": "2026-07-20",
-      "home": "Orgryte IS",
-      "away": "Djurgardens IF",
-      "league": "Allsvenskan",
-      "version": "v195",
-      "bet": false,
-      "market": "No Bet",
-      "candidate": "Away Team Over 0.5 Goals",
-      "score": 82.7,
-      "support": 1.46,
-      "supporters": [
-        "Trend",
-        "Streaks",
-        "League Bias"
-      ],
-      "independence": 3,
-      "exactSupport": 3,
-      "conflictIndex": 0,
-      "alternatives": [
-        {
-          "market": "Second Half Over 0.5",
-          "support": 0.68,
-          "engines": [
-            "Halves"
-          ]
-        }
-      ],
-      "reason": "Consensus rejected: support, independence or conflict threshold failed."
-    },
-    {
-      "id": 1497627,
-      "date": "2026-07-20",
-      "home": "Norrby IF",
-      "away": "GIF Sundsvall",
-      "league": "Superettan",
-      "version": "v195",
-      "bet": false,
-      "market": "No Bet",
-      "candidate": "Second Half Over 0.5",
-      "score": 76.4,
-      "support": 0.69,
-      "supporters": [
-        "Halves"
-      ],
-      "independence": 1,
-      "exactSupport": 1,
-      "conflictIndex": 0,
-      "alternatives": [],
-      "reason": "Consensus rejected: support, independence or conflict threshold failed."
-    },
-    {
       "id": 1549983,
       "date": "2026-07-20",
       "home": "Buenos Aires City",
@@ -5811,6 +5708,122 @@
         }
       ],
       "reason": "3 engines across 3 independent evidence groups support the exact market."
+    },
+    {
+      "id": 1498664,
+      "date": "2026-07-20",
+      "home": "Quilmes",
+      "away": "Gimnasia Jujuy",
+      "league": "Primera Nacional",
+      "version": "v195",
+      "bet": false,
+      "market": "No Bet",
+      "candidate": "Under 3.5 Goals",
+      "score": 76.8,
+      "support": 0.8,
+      "supporters": [
+        "League Bias"
+      ],
+      "independence": 1,
+      "exactSupport": 1,
+      "conflictIndex": 0,
+      "alternatives": [],
+      "reason": "Consensus rejected: support, independence or conflict threshold failed."
+    },
+    {
+      "id": 1498655,
+      "date": "2026-07-21",
+      "home": "Chaco For Ever",
+      "away": "San Miguel",
+      "league": "Primera Nacional",
+      "version": "v195",
+      "bet": false,
+      "market": "No Bet",
+      "candidate": "Under 3.5 Goals",
+      "score": 76.8,
+      "support": 0.8,
+      "supporters": [
+        "League Bias"
+      ],
+      "independence": 1,
+      "exactSupport": 1,
+      "conflictIndex": 0,
+      "alternatives": [
+        {
+          "market": "First Half Under 1.5",
+          "support": 0.42,
+          "engines": [
+            "Halves"
+          ]
+        },
+        {
+          "market": "Double Chance X2",
+          "support": 0.37,
+          "engines": [
+            "Trend"
+          ]
+        }
+      ],
+      "reason": "Consensus rejected: support, independence or conflict threshold failed."
+    },
+    {
+      "id": 1498653,
+      "date": "2026-07-21",
+      "home": "Central Norte",
+      "away": "Deportivo Moron",
+      "league": "Primera Nacional",
+      "version": "v195",
+      "bet": false,
+      "market": "No Bet",
+      "candidate": "Under 3.5 Goals",
+      "score": 76.8,
+      "support": 0.8,
+      "supporters": [
+        "League Bias"
+      ],
+      "independence": 1,
+      "exactSupport": 1,
+      "conflictIndex": 0,
+      "alternatives": [
+        {
+          "market": "First Half Under 1.5",
+          "support": 0.42,
+          "engines": [
+            "Halves"
+          ]
+        }
+      ],
+      "reason": "Consensus rejected: support, independence or conflict threshold failed."
+    },
+    {
+      "id": 1591889,
+      "date": "2026-07-21",
+      "home": "FC Tokyo",
+      "away": "Nagoya Grampus",
+      "league": "Friendlies Clubs",
+      "version": "v195",
+      "bet": false,
+      "market": "No Bet",
+      "score": 0,
+      "reason": "No engine produced a qualified candidate.",
+      "supporters": [],
+      "conflictIndex": 0,
+      "independence": 0
+    },
+    {
+      "id": 1567357,
+      "date": "2026-07-21",
+      "home": "Henan Jianye",
+      "away": "Dalian Zhixing",
+      "league": "FA Cup",
+      "version": "v195",
+      "bet": false,
+      "market": "No Bet",
+      "score": 0,
+      "reason": "No engine produced a qualified candidate.",
+      "supporters": [],
+      "conflictIndex": 0,
+      "independence": 0
     }
   ]
 }
