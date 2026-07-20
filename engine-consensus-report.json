@@ -1,6 +1,6 @@
 {
   "version": "v195",
-  "updated": "2026-07-20T13:57:25.489Z",
+  "updated": "2026-07-20T15:02:57.249Z",
   "summary": {
     "fixtures": 300,
     "qualified": 3,
@@ -4867,21 +4867,6 @@
       "reason": "Consensus rejected: support, independence or conflict threshold failed."
     },
     {
-      "id": 1598485,
-      "date": "2026-07-20",
-      "home": "Sagan Tosu",
-      "away": "Verspah Oita",
-      "league": "Friendlies Clubs",
-      "version": "v195",
-      "bet": false,
-      "market": "No Bet",
-      "score": 0,
-      "reason": "No engine produced a qualified candidate.",
-      "supporters": [],
-      "conflictIndex": 0,
-      "independence": 0
-    },
-    {
       "id": 1595183,
       "date": "2026-07-20",
       "home": "Measurers",
@@ -4943,28 +4928,6 @@
       ],
       "independence": 1,
       "exactSupport": 1,
-      "conflictIndex": 0,
-      "alternatives": [],
-      "reason": "Consensus rejected: support, independence or conflict threshold failed."
-    },
-    {
-      "id": 1598487,
-      "date": "2026-07-20",
-      "home": "Spaeri",
-      "away": "Samgurali",
-      "league": "Friendlies Clubs",
-      "version": "v195",
-      "bet": false,
-      "market": "No Bet",
-      "candidate": "Away Team Over 0.5 Goals",
-      "score": 77.6,
-      "support": 0.61,
-      "supporters": [
-        "Trend",
-        "League Bias"
-      ],
-      "independence": 2,
-      "exactSupport": 2,
       "conflictIndex": 0,
       "alternatives": [],
       "reason": "Consensus rejected: support, independence or conflict threshold failed."
@@ -5824,6 +5787,50 @@
       "supporters": [],
       "conflictIndex": 0,
       "independence": 0
+    },
+    {
+      "id": 1598490,
+      "date": "2026-07-20",
+      "home": "Trafford",
+      "away": "United of Manchester",
+      "league": "Friendlies Clubs",
+      "version": "v195",
+      "bet": false,
+      "market": "No Bet",
+      "score": 0,
+      "reason": "No engine produced a qualified candidate.",
+      "supporters": [],
+      "conflictIndex": 0,
+      "independence": 0
+    },
+    {
+      "id": 1519414,
+      "date": "2026-07-20",
+      "home": "Mushuc Runa SC",
+      "away": "Orense SC",
+      "league": "Liga Pro",
+      "version": "v195",
+      "bet": false,
+      "market": "No Bet",
+      "candidate": "Under 3.5 Goals",
+      "score": 76.4,
+      "support": 0.71,
+      "supporters": [
+        "League Bias"
+      ],
+      "independence": 1,
+      "exactSupport": 1,
+      "conflictIndex": 0,
+      "alternatives": [
+        {
+          "market": "Second Half Over 0.5",
+          "support": 0.43,
+          "engines": [
+            "Halves"
+          ]
+        }
+      ],
+      "reason": "Consensus rejected: support, independence or conflict threshold failed."
     }
   ]
 }
