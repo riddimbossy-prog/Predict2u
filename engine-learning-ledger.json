@@ -1,7 +1,7 @@
 {
   "version": "v193",
   "schemaVersion": 1,
-  "updated": "2026-07-20T05:29:55.126Z",
+  "updated": "2026-07-20T06:39:21.620Z",
   "minimumSamples": {
     "teamFavorite": 5,
     "teamUnderdog": 5,
@@ -12,10 +12,10 @@
   },
   "decayHalfLifeDays": 120,
   "summary": {
-    "settledFixtures": 130,
-    "settledDecisions": 277,
+    "settledFixtures": 131,
+    "settledDecisions": 279,
     "reviewedLosses": 47,
-    "attachedUpcoming": 2266,
+    "attachedUpcoming": 2265,
     "highRiskUpcoming": 0,
     "stableUpcoming": 0
   },
@@ -5608,7 +5608,7 @@
           "mid": 0,
           "upper": 0.6576
         },
-        "decayedWeight": 1.89
+        "decayedWeight": 1.88
       },
       "awayFavorites": {
         "sample": 3,
@@ -6962,7 +6962,7 @@
         "mid": 0.5,
         "upper": 0.732
       },
-      "decayedWeight": 13.39
+      "decayedWeight": 13.38
     },
     "1.01-1.35": {
       "sample": 7,
@@ -8710,15 +8710,15 @@
       "hardVeto": false
     },
     "*|Halves|Second Half Over 0.5|unknown|other": {
-      "sample": 25,
-      "wins": 21,
+      "sample": 26,
+      "wins": 22,
       "losses": 4,
-      "winRate": 0.84,
-      "lossRate": 0.16,
+      "winRate": 0.8462,
+      "lossRate": 0.1538,
       "wilson": {
-        "lower": 0.6535,
-        "mid": 0.84,
-        "upper": 0.936
+        "lower": 0.6647,
+        "mid": 0.8462,
+        "upper": 0.9385
       },
       "adjustment": 2,
       "hardVeto": false
@@ -8906,15 +8906,15 @@
       "hardVeto": false
     },
     "usl league two|Halves|Second Half Over 0.5|unknown|other": {
-      "sample": 22,
-      "wins": 20,
+      "sample": 23,
+      "wins": 21,
       "losses": 2,
-      "winRate": 0.9091,
-      "lossRate": 0.0909,
+      "winRate": 0.913,
+      "lossRate": 0.087,
       "wilson": {
-        "lower": 0.7218,
-        "mid": 0.9091,
-        "upper": 0.9747
+        "lower": 0.732,
+        "mid": 0.913,
+        "upper": 0.9758
       },
       "adjustment": 2,
       "hardVeto": false
@@ -9881,6 +9881,34 @@
         "lower": 0,
         "mid": 0,
         "upper": 0.7935
+      },
+      "adjustment": 0,
+      "hardVeto": false
+    },
+    "usl league two|League Bias|Over 1.5 Goals|unknown|other": {
+      "sample": 1,
+      "wins": 1,
+      "losses": 0,
+      "winRate": 1,
+      "lossRate": 0,
+      "wilson": {
+        "lower": 0.2065,
+        "mid": 1,
+        "upper": 1
+      },
+      "adjustment": 0,
+      "hardVeto": false
+    },
+    "*|League Bias|Over 1.5 Goals|unknown|other": {
+      "sample": 1,
+      "wins": 1,
+      "losses": 0,
+      "winRate": 1,
+      "lossRate": 0,
+      "wilson": {
+        "lower": 0.2065,
+        "mid": 1,
+        "upper": 1
       },
       "adjustment": 0,
       "hardVeto": false

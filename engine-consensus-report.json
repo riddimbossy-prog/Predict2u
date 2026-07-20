@@ -1,6 +1,6 @@
 {
   "version": "v195",
-  "updated": "2026-07-20T05:29:57.796Z",
+  "updated": "2026-07-20T06:39:24.293Z",
   "summary": {
     "fixtures": 300,
     "qualified": 3,
@@ -3915,11 +3915,17 @@
       "version": "v195",
       "bet": false,
       "market": "No Bet",
-      "score": 0,
-      "reason": "No engine produced a qualified candidate.",
-      "supporters": [],
+      "candidate": "Away Team Over 0.5 Goals",
+      "score": 75,
+      "support": 0.34,
+      "supporters": [
+        "League Bias"
+      ],
+      "independence": 1,
+      "exactSupport": 1,
       "conflictIndex": 0,
-      "independence": 0
+      "alternatives": [],
+      "reason": "Consensus rejected: support, independence or conflict threshold failed."
     },
     {
       "id": 1583337,
@@ -4920,36 +4926,6 @@
       "reason": "Consensus rejected: support, independence or conflict threshold failed."
     },
     {
-      "id": 1595451,
-      "date": "2026-07-20",
-      "home": "Ballard",
-      "away": "Colorado Storm",
-      "league": "USL League Two",
-      "version": "v195",
-      "bet": false,
-      "market": "No Bet",
-      "candidate": "Over 1.5 Goals",
-      "score": 79.3,
-      "support": 1.02,
-      "supporters": [
-        "Trend",
-        "League Bias"
-      ],
-      "independence": 2,
-      "exactSupport": 2,
-      "conflictIndex": 0,
-      "alternatives": [
-        {
-          "market": "Second Half Over 0.5",
-          "support": 0.74,
-          "engines": [
-            "Halves"
-          ]
-        }
-      ],
-      "reason": "Consensus rejected: support, independence or conflict threshold failed."
-    },
-    {
       "id": 1595182,
       "date": "2026-07-20",
       "home": "Kalighat Club",
@@ -5834,6 +5810,27 @@
       "supporters": [],
       "conflictIndex": 0,
       "independence": 0
+    },
+    {
+      "id": 1593670,
+      "date": "2026-07-20",
+      "home": "Al Ansar",
+      "away": "Al Nejmeh",
+      "league": "Premier League",
+      "version": "v195",
+      "bet": false,
+      "market": "No Bet",
+      "candidate": "Second Half Over 0.5",
+      "score": 76.4,
+      "support": 0.71,
+      "supporters": [
+        "Halves"
+      ],
+      "independence": 1,
+      "exactSupport": 1,
+      "conflictIndex": 0,
+      "alternatives": [],
+      "reason": "Consensus rejected: support, independence or conflict threshold failed."
     }
   ]
 }
