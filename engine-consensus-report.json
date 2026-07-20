@@ -1,6 +1,6 @@
 {
   "version": "v195",
-  "updated": "2026-07-20T08:37:13.349Z",
+  "updated": "2026-07-20T09:38:48.539Z",
   "summary": {
     "fixtures": 300,
     "qualified": 3,
@@ -4615,21 +4615,6 @@
       "reason": "Consensus rejected: support, independence or conflict threshold failed."
     },
     {
-      "id": 1589290,
-      "date": "2026-07-19",
-      "home": "Kayserispor",
-      "away": "Kasımpaşa",
-      "league": "Friendlies Clubs",
-      "version": "v195",
-      "bet": false,
-      "market": "No Bet",
-      "score": 0,
-      "reason": "No engine produced a qualified candidate.",
-      "supporters": [],
-      "conflictIndex": 0,
-      "independence": 0
-    },
-    {
       "id": 1511609,
       "date": "2026-07-19",
       "home": "Antofagasta",
@@ -4958,9 +4943,9 @@
       "version": "v195",
       "bet": false,
       "market": "No Bet",
-      "candidate": "Home Team Over 0.5 Goals",
-      "score": 75.4,
-      "support": 0.45,
+      "candidate": "Over 1.5 Goals",
+      "score": 75.5,
+      "support": 0.47,
       "supporters": [
         "League Bias"
       ],
@@ -5850,6 +5835,35 @@
           "engines": [
             "Trend",
             "Streaks"
+          ]
+        }
+      ],
+      "reason": "Consensus rejected: support, independence or conflict threshold failed."
+    },
+    {
+      "id": 1514236,
+      "date": "2026-07-20",
+      "home": "HK Kopavogur",
+      "away": "Vestri",
+      "league": "1. Deild",
+      "version": "v195",
+      "bet": false,
+      "market": "No Bet",
+      "candidate": "Second Half Over 0.5",
+      "score": 76.6,
+      "support": 0.74,
+      "supporters": [
+        "Halves"
+      ],
+      "independence": 1,
+      "exactSupport": 1,
+      "conflictIndex": 0,
+      "alternatives": [
+        {
+          "market": "Double Chance 1X",
+          "support": 0.5,
+          "engines": [
+            "Trend"
           ]
         }
       ],
