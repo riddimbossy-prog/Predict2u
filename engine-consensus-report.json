@@ -1,6 +1,6 @@
 {
   "version": "v195",
-  "updated": "2026-07-20T22:42:30.530Z",
+  "updated": "2026-07-20T23:47:44.314Z",
   "summary": {
     "fixtures": 300,
     "qualified": 6,
@@ -5235,21 +5235,6 @@
       "reason": "3 engines across 3 independent evidence groups support the exact market."
     },
     {
-      "id": 1598490,
-      "date": "2026-07-20",
-      "home": "Trafford",
-      "away": "United of Manchester",
-      "league": "Friendlies Clubs",
-      "version": "v195",
-      "bet": false,
-      "market": "No Bet",
-      "score": 0,
-      "reason": "No engine produced a qualified candidate.",
-      "supporters": [],
-      "conflictIndex": 0,
-      "independence": 0
-    },
-    {
       "id": 1576801,
       "date": "2026-07-20",
       "home": "Atletico Torque",
@@ -5284,21 +5269,6 @@
         }
       ],
       "reason": "Consensus rejected: support, independence or conflict threshold failed."
-    },
-    {
-      "id": 1589165,
-      "date": "2026-07-20",
-      "home": "Volta Redonda",
-      "away": "São Gonçalo EC RJ",
-      "league": "Copa Rio",
-      "version": "v195",
-      "bet": false,
-      "market": "No Bet",
-      "score": 0,
-      "reason": "No engine produced a qualified candidate.",
-      "supporters": [],
-      "conflictIndex": 0,
-      "independence": 0
     },
     {
       "id": 1586076,
@@ -5776,6 +5746,56 @@
         }
       ],
       "reason": "3 engines across 3 independent evidence groups support the exact market."
+    },
+    {
+      "id": 1507005,
+      "date": "2026-07-21",
+      "home": "Jeonbuk Motors",
+      "away": "Daejeon Citizen",
+      "league": "K League 1",
+      "version": "v195",
+      "bet": false,
+      "market": "No Bet",
+      "candidate": "Under 3.5 Goals",
+      "score": 76.1,
+      "support": 0.62,
+      "supporters": [
+        "League Bias"
+      ],
+      "independence": 1,
+      "exactSupport": 1,
+      "conflictIndex": 0,
+      "alternatives": [
+        {
+          "market": "First Half Under 1.5",
+          "support": 0.36,
+          "engines": [
+            "Halves"
+          ]
+        }
+      ],
+      "reason": "Consensus rejected: support, independence or conflict threshold failed."
+    },
+    {
+      "id": 1507006,
+      "date": "2026-07-21",
+      "home": "Ulsan Hyundai FC",
+      "away": "Incheon United",
+      "league": "K League 1",
+      "version": "v195",
+      "bet": false,
+      "market": "No Bet",
+      "candidate": "Under 3.5 Goals",
+      "score": 76.2,
+      "support": 0.64,
+      "supporters": [
+        "League Bias"
+      ],
+      "independence": 1,
+      "exactSupport": 1,
+      "conflictIndex": 0,
+      "alternatives": [],
+      "reason": "Consensus rejected: support, independence or conflict threshold failed."
     }
   ]
 }
