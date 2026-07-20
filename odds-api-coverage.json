@@ -1,6 +1,6 @@
 {
   "version": "v251",
-  "generatedAt": "2026-07-20T02:16:34.380Z",
+  "generatedAt": "2026-07-20T02:27:13.332Z",
   "provider": "The Odds API v4",
   "keyPresent": true,
   "regions": "uk",
@@ -32,44 +32,12 @@
       "matches": 7
     },
     {
-      "league": "MLS Next Pro",
-      "country": "USA",
-      "sportKey": "soccer_usa_mls",
-      "sportTitle": "MLS",
-      "score": 1,
-      "matches": 11
-    },
-    {
-      "league": "Serie D",
-      "country": "Brazil",
-      "sportKey": "soccer_brazil_campeonato",
-      "sportTitle": "Brazil Série A",
-      "score": 0.466,
-      "matches": 3
-    },
-    {
-      "league": "NWSL Women",
-      "country": "USA",
-      "sportKey": "soccer_usa_mls",
-      "sportTitle": "MLS",
-      "score": 0.323,
-      "matches": 6
-    },
-    {
       "league": "USL League Two",
       "country": "USA",
       "sportKey": "soccer_usa_mls",
       "sportTitle": "MLS",
       "score": 0.466,
-      "matches": 5
-    },
-    {
-      "league": "Primera División",
-      "country": "Peru",
-      "sportKey": "soccer_argentina_primera_division",
-      "sportTitle": "Primera División - Argentina",
-      "score": 0.653,
-      "matches": 6
+      "matches": 2
     },
     {
       "league": "Primera División",
@@ -78,6 +46,14 @@
       "sportTitle": "Primera División - Argentina",
       "score": 0.653,
       "matches": 8
+    },
+    {
+      "league": "MLS Next Pro",
+      "country": "USA",
+      "sportKey": "soccer_usa_mls",
+      "sportTitle": "MLS",
+      "score": 1,
+      "matches": 9
     },
     {
       "league": "Premier League",
@@ -673,6 +649,14 @@
     },
     {
       "league": "Primera División",
+      "country": "Peru",
+      "sportKey": "soccer_argentina_primera_division",
+      "sportTitle": "Primera División - Argentina",
+      "score": 0.653,
+      "matches": 5
+    },
+    {
+      "league": "Primera División",
       "country": "Chile",
       "sportKey": "soccer_chile_campeonato",
       "sportTitle": "Primera División - Chile",
@@ -694,6 +678,14 @@
       "sportTitle": "Brazil Série B",
       "score": 0.466,
       "matches": 6
+    },
+    {
+      "league": "NWSL Women",
+      "country": "USA",
+      "sportKey": "soccer_usa_mls",
+      "sportTitle": "MLS",
+      "score": 0.323,
+      "matches": 5
     },
     {
       "league": "Primera Division",
@@ -912,6 +904,14 @@
       "matches": 1
     },
     {
+      "league": "Serie D",
+      "country": "Brazil",
+      "sportKey": "soccer_brazil_campeonato",
+      "sportTitle": "Brazil Série A",
+      "score": 0.466,
+      "matches": 2
+    },
+    {
       "league": "Mineiro - 2",
       "country": "Brazil",
       "sportKey": "soccer_brazil_campeonato",
@@ -944,7 +944,7 @@
       "matches": 2
     }
   ],
-  "matchesConsidered": 1590,
+  "matchesConsidered": 1580,
   "matchesMatched": 0,
   "matchesUpdated": 0,
   "fieldsFilled": 0,
@@ -962,12 +962,6 @@
     {
       "league": "Segunda División",
       "country": "Uruguay",
-      "reason": "No matching soccer sport key",
-      "bestScore": 0.143
-    },
-    {
-      "league": "Liga Pro",
-      "country": "Ecuador",
       "reason": "No matching soccer sport key",
       "bestScore": 0.143
     },
@@ -1016,6 +1010,12 @@
     {
       "league": "First League",
       "country": "Bulgaria",
+      "reason": "No matching soccer sport key",
+      "bestScore": 0.143
+    },
+    {
+      "league": "Liga Pro",
+      "country": "Ecuador",
       "reason": "No matching soccer sport key",
       "bestScore": 0.143
     },
@@ -2504,18 +2504,6 @@
       "market": "double_chance"
     },
     {
-      "sportKey": "soccer_brazil_campeonato",
-      "market": "btts"
-    },
-    {
-      "sportKey": "soccer_brazil_campeonato",
-      "market": "draw_no_bet"
-    },
-    {
-      "sportKey": "soccer_brazil_campeonato",
-      "market": "double_chance"
-    },
-    {
       "sportKey": "soccer_epl",
       "market": "btts"
     },
@@ -2573,6 +2561,18 @@
     },
     {
       "sportKey": "soccer_sweden_superettan",
+      "market": "double_chance"
+    },
+    {
+      "sportKey": "soccer_brazil_campeonato",
+      "market": "btts"
+    },
+    {
+      "sportKey": "soccer_brazil_campeonato",
+      "market": "draw_no_bet"
+    },
+    {
+      "sportKey": "soccer_brazil_campeonato",
       "market": "double_chance"
     },
     {
@@ -2870,31 +2870,6 @@
       "statusCode": 422
     },
     {
-      "label": "soccer_brazil_campeonato:base-combined",
-      "error": "Markets not supported by this endpoint: btts, double_chance, draw_no_bet",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_brazil_campeonato:base-core",
-      "error": "Invalid commenceTimeFrom parameter. The format must be YYYY-MM-DDTHH:MM:SSZ, for example 2020-11-24T16:05:00Z",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_brazil_campeonato:btts",
-      "error": "Markets not supported by this endpoint: btts",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_brazil_campeonato:draw_no_bet",
-      "error": "Markets not supported by this endpoint: draw_no_bet",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_brazil_campeonato:double_chance",
-      "error": "Markets not supported by this endpoint: double_chance",
-      "statusCode": 422
-    },
-    {
       "label": "soccer_epl:base-combined",
       "error": "Markets not supported by this endpoint: btts, double_chance, draw_no_bet",
       "statusCode": 422
@@ -3016,6 +2991,31 @@
     },
     {
       "label": "soccer_sweden_superettan:double_chance",
+      "error": "Markets not supported by this endpoint: double_chance",
+      "statusCode": 422
+    },
+    {
+      "label": "soccer_brazil_campeonato:base-combined",
+      "error": "Markets not supported by this endpoint: btts, double_chance, draw_no_bet",
+      "statusCode": 422
+    },
+    {
+      "label": "soccer_brazil_campeonato:base-core",
+      "error": "Invalid commenceTimeFrom parameter. The format must be YYYY-MM-DDTHH:MM:SSZ, for example 2020-11-24T16:05:00Z",
+      "statusCode": 422
+    },
+    {
+      "label": "soccer_brazil_campeonato:btts",
+      "error": "Markets not supported by this endpoint: btts",
+      "statusCode": 422
+    },
+    {
+      "label": "soccer_brazil_campeonato:draw_no_bet",
+      "error": "Markets not supported by this endpoint: draw_no_bet",
+      "statusCode": 422
+    },
+    {
+      "label": "soccer_brazil_campeonato:double_chance",
       "error": "Markets not supported by this endpoint: double_chance",
       "statusCode": 422
     },
@@ -3427,5 +3427,5 @@
   },
   "skipped": false,
   "skipReason": null,
-  "completedAt": "2026-07-20T02:16:49.210Z"
+  "completedAt": "2026-07-20T02:27:31.506Z"
 }
