@@ -1,6 +1,6 @@
 {
   "version": "v195",
-  "updated": "2026-07-21T20:11:38.614Z",
+  "updated": "2026-07-21T21:14:24.785Z",
   "summary": {
     "fixtures": 300,
     "qualified": 5,
@@ -4188,7 +4188,7 @@
       "alternatives": [
         {
           "market": "Home Team Over 0.5 Goals",
-          "support": 0.41,
+          "support": 0.47,
           "engines": [
             "Trend"
           ]
@@ -5599,36 +5599,6 @@
       "independence": 0
     },
     {
-      "id": 1566698,
-      "date": "2026-07-21",
-      "home": "DJK Bamberg",
-      "away": "Kornburg",
-      "league": "Oberliga - Bayern Nord",
-      "version": "v195",
-      "bet": false,
-      "market": "No Bet",
-      "score": 0,
-      "reason": "No engine produced a qualified candidate.",
-      "supporters": [],
-      "conflictIndex": 0,
-      "independence": 0
-    },
-    {
-      "id": 1566700,
-      "date": "2026-07-21",
-      "home": "Neudrossenfeld",
-      "away": "Fortuna Regensburg",
-      "league": "Oberliga - Bayern Nord",
-      "version": "v195",
-      "bet": false,
-      "market": "No Bet",
-      "score": 0,
-      "reason": "No engine produced a qualified candidate.",
-      "supporters": [],
-      "conflictIndex": 0,
-      "independence": 0
-    },
-    {
       "id": 1566717,
       "date": "2026-07-21",
       "home": "Großbardorf",
@@ -5723,6 +5693,49 @@
       "supporters": [],
       "conflictIndex": 0,
       "independence": 0
+    },
+    {
+      "id": 1543952,
+      "date": "2026-07-21",
+      "home": "Athletico PR U17",
+      "away": "Fortaleza U17",
+      "league": "Brasileiro U17",
+      "version": "v195",
+      "bet": false,
+      "market": "No Bet",
+      "candidate": "Away Team Over 0.5 Goals",
+      "score": 75.3,
+      "support": 0.42,
+      "supporters": [
+        "Trend"
+      ],
+      "independence": 1,
+      "exactSupport": 1,
+      "conflictIndex": 0,
+      "alternatives": [],
+      "reason": "Consensus rejected: support, independence or conflict threshold failed."
+    },
+    {
+      "id": 1543954,
+      "date": "2026-07-21",
+      "home": "Corinthians U17",
+      "away": "Internacional U17",
+      "league": "Brasileiro U17",
+      "version": "v195",
+      "bet": false,
+      "market": "No Bet",
+      "candidate": "Home Team Over 0.5 Goals",
+      "score": 80.2,
+      "support": 1.25,
+      "supporters": [
+        "Trend",
+        "League Bias"
+      ],
+      "independence": 2,
+      "exactSupport": 2,
+      "conflictIndex": 0,
+      "alternatives": [],
+      "reason": "Consensus rejected: support, independence or conflict threshold failed."
     }
   ]
 }
