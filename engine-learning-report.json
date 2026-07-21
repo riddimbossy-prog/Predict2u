@@ -1,10 +1,10 @@
 {
   "version": "v193",
-  "updated": "2026-07-21T19:06:42.710Z",
+  "updated": "2026-07-21T20:11:35.095Z",
   "summary": {
-    "settledFixtures": 132,
-    "settledDecisions": 281,
-    "reviewedLosses": 47,
+    "settledFixtures": 133,
+    "settledDecisions": 282,
+    "reviewedLosses": 48,
     "teamProfiles": 70,
     "leagueProfiles": 14,
     "matchupProfiles": 36,
@@ -19,7 +19,7 @@
   "commonMissCauses": [
     {
       "cause": "INPUT_COVERAGE_GAP",
-      "count": 47
+      "count": 48
     },
     {
       "cause": "GOAL_SPIKE",
@@ -27,7 +27,7 @@
     },
     {
       "cause": "RESULT_DIRECTION_MISS",
-      "count": 10
+      "count": 11
     },
     {
       "cause": "BOTH_ATTACKS_BROKE_SUPPRESSION",
@@ -47,6 +47,19 @@
     }
   ],
   "recentLossReviews": [
+    {
+      "matchDate": "2026-07-21",
+      "home": "Swansea",
+      "away": "VfL Bochum",
+      "league": "Friendlies Clubs",
+      "engine": "League Bias",
+      "market": "Home Team Over 0.5 Goals",
+      "score": "0-2",
+      "causes": [
+        "RESULT_DIRECTION_MISS",
+        "INPUT_COVERAGE_GAP"
+      ]
+    },
     {
       "matchDate": "2026-07-20",
       "home": "Independiente del Valle",
@@ -416,19 +429,6 @@
       "score": "0-1",
       "causes": [
         "TEMPO_COLLAPSE",
-        "INPUT_COVERAGE_GAP"
-      ]
-    },
-    {
-      "matchDate": "2026-07-02",
-      "home": "Birmingham Legion II",
-      "away": "Columbus United",
-      "league": "USL League Two",
-      "engine": "Prime",
-      "market": "BTTS No",
-      "score": "1-1",
-      "causes": [
-        "BOTH_ATTACKS_BROKE_SUPPRESSION",
         "INPUT_COVERAGE_GAP"
       ]
     }

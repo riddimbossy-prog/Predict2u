@@ -1,7 +1,7 @@
 {
   "version": "v193",
   "schemaVersion": 1,
-  "updated": "2026-07-21T19:06:42.710Z",
+  "updated": "2026-07-21T20:11:35.095Z",
   "minimumSamples": {
     "teamFavorite": 5,
     "teamUnderdog": 5,
@@ -12,10 +12,10 @@
   },
   "decayHalfLifeDays": 120,
   "summary": {
-    "settledFixtures": 132,
-    "settledDecisions": 281,
-    "reviewedLosses": 47,
-    "attachedUpcoming": 2364,
+    "settledFixtures": 133,
+    "settledDecisions": 282,
+    "reviewedLosses": 48,
+    "attachedUpcoming": 2309,
     "highRiskUpcoming": 0,
     "stableUpcoming": 0
   },
@@ -4476,7 +4476,7 @@
           "mid": 0.6667,
           "upper": 0.8794
         },
-        "decayedWeight": 8.63
+        "decayedWeight": 8.62
       },
       "bands": {
         "1.61-1.85": {
@@ -4631,7 +4631,7 @@
           "mid": 0.5,
           "upper": 0.8124
         },
-        "decayedWeight": 5.74
+        "decayedWeight": 5.73
       },
       "bands": {
         "1.86-2.25": {
@@ -4653,7 +4653,7 @@
             "mid": 0.5,
             "upper": 0.8124
           },
-          "decayedWeight": 5.74
+          "decayedWeight": 5.73
         }
       },
       "homeFavorites": {
@@ -6962,7 +6962,7 @@
         "mid": 0.5,
         "upper": 0.732
       },
-      "decayedWeight": 13.27
+      "decayedWeight": 13.26
     },
     "1.01-1.35": {
       "sample": 7,
@@ -8948,17 +8948,17 @@
       "hardVeto": false
     },
     "*|League Bias|Home Team Over 0.5 Goals|unknown|other": {
-      "sample": 11,
+      "sample": 12,
       "wins": 11,
-      "losses": 0,
-      "winRate": 1,
-      "lossRate": 0,
+      "losses": 1,
+      "winRate": 0.9167,
+      "lossRate": 0.0833,
       "wilson": {
-        "lower": 0.7412,
-        "mid": 1,
-        "upper": 1
+        "lower": 0.6461,
+        "mid": 0.9167,
+        "upper": 0.9851
       },
-      "adjustment": 0,
+      "adjustment": 2,
       "hardVeto": false
     },
     "usl league two|Trend|Away Team Over 0.5 Goals|unknown|other": {
@@ -9760,15 +9760,15 @@
       "hardVeto": false
     },
     "friendlies clubs|League Bias|Home Team Over 0.5 Goals|unknown|other": {
-      "sample": 4,
+      "sample": 5,
       "wins": 4,
-      "losses": 0,
-      "winRate": 1,
-      "lossRate": 0,
+      "losses": 1,
+      "winRate": 0.8,
+      "lossRate": 0.2,
       "wilson": {
-        "lower": 0.5101,
-        "mid": 1,
-        "upper": 1
+        "lower": 0.3755,
+        "mid": 0.8,
+        "upper": 0.9638
       },
       "adjustment": 0,
       "hardVeto": false
@@ -9943,6 +9943,19 @@
     }
   },
   "lossReviews": [
+    {
+      "matchDate": "2026-07-21",
+      "home": "Swansea",
+      "away": "VfL Bochum",
+      "league": "Friendlies Clubs",
+      "engine": "League Bias",
+      "market": "Home Team Over 0.5 Goals",
+      "score": "0-2",
+      "causes": [
+        "RESULT_DIRECTION_MISS",
+        "INPUT_COVERAGE_GAP"
+      ]
+    },
     {
       "matchDate": "2026-07-20",
       "home": "Independiente del Valle",
@@ -10552,8 +10565,8 @@
   ],
   "causeCounts": {
     "TEMPO_COLLAPSE": 4,
-    "INPUT_COVERAGE_GAP": 47,
-    "RESULT_DIRECTION_MISS": 10,
+    "INPUT_COVERAGE_GAP": 48,
+    "RESULT_DIRECTION_MISS": 11,
     "BOTH_ATTACKS_BROKE_SUPPRESSION": 5,
     "GOAL_SPIKE": 17,
     "DRAW_TRAP": 5,
