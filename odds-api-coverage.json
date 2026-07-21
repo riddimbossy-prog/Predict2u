@@ -1,6 +1,6 @@
 {
   "version": "v251",
-  "generatedAt": "2026-07-21T12:32:57.283Z",
+  "generatedAt": "2026-07-21T12:46:20.044Z",
   "provider": "The Odds API v4",
   "keyPresent": true,
   "regions": "uk",
@@ -334,14 +334,6 @@
       "sportTitle": "MLS",
       "score": 1,
       "matches": 30
-    },
-    {
-      "league": "Premier League",
-      "country": "Bhutan",
-      "sportKey": "soccer_epl",
-      "sportTitle": "EPL",
-      "score": 0.987,
-      "matches": 2
     },
     {
       "league": "Regionalliga - Bayern",
@@ -2500,27 +2492,27 @@
       "market": "double_chance"
     },
     {
-      "sportKey": "soccer_korea_kleague1",
+      "sportKey": "soccer_epl",
       "market": "btts"
     },
     {
-      "sportKey": "soccer_korea_kleague1",
+      "sportKey": "soccer_epl",
       "market": "draw_no_bet"
     },
     {
-      "sportKey": "soccer_korea_kleague1",
+      "sportKey": "soccer_epl",
       "market": "double_chance"
     },
     {
-      "sportKey": "soccer_epl",
+      "sportKey": "soccer_korea_kleague1",
       "market": "btts"
     },
     {
-      "sportKey": "soccer_epl",
+      "sportKey": "soccer_korea_kleague1",
       "market": "draw_no_bet"
     },
     {
-      "sportKey": "soccer_epl",
+      "sportKey": "soccer_korea_kleague1",
       "market": "double_chance"
     },
     {
@@ -2815,31 +2807,6 @@
       "statusCode": 422
     },
     {
-      "label": "soccer_korea_kleague1:base-combined",
-      "error": "Markets not supported by this endpoint: btts, double_chance, draw_no_bet",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_korea_kleague1:base-core",
-      "error": "Invalid commenceTimeFrom parameter. The format must be YYYY-MM-DDTHH:MM:SSZ, for example 2020-11-24T16:05:00Z",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_korea_kleague1:btts",
-      "error": "Markets not supported by this endpoint: btts",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_korea_kleague1:draw_no_bet",
-      "error": "Markets not supported by this endpoint: draw_no_bet",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_korea_kleague1:double_chance",
-      "error": "Markets not supported by this endpoint: double_chance",
-      "statusCode": 422
-    },
-    {
       "label": "soccer_epl:base-combined",
       "error": "Markets not supported by this endpoint: btts, double_chance, draw_no_bet",
       "statusCode": 422
@@ -2861,6 +2828,31 @@
     },
     {
       "label": "soccer_epl:double_chance",
+      "error": "Markets not supported by this endpoint: double_chance",
+      "statusCode": 422
+    },
+    {
+      "label": "soccer_korea_kleague1:base-combined",
+      "error": "Markets not supported by this endpoint: btts, double_chance, draw_no_bet",
+      "statusCode": 422
+    },
+    {
+      "label": "soccer_korea_kleague1:base-core",
+      "error": "Invalid commenceTimeFrom parameter. The format must be YYYY-MM-DDTHH:MM:SSZ, for example 2020-11-24T16:05:00Z",
+      "statusCode": 422
+    },
+    {
+      "label": "soccer_korea_kleague1:btts",
+      "error": "Markets not supported by this endpoint: btts",
+      "statusCode": 422
+    },
+    {
+      "label": "soccer_korea_kleague1:draw_no_bet",
+      "error": "Markets not supported by this endpoint: draw_no_bet",
+      "statusCode": 422
+    },
+    {
+      "label": "soccer_korea_kleague1:double_chance",
       "error": "Markets not supported by this endpoint: double_chance",
       "statusCode": 422
     },
@@ -3422,5 +3414,5 @@
   },
   "skipped": false,
   "skipReason": null,
-  "completedAt": "2026-07-21T12:33:02.660Z"
+  "completedAt": "2026-07-21T12:46:30.341Z"
 }
