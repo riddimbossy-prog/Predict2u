@@ -1,6 +1,6 @@
 {
   "version": "v195",
-  "updated": "2026-07-21T15:51:48.016Z",
+  "updated": "2026-07-21T16:56:11.750Z",
   "summary": {
     "fixtures": 300,
     "qualified": 5,
@@ -4149,6 +4149,15 @@
       "conflictIndex": 0,
       "alternatives": [
         {
+          "market": "Double Chance X2",
+          "support": 0.77,
+          "engines": [
+            "PurePPG Ultra",
+            "PurePPG Elite",
+            "PurePPG Apex"
+          ]
+        },
+        {
           "market": "First Half Over 0.5",
           "support": 0.58,
           "engines": [
@@ -4188,37 +4197,28 @@
       "version": "v195",
       "bet": false,
       "market": "No Bet",
-      "candidate": "Away Win",
-      "score": 76.8,
-      "support": 0.81,
+      "candidate": "Second Half Over 0.5",
+      "score": 76.2,
+      "support": 0.65,
       "supporters": [
-        "PurePPG Normal",
-        "PurePPG Strict"
+        "Halves"
       ],
       "independence": 1,
-      "exactSupport": 2,
+      "exactSupport": 1,
       "conflictIndex": 0,
       "alternatives": [
         {
-          "market": "Double Chance X2",
-          "support": 0.77,
+          "market": "Home Team Over 0.5 Goals",
+          "support": 0.38,
           "engines": [
-            "PurePPG Ultra",
-            "PurePPG Apex"
+            "League Bias"
           ]
         },
         {
-          "market": "Away DNB",
-          "support": 0.72,
+          "market": "Away Team Over 0.5 Goals",
+          "support": 0.33,
           "engines": [
-            "PurePPG Elite"
-          ]
-        },
-        {
-          "market": "Second Half Over 0.5",
-          "support": 0.65,
-          "engines": [
-            "Halves"
+            "Trend"
           ]
         }
       ],
@@ -4275,11 +4275,17 @@
       "version": "v195",
       "bet": false,
       "market": "No Bet",
-      "score": 0,
-      "reason": "No engine produced a qualified candidate.",
-      "supporters": [],
+      "candidate": "Away Team Over 0.5 Goals",
+      "score": 75,
+      "support": 0.34,
+      "supporters": [
+        "League Bias"
+      ],
+      "independence": 1,
+      "exactSupport": 1,
       "conflictIndex": 0,
-      "independence": 0
+      "alternatives": [],
+      "reason": "Consensus rejected: support, independence or conflict threshold failed."
     },
     {
       "id": 1548006,
@@ -4756,6 +4762,21 @@
       "date": "2026-07-20",
       "home": "Mohammedan",
       "away": "Police",
+      "league": "Calcutta Premier Division",
+      "version": "v195",
+      "bet": false,
+      "market": "No Bet",
+      "score": 0,
+      "reason": "No engine produced a qualified candidate.",
+      "supporters": [],
+      "conflictIndex": 0,
+      "independence": 0
+    },
+    {
+      "id": 1595186,
+      "date": "2026-07-20",
+      "home": "Coal India",
+      "away": "Aryan",
       "league": "Calcutta Premier Division",
       "version": "v195",
       "bet": false,
@@ -5385,21 +5406,6 @@
       "independence": 0
     },
     {
-      "id": 1548008,
-      "date": "2026-07-21",
-      "home": "Chelsea U21",
-      "away": "Cardiff City U21",
-      "league": "Friendlies Clubs",
-      "version": "v195",
-      "bet": false,
-      "market": "No Bet",
-      "score": 0,
-      "reason": "No engine produced a qualified candidate.",
-      "supporters": [],
-      "conflictIndex": 0,
-      "independence": 0
-    },
-    {
       "id": 1567691,
       "date": "2026-07-21",
       "home": "RED Star FC 93",
@@ -5413,193 +5419,6 @@
       "supporters": [],
       "conflictIndex": 0,
       "independence": 0
-    },
-    {
-      "id": 1591891,
-      "date": "2026-07-21",
-      "home": "Hertha BSC",
-      "away": "Mamelodi Sundowns",
-      "league": "Friendlies Clubs",
-      "version": "v195",
-      "bet": false,
-      "market": "No Bet",
-      "candidate": "Over 1.5 Goals",
-      "score": 75.5,
-      "support": 0.47,
-      "supporters": [
-        "League Bias"
-      ],
-      "independence": 1,
-      "exactSupport": 1,
-      "conflictIndex": 0,
-      "alternatives": [],
-      "reason": "Consensus rejected: support, independence or conflict threshold failed."
-    },
-    {
-      "id": 1592788,
-      "date": "2026-07-21",
-      "home": "Cruz Azul U21",
-      "away": "Puebla U21",
-      "league": "Liga MX U21",
-      "version": "v195",
-      "bet": false,
-      "market": "No Bet",
-      "score": 0,
-      "reason": "No engine produced a qualified candidate.",
-      "supporters": [],
-      "conflictIndex": 0,
-      "independence": 0
-    },
-    {
-      "id": 1592789,
-      "date": "2026-07-21",
-      "home": "Toluca U21",
-      "away": "UNAM Pumas U21",
-      "league": "Liga MX U21",
-      "version": "v195",
-      "bet": false,
-      "market": "No Bet",
-      "score": 0,
-      "reason": "No engine produced a qualified candidate.",
-      "supporters": [],
-      "conflictIndex": 0,
-      "independence": 0
-    },
-    {
-      "id": 1516065,
-      "date": "2026-07-21",
-      "home": "Buxoro",
-      "away": "Bunyodkor",
-      "league": "Super League",
-      "version": "v195",
-      "bet": false,
-      "market": "No Bet",
-      "candidate": "Under 3.5 Goals",
-      "score": 76,
-      "support": 0.6,
-      "supporters": [
-        "League Bias"
-      ],
-      "independence": 1,
-      "exactSupport": 1,
-      "conflictIndex": 0,
-      "alternatives": [],
-      "reason": "Consensus rejected: support, independence or conflict threshold failed."
-    },
-    {
-      "id": 1516070,
-      "date": "2026-07-21",
-      "home": "Pakhtakor",
-      "away": "Xorazm",
-      "league": "Super League",
-      "version": "v195",
-      "bet": false,
-      "market": "No Bet",
-      "candidate": "Home Win",
-      "score": 76.5,
-      "support": 0.71,
-      "supporters": [
-        "PurePPG Normal"
-      ],
-      "independence": 1,
-      "exactSupport": 1,
-      "conflictIndex": 0,
-      "alternatives": [
-        {
-          "market": "Under 3.5 Goals",
-          "support": 0.5,
-          "engines": [
-            "League Bias"
-          ]
-        },
-        {
-          "market": "Home Win Either Half",
-          "support": 0.41,
-          "engines": [
-            "Halves"
-          ]
-        }
-      ],
-      "reason": "Consensus rejected: support, independence or conflict threshold failed."
-    },
-    {
-      "id": 1516071,
-      "date": "2026-07-21",
-      "home": "Sogdiana",
-      "away": "Neftchi",
-      "league": "Super League",
-      "version": "v195",
-      "bet": false,
-      "market": "No Bet",
-      "candidate": "Second Half Over 0.5",
-      "score": 76.5,
-      "support": 0.72,
-      "supporters": [
-        "Halves"
-      ],
-      "independence": 1,
-      "exactSupport": 1,
-      "conflictIndex": 0,
-      "alternatives": [
-        {
-          "market": "Under 3.5 Goals",
-          "support": 0.47,
-          "engines": [
-            "League Bias"
-          ]
-        },
-        {
-          "market": "Double Chance X2",
-          "support": 0.4,
-          "engines": [
-            "Trend"
-          ]
-        }
-      ],
-      "reason": "Consensus rejected: support, independence or conflict threshold failed."
-    },
-    {
-      "id": 1546419,
-      "date": "2026-07-21",
-      "home": "Vålerenga U19",
-      "away": "Brann U19",
-      "league": "Nasjonal U19 Champions League",
-      "version": "v195",
-      "bet": false,
-      "market": "No Bet",
-      "candidate": "Over 1.5 Goals",
-      "score": 79.5,
-      "support": 1.07,
-      "supporters": [
-        "Trend",
-        "League Bias"
-      ],
-      "independence": 2,
-      "exactSupport": 2,
-      "conflictIndex": 0,
-      "alternatives": [],
-      "reason": "Consensus rejected: support, independence or conflict threshold failed."
-    },
-    {
-      "id": 1598493,
-      "date": "2026-07-21",
-      "home": "Brabrand",
-      "away": "VSK Århus",
-      "league": "Friendlies Clubs",
-      "version": "v195",
-      "bet": false,
-      "market": "No Bet",
-      "candidate": "Home Team Over 0.5 Goals",
-      "score": 75.8,
-      "support": 0.56,
-      "supporters": [
-        "League Bias"
-      ],
-      "independence": 1,
-      "exactSupport": 1,
-      "conflictIndex": 0,
-      "alternatives": [],
-      "reason": "Consensus rejected: support, independence or conflict threshold failed."
     },
     {
       "id": 1584912,
@@ -5760,6 +5579,131 @@
       "home": "Mjallby AIF",
       "away": "Lincoln Red Imps FC",
       "league": "UEFA Champions League",
+      "version": "v195",
+      "bet": false,
+      "market": "No Bet",
+      "score": 0,
+      "reason": "No engine produced a qualified candidate.",
+      "supporters": [],
+      "conflictIndex": 0,
+      "independence": 0
+    },
+    {
+      "id": 1589419,
+      "date": "2026-07-21",
+      "home": "Sabah FA",
+      "away": "KuPS",
+      "league": "UEFA Champions League",
+      "version": "v195",
+      "bet": false,
+      "market": "No Bet",
+      "candidate": "Over 1.5 Goals",
+      "score": 75.8,
+      "support": 0.55,
+      "supporters": [
+        "League Bias"
+      ],
+      "independence": 1,
+      "exactSupport": 1,
+      "conflictIndex": 0,
+      "alternatives": [],
+      "reason": "Consensus rejected: support, independence or conflict threshold failed."
+    },
+    {
+      "id": 1557747,
+      "date": "2026-07-21",
+      "home": "Kompanii Marjamaa",
+      "away": "Generation Tallinn",
+      "league": "Cup",
+      "version": "v195",
+      "bet": false,
+      "market": "No Bet",
+      "score": 0,
+      "reason": "No engine produced a qualified candidate.",
+      "supporters": [],
+      "conflictIndex": 0,
+      "independence": 0
+    },
+    {
+      "id": 1550594,
+      "date": "2026-07-21",
+      "home": "VfR Aalen",
+      "away": "SG Sonnenhof Grossaspach",
+      "league": "Friendlies Clubs",
+      "version": "v195",
+      "bet": false,
+      "market": "No Bet",
+      "candidate": "Over 1.5 Goals",
+      "score": 79.2,
+      "support": 1.01,
+      "supporters": [
+        "Trend",
+        "League Bias"
+      ],
+      "independence": 2,
+      "exactSupport": 2,
+      "conflictIndex": 0,
+      "alternatives": [],
+      "reason": "Consensus rejected: support, independence or conflict threshold failed."
+    },
+    {
+      "id": 1584913,
+      "date": "2026-07-21",
+      "home": "Hørsholm-Usserød",
+      "away": "FC Nordsjaelland",
+      "league": "Friendlies Clubs",
+      "version": "v195",
+      "bet": false,
+      "market": "No Bet",
+      "candidate": "Home Team Over 0.5 Goals",
+      "score": 78,
+      "support": 0.71,
+      "supporters": [
+        "Trend",
+        "League Bias"
+      ],
+      "independence": 2,
+      "exactSupport": 2,
+      "conflictIndex": 0,
+      "alternatives": [],
+      "reason": "Consensus rejected: support, independence or conflict threshold failed."
+    },
+    {
+      "id": 1566697,
+      "date": "2026-07-21",
+      "home": "Eintracht Bamberg",
+      "away": "Weiden",
+      "league": "Oberliga - Bayern Nord",
+      "version": "v195",
+      "bet": false,
+      "market": "No Bet",
+      "score": 0,
+      "reason": "No engine produced a qualified candidate.",
+      "supporters": [],
+      "conflictIndex": 0,
+      "independence": 0
+    },
+    {
+      "id": 1566999,
+      "date": "2026-07-21",
+      "home": "Kottern",
+      "away": "Schwabmünchen",
+      "league": "Oberliga - Bayern Süd",
+      "version": "v195",
+      "bet": false,
+      "market": "No Bet",
+      "score": 0,
+      "reason": "No engine produced a qualified candidate.",
+      "supporters": [],
+      "conflictIndex": 0,
+      "independence": 0
+    },
+    {
+      "id": 1567003,
+      "date": "2026-07-21",
+      "home": "Pipinsried",
+      "away": "Heimstetten",
+      "league": "Oberliga - Bayern Süd",
       "version": "v195",
       "bet": false,
       "market": "No Bet",

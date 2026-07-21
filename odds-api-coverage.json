@@ -1,6 +1,6 @@
 {
   "version": "v251",
-  "generatedAt": "2026-07-21T16:56:31.640Z",
+  "generatedAt": "2026-07-21T16:51:27.244Z",
   "provider": "The Odds API v4",
   "keyPresent": true,
   "regions": "uk",
@@ -326,6 +326,14 @@
       "sportTitle": "EPL",
       "score": 0.987,
       "matches": 2
+    },
+    {
+      "league": "Premier League",
+      "country": "Kyrgyzstan",
+      "sportKey": "soccer_epl",
+      "sportTitle": "EPL",
+      "score": 0.987,
+      "matches": 8
     },
     {
       "league": "Regionalliga - Bayern",
@@ -968,7 +976,7 @@
       "matches": 1
     }
   ],
-  "matchesConsidered": 2097,
+  "matchesConsidered": 2112,
   "matchesMatched": 0,
   "matchesUpdated": 0,
   "fieldsFilled": 0,
@@ -1456,6 +1464,12 @@
       "country": "Serbia",
       "reason": "No matching soccer sport key",
       "bestScore": 0.111
+    },
+    {
+      "league": "Segunda División",
+      "country": "Venezuela",
+      "reason": "No matching soccer sport key",
+      "bestScore": 0.143
     },
     {
       "league": "Virsliga",
@@ -2470,12 +2484,6 @@
       "home": "Tampere United",
       "away": "Inter Turku II",
       "reason": "No event/team match"
-    },
-    {
-      "league": "Ykkönen",
-      "home": "Rops",
-      "away": "JJK",
-      "reason": "No event/team match"
     }
   ],
   "unsupportedMarkets": [
@@ -3414,5 +3422,5 @@
   },
   "skipped": false,
   "skipReason": null,
-  "completedAt": "2026-07-21T16:56:37.554Z"
+  "completedAt": "2026-07-21T16:51:36.333Z"
 }
