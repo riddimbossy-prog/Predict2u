@@ -1,7 +1,7 @@
 {
   "version": "v193",
   "schemaVersion": 1,
-  "updated": "2026-07-22T21:41:03.750Z",
+  "updated": "2026-07-22T22:44:12.575Z",
   "minimumSamples": {
     "teamFavorite": 5,
     "teamUnderdog": 5,
@@ -12,10 +12,10 @@
   },
   "decayHalfLifeDays": 120,
   "summary": {
-    "settledFixtures": 145,
-    "settledDecisions": 297,
-    "reviewedLosses": 51,
-    "attachedUpcoming": 2269,
+    "settledFixtures": 148,
+    "settledDecisions": 301,
+    "reviewedLosses": 53,
+    "attachedUpcoming": 2262,
     "highRiskUpcoming": 0,
     "stableUpcoming": 0
   },
@@ -4540,7 +4540,7 @@
             "mid": 1,
             "upper": 1
           },
-          "decayedWeight": 1.91
+          "decayedWeight": 1.9
         },
         "1.86-2.25": {
           "sample": 1,
@@ -5748,7 +5748,7 @@
           "mid": 0.5,
           "upper": 0.9055
         },
-        "decayedWeight": 1.91
+        "decayedWeight": 1.9
       },
       "bands": {
         "1.61-1.85": {
@@ -7004,7 +7004,7 @@
         "mid": 0.7143,
         "upper": 0.9178
       },
-      "decayedWeight": 6.71
+      "decayedWeight": 6.7
     },
     "1.61-1.85": {
       "sample": 8,
@@ -7025,7 +7025,7 @@
         "mid": 0.5,
         "upper": 0.7848
       },
-      "decayedWeight": 7.62
+      "decayedWeight": 7.61
     }
   },
   "contexts": {
@@ -8710,15 +8710,15 @@
       "hardVeto": false
     },
     "*|Halves|Second Half Over 0.5|unknown|other": {
-      "sample": 27,
+      "sample": 28,
       "wins": 23,
-      "losses": 4,
-      "winRate": 0.8519,
-      "lossRate": 0.1481,
+      "losses": 5,
+      "winRate": 0.8214,
+      "lossRate": 0.1786,
       "wilson": {
-        "lower": 0.6752,
-        "mid": 0.8519,
-        "upper": 0.9408
+        "lower": 0.6441,
+        "mid": 0.8214,
+        "upper": 0.9212
       },
       "adjustment": 2,
       "hardVeto": false
@@ -8948,15 +8948,15 @@
       "hardVeto": false
     },
     "*|League Bias|Home Team Over 0.5 Goals|unknown|other": {
-      "sample": 20,
-      "wins": 16,
-      "losses": 4,
-      "winRate": 0.8,
-      "lossRate": 0.2,
+      "sample": 22,
+      "wins": 17,
+      "losses": 5,
+      "winRate": 0.7727,
+      "lossRate": 0.2273,
       "wilson": {
-        "lower": 0.584,
-        "mid": 0.8,
-        "upper": 0.9193
+        "lower": 0.5656,
+        "mid": 0.7727,
+        "upper": 0.8988
       },
       "adjustment": 0,
       "hardVeto": false
@@ -9970,6 +9970,76 @@
       "hardVeto": false
     },
     "brasileiro u17|League Bias|Home Team Over 0.5 Goals|unknown|other": {
+      "sample": 3,
+      "wins": 2,
+      "losses": 1,
+      "winRate": 0.6667,
+      "lossRate": 0.3333,
+      "wilson": {
+        "lower": 0.2077,
+        "mid": 0.6667,
+        "upper": 0.9385
+      },
+      "adjustment": 0,
+      "hardVeto": false
+    },
+    "reserve league|League Bias|Under 3.5 Goals|unknown|other": {
+      "sample": 1,
+      "wins": 1,
+      "losses": 0,
+      "winRate": 1,
+      "lossRate": 0,
+      "wilson": {
+        "lower": 0.2065,
+        "mid": 1,
+        "upper": 1
+      },
+      "adjustment": 0,
+      "hardVeto": false
+    },
+    "brasileiro u17|Halves|Second Half Over 0.5|unknown|other": {
+      "sample": 1,
+      "wins": 0,
+      "losses": 1,
+      "winRate": 0,
+      "lossRate": 1,
+      "wilson": {
+        "lower": 0,
+        "mid": 0,
+        "upper": 0.7935
+      },
+      "adjustment": 0,
+      "hardVeto": false
+    },
+    "brasileiro u17|Trend|Double Chance 1X|unknown|other": {
+      "sample": 1,
+      "wins": 1,
+      "losses": 0,
+      "winRate": 1,
+      "lossRate": 0,
+      "wilson": {
+        "lower": 0.2065,
+        "mid": 1,
+        "upper": 1
+      },
+      "adjustment": 0,
+      "hardVeto": false
+    },
+    "*|Trend|Double Chance 1X|unknown|other": {
+      "sample": 1,
+      "wins": 1,
+      "losses": 0,
+      "winRate": 1,
+      "lossRate": 0,
+      "wilson": {
+        "lower": 0.2065,
+        "mid": 1,
+        "upper": 1
+      },
+      "adjustment": 0,
+      "hardVeto": false
+    },
+    "catarinense 2|Halves|Second Half Over 0.5|unknown|other": {
       "sample": 1,
       "wins": 1,
       "losses": 0,
@@ -10050,6 +10120,31 @@
       "score": "0-1",
       "causes": [
         "RESULT_DIRECTION_MISS",
+        "INPUT_COVERAGE_GAP"
+      ]
+    },
+    {
+      "matchDate": "2026-07-22",
+      "home": "America MG U17",
+      "away": "Botafogo U17",
+      "league": "Brasileiro U17",
+      "engine": "Halves",
+      "market": "Second Half Over 0.5",
+      "score": "0-0",
+      "causes": [
+        "INPUT_COVERAGE_GAP"
+      ]
+    },
+    {
+      "matchDate": "2026-07-22",
+      "home": "Sao Paulo U17",
+      "away": "Atlético Mineiro U17",
+      "league": "Brasileiro U17",
+      "engine": "League Bias",
+      "market": "Home Team Over 0.5 Goals",
+      "score": "0-0",
+      "causes": [
+        "DRAW_TRAP",
         "INPUT_COVERAGE_GAP"
       ]
     },
@@ -10688,11 +10783,11 @@
   ],
   "causeCounts": {
     "TEMPO_COLLAPSE": 4,
-    "INPUT_COVERAGE_GAP": 51,
+    "INPUT_COVERAGE_GAP": 53,
     "RESULT_DIRECTION_MISS": 12,
     "BOTH_ATTACKS_BROKE_SUPPRESSION": 5,
     "GOAL_SPIKE": 17,
-    "DRAW_TRAP": 7,
+    "DRAW_TRAP": 8,
     "UNDERDOG_OVERREACH": 1
   }
 }

@@ -1,10 +1,10 @@
 {
   "version": "v193",
-  "updated": "2026-07-22T21:41:03.750Z",
+  "updated": "2026-07-22T22:44:12.575Z",
   "summary": {
-    "settledFixtures": 145,
-    "settledDecisions": 297,
-    "reviewedLosses": 51,
+    "settledFixtures": 148,
+    "settledDecisions": 301,
+    "reviewedLosses": 53,
     "teamProfiles": 70,
     "leagueProfiles": 14,
     "matchupProfiles": 36,
@@ -19,7 +19,7 @@
   "commonMissCauses": [
     {
       "cause": "INPUT_COVERAGE_GAP",
-      "count": 51
+      "count": 53
     },
     {
       "cause": "GOAL_SPIKE",
@@ -31,7 +31,7 @@
     },
     {
       "cause": "DRAW_TRAP",
-      "count": 7
+      "count": 8
     },
     {
       "cause": "BOTH_ATTACKS_BROKE_SUPPRESSION",
@@ -70,6 +70,31 @@
       "score": "0-1",
       "causes": [
         "RESULT_DIRECTION_MISS",
+        "INPUT_COVERAGE_GAP"
+      ]
+    },
+    {
+      "matchDate": "2026-07-22",
+      "home": "America MG U17",
+      "away": "Botafogo U17",
+      "league": "Brasileiro U17",
+      "engine": "Halves",
+      "market": "Second Half Over 0.5",
+      "score": "0-0",
+      "causes": [
+        "INPUT_COVERAGE_GAP"
+      ]
+    },
+    {
+      "matchDate": "2026-07-22",
+      "home": "Sao Paulo U17",
+      "away": "Atlético Mineiro U17",
+      "league": "Brasileiro U17",
+      "engine": "League Bias",
+      "market": "Home Team Over 0.5 Goals",
+      "score": "0-0",
+      "causes": [
+        "DRAW_TRAP",
         "INPUT_COVERAGE_GAP"
       ]
     },
@@ -403,32 +428,6 @@
       "score": "3-1",
       "causes": [
         "RESULT_DIRECTION_MISS",
-        "INPUT_COVERAGE_GAP"
-      ]
-    },
-    {
-      "matchDate": "2026-07-03",
-      "home": "AFC Ann Arbor",
-      "away": "Oakland County",
-      "league": "USL League Two",
-      "engine": "Prime",
-      "market": "Away DNB",
-      "score": "3-1",
-      "causes": [
-        "RESULT_DIRECTION_MISS",
-        "INPUT_COVERAGE_GAP"
-      ]
-    },
-    {
-      "matchDate": "2026-07-03",
-      "home": "AFC Ann Arbor",
-      "away": "Oakland County",
-      "league": "USL League Two",
-      "engine": "Prime",
-      "market": "BTTS No",
-      "score": "3-1",
-      "causes": [
-        "BOTH_ATTACKS_BROKE_SUPPRESSION",
         "INPUT_COVERAGE_GAP"
       ]
     }
