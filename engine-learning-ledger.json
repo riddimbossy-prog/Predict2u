@@ -1,7 +1,7 @@
 {
   "version": "v193",
   "schemaVersion": 1,
-  "updated": "2026-07-22T17:34:23.373Z",
+  "updated": "2026-07-22T18:37:43.164Z",
   "minimumSamples": {
     "teamFavorite": 5,
     "teamUnderdog": 5,
@@ -12,10 +12,10 @@
   },
   "decayHalfLifeDays": 120,
   "summary": {
-    "settledFixtures": 137,
-    "settledDecisions": 288,
+    "settledFixtures": 138,
+    "settledDecisions": 289,
     "reviewedLosses": 49,
-    "attachedUpcoming": 2345,
+    "attachedUpcoming": 2325,
     "highRiskUpcoming": 0,
     "stableUpcoming": 0
   },
@@ -4498,7 +4498,7 @@
             "mid": 0.4,
             "upper": 0.7693
           },
-          "decayedWeight": 4.77
+          "decayedWeight": 4.76
         },
         "1.36-1.60": {
           "sample": 1,
@@ -5020,7 +5020,7 @@
           "mid": 1,
           "upper": 1
         },
-        "decayedWeight": 1.94
+        "decayedWeight": 1.93
       },
       "bands": {
         "1.86-2.25": {
@@ -5085,7 +5085,7 @@
           "mid": 1,
           "upper": 1
         },
-        "decayedWeight": 1.94
+        "decayedWeight": 1.93
       },
       "awayFavorites": {
         "sample": 0,
@@ -6983,7 +6983,7 @@
         "mid": 1,
         "upper": 1
       },
-      "decayedWeight": 6.57
+      "decayedWeight": 6.56
     },
     "1.36-1.60": {
       "sample": 7,
@@ -8948,15 +8948,15 @@
       "hardVeto": false
     },
     "*|League Bias|Home Team Over 0.5 Goals|unknown|other": {
-      "sample": 14,
-      "wins": 12,
+      "sample": 15,
+      "wins": 13,
       "losses": 2,
-      "winRate": 0.8571,
-      "lossRate": 0.1429,
+      "winRate": 0.8667,
+      "lossRate": 0.1333,
       "wilson": {
-        "lower": 0.6006,
-        "mid": 0.8571,
-        "upper": 0.9599
+        "lower": 0.6212,
+        "mid": 0.8667,
+        "upper": 0.9626
       },
       "adjustment": 0,
       "hardVeto": false
@@ -9760,15 +9760,15 @@
       "hardVeto": false
     },
     "friendlies clubs|League Bias|Home Team Over 0.5 Goals|unknown|other": {
-      "sample": 6,
-      "wins": 4,
+      "sample": 7,
+      "wins": 5,
       "losses": 2,
-      "winRate": 0.6667,
-      "lossRate": 0.3333,
+      "winRate": 0.7143,
+      "lossRate": 0.2857,
       "wilson": {
-        "lower": 0.3,
-        "mid": 0.6667,
-        "upper": 0.9032
+        "lower": 0.3589,
+        "mid": 0.7143,
+        "upper": 0.9178
       },
       "adjustment": 0,
       "hardVeto": false
