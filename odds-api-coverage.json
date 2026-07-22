@@ -1,6 +1,6 @@
 {
   "version": "v251",
-  "generatedAt": "2026-07-22T13:57:50.441Z",
+  "generatedAt": "2026-07-22T14:17:39.937Z",
   "provider": "The Odds API v4",
   "keyPresent": true,
   "regions": "uk",
@@ -8,12 +8,12 @@
   "soccerSportsAvailable": 37,
   "sportMappings": [
     {
-      "league": "K League 1",
-      "country": "South-Korea",
-      "sportKey": "soccer_korea_kleague1",
-      "sportTitle": "K League 1",
-      "score": 0.695,
-      "matches": 9
+      "league": "Premier Soccer League",
+      "country": "Zimbabwe",
+      "sportKey": "soccer_epl",
+      "sportTitle": "EPL",
+      "score": 0.5,
+      "matches": 16
     },
     {
       "league": "UEFA Champions League Women",
@@ -21,15 +21,7 @@
       "sportKey": "soccer_uefa_champs_league_qualification",
       "sportTitle": "UEFA Champions League Qualification",
       "score": 0.375,
-      "matches": 7
-    },
-    {
-      "league": "Premier Soccer League",
-      "country": "Zimbabwe",
-      "sportKey": "soccer_epl",
-      "sportTitle": "EPL",
-      "score": 0.5,
-      "matches": 16
+      "matches": 6
     },
     {
       "league": "Cup",
@@ -632,6 +624,14 @@
       "matches": 8
     },
     {
+      "league": "K League 1",
+      "country": "South-Korea",
+      "sportKey": "soccer_korea_kleague1",
+      "sportTitle": "K League 1",
+      "score": 0.695,
+      "matches": 6
+    },
+    {
       "league": "2. Division - Group 1",
       "country": "Norway",
       "sportKey": "soccer_norway_eliteserien",
@@ -976,7 +976,7 @@
       "matches": 6
     }
   ],
-  "matchesConsidered": 2106,
+  "matchesConsidered": 2091,
   "matchesMatched": 0,
   "matchesUpdated": 0,
   "fieldsFilled": 0,
@@ -988,30 +988,6 @@
     {
       "league": "Friendlies Clubs",
       "country": "World",
-      "reason": "No matching soccer sport key",
-      "bestScore": 0
-    },
-    {
-      "league": "Australia Cup",
-      "country": "Australia",
-      "reason": "No matching soccer sport key",
-      "bestScore": 0.167
-    },
-    {
-      "league": "Capital Territory NPL",
-      "country": "Australia",
-      "reason": "No matching soccer sport key",
-      "bestScore": 0
-    },
-    {
-      "league": "Calcutta Premier Division",
-      "country": "India",
-      "reason": "No matching soccer sport key",
-      "bestScore": 0.222
-    },
-    {
-      "league": "Tasmania NPL",
-      "country": "Australia",
       "reason": "No matching soccer sport key",
       "bestScore": 0
     },
@@ -1074,6 +1050,12 @@
       "country": "Colombia",
       "reason": "No matching soccer sport key",
       "bestScore": 0.2
+    },
+    {
+      "league": "Calcutta Premier Division",
+      "country": "India",
+      "reason": "No matching soccer sport key",
+      "bestScore": 0.222
     },
     {
       "league": "1. Division",
@@ -1310,10 +1292,22 @@
       "bestScore": 0.25
     },
     {
+      "league": "Tasmania NPL",
+      "country": "Australia",
+      "reason": "No matching soccer sport key",
+      "bestScore": 0
+    },
+    {
       "league": "Tasmania Northern Championship",
       "country": "Australia",
       "reason": "No matching soccer sport key",
       "bestScore": 0.167
+    },
+    {
+      "league": "Capital Territory NPL",
+      "country": "Australia",
+      "reason": "No matching soccer sport key",
+      "bestScore": 0
     },
     {
       "league": "South Australia NPL",
@@ -1472,6 +1466,12 @@
       "bestScore": 0.143
     },
     {
+      "league": "Australia Cup",
+      "country": "Australia",
+      "reason": "No matching soccer sport key",
+      "bestScore": 0.167
+    },
+    {
       "league": "Virsliga",
       "country": "Latvia",
       "reason": "No matching soccer sport key",
@@ -1494,186 +1494,6 @@
       "country": "Faroe-Islands",
       "reason": "No matching soccer sport key",
       "bestScore": 0
-    },
-    {
-      "league": "K League 1",
-      "home": "Bucheon FC 1995",
-      "away": "FC Anyang",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "K League 1",
-      "home": "Gwangju FC",
-      "away": "Gimcheon Sangmu FC",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "K League 1",
-      "home": "FC Seoul",
-      "away": "Pohang Steelers",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "K League 1",
-      "home": "Gimcheon Sangmu FC",
-      "away": "Daejeon Citizen",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "K League 1",
-      "home": "Pohang Steelers",
-      "away": "Jeonbuk Motors",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "K League 1",
-      "home": "FC Anyang",
-      "away": "Gangwon FC",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "K League 1",
-      "home": "Gwangju FC",
-      "away": "Jeju United FC",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "K League 1",
-      "home": "Incheon United",
-      "away": "Bucheon FC 1995",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "K League 1",
-      "home": "FC Seoul",
-      "away": "Ulsan Hyundai FC",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "K League 2",
-      "home": "Gimhae City",
-      "away": "Cheongju",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "K League 2",
-      "home": "Seoul E-Land FC",
-      "away": "Cheonan City",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "K League 2",
-      "home": "Busan I Park",
-      "away": "Suwon Bluewings",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "K League 2",
-      "home": "Daegu FC",
-      "away": "Suwon City FC",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "K League 2",
-      "home": "Hwaseong",
-      "away": "Asan Mugunghwa",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "K League 2",
-      "home": "Jeonnam Dragons",
-      "away": "Gyeongnam FC",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "K League 2",
-      "home": "Gimpo Citizen",
-      "away": "Yongin City",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "K League 2",
-      "home": "Paju Citizen",
-      "away": "Ansan Greeners",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "UEFA Champions League Women",
-      "home": "Glentoran BU W",
-      "away": "Riga W",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "UEFA Champions League Women",
-      "home": "KÍ",
-      "away": "Ludogorets W",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "UEFA Champions League Women",
-      "home": "Mitrovica W",
-      "away": "Zimbru Chisinau W",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "UEFA Champions League Women",
-      "home": "PAOK W",
-      "away": "Hapoel Jerusalem W",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "UEFA Champions League Women",
-      "home": "Czarni Sosnowiec W",
-      "away": "Lusso W",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "UEFA Champions League Women",
-      "home": "Flora W",
-      "away": "Mgarr W",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "UEFA Champions League Women",
-      "home": "Pyunik W",
-      "away": "Wrexham W",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "UEFA Champions League",
-      "home": "KuPS",
-      "away": "Sabah FA",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "UEFA Champions League",
-      "home": "Lincoln Red Imps FC",
-      "away": "Mjallby AIF",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "UEFA Champions League",
-      "home": "Dinamo Zagreb",
-      "away": "FC Thun",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "UEFA Champions League",
-      "home": "Celje",
-      "away": "Egnatia Rrogozhinë",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "UEFA Champions League",
-      "home": "Heart Of Midlothian",
-      "away": "Sturm Graz",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "UEFA Champions League",
-      "home": "Shamrock Rovers",
-      "away": "Ararat-Armenia",
-      "reason": "No event/team match"
     },
     {
       "league": "Premier Soccer League",
@@ -2015,6 +1835,78 @@
       "league": "Premier League - Summer Series",
       "home": "Wrexham",
       "away": "Leeds",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "UEFA Champions League Women",
+      "home": "KÍ",
+      "away": "Ludogorets W",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "UEFA Champions League Women",
+      "home": "Mitrovica W",
+      "away": "Zimbru Chisinau W",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "UEFA Champions League Women",
+      "home": "PAOK W",
+      "away": "Hapoel Jerusalem W",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "UEFA Champions League Women",
+      "home": "Czarni Sosnowiec W",
+      "away": "Lusso W",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "UEFA Champions League Women",
+      "home": "Flora W",
+      "away": "Mgarr W",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "UEFA Champions League Women",
+      "home": "Pyunik W",
+      "away": "Wrexham W",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "UEFA Champions League",
+      "home": "KuPS",
+      "away": "Sabah FA",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "UEFA Champions League",
+      "home": "Lincoln Red Imps FC",
+      "away": "Mjallby AIF",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "UEFA Champions League",
+      "home": "Dinamo Zagreb",
+      "away": "FC Thun",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "UEFA Champions League",
+      "home": "Celje",
+      "away": "Egnatia Rrogozhinë",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "UEFA Champions League",
+      "home": "Heart Of Midlothian",
+      "away": "Sturm Graz",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "UEFA Champions League",
+      "home": "Shamrock Rovers",
+      "away": "Ararat-Armenia",
       "reason": "No event/team match"
     },
     {
@@ -2484,19 +2376,127 @@
       "home": "Tillmitsch",
       "away": "SKN ST. Polten",
       "reason": "No event/team match"
+    },
+    {
+      "league": "Cup",
+      "home": "Traiskirchen",
+      "away": "Bleiburg",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Cup",
+      "home": "Gurten",
+      "away": "FC BW Linz",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Cup",
+      "home": "Seekirchen",
+      "away": "Sturm Graz",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Cup",
+      "home": "Wals-Grünau",
+      "away": "Austria Salzburg",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Cup",
+      "home": "Fach-Donaufeld",
+      "away": "Grazer AK",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Cup",
+      "home": "Lustenau",
+      "away": "Kitzbühel",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Cup",
+      "home": "Wohnbau Dietach",
+      "away": "Bischofshofen",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Cup",
+      "home": "Hohenems",
+      "away": "WSPG Wels",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Cup",
+      "home": "Kalsdorf",
+      "away": "Lask Linz",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Cup",
+      "home": "Leonfelden",
+      "away": "Schwarz-Weiß Bregenz",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Cup",
+      "home": "Wacker Innsbruck",
+      "away": "SVG Reichenau",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Cup",
+      "home": "Oberwart",
+      "away": "Red Bull Salzburg",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Cup",
+      "home": "Wiener Viktoria",
+      "away": "Parndorf",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Cup",
+      "home": "Krems / Rehberg",
+      "away": "Austria Lustenau",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Cup",
+      "home": "Mattersburg SV 2020",
+      "away": "First Vienna",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Cup",
+      "home": "Treibach",
+      "away": "SV Kapfenberg",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Cup",
+      "home": "SK Vorwarts Steyr",
+      "away": "Kuchl",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Cup",
+      "home": "Schwaz",
+      "away": "Wallern / Marienkirchen",
+      "reason": "No event/team match"
     }
   ],
   "unsupportedMarkets": [
     {
-      "sportKey": "soccer_korea_kleague1",
+      "sportKey": "soccer_epl",
       "market": "btts"
     },
     {
-      "sportKey": "soccer_korea_kleague1",
+      "sportKey": "soccer_epl",
       "market": "draw_no_bet"
     },
     {
-      "sportKey": "soccer_korea_kleague1",
+      "sportKey": "soccer_epl",
       "market": "double_chance"
     },
     {
@@ -2509,18 +2509,6 @@
     },
     {
       "sportKey": "soccer_uefa_champs_league_qualification",
-      "market": "double_chance"
-    },
-    {
-      "sportKey": "soccer_epl",
-      "market": "btts"
-    },
-    {
-      "sportKey": "soccer_epl",
-      "market": "draw_no_bet"
-    },
-    {
-      "sportKey": "soccer_epl",
       "market": "double_chance"
     },
     {
@@ -2653,6 +2641,18 @@
     },
     {
       "sportKey": "soccer_russia_premier_league",
+      "market": "double_chance"
+    },
+    {
+      "sportKey": "soccer_korea_kleague1",
+      "market": "btts"
+    },
+    {
+      "sportKey": "soccer_korea_kleague1",
+      "market": "draw_no_bet"
+    },
+    {
+      "sportKey": "soccer_korea_kleague1",
       "market": "double_chance"
     },
     {
@@ -2802,27 +2802,27 @@
   ],
   "requestErrors": [
     {
-      "label": "soccer_korea_kleague1:base-combined",
+      "label": "soccer_epl:base-combined",
       "error": "Markets not supported by this endpoint: btts, double_chance, draw_no_bet",
       "statusCode": 422
     },
     {
-      "label": "soccer_korea_kleague1:base-core",
+      "label": "soccer_epl:base-core",
       "error": "Invalid commenceTimeFrom parameter. The format must be YYYY-MM-DDTHH:MM:SSZ, for example 2020-11-24T16:05:00Z",
       "statusCode": 422
     },
     {
-      "label": "soccer_korea_kleague1:btts",
+      "label": "soccer_epl:btts",
       "error": "Markets not supported by this endpoint: btts",
       "statusCode": 422
     },
     {
-      "label": "soccer_korea_kleague1:draw_no_bet",
+      "label": "soccer_epl:draw_no_bet",
       "error": "Markets not supported by this endpoint: draw_no_bet",
       "statusCode": 422
     },
     {
-      "label": "soccer_korea_kleague1:double_chance",
+      "label": "soccer_epl:double_chance",
       "error": "Markets not supported by this endpoint: double_chance",
       "statusCode": 422
     },
@@ -2848,31 +2848,6 @@
     },
     {
       "label": "soccer_uefa_champs_league_qualification:double_chance",
-      "error": "Markets not supported by this endpoint: double_chance",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_epl:base-combined",
-      "error": "Markets not supported by this endpoint: btts, double_chance, draw_no_bet",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_epl:base-core",
-      "error": "Invalid commenceTimeFrom parameter. The format must be YYYY-MM-DDTHH:MM:SSZ, for example 2020-11-24T16:05:00Z",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_epl:btts",
-      "error": "Markets not supported by this endpoint: btts",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_epl:draw_no_bet",
-      "error": "Markets not supported by this endpoint: draw_no_bet",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_epl:double_chance",
       "error": "Markets not supported by this endpoint: double_chance",
       "statusCode": 422
     },
@@ -3148,6 +3123,31 @@
     },
     {
       "label": "soccer_russia_premier_league:double_chance",
+      "error": "Markets not supported by this endpoint: double_chance",
+      "statusCode": 422
+    },
+    {
+      "label": "soccer_korea_kleague1:base-combined",
+      "error": "Markets not supported by this endpoint: btts, double_chance, draw_no_bet",
+      "statusCode": 422
+    },
+    {
+      "label": "soccer_korea_kleague1:base-core",
+      "error": "Invalid commenceTimeFrom parameter. The format must be YYYY-MM-DDTHH:MM:SSZ, for example 2020-11-24T16:05:00Z",
+      "statusCode": 422
+    },
+    {
+      "label": "soccer_korea_kleague1:btts",
+      "error": "Markets not supported by this endpoint: btts",
+      "statusCode": 422
+    },
+    {
+      "label": "soccer_korea_kleague1:draw_no_bet",
+      "error": "Markets not supported by this endpoint: draw_no_bet",
+      "statusCode": 422
+    },
+    {
+      "label": "soccer_korea_kleague1:double_chance",
       "error": "Markets not supported by this endpoint: double_chance",
       "statusCode": 422
     },
@@ -3459,5 +3459,5 @@
   },
   "skipped": false,
   "skipReason": null,
-  "completedAt": "2026-07-22T13:58:01.368Z"
+  "completedAt": "2026-07-22T14:17:56.523Z"
 }
