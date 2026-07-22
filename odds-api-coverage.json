@@ -1,20 +1,12 @@
 {
   "version": "v251",
-  "generatedAt": "2026-07-22T14:17:39.937Z",
+  "generatedAt": "2026-07-22T14:13:26.939Z",
   "provider": "The Odds API v4",
   "keyPresent": true,
   "regions": "uk",
   "sportsAvailable": 65,
   "soccerSportsAvailable": 37,
   "sportMappings": [
-    {
-      "league": "Premier Soccer League",
-      "country": "Zimbabwe",
-      "sportKey": "soccer_epl",
-      "sportTitle": "EPL",
-      "score": 0.5,
-      "matches": 16
-    },
     {
       "league": "UEFA Champions League Women",
       "country": "World",
@@ -976,7 +968,7 @@
       "matches": 6
     }
   ],
-  "matchesConsidered": 2091,
+  "matchesConsidered": 2092,
   "matchesMatched": 0,
   "matchesUpdated": 0,
   "fieldsFilled": 0,
@@ -1494,6 +1486,84 @@
       "country": "Faroe-Islands",
       "reason": "No matching soccer sport key",
       "bestScore": 0
+    },
+    {
+      "league": "UEFA Champions League Women",
+      "home": "Glentoran BU W",
+      "away": "Riga W",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "UEFA Champions League Women",
+      "home": "KÍ",
+      "away": "Ludogorets W",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "UEFA Champions League Women",
+      "home": "Mitrovica W",
+      "away": "Zimbru Chisinau W",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "UEFA Champions League Women",
+      "home": "PAOK W",
+      "away": "Hapoel Jerusalem W",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "UEFA Champions League Women",
+      "home": "Czarni Sosnowiec W",
+      "away": "Lusso W",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "UEFA Champions League Women",
+      "home": "Flora W",
+      "away": "Mgarr W",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "UEFA Champions League Women",
+      "home": "Pyunik W",
+      "away": "Wrexham W",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "UEFA Champions League",
+      "home": "KuPS",
+      "away": "Sabah FA",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "UEFA Champions League",
+      "home": "Lincoln Red Imps FC",
+      "away": "Mjallby AIF",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "UEFA Champions League",
+      "home": "Dinamo Zagreb",
+      "away": "FC Thun",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "UEFA Champions League",
+      "home": "Celje",
+      "away": "Egnatia Rrogozhinë",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "UEFA Champions League",
+      "home": "Heart Of Midlothian",
+      "away": "Sturm Graz",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "UEFA Champions League",
+      "home": "Shamrock Rovers",
+      "away": "Ararat-Armenia",
+      "reason": "No event/team match"
     },
     {
       "league": "Premier Soccer League",
@@ -2478,27 +2548,9 @@
       "home": "SK Vorwarts Steyr",
       "away": "Kuchl",
       "reason": "No event/team match"
-    },
-    {
-      "league": "Cup",
-      "home": "Schwaz",
-      "away": "Wallern / Marienkirchen",
-      "reason": "No event/team match"
     }
   ],
   "unsupportedMarkets": [
-    {
-      "sportKey": "soccer_epl",
-      "market": "btts"
-    },
-    {
-      "sportKey": "soccer_epl",
-      "market": "draw_no_bet"
-    },
-    {
-      "sportKey": "soccer_epl",
-      "market": "double_chance"
-    },
     {
       "sportKey": "soccer_uefa_champs_league_qualification",
       "market": "btts"
@@ -2801,31 +2853,6 @@
     }
   ],
   "requestErrors": [
-    {
-      "label": "soccer_epl:base-combined",
-      "error": "Markets not supported by this endpoint: btts, double_chance, draw_no_bet",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_epl:base-core",
-      "error": "Invalid commenceTimeFrom parameter. The format must be YYYY-MM-DDTHH:MM:SSZ, for example 2020-11-24T16:05:00Z",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_epl:btts",
-      "error": "Markets not supported by this endpoint: btts",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_epl:draw_no_bet",
-      "error": "Markets not supported by this endpoint: draw_no_bet",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_epl:double_chance",
-      "error": "Markets not supported by this endpoint: double_chance",
-      "statusCode": 422
-    },
     {
       "label": "soccer_uefa_champs_league_qualification:base-combined",
       "error": "Markets not supported by this endpoint: btts, double_chance, draw_no_bet",
@@ -3459,5 +3486,5 @@
   },
   "skipped": false,
   "skipReason": null,
-  "completedAt": "2026-07-22T14:17:56.523Z"
+  "completedAt": "2026-07-22T14:13:49.811Z"
 }
