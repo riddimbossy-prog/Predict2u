@@ -1,6 +1,6 @@
 {
   "version": "v251",
-  "generatedAt": "2026-07-22T14:13:26.939Z",
+  "generatedAt": "2026-07-22T14:28:01.414Z",
   "provider": "The Odds API v4",
   "keyPresent": true,
   "regions": "uk",
@@ -13,7 +13,15 @@
       "sportKey": "soccer_uefa_champs_league_qualification",
       "sportTitle": "UEFA Champions League Qualification",
       "score": 0.375,
-      "matches": 6
+      "matches": 7
+    },
+    {
+      "league": "Premier Soccer League",
+      "country": "Zimbabwe",
+      "sportKey": "soccer_epl",
+      "sportTitle": "EPL",
+      "score": 0.5,
+      "matches": 16
     },
     {
       "league": "Cup",
@@ -1908,78 +1916,6 @@
       "reason": "No event/team match"
     },
     {
-      "league": "UEFA Champions League Women",
-      "home": "KÍ",
-      "away": "Ludogorets W",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "UEFA Champions League Women",
-      "home": "Mitrovica W",
-      "away": "Zimbru Chisinau W",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "UEFA Champions League Women",
-      "home": "PAOK W",
-      "away": "Hapoel Jerusalem W",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "UEFA Champions League Women",
-      "home": "Czarni Sosnowiec W",
-      "away": "Lusso W",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "UEFA Champions League Women",
-      "home": "Flora W",
-      "away": "Mgarr W",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "UEFA Champions League Women",
-      "home": "Pyunik W",
-      "away": "Wrexham W",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "UEFA Champions League",
-      "home": "KuPS",
-      "away": "Sabah FA",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "UEFA Champions League",
-      "home": "Lincoln Red Imps FC",
-      "away": "Mjallby AIF",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "UEFA Champions League",
-      "home": "Dinamo Zagreb",
-      "away": "FC Thun",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "UEFA Champions League",
-      "home": "Celje",
-      "away": "Egnatia Rrogozhinë",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "UEFA Champions League",
-      "home": "Heart Of Midlothian",
-      "away": "Sturm Graz",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "UEFA Champions League",
-      "home": "Shamrock Rovers",
-      "away": "Ararat-Armenia",
-      "reason": "No event/team match"
-    },
-    {
       "league": "Cup",
       "home": "Hiiumaa",
       "away": "Tulevik",
@@ -2564,6 +2500,18 @@
       "market": "double_chance"
     },
     {
+      "sportKey": "soccer_epl",
+      "market": "btts"
+    },
+    {
+      "sportKey": "soccer_epl",
+      "market": "draw_no_bet"
+    },
+    {
+      "sportKey": "soccer_epl",
+      "market": "double_chance"
+    },
+    {
       "sportKey": "soccer_england_efl_cup",
       "market": "btts"
     },
@@ -2875,6 +2823,31 @@
     },
     {
       "label": "soccer_uefa_champs_league_qualification:double_chance",
+      "error": "Markets not supported by this endpoint: double_chance",
+      "statusCode": 422
+    },
+    {
+      "label": "soccer_epl:base-combined",
+      "error": "Markets not supported by this endpoint: btts, double_chance, draw_no_bet",
+      "statusCode": 422
+    },
+    {
+      "label": "soccer_epl:base-core",
+      "error": "Invalid commenceTimeFrom parameter. The format must be YYYY-MM-DDTHH:MM:SSZ, for example 2020-11-24T16:05:00Z",
+      "statusCode": 422
+    },
+    {
+      "label": "soccer_epl:btts",
+      "error": "Markets not supported by this endpoint: btts",
+      "statusCode": 422
+    },
+    {
+      "label": "soccer_epl:draw_no_bet",
+      "error": "Markets not supported by this endpoint: draw_no_bet",
+      "statusCode": 422
+    },
+    {
+      "label": "soccer_epl:double_chance",
       "error": "Markets not supported by this endpoint: double_chance",
       "statusCode": 422
     },
@@ -3486,5 +3459,5 @@
   },
   "skipped": false,
   "skipReason": null,
-  "completedAt": "2026-07-22T14:13:49.811Z"
+  "completedAt": "2026-07-22T14:28:20.357Z"
 }
