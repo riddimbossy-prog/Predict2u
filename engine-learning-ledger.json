@@ -1,7 +1,7 @@
 {
   "version": "v193",
   "schemaVersion": 1,
-  "updated": "2026-07-22T20:43:11.950Z",
+  "updated": "2026-07-22T21:41:03.750Z",
   "minimumSamples": {
     "teamFavorite": 5,
     "teamUnderdog": 5,
@@ -12,10 +12,10 @@
   },
   "decayHalfLifeDays": 120,
   "summary": {
-    "settledFixtures": 141,
-    "settledDecisions": 293,
+    "settledFixtures": 145,
+    "settledDecisions": 297,
     "reviewedLosses": 51,
-    "attachedUpcoming": 2274,
+    "attachedUpcoming": 2269,
     "highRiskUpcoming": 0,
     "stableUpcoming": 0
   },
@@ -412,7 +412,7 @@
           "mid": 0,
           "upper": 0.6576
         },
-        "decayedWeight": 1.83
+        "decayedWeight": 1.82
       },
       "favoriteBands": {},
       "underdogUpsets": 0,
@@ -8710,15 +8710,15 @@
       "hardVeto": false
     },
     "*|Halves|Second Half Over 0.5|unknown|other": {
-      "sample": 26,
-      "wins": 22,
+      "sample": 27,
+      "wins": 23,
       "losses": 4,
-      "winRate": 0.8462,
-      "lossRate": 0.1538,
+      "winRate": 0.8519,
+      "lossRate": 0.1481,
       "wilson": {
-        "lower": 0.6647,
-        "mid": 0.8462,
-        "upper": 0.9385
+        "lower": 0.6752,
+        "mid": 0.8519,
+        "upper": 0.9408
       },
       "adjustment": 2,
       "hardVeto": false
@@ -8738,13 +8738,13 @@
       "hardVeto": false
     },
     "*|League Bias|Under 3.5 Goals|unknown|other": {
-      "sample": 6,
-      "wins": 6,
+      "sample": 7,
+      "wins": 7,
       "losses": 0,
       "winRate": 1,
       "lossRate": 0,
       "wilson": {
-        "lower": 0.6097,
+        "lower": 0.6457,
         "mid": 1,
         "upper": 1
       },
@@ -8948,15 +8948,15 @@
       "hardVeto": false
     },
     "*|League Bias|Home Team Over 0.5 Goals|unknown|other": {
-      "sample": 18,
-      "wins": 14,
+      "sample": 20,
+      "wins": 16,
       "losses": 4,
-      "winRate": 0.7778,
-      "lossRate": 0.2222,
+      "winRate": 0.8,
+      "lossRate": 0.2,
       "wilson": {
-        "lower": 0.5478,
-        "mid": 0.7778,
-        "upper": 0.91
+        "lower": 0.584,
+        "mid": 0.8,
+        "upper": 0.9193
       },
       "adjustment": 0,
       "hardVeto": false
@@ -9760,15 +9760,15 @@
       "hardVeto": false
     },
     "friendlies clubs|League Bias|Home Team Over 0.5 Goals|unknown|other": {
-      "sample": 9,
-      "wins": 6,
+      "sample": 11,
+      "wins": 8,
       "losses": 3,
-      "winRate": 0.6667,
-      "lossRate": 0.3333,
+      "winRate": 0.7273,
+      "lossRate": 0.2727,
       "wilson": {
-        "lower": 0.3542,
-        "mid": 0.6667,
-        "upper": 0.8794
+        "lower": 0.4343,
+        "mid": 0.7273,
+        "upper": 0.9025
       },
       "adjustment": 0,
       "hardVeto": false
@@ -9970,6 +9970,34 @@
       "hardVeto": false
     },
     "brasileiro u17|League Bias|Home Team Over 0.5 Goals|unknown|other": {
+      "sample": 1,
+      "wins": 1,
+      "losses": 0,
+      "winRate": 1,
+      "lossRate": 0,
+      "wilson": {
+        "lower": 0.2065,
+        "mid": 1,
+        "upper": 1
+      },
+      "adjustment": 0,
+      "hardVeto": false
+    },
+    "reserve league|League Bias|Under 3.5 Goals|unknown|other": {
+      "sample": 1,
+      "wins": 1,
+      "losses": 0,
+      "winRate": 1,
+      "lossRate": 0,
+      "wilson": {
+        "lower": 0.2065,
+        "mid": 1,
+        "upper": 1
+      },
+      "adjustment": 0,
+      "hardVeto": false
+    },
+    "catarinense 2|Halves|Second Half Over 0.5|unknown|other": {
       "sample": 1,
       "wins": 1,
       "losses": 0,
