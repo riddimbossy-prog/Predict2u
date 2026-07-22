@@ -1,10 +1,10 @@
 {
   "version": "v193",
-  "updated": "2026-07-22T22:44:12.575Z",
+  "updated": "2026-07-22T23:43:29.485Z",
   "summary": {
-    "settledFixtures": 148,
-    "settledDecisions": 301,
-    "reviewedLosses": 53,
+    "settledFixtures": 150,
+    "settledDecisions": 304,
+    "reviewedLosses": 54,
     "teamProfiles": 70,
     "leagueProfiles": 14,
     "matchupProfiles": 36,
@@ -19,7 +19,7 @@
   "commonMissCauses": [
     {
       "cause": "INPUT_COVERAGE_GAP",
-      "count": 53
+      "count": 54
     },
     {
       "cause": "GOAL_SPIKE",
@@ -31,7 +31,7 @@
     },
     {
       "cause": "DRAW_TRAP",
-      "count": 8
+      "count": 9
     },
     {
       "cause": "BOTH_ATTACKS_BROKE_SUPPRESSION",
@@ -70,6 +70,19 @@
       "score": "0-1",
       "causes": [
         "RESULT_DIRECTION_MISS",
+        "INPUT_COVERAGE_GAP"
+      ]
+    },
+    {
+      "matchDate": "2026-07-22",
+      "home": "Lüneburger SK Hansa",
+      "away": "Hamburger SV II",
+      "league": "Friendlies Clubs",
+      "engine": "League Bias",
+      "market": "Home Team Over 0.5 Goals",
+      "score": "0-0",
+      "causes": [
+        "DRAW_TRAP",
         "INPUT_COVERAGE_GAP"
       ]
     },
@@ -415,19 +428,6 @@
       "score": "5-2",
       "causes": [
         "BOTH_ATTACKS_BROKE_SUPPRESSION",
-        "INPUT_COVERAGE_GAP"
-      ]
-    },
-    {
-      "matchDate": "2026-07-03",
-      "home": "AFC Ann Arbor",
-      "away": "Oakland County",
-      "league": "USL League Two",
-      "engine": "Normal",
-      "market": "Away Win",
-      "score": "3-1",
-      "causes": [
-        "RESULT_DIRECTION_MISS",
         "INPUT_COVERAGE_GAP"
       ]
     }
