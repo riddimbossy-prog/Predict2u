@@ -1,9 +1,9 @@
 {
   "version": "v194",
-  "updated": "2026-07-23T18:39:14.967Z",
+  "updated": "2026-07-23T19:41:20.856Z",
   "summary": {
-    "settled": 305,
-    "winRate": 0.823,
+    "settled": 306,
+    "winRate": 0.8235,
     "engines": 12,
     "approved": 0,
     "shadow": 11,
@@ -45,7 +45,7 @@
         "distributionShift": 0.5,
         "status": "STABLE"
       },
-      "updated": "2026-07-23T18:39:14.966Z"
+      "updated": "2026-07-23T19:41:20.855Z"
     },
     "Prime": {
       "engine": "Prime",
@@ -78,7 +78,7 @@
         "distributionShift": 0.293,
         "status": "STABLE"
       },
-      "updated": "2026-07-23T18:39:14.966Z"
+      "updated": "2026-07-23T19:41:20.855Z"
     },
     "Value": {
       "engine": "Value",
@@ -111,7 +111,7 @@
         "distributionShift": 0.8,
         "status": "STABLE"
       },
-      "updated": "2026-07-23T18:39:14.966Z"
+      "updated": "2026-07-23T19:41:20.855Z"
     },
     "Pro": {
       "engine": "Pro",
@@ -144,7 +144,7 @@
         "distributionShift": 0.8,
         "status": "STABLE"
       },
-      "updated": "2026-07-23T18:39:14.966Z"
+      "updated": "2026-07-23T19:41:20.855Z"
     },
     "Ultra": {
       "engine": "Ultra",
@@ -177,7 +177,7 @@
         "distributionShift": 0.5,
         "status": "STABLE"
       },
-      "updated": "2026-07-23T18:39:14.966Z"
+      "updated": "2026-07-23T19:41:20.855Z"
     },
     "Elite": {
       "engine": "Elite",
@@ -210,7 +210,7 @@
         "distributionShift": 0.5,
         "status": "STABLE"
       },
-      "updated": "2026-07-23T18:39:14.966Z"
+      "updated": "2026-07-23T19:41:20.855Z"
     },
     "Apex": {
       "engine": "Apex",
@@ -243,7 +243,7 @@
         "distributionShift": 0.5,
         "status": "STABLE"
       },
-      "updated": "2026-07-23T18:39:14.966Z"
+      "updated": "2026-07-23T19:41:20.855Z"
     },
     "Halves": {
       "engine": "Halves",
@@ -276,7 +276,7 @@
         "distributionShift": 0.067,
         "status": "STABLE"
       },
-      "updated": "2026-07-23T18:39:14.966Z"
+      "updated": "2026-07-23T19:41:20.855Z"
     },
     "Streaks": {
       "engine": "Streaks",
@@ -309,7 +309,7 @@
         "distributionShift": 0.5,
         "status": "STABLE"
       },
-      "updated": "2026-07-23T18:39:14.966Z"
+      "updated": "2026-07-23T19:41:20.855Z"
     },
     "Trend": {
       "engine": "Trend",
@@ -342,17 +342,17 @@
         "distributionShift": 0.667,
         "status": "STABLE"
       },
-      "updated": "2026-07-23T18:39:14.966Z"
+      "updated": "2026-07-23T19:41:20.856Z"
     },
     "League Bias": {
       "engine": "League Bias",
       "state": "ROLLBACK",
       "reason": "Validation performance fell materially below training performance.",
       "train": {
-        "sample": 44,
-        "wins": 41,
+        "sample": 45,
+        "wins": 42,
         "losses": 3,
-        "rate": 0.9318
+        "rate": 0.9333
       },
       "validation": {
         "sample": 20,
@@ -360,8 +360,8 @@
         "losses": 7,
         "rate": 0.65
       },
-      "validationDelta": -0.2818,
-      "calibrationError": 0.212,
+      "validationDelta": -0.2833,
+      "calibrationError": 0.2119,
       "shadow": {
         "eligible": 0,
         "avoidedLosses": 0,
@@ -371,11 +371,11 @@
       "drift": {
         "recentSample": 30,
         "priorSample": 30,
-        "confidenceShift": -0.63,
-        "distributionShift": 0.367,
-        "status": "DRIFT"
+        "confidenceShift": -0.6,
+        "distributionShift": 0.333,
+        "status": "STABLE"
       },
-      "updated": "2026-07-23T18:39:14.966Z"
+      "updated": "2026-07-23T19:41:20.856Z"
     },
     "Strict": {
       "engine": "Strict",
@@ -408,7 +408,7 @@
         "distributionShift": 0.5,
         "status": "STABLE"
       },
-      "updated": "2026-07-23T18:39:14.966Z"
+      "updated": "2026-07-23T19:41:20.856Z"
     }
   },
   "marketScorecards": [
@@ -430,11 +430,11 @@
     },
     {
       "marketFamily": "MATCH_UNDER",
-      "sample": 45,
-      "wins": 28,
+      "sample": 46,
+      "wins": 29,
       "losses": 17,
-      "rate": 0.6222,
-      "calibrationError": 0.0435
+      "rate": 0.6304,
+      "calibrationError": 0.0459
     },
     {
       "marketFamily": "OTHER",
@@ -612,6 +612,13 @@
       "rate": 1
     },
     {
+      "league": "Reserve League",
+      "sample": 2,
+      "wins": 2,
+      "losses": 0,
+      "rate": 1
+    },
+    {
       "league": "Catarinense U20",
       "sample": 2,
       "wins": 2,
@@ -641,13 +648,6 @@
     },
     {
       "league": "Kakkonen - Lohko B",
-      "sample": 1,
-      "wins": 1,
-      "losses": 0,
-      "rate": 1
-    },
-    {
-      "league": "Reserve League",
       "sample": 1,
       "wins": 1,
       "losses": 0,
