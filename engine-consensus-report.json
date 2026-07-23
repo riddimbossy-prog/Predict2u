@@ -1,6 +1,6 @@
 {
   "version": "v195",
-  "updated": "2026-07-23T14:23:08.228Z",
+  "updated": "2026-07-23T16:34:07.008Z",
   "summary": {
     "fixtures": 300,
     "qualified": 0,
@@ -5286,21 +5286,6 @@
       "independence": 0
     },
     {
-      "id": 1598492,
-      "date": "2026-07-21",
-      "home": "Sloboda Uzice",
-      "away": "Omladinac Zablaće",
-      "league": "Friendlies Clubs",
-      "version": "v195",
-      "bet": false,
-      "market": "No Bet",
-      "score": 0,
-      "reason": "No engine produced a qualified candidate.",
-      "supporters": [],
-      "conflictIndex": 0,
-      "independence": 0
-    },
-    {
       "id": 1557747,
       "date": "2026-07-21",
       "home": "Kompanii Marjamaa",
@@ -5779,6 +5764,35 @@
       "exactSupport": 1,
       "conflictIndex": 0,
       "alternatives": [],
+      "reason": "Consensus rejected: support, independence or conflict threshold failed."
+    },
+    {
+      "id": 1539862,
+      "date": "2026-07-22",
+      "home": "Figueirense U20",
+      "away": "Carlos Renaux U20",
+      "league": "Catarinense U20",
+      "version": "v195",
+      "bet": false,
+      "market": "No Bet",
+      "candidate": "Second Half Over 0.5",
+      "score": 76.1,
+      "support": 0.62,
+      "supporters": [
+        "Halves"
+      ],
+      "independence": 1,
+      "exactSupport": 1,
+      "conflictIndex": 0,
+      "alternatives": [
+        {
+          "market": "Double Chance 1X",
+          "support": 0.24,
+          "engines": [
+            "Trend"
+          ]
+        }
+      ],
       "reason": "Consensus rejected: support, independence or conflict threshold failed."
     }
   ]
