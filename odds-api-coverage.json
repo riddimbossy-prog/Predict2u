@@ -1,6 +1,6 @@
 {
   "version": "v251",
-  "generatedAt": "2026-07-23T19:55:59.904Z",
+  "generatedAt": "2026-07-23T20:08:37.442Z",
   "provider": "The Odds API v4",
   "keyPresent": true,
   "regions": "uk",
@@ -496,14 +496,6 @@
       "matches": 7
     },
     {
-      "league": "UEFA Champions League Women",
-      "country": "World",
-      "sportKey": "soccer_uefa_champs_league_qualification",
-      "sportTitle": "UEFA Champions League Qualification",
-      "score": 0.375,
-      "matches": 9
-    },
-    {
       "league": "Kansallinen Liiga",
       "country": "Finland",
       "sportKey": "soccer_finland_veikkausliiga",
@@ -928,14 +920,6 @@
       "matches": 8
     },
     {
-      "league": "UEFA Champions League",
-      "country": "World",
-      "sportKey": "soccer_uefa_champs_league_qualification",
-      "sportTitle": "UEFA Champions League Qualification",
-      "score": 0.695,
-      "matches": 14
-    },
-    {
       "league": "Cup",
       "country": "Kazakhstan",
       "sportKey": "soccer_england_efl_cup",
@@ -983,7 +967,7 @@
       "league": "UEFA Europa Conference League",
       "country": "World",
       "reason": "No matching soccer sport key",
-      "bestScore": 0.222
+      "bestScore": 0.125
     },
     {
       "league": "UEFA Europa League",
@@ -1007,7 +991,7 @@
       "league": "Liga Pro Serie B",
       "country": "Ecuador",
       "reason": "No matching soccer sport key",
-      "bestScore": 0.222
+      "bestScore": 0.25
     },
     {
       "league": "Liga Pro",
@@ -1187,7 +1171,7 @@
       "league": "CONCACAF U20 - Qualification",
       "country": "World",
       "reason": "No matching soccer sport key",
-      "bestScore": 0.1
+      "bestScore": 0
     },
     {
       "league": "CONCACAF U20",
@@ -1292,6 +1276,12 @@
       "bestScore": 0.222
     },
     {
+      "league": "UEFA Champions League Women",
+      "country": "World",
+      "reason": "No matching soccer sport key",
+      "bestScore": 0.125
+    },
+    {
       "league": "Queensland NPL",
       "country": "Australia",
       "reason": "No matching soccer sport key",
@@ -1307,7 +1297,7 @@
       "league": "Esiliiga B",
       "country": "Estonia",
       "reason": "No matching soccer sport key",
-      "bestScore": 0.125
+      "bestScore": 0.143
     },
     {
       "league": "1. Liga",
@@ -1440,6 +1430,12 @@
       "country": "Nigeria",
       "reason": "No matching soccer sport key",
       "bestScore": 0.143
+    },
+    {
+      "league": "UEFA Champions League",
+      "country": "World",
+      "reason": "No matching soccer sport key",
+      "bestScore": 0.125
     },
     {
       "league": "Meistaradeildin",
@@ -2448,18 +2444,6 @@
       "home": "Kravare",
       "away": "Bospor Bohumín",
       "reason": "No event/team match"
-    },
-    {
-      "league": "Cup",
-      "home": "Strání",
-      "away": "Vsetín",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Cup",
-      "home": "Tatran Všechovice",
-      "away": "Unie Hlubina",
-      "reason": "No event/team match"
     }
   ],
   "unsupportedMarkets": [
@@ -2713,18 +2697,6 @@
     },
     {
       "sportKey": "soccer_spain_la_liga",
-      "market": "double_chance"
-    },
-    {
-      "sportKey": "soccer_uefa_champs_league_qualification",
-      "market": "btts"
-    },
-    {
-      "sportKey": "soccer_uefa_champs_league_qualification",
-      "market": "draw_no_bet"
-    },
-    {
-      "sportKey": "soccer_uefa_champs_league_qualification",
       "market": "double_chance"
     },
     {
@@ -3303,31 +3275,6 @@
       "statusCode": 422
     },
     {
-      "label": "soccer_uefa_champs_league_qualification:base-combined",
-      "error": "Markets not supported by this endpoint: btts, double_chance, draw_no_bet",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_uefa_champs_league_qualification:base-core",
-      "error": "Invalid commenceTimeFrom parameter. The format must be YYYY-MM-DDTHH:MM:SSZ, for example 2020-11-24T16:05:00Z",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_uefa_champs_league_qualification:btts",
-      "error": "Markets not supported by this endpoint: btts",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_uefa_champs_league_qualification:draw_no_bet",
-      "error": "Markets not supported by this endpoint: draw_no_bet",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_uefa_champs_league_qualification:double_chance",
-      "error": "Markets not supported by this endpoint: double_chance",
-      "statusCode": 422
-    },
-    {
       "label": "soccer_china_superleague:base-combined",
       "error": "Markets not supported by this endpoint: btts, double_chance, draw_no_bet",
       "statusCode": 422
@@ -3435,5 +3382,5 @@
   },
   "skipped": false,
   "skipReason": null,
-  "completedAt": "2026-07-23T19:56:10.707Z"
+  "completedAt": "2026-07-23T20:08:43.081Z"
 }
