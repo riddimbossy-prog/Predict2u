@@ -1,10 +1,10 @@
 {
   "version": "v193",
-  "updated": "2026-07-24T19:41:11.009Z",
+  "updated": "2026-07-24T20:41:41.596Z",
   "summary": {
-    "settledFixtures": 158,
-    "settledDecisions": 313,
-    "reviewedLosses": 57,
+    "settledFixtures": 162,
+    "settledDecisions": 320,
+    "reviewedLosses": 59,
     "teamProfiles": 70,
     "leagueProfiles": 14,
     "matchupProfiles": 36,
@@ -19,7 +19,7 @@
   "commonMissCauses": [
     {
       "cause": "INPUT_COVERAGE_GAP",
-      "count": 57
+      "count": 59
     },
     {
       "cause": "GOAL_SPIKE",
@@ -57,6 +57,30 @@
       "score": "0-2",
       "causes": [
         "RESULT_DIRECTION_MISS",
+        "INPUT_COVERAGE_GAP"
+      ]
+    },
+    {
+      "matchDate": "2026-07-23",
+      "home": "Al Nejmeh",
+      "away": "Jwaaya FC",
+      "league": "Premier League",
+      "engine": "Halves",
+      "market": "Second Half Over 0.5",
+      "score": "0-0",
+      "causes": [
+        "INPUT_COVERAGE_GAP"
+      ]
+    },
+    {
+      "matchDate": "2026-07-23",
+      "home": "Al Ahed",
+      "away": "Al Ansar",
+      "league": "Premier League",
+      "engine": "Halves",
+      "market": "Second Half Over 0.5",
+      "score": "0-0",
+      "causes": [
         "INPUT_COVERAGE_GAP"
       ]
     },
@@ -401,32 +425,6 @@
       "score": "0-2",
       "causes": [
         "RESULT_DIRECTION_MISS",
-        "INPUT_COVERAGE_GAP"
-      ]
-    },
-    {
-      "matchDate": "2026-07-05",
-      "home": "Bigfoot",
-      "away": "Bangers",
-      "league": "USL League Two",
-      "engine": "Prime",
-      "market": "Double Chance X2",
-      "score": "3-0",
-      "causes": [
-        "DRAW_TRAP",
-        "INPUT_COVERAGE_GAP"
-      ]
-    },
-    {
-      "matchDate": "2026-07-04",
-      "home": "Des Moines Menace",
-      "away": "Santafé Wanderers",
-      "league": "USL League Two",
-      "engine": "Value",
-      "market": "Over 2.5",
-      "score": "0-0",
-      "causes": [
-        "TEMPO_COLLAPSE",
         "INPUT_COVERAGE_GAP"
       ]
     }

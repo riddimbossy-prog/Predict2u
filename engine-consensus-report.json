@@ -1,6 +1,6 @@
 {
   "version": "v195",
-  "updated": "2026-07-24T19:41:14.120Z",
+  "updated": "2026-07-24T20:41:44.684Z",
   "summary": {
     "fixtures": 300,
     "qualified": 0,
@@ -5530,65 +5530,6 @@
       "reason": "Consensus rejected: support, independence or conflict threshold failed."
     },
     {
-      "id": 1601068,
-      "date": "2026-07-23",
-      "home": "Al Nejmeh",
-      "away": "Jwaaya FC",
-      "league": "Premier League",
-      "version": "v195",
-      "bet": false,
-      "market": "No Bet",
-      "candidate": "Under 3.5 Goals",
-      "score": 78.5,
-      "support": 0.83,
-      "supporters": [
-        "Trend",
-        "League Bias"
-      ],
-      "independence": 2,
-      "exactSupport": 2,
-      "conflictIndex": 0,
-      "alternatives": [
-        {
-          "market": "Second Half Over 0.5",
-          "support": 0.59,
-          "engines": [
-            "Halves"
-          ]
-        }
-      ],
-      "reason": "Consensus rejected: support, independence or conflict threshold failed."
-    },
-    {
-      "id": 1601069,
-      "date": "2026-07-23",
-      "home": "Al Ahed",
-      "away": "Al Ansar",
-      "league": "Premier League",
-      "version": "v195",
-      "bet": false,
-      "market": "No Bet",
-      "candidate": "Second Half Over 0.5",
-      "score": 76,
-      "support": 0.59,
-      "supporters": [
-        "Halves"
-      ],
-      "independence": 1,
-      "exactSupport": 1,
-      "conflictIndex": 0,
-      "alternatives": [
-        {
-          "market": "Under 3.5 Goals",
-          "support": 0.27,
-          "engines": [
-            "League Bias"
-          ]
-        }
-      ],
-      "reason": "Consensus rejected: support, independence or conflict threshold failed."
-    },
-    {
       "id": 1584936,
       "date": "2026-07-23",
       "home": "Ascoli",
@@ -5761,6 +5702,42 @@
       "candidate": "Home Team Over 0.5 Goals",
       "score": 74.9,
       "support": 0.32,
+      "supporters": [
+        "League Bias"
+      ],
+      "independence": 1,
+      "exactSupport": 1,
+      "conflictIndex": 0,
+      "alternatives": [],
+      "reason": "Consensus rejected: support, independence or conflict threshold failed."
+    },
+    {
+      "id": 1584937,
+      "date": "2026-07-24",
+      "home": "Sardarapat",
+      "away": "Shirak",
+      "league": "Friendlies Clubs",
+      "version": "v195",
+      "bet": false,
+      "market": "No Bet",
+      "score": 0,
+      "reason": "No engine produced a qualified candidate.",
+      "supporters": [],
+      "conflictIndex": 0,
+      "independence": 0
+    },
+    {
+      "id": 1592149,
+      "date": "2026-07-24",
+      "home": "Racing",
+      "away": "Reyady Abaseya",
+      "league": "Premier League",
+      "version": "v195",
+      "bet": false,
+      "market": "No Bet",
+      "candidate": "Under 3.5 Goals",
+      "score": 74.5,
+      "support": 0.22,
       "supporters": [
         "League Bias"
       ],

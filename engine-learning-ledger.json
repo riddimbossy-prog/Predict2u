@@ -1,7 +1,7 @@
 {
   "version": "v193",
   "schemaVersion": 1,
-  "updated": "2026-07-24T19:41:11.009Z",
+  "updated": "2026-07-24T20:41:41.596Z",
   "minimumSamples": {
     "teamFavorite": 5,
     "teamUnderdog": 5,
@@ -12,10 +12,10 @@
   },
   "decayHalfLifeDays": 120,
   "summary": {
-    "settledFixtures": 158,
-    "settledDecisions": 313,
-    "reviewedLosses": 57,
-    "attachedUpcoming": 2217,
+    "settledFixtures": 162,
+    "settledDecisions": 320,
+    "reviewedLosses": 59,
+    "attachedUpcoming": 2195,
     "highRiskUpcoming": 0,
     "stableUpcoming": 0
   },
@@ -4476,7 +4476,7 @@
           "mid": 0.6667,
           "upper": 0.8794
         },
-        "decayedWeight": 8.48
+        "decayedWeight": 8.47
       },
       "bands": {
         "1.61-1.85": {
@@ -6962,7 +6962,7 @@
         "mid": 0.5,
         "upper": 0.732
       },
-      "decayedWeight": 13.04
+      "decayedWeight": 13.03
     },
     "1.01-1.35": {
       "sample": 7,
@@ -8710,17 +8710,17 @@
       "hardVeto": false
     },
     "*|Halves|Second Half Over 0.5|unknown|other": {
-      "sample": 30,
+      "sample": 32,
       "wins": 24,
-      "losses": 6,
-      "winRate": 0.8,
-      "lossRate": 0.2,
+      "losses": 8,
+      "winRate": 0.75,
+      "lossRate": 0.25,
       "wilson": {
-        "lower": 0.6269,
-        "mid": 0.8,
-        "upper": 0.905
+        "lower": 0.5789,
+        "mid": 0.75,
+        "upper": 0.8675
       },
-      "adjustment": 2,
+      "adjustment": 0,
       "hardVeto": false
     },
     "premier soccer league|League Bias|Under 3.5 Goals|unknown|other": {
@@ -8738,13 +8738,13 @@
       "hardVeto": false
     },
     "*|League Bias|Under 3.5 Goals|unknown|other": {
-      "sample": 9,
-      "wins": 9,
+      "sample": 11,
+      "wins": 11,
       "losses": 0,
       "winRate": 1,
       "lossRate": 0,
       "wilson": {
-        "lower": 0.7008,
+        "lower": 0.7412,
         "mid": 1,
         "upper": 1
       },
@@ -8822,13 +8822,13 @@
       "hardVeto": false
     },
     "*|Trend|Under 3.5 Goals|unknown|other": {
-      "sample": 2,
-      "wins": 2,
+      "sample": 3,
+      "wins": 3,
       "losses": 0,
       "winRate": 1,
       "lossRate": 0,
       "wilson": {
-        "lower": 0.3424,
+        "lower": 0.4385,
         "mid": 1,
         "upper": 1
       },
@@ -9900,13 +9900,13 @@
       "hardVeto": false
     },
     "*|League Bias|Over 1.5 Goals|unknown|other": {
-      "sample": 3,
-      "wins": 3,
+      "sample": 5,
+      "wins": 5,
       "losses": 0,
       "winRate": 1,
       "lossRate": 0,
       "wilson": {
-        "lower": 0.4385,
+        "lower": 0.5655,
         "mid": 1,
         "upper": 1
       },
@@ -9942,13 +9942,13 @@
       "hardVeto": false
     },
     "friendlies clubs|League Bias|Over 1.5 Goals|unknown|other": {
-      "sample": 2,
-      "wins": 2,
+      "sample": 3,
+      "wins": 3,
       "losses": 0,
       "winRate": 1,
       "lossRate": 0,
       "wilson": {
-        "lower": 0.3424,
+        "lower": 0.4385,
         "mid": 1,
         "upper": 1
       },
@@ -10109,6 +10109,20 @@
       "adjustment": 0,
       "hardVeto": false
     },
+    "oberliga bayern nord|League Bias|Over 1.5 Goals|unknown|other": {
+      "sample": 1,
+      "wins": 1,
+      "losses": 0,
+      "winRate": 1,
+      "lossRate": 0,
+      "wilson": {
+        "lower": 0.2065,
+        "mid": 1,
+        "upper": 1
+      },
+      "adjustment": 0,
+      "hardVeto": false
+    },
     "catarinense u20|Trend|Double Chance X2|unknown|other": {
       "sample": 1,
       "wins": 1,
@@ -10150,6 +10164,48 @@
       },
       "adjustment": 0,
       "hardVeto": false
+    },
+    "premier league|Trend|Under 3.5 Goals|unknown|other": {
+      "sample": 1,
+      "wins": 1,
+      "losses": 0,
+      "winRate": 1,
+      "lossRate": 0,
+      "wilson": {
+        "lower": 0.2065,
+        "mid": 1,
+        "upper": 1
+      },
+      "adjustment": 0,
+      "hardVeto": false
+    },
+    "premier league|Halves|Second Half Over 0.5|unknown|other": {
+      "sample": 2,
+      "wins": 0,
+      "losses": 2,
+      "winRate": 0,
+      "lossRate": 1,
+      "wilson": {
+        "lower": 0,
+        "mid": 0,
+        "upper": 0.6576
+      },
+      "adjustment": 0,
+      "hardVeto": false
+    },
+    "premier league|League Bias|Under 3.5 Goals|unknown|other": {
+      "sample": 2,
+      "wins": 2,
+      "losses": 0,
+      "winRate": 1,
+      "lossRate": 0,
+      "wilson": {
+        "lower": 0.3424,
+        "mid": 1,
+        "upper": 1
+      },
+      "adjustment": 0,
+      "hardVeto": false
     }
   },
   "lossReviews": [
@@ -10163,6 +10219,30 @@
       "score": "0-2",
       "causes": [
         "RESULT_DIRECTION_MISS",
+        "INPUT_COVERAGE_GAP"
+      ]
+    },
+    {
+      "matchDate": "2026-07-23",
+      "home": "Al Nejmeh",
+      "away": "Jwaaya FC",
+      "league": "Premier League",
+      "engine": "Halves",
+      "market": "Second Half Over 0.5",
+      "score": "0-0",
+      "causes": [
+        "INPUT_COVERAGE_GAP"
+      ]
+    },
+    {
+      "matchDate": "2026-07-23",
+      "home": "Al Ahed",
+      "away": "Al Ansar",
+      "league": "Premier League",
+      "engine": "Halves",
+      "market": "Second Half Over 0.5",
+      "score": "0-0",
+      "causes": [
         "INPUT_COVERAGE_GAP"
       ]
     },
@@ -10890,7 +10970,7 @@
   ],
   "causeCounts": {
     "TEMPO_COLLAPSE": 4,
-    "INPUT_COVERAGE_GAP": 57,
+    "INPUT_COVERAGE_GAP": 59,
     "RESULT_DIRECTION_MISS": 13,
     "BOTH_ATTACKS_BROKE_SUPPRESSION": 5,
     "GOAL_SPIKE": 17,
