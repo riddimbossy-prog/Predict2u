@@ -1,10 +1,10 @@
 {
   "version": "v193",
-  "updated": "2026-07-24T20:41:41.596Z",
+  "updated": "2026-07-24T21:42:01.322Z",
   "summary": {
-    "settledFixtures": 162,
-    "settledDecisions": 320,
-    "reviewedLosses": 59,
+    "settledFixtures": 164,
+    "settledDecisions": 322,
+    "reviewedLosses": 61,
     "teamProfiles": 70,
     "leagueProfiles": 14,
     "matchupProfiles": 36,
@@ -19,7 +19,7 @@
   "commonMissCauses": [
     {
       "cause": "INPUT_COVERAGE_GAP",
-      "count": 59
+      "count": 61
     },
     {
       "cause": "GOAL_SPIKE",
@@ -27,19 +27,19 @@
     },
     {
       "cause": "RESULT_DIRECTION_MISS",
-      "count": 13
+      "count": 14
     },
     {
       "cause": "DRAW_TRAP",
       "count": 10
     },
     {
-      "cause": "BOTH_ATTACKS_BROKE_SUPPRESSION",
+      "cause": "TEMPO_COLLAPSE",
       "count": 5
     },
     {
-      "cause": "TEMPO_COLLAPSE",
-      "count": 4
+      "cause": "BOTH_ATTACKS_BROKE_SUPPRESSION",
+      "count": 5
     },
     {
       "cause": "UNDERDOG_OVERREACH",
@@ -55,6 +55,32 @@
       "engine": "League Bias",
       "market": "Home Team Over 0.5 Goals",
       "score": "0-2",
+      "causes": [
+        "RESULT_DIRECTION_MISS",
+        "INPUT_COVERAGE_GAP"
+      ]
+    },
+    {
+      "matchDate": "2026-07-24",
+      "home": "Landshut",
+      "away": "Erlbach",
+      "league": "Oberliga - Bayern Süd",
+      "engine": "League Bias",
+      "market": "Over 1.5 Goals",
+      "score": "1-0",
+      "causes": [
+        "TEMPO_COLLAPSE",
+        "INPUT_COVERAGE_GAP"
+      ]
+    },
+    {
+      "matchDate": "2026-07-24",
+      "home": "Heimstetten",
+      "away": "Sportfreunde Schwaig",
+      "league": "Oberliga - Bayern Süd",
+      "engine": "Normal",
+      "market": "Home Win",
+      "score": "1-2",
       "causes": [
         "RESULT_DIRECTION_MISS",
         "INPUT_COVERAGE_GAP"
@@ -399,32 +425,6 @@
       "score": "0-5",
       "causes": [
         "GOAL_SPIKE",
-        "INPUT_COVERAGE_GAP"
-      ]
-    },
-    {
-      "matchDate": "2026-07-05",
-      "home": "Jackson Boom",
-      "away": "Mississippi Brilla",
-      "league": "USL League Two",
-      "engine": "Pro",
-      "market": "Under 2.5",
-      "score": "0-5",
-      "causes": [
-        "GOAL_SPIKE",
-        "INPUT_COVERAGE_GAP"
-      ]
-    },
-    {
-      "matchDate": "2026-07-05",
-      "home": "McKinney Chupacabras",
-      "away": "Texoma",
-      "league": "USL League Two",
-      "engine": "Prime",
-      "market": "Home Team Over 0.5 Goals",
-      "score": "0-2",
-      "causes": [
-        "RESULT_DIRECTION_MISS",
         "INPUT_COVERAGE_GAP"
       ]
     }

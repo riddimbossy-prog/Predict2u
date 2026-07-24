@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-24T20:41:34.456Z",
+  "updated": "2026-07-24T21:41:54.040Z",
   "minSample": 300,
   "groups": {
     "LEM|USL League Two|Prime|Double Chance 1X|90-99": {
@@ -2302,14 +2302,14 @@
       "validated": false
     },
     "M|*|*|Over 1.5 Goals|80-89": {
-      "sample": 8,
+      "sample": 9,
       "wins": 8,
-      "losses": 0,
-      "lower": 0.6756,
-      "mid": 1,
-      "upper": 1,
+      "losses": 1,
+      "lower": 0.565,
+      "mid": 0.8889,
+      "upper": 0.9801,
       "grade": "Learning",
-      "leagueReliability": 48.5,
+      "leagueReliability": 45.8,
       "validated": false
     },
     "LEM|Western Australia NPL|trend|Away Team Over 0.5 Goals|90-99": {
@@ -3512,14 +3512,14 @@
       "validated": false
     },
     "EM|*|league-bias|Over 1.5 Goals|80-89": {
-      "sample": 5,
+      "sample": 6,
       "wins": 5,
-      "losses": 0,
-      "lower": 0.5655,
-      "mid": 1,
-      "upper": 1,
+      "losses": 1,
+      "lower": 0.4365,
+      "mid": 0.8333,
+      "upper": 0.9699,
       "grade": "Learning",
-      "leagueReliability": 45.1,
+      "leagueReliability": 42.2,
       "validated": false
     },
     "LEM|Friendlies Clubs|trend|Over 1.5 Goals|80-89": {
@@ -3786,6 +3786,28 @@
       "leagueReliability": 42.2,
       "validated": false
     },
+    "LEM|Oberliga - Bayern Süd|league-bias|Over 1.5 Goals|80-89": {
+      "sample": 1,
+      "wins": 0,
+      "losses": 1,
+      "lower": 0,
+      "mid": 0,
+      "upper": 0.7935,
+      "grade": "Learning",
+      "leagueReliability": 42.2,
+      "validated": false
+    },
+    "LM|Oberliga - Bayern Süd|*|Over 1.5 Goals|80-89": {
+      "sample": 1,
+      "wins": 0,
+      "losses": 1,
+      "lower": 0,
+      "mid": 0,
+      "upper": 0.7935,
+      "grade": "Learning",
+      "leagueReliability": 42.2,
+      "validated": false
+    },
     "LEM|Oberliga - Bayern Nord|league-bias|Over 1.5 Goals|80-89": {
       "sample": 1,
       "wins": 1,
@@ -3850,6 +3872,50 @@
       "upper": 1,
       "grade": "Learning",
       "leagueReliability": 42.2,
+      "validated": false
+    },
+    "LEM|Oberliga - Bayern Süd|normal|Home Win|90-99": {
+      "sample": 1,
+      "wins": 0,
+      "losses": 1,
+      "lower": 0,
+      "mid": 0,
+      "upper": 0.7935,
+      "grade": "Learning",
+      "leagueReliability": 42.2,
+      "validated": false
+    },
+    "EM|*|normal|Home Win|90-99": {
+      "sample": 1,
+      "wins": 0,
+      "losses": 1,
+      "lower": 0,
+      "mid": 0,
+      "upper": 0.7935,
+      "grade": "Learning",
+      "leagueReliability": 34.2,
+      "validated": false
+    },
+    "LM|Oberliga - Bayern Süd|*|Home Win|90-99": {
+      "sample": 1,
+      "wins": 0,
+      "losses": 1,
+      "lower": 0,
+      "mid": 0,
+      "upper": 0.7935,
+      "grade": "Learning",
+      "leagueReliability": 42.2,
+      "validated": false
+    },
+    "M|*|*|Home Win|90-99": {
+      "sample": 1,
+      "wins": 0,
+      "losses": 1,
+      "lower": 0,
+      "mid": 0,
+      "upper": 0.7935,
+      "grade": "Learning",
+      "leagueReliability": 34.2,
       "validated": false
     },
     "LEM|Premier League|trend|Under 3.5 Goals|80-89": {

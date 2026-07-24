@@ -1,7 +1,7 @@
 {
   "version": "v193",
   "schemaVersion": 1,
-  "updated": "2026-07-24T20:41:41.596Z",
+  "updated": "2026-07-24T21:42:01.322Z",
   "minimumSamples": {
     "teamFavorite": 5,
     "teamUnderdog": 5,
@@ -12,10 +12,10 @@
   },
   "decayHalfLifeDays": 120,
   "summary": {
-    "settledFixtures": 162,
-    "settledDecisions": 320,
-    "reviewedLosses": 59,
-    "attachedUpcoming": 2195,
+    "settledFixtures": 164,
+    "settledDecisions": 322,
+    "reviewedLosses": 61,
+    "attachedUpcoming": 2182,
     "highRiskUpcoming": 0,
     "stableUpcoming": 0
   },
@@ -4583,7 +4583,7 @@
           "mid": 0.5714,
           "upper": 0.8418
         },
-        "decayedWeight": 6.59
+        "decayedWeight": 6.58
       },
       "awayFavorites": {
         "sample": 2,
@@ -4631,7 +4631,7 @@
           "mid": 0.5,
           "upper": 0.8124
         },
-        "decayedWeight": 5.64
+        "decayedWeight": 5.63
       },
       "bands": {
         "1.86-2.25": {
@@ -4653,7 +4653,7 @@
             "mid": 0.5,
             "upper": 0.8124
           },
-          "decayedWeight": 5.64
+          "decayedWeight": 5.63
         }
       },
       "homeFavorites": {
@@ -5544,7 +5544,7 @@
             "mid": 1,
             "upper": 1
           },
-          "decayedWeight": 2.69
+          "decayedWeight": 2.68
         },
         "1.86-2.25": {
           "sample": 1,
@@ -5629,7 +5629,7 @@
           "mid": 1,
           "upper": 1
         },
-        "decayedWeight": 2.69
+        "decayedWeight": 2.68
       },
       "flags": [],
       "stabilityScore": 89.8
@@ -6983,7 +6983,7 @@
         "mid": 1,
         "upper": 1
       },
-      "decayedWeight": 6.49
+      "decayedWeight": 6.48
     },
     "1.36-1.60": {
       "sample": 7,
@@ -7870,15 +7870,15 @@
       "hardVeto": false
     },
     "*|Normal|Home Win|unknown|other": {
-      "sample": 4,
+      "sample": 5,
       "wins": 2,
-      "losses": 2,
-      "winRate": 0.5,
-      "lossRate": 0.5,
+      "losses": 3,
+      "winRate": 0.4,
+      "lossRate": 0.6,
       "wilson": {
-        "lower": 0.15,
-        "mid": 0.5,
-        "upper": 0.85
+        "lower": 0.1176,
+        "mid": 0.4,
+        "upper": 0.7693
       },
       "adjustment": 0,
       "hardVeto": false
@@ -9900,15 +9900,15 @@
       "hardVeto": false
     },
     "*|League Bias|Over 1.5 Goals|unknown|other": {
-      "sample": 5,
+      "sample": 6,
       "wins": 5,
-      "losses": 0,
-      "winRate": 1,
-      "lossRate": 0,
+      "losses": 1,
+      "winRate": 0.8333,
+      "lossRate": 0.1667,
       "wilson": {
-        "lower": 0.5655,
-        "mid": 1,
-        "upper": 1
+        "lower": 0.4365,
+        "mid": 0.8333,
+        "upper": 0.9699
       },
       "adjustment": 0,
       "hardVeto": false
@@ -10109,6 +10109,20 @@
       "adjustment": 0,
       "hardVeto": false
     },
+    "oberliga bayern s d|League Bias|Over 1.5 Goals|unknown|other": {
+      "sample": 1,
+      "wins": 0,
+      "losses": 1,
+      "winRate": 0,
+      "lossRate": 1,
+      "wilson": {
+        "lower": 0,
+        "mid": 0,
+        "upper": 0.7935
+      },
+      "adjustment": 0,
+      "hardVeto": false
+    },
     "oberliga bayern nord|League Bias|Over 1.5 Goals|unknown|other": {
       "sample": 1,
       "wins": 1,
@@ -10165,6 +10179,20 @@
       "adjustment": 0,
       "hardVeto": false
     },
+    "oberliga bayern s d|Normal|Home Win|unknown|other": {
+      "sample": 1,
+      "wins": 0,
+      "losses": 1,
+      "winRate": 0,
+      "lossRate": 1,
+      "wilson": {
+        "lower": 0,
+        "mid": 0,
+        "upper": 0.7935
+      },
+      "adjustment": 0,
+      "hardVeto": false
+    },
     "premier league|Trend|Under 3.5 Goals|unknown|other": {
       "sample": 1,
       "wins": 1,
@@ -10217,6 +10245,32 @@
       "engine": "League Bias",
       "market": "Home Team Over 0.5 Goals",
       "score": "0-2",
+      "causes": [
+        "RESULT_DIRECTION_MISS",
+        "INPUT_COVERAGE_GAP"
+      ]
+    },
+    {
+      "matchDate": "2026-07-24",
+      "home": "Landshut",
+      "away": "Erlbach",
+      "league": "Oberliga - Bayern Süd",
+      "engine": "League Bias",
+      "market": "Over 1.5 Goals",
+      "score": "1-0",
+      "causes": [
+        "TEMPO_COLLAPSE",
+        "INPUT_COVERAGE_GAP"
+      ]
+    },
+    {
+      "matchDate": "2026-07-24",
+      "home": "Heimstetten",
+      "away": "Sportfreunde Schwaig",
+      "league": "Oberliga - Bayern Süd",
+      "engine": "Normal",
+      "market": "Home Win",
+      "score": "1-2",
       "causes": [
         "RESULT_DIRECTION_MISS",
         "INPUT_COVERAGE_GAP"
@@ -10969,9 +11023,9 @@
     }
   ],
   "causeCounts": {
-    "TEMPO_COLLAPSE": 4,
-    "INPUT_COVERAGE_GAP": 59,
-    "RESULT_DIRECTION_MISS": 13,
+    "TEMPO_COLLAPSE": 5,
+    "INPUT_COVERAGE_GAP": 61,
+    "RESULT_DIRECTION_MISS": 14,
     "BOTH_ATTACKS_BROKE_SUPPRESSION": 5,
     "GOAL_SPIKE": 17,
     "DRAW_TRAP": 10,
