@@ -1,10 +1,10 @@
 {
   "version": "v193",
-  "updated": "2026-07-24T22:41:41.378Z",
+  "updated": "2026-07-24T23:42:07.902Z",
   "summary": {
-    "settledFixtures": 165,
-    "settledDecisions": 323,
-    "reviewedLosses": 61,
+    "settledFixtures": 166,
+    "settledDecisions": 324,
+    "reviewedLosses": 62,
     "teamProfiles": 70,
     "leagueProfiles": 14,
     "matchupProfiles": 36,
@@ -19,7 +19,7 @@
   "commonMissCauses": [
     {
       "cause": "INPUT_COVERAGE_GAP",
-      "count": 61
+      "count": 62
     },
     {
       "cause": "GOAL_SPIKE",
@@ -70,6 +70,18 @@
       "score": "1-0",
       "causes": [
         "TEMPO_COLLAPSE",
+        "INPUT_COVERAGE_GAP"
+      ]
+    },
+    {
+      "matchDate": "2026-07-24",
+      "home": "Ballard",
+      "away": "Ventura County Fusion",
+      "league": "USL League Two",
+      "engine": "Halves",
+      "market": "Second Half Over 0.5",
+      "score": "1-2",
+      "causes": [
         "INPUT_COVERAGE_GAP"
       ]
     },
@@ -409,19 +421,6 @@
       "league": "USL League Two",
       "engine": "Prime",
       "market": "Under 3.5",
-      "score": "0-5",
-      "causes": [
-        "GOAL_SPIKE",
-        "INPUT_COVERAGE_GAP"
-      ]
-    },
-    {
-      "matchDate": "2026-07-05",
-      "home": "Jackson Boom",
-      "away": "Mississippi Brilla",
-      "league": "USL League Two",
-      "engine": "Value",
-      "market": "Under 2.5",
       "score": "0-5",
       "causes": [
         "GOAL_SPIKE",

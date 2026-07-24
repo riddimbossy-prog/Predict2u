@@ -1,7 +1,7 @@
 {
   "version": "v193",
   "schemaVersion": 1,
-  "updated": "2026-07-24T22:41:41.378Z",
+  "updated": "2026-07-24T23:42:07.902Z",
   "minimumSamples": {
     "teamFavorite": 5,
     "teamUnderdog": 5,
@@ -12,10 +12,10 @@
   },
   "decayHalfLifeDays": 120,
   "summary": {
-    "settledFixtures": 165,
-    "settledDecisions": 323,
-    "reviewedLosses": 61,
-    "attachedUpcoming": 2171,
+    "settledFixtures": 166,
+    "settledDecisions": 324,
+    "reviewedLosses": 62,
+    "attachedUpcoming": 2162,
     "highRiskUpcoming": 0,
     "stableUpcoming": 0
   },
@@ -6962,7 +6962,7 @@
         "mid": 0.5,
         "upper": 0.732
       },
-      "decayedWeight": 13.03
+      "decayedWeight": 13.02
     },
     "1.01-1.35": {
       "sample": 7,
@@ -7004,7 +7004,7 @@
         "mid": 0.7143,
         "upper": 0.9178
       },
-      "decayedWeight": 6.63
+      "decayedWeight": 6.62
     },
     "1.61-1.85": {
       "sample": 8,
@@ -7025,7 +7025,7 @@
         "mid": 0.5,
         "upper": 0.7848
       },
-      "decayedWeight": 7.53
+      "decayedWeight": 7.52
     }
   },
   "contexts": {
@@ -8710,15 +8710,15 @@
       "hardVeto": false
     },
     "*|Halves|Second Half Over 0.5|unknown|other": {
-      "sample": 32,
+      "sample": 33,
       "wins": 24,
-      "losses": 8,
-      "winRate": 0.75,
-      "lossRate": 0.25,
+      "losses": 9,
+      "winRate": 0.7273,
+      "lossRate": 0.2727,
       "wilson": {
-        "lower": 0.5789,
-        "mid": 0.75,
-        "upper": 0.8675
+        "lower": 0.5578,
+        "mid": 0.7273,
+        "upper": 0.8493
       },
       "adjustment": 0,
       "hardVeto": false
@@ -8906,15 +8906,15 @@
       "hardVeto": false
     },
     "usl league two|Halves|Second Half Over 0.5|unknown|other": {
-      "sample": 23,
+      "sample": 24,
       "wins": 21,
-      "losses": 2,
-      "winRate": 0.913,
-      "lossRate": 0.087,
+      "losses": 3,
+      "winRate": 0.875,
+      "lossRate": 0.125,
       "wilson": {
-        "lower": 0.732,
-        "mid": 0.913,
-        "upper": 0.9758
+        "lower": 0.69,
+        "mid": 0.875,
+        "upper": 0.9566
       },
       "adjustment": 2,
       "hardVeto": false
@@ -10265,6 +10265,18 @@
     },
     {
       "matchDate": "2026-07-24",
+      "home": "Ballard",
+      "away": "Ventura County Fusion",
+      "league": "USL League Two",
+      "engine": "Halves",
+      "market": "Second Half Over 0.5",
+      "score": "1-2",
+      "causes": [
+        "INPUT_COVERAGE_GAP"
+      ]
+    },
+    {
+      "matchDate": "2026-07-24",
       "home": "Heimstetten",
       "away": "Sportfreunde Schwaig",
       "league": "Oberliga - Bayern Süd",
@@ -11024,7 +11036,7 @@
   ],
   "causeCounts": {
     "TEMPO_COLLAPSE": 5,
-    "INPUT_COVERAGE_GAP": 61,
+    "INPUT_COVERAGE_GAP": 62,
     "RESULT_DIRECTION_MISS": 14,
     "BOTH_ATTACKS_BROKE_SUPPRESSION": 5,
     "GOAL_SPIKE": 17,
