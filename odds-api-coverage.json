@@ -1,6 +1,6 @@
 {
   "version": "v251",
-  "generatedAt": "2026-07-25T23:21:12.814Z",
+  "generatedAt": "2026-07-25T23:31:04.781Z",
   "provider": "The Odds API v4",
   "keyPresent": true,
   "regions": "uk",
@@ -152,44 +152,12 @@
       "matches": 1
     },
     {
-      "league": "NWSL Women",
-      "country": "USA",
-      "sportKey": "soccer_usa_mls",
-      "sportTitle": "MLS",
-      "score": 0.323,
-      "matches": 8
-    },
-    {
-      "league": "MLS Next Pro",
-      "country": "USA",
-      "sportKey": "soccer_usa_mls",
-      "sportTitle": "MLS",
-      "score": 1,
-      "matches": 16
-    },
-    {
-      "league": "Mineiro - 2",
-      "country": "Brazil",
-      "sportKey": "soccer_brazil_campeonato",
-      "sportTitle": "Brazil Série A",
-      "score": 0.305,
-      "matches": 3
-    },
-    {
       "league": "Primera Division",
       "country": "El-Salvador",
       "sportKey": "soccer_spain_la_liga",
       "sportTitle": "La Liga - Spain",
       "score": 0.429,
-      "matches": 10
-    },
-    {
-      "league": "Primera División",
-      "country": "Bolivia",
-      "sportKey": "soccer_argentina_primera_division",
-      "sportTitle": "Primera División - Argentina",
-      "score": 0.653,
-      "matches": 8
+      "matches": 9
     },
     {
       "league": "Serie A",
@@ -280,6 +248,14 @@
       "matches": 14
     },
     {
+      "league": "MLS Next Pro",
+      "country": "USA",
+      "sportKey": "soccer_usa_mls",
+      "sportTitle": "MLS",
+      "score": 1,
+      "matches": 15
+    },
+    {
       "league": "Primera División",
       "country": "Costa-Rica",
       "sportKey": "soccer_argentina_primera_division",
@@ -294,6 +270,22 @@
       "sportTitle": "Liga MX",
       "score": 1,
       "matches": 5
+    },
+    {
+      "league": "Primera División",
+      "country": "Bolivia",
+      "sportKey": "soccer_argentina_primera_division",
+      "sportTitle": "Primera División - Argentina",
+      "score": 0.653,
+      "matches": 7
+    },
+    {
+      "league": "NWSL Women",
+      "country": "USA",
+      "sportKey": "soccer_usa_mls",
+      "sportTitle": "MLS",
+      "score": 0.323,
+      "matches": 7
     },
     {
       "league": "Primera Division",
@@ -606,6 +598,14 @@
       "sportTitle": "Premier League - Russia",
       "score": 0.43,
       "matches": 1
+    },
+    {
+      "league": "Mineiro - 2",
+      "country": "Brazil",
+      "sportKey": "soccer_brazil_campeonato",
+      "sportTitle": "Brazil Série A",
+      "score": 0.305,
+      "matches": 2
     },
     {
       "league": "3. Division - Girone 2",
@@ -1160,7 +1160,7 @@
       "matches": 1
     }
   ],
-  "matchesConsidered": 1370,
+  "matchesConsidered": 1364,
   "matchesMatched": 0,
   "matchesUpdated": 0,
   "fieldsFilled": 0,
@@ -2046,24 +2046,6 @@
       "reason": "No event/team match"
     },
     {
-      "league": "Mineiro - 2",
-      "home": "Uberaba",
-      "away": "Mamoré",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Mineiro - 2",
-      "home": "BOA",
-      "away": "Aymorés",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Mineiro - 2",
-      "home": "Valeriodoce",
-      "away": "Villa Nova",
-      "reason": "No event/team match"
-    },
-    {
       "league": "Serie A",
       "home": "Atletico Paranaense",
       "away": "Internacional",
@@ -2412,6 +2394,18 @@
       "reason": "No event/team match"
     },
     {
+      "league": "Mineiro - 2",
+      "home": "BOA",
+      "away": "Aymorés",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Mineiro - 2",
+      "home": "Valeriodoce",
+      "away": "Villa Nova",
+      "reason": "No event/team match"
+    },
+    {
       "league": "Carioca C",
       "home": "Cardoso Moreira",
       "away": "Búzios",
@@ -2667,6 +2661,12 @@
       "league": "Second League - Group 4",
       "home": "Nosta",
       "away": "Izhevsk",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Second League - Group 4",
+      "home": "Rubin Kazan 2",
+      "away": "KDV",
       "reason": "No event/team match"
     }
   ],
@@ -3674,11 +3674,11 @@
     }
   ],
   "quota": {
-    "remaining": 97116,
-    "used": 2884,
+    "remaining": 96972,
+    "used": 3028,
     "last": 0
   },
   "skipped": false,
   "skipReason": null,
-  "completedAt": "2026-07-25T23:21:18.614Z"
+  "completedAt": "2026-07-25T23:31:23.661Z"
 }
