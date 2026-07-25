@@ -1,6 +1,6 @@
 {
   "version": "v251",
-  "generatedAt": "2026-07-25T23:10:16.019Z",
+  "generatedAt": "2026-07-25T23:21:12.814Z",
   "provider": "The Odds API v4",
   "keyPresent": true,
   "regions": "uk",
@@ -61,7 +61,7 @@
       "sportKey": "soccer_argentina_primera_division",
       "sportTitle": "Primera División - Argentina",
       "score": 0.286,
-      "matches": 9
+      "matches": 8
     },
     {
       "league": "Liga MX U21",
@@ -168,14 +168,6 @@
       "matches": 16
     },
     {
-      "league": "Copa Paulista",
-      "country": "Brazil",
-      "sportKey": "soccer_brazil_campeonato",
-      "sportTitle": "Brazil Série A",
-      "score": 0.305,
-      "matches": 7
-    },
-    {
       "league": "Mineiro - 2",
       "country": "Brazil",
       "sportKey": "soccer_brazil_campeonato",
@@ -222,6 +214,14 @@
       "sportTitle": "Brazil Série A",
       "score": 0.466,
       "matches": 8
+    },
+    {
+      "league": "Copa Paulista",
+      "country": "Brazil",
+      "sportKey": "soccer_brazil_campeonato",
+      "sportTitle": "Brazil Série A",
+      "score": 0.305,
+      "matches": 6
     },
     {
       "league": "Primera Nacional",
@@ -1160,7 +1160,7 @@
       "matches": 1
     }
   ],
-  "matchesConsidered": 1379,
+  "matchesConsidered": 1370,
   "matchesMatched": 0,
   "matchesUpdated": 0,
   "fieldsFilled": 0,
@@ -1248,38 +1248,8 @@
       "bestScore": 0.143
     },
     {
-      "league": "COTIF Tournament",
-      "country": "World",
-      "reason": "No matching soccer sport key",
-      "bestScore": 0
-    },
-    {
-      "league": "Liga Femenina",
-      "country": "Colombia",
-      "reason": "No matching soccer sport key",
-      "bestScore": 0.143
-    },
-    {
-      "league": "CONCACAF U20",
-      "country": "World",
-      "reason": "No matching soccer sport key",
-      "bestScore": 0
-    },
-    {
       "league": "Primera A",
       "country": "Colombia",
-      "reason": "No matching soccer sport key",
-      "bestScore": 0.143
-    },
-    {
-      "league": "Liga Nacional",
-      "country": "Guatemala",
-      "reason": "No matching soccer sport key",
-      "bestScore": 0.143
-    },
-    {
-      "league": "Segunda División",
-      "country": "Venezuela",
       "reason": "No matching soccer sport key",
       "bestScore": 0.143
     },
@@ -1288,6 +1258,12 @@
       "country": "Paraguay",
       "reason": "No matching soccer sport key",
       "bestScore": 0.125
+    },
+    {
+      "league": "Liga Femenina",
+      "country": "Colombia",
+      "reason": "No matching soccer sport key",
+      "bestScore": 0.143
     },
     {
       "league": "Liga Panameña de Fútbol",
@@ -1312,6 +1288,18 @@
       "country": "New-Zealand",
       "reason": "No matching soccer sport key",
       "bestScore": 0.125
+    },
+    {
+      "league": "Liga Nacional",
+      "country": "Guatemala",
+      "reason": "No matching soccer sport key",
+      "bestScore": 0.143
+    },
+    {
+      "league": "CONCACAF U20",
+      "country": "World",
+      "reason": "No matching soccer sport key",
+      "bestScore": 0
     },
     {
       "league": "Northern NSW NPL",
@@ -1504,6 +1492,18 @@
       "country": "World",
       "reason": "No matching soccer sport key",
       "bestScore": 0.1
+    },
+    {
+      "league": "COTIF Tournament",
+      "country": "World",
+      "reason": "No matching soccer sport key",
+      "bestScore": 0
+    },
+    {
+      "league": "Segunda División",
+      "country": "Venezuela",
+      "reason": "No matching soccer sport key",
+      "bestScore": 0.143
     },
     {
       "league": "Úrvalsdeild",
@@ -2046,48 +2046,6 @@
       "reason": "No event/team match"
     },
     {
-      "league": "Copa Paulista",
-      "home": "XV de Piracicaba",
-      "away": "Comercial",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Copa Paulista",
-      "home": "Primavera SP",
-      "away": "Oeste",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Copa Paulista",
-      "home": "São José EC",
-      "away": "EC São Bernardo",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Copa Paulista",
-      "home": "Juventus",
-      "away": "Paulista",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Copa Paulista",
-      "home": "Linense",
-      "away": "Marília",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Copa Paulista",
-      "home": "Santo André",
-      "away": "São Caetano",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Copa Paulista",
-      "home": "Grêmio Prudente",
-      "away": "Bandeirante SP",
-      "reason": "No event/team match"
-    },
-    {
       "league": "Mineiro - 2",
       "home": "Uberaba",
       "away": "Mamoré",
@@ -2271,6 +2229,42 @@
       "league": "Serie C",
       "home": "Guarani Campinas",
       "away": "Inter De Limeira",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Copa Paulista",
+      "home": "Primavera SP",
+      "away": "Oeste",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Copa Paulista",
+      "home": "São José EC",
+      "away": "EC São Bernardo",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Copa Paulista",
+      "home": "Juventus",
+      "away": "Paulista",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Copa Paulista",
+      "home": "Linense",
+      "away": "Marília",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Copa Paulista",
+      "home": "Santo André",
+      "away": "São Caetano",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Copa Paulista",
+      "home": "Grêmio Prudente",
+      "away": "Bandeirante SP",
       "reason": "No event/team match"
     },
     {
@@ -2667,6 +2661,12 @@
       "league": "Second League - Group 4",
       "home": "Dinamo Barnaul",
       "away": "Khimik Dzerzhinsk",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Second League - Group 4",
+      "home": "Nosta",
+      "away": "Izhevsk",
       "reason": "No event/team match"
     }
   ],
@@ -3680,5 +3680,5 @@
   },
   "skipped": false,
   "skipReason": null,
-  "completedAt": "2026-07-25T23:10:21.945Z"
+  "completedAt": "2026-07-25T23:21:18.614Z"
 }
