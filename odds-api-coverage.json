@@ -1,6 +1,6 @@
 {
   "version": "v251",
-  "generatedAt": "2026-07-25T02:25:07.991Z",
+  "generatedAt": "2026-07-25T02:35:47.984Z",
   "provider": "The Odds API v4",
   "keyPresent": true,
   "regions": "uk",
@@ -37,14 +37,6 @@
       "sportKey": "soccer_argentina_primera_division",
       "sportTitle": "Primera División - Argentina",
       "score": 0.286,
-      "matches": 11
-    },
-    {
-      "league": "NWSL Women",
-      "country": "USA",
-      "sportKey": "soccer_usa_mls",
-      "sportTitle": "MLS",
-      "score": 0.323,
       "matches": 11
     },
     {
@@ -110,6 +102,14 @@
       "sportTitle": "La Liga - Spain",
       "score": 0.429,
       "matches": 11
+    },
+    {
+      "league": "NWSL Women",
+      "country": "USA",
+      "sportKey": "soccer_usa_mls",
+      "sportTitle": "MLS",
+      "score": 0.323,
+      "matches": 9
     },
     {
       "league": "Canadian Premier League",
@@ -1200,7 +1200,7 @@
       "matches": 1
     }
   ],
-  "matchesConsidered": 2123,
+  "matchesConsidered": 2119,
   "matchesMatched": 0,
   "matchesUpdated": 0,
   "fieldsFilled": 0,
@@ -1228,14 +1228,8 @@
       "bestScore": 0.125
     },
     {
-      "league": "Liga Pro Serie B",
-      "country": "Ecuador",
-      "reason": "No matching soccer sport key",
-      "bestScore": 0.25
-    },
-    {
-      "league": "Liga Nacional",
-      "country": "Guatemala",
+      "league": "Primera A",
+      "country": "Colombia",
       "reason": "No matching soccer sport key",
       "bestScore": 0.143
     },
@@ -1250,6 +1244,12 @@
       "country": "Panama",
       "reason": "No matching soccer sport key",
       "bestScore": 0.111
+    },
+    {
+      "league": "Liga Nacional",
+      "country": "Guatemala",
+      "reason": "No matching soccer sport key",
+      "bestScore": 0.143
     },
     {
       "league": "Victoria NPL 2",
@@ -1586,6 +1586,12 @@
       "country": "Kuwait",
       "reason": "No matching soccer sport key",
       "bestScore": 0.143
+    },
+    {
+      "league": "Liga Pro Serie B",
+      "country": "Ecuador",
+      "reason": "No matching soccer sport key",
+      "bestScore": 0.25
     },
     {
       "league": "Division Profesional - Clausura",
@@ -2748,18 +2754,6 @@
       "market": "double_chance"
     },
     {
-      "sportKey": "soccer_usa_mls",
-      "market": "btts"
-    },
-    {
-      "sportKey": "soccer_usa_mls",
-      "market": "draw_no_bet"
-    },
-    {
-      "sportKey": "soccer_usa_mls",
-      "market": "double_chance"
-    },
-    {
       "sportKey": "soccer_spain_la_liga",
       "market": "btts"
     },
@@ -2781,6 +2775,18 @@
     },
     {
       "sportKey": "soccer_brazil_serie_b",
+      "market": "double_chance"
+    },
+    {
+      "sportKey": "soccer_usa_mls",
+      "market": "btts"
+    },
+    {
+      "sportKey": "soccer_usa_mls",
+      "market": "draw_no_bet"
+    },
+    {
+      "sportKey": "soccer_usa_mls",
       "market": "double_chance"
     },
     {
@@ -3113,31 +3119,6 @@
       "statusCode": 422
     },
     {
-      "label": "soccer_usa_mls:base-combined",
-      "error": "Markets not supported by this endpoint: btts, double_chance, draw_no_bet",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_usa_mls:base-core",
-      "error": "Invalid commenceTimeFrom parameter. The format must be YYYY-MM-DDTHH:MM:SSZ, for example 2020-11-24T16:05:00Z",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_usa_mls:btts",
-      "error": "Markets not supported by this endpoint: btts",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_usa_mls:draw_no_bet",
-      "error": "Markets not supported by this endpoint: draw_no_bet",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_usa_mls:double_chance",
-      "error": "Markets not supported by this endpoint: double_chance",
-      "statusCode": 422
-    },
-    {
       "label": "soccer_spain_la_liga:base-combined",
       "error": "Markets not supported by this endpoint: btts, double_chance, draw_no_bet",
       "statusCode": 422
@@ -3184,6 +3165,31 @@
     },
     {
       "label": "soccer_brazil_serie_b:double_chance",
+      "error": "Markets not supported by this endpoint: double_chance",
+      "statusCode": 422
+    },
+    {
+      "label": "soccer_usa_mls:base-combined",
+      "error": "Markets not supported by this endpoint: btts, double_chance, draw_no_bet",
+      "statusCode": 422
+    },
+    {
+      "label": "soccer_usa_mls:base-core",
+      "error": "Invalid commenceTimeFrom parameter. The format must be YYYY-MM-DDTHH:MM:SSZ, for example 2020-11-24T16:05:00Z",
+      "statusCode": 422
+    },
+    {
+      "label": "soccer_usa_mls:btts",
+      "error": "Markets not supported by this endpoint: btts",
+      "statusCode": 422
+    },
+    {
+      "label": "soccer_usa_mls:draw_no_bet",
+      "error": "Markets not supported by this endpoint: draw_no_bet",
+      "statusCode": 422
+    },
+    {
+      "label": "soccer_usa_mls:double_chance",
       "error": "Markets not supported by this endpoint: double_chance",
       "statusCode": 422
     },
@@ -3720,5 +3726,5 @@
   },
   "skipped": false,
   "skipReason": null,
-  "completedAt": "2026-07-25T02:25:13.912Z"
+  "completedAt": "2026-07-25T02:36:02.062Z"
 }
