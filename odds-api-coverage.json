@@ -1,6 +1,6 @@
 {
   "version": "v251",
-  "generatedAt": "2026-07-25T02:04:32.613Z",
+  "generatedAt": "2026-07-25T02:14:46.430Z",
   "provider": "The Odds API v4",
   "keyPresent": true,
   "regions": "uk",
@@ -38,22 +38,6 @@
       "sportTitle": "Primera División - Argentina",
       "score": 0.286,
       "matches": 11
-    },
-    {
-      "league": "USL League Two",
-      "country": "USA",
-      "sportKey": "soccer_usa_mls",
-      "sportTitle": "MLS",
-      "score": 0.466,
-      "matches": 3
-    },
-    {
-      "league": "USL Championship",
-      "country": "USA",
-      "sportKey": "soccer_usa_mls",
-      "sportTitle": "MLS",
-      "score": 0.323,
-      "matches": 14
     },
     {
       "league": "NWSL Women",
@@ -110,6 +94,14 @@
       "sportTitle": "Primera División - Argentina",
       "score": 0.653,
       "matches": 9
+    },
+    {
+      "league": "USL League Two",
+      "country": "USA",
+      "sportKey": "soccer_usa_mls",
+      "sportTitle": "MLS",
+      "score": 0.466,
+      "matches": 1
     },
     {
       "league": "Primera Division",
@@ -728,6 +720,14 @@
       "matches": 5
     },
     {
+      "league": "Primera División",
+      "country": "Bolivia",
+      "sportKey": "soccer_argentina_primera_division",
+      "sportTitle": "Primera División - Argentina",
+      "score": 0.653,
+      "matches": 9
+    },
+    {
       "league": "Serie D",
       "country": "Brazil",
       "sportKey": "soccer_brazil_campeonato",
@@ -766,6 +766,14 @@
       "sportTitle": "Brazil Série A",
       "score": 0.305,
       "matches": 1
+    },
+    {
+      "league": "MLS Next Pro",
+      "country": "USA",
+      "sportKey": "soccer_usa_mls",
+      "sportTitle": "MLS",
+      "score": 1,
+      "matches": 16
     },
     {
       "league": "Serie A",
@@ -1192,7 +1200,7 @@
       "matches": 1
     }
   ],
-  "matchesConsidered": 1834,
+  "matchesConsidered": 2123,
   "matchesMatched": 0,
   "matchesUpdated": 0,
   "fieldsFilled": 0,
@@ -1218,30 +1226,6 @@
       "country": "Northern-Ireland",
       "reason": "No matching soccer sport key",
       "bestScore": 0.125
-    },
-    {
-      "league": "CONCACAF U20 - Qualification",
-      "country": "World",
-      "reason": "No matching soccer sport key",
-      "bestScore": 0.1
-    },
-    {
-      "league": "CONCACAF U20",
-      "country": "World",
-      "reason": "No matching soccer sport key",
-      "bestScore": 0
-    },
-    {
-      "league": "Primera B",
-      "country": "Colombia",
-      "reason": "No matching soccer sport key",
-      "bestScore": 0.143
-    },
-    {
-      "league": "Primera A",
-      "country": "Colombia",
-      "reason": "No matching soccer sport key",
-      "bestScore": 0.143
     },
     {
       "league": "Liga Pro Serie B",
@@ -2706,108 +2690,6 @@
       "home": "San Martin Formosa",
       "away": "Bartolomé Mitre",
       "reason": "No event/team match"
-    },
-    {
-      "league": "Torneo Federal A",
-      "home": "Sarmiento Resistencia",
-      "away": "Sol de América",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Torneo Federal A",
-      "home": "Tucuman Central",
-      "away": "Sarmiento de La Banda",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Primera División",
-      "home": "Always Ready",
-      "away": "San Antonio Bulo Bulo",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Primera División",
-      "home": "Guabirá",
-      "away": "Real Oruro",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Primera División",
-      "home": "Independiente Petrolero",
-      "away": "Oriente Petrolero",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Primera División",
-      "home": "Nacional Potosí",
-      "away": "Real Tomayapo",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Primera División",
-      "home": "Bolívar",
-      "away": "Real Potosí",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Primera División",
-      "home": "Blooming",
-      "away": "The Strongest",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Primera División",
-      "home": "Gualberto Villarroel SJ",
-      "away": "Universitario de Vinto",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Reserve League",
-      "home": "Banfield Res.",
-      "away": "Vélez Sársfield Res.",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Reserve League",
-      "home": "Talleres Córdoba Res.",
-      "away": "River Plate Res.",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Reserve League",
-      "home": "Boca Juniors Res.",
-      "away": "Belgrano Córdoba Res.",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Reserve League",
-      "home": "Barracas Central Res.",
-      "away": "Racing Club Res.",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "USL League Two",
-      "home": "Vermont Green",
-      "away": "Asheville City",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "USL League Two",
-      "home": "Flint City Bucks",
-      "away": "Peoria",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "USL League Two",
-      "home": "Laredo Heat",
-      "away": "Fort Lauderdale United",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "USL Championship",
-      "home": "Birmingham Legion",
-      "away": "New Mexico United",
-      "reason": "No event/team match"
     }
   ],
   "unsupportedMarkets": [
@@ -3814,11 +3696,11 @@
     }
   ],
   "quota": {
-    "remaining": 98784,
-    "used": 1216,
+    "remaining": 98708,
+    "used": 1292,
     "last": 0
   },
   "skipped": false,
   "skipReason": null,
-  "completedAt": "2026-07-25T02:04:39.126Z"
+  "completedAt": "2026-07-25T02:14:57.994Z"
 }
