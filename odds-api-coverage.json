@@ -1,6 +1,6 @@
 {
   "version": "v251",
-  "generatedAt": "2026-07-25T04:09:18.817Z",
+  "generatedAt": "2026-07-25T04:19:40.897Z",
   "provider": "The Odds API v4",
   "keyPresent": true,
   "regions": "uk",
@@ -40,19 +40,19 @@
       "matches": 8
     },
     {
-      "league": "Brasileiro Women",
-      "country": "Brazil",
-      "sportKey": "soccer_brazil_serie_b",
-      "sportTitle": "Brazil Série B",
-      "score": 0.466,
-      "matches": 7
-    },
-    {
       "league": "Primera Division",
       "country": "Nicaragua",
       "sportKey": "soccer_spain_la_liga",
       "sportTitle": "La Liga - Spain",
       "score": 0.5,
+      "matches": 6
+    },
+    {
+      "league": "Brasileiro Women",
+      "country": "Brazil",
+      "sportKey": "soccer_brazil_serie_b",
+      "sportTitle": "Brazil Série B",
+      "score": 0.466,
       "matches": 6
     },
     {
@@ -1200,7 +1200,7 @@
       "matches": 1
     }
   ],
-  "matchesConsidered": 2110,
+  "matchesConsidered": 2112,
   "matchesMatched": 0,
   "matchesUpdated": 0,
   "fieldsFilled": 0,
@@ -2748,18 +2748,6 @@
       "market": "double_chance"
     },
     {
-      "sportKey": "soccer_brazil_serie_b",
-      "market": "btts"
-    },
-    {
-      "sportKey": "soccer_brazil_serie_b",
-      "market": "draw_no_bet"
-    },
-    {
-      "sportKey": "soccer_brazil_serie_b",
-      "market": "double_chance"
-    },
-    {
       "sportKey": "soccer_spain_la_liga",
       "market": "btts"
     },
@@ -2772,15 +2760,15 @@
       "market": "double_chance"
     },
     {
-      "sportKey": "soccer_usa_mls",
+      "sportKey": "soccer_brazil_serie_b",
       "market": "btts"
     },
     {
-      "sportKey": "soccer_usa_mls",
+      "sportKey": "soccer_brazil_serie_b",
       "market": "draw_no_bet"
     },
     {
-      "sportKey": "soccer_usa_mls",
+      "sportKey": "soccer_brazil_serie_b",
       "market": "double_chance"
     },
     {
@@ -3125,31 +3113,6 @@
       "statusCode": 422
     },
     {
-      "label": "soccer_brazil_serie_b:base-combined",
-      "error": "Markets not supported by this endpoint: btts, double_chance, draw_no_bet",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_brazil_serie_b:base-core",
-      "error": "Invalid commenceTimeFrom parameter. The format must be YYYY-MM-DDTHH:MM:SSZ, for example 2020-11-24T16:05:00Z",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_brazil_serie_b:btts",
-      "error": "Markets not supported by this endpoint: btts",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_brazil_serie_b:draw_no_bet",
-      "error": "Markets not supported by this endpoint: draw_no_bet",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_brazil_serie_b:double_chance",
-      "error": "Markets not supported by this endpoint: double_chance",
-      "statusCode": 422
-    },
-    {
       "label": "soccer_spain_la_liga:base-combined",
       "error": "Markets not supported by this endpoint: btts, double_chance, draw_no_bet",
       "statusCode": 422
@@ -3175,27 +3138,27 @@
       "statusCode": 422
     },
     {
-      "label": "soccer_usa_mls:base-combined",
+      "label": "soccer_brazil_serie_b:base-combined",
       "error": "Markets not supported by this endpoint: btts, double_chance, draw_no_bet",
       "statusCode": 422
     },
     {
-      "label": "soccer_usa_mls:base-core",
+      "label": "soccer_brazil_serie_b:base-core",
       "error": "Invalid commenceTimeFrom parameter. The format must be YYYY-MM-DDTHH:MM:SSZ, for example 2020-11-24T16:05:00Z",
       "statusCode": 422
     },
     {
-      "label": "soccer_usa_mls:btts",
+      "label": "soccer_brazil_serie_b:btts",
       "error": "Markets not supported by this endpoint: btts",
       "statusCode": 422
     },
     {
-      "label": "soccer_usa_mls:draw_no_bet",
+      "label": "soccer_brazil_serie_b:draw_no_bet",
       "error": "Markets not supported by this endpoint: draw_no_bet",
       "statusCode": 422
     },
     {
-      "label": "soccer_usa_mls:double_chance",
+      "label": "soccer_brazil_serie_b:double_chance",
       "error": "Markets not supported by this endpoint: double_chance",
       "statusCode": 422
     },
@@ -3751,11 +3714,11 @@
     }
   ],
   "quota": {
-    "remaining": 98556,
-    "used": 1444,
+    "remaining": 98480,
+    "used": 1520,
     "last": 0
   },
   "skipped": false,
   "skipReason": null,
-  "completedAt": "2026-07-25T04:09:24.809Z"
+  "completedAt": "2026-07-25T04:20:01.558Z"
 }
