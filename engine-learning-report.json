@@ -1,13 +1,13 @@
 {
   "version": "v193",
-  "updated": "2026-07-25T18:01:48.697Z",
+  "updated": "2026-07-25T18:58:53.684Z",
   "summary": {
-    "settledFixtures": 171,
-    "settledDecisions": 331,
-    "reviewedLosses": 63,
-    "teamProfiles": 70,
-    "leagueProfiles": 14,
-    "matchupProfiles": 36,
+    "settledFixtures": 404,
+    "settledDecisions": 744,
+    "reviewedLosses": 148,
+    "teamProfiles": 298,
+    "leagueProfiles": 62,
+    "matchupProfiles": 151,
     "activePatternBreakers": 0,
     "upsetResistantTeams": 0
   },
@@ -19,23 +19,27 @@
   "commonMissCauses": [
     {
       "cause": "INPUT_COVERAGE_GAP",
-      "count": 63
+      "count": 148
     },
     {
-      "cause": "GOAL_SPIKE",
-      "count": 18
+      "cause": "FAVORITE_PATTERN_BREAK",
+      "count": 34
     },
     {
       "cause": "RESULT_DIRECTION_MISS",
-      "count": 14
+      "count": 31
+    },
+    {
+      "cause": "GOAL_SPIKE",
+      "count": 24
     },
     {
       "cause": "DRAW_TRAP",
-      "count": 10
+      "count": 16
     },
     {
       "cause": "TEMPO_COLLAPSE",
-      "count": 5
+      "count": 6
     },
     {
       "cause": "BOTH_ATTACKS_BROKE_SUPPRESSION",
@@ -43,308 +47,198 @@
     },
     {
       "cause": "UNDERDOG_OVERREACH",
+      "count": 2
+    },
+    {
+      "cause": "ONE_TEAM_FAILED_TO_SCORE",
       "count": 1
     }
   ],
   "recentLossReviews": [
     {
-      "matchDate": "2026-07-24",
-      "home": "VfL Wolfsburg",
-      "away": "Lyon",
-      "league": "Friendlies Clubs",
-      "engine": "League Bias",
-      "market": "Home Team Over 0.5 Goals",
-      "score": "0-2",
+      "matchDate": "2026-07-25",
+      "home": "Riverside",
+      "away": "Launceston City",
+      "league": "Tasmania NPL",
+      "engine": "Halves",
+      "market": "Second Half Over 0.5",
+      "score": "0-0",
       "causes": [
-        "RESULT_DIRECTION_MISS",
         "INPUT_COVERAGE_GAP"
       ]
     },
     {
-      "matchDate": "2026-07-24",
-      "home": "Landshut",
-      "away": "Erlbach",
-      "league": "Oberliga - Bayern Süd",
-      "engine": "League Bias",
-      "market": "Over 1.5 Goals",
+      "matchDate": "2026-07-25",
+      "home": "Adelaide City",
+      "away": "West Torrens Birkalla",
+      "league": "South Australia NPL",
+      "engine": "Halves",
+      "market": "Second Half Over 0.5",
       "score": "1-0",
       "causes": [
-        "TEMPO_COLLAPSE",
         "INPUT_COVERAGE_GAP"
       ]
     },
     {
-      "matchDate": "2026-07-24",
-      "home": "Flamengo W",
-      "away": "Gremio W",
-      "league": "Brasileiro Women",
-      "engine": "Trend",
-      "market": "Under 3.5 Goals",
-      "score": "2-2",
-      "causes": [
-        "GOAL_SPIKE",
-        "INPUT_COVERAGE_GAP"
-      ]
-    },
-    {
-      "matchDate": "2026-07-24",
-      "home": "Ballard",
-      "away": "Ventura County Fusion",
-      "league": "USL League Two",
+      "matchDate": "2026-07-25",
+      "home": "Manningham United Blues",
+      "away": "Melbourne Knights",
+      "league": "Victoria NPL 2",
       "engine": "Halves",
       "market": "Second Half Over 0.5",
-      "score": "1-2",
+      "score": "1-5",
       "causes": [
         "INPUT_COVERAGE_GAP"
       ]
     },
     {
-      "matchDate": "2026-07-24",
-      "home": "Heimstetten",
-      "away": "Sportfreunde Schwaig",
-      "league": "Oberliga - Bayern Süd",
+      "matchDate": "2026-07-25",
+      "home": "Adelaide Comets",
+      "away": "FK Beograd",
+      "league": "South Australia NPL",
+      "engine": "Ultra",
+      "market": "Double Chance X2",
+      "score": "1-0",
+      "causes": [
+        "FAVORITE_PATTERN_BREAK",
+        "INPUT_COVERAGE_GAP"
+      ]
+    },
+    {
+      "matchDate": "2026-07-25",
+      "home": "Northern Tigers",
+      "away": "Blacktown Spartans",
+      "league": "New South Wales NPL 2",
+      "engine": "Halves",
+      "market": "Second Half Over 0.5",
+      "score": "0-3",
+      "causes": [
+        "INPUT_COVERAGE_GAP"
+      ]
+    },
+    {
+      "matchDate": "2026-07-25",
+      "home": "Macarthur Rams",
+      "away": "Hurstville FC",
+      "league": "New South Wales NPL 2",
       "engine": "Normal",
-      "market": "Home Win",
+      "market": "Home DNB",
       "score": "1-2",
       "causes": [
-        "RESULT_DIRECTION_MISS",
+        "FAVORITE_PATTERN_BREAK",
         "INPUT_COVERAGE_GAP"
       ]
     },
     {
-      "matchDate": "2026-07-23",
-      "home": "Al Nejmeh",
-      "away": "Jwaaya FC",
-      "league": "Premier League",
-      "engine": "Halves",
-      "market": "Second Half Over 0.5",
-      "score": "0-0",
+      "matchDate": "2026-07-25",
+      "home": "Macarthur Rams",
+      "away": "Hurstville FC",
+      "league": "New South Wales NPL 2",
+      "engine": "Ultra",
+      "market": "Double Chance 1X",
+      "score": "1-2",
       "causes": [
+        "FAVORITE_PATTERN_BREAK",
         "INPUT_COVERAGE_GAP"
       ]
     },
     {
-      "matchDate": "2026-07-23",
-      "home": "Al Ahed",
-      "away": "Al Ansar",
-      "league": "Premier League",
-      "engine": "Halves",
-      "market": "Second Half Over 0.5",
-      "score": "0-0",
-      "causes": [
-        "INPUT_COVERAGE_GAP"
-      ]
-    },
-    {
-      "matchDate": "2026-07-22",
-      "home": "Nacional",
-      "away": "Leganes",
-      "league": "Friendlies Clubs",
-      "engine": "League Bias",
-      "market": "Home Team Over 0.5 Goals",
-      "score": "0-0",
-      "causes": [
-        "DRAW_TRAP",
-        "INPUT_COVERAGE_GAP"
-      ]
-    },
-    {
-      "matchDate": "2026-07-22",
-      "home": "Guingamp",
-      "away": "Concarneau",
-      "league": "Friendlies Clubs",
-      "engine": "League Bias",
+      "matchDate": "2026-07-25",
+      "home": "Maitland",
+      "away": "Broadmeadow Magic",
+      "league": "Northern NSW NPL",
+      "engine": "Trend",
       "market": "Home Team Over 0.5 Goals",
       "score": "0-1",
-      "causes": [
-        "RESULT_DIRECTION_MISS",
-        "INPUT_COVERAGE_GAP"
-      ]
-    },
-    {
-      "matchDate": "2026-07-22",
-      "home": "Lüneburger SK Hansa",
-      "away": "Hamburger SV II",
-      "league": "Friendlies Clubs",
-      "engine": "League Bias",
-      "market": "Home Team Over 0.5 Goals",
-      "score": "0-0",
-      "causes": [
-        "DRAW_TRAP",
-        "INPUT_COVERAGE_GAP"
-      ]
-    },
-    {
-      "matchDate": "2026-07-22",
-      "home": "America MG U17",
-      "away": "Botafogo U17",
-      "league": "Brasileiro U17",
-      "engine": "Halves",
-      "market": "Second Half Over 0.5",
-      "score": "0-0",
-      "causes": [
-        "INPUT_COVERAGE_GAP"
-      ]
-    },
-    {
-      "matchDate": "2026-07-22",
-      "home": "Sao Paulo U17",
-      "away": "Atlético Mineiro U17",
-      "league": "Brasileiro U17",
-      "engine": "League Bias",
-      "market": "Home Team Over 0.5 Goals",
-      "score": "0-0",
-      "causes": [
-        "DRAW_TRAP",
-        "INPUT_COVERAGE_GAP"
-      ]
-    },
-    {
-      "matchDate": "2026-07-22",
-      "home": "RB Bragantino U20",
-      "away": "Palmeiras U20",
-      "league": "Brasileiro U20 A",
-      "engine": "Trend",
-      "market": "Away Team Over 0.5 Goals",
-      "score": "0-0",
-      "causes": [
-        "DRAW_TRAP",
-        "INPUT_COVERAGE_GAP"
-      ]
-    },
-    {
-      "matchDate": "2026-07-22",
-      "home": "RB Bragantino U20",
-      "away": "Palmeiras U20",
-      "league": "Brasileiro U20 A",
-      "engine": "Halves",
-      "market": "Second Half Over 0.5",
-      "score": "0-0",
-      "causes": [
-        "INPUT_COVERAGE_GAP"
-      ]
-    },
-    {
-      "matchDate": "2026-07-21",
-      "home": "Swansea",
-      "away": "VfL Bochum",
-      "league": "Friendlies Clubs",
-      "engine": "League Bias",
-      "market": "Home Team Over 0.5 Goals",
-      "score": "0-2",
-      "causes": [
-        "RESULT_DIRECTION_MISS",
-        "INPUT_COVERAGE_GAP"
-      ]
-    },
-    {
-      "matchDate": "2026-07-21",
-      "home": "Levski Sofia",
-      "away": "Universitatea Craiova",
-      "league": "UEFA Champions League",
-      "engine": "League Bias",
-      "market": "Home Team Over 0.5 Goals",
-      "score": "0-0",
-      "causes": [
-        "DRAW_TRAP",
-        "INPUT_COVERAGE_GAP"
-      ]
-    },
-    {
-      "matchDate": "2026-07-20",
-      "home": "Independiente del Valle",
-      "away": "Emelec",
-      "league": "Liga Pro",
-      "engine": "League Bias",
-      "market": "Under 3.5 Goals",
-      "score": "6-1",
-      "causes": [
-        "GOAL_SPIKE",
-        "INPUT_COVERAGE_GAP"
-      ]
-    },
-    {
-      "matchDate": "2026-07-15",
-      "home": "Sutjeska",
-      "away": "Kairat Almaty",
-      "league": "UEFA Champions League",
-      "engine": "League Bias",
-      "market": "Home Team Over 0.5 Goals",
-      "score": "0-2",
       "causes": [
         "UNDERDOG_OVERREACH",
         "INPUT_COVERAGE_GAP"
       ]
     },
     {
-      "matchDate": "2026-07-15",
-      "home": "Orlando Pride W",
-      "away": "Boston Legacy W",
-      "league": "NWSL Women",
+      "matchDate": "2026-07-25",
+      "home": "Maitland",
+      "away": "Broadmeadow Magic",
+      "league": "Northern NSW NPL",
       "engine": "Halves",
-      "market": "Second Half Over 0.5",
+      "market": "First Half Over 0.5",
       "score": "0-1",
       "causes": [
         "INPUT_COVERAGE_GAP"
       ]
     },
     {
-      "matchDate": "2026-07-14",
-      "home": "Deportivo Merlo",
-      "away": "Real Pilar",
-      "league": "Primera B Metropolitana",
-      "engine": "League Bias",
-      "market": "Under 3.5 Goals",
-      "score": "3-2",
+      "matchDate": "2026-07-25",
+      "home": "Riverside Olympic U21",
+      "away": "Somerset",
+      "league": "Tasmania Northern Championship",
+      "engine": "Trend",
+      "market": "Away Team Over 0.5 Goals",
+      "score": "0-0",
       "causes": [
-        "GOAL_SPIKE",
+        "DRAW_TRAP",
         "INPUT_COVERAGE_GAP"
       ]
     },
     {
-      "matchDate": "2026-07-13",
-      "home": "Academica",
-      "away": "SF Glens",
-      "league": "USL League Two",
+      "matchDate": "2026-07-25",
+      "home": "SD Raiders",
+      "away": "Marconi Stallions",
+      "league": "New South Wales NPL",
       "engine": "Normal",
+      "market": "Away Win",
+      "score": "2-1",
+      "causes": [
+        "FAVORITE_PATTERN_BREAK",
+        "INPUT_COVERAGE_GAP"
+      ]
+    },
+    {
+      "matchDate": "2026-07-25",
+      "home": "SD Raiders",
+      "away": "Marconi Stallions",
+      "league": "New South Wales NPL",
+      "engine": "Ultra",
       "market": "Double Chance X2",
       "score": "2-1",
       "causes": [
-        "RESULT_DIRECTION_MISS",
+        "FAVORITE_PATTERN_BREAK",
         "INPUT_COVERAGE_GAP"
       ]
     },
     {
-      "matchDate": "2026-07-12",
-      "home": "Unión Villa Krause",
-      "away": "Flatirons Rush",
-      "league": "USL League Two",
-      "engine": "Halves",
-      "market": "Second Half Over 0.5",
-      "score": "0-1",
+      "matchDate": "2026-07-25",
+      "home": "SD Raiders",
+      "away": "Marconi Stallions",
+      "league": "New South Wales NPL",
+      "engine": "Elite",
+      "market": "Double Chance X2",
+      "score": "2-1",
       "causes": [
+        "FAVORITE_PATTERN_BREAK",
         "INPUT_COVERAGE_GAP"
       ]
     },
     {
-      "matchDate": "2026-07-12",
-      "home": "Dothan United",
-      "away": "Apotheos",
-      "league": "USL League Two",
-      "engine": "Halves",
-      "market": "Second Half Over 0.5",
-      "score": "3-0",
+      "matchDate": "2026-07-25",
+      "home": "SD Raiders",
+      "away": "Marconi Stallions",
+      "league": "New South Wales NPL",
+      "engine": "Apex",
+      "market": "Double Chance X2",
+      "score": "2-1",
       "causes": [
+        "FAVORITE_PATTERN_BREAK",
         "INPUT_COVERAGE_GAP"
       ]
     },
     {
-      "matchDate": "2026-07-12",
-      "home": "Northern Indiana",
-      "away": "Dayton Dutch Lions",
-      "league": "USL League Two",
-      "engine": "Trend",
-      "market": "Home Team Over 0.5 Goals",
+      "matchDate": "2026-07-25",
+      "home": "Perth RedStar",
+      "away": "Balcatta",
+      "league": "Western Australia NPL",
+      "engine": "Normal",
+      "market": "Home Win",
       "score": "0-0",
       "causes": [
         "DRAW_TRAP",
@@ -352,76 +246,193 @@
       ]
     },
     {
-      "matchDate": "2026-07-12",
-      "home": "Northern Indiana",
-      "away": "Dayton Dutch Lions",
-      "league": "USL League Two",
-      "engine": "Halves",
-      "market": "Second Half Over 0.5",
+      "matchDate": "2026-07-25",
+      "home": "Perth RedStar",
+      "away": "Balcatta",
+      "league": "Western Australia NPL",
+      "engine": "Strict",
+      "market": "Home Win",
       "score": "0-0",
       "causes": [
+        "DRAW_TRAP",
         "INPUT_COVERAGE_GAP"
       ]
     },
     {
-      "matchDate": "2026-07-11",
-      "home": "Sorrento",
-      "away": "Fremantle City",
+      "matchDate": "2026-07-25",
+      "home": "Perth RedStar",
+      "away": "Balcatta",
       "league": "Western Australia NPL",
       "engine": "Halves",
       "market": "Second Half Over 0.5",
-      "score": "0-2",
-      "causes": [
-        "INPUT_COVERAGE_GAP"
-      ]
-    },
-    {
-      "matchDate": "2026-07-11",
-      "home": "Hickory",
-      "away": "Asheville City",
-      "league": "USL League Two",
-      "engine": "Trend",
-      "market": "Away Team Over 0.5 Goals",
       "score": "0-0",
       "causes": [
-        "DRAW_TRAP",
         "INPUT_COVERAGE_GAP"
       ]
     },
     {
-      "matchDate": "2026-07-11",
-      "home": "PA Classics",
-      "away": "West Chester United",
-      "league": "USL League Two",
-      "engine": "League Bias",
-      "market": "Away Team Over 0.5 Goals",
+      "matchDate": "2026-07-25",
+      "home": "Gyeongju HNP",
+      "away": "Siheung Citizen",
+      "league": "K3 League",
+      "engine": "Ultra",
+      "market": "Double Chance X2",
       "score": "1-0",
       "causes": [
-        "RESULT_DIRECTION_MISS",
+        "FAVORITE_PATTERN_BREAK",
         "INPUT_COVERAGE_GAP"
       ]
     },
     {
-      "matchDate": "2026-07-05",
-      "home": "GFI",
-      "away": "Houston Sur",
-      "league": "USL League Two",
-      "engine": "Prime",
-      "market": "Under 3.5",
-      "score": "4-0",
+      "matchDate": "2026-07-25",
+      "home": "Gyeongju HNP",
+      "away": "Siheung Citizen",
+      "league": "K3 League",
+      "engine": "Elite",
+      "market": "Away DNB",
+      "score": "1-0",
       "causes": [
-        "GOAL_SPIKE",
+        "FAVORITE_PATTERN_BREAK",
         "INPUT_COVERAGE_GAP"
       ]
     },
     {
-      "matchDate": "2026-07-05",
-      "home": "Jackson Boom",
-      "away": "Mississippi Brilla",
-      "league": "USL League Two",
+      "matchDate": "2026-07-25",
+      "home": "Gyeongju HNP",
+      "away": "Siheung Citizen",
+      "league": "K3 League",
+      "engine": "Apex",
+      "market": "Away DNB",
+      "score": "1-0",
+      "causes": [
+        "FAVORITE_PATTERN_BREAK",
+        "INPUT_COVERAGE_GAP"
+      ]
+    },
+    {
+      "matchDate": "2026-07-25",
+      "home": "Gyeongju HNP",
+      "away": "Siheung Citizen",
+      "league": "K3 League",
+      "engine": "Trend",
+      "market": "Double Chance X2",
+      "score": "1-0",
+      "causes": [
+        "FAVORITE_PATTERN_BREAK",
+        "INPUT_COVERAGE_GAP"
+      ]
+    },
+    {
+      "matchDate": "2026-07-25",
+      "home": "Pocheon",
+      "away": "Daejeon Korail",
+      "league": "K3 League",
+      "engine": "Halves",
+      "market": "Second Half Over 0.5",
+      "score": "1-1",
+      "causes": [
+        "INPUT_COVERAGE_GAP"
+      ]
+    },
+    {
+      "matchDate": "2026-07-25",
+      "home": "St George City FA",
+      "away": "Sydney United",
+      "league": "New South Wales NPL",
       "engine": "Normal",
-      "market": "Under 2.5",
-      "score": "0-5",
+      "market": "Double Chance X2",
+      "score": "1-0",
+      "causes": [
+        "FAVORITE_PATTERN_BREAK",
+        "INPUT_COVERAGE_GAP"
+      ]
+    },
+    {
+      "matchDate": "2026-07-25",
+      "home": "St George City FA",
+      "away": "Sydney United",
+      "league": "New South Wales NPL",
+      "engine": "Ultra",
+      "market": "Double Chance X2",
+      "score": "1-0",
+      "causes": [
+        "FAVORITE_PATTERN_BREAK",
+        "INPUT_COVERAGE_GAP"
+      ]
+    },
+    {
+      "matchDate": "2026-07-25",
+      "home": "MetroStars",
+      "away": "West Adelaide",
+      "league": "South Australia NPL",
+      "engine": "Normal",
+      "market": "Home Win",
+      "score": "1-3",
+      "causes": [
+        "FAVORITE_PATTERN_BREAK",
+        "INPUT_COVERAGE_GAP"
+      ]
+    },
+    {
+      "matchDate": "2026-07-25",
+      "home": "MetroStars",
+      "away": "West Adelaide",
+      "league": "South Australia NPL",
+      "engine": "Strict",
+      "market": "Home Win",
+      "score": "1-3",
+      "causes": [
+        "FAVORITE_PATTERN_BREAK",
+        "INPUT_COVERAGE_GAP"
+      ]
+    },
+    {
+      "matchDate": "2026-07-25",
+      "home": "MetroStars",
+      "away": "West Adelaide",
+      "league": "South Australia NPL",
+      "engine": "Ultra",
+      "market": "Double Chance 1X",
+      "score": "1-3",
+      "causes": [
+        "FAVORITE_PATTERN_BREAK",
+        "INPUT_COVERAGE_GAP"
+      ]
+    },
+    {
+      "matchDate": "2026-07-25",
+      "home": "MetroStars",
+      "away": "West Adelaide",
+      "league": "South Australia NPL",
+      "engine": "Elite",
+      "market": "Home DNB",
+      "score": "1-3",
+      "causes": [
+        "FAVORITE_PATTERN_BREAK",
+        "INPUT_COVERAGE_GAP"
+      ]
+    },
+    {
+      "matchDate": "2026-07-25",
+      "home": "MetroStars",
+      "away": "West Adelaide",
+      "league": "South Australia NPL",
+      "engine": "Apex",
+      "market": "Home DNB",
+      "score": "1-3",
+      "causes": [
+        "FAVORITE_PATTERN_BREAK",
+        "INPUT_COVERAGE_GAP"
+      ]
+    },
+    {
+      "matchDate": "2026-07-25",
+      "home": "Gimcheon Sangmu FC",
+      "away": "Daejeon Citizen",
+      "league": "K League 1",
+      "engine": "League Bias",
+      "market": "Under 3.5 Goals",
+      "score": "3-2",
       "causes": [
         "GOAL_SPIKE",
         "INPUT_COVERAGE_GAP"
