@@ -1,7 +1,7 @@
 {
   "version": "v193",
   "schemaVersion": 1,
-  "updated": "2026-07-25T21:45:49.560Z",
+  "updated": "2026-07-25T22:39:55.294Z",
   "minimumSamples": {
     "teamFavorite": 5,
     "teamUnderdog": 5,
@@ -12,10 +12,10 @@
   },
   "decayHalfLifeDays": 120,
   "summary": {
-    "settledFixtures": 415,
-    "settledDecisions": 757,
+    "settledFixtures": 417,
+    "settledDecisions": 760,
     "reviewedLosses": 149,
-    "attachedUpcoming": 1716,
+    "attachedUpcoming": 1695,
     "highRiskUpcoming": 0,
     "stableUpcoming": 0
   },
@@ -19347,7 +19347,7 @@
           "mid": 0.5714,
           "upper": 0.8418
         },
-        "decayedWeight": 6.55
+        "decayedWeight": 6.54
       },
       "awayFavorites": {
         "sample": 2,
@@ -30386,7 +30386,7 @@
         "mid": 0.4074,
         "upper": 0.5403
       },
-      "decayedWeight": 52.75
+      "decayedWeight": 52.73
     },
     "1.01-1.35": {
       "sample": 26,
@@ -30407,7 +30407,7 @@
         "mid": 0.8077,
         "upper": 0.9149
       },
-      "decayedWeight": 25.35
+      "decayedWeight": 25.34
     },
     "1.36-1.60": {
       "sample": 34,
@@ -30449,7 +30449,7 @@
         "mid": 0.55,
         "upper": 0.6929
       },
-      "decayedWeight": 39.31
+      "decayedWeight": 39.3
     }
   },
   "contexts": {
@@ -32134,15 +32134,15 @@
       "hardVeto": false
     },
     "*|Halves|Second Half Over 0.5|unknown|other": {
-      "sample": 83,
-      "wins": 73,
+      "sample": 85,
+      "wins": 75,
       "losses": 10,
-      "winRate": 0.8795,
-      "lossRate": 0.1205,
+      "winRate": 0.8824,
+      "lossRate": 0.1176,
       "wilson": {
-        "lower": 0.7922,
-        "mid": 0.8795,
-        "upper": 0.9332
+        "lower": 0.7968,
+        "mid": 0.8824,
+        "upper": 0.9348
       },
       "adjustment": 2,
       "hardVeto": false
@@ -32372,15 +32372,15 @@
       "hardVeto": false
     },
     "*|League Bias|Home Team Over 0.5 Goals|unknown|other": {
-      "sample": 83,
-      "wins": 69,
+      "sample": 84,
+      "wins": 70,
       "losses": 14,
-      "winRate": 0.8313,
-      "lossRate": 0.1687,
+      "winRate": 0.8333,
+      "lossRate": 0.1667,
       "wilson": {
-        "lower": 0.7366,
-        "mid": 0.8313,
-        "upper": 0.8968
+        "lower": 0.7395,
+        "mid": 0.8333,
+        "upper": 0.898
       },
       "adjustment": 2,
       "hardVeto": false
@@ -33184,15 +33184,15 @@
       "hardVeto": false
     },
     "friendlies clubs|League Bias|Home Team Over 0.5 Goals|unknown|other": {
-      "sample": 63,
-      "wins": 51,
+      "sample": 64,
+      "wins": 52,
       "losses": 12,
-      "winRate": 0.8095,
-      "lossRate": 0.1905,
+      "winRate": 0.8125,
+      "lossRate": 0.1875,
       "wilson": {
-        "lower": 0.6959,
-        "mid": 0.8095,
-        "upper": 0.8875
+        "lower": 0.7003,
+        "mid": 0.8125,
+        "upper": 0.8894
       },
       "adjustment": 2,
       "hardVeto": false
@@ -36194,15 +36194,15 @@
       "hardVeto": false
     },
     "friendlies clubs|Halves|Second Half Over 0.5|unknown|other": {
-      "sample": 2,
-      "wins": 1,
+      "sample": 3,
+      "wins": 2,
       "losses": 1,
-      "winRate": 0.5,
-      "lossRate": 0.5,
+      "winRate": 0.6667,
+      "lossRate": 0.3333,
       "wilson": {
-        "lower": 0.0945,
-        "mid": 0.5,
-        "upper": 0.9055
+        "lower": 0.2077,
+        "mid": 0.6667,
+        "upper": 0.9385
       },
       "adjustment": 0,
       "hardVeto": false
@@ -38196,6 +38196,20 @@
       "hardVeto": false
     },
     "veikkausliiga|Halves|Second Half Over 0.5|1.61-1.85|other": {
+      "sample": 1,
+      "wins": 1,
+      "losses": 0,
+      "winRate": 1,
+      "lossRate": 0,
+      "wilson": {
+        "lower": 0.2065,
+        "mid": 1,
+        "upper": 1
+      },
+      "adjustment": 0,
+      "hardVeto": false
+    },
+    "brasiliense u20|Halves|Second Half Over 0.5|unknown|other": {
       "sample": 1,
       "wins": 1,
       "losses": 0,

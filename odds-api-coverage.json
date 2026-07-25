@@ -1,6 +1,6 @@
 {
   "version": "v251",
-  "generatedAt": "2026-07-25T22:36:26.828Z",
+  "generatedAt": "2026-07-25T22:33:59.691Z",
   "provider": "The Odds API v4",
   "keyPresent": true,
   "regions": "uk",
@@ -126,6 +126,14 @@
       "sportTitle": "Brazil Série B",
       "score": 0.466,
       "matches": 5
+    },
+    {
+      "league": "Liga Profesional Argentina",
+      "country": "Argentina",
+      "sportKey": "soccer_argentina_primera_division",
+      "sportTitle": "Primera División - Argentina",
+      "score": 0.78,
+      "matches": 18
     },
     {
       "league": "USL League One",
@@ -1160,7 +1168,7 @@
       "matches": 1
     }
   ],
-  "matchesConsidered": 1381,
+  "matchesConsidered": 1390,
   "matchesMatched": 0,
   "matchesUpdated": 0,
   "fieldsFilled": 0,
@@ -1206,6 +1214,12 @@
       "bestScore": 0.143
     },
     {
+      "league": "Liga Women",
+      "country": "Peru",
+      "reason": "No matching soccer sport key",
+      "bestScore": 0.143
+    },
+    {
       "league": "Segunda División",
       "country": "Uruguay",
       "reason": "No matching soccer sport key",
@@ -1236,8 +1250,26 @@
       "bestScore": 0.143
     },
     {
+      "league": "Liga Femenina",
+      "country": "Colombia",
+      "reason": "No matching soccer sport key",
+      "bestScore": 0.143
+    },
+    {
       "league": "Primera B",
       "country": "Colombia",
+      "reason": "No matching soccer sport key",
+      "bestScore": 0.143
+    },
+    {
+      "league": "Segunda División",
+      "country": "Peru",
+      "reason": "No matching soccer sport key",
+      "bestScore": 0.143
+    },
+    {
+      "league": "Segunda División",
+      "country": "Venezuela",
       "reason": "No matching soccer sport key",
       "bestScore": 0.143
     },
@@ -1246,12 +1278,6 @@
       "country": "World",
       "reason": "No matching soccer sport key",
       "bestScore": 0
-    },
-    {
-      "league": "Liga Women",
-      "country": "Peru",
-      "reason": "No matching soccer sport key",
-      "bestScore": 0.143
     },
     {
       "league": "COTIF Tournament",
@@ -2040,6 +2066,66 @@
       "reason": "No event/team match"
     },
     {
+      "league": "Serie C",
+      "home": "Ferroviária",
+      "away": "Maranhão",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Serie C",
+      "home": "Santa Cruz",
+      "away": "Figueirense",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Serie C",
+      "home": "Confiança",
+      "away": "AO Itabaiana",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Serie C",
+      "home": "Volta Redonda",
+      "away": "Anápolis",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Serie C",
+      "home": "Brusque",
+      "away": "Ituano",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Serie C",
+      "home": "Ypiranga-RS",
+      "away": "Barra",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Serie C",
+      "home": "Caxias",
+      "away": "Botafogo PB",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Serie C",
+      "home": "Amazonas",
+      "away": "Paysandu",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Serie C",
+      "home": "Floresta",
+      "away": "Maringá",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Serie C",
+      "home": "Guarani Campinas",
+      "away": "Inter De Limeira",
+      "reason": "No event/team match"
+    },
+    {
       "league": "Baiano - 2",
       "home": "SSA",
       "away": "Fluminense De Feira",
@@ -2655,18 +2741,6 @@
       "league": "Second League - Group 4",
       "home": "Pobeda Nizhniy Novgorod",
       "away": "Ural II",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Second League - Group 4",
-      "home": "Akron II",
-      "away": "Chelyabinsk II",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Second League - Group 4",
-      "home": "Dinamo Barnaul",
-      "away": "Khimik Dzerzhinsk",
       "reason": "No event/team match"
     }
   ],
@@ -3680,5 +3754,5 @@
   },
   "skipped": false,
   "skipReason": null,
-  "completedAt": "2026-07-25T22:36:46.952Z"
+  "completedAt": "2026-07-25T22:34:11.409Z"
 }
