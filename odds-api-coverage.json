@@ -1,6 +1,6 @@
 {
   "version": "v251",
-  "generatedAt": "2026-07-25T20:35:13.916Z",
+  "generatedAt": "2026-07-25T20:43:34.299Z",
   "provider": "The Odds API v4",
   "keyPresent": true,
   "regions": "uk",
@@ -37,7 +37,7 @@
       "sportKey": "soccer_brazil_campeonato",
       "sportTitle": "Brazil Série A",
       "score": 0.305,
-      "matches": 10
+      "matches": 9
     },
     {
       "league": "Football League - Lowland League",
@@ -109,7 +109,7 @@
       "sportKey": "soccer_argentina_primera_division",
       "sportTitle": "Primera División - Argentina",
       "score": 0.305,
-      "matches": 11
+      "matches": 10
     },
     {
       "league": "Catarinense - 2",
@@ -118,14 +118,6 @@
       "sportTitle": "Brazil Série A",
       "score": 0.305,
       "matches": 2
-    },
-    {
-      "league": "Ekstraklasa",
-      "country": "Poland",
-      "sportKey": "soccer_poland_ekstraklasa",
-      "sportTitle": "Ekstraklasa - Poland",
-      "score": 1,
-      "matches": 7
     },
     {
       "league": "First Division",
@@ -614,6 +606,14 @@
       "sportTitle": "Super League - Greece",
       "score": 0.653,
       "matches": 4
+    },
+    {
+      "league": "Ekstraklasa",
+      "country": "Poland",
+      "sportKey": "soccer_poland_ekstraklasa",
+      "sportTitle": "Ekstraklasa - Poland",
+      "score": 1,
+      "matches": 6
     },
     {
       "league": "Premier League",
@@ -1168,7 +1168,7 @@
       "matches": 1
     }
   ],
-  "matchesConsidered": 1429,
+  "matchesConsidered": 1425,
   "matchesMatched": 0,
   "matchesUpdated": 0,
   "fieldsFilled": 0,
@@ -1248,12 +1248,6 @@
       "country": "Ecuador",
       "reason": "No matching soccer sport key",
       "bestScore": 0.25
-    },
-    {
-      "league": "Super Liga",
-      "country": "Slovakia",
-      "reason": "No matching soccer sport key",
-      "bestScore": 0.125
     },
     {
       "league": "Division Profesional - Clausura",
@@ -1488,6 +1482,12 @@
       "country": "Romania",
       "reason": "No matching soccer sport key",
       "bestScore": 0.143
+    },
+    {
+      "league": "Super Liga",
+      "country": "Slovakia",
+      "reason": "No matching soccer sport key",
+      "bestScore": 0.125
     },
     {
       "league": "Super Liga",
@@ -2121,12 +2121,6 @@
     },
     {
       "league": "Brasiliense U20",
-      "home": "CFZ Brasilia U20",
-      "away": "ARUC U20",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Brasiliense U20",
       "home": "Ceilandense U20",
       "away": "Real Brasília U20",
       "reason": "No event/team match"
@@ -2676,6 +2670,12 @@
       "home": "Vasco da Gama U20",
       "away": "Santos U20",
       "reason": "No event/team match"
+    },
+    {
+      "league": "Mineiro U20",
+      "home": "Itabirito U20",
+      "away": "Athletic Club MG U20",
+      "reason": "No event/team match"
     }
   ],
   "unsupportedMarkets": [
@@ -2776,18 +2776,6 @@
       "market": "double_chance"
     },
     {
-      "sportKey": "soccer_poland_ekstraklasa",
-      "market": "btts"
-    },
-    {
-      "sportKey": "soccer_poland_ekstraklasa",
-      "market": "draw_no_bet"
-    },
-    {
-      "sportKey": "soccer_poland_ekstraklasa",
-      "market": "double_chance"
-    },
-    {
       "sportKey": "soccer_belgium_first_div",
       "market": "btts"
     },
@@ -2953,6 +2941,18 @@
     },
     {
       "sportKey": "soccer_sweden_allsvenskan",
+      "market": "double_chance"
+    },
+    {
+      "sportKey": "soccer_poland_ekstraklasa",
+      "market": "btts"
+    },
+    {
+      "sportKey": "soccer_poland_ekstraklasa",
+      "market": "draw_no_bet"
+    },
+    {
+      "sportKey": "soccer_poland_ekstraklasa",
       "market": "double_chance"
     },
     {
@@ -3202,31 +3202,6 @@
     },
     {
       "label": "soccer_brazil_serie_b:double_chance",
-      "error": "Markets not supported by this endpoint: double_chance",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_poland_ekstraklasa:base-combined",
-      "error": "Markets not supported by this endpoint: btts, double_chance, draw_no_bet",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_poland_ekstraklasa:base-core",
-      "error": "Invalid commenceTimeFrom parameter. The format must be YYYY-MM-DDTHH:MM:SSZ, for example 2020-11-24T16:05:00Z",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_poland_ekstraklasa:btts",
-      "error": "Markets not supported by this endpoint: btts",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_poland_ekstraklasa:draw_no_bet",
-      "error": "Markets not supported by this endpoint: draw_no_bet",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_poland_ekstraklasa:double_chance",
       "error": "Markets not supported by this endpoint: double_chance",
       "statusCode": 422
     },
@@ -3581,6 +3556,31 @@
       "statusCode": 422
     },
     {
+      "label": "soccer_poland_ekstraklasa:base-combined",
+      "error": "Markets not supported by this endpoint: btts, double_chance, draw_no_bet",
+      "statusCode": 422
+    },
+    {
+      "label": "soccer_poland_ekstraklasa:base-core",
+      "error": "Invalid commenceTimeFrom parameter. The format must be YYYY-MM-DDTHH:MM:SSZ, for example 2020-11-24T16:05:00Z",
+      "statusCode": 422
+    },
+    {
+      "label": "soccer_poland_ekstraklasa:btts",
+      "error": "Markets not supported by this endpoint: btts",
+      "statusCode": 422
+    },
+    {
+      "label": "soccer_poland_ekstraklasa:draw_no_bet",
+      "error": "Markets not supported by this endpoint: draw_no_bet",
+      "statusCode": 422
+    },
+    {
+      "label": "soccer_poland_ekstraklasa:double_chance",
+      "error": "Markets not supported by this endpoint: double_chance",
+      "statusCode": 422
+    },
+    {
       "label": "soccer_uefa_champs_league_qualification:base-combined",
       "error": "Markets not supported by this endpoint: btts, double_chance, draw_no_bet",
       "statusCode": 422
@@ -3688,5 +3688,5 @@
   },
   "skipped": false,
   "skipReason": null,
-  "completedAt": "2026-07-25T20:35:19.752Z"
+  "completedAt": "2026-07-25T20:43:54.332Z"
 }
