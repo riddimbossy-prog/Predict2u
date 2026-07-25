@@ -1,6 +1,6 @@
 {
   "version": "v251",
-  "generatedAt": "2026-07-25T01:12:31.656Z",
+  "generatedAt": "2026-07-25T01:22:30.333Z",
   "provider": "The Odds API v4",
   "keyPresent": true,
   "regions": "uk",
@@ -46,14 +46,6 @@
       "sportTitle": "MLS",
       "score": 0.466,
       "matches": 3
-    },
-    {
-      "league": "MLS Next Pro",
-      "country": "USA",
-      "sportKey": "soccer_usa_mls",
-      "sportTitle": "MLS",
-      "score": 1,
-      "matches": 14
     },
     {
       "league": "Brasileiro Women",
@@ -784,6 +776,14 @@
       "matches": 1
     },
     {
+      "league": "MLS Next Pro",
+      "country": "USA",
+      "sportKey": "soccer_usa_mls",
+      "sportTitle": "MLS",
+      "score": 1,
+      "matches": 13
+    },
+    {
       "league": "Serie A",
       "country": "Brazil",
       "sportKey": "soccer_brazil_campeonato",
@@ -968,7 +968,7 @@
       "matches": 2
     }
   ],
-  "matchesConsidered": 1842,
+  "matchesConsidered": 1838,
   "matchesMatched": 0,
   "matchesUpdated": 0,
   "fieldsFilled": 0,
@@ -994,24 +994,6 @@
       "country": "Northern-Ireland",
       "reason": "No matching soccer sport key",
       "bestScore": 0.125
-    },
-    {
-      "league": "CONCACAF U20 - Qualification",
-      "country": "World",
-      "reason": "No matching soccer sport key",
-      "bestScore": 0.1
-    },
-    {
-      "league": "CONCACAF U20",
-      "country": "World",
-      "reason": "No matching soccer sport key",
-      "bestScore": 0
-    },
-    {
-      "league": "Primera B",
-      "country": "Colombia",
-      "reason": "No matching soccer sport key",
-      "bestScore": 0.143
     },
     {
       "league": "Primera A",
@@ -1396,6 +1378,18 @@
       "country": "Colombia",
       "reason": "No matching soccer sport key",
       "bestScore": 0.143
+    },
+    {
+      "league": "Primera B",
+      "country": "Colombia",
+      "reason": "No matching soccer sport key",
+      "bestScore": 0.143
+    },
+    {
+      "league": "CONCACAF U20",
+      "country": "World",
+      "reason": "No matching soccer sport key",
+      "bestScore": 0
     },
     {
       "league": "Liga Pro",
@@ -2476,6 +2470,12 @@
       "home": "Vermont Green",
       "away": "Asheville City",
       "reason": "No event/team match"
+    },
+    {
+      "league": "USL League Two",
+      "home": "Flint City Bucks",
+      "away": "Peoria",
+      "reason": "No event/team match"
     }
   ],
   "unsupportedMarkets": [
@@ -3414,5 +3414,5 @@
   },
   "skipped": false,
   "skipReason": null,
-  "completedAt": "2026-07-25T01:12:50.580Z"
+  "completedAt": "2026-07-25T01:22:36.401Z"
 }
