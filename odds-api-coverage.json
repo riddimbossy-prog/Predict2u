@@ -1,6 +1,6 @@
 {
   "version": "v251",
-  "generatedAt": "2026-07-25T01:22:30.333Z",
+  "generatedAt": "2026-07-25T01:33:56.636Z",
   "provider": "The Odds API v4",
   "keyPresent": true,
   "regions": "uk",
@@ -54,14 +54,6 @@
       "sportTitle": "Brazil Série B",
       "score": 0.466,
       "matches": 7
-    },
-    {
-      "league": "Primera División",
-      "country": "Bolivia",
-      "sportKey": "soccer_argentina_primera_division",
-      "sportTitle": "Primera División - Argentina",
-      "score": 0.653,
-      "matches": 8
     },
     {
       "league": "Torneo Federal A",
@@ -736,6 +728,14 @@
       "matches": 5
     },
     {
+      "league": "Primera División",
+      "country": "Bolivia",
+      "sportKey": "soccer_argentina_primera_division",
+      "sportTitle": "Primera División - Argentina",
+      "score": 0.653,
+      "matches": 7
+    },
+    {
       "league": "Serie D",
       "country": "Brazil",
       "sportKey": "soccer_brazil_campeonato",
@@ -968,7 +968,7 @@
       "matches": 2
     }
   ],
-  "matchesConsidered": 1838,
+  "matchesConsidered": 1836,
   "matchesMatched": 0,
   "matchesUpdated": 0,
   "fieldsFilled": 0,
@@ -996,12 +996,6 @@
       "bestScore": 0.125
     },
     {
-      "league": "Primera A",
-      "country": "Colombia",
-      "reason": "No matching soccer sport key",
-      "bestScore": 0.143
-    },
-    {
       "league": "Liga Pro Serie B",
       "country": "Ecuador",
       "reason": "No matching soccer sport key",
@@ -1010,6 +1004,12 @@
     {
       "league": "Liga Nacional",
       "country": "Guatemala",
+      "reason": "No matching soccer sport key",
+      "bestScore": 0.143
+    },
+    {
+      "league": "Primera A",
+      "country": "Colombia",
       "reason": "No matching soccer sport key",
       "bestScore": 0.143
     },
@@ -1848,54 +1848,6 @@
       "reason": "No event/team match"
     },
     {
-      "league": "Primera División",
-      "home": "Aurora",
-      "away": "ABB",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Primera División",
-      "home": "Always Ready",
-      "away": "San Antonio Bulo Bulo",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Primera División",
-      "home": "Guabirá",
-      "away": "Real Oruro",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Primera División",
-      "home": "Independiente Petrolero",
-      "away": "Oriente Petrolero",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Primera División",
-      "home": "Nacional Potosí",
-      "away": "Real Tomayapo",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Primera División",
-      "home": "Bolívar",
-      "away": "Real Potosí",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Primera División",
-      "home": "Blooming",
-      "away": "The Strongest",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Primera División",
-      "home": "Gualberto Villarroel SJ",
-      "away": "Universitario de Vinto",
-      "reason": "No event/team match"
-    },
-    {
       "league": "Torneo Federal A",
       "home": "Sportivo Belgrano",
       "away": "Atletico Escobar",
@@ -2442,6 +2394,48 @@
       "reason": "No event/team match"
     },
     {
+      "league": "Primera División",
+      "home": "Always Ready",
+      "away": "San Antonio Bulo Bulo",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Primera División",
+      "home": "Guabirá",
+      "away": "Real Oruro",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Primera División",
+      "home": "Independiente Petrolero",
+      "away": "Oriente Petrolero",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Primera División",
+      "home": "Nacional Potosí",
+      "away": "Real Tomayapo",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Primera División",
+      "home": "Bolívar",
+      "away": "Real Potosí",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Primera División",
+      "home": "Blooming",
+      "away": "The Strongest",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Primera División",
+      "home": "Gualberto Villarroel SJ",
+      "away": "Universitario de Vinto",
+      "reason": "No event/team match"
+    },
+    {
       "league": "Reserve League",
       "home": "Banfield Res.",
       "away": "Vélez Sársfield Res.",
@@ -2475,6 +2469,12 @@
       "league": "USL League Two",
       "home": "Flint City Bucks",
       "away": "Peoria",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "USL League Two",
+      "home": "Laredo Heat",
+      "away": "Fort Lauderdale United",
       "reason": "No event/team match"
     }
   ],
@@ -3408,11 +3408,11 @@
     }
   ],
   "quota": {
-    "remaining": 98860,
-    "used": 1140,
+    "remaining": 98784,
+    "used": 1216,
     "last": 0
   },
   "skipped": false,
   "skipReason": null,
-  "completedAt": "2026-07-25T01:22:36.401Z"
+  "completedAt": "2026-07-25T01:34:06.394Z"
 }
