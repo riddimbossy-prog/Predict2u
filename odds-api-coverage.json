@@ -1,6 +1,6 @@
 {
   "version": "v251",
-  "generatedAt": "2026-07-25T20:43:34.299Z",
+  "generatedAt": "2026-07-25T20:45:13.487Z",
   "provider": "The Odds API v4",
   "keyPresent": true,
   "regions": "uk",
@@ -80,12 +80,28 @@
       "matches": 6
     },
     {
+      "league": "Primera Nacional",
+      "country": "Argentina",
+      "sportKey": "soccer_argentina_primera_division",
+      "sportTitle": "Primera División - Argentina",
+      "score": 0.513,
+      "matches": 18
+    },
+    {
+      "league": "Primera C",
+      "country": "Argentina",
+      "sportKey": "soccer_argentina_primera_division",
+      "sportTitle": "Primera División - Argentina",
+      "score": 0.513,
+      "matches": 10
+    },
+    {
       "league": "Catarinense U20",
       "country": "Brazil",
       "sportKey": "soccer_brazil_campeonato",
       "sportTitle": "Brazil Série A",
       "score": 0.305,
-      "matches": 3
+      "matches": 4
     },
     {
       "league": "Capixaba B",
@@ -109,7 +125,15 @@
       "sportKey": "soccer_argentina_primera_division",
       "sportTitle": "Primera División - Argentina",
       "score": 0.305,
-      "matches": 10
+      "matches": 11
+    },
+    {
+      "league": "Baiano U20",
+      "country": "Brazil",
+      "sportKey": "soccer_brazil_campeonato",
+      "sportTitle": "Brazil Série A",
+      "score": 0.305,
+      "matches": 1
     },
     {
       "league": "Catarinense - 2",
@@ -118,6 +142,14 @@
       "sportTitle": "Brazil Série A",
       "score": 0.305,
       "matches": 2
+    },
+    {
+      "league": "Ekstraklasa",
+      "country": "Poland",
+      "sportKey": "soccer_poland_ekstraklasa",
+      "sportTitle": "Ekstraklasa - Poland",
+      "score": 1,
+      "matches": 7
     },
     {
       "league": "First Division",
@@ -142,14 +174,6 @@
       "sportTitle": "Brazil Série A",
       "score": 0.305,
       "matches": 5
-    },
-    {
-      "league": "Primera B Metropolitana",
-      "country": "Argentina",
-      "sportKey": "soccer_argentina_primera_division",
-      "sportTitle": "Primera División - Argentina",
-      "score": 0.466,
-      "matches": 3
     },
     {
       "league": "Torneo Federal A",
@@ -1168,7 +1192,7 @@
       "matches": 1
     }
   ],
-  "matchesConsidered": 1425,
+  "matchesConsidered": 1451,
   "matchesMatched": 0,
   "matchesUpdated": 0,
   "fieldsFilled": 0,
@@ -1244,10 +1268,28 @@
       "bestScore": 0.143
     },
     {
+      "league": "Czech Liga",
+      "country": "Czech-Republic",
+      "reason": "No matching soccer sport key",
+      "bestScore": 0.143
+    },
+    {
+      "league": "First League",
+      "country": "Bulgaria",
+      "reason": "No matching soccer sport key",
+      "bestScore": 0.143
+    },
+    {
       "league": "Liga Pro Serie B",
       "country": "Ecuador",
       "reason": "No matching soccer sport key",
       "bestScore": 0.25
+    },
+    {
+      "league": "Super Liga",
+      "country": "Slovakia",
+      "reason": "No matching soccer sport key",
+      "bestScore": 0.125
     },
     {
       "league": "Division Profesional - Clausura",
@@ -1485,12 +1527,6 @@
     },
     {
       "league": "Super Liga",
-      "country": "Slovakia",
-      "reason": "No matching soccer sport key",
-      "bestScore": 0.125
-    },
-    {
-      "league": "Super Liga",
       "country": "Moldova",
       "reason": "No matching soccer sport key",
       "bestScore": 0.125
@@ -1500,12 +1536,6 @@
       "country": "Hungary",
       "reason": "No matching soccer sport key",
       "bestScore": 0
-    },
-    {
-      "league": "First League",
-      "country": "Bulgaria",
-      "reason": "No matching soccer sport key",
-      "bestScore": 0.143
     },
     {
       "league": "Super Liga",
@@ -2150,6 +2180,24 @@
       "reason": "No event/team match"
     },
     {
+      "league": "Catarinense U20",
+      "home": "Brusque U20",
+      "away": "Figueirense U20",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Cearense U20",
+      "home": "Anjos do Céu U20",
+      "away": "Tirol U20",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Cearense U20",
+      "home": "Ferroviario U20",
+      "away": "Fortaleza U20",
+      "reason": "No event/team match"
+    },
+    {
       "league": "Cearense U20",
       "home": "Quixadá U20",
       "away": "Floresta CE U20",
@@ -2165,6 +2213,12 @@
       "league": "Cearense U20",
       "home": "Tirol U20",
       "away": "Anjos do Céu U20",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Baiano U20",
+      "home": "Fluminense de Feira U20",
+      "away": "Bahia U20",
       "reason": "No event/team match"
     },
     {
@@ -2646,36 +2700,6 @@
       "home": "São Paulo U20",
       "away": "Botafogo SP U20",
       "reason": "No event/team match"
-    },
-    {
-      "league": "Paulista - U20",
-      "home": "Velo Clube U20",
-      "away": "SC Paulinense SP U20",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Carioca C",
-      "home": "Cardoso Moreira",
-      "away": "Búzios",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Brasileiro U20 A",
-      "home": "Palmeiras U20",
-      "away": "RB Bragantino U20",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Brasileiro U20 A",
-      "home": "Vasco da Gama U20",
-      "away": "Santos U20",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Mineiro U20",
-      "home": "Itabirito U20",
-      "away": "Athletic Club MG U20",
-      "reason": "No event/team match"
     }
   ],
   "unsupportedMarkets": [
@@ -2776,6 +2800,18 @@
       "market": "double_chance"
     },
     {
+      "sportKey": "soccer_poland_ekstraklasa",
+      "market": "btts"
+    },
+    {
+      "sportKey": "soccer_poland_ekstraklasa",
+      "market": "draw_no_bet"
+    },
+    {
+      "sportKey": "soccer_poland_ekstraklasa",
+      "market": "double_chance"
+    },
+    {
       "sportKey": "soccer_belgium_first_div",
       "market": "btts"
     },
@@ -2941,18 +2977,6 @@
     },
     {
       "sportKey": "soccer_sweden_allsvenskan",
-      "market": "double_chance"
-    },
-    {
-      "sportKey": "soccer_poland_ekstraklasa",
-      "market": "btts"
-    },
-    {
-      "sportKey": "soccer_poland_ekstraklasa",
-      "market": "draw_no_bet"
-    },
-    {
-      "sportKey": "soccer_poland_ekstraklasa",
       "market": "double_chance"
     },
     {
@@ -3202,6 +3226,31 @@
     },
     {
       "label": "soccer_brazil_serie_b:double_chance",
+      "error": "Markets not supported by this endpoint: double_chance",
+      "statusCode": 422
+    },
+    {
+      "label": "soccer_poland_ekstraklasa:base-combined",
+      "error": "Markets not supported by this endpoint: btts, double_chance, draw_no_bet",
+      "statusCode": 422
+    },
+    {
+      "label": "soccer_poland_ekstraklasa:base-core",
+      "error": "Invalid commenceTimeFrom parameter. The format must be YYYY-MM-DDTHH:MM:SSZ, for example 2020-11-24T16:05:00Z",
+      "statusCode": 422
+    },
+    {
+      "label": "soccer_poland_ekstraklasa:btts",
+      "error": "Markets not supported by this endpoint: btts",
+      "statusCode": 422
+    },
+    {
+      "label": "soccer_poland_ekstraklasa:draw_no_bet",
+      "error": "Markets not supported by this endpoint: draw_no_bet",
+      "statusCode": 422
+    },
+    {
+      "label": "soccer_poland_ekstraklasa:double_chance",
       "error": "Markets not supported by this endpoint: double_chance",
       "statusCode": 422
     },
@@ -3556,31 +3605,6 @@
       "statusCode": 422
     },
     {
-      "label": "soccer_poland_ekstraklasa:base-combined",
-      "error": "Markets not supported by this endpoint: btts, double_chance, draw_no_bet",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_poland_ekstraklasa:base-core",
-      "error": "Invalid commenceTimeFrom parameter. The format must be YYYY-MM-DDTHH:MM:SSZ, for example 2020-11-24T16:05:00Z",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_poland_ekstraklasa:btts",
-      "error": "Markets not supported by this endpoint: btts",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_poland_ekstraklasa:draw_no_bet",
-      "error": "Markets not supported by this endpoint: draw_no_bet",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_poland_ekstraklasa:double_chance",
-      "error": "Markets not supported by this endpoint: double_chance",
-      "statusCode": 422
-    },
-    {
       "label": "soccer_uefa_champs_league_qualification:base-combined",
       "error": "Markets not supported by this endpoint: btts, double_chance, draw_no_bet",
       "statusCode": 422
@@ -3688,5 +3712,5 @@
   },
   "skipped": false,
   "skipReason": null,
-  "completedAt": "2026-07-25T20:43:54.332Z"
+  "completedAt": "2026-07-25T20:45:19.384Z"
 }
