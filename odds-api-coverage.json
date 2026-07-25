@@ -1,6 +1,6 @@
 {
   "version": "v251",
-  "generatedAt": "2026-07-25T22:00:19.537Z",
+  "generatedAt": "2026-07-25T22:12:49.210Z",
   "provider": "The Odds API v4",
   "keyPresent": true,
   "regions": "uk",
@@ -112,14 +112,6 @@
       "matches": 8
     },
     {
-      "league": "Primera Nacional",
-      "country": "Argentina",
-      "sportKey": "soccer_argentina_primera_division",
-      "sportTitle": "Primera División - Argentina",
-      "score": 0.513,
-      "matches": 16
-    },
-    {
       "league": "Primera División",
       "country": "Chile",
       "sportKey": "soccer_chile_campeonato",
@@ -134,14 +126,6 @@
       "sportTitle": "Brazil Série B",
       "score": 0.466,
       "matches": 5
-    },
-    {
-      "league": "Serie D",
-      "country": "Brazil",
-      "sportKey": "soccer_brazil_campeonato",
-      "sportTitle": "Brazil Série A",
-      "score": 0.466,
-      "matches": 8
     },
     {
       "league": "Liga Profesional Argentina",
@@ -736,6 +720,14 @@
       "matches": 10
     },
     {
+      "league": "Serie D",
+      "country": "Brazil",
+      "sportKey": "soccer_brazil_campeonato",
+      "sportTitle": "Brazil Série A",
+      "score": 0.466,
+      "matches": 6
+    },
+    {
       "league": "Segunda División",
       "country": "Chile",
       "sportKey": "soccer_chile_campeonato",
@@ -1168,7 +1160,7 @@
       "matches": 1
     }
   ],
-  "matchesConsidered": 1393,
+  "matchesConsidered": 1389,
   "matchesMatched": 0,
   "matchesUpdated": 0,
   "fieldsFilled": 0,
@@ -1214,12 +1206,6 @@
       "bestScore": 0.143
     },
     {
-      "league": "Liga Women",
-      "country": "Peru",
-      "reason": "No matching soccer sport key",
-      "bestScore": 0.143
-    },
-    {
       "league": "Segunda División",
       "country": "Uruguay",
       "reason": "No matching soccer sport key",
@@ -1250,14 +1236,20 @@
       "bestScore": 0.143
     },
     {
-      "league": "Division Profesional - Clausura",
-      "country": "Paraguay",
+      "league": "Liga Femenina",
+      "country": "Colombia",
       "reason": "No matching soccer sport key",
-      "bestScore": 0.125
+      "bestScore": 0.143
     },
     {
-      "league": "Liga Nacional",
-      "country": "Guatemala",
+      "league": "Primera B",
+      "country": "Colombia",
+      "reason": "No matching soccer sport key",
+      "bestScore": 0.143
+    },
+    {
+      "league": "Segunda División",
+      "country": "Peru",
       "reason": "No matching soccer sport key",
       "bestScore": 0.143
     },
@@ -1274,19 +1266,7 @@
       "bestScore": 0
     },
     {
-      "league": "Liga Femenina",
-      "country": "Colombia",
-      "reason": "No matching soccer sport key",
-      "bestScore": 0.143
-    },
-    {
-      "league": "Primera B",
-      "country": "Colombia",
-      "reason": "No matching soccer sport key",
-      "bestScore": 0.143
-    },
-    {
-      "league": "Segunda División",
+      "league": "Liga Women",
       "country": "Peru",
       "reason": "No matching soccer sport key",
       "bestScore": 0.143
@@ -2060,48 +2040,6 @@
       "reason": "No event/team match"
     },
     {
-      "league": "Serie D",
-      "home": "Iguatu",
-      "away": "Nacional AM",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Serie D",
-      "home": "CSA",
-      "away": "São Luiz",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Serie D",
-      "home": "Gama",
-      "away": "America-RN",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Serie D",
-      "home": "ABC",
-      "away": "Luverdense",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Serie D",
-      "home": "ASA",
-      "away": "Cianorte",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Serie D",
-      "home": "Ferroviario",
-      "away": "Goiatuba EC",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Serie D",
-      "home": "Treze",
-      "away": "Sao Jose",
-      "reason": "No event/team match"
-    },
-    {
       "league": "Serie C",
       "home": "Ferroviária",
       "away": "Maranhão",
@@ -2522,6 +2460,42 @@
       "reason": "No event/team match"
     },
     {
+      "league": "Serie D",
+      "home": "CSA",
+      "away": "São Luiz",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Serie D",
+      "home": "Gama",
+      "away": "America-RN",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Serie D",
+      "home": "ABC",
+      "away": "Luverdense",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Serie D",
+      "home": "ASA",
+      "away": "Cianorte",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Serie D",
+      "home": "Ferroviario",
+      "away": "Goiatuba EC",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Serie D",
+      "home": "Treze",
+      "away": "Sao Jose",
+      "reason": "No event/team match"
+    },
+    {
       "league": "Brasileiro U20 A",
       "home": "Palmeiras U20",
       "away": "RB Bragantino U20",
@@ -2681,6 +2655,18 @@
       "league": "First League",
       "home": "FC Sochi",
       "away": "Arsenal Tula",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "First League",
+      "home": "KAMAZ",
+      "away": "Rotor Volgograd",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Second League - Group 4",
+      "home": "Pobeda Nizhniy Novgorod",
+      "away": "Ural II",
       "reason": "No event/team match"
     }
   ],
@@ -3694,5 +3680,5 @@
   },
   "skipped": false,
   "skipReason": null,
-  "completedAt": "2026-07-25T22:00:27.816Z"
+  "completedAt": "2026-07-25T22:13:09.933Z"
 }
