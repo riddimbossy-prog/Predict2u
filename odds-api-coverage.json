@@ -1,6 +1,6 @@
 {
   "version": "v251",
-  "generatedAt": "2026-07-25T04:30:24.855Z",
+  "generatedAt": "2026-07-25T04:51:03.168Z",
   "provider": "The Odds API v4",
   "keyPresent": true,
   "regions": "uk",
@@ -62,30 +62,6 @@
       "sportTitle": "MLS",
       "score": 0.466,
       "matches": 1
-    },
-    {
-      "league": "NWSL Women",
-      "country": "USA",
-      "sportKey": "soccer_usa_mls",
-      "sportTitle": "MLS",
-      "score": 0.323,
-      "matches": 9
-    },
-    {
-      "league": "Canadian Premier League",
-      "country": "Canada",
-      "sportKey": "soccer_epl",
-      "sportTitle": "EPL",
-      "score": 0.667,
-      "matches": 4
-    },
-    {
-      "league": "Primera División",
-      "country": "Costa-Rica",
-      "sportKey": "soccer_argentina_primera_division",
-      "sportTitle": "Primera División - Argentina",
-      "score": 0.606,
-      "matches": 5
     },
     {
       "league": "Liga MX",
@@ -752,6 +728,14 @@
       "matches": 1
     },
     {
+      "league": "NWSL Women",
+      "country": "USA",
+      "sportKey": "soccer_usa_mls",
+      "sportTitle": "MLS",
+      "score": 0.323,
+      "matches": 8
+    },
+    {
       "league": "MLS Next Pro",
       "country": "USA",
       "sportKey": "soccer_usa_mls",
@@ -808,6 +792,14 @@
       "matches": 14
     },
     {
+      "league": "Primera División",
+      "country": "Costa-Rica",
+      "sportKey": "soccer_argentina_primera_division",
+      "sportTitle": "Primera División - Argentina",
+      "score": 0.606,
+      "matches": 4
+    },
+    {
       "league": "Campeón de Campeones",
       "country": "Mexico",
       "sportKey": "soccer_mexico_ligamx",
@@ -846,6 +838,14 @@
       "sportTitle": "Brazil Série A",
       "score": 0.305,
       "matches": 1
+    },
+    {
+      "league": "Canadian Premier League",
+      "country": "Canada",
+      "sportKey": "soccer_epl",
+      "sportTitle": "EPL",
+      "score": 0.667,
+      "matches": 3
     },
     {
       "league": "Serie B",
@@ -1200,7 +1200,7 @@
       "matches": 1
     }
   ],
-  "matchesConsidered": 2105,
+  "matchesConsidered": 2101,
   "matchesMatched": 0,
   "matchesUpdated": 0,
   "fieldsFilled": 0,
@@ -1226,12 +1226,6 @@
       "country": "Northern-Ireland",
       "reason": "No matching soccer sport key",
       "bestScore": 0.125
-    },
-    {
-      "league": "Liga Nacional",
-      "country": "Guatemala",
-      "reason": "No matching soccer sport key",
-      "bestScore": 0.143
     },
     {
       "league": "Victoria NPL 2",
@@ -1580,6 +1574,12 @@
       "country": "Paraguay",
       "reason": "No matching soccer sport key",
       "bestScore": 0.125
+    },
+    {
+      "league": "Liga Nacional",
+      "country": "Guatemala",
+      "reason": "No matching soccer sport key",
+      "bestScore": 0.143
     },
     {
       "league": "Segunda División",
@@ -1999,36 +1999,6 @@
       "league": "Primera División - Apertura",
       "home": "Atletico Torque",
       "away": "Wanderers",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Primera División",
-      "home": "Deportivo Saprissa",
-      "away": "Perez Zeledon",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Primera División",
-      "home": "CS Cartagines",
-      "away": "Inter San Carlos",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Primera División",
-      "home": "Sporting San Jose",
-      "away": "LD Alajuelense",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Primera División",
-      "home": "San Carlos",
-      "away": "Municipal Liberia",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Primera División",
-      "home": "San Carlos",
-      "away": "Escorpiones Belén",
       "reason": "No event/team match"
     },
     {
@@ -2596,6 +2566,30 @@
       "reason": "No event/team match"
     },
     {
+      "league": "Primera División",
+      "home": "CS Cartagines",
+      "away": "Inter San Carlos",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Primera División",
+      "home": "Sporting San Jose",
+      "away": "LD Alajuelense",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Primera División",
+      "home": "San Carlos",
+      "away": "Municipal Liberia",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Primera División",
+      "home": "San Carlos",
+      "away": "Escorpiones Belén",
+      "reason": "No event/team match"
+    },
+    {
       "league": "Reserve League",
       "home": "Banfield Res.",
       "away": "Vélez Sársfield Res.",
@@ -2707,6 +2701,12 @@
       "league": "Liga MX",
       "home": "CF Pachuca",
       "away": "Club Queretaro",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Liga de Expansión MX",
+      "home": "Tlaxcala",
+      "away": "Leones Negros UDG",
       "reason": "No event/team match"
     }
   ],
@@ -3720,5 +3720,5 @@
   },
   "skipped": false,
   "skipReason": null,
-  "completedAt": "2026-07-25T04:30:43.645Z"
+  "completedAt": "2026-07-25T04:51:09.084Z"
 }
