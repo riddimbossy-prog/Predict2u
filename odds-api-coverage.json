@@ -1,6 +1,6 @@
 {
   "version": "v251",
-  "generatedAt": "2026-07-25T18:44:10.646Z",
+  "generatedAt": "2026-07-25T18:55:01.673Z",
   "provider": "The Odds API v4",
   "keyPresent": true,
   "regions": "uk",
@@ -80,28 +80,12 @@
       "matches": 7
     },
     {
-      "league": "Primera B",
-      "country": "Chile",
-      "sportKey": "soccer_chile_campeonato",
-      "sportTitle": "Primera División - Chile",
-      "score": 0.466,
-      "matches": 8
-    },
-    {
-      "league": "Second League - Group 3",
-      "country": "Russia",
-      "sportKey": "soccer_russia_premier_league",
-      "sportTitle": "Premier League - Russia",
-      "score": 0.43,
-      "matches": 2
-    },
-    {
       "league": "Cup",
       "country": "Austria",
       "sportKey": "soccer_england_efl_cup",
       "sportTitle": "EFL Cup",
       "score": 0.487,
-      "matches": 9
+      "matches": 8
     },
     {
       "league": "II Liga - East",
@@ -302,6 +286,14 @@
       "sportTitle": "Primera División - Chile",
       "score": 1,
       "matches": 6
+    },
+    {
+      "league": "Primera B",
+      "country": "Chile",
+      "sportKey": "soccer_chile_campeonato",
+      "sportTitle": "Primera División - Chile",
+      "score": 0.466,
+      "matches": 7
     },
     {
       "league": "Brasileiro Women",
@@ -574,6 +566,14 @@
       "sportTitle": "Super League - China",
       "score": 1,
       "matches": 5
+    },
+    {
+      "league": "Second League - Group 3",
+      "country": "Russia",
+      "sportKey": "soccer_russia_premier_league",
+      "sportTitle": "Premier League - Russia",
+      "score": 0.43,
+      "matches": 1
     },
     {
       "league": "Second League A - Division A Gold",
@@ -1184,7 +1184,7 @@
       "matches": 1
     }
   ],
-  "matchesConsidered": 1529,
+  "matchesConsidered": 1520,
   "matchesMatched": 0,
   "matchesUpdated": 0,
   "fieldsFilled": 0,
@@ -1193,12 +1193,6 @@
   "derivedHtftMatches": 0,
   "bookmakerRows": 0,
   "unmatched": [
-    {
-      "league": "Tasmania Northern Championship",
-      "country": "Australia",
-      "reason": "No matching soccer sport key",
-      "bestScore": 0.167
-    },
     {
       "league": "Friendlies Clubs",
       "country": "World",
@@ -1681,6 +1675,12 @@
     },
     {
       "league": "Tasmania Southern Championship",
+      "country": "Australia",
+      "reason": "No matching soccer sport key",
+      "bestScore": 0.167
+    },
+    {
+      "league": "Tasmania Northern Championship",
       "country": "Australia",
       "reason": "No matching soccer sport key",
       "bestScore": 0.167
@@ -2780,18 +2780,6 @@
       "market": "double_chance"
     },
     {
-      "sportKey": "soccer_chile_campeonato",
-      "market": "btts"
-    },
-    {
-      "sportKey": "soccer_chile_campeonato",
-      "market": "draw_no_bet"
-    },
-    {
-      "sportKey": "soccer_chile_campeonato",
-      "market": "double_chance"
-    },
-    {
       "sportKey": "soccer_england_efl_cup",
       "market": "btts"
     },
@@ -2897,6 +2885,18 @@
     },
     {
       "sportKey": "soccer_league_of_ireland",
+      "market": "double_chance"
+    },
+    {
+      "sportKey": "soccer_chile_campeonato",
+      "market": "btts"
+    },
+    {
+      "sportKey": "soccer_chile_campeonato",
+      "market": "draw_no_bet"
+    },
+    {
+      "sportKey": "soccer_chile_campeonato",
       "market": "double_chance"
     },
     {
@@ -3197,31 +3197,6 @@
       "statusCode": 422
     },
     {
-      "label": "soccer_chile_campeonato:base-combined",
-      "error": "Markets not supported by this endpoint: btts, double_chance, draw_no_bet",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_chile_campeonato:base-core",
-      "error": "Invalid commenceTimeFrom parameter. The format must be YYYY-MM-DDTHH:MM:SSZ, for example 2020-11-24T16:05:00Z",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_chile_campeonato:btts",
-      "error": "Markets not supported by this endpoint: btts",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_chile_campeonato:draw_no_bet",
-      "error": "Markets not supported by this endpoint: draw_no_bet",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_chile_campeonato:double_chance",
-      "error": "Markets not supported by this endpoint: double_chance",
-      "statusCode": 422
-    },
-    {
       "label": "soccer_england_efl_cup:base-combined",
       "error": "Markets not supported by this endpoint: btts, double_chance, draw_no_bet",
       "statusCode": 422
@@ -3443,6 +3418,31 @@
     },
     {
       "label": "soccer_league_of_ireland:double_chance",
+      "error": "Markets not supported by this endpoint: double_chance",
+      "statusCode": 422
+    },
+    {
+      "label": "soccer_chile_campeonato:base-combined",
+      "error": "Markets not supported by this endpoint: btts, double_chance, draw_no_bet",
+      "statusCode": 422
+    },
+    {
+      "label": "soccer_chile_campeonato:base-core",
+      "error": "Invalid commenceTimeFrom parameter. The format must be YYYY-MM-DDTHH:MM:SSZ, for example 2020-11-24T16:05:00Z",
+      "statusCode": 422
+    },
+    {
+      "label": "soccer_chile_campeonato:btts",
+      "error": "Markets not supported by this endpoint: btts",
+      "statusCode": 422
+    },
+    {
+      "label": "soccer_chile_campeonato:draw_no_bet",
+      "error": "Markets not supported by this endpoint: draw_no_bet",
+      "statusCode": 422
+    },
+    {
+      "label": "soccer_chile_campeonato:double_chance",
       "error": "Markets not supported by this endpoint: double_chance",
       "statusCode": 422
     },
@@ -3704,5 +3704,5 @@
   },
   "skipped": false,
   "skipReason": null,
-  "completedAt": "2026-07-25T18:44:21.632Z"
+  "completedAt": "2026-07-25T18:55:20.439Z"
 }
