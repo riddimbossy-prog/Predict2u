@@ -1,6 +1,6 @@
 {
   "version": "v251",
-  "generatedAt": "2026-07-25T19:52:05.989Z",
+  "generatedAt": "2026-07-25T19:49:19.406Z",
   "provider": "The Odds API v4",
   "keyPresent": true,
   "regions": "uk",
@@ -77,6 +77,22 @@
       "sportKey": "soccer_mexico_ligamx",
       "sportTitle": "Liga MX",
       "score": 0.68,
+      "matches": 7
+    },
+    {
+      "league": "Cup",
+      "country": "Austria",
+      "sportKey": "soccer_england_efl_cup",
+      "sportTitle": "EFL Cup",
+      "score": 0.487,
+      "matches": 6
+    },
+    {
+      "league": "II Liga - East",
+      "country": "Poland",
+      "sportKey": "soccer_poland_ekstraklasa",
+      "sportTitle": "Ekstraklasa - Poland",
+      "score": 0.323,
       "matches": 6
     },
     {
@@ -1184,7 +1200,7 @@
       "matches": 1
     }
   ],
-  "matchesConsidered": 1479,
+  "matchesConsidered": 1493,
   "matchesMatched": 0,
   "matchesUpdated": 0,
   "fieldsFilled": 0,
@@ -1230,6 +1246,12 @@
       "bestScore": 0.143
     },
     {
+      "league": "Liga Women",
+      "country": "Peru",
+      "reason": "No matching soccer sport key",
+      "bestScore": 0.143
+    },
+    {
       "league": "Segunda División",
       "country": "Uruguay",
       "reason": "No matching soccer sport key",
@@ -1258,6 +1280,18 @@
       "country": "Ukraine",
       "reason": "No matching soccer sport key",
       "bestScore": 0.143
+    },
+    {
+      "league": "Toto Cup Ligat Al",
+      "country": "Israel",
+      "reason": "No matching soccer sport key",
+      "bestScore": 0.111
+    },
+    {
+      "league": "NB I",
+      "country": "Hungary",
+      "reason": "No matching soccer sport key",
+      "bestScore": 0
     },
     {
       "league": "Liga I",
@@ -1339,12 +1373,6 @@
     },
     {
       "league": "Segunda División",
-      "country": "Peru",
-      "reason": "No matching soccer sport key",
-      "bestScore": 0.143
-    },
-    {
-      "league": "Liga Women",
       "country": "Peru",
       "reason": "No matching soccer sport key",
       "bestScore": 0.143
@@ -1518,12 +1546,6 @@
       "bestScore": 0.125
     },
     {
-      "league": "NB I",
-      "country": "Hungary",
-      "reason": "No matching soccer sport key",
-      "bestScore": 0
-    },
-    {
       "league": "Super Liga",
       "country": "Moldova",
       "reason": "No matching soccer sport key",
@@ -1582,12 +1604,6 @@
       "country": "Bulgaria",
       "reason": "No matching soccer sport key",
       "bestScore": 0.143
-    },
-    {
-      "league": "Toto Cup Ligat Al",
-      "country": "Israel",
-      "reason": "No matching soccer sport key",
-      "bestScore": 0.111
     },
     {
       "league": "UEFA Europa Conference League",
@@ -1833,6 +1849,12 @@
       "league": "Kakkonen - Lohko A",
       "home": "Union Plaani",
       "away": "PEPO",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Oberliga - Bayern Nord",
+      "home": "Stadeln",
+      "away": "Neudrossenfeld",
       "reason": "No event/team match"
     },
     {
@@ -2686,12 +2708,6 @@
       "home": "Botafogo",
       "away": "Gremio",
       "reason": "No event/team match"
-    },
-    {
-      "league": "Serie A",
-      "home": "Chapecoense-sc",
-      "away": "Vasco DA Gama",
-      "reason": "No event/team match"
     }
   ],
   "unsupportedMarkets": [
@@ -2788,7 +2804,19 @@
       "market": "draw_no_bet"
     },
     {
-      "sportKey": "soccer_epl",
+      "sportKey": "soccer_england_efl_cup",
+      "market": "double_chance"
+    },
+    {
+      "sportKey": "soccer_poland_ekstraklasa",
+      "market": "btts"
+    },
+    {
+      "sportKey": "soccer_poland_ekstraklasa",
+      "market": "draw_no_bet"
+    },
+    {
+      "sportKey": "soccer_poland_ekstraklasa",
       "market": "double_chance"
     },
     {
@@ -2801,6 +2829,30 @@
     },
     {
       "sportKey": "soccer_epl",
+      "market": "double_chance"
+    },
+    {
+      "sportKey": "soccer_uefa_champs_league_qualification",
+      "market": "btts"
+    },
+    {
+      "sportKey": "soccer_uefa_champs_league_qualification",
+      "market": "draw_no_bet"
+    },
+    {
+      "sportKey": "soccer_uefa_champs_league_qualification",
+      "market": "double_chance"
+    },
+    {
+      "sportKey": "soccer_norway_eliteserien",
+      "market": "btts"
+    },
+    {
+      "sportKey": "soccer_norway_eliteserien",
+      "market": "draw_no_bet"
+    },
+    {
+      "sportKey": "soccer_norway_eliteserien",
       "market": "double_chance"
     },
     {
@@ -2921,18 +2973,6 @@
     },
     {
       "sportKey": "soccer_china_superleague",
-      "market": "double_chance"
-    },
-    {
-      "sportKey": "soccer_england_efl_cup",
-      "market": "btts"
-    },
-    {
-      "sportKey": "soccer_england_efl_cup",
-      "market": "draw_no_bet"
-    },
-    {
-      "sportKey": "soccer_england_efl_cup",
       "market": "double_chance"
     },
     {
@@ -3193,6 +3233,56 @@
     },
     {
       "label": "soccer_mexico_ligamx:double_chance",
+      "error": "Markets not supported by this endpoint: double_chance",
+      "statusCode": 422
+    },
+    {
+      "label": "soccer_epl:base-combined",
+      "error": "Markets not supported by this endpoint: btts, double_chance, draw_no_bet",
+      "statusCode": 422
+    },
+    {
+      "label": "soccer_epl:base-core",
+      "error": "Invalid commenceTimeFrom parameter. The format must be YYYY-MM-DDTHH:MM:SSZ, for example 2020-11-24T16:05:00Z",
+      "statusCode": 422
+    },
+    {
+      "label": "soccer_epl:btts",
+      "error": "Markets not supported by this endpoint: btts",
+      "statusCode": 422
+    },
+    {
+      "label": "soccer_epl:draw_no_bet",
+      "error": "Markets not supported by this endpoint: draw_no_bet",
+      "statusCode": 422
+    },
+    {
+      "label": "soccer_england_efl_cup:double_chance",
+      "error": "Markets not supported by this endpoint: double_chance",
+      "statusCode": 422
+    },
+    {
+      "label": "soccer_poland_ekstraklasa:base-combined",
+      "error": "Markets not supported by this endpoint: btts, double_chance, draw_no_bet",
+      "statusCode": 422
+    },
+    {
+      "label": "soccer_poland_ekstraklasa:base-core",
+      "error": "Invalid commenceTimeFrom parameter. The format must be YYYY-MM-DDTHH:MM:SSZ, for example 2020-11-24T16:05:00Z",
+      "statusCode": 422
+    },
+    {
+      "label": "soccer_poland_ekstraklasa:btts",
+      "error": "Markets not supported by this endpoint: btts",
+      "statusCode": 422
+    },
+    {
+      "label": "soccer_poland_ekstraklasa:draw_no_bet",
+      "error": "Markets not supported by this endpoint: draw_no_bet",
+      "statusCode": 422
+    },
+    {
+      "label": "soccer_poland_ekstraklasa:double_chance",
       "error": "Markets not supported by this endpoint: double_chance",
       "statusCode": 422
     },
@@ -3497,31 +3587,6 @@
       "statusCode": 422
     },
     {
-      "label": "soccer_england_efl_cup:base-combined",
-      "error": "Markets not supported by this endpoint: btts, double_chance, draw_no_bet",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_england_efl_cup:base-core",
-      "error": "Invalid commenceTimeFrom parameter. The format must be YYYY-MM-DDTHH:MM:SSZ, for example 2020-11-24T16:05:00Z",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_england_efl_cup:btts",
-      "error": "Markets not supported by this endpoint: btts",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_england_efl_cup:draw_no_bet",
-      "error": "Markets not supported by this endpoint: draw_no_bet",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_england_efl_cup:double_chance",
-      "error": "Markets not supported by this endpoint: double_chance",
-      "statusCode": 422
-    },
-    {
       "label": "soccer_denmark_superliga:base-combined",
       "error": "Markets not supported by this endpoint: btts, double_chance, draw_no_bet",
       "statusCode": 422
@@ -3704,5 +3769,5 @@
   },
   "skipped": false,
   "skipReason": null,
-  "completedAt": "2026-07-25T19:52:25.103Z"
+  "completedAt": "2026-07-25T19:49:41.192Z"
 }
