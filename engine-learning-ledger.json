@@ -1,7 +1,7 @@
 {
   "version": "v193",
   "schemaVersion": 1,
-  "updated": "2026-07-25T05:00:06.203Z",
+  "updated": "2026-07-25T05:59:44.693Z",
   "minimumSamples": {
     "teamFavorite": 5,
     "teamUnderdog": 5,
@@ -5504,25 +5504,25 @@
       "league": "USL League Two",
       "leagueId": 256,
       "favorite": {
-        "sample": 6,
-        "wins": 4,
+        "sample": 5,
+        "wins": 3,
         "draws": 2,
         "losses": 0,
-        "winRate": 0.6672,
-        "drawRate": 0.3328,
+        "winRate": 0.594,
+        "drawRate": 0.406,
         "nonLossRate": 1,
         "upsetRate": 0,
         "nonLossWilson": {
-          "lower": 0.6097,
+          "lower": 0.5655,
           "mid": 1,
           "upper": 1
         },
         "winWilson": {
-          "lower": 0.3,
-          "mid": 0.6667,
-          "upper": 0.9032
+          "lower": 0.2307,
+          "mid": 0.6,
+          "upper": 0.8824
         },
-        "decayedWeight": 5.51
+        "decayedWeight": 4.51
       },
       "bands": {
         "1.01-1.35": {
@@ -5568,47 +5568,47 @@
           "decayedWeight": 0.91
         },
         "1.36-1.60": {
-          "sample": 2,
-          "wins": 1,
+          "sample": 1,
+          "wins": 0,
           "draws": 1,
           "losses": 0,
-          "winRate": 0.5173,
-          "drawRate": 0.4827,
+          "winRate": 0,
+          "drawRate": 1,
           "nonLossRate": 1,
           "upsetRate": 0,
           "nonLossWilson": {
-            "lower": 0.3424,
+            "lower": 0.2065,
             "mid": 1,
             "upper": 1
           },
           "winWilson": {
-            "lower": 0.0945,
-            "mid": 0.5,
-            "upper": 0.9055
+            "lower": 0,
+            "mid": 0,
+            "upper": 0.7935
           },
-          "decayedWeight": 1.92
+          "decayedWeight": 0.93
         }
       },
       "homeFavorites": {
-        "sample": 3,
-        "wins": 1,
+        "sample": 2,
+        "wins": 0,
         "draws": 2,
         "losses": 0,
-        "winRate": 0.3515,
-        "drawRate": 0.6485,
+        "winRate": 0,
+        "drawRate": 1,
         "nonLossRate": 1,
         "upsetRate": 0,
         "nonLossWilson": {
-          "lower": 0.4385,
+          "lower": 0.3424,
           "mid": 1,
           "upper": 1
         },
         "winWilson": {
-          "lower": 0.0615,
-          "mid": 0.3333,
-          "upper": 0.7923
+          "lower": 0,
+          "mid": 0,
+          "upper": 0.6576
         },
-        "decayedWeight": 2.83
+        "decayedWeight": 1.83
       },
       "awayFavorites": {
         "sample": 3,
@@ -5632,7 +5632,7 @@
         "decayedWeight": 2.68
       },
       "flags": [],
-      "stabilityScore": 91.7
+      "stabilityScore": 89.8
     },
     "281": {
       "league": "Primera División",
@@ -6962,7 +6962,7 @@
         "mid": 0.5,
         "upper": 0.732
       },
-      "decayedWeight": 13.01
+      "decayedWeight": 13
     },
     "1.01-1.35": {
       "sample": 7,
@@ -6986,25 +6986,25 @@
       "decayedWeight": 6.47
     },
     "1.36-1.60": {
-      "sample": 8,
-      "wins": 6,
+      "sample": 7,
+      "wins": 5,
       "draws": 2,
       "losses": 0,
-      "winRate": 0.7543,
-      "drawRate": 0.2457,
+      "winRate": 0.7175,
+      "drawRate": 0.2825,
       "nonLossRate": 1,
       "upsetRate": 0,
       "nonLossWilson": {
-        "lower": 0.6756,
+        "lower": 0.6457,
         "mid": 1,
         "upper": 1
       },
       "winWilson": {
-        "lower": 0.4093,
-        "mid": 0.75,
-        "upper": 0.9285
+        "lower": 0.3589,
+        "mid": 0.7143,
+        "upper": 0.9178
       },
-      "decayedWeight": 7.61
+      "decayedWeight": 6.61
     },
     "1.61-1.85": {
       "sample": 8,
@@ -9060,29 +9060,29 @@
       "hardVeto": false
     },
     "usl league two|Halves|Second Half Over 0.5|1.36-1.60|other": {
-      "sample": 2,
-      "wins": 1,
+      "sample": 1,
+      "wins": 0,
       "losses": 1,
-      "winRate": 0.5,
-      "lossRate": 0.5,
+      "winRate": 0,
+      "lossRate": 1,
       "wilson": {
-        "lower": 0.0945,
-        "mid": 0.5,
-        "upper": 0.9055
+        "lower": 0,
+        "mid": 0,
+        "upper": 0.7935
       },
       "adjustment": 0,
       "hardVeto": false
     },
     "*|Halves|Second Half Over 0.5|1.36-1.60|other": {
-      "sample": 5,
-      "wins": 4,
+      "sample": 4,
+      "wins": 3,
       "losses": 1,
-      "winRate": 0.8,
-      "lossRate": 0.2,
+      "winRate": 0.75,
+      "lossRate": 0.25,
       "wilson": {
-        "lower": 0.3755,
-        "mid": 0.8,
-        "upper": 0.9638
+        "lower": 0.3006,
+        "mid": 0.75,
+        "upper": 0.9544
       },
       "adjustment": 0,
       "hardVeto": false
