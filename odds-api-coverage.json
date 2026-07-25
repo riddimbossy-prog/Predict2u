@@ -1,6 +1,6 @@
 {
   "version": "v251",
-  "generatedAt": "2026-07-25T21:15:54.930Z",
+  "generatedAt": "2026-07-25T21:26:58.646Z",
   "provider": "The Odds API v4",
   "keyPresent": true,
   "regions": "uk",
@@ -112,28 +112,12 @@
       "matches": 8
     },
     {
-      "league": "Primera Nacional",
-      "country": "Argentina",
-      "sportKey": "soccer_argentina_primera_division",
-      "sportTitle": "Primera División - Argentina",
-      "score": 0.513,
-      "matches": 16
-    },
-    {
       "league": "Primera División",
       "country": "Chile",
       "sportKey": "soccer_chile_campeonato",
       "sportTitle": "Primera División - Chile",
       "score": 1,
       "matches": 6
-    },
-    {
-      "league": "Primera B",
-      "country": "Chile",
-      "sportKey": "soccer_chile_campeonato",
-      "sportTitle": "Primera División - Chile",
-      "score": 0.466,
-      "matches": 7
     },
     {
       "league": "Brasileiro Women",
@@ -144,28 +128,12 @@
       "matches": 5
     },
     {
-      "league": "Primera División",
-      "country": "Bolivia",
-      "sportKey": "soccer_argentina_primera_division",
-      "sportTitle": "Primera División - Argentina",
-      "score": 0.653,
-      "matches": 9
-    },
-    {
       "league": "Serie D",
       "country": "Brazil",
       "sportKey": "soccer_brazil_campeonato",
       "sportTitle": "Brazil Série A",
       "score": 0.466,
       "matches": 8
-    },
-    {
-      "league": "Mineiro - 2",
-      "country": "Brazil",
-      "sportKey": "soccer_brazil_campeonato",
-      "sportTitle": "Brazil Série A",
-      "score": 0.305,
-      "matches": 4
     },
     {
       "league": "Liga Profesional Argentina",
@@ -240,6 +208,14 @@
       "matches": 7
     },
     {
+      "league": "Mineiro - 2",
+      "country": "Brazil",
+      "sportKey": "soccer_brazil_campeonato",
+      "sportTitle": "Brazil Série A",
+      "score": 0.305,
+      "matches": 3
+    },
+    {
       "league": "Primera Division",
       "country": "El-Salvador",
       "sportKey": "soccer_spain_la_liga",
@@ -248,12 +224,36 @@
       "matches": 10
     },
     {
+      "league": "Primera División",
+      "country": "Bolivia",
+      "sportKey": "soccer_argentina_primera_division",
+      "sportTitle": "Primera División - Argentina",
+      "score": 0.653,
+      "matches": 8
+    },
+    {
       "league": "Serie A",
       "country": "Brazil",
       "sportKey": "soccer_brazil_campeonato",
       "sportTitle": "Brazil Série A",
       "score": 0.929,
       "matches": 20
+    },
+    {
+      "league": "Primera B",
+      "country": "Chile",
+      "sportKey": "soccer_chile_campeonato",
+      "sportTitle": "Primera División - Chile",
+      "score": 0.466,
+      "matches": 6
+    },
+    {
+      "league": "Primera Nacional",
+      "country": "Argentina",
+      "sportKey": "soccer_argentina_primera_division",
+      "sportTitle": "Primera División - Argentina",
+      "score": 0.513,
+      "matches": 15
     },
     {
       "league": "Paulista - U20",
@@ -1160,7 +1160,7 @@
       "matches": 1
     }
   ],
-  "matchesConsidered": 1408,
+  "matchesConsidered": 1400,
   "matchesMatched": 0,
   "matchesUpdated": 0,
   "fieldsFilled": 0,
@@ -1236,18 +1236,6 @@
       "bestScore": 0.143
     },
     {
-      "league": "Division Profesional - Clausura",
-      "country": "Paraguay",
-      "reason": "No matching soccer sport key",
-      "bestScore": 0.125
-    },
-    {
-      "league": "Liga Nacional",
-      "country": "Guatemala",
-      "reason": "No matching soccer sport key",
-      "bestScore": 0.143
-    },
-    {
       "league": "Segunda División",
       "country": "Venezuela",
       "reason": "No matching soccer sport key",
@@ -1300,6 +1288,18 @@
       "country": "Colombia",
       "reason": "No matching soccer sport key",
       "bestScore": 0.143
+    },
+    {
+      "league": "Liga Nacional",
+      "country": "Guatemala",
+      "reason": "No matching soccer sport key",
+      "bestScore": 0.143
+    },
+    {
+      "league": "Division Profesional - Clausura",
+      "country": "Paraguay",
+      "reason": "No matching soccer sport key",
+      "bestScore": 0.125
     },
     {
       "league": "Liga Panameña de Fútbol",
@@ -2088,30 +2088,6 @@
       "reason": "No event/team match"
     },
     {
-      "league": "Mineiro - 2",
-      "home": "Democrata SL",
-      "away": "CAP",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Mineiro - 2",
-      "home": "Uberaba",
-      "away": "Mamoré",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Mineiro - 2",
-      "home": "BOA",
-      "away": "Aymorés",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Mineiro - 2",
-      "home": "Valeriodoce",
-      "away": "Villa Nova",
-      "reason": "No event/team match"
-    },
-    {
       "league": "Serie C",
       "home": "Ferroviária",
       "away": "Maranhão",
@@ -2217,6 +2193,24 @@
       "league": "Copa Paulista",
       "home": "Grêmio Prudente",
       "away": "Bandeirante SP",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Mineiro - 2",
+      "home": "Uberaba",
+      "away": "Mamoré",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Mineiro - 2",
+      "home": "BOA",
+      "away": "Aymorés",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Mineiro - 2",
+      "home": "Valeriodoce",
+      "away": "Villa Nova",
       "reason": "No event/team match"
     },
     {
@@ -2667,6 +2661,12 @@
       "league": "First League",
       "home": "Torpedo Moskva",
       "away": "Shinnik Yaroslavl",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "First League",
+      "home": "FC Sochi",
+      "away": "Arsenal Tula",
       "reason": "No event/team match"
     }
   ],
@@ -3680,5 +3680,5 @@
   },
   "skipped": false,
   "skipReason": null,
-  "completedAt": "2026-07-25T21:16:06.487Z"
+  "completedAt": "2026-07-25T21:27:04.472Z"
 }
