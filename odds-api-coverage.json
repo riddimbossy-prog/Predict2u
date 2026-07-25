@@ -1,6 +1,6 @@
 {
   "version": "v251",
-  "generatedAt": "2026-07-25T19:06:05.539Z",
+  "generatedAt": "2026-07-25T19:16:57.608Z",
   "provider": "The Odds API v4",
   "keyPresent": true,
   "regions": "uk",
@@ -286,14 +286,6 @@
       "sportTitle": "Primera División - Chile",
       "score": 1,
       "matches": 6
-    },
-    {
-      "league": "Primera B",
-      "country": "Chile",
-      "sportKey": "soccer_chile_campeonato",
-      "sportTitle": "Primera División - Chile",
-      "score": 0.466,
-      "matches": 7
     },
     {
       "league": "Brasileiro Women",
@@ -1214,8 +1206,8 @@
       "bestScore": 0.143
     },
     {
-      "league": "Segunda División",
-      "country": "Uruguay",
+      "league": "Liga Women",
+      "country": "Peru",
       "reason": "No matching soccer sport key",
       "bestScore": 0.143
     },
@@ -1332,12 +1324,6 @@
       "country": "Ecuador",
       "reason": "No matching soccer sport key",
       "bestScore": 0.25
-    },
-    {
-      "league": "Super Liga",
-      "country": "Slovakia",
-      "reason": "No matching soccer sport key",
-      "bestScore": 0.125
     },
     {
       "league": "Division Profesional - Clausura",
@@ -2774,47 +2760,23 @@
       "market": "btts"
     },
     {
-      "sportKey": "soccer_poland_ekstraklasa",
+      "sportKey": "soccer_england_efl_cup",
       "market": "draw_no_bet"
     },
     {
-      "sportKey": "soccer_poland_ekstraklasa",
+      "sportKey": "soccer_england_efl_cup",
       "market": "double_chance"
     },
     {
-      "sportKey": "soccer_uefa_champs_league_qualification",
+      "sportKey": "soccer_chile_campeonato",
       "market": "btts"
     },
     {
-      "sportKey": "soccer_uefa_champs_league_qualification",
+      "sportKey": "soccer_chile_campeonato",
       "market": "draw_no_bet"
     },
     {
-      "sportKey": "soccer_uefa_champs_league_qualification",
-      "market": "double_chance"
-    },
-    {
-      "sportKey": "soccer_epl",
-      "market": "btts"
-    },
-    {
-      "sportKey": "soccer_epl",
-      "market": "draw_no_bet"
-    },
-    {
-      "sportKey": "soccer_epl",
-      "market": "double_chance"
-    },
-    {
-      "sportKey": "soccer_norway_eliteserien",
-      "market": "btts"
-    },
-    {
-      "sportKey": "soccer_norway_eliteserien",
-      "market": "draw_no_bet"
-    },
-    {
-      "sportKey": "soccer_norway_eliteserien",
+      "sportKey": "soccer_chile_campeonato",
       "market": "double_chance"
     },
     {
@@ -3248,102 +3210,27 @@
       "statusCode": 422
     },
     {
-      "label": "soccer_poland_ekstraklasa:base-combined",
+      "label": "soccer_chile_campeonato:base-combined",
       "error": "Markets not supported by this endpoint: btts, double_chance, draw_no_bet",
       "statusCode": 422
     },
     {
-      "label": "soccer_poland_ekstraklasa:base-core",
+      "label": "soccer_chile_campeonato:base-core",
       "error": "Invalid commenceTimeFrom parameter. The format must be YYYY-MM-DDTHH:MM:SSZ, for example 2020-11-24T16:05:00Z",
       "statusCode": 422
     },
     {
-      "label": "soccer_poland_ekstraklasa:btts",
+      "label": "soccer_chile_campeonato:btts",
       "error": "Markets not supported by this endpoint: btts",
       "statusCode": 422
     },
     {
-      "label": "soccer_poland_ekstraklasa:draw_no_bet",
+      "label": "soccer_chile_campeonato:draw_no_bet",
       "error": "Markets not supported by this endpoint: draw_no_bet",
       "statusCode": 422
     },
     {
-      "label": "soccer_poland_ekstraklasa:double_chance",
-      "error": "Markets not supported by this endpoint: double_chance",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_uefa_champs_league_qualification:base-combined",
-      "error": "Markets not supported by this endpoint: btts, double_chance, draw_no_bet",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_uefa_champs_league_qualification:base-core",
-      "error": "Invalid commenceTimeFrom parameter. The format must be YYYY-MM-DDTHH:MM:SSZ, for example 2020-11-24T16:05:00Z",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_uefa_champs_league_qualification:btts",
-      "error": "Markets not supported by this endpoint: btts",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_uefa_champs_league_qualification:draw_no_bet",
-      "error": "Markets not supported by this endpoint: draw_no_bet",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_uefa_champs_league_qualification:double_chance",
-      "error": "Markets not supported by this endpoint: double_chance",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_epl:base-combined",
-      "error": "Markets not supported by this endpoint: btts, double_chance, draw_no_bet",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_epl:base-core",
-      "error": "Invalid commenceTimeFrom parameter. The format must be YYYY-MM-DDTHH:MM:SSZ, for example 2020-11-24T16:05:00Z",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_epl:btts",
-      "error": "Markets not supported by this endpoint: btts",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_epl:draw_no_bet",
-      "error": "Markets not supported by this endpoint: draw_no_bet",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_epl:double_chance",
-      "error": "Markets not supported by this endpoint: double_chance",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_norway_eliteserien:base-combined",
-      "error": "Markets not supported by this endpoint: btts, double_chance, draw_no_bet",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_norway_eliteserien:base-core",
-      "error": "Invalid commenceTimeFrom parameter. The format must be YYYY-MM-DDTHH:MM:SSZ, for example 2020-11-24T16:05:00Z",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_norway_eliteserien:btts",
-      "error": "Markets not supported by this endpoint: btts",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_norway_eliteserien:draw_no_bet",
-      "error": "Markets not supported by this endpoint: draw_no_bet",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_norway_eliteserien:double_chance",
+      "label": "soccer_chile_campeonato:double_chance",
       "error": "Markets not supported by this endpoint: double_chance",
       "statusCode": 422
     },
@@ -3830,5 +3717,5 @@
   },
   "skipped": false,
   "skipReason": null,
-  "completedAt": "2026-07-25T19:06:15.606Z"
+  "completedAt": "2026-07-25T19:17:08.493Z"
 }
