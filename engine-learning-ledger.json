@@ -1,7 +1,7 @@
 {
   "version": "v193",
   "schemaVersion": 1,
-  "updated": "2026-07-25T01:47:08.697Z",
+  "updated": "2026-07-25T02:50:37.833Z",
   "minimumSamples": {
     "teamFavorite": 5,
     "teamUnderdog": 5,
@@ -12,10 +12,10 @@
   },
   "decayHalfLifeDays": 120,
   "summary": {
-    "settledFixtures": 167,
-    "settledDecisions": 326,
-    "reviewedLosses": 62,
-    "attachedUpcoming": 2428,
+    "settledFixtures": 170,
+    "settledDecisions": 330,
+    "reviewedLosses": 63,
+    "attachedUpcoming": 2420,
     "highRiskUpcoming": 0,
     "stableUpcoming": 0
   },
@@ -4577,6 +4577,132 @@
       "flags": [],
       "patternStability": 100,
       "favoriteReliability": 0
+    },
+    "74|flamengo w": {
+      "name": "Flamengo W",
+      "league": "Brasileiro Women",
+      "leagueId": 74,
+      "favorite": {
+        "sample": 1,
+        "wins": 0,
+        "draws": 1,
+        "losses": 0,
+        "winRate": 0,
+        "drawRate": 1,
+        "nonLossRate": 1,
+        "upsetRate": 0,
+        "nonLossWilson": {
+          "lower": 0.2065,
+          "mid": 1,
+          "upper": 1
+        },
+        "winWilson": {
+          "lower": 0,
+          "mid": 0,
+          "upper": 0.7935
+        },
+        "decayedWeight": 0.99
+      },
+      "underdog": {
+        "sample": 0,
+        "wins": 0,
+        "draws": 0,
+        "losses": 0,
+        "winRate": null,
+        "drawRate": null,
+        "nonLossRate": 0,
+        "upsetRate": null,
+        "nonLossWilson": {
+          "lower": null,
+          "mid": null,
+          "upper": null
+        },
+        "winWilson": {
+          "lower": null,
+          "mid": null,
+          "upper": null
+        },
+        "decayedWeight": 0
+      },
+      "favoriteBands": {
+        "1.61-1.85": {
+          "sample": 1,
+          "wins": 0,
+          "draws": 1,
+          "losses": 0,
+          "winRate": 0,
+          "drawRate": 1,
+          "nonLossRate": 1,
+          "upsetRate": 0,
+          "nonLossWilson": {
+            "lower": 0.2065,
+            "mid": 1,
+            "upper": 1
+          },
+          "winWilson": {
+            "lower": 0,
+            "mid": 0,
+            "upper": 0.7935
+          },
+          "decayedWeight": 0.99
+        }
+      },
+      "underdogUpsets": 0,
+      "flags": [],
+      "patternStability": 70,
+      "favoriteReliability": 100
+    },
+    "74|gremio w": {
+      "name": "Gremio W",
+      "league": "Brasileiro Women",
+      "leagueId": 74,
+      "favorite": {
+        "sample": 0,
+        "wins": 0,
+        "draws": 0,
+        "losses": 0,
+        "winRate": null,
+        "drawRate": null,
+        "nonLossRate": 0,
+        "upsetRate": null,
+        "nonLossWilson": {
+          "lower": null,
+          "mid": null,
+          "upper": null
+        },
+        "winWilson": {
+          "lower": null,
+          "mid": null,
+          "upper": null
+        },
+        "decayedWeight": 0
+      },
+      "underdog": {
+        "sample": 1,
+        "wins": 0,
+        "draws": 1,
+        "losses": 0,
+        "winRate": 0,
+        "drawRate": 1,
+        "nonLossRate": 1,
+        "upsetRate": 0,
+        "nonLossWilson": {
+          "lower": 0.2065,
+          "mid": 1,
+          "upper": 1
+        },
+        "winWilson": {
+          "lower": 0,
+          "mid": 0,
+          "upper": 0.7935
+        },
+        "decayedWeight": 0.99
+      },
+      "favoriteBands": {},
+      "underdogUpsets": 0,
+      "flags": [],
+      "patternStability": 100,
+      "favoriteReliability": 0
     }
   },
   "leagues": {
@@ -4734,6 +4860,98 @@
       },
       "flags": [],
       "stabilityScore": 86.1
+    },
+    "74": {
+      "league": "Brasileiro Women",
+      "leagueId": 74,
+      "favorite": {
+        "sample": 1,
+        "wins": 0,
+        "draws": 1,
+        "losses": 0,
+        "winRate": 0,
+        "drawRate": 1,
+        "nonLossRate": 1,
+        "upsetRate": 0,
+        "nonLossWilson": {
+          "lower": 0.2065,
+          "mid": 1,
+          "upper": 1
+        },
+        "winWilson": {
+          "lower": 0,
+          "mid": 0,
+          "upper": 0.7935
+        },
+        "decayedWeight": 0.99
+      },
+      "bands": {
+        "1.61-1.85": {
+          "sample": 1,
+          "wins": 0,
+          "draws": 1,
+          "losses": 0,
+          "winRate": 0,
+          "drawRate": 1,
+          "nonLossRate": 1,
+          "upsetRate": 0,
+          "nonLossWilson": {
+            "lower": 0.2065,
+            "mid": 1,
+            "upper": 1
+          },
+          "winWilson": {
+            "lower": 0,
+            "mid": 0,
+            "upper": 0.7935
+          },
+          "decayedWeight": 0.99
+        }
+      },
+      "homeFavorites": {
+        "sample": 1,
+        "wins": 0,
+        "draws": 1,
+        "losses": 0,
+        "winRate": 0,
+        "drawRate": 1,
+        "nonLossRate": 1,
+        "upsetRate": 0,
+        "nonLossWilson": {
+          "lower": 0.2065,
+          "mid": 1,
+          "upper": 1
+        },
+        "winWilson": {
+          "lower": 0,
+          "mid": 0,
+          "upper": 0.7935
+        },
+        "decayedWeight": 0.99
+      },
+      "awayFavorites": {
+        "sample": 0,
+        "wins": 0,
+        "draws": 0,
+        "losses": 0,
+        "winRate": null,
+        "drawRate": null,
+        "nonLossRate": 0,
+        "upsetRate": null,
+        "nonLossWilson": {
+          "lower": null,
+          "mid": null,
+          "upper": null
+        },
+        "winWilson": {
+          "lower": null,
+          "mid": null,
+          "upper": null
+        },
+        "decayedWeight": 0
+      },
+      "flags": [],
+      "stabilityScore": 75
     },
     "131": {
       "league": "Primera B Metropolitana",
@@ -5648,7 +5866,7 @@
           "mid": 0.6,
           "upper": 0.8824
         },
-        "decayedWeight": 4.52
+        "decayedWeight": 4.51
       },
       "bands": {
         "1.01-1.35": {
@@ -7186,6 +7404,34 @@
         "decayedWeight": 0.99
       },
       "flags": []
+    },
+    "74|flamengo w|gremio w": {
+      "home": "Flamengo W",
+      "away": "Gremio W",
+      "league": "Brasileiro Women",
+      "leagueId": 74,
+      "favorite": {
+        "sample": 1,
+        "wins": 0,
+        "draws": 1,
+        "losses": 0,
+        "winRate": 0,
+        "drawRate": 1,
+        "nonLossRate": 1,
+        "upsetRate": 0,
+        "nonLossWilson": {
+          "lower": 0.2065,
+          "mid": 1,
+          "upper": 1
+        },
+        "winWilson": {
+          "lower": 0,
+          "mid": 0,
+          "upper": 0.7935
+        },
+        "decayedWeight": 0.99
+      },
+      "flags": []
     }
   },
   "oddsBands": {
@@ -7208,7 +7454,7 @@
         "mid": 0.5,
         "upper": 0.732
       },
-      "decayedWeight": 13.02
+      "decayedWeight": 13.01
     },
     "1.01-1.35": {
       "sample": 7,
@@ -7253,25 +7499,25 @@
       "decayedWeight": 6.62
     },
     "1.61-1.85": {
-      "sample": 9,
+      "sample": 10,
       "wins": 5,
-      "draws": 2,
+      "draws": 3,
       "losses": 2,
-      "winRate": 0.5587,
-      "drawRate": 0.2203,
-      "nonLossRate": 0.779,
-      "upsetRate": 0.221,
+      "winRate": 0.5003,
+      "drawRate": 0.3018,
+      "nonLossRate": 0.8021,
+      "upsetRate": 0.1979,
       "nonLossWilson": {
-        "lower": 0.4526,
-        "mid": 0.7778,
-        "upper": 0.9368
+        "lower": 0.4902,
+        "mid": 0.8,
+        "upper": 0.9433
       },
       "winWilson": {
-        "lower": 0.2666,
-        "mid": 0.5556,
-        "upper": 0.8112
+        "lower": 0.2366,
+        "mid": 0.5,
+        "upper": 0.7634
       },
-      "decayedWeight": 8.51
+      "decayedWeight": 9.51
     }
   },
   "contexts": {
@@ -8956,15 +9202,15 @@
       "hardVeto": false
     },
     "*|Halves|Second Half Over 0.5|unknown|other": {
-      "sample": 33,
-      "wins": 24,
+      "sample": 34,
+      "wins": 25,
       "losses": 9,
-      "winRate": 0.7273,
-      "lossRate": 0.2727,
+      "winRate": 0.7353,
+      "lossRate": 0.2647,
       "wilson": {
-        "lower": 0.5578,
-        "mid": 0.7273,
-        "upper": 0.8493
+        "lower": 0.5688,
+        "mid": 0.7353,
+        "upper": 0.854
       },
       "adjustment": 0,
       "hardVeto": false
@@ -9488,13 +9734,13 @@
       "hardVeto": false
     },
     "*|Halves|Second Half Over 0.5|1.61-1.85|other": {
-      "sample": 3,
-      "wins": 3,
+      "sample": 4,
+      "wins": 4,
       "losses": 0,
       "winRate": 1,
       "lossRate": 0,
       "wilson": {
-        "lower": 0.4385,
+        "lower": 0.5101,
         "mid": 1,
         "upper": 1
       },
@@ -10383,6 +10629,20 @@
       "adjustment": 0,
       "hardVeto": false
     },
+    "premiership women|Halves|Second Half Over 0.5|unknown|other": {
+      "sample": 1,
+      "wins": 1,
+      "losses": 0,
+      "winRate": 1,
+      "lossRate": 0,
+      "wilson": {
+        "lower": 0.2065,
+        "mid": 1,
+        "upper": 1
+      },
+      "adjustment": 0,
+      "hardVeto": false
+    },
     "segunda divisi n|Trend|Under 3.5 Goals|1.61-1.85|other": {
       "sample": 1,
       "wins": 1,
@@ -10398,6 +10658,34 @@
       "hardVeto": false
     },
     "*|Trend|Under 3.5 Goals|1.61-1.85|other": {
+      "sample": 2,
+      "wins": 1,
+      "losses": 1,
+      "winRate": 0.5,
+      "lossRate": 0.5,
+      "wilson": {
+        "lower": 0.0945,
+        "mid": 0.5,
+        "upper": 0.9055
+      },
+      "adjustment": 0,
+      "hardVeto": false
+    },
+    "brasileiro women|Trend|Under 3.5 Goals|1.61-1.85|other": {
+      "sample": 1,
+      "wins": 0,
+      "losses": 1,
+      "winRate": 0,
+      "lossRate": 1,
+      "wilson": {
+        "lower": 0,
+        "mid": 0,
+        "upper": 0.7935
+      },
+      "adjustment": 0,
+      "hardVeto": false
+    },
+    "brasileiro women|Halves|Second Half Over 0.5|1.61-1.85|other": {
       "sample": 1,
       "wins": 1,
       "losses": 0,
@@ -10426,13 +10714,13 @@
       "hardVeto": false
     },
     "*|Trend|Double Chance X2|unknown|other": {
-      "sample": 1,
-      "wins": 1,
+      "sample": 2,
+      "wins": 2,
       "losses": 0,
       "winRate": 1,
       "lossRate": 0,
       "wilson": {
-        "lower": 0.2065,
+        "lower": 0.3424,
         "mid": 1,
         "upper": 1
       },
@@ -10536,6 +10824,20 @@
       },
       "adjustment": 0,
       "hardVeto": false
+    },
+    "catarinense 2|Trend|Double Chance X2|unknown|other": {
+      "sample": 1,
+      "wins": 1,
+      "losses": 0,
+      "winRate": 1,
+      "lossRate": 0,
+      "wilson": {
+        "lower": 0.2065,
+        "mid": 1,
+        "upper": 1
+      },
+      "adjustment": 0,
+      "hardVeto": false
     }
   },
   "lossReviews": [
@@ -10562,6 +10864,19 @@
       "score": "1-0",
       "causes": [
         "TEMPO_COLLAPSE",
+        "INPUT_COVERAGE_GAP"
+      ]
+    },
+    {
+      "matchDate": "2026-07-24",
+      "home": "Flamengo W",
+      "away": "Gremio W",
+      "league": "Brasileiro Women",
+      "engine": "Trend",
+      "market": "Under 3.5 Goals",
+      "score": "2-2",
+      "causes": [
+        "GOAL_SPIKE",
         "INPUT_COVERAGE_GAP"
       ]
     },
@@ -11338,10 +11653,10 @@
   ],
   "causeCounts": {
     "TEMPO_COLLAPSE": 5,
-    "INPUT_COVERAGE_GAP": 62,
+    "INPUT_COVERAGE_GAP": 63,
     "RESULT_DIRECTION_MISS": 14,
     "BOTH_ATTACKS_BROKE_SUPPRESSION": 5,
-    "GOAL_SPIKE": 17,
+    "GOAL_SPIKE": 18,
     "DRAW_TRAP": 10,
     "UNDERDOG_OVERREACH": 1
   }

@@ -1,13 +1,13 @@
 {
   "version": "v193",
-  "updated": "2026-07-25T01:47:08.697Z",
+  "updated": "2026-07-25T02:50:37.833Z",
   "summary": {
-    "settledFixtures": 167,
-    "settledDecisions": 326,
-    "reviewedLosses": 62,
-    "teamProfiles": 72,
-    "leagueProfiles": 15,
-    "matchupProfiles": 37,
+    "settledFixtures": 170,
+    "settledDecisions": 330,
+    "reviewedLosses": 63,
+    "teamProfiles": 74,
+    "leagueProfiles": 16,
+    "matchupProfiles": 38,
     "activePatternBreakers": 0,
     "upsetResistantTeams": 0
   },
@@ -19,11 +19,11 @@
   "commonMissCauses": [
     {
       "cause": "INPUT_COVERAGE_GAP",
-      "count": 62
+      "count": 63
     },
     {
       "cause": "GOAL_SPIKE",
-      "count": 17
+      "count": 18
     },
     {
       "cause": "RESULT_DIRECTION_MISS",
@@ -70,6 +70,19 @@
       "score": "1-0",
       "causes": [
         "TEMPO_COLLAPSE",
+        "INPUT_COVERAGE_GAP"
+      ]
+    },
+    {
+      "matchDate": "2026-07-24",
+      "home": "Flamengo W",
+      "away": "Gremio W",
+      "league": "Brasileiro Women",
+      "engine": "Trend",
+      "market": "Under 3.5 Goals",
+      "score": "2-2",
+      "causes": [
+        "GOAL_SPIKE",
         "INPUT_COVERAGE_GAP"
       ]
     },
@@ -408,19 +421,6 @@
       "league": "USL League Two",
       "engine": "Normal",
       "market": "Under 2.5",
-      "score": "0-5",
-      "causes": [
-        "GOAL_SPIKE",
-        "INPUT_COVERAGE_GAP"
-      ]
-    },
-    {
-      "matchDate": "2026-07-05",
-      "home": "Jackson Boom",
-      "away": "Mississippi Brilla",
-      "league": "USL League Two",
-      "engine": "Prime",
-      "market": "Under 3.5",
       "score": "0-5",
       "causes": [
         "GOAL_SPIKE",
