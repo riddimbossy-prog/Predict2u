@@ -1,6 +1,6 @@
 {
   "version": "v251",
-  "generatedAt": "2026-07-25T18:53:36.602Z",
+  "generatedAt": "2026-07-25T19:06:05.539Z",
   "provider": "The Odds API v4",
   "keyPresent": true,
   "regions": "uk",
@@ -85,39 +85,7 @@
       "sportKey": "soccer_england_efl_cup",
       "sportTitle": "EFL Cup",
       "score": 0.487,
-      "matches": 10
-    },
-    {
-      "league": "Oberliga - Hamburg",
-      "country": "Germany",
-      "sportKey": "soccer_germany_bundesliga",
-      "sportTitle": "Bundesliga - Germany",
-      "score": 0.347,
-      "matches": 9
-    },
-    {
-      "league": "Kakkonen - Lohko A",
-      "country": "Finland",
-      "sportKey": "soccer_finland_veikkausliiga",
-      "sportTitle": "Veikkausliiga - Finland",
-      "score": 0.323,
-      "matches": 2
-    },
-    {
-      "league": "Primera B",
-      "country": "Chile",
-      "sportKey": "soccer_chile_campeonato",
-      "sportTitle": "Primera División - Chile",
-      "score": 0.466,
       "matches": 8
-    },
-    {
-      "league": "Second League - Group 3",
-      "country": "Russia",
-      "sportKey": "soccer_russia_premier_league",
-      "sportTitle": "Premier League - Russia",
-      "score": 0.43,
-      "matches": 2
     },
     {
       "league": "II Liga - East",
@@ -590,6 +558,14 @@
       "sportTitle": "Super League - China",
       "score": 1,
       "matches": 5
+    },
+    {
+      "league": "Second League - Group 3",
+      "country": "Russia",
+      "sportKey": "soccer_russia_premier_league",
+      "sportTitle": "Premier League - Russia",
+      "score": 0.43,
+      "matches": 1
     },
     {
       "league": "Second League A - Division A Gold",
@@ -1192,7 +1168,7 @@
       "matches": 1
     }
   ],
-  "matchesConsidered": 1540,
+  "matchesConsidered": 1518,
   "matchesMatched": 0,
   "matchesUpdated": 0,
   "fieldsFilled": 0,
@@ -2798,18 +2774,6 @@
       "market": "btts"
     },
     {
-      "sportKey": "soccer_england_efl_cup",
-      "market": "draw_no_bet"
-    },
-    {
-      "sportKey": "soccer_england_efl_cup",
-      "market": "double_chance"
-    },
-    {
-      "sportKey": "soccer_poland_ekstraklasa",
-      "market": "btts"
-    },
-    {
       "sportKey": "soccer_poland_ekstraklasa",
       "market": "draw_no_bet"
     },
@@ -2947,6 +2911,18 @@
     },
     {
       "sportKey": "soccer_league_of_ireland",
+      "market": "double_chance"
+    },
+    {
+      "sportKey": "soccer_chile_campeonato",
+      "market": "btts"
+    },
+    {
+      "sportKey": "soccer_chile_campeonato",
+      "market": "draw_no_bet"
+    },
+    {
+      "sportKey": "soccer_chile_campeonato",
       "market": "double_chance"
     },
     {
@@ -3572,6 +3548,31 @@
       "statusCode": 422
     },
     {
+      "label": "soccer_chile_campeonato:base-combined",
+      "error": "Markets not supported by this endpoint: btts, double_chance, draw_no_bet",
+      "statusCode": 422
+    },
+    {
+      "label": "soccer_chile_campeonato:base-core",
+      "error": "Invalid commenceTimeFrom parameter. The format must be YYYY-MM-DDTHH:MM:SSZ, for example 2020-11-24T16:05:00Z",
+      "statusCode": 422
+    },
+    {
+      "label": "soccer_chile_campeonato:btts",
+      "error": "Markets not supported by this endpoint: btts",
+      "statusCode": 422
+    },
+    {
+      "label": "soccer_chile_campeonato:draw_no_bet",
+      "error": "Markets not supported by this endpoint: draw_no_bet",
+      "statusCode": 422
+    },
+    {
+      "label": "soccer_chile_campeonato:double_chance",
+      "error": "Markets not supported by this endpoint: double_chance",
+      "statusCode": 422
+    },
+    {
       "label": "soccer_usa_mls:base-combined",
       "error": "Markets not supported by this endpoint: btts, double_chance, draw_no_bet",
       "statusCode": 422
@@ -3829,5 +3830,5 @@
   },
   "skipped": false,
   "skipReason": null,
-  "completedAt": "2026-07-25T18:53:47.897Z"
+  "completedAt": "2026-07-25T19:06:15.606Z"
 }
