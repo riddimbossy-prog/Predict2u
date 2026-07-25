@@ -1,7 +1,7 @@
 {
   "version": "v193",
   "schemaVersion": 1,
-  "updated": "2026-07-25T02:50:37.833Z",
+  "updated": "2026-07-25T03:52:51.937Z",
   "minimumSamples": {
     "teamFavorite": 5,
     "teamUnderdog": 5,
@@ -12,10 +12,10 @@
   },
   "decayHalfLifeDays": 120,
   "summary": {
-    "settledFixtures": 170,
-    "settledDecisions": 330,
+    "settledFixtures": 171,
+    "settledDecisions": 331,
     "reviewedLosses": 63,
-    "attachedUpcoming": 2420,
+    "attachedUpcoming": 2416,
     "highRiskUpcoming": 0,
     "stableUpcoming": 0
   },
@@ -43,7 +43,7 @@
           "mid": 0,
           "upper": 0.7935
         },
-        "decayedWeight": 0.89
+        "decayedWeight": 0.88
       },
       "underdog": {
         "sample": 0,
@@ -86,7 +86,7 @@
             "mid": 0,
             "upper": 0.7935
           },
-          "decayedWeight": 0.89
+          "decayedWeight": 0.88
         }
       },
       "underdogUpsets": 0,
@@ -138,7 +138,7 @@
           "mid": 1,
           "upper": 1
         },
-        "decayedWeight": 0.89
+        "decayedWeight": 0.88
       },
       "favoriteBands": {
         "1.86-2.25": {
@@ -4703,6 +4703,132 @@
       "flags": [],
       "patternStability": 100,
       "favoriteReliability": 0
+    },
+    "256|vermont green": {
+      "name": "Vermont Green",
+      "league": "USL League Two",
+      "leagueId": 256,
+      "favorite": {
+        "sample": 1,
+        "wins": 1,
+        "draws": 0,
+        "losses": 0,
+        "winRate": 1,
+        "drawRate": 0,
+        "nonLossRate": 1,
+        "upsetRate": 0,
+        "nonLossWilson": {
+          "lower": 0.2065,
+          "mid": 1,
+          "upper": 1
+        },
+        "winWilson": {
+          "lower": 0.2065,
+          "mid": 1,
+          "upper": 1
+        },
+        "decayedWeight": 0.99
+      },
+      "underdog": {
+        "sample": 0,
+        "wins": 0,
+        "draws": 0,
+        "losses": 0,
+        "winRate": null,
+        "drawRate": null,
+        "nonLossRate": 0,
+        "upsetRate": null,
+        "nonLossWilson": {
+          "lower": null,
+          "mid": null,
+          "upper": null
+        },
+        "winWilson": {
+          "lower": null,
+          "mid": null,
+          "upper": null
+        },
+        "decayedWeight": 0
+      },
+      "favoriteBands": {
+        "1.36-1.60": {
+          "sample": 1,
+          "wins": 1,
+          "draws": 0,
+          "losses": 0,
+          "winRate": 1,
+          "drawRate": 0,
+          "nonLossRate": 1,
+          "upsetRate": 0,
+          "nonLossWilson": {
+            "lower": 0.2065,
+            "mid": 1,
+            "upper": 1
+          },
+          "winWilson": {
+            "lower": 0.2065,
+            "mid": 1,
+            "upper": 1
+          },
+          "decayedWeight": 0.99
+        }
+      },
+      "underdogUpsets": 0,
+      "flags": [],
+      "patternStability": 100,
+      "favoriteReliability": 100
+    },
+    "256|asheville city": {
+      "name": "Asheville City",
+      "league": "USL League Two",
+      "leagueId": 256,
+      "favorite": {
+        "sample": 0,
+        "wins": 0,
+        "draws": 0,
+        "losses": 0,
+        "winRate": null,
+        "drawRate": null,
+        "nonLossRate": 0,
+        "upsetRate": null,
+        "nonLossWilson": {
+          "lower": null,
+          "mid": null,
+          "upper": null
+        },
+        "winWilson": {
+          "lower": null,
+          "mid": null,
+          "upper": null
+        },
+        "decayedWeight": 0
+      },
+      "underdog": {
+        "sample": 1,
+        "wins": 0,
+        "draws": 0,
+        "losses": 1,
+        "winRate": 0,
+        "drawRate": 0,
+        "nonLossRate": 0,
+        "upsetRate": 1,
+        "nonLossWilson": {
+          "lower": 0,
+          "mid": 0,
+          "upper": 0.7935
+        },
+        "winWilson": {
+          "lower": 0,
+          "mid": 0,
+          "upper": 0.7935
+        },
+        "decayedWeight": 0.99
+      },
+      "favoriteBands": {},
+      "underdogUpsets": 0,
+      "flags": [],
+      "patternStability": 100,
+      "favoriteReliability": 0
     }
   },
   "leagues": {
@@ -4835,7 +4961,7 @@
           "mid": 0.5714,
           "upper": 0.8418
         },
-        "decayedWeight": 6.58
+        "decayedWeight": 6.57
       },
       "awayFavorites": {
         "sample": 2,
@@ -5848,25 +5974,25 @@
       "league": "USL League Two",
       "leagueId": 256,
       "favorite": {
-        "sample": 5,
-        "wins": 3,
+        "sample": 6,
+        "wins": 4,
         "draws": 2,
         "losses": 0,
-        "winRate": 0.594,
-        "drawRate": 0.406,
+        "winRate": 0.6672,
+        "drawRate": 0.3328,
         "nonLossRate": 1,
         "upsetRate": 0,
         "nonLossWilson": {
-          "lower": 0.5655,
+          "lower": 0.6097,
           "mid": 1,
           "upper": 1
         },
         "winWilson": {
-          "lower": 0.2307,
-          "mid": 0.6,
-          "upper": 0.8824
+          "lower": 0.3,
+          "mid": 0.6667,
+          "upper": 0.9032
         },
-        "decayedWeight": 4.51
+        "decayedWeight": 5.51
       },
       "bands": {
         "1.01-1.35": {
@@ -5912,47 +6038,47 @@
           "decayedWeight": 0.91
         },
         "1.36-1.60": {
-          "sample": 1,
-          "wins": 0,
+          "sample": 2,
+          "wins": 1,
           "draws": 1,
           "losses": 0,
-          "winRate": 0,
-          "drawRate": 1,
+          "winRate": 0.5173,
+          "drawRate": 0.4827,
           "nonLossRate": 1,
           "upsetRate": 0,
           "nonLossWilson": {
-            "lower": 0.2065,
+            "lower": 0.3424,
             "mid": 1,
             "upper": 1
           },
           "winWilson": {
-            "lower": 0,
-            "mid": 0,
-            "upper": 0.7935
+            "lower": 0.0945,
+            "mid": 0.5,
+            "upper": 0.9055
           },
-          "decayedWeight": 0.93
+          "decayedWeight": 1.92
         }
       },
       "homeFavorites": {
-        "sample": 2,
-        "wins": 0,
+        "sample": 3,
+        "wins": 1,
         "draws": 2,
         "losses": 0,
-        "winRate": 0,
-        "drawRate": 1,
+        "winRate": 0.3515,
+        "drawRate": 0.6485,
         "nonLossRate": 1,
         "upsetRate": 0,
         "nonLossWilson": {
-          "lower": 0.3424,
+          "lower": 0.4385,
           "mid": 1,
           "upper": 1
         },
         "winWilson": {
-          "lower": 0,
-          "mid": 0,
-          "upper": 0.6576
+          "lower": 0.0615,
+          "mid": 0.3333,
+          "upper": 0.7923
         },
-        "decayedWeight": 1.83
+        "decayedWeight": 2.83
       },
       "awayFavorites": {
         "sample": 3,
@@ -5976,7 +6102,7 @@
         "decayedWeight": 2.68
       },
       "flags": [],
-      "stabilityScore": 89.8
+      "stabilityScore": 91.7
     },
     "281": {
       "league": "Primera División",
@@ -6393,7 +6519,7 @@
           "mid": 0,
           "upper": 0.7935
         },
-        "decayedWeight": 0.89
+        "decayedWeight": 0.88
       },
       "flags": []
     },
@@ -7432,6 +7558,34 @@
         "decayedWeight": 0.99
       },
       "flags": []
+    },
+    "256|vermont green|asheville city": {
+      "home": "Vermont Green",
+      "away": "Asheville City",
+      "league": "USL League Two",
+      "leagueId": 256,
+      "favorite": {
+        "sample": 1,
+        "wins": 1,
+        "draws": 0,
+        "losses": 0,
+        "winRate": 1,
+        "drawRate": 0,
+        "nonLossRate": 1,
+        "upsetRate": 0,
+        "nonLossWilson": {
+          "lower": 0.2065,
+          "mid": 1,
+          "upper": 1
+        },
+        "winWilson": {
+          "lower": 0.2065,
+          "mid": 1,
+          "upper": 1
+        },
+        "decayedWeight": 0.99
+      },
+      "flags": []
     }
   },
   "oddsBands": {
@@ -7475,28 +7629,28 @@
         "mid": 1,
         "upper": 1
       },
-      "decayedWeight": 6.48
+      "decayedWeight": 6.47
     },
     "1.36-1.60": {
-      "sample": 7,
-      "wins": 5,
+      "sample": 8,
+      "wins": 6,
       "draws": 2,
       "losses": 0,
-      "winRate": 0.7175,
-      "drawRate": 0.2825,
+      "winRate": 0.7543,
+      "drawRate": 0.2457,
       "nonLossRate": 1,
       "upsetRate": 0,
       "nonLossWilson": {
-        "lower": 0.6457,
+        "lower": 0.6756,
         "mid": 1,
         "upper": 1
       },
       "winWilson": {
-        "lower": 0.3589,
-        "mid": 0.7143,
-        "upper": 0.9178
+        "lower": 0.4093,
+        "mid": 0.75,
+        "upper": 0.9285
       },
-      "decayedWeight": 6.62
+      "decayedWeight": 7.61
     },
     "1.61-1.85": {
       "sample": 10,
@@ -7517,7 +7671,7 @@
         "mid": 0.5,
         "upper": 0.7634
       },
-      "decayedWeight": 9.51
+      "decayedWeight": 9.5
     }
   },
   "contexts": {
@@ -9552,29 +9706,29 @@
       "hardVeto": false
     },
     "usl league two|Halves|Second Half Over 0.5|1.36-1.60|other": {
-      "sample": 1,
-      "wins": 0,
+      "sample": 2,
+      "wins": 1,
       "losses": 1,
-      "winRate": 0,
-      "lossRate": 1,
+      "winRate": 0.5,
+      "lossRate": 0.5,
       "wilson": {
-        "lower": 0,
-        "mid": 0,
-        "upper": 0.7935
+        "lower": 0.0945,
+        "mid": 0.5,
+        "upper": 0.9055
       },
       "adjustment": 0,
       "hardVeto": false
     },
     "*|Halves|Second Half Over 0.5|1.36-1.60|other": {
-      "sample": 4,
-      "wins": 3,
+      "sample": 5,
+      "wins": 4,
       "losses": 1,
-      "winRate": 0.75,
-      "lossRate": 0.25,
+      "winRate": 0.8,
+      "lossRate": 0.2,
       "wilson": {
-        "lower": 0.3006,
-        "mid": 0.75,
-        "upper": 0.9544
+        "lower": 0.3755,
+        "mid": 0.8,
+        "upper": 0.9638
       },
       "adjustment": 0,
       "hardVeto": false
