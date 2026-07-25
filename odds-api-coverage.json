@@ -1,6 +1,6 @@
 {
   "version": "v251",
-  "generatedAt": "2026-07-25T23:31:04.781Z",
+  "generatedAt": "2026-07-25T23:29:14.668Z",
   "provider": "The Odds API v4",
   "keyPresent": true,
   "regions": "uk",
@@ -152,6 +152,38 @@
       "matches": 1
     },
     {
+      "league": "NWSL Women",
+      "country": "USA",
+      "sportKey": "soccer_usa_mls",
+      "sportTitle": "MLS",
+      "score": 0.323,
+      "matches": 8
+    },
+    {
+      "league": "MLS Next Pro",
+      "country": "USA",
+      "sportKey": "soccer_usa_mls",
+      "sportTitle": "MLS",
+      "score": 1,
+      "matches": 16
+    },
+    {
+      "league": "Copa Paulista",
+      "country": "Brazil",
+      "sportKey": "soccer_brazil_campeonato",
+      "sportTitle": "Brazil Série A",
+      "score": 0.305,
+      "matches": 7
+    },
+    {
+      "league": "Mineiro - 2",
+      "country": "Brazil",
+      "sportKey": "soccer_brazil_campeonato",
+      "sportTitle": "Brazil Série A",
+      "score": 0.305,
+      "matches": 3
+    },
+    {
       "league": "Primera Division",
       "country": "El-Salvador",
       "sportKey": "soccer_spain_la_liga",
@@ -182,14 +214,6 @@
       "sportTitle": "Brazil Série A",
       "score": 0.466,
       "matches": 8
-    },
-    {
-      "league": "Copa Paulista",
-      "country": "Brazil",
-      "sportKey": "soccer_brazil_campeonato",
-      "sportTitle": "Brazil Série A",
-      "score": 0.305,
-      "matches": 6
     },
     {
       "league": "Primera Nacional",
@@ -1160,7 +1184,7 @@
       "matches": 1
     }
   ],
-  "matchesConsidered": 1364,
+  "matchesConsidered": 1379,
   "matchesMatched": 0,
   "matchesUpdated": 0,
   "fieldsFilled": 0,
@@ -1196,6 +1220,12 @@
     {
       "league": "First League",
       "country": "Macedonia",
+      "reason": "No matching soccer sport key",
+      "bestScore": 0.143
+    },
+    {
+      "league": "Liga Women",
+      "country": "Peru",
       "reason": "No matching soccer sport key",
       "bestScore": 0.143
     },
@@ -1242,10 +1272,16 @@
       "bestScore": 0
     },
     {
-      "league": "Liga Women",
-      "country": "Peru",
+      "league": "Liga Femenina",
+      "country": "Colombia",
       "reason": "No matching soccer sport key",
       "bestScore": 0.143
+    },
+    {
+      "league": "CONCACAF U20",
+      "country": "World",
+      "reason": "No matching soccer sport key",
+      "bestScore": 0
     },
     {
       "league": "Primera A",
@@ -1498,12 +1534,6 @@
       "country": "World",
       "reason": "No matching soccer sport key",
       "bestScore": 0
-    },
-    {
-      "league": "Segunda División",
-      "country": "Venezuela",
-      "reason": "No matching soccer sport key",
-      "bestScore": 0.143
     },
     {
       "league": "Úrvalsdeild",
@@ -2214,42 +2244,6 @@
       "reason": "No event/team match"
     },
     {
-      "league": "Copa Paulista",
-      "home": "Primavera SP",
-      "away": "Oeste",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Copa Paulista",
-      "home": "São José EC",
-      "away": "EC São Bernardo",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Copa Paulista",
-      "home": "Juventus",
-      "away": "Paulista",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Copa Paulista",
-      "home": "Linense",
-      "away": "Marília",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Copa Paulista",
-      "home": "Santo André",
-      "away": "São Caetano",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Copa Paulista",
-      "home": "Grêmio Prudente",
-      "away": "Bandeirante SP",
-      "reason": "No event/team match"
-    },
-    {
       "league": "Paulista - U20",
       "home": "Corinthians U20",
       "away": "Itapirense U20",
@@ -2655,18 +2649,6 @@
       "league": "Second League - Group 4",
       "home": "Dinamo Barnaul",
       "away": "Khimik Dzerzhinsk",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Second League - Group 4",
-      "home": "Nosta",
-      "away": "Izhevsk",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Second League - Group 4",
-      "home": "Rubin Kazan 2",
-      "away": "KDV",
       "reason": "No event/team match"
     }
   ],
@@ -3680,5 +3662,5 @@
   },
   "skipped": false,
   "skipReason": null,
-  "completedAt": "2026-07-25T23:31:23.661Z"
+  "completedAt": "2026-07-25T23:29:42.520Z"
 }
