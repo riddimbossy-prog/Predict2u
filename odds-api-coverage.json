@@ -1,6 +1,6 @@
 {
   "version": "v251",
-  "generatedAt": "2026-07-25T20:24:11.991Z",
+  "generatedAt": "2026-07-25T20:35:13.916Z",
   "provider": "The Odds API v4",
   "keyPresent": true,
   "regions": "uk",
@@ -80,14 +80,6 @@
       "matches": 6
     },
     {
-      "league": "Primera C",
-      "country": "Argentina",
-      "sportKey": "soccer_argentina_primera_division",
-      "sportTitle": "Primera División - Argentina",
-      "score": 0.513,
-      "matches": 8
-    },
-    {
       "league": "Catarinense U20",
       "country": "Brazil",
       "sportKey": "soccer_brazil_campeonato",
@@ -110,14 +102,6 @@
       "sportTitle": "Brazil Série A",
       "score": 0.305,
       "matches": 3
-    },
-    {
-      "league": "Primera B Metropolitana",
-      "country": "Argentina",
-      "sportKey": "soccer_argentina_primera_division",
-      "sportTitle": "Primera División - Argentina",
-      "score": 0.466,
-      "matches": 8
     },
     {
       "league": "Torneo Promocional Amateur",
@@ -166,6 +150,14 @@
       "sportTitle": "Brazil Série A",
       "score": 0.305,
       "matches": 5
+    },
+    {
+      "league": "Primera B Metropolitana",
+      "country": "Argentina",
+      "sportKey": "soccer_argentina_primera_division",
+      "sportTitle": "Primera División - Argentina",
+      "score": 0.466,
+      "matches": 3
     },
     {
       "league": "Torneo Federal A",
@@ -736,6 +728,14 @@
       "matches": 1
     },
     {
+      "league": "Primera C",
+      "country": "Argentina",
+      "sportKey": "soccer_argentina_primera_division",
+      "sportTitle": "Primera División - Argentina",
+      "score": 0.513,
+      "matches": 6
+    },
+    {
       "league": "Canadian Premier League",
       "country": "Canada",
       "sportKey": "soccer_epl",
@@ -1168,7 +1168,7 @@
       "matches": 1
     }
   ],
-  "matchesConsidered": 1438,
+  "matchesConsidered": 1429,
   "matchesMatched": 0,
   "matchesUpdated": 0,
   "fieldsFilled": 0,
@@ -1240,12 +1240,6 @@
     {
       "league": "Persha Liga",
       "country": "Ukraine",
-      "reason": "No matching soccer sport key",
-      "bestScore": 0.143
-    },
-    {
-      "league": "First League",
-      "country": "Bulgaria",
       "reason": "No matching soccer sport key",
       "bestScore": 0.143
     },
@@ -1506,6 +1500,12 @@
       "country": "Hungary",
       "reason": "No matching soccer sport key",
       "bestScore": 0
+    },
+    {
+      "league": "First League",
+      "country": "Bulgaria",
+      "reason": "No matching soccer sport key",
+      "bestScore": 0.143
     },
     {
       "league": "Super Liga",
@@ -3688,5 +3688,5 @@
   },
   "skipped": false,
   "skipReason": null,
-  "completedAt": "2026-07-25T20:24:29.426Z"
+  "completedAt": "2026-07-25T20:35:19.752Z"
 }
