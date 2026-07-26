@@ -1,7 +1,7 @@
 {
   "version": "v193",
   "schemaVersion": 1,
-  "updated": "2026-07-26T02:53:04.322Z",
+  "updated": "2026-07-26T04:00:46.840Z",
   "minimumSamples": {
     "teamFavorite": 5,
     "teamUnderdog": 5,
@@ -12,10 +12,10 @@
   },
   "decayHalfLifeDays": 120,
   "summary": {
-    "settledFixtures": 429,
-    "settledDecisions": 773,
+    "settledFixtures": 430,
+    "settledDecisions": 776,
     "reviewedLosses": 150,
-    "attachedUpcoming": 2482,
+    "attachedUpcoming": 2462,
     "highRiskUpcoming": 0,
     "stableUpcoming": 0
   },
@@ -317,7 +317,7 @@
           "mid": 1,
           "upper": 1
         },
-        "decayedWeight": 0.89
+        "decayedWeight": 0.88
       },
       "underdog": {
         "sample": 0,
@@ -360,7 +360,7 @@
             "mid": 1,
             "upper": 1
           },
-          "decayedWeight": 0.89
+          "decayedWeight": 0.88
         }
       },
       "underdogUpsets": 0,
@@ -443,7 +443,7 @@
           "mid": 1,
           "upper": 1
         },
-        "decayedWeight": 0.89
+        "decayedWeight": 0.88
       },
       "underdog": {
         "sample": 0,
@@ -486,7 +486,7 @@
             "mid": 1,
             "upper": 1
           },
-          "decayedWeight": 0.89
+          "decayedWeight": 0.88
         }
       },
       "underdogUpsets": 0,
@@ -538,7 +538,7 @@
           "mid": 0,
           "upper": 0.7935
         },
-        "decayedWeight": 0.89
+        "decayedWeight": 0.88
       },
       "favoriteBands": {},
       "underdogUpsets": 0,
@@ -21103,7 +21103,7 @@
           "mid": 1,
           "upper": 1
         },
-        "decayedWeight": 0.89
+        "decayedWeight": 0.88
       },
       "bands": {
         "1.86-2.25": {
@@ -21125,7 +21125,7 @@
             "mid": 1,
             "upper": 1
           },
-          "decayedWeight": 0.89
+          "decayedWeight": 0.88
         }
       },
       "homeFavorites": {
@@ -21147,7 +21147,7 @@
           "mid": 1,
           "upper": 1
         },
-        "decayedWeight": 0.89
+        "decayedWeight": 0.88
       },
       "awayFavorites": {
         "sample": 0,
@@ -22128,7 +22128,7 @@
           "mid": 0.6667,
           "upper": 0.9032
         },
-        "decayedWeight": 5.48
+        "decayedWeight": 5.47
       },
       "bands": {
         "1.01-1.35": {
@@ -26477,7 +26477,7 @@
           "mid": 1,
           "upper": 1
         },
-        "decayedWeight": 0.89
+        "decayedWeight": 0.88
       },
       "flags": []
     },
@@ -26505,7 +26505,7 @@
           "mid": 1,
           "upper": 1
         },
-        "decayedWeight": 0.89
+        "decayedWeight": 0.88
       },
       "flags": []
     },
@@ -30786,7 +30786,7 @@
         "mid": 0.4182,
         "upper": 0.5497
       },
-      "decayedWeight": 53.67
+      "decayedWeight": 53.66
     },
     "1.01-1.35": {
       "sample": 26,
@@ -30807,7 +30807,7 @@
         "mid": 0.8077,
         "upper": 0.9149
       },
-      "decayedWeight": 25.32
+      "decayedWeight": 25.31
     },
     "1.36-1.60": {
       "sample": 34,
@@ -30828,7 +30828,7 @@
         "mid": 0.5294,
         "upper": 0.6855
       },
-      "decayedWeight": 33.4
+      "decayedWeight": 33.39
     },
     "1.61-1.85": {
       "sample": 41,
@@ -30849,7 +30849,7 @@
         "mid": 0.561,
         "upper": 0.7011
       },
-      "decayedWeight": 40.25
+      "decayedWeight": 40.24
     }
   },
   "contexts": {
@@ -32534,15 +32534,15 @@
       "hardVeto": false
     },
     "*|Halves|Second Half Over 0.5|unknown|other": {
-      "sample": 87,
+      "sample": 88,
       "wins": 76,
-      "losses": 11,
-      "winRate": 0.8736,
-      "lossRate": 0.1264,
+      "losses": 12,
+      "winRate": 0.8636,
+      "lossRate": 0.1364,
       "wilson": {
-        "lower": 0.7876,
-        "mid": 0.8736,
-        "upper": 0.9279
+        "lower": 0.7766,
+        "mid": 0.8636,
+        "upper": 0.9202
       },
       "adjustment": 2,
       "hardVeto": false
@@ -32716,15 +32716,15 @@
       "hardVeto": false
     },
     "*|Trend|Home Team Over 0.5 Goals|unknown|other": {
-      "sample": 31,
+      "sample": 32,
       "wins": 28,
-      "losses": 3,
-      "winRate": 0.9032,
-      "lossRate": 0.0968,
+      "losses": 4,
+      "winRate": 0.875,
+      "lossRate": 0.125,
       "wilson": {
-        "lower": 0.751,
-        "mid": 0.9032,
-        "upper": 0.9665
+        "lower": 0.7193,
+        "mid": 0.875,
+        "upper": 0.9503
       },
       "adjustment": 2,
       "hardVeto": false
@@ -32772,15 +32772,15 @@
       "hardVeto": false
     },
     "*|League Bias|Home Team Over 0.5 Goals|unknown|other": {
-      "sample": 88,
+      "sample": 89,
       "wins": 74,
-      "losses": 14,
-      "winRate": 0.8409,
-      "lossRate": 0.1591,
+      "losses": 15,
+      "winRate": 0.8315,
+      "lossRate": 0.1685,
       "wilson": {
-        "lower": 0.7505,
-        "mid": 0.8409,
-        "upper": 0.9028
+        "lower": 0.7404,
+        "mid": 0.8315,
+        "upper": 0.8951
       },
       "adjustment": 2,
       "hardVeto": false
@@ -38413,6 +38413,34 @@
       "adjustment": 0,
       "hardVeto": false
     },
+    "mls next pro|Trend|Home Team Over 0.5 Goals|unknown|other": {
+      "sample": 1,
+      "wins": 0,
+      "losses": 1,
+      "winRate": 0,
+      "lossRate": 1,
+      "wilson": {
+        "lower": 0,
+        "mid": 0,
+        "upper": 0.7935
+      },
+      "adjustment": 0,
+      "hardVeto": false
+    },
+    "mls next pro|Halves|Second Half Over 0.5|unknown|other": {
+      "sample": 1,
+      "wins": 0,
+      "losses": 1,
+      "winRate": 0,
+      "lossRate": 1,
+      "wilson": {
+        "lower": 0,
+        "mid": 0,
+        "upper": 0.7935
+      },
+      "adjustment": 0,
+      "hardVeto": false
+    },
     "new south wales npl|Strict|Away DNB|1.61-1.85|fav-aligned": {
       "sample": 1,
       "wins": 0,
@@ -38624,6 +38652,20 @@
       "hardVeto": false
     },
     "premier league|Halves|Second Half Over 0.5|1.86-2.25|other": {
+      "sample": 1,
+      "wins": 0,
+      "losses": 1,
+      "winRate": 0,
+      "lossRate": 1,
+      "wilson": {
+        "lower": 0,
+        "mid": 0,
+        "upper": 0.7935
+      },
+      "adjustment": 0,
+      "hardVeto": false
+    },
+    "mls next pro|League Bias|Home Team Over 0.5 Goals|unknown|other": {
       "sample": 1,
       "wins": 0,
       "losses": 1,
@@ -40180,6 +40222,31 @@
     },
     {
       "matchDate": "2026-07-25",
+      "home": "Ventura County",
+      "away": "The Town",
+      "league": "MLS Next Pro",
+      "engine": "Trend",
+      "market": "Home Team Over 0.5 Goals",
+      "score": "0-0",
+      "causes": [
+        "DRAW_TRAP",
+        "INPUT_COVERAGE_GAP"
+      ]
+    },
+    {
+      "matchDate": "2026-07-25",
+      "home": "Ventura County",
+      "away": "The Town",
+      "league": "MLS Next Pro",
+      "engine": "Halves",
+      "market": "Second Half Over 0.5",
+      "score": "0-0",
+      "causes": [
+        "INPUT_COVERAGE_GAP"
+      ]
+    },
+    {
+      "matchDate": "2026-07-25",
       "home": "St George City FA",
       "away": "Sydney United",
       "league": "New South Wales NPL",
@@ -40251,6 +40318,19 @@
       "market": "Second Half Over 0.5",
       "score": "2-1",
       "causes": [
+        "INPUT_COVERAGE_GAP"
+      ]
+    },
+    {
+      "matchDate": "2026-07-25",
+      "home": "Ventura County",
+      "away": "The Town",
+      "league": "MLS Next Pro",
+      "engine": "League Bias",
+      "market": "Home Team Over 0.5 Goals",
+      "score": "0-0",
+      "causes": [
+        "DRAW_TRAP",
         "INPUT_COVERAGE_GAP"
       ]
     },
@@ -41231,54 +41311,15 @@
         "BOTH_ATTACKS_BROKE_SUPPRESSION",
         "INPUT_COVERAGE_GAP"
       ]
-    },
-    {
-      "matchDate": "2026-07-01",
-      "home": "Charlottesville Blues",
-      "away": "Bethesda SC",
-      "league": "USL League Two",
-      "engine": "Prime",
-      "market": "BTTS No",
-      "score": "2-3",
-      "causes": [
-        "BOTH_ATTACKS_BROKE_SUPPRESSION",
-        "INPUT_COVERAGE_GAP"
-      ]
-    },
-    {
-      "matchDate": "2026-06-30",
-      "home": "Reading United",
-      "away": "Eagle FC",
-      "league": "USL League Two",
-      "engine": "Normal",
-      "market": "Home Win",
-      "score": "1-1",
-      "causes": [
-        "DRAW_TRAP",
-        "INPUT_COVERAGE_GAP"
-      ]
-    },
-    {
-      "matchDate": "2026-06-30",
-      "home": "Erie Sports Center",
-      "away": "Akron City",
-      "league": "USL League Two",
-      "engine": "Normal",
-      "market": "Under 3.5",
-      "score": "1-6",
-      "causes": [
-        "GOAL_SPIKE",
-        "INPUT_COVERAGE_GAP"
-      ]
     }
   ],
   "causeCounts": {
     "TEMPO_COLLAPSE": 6,
-    "INPUT_COVERAGE_GAP": 151,
+    "INPUT_COVERAGE_GAP": 154,
     "RESULT_DIRECTION_MISS": 31,
     "BOTH_ATTACKS_BROKE_SUPPRESSION": 5,
     "GOAL_SPIKE": 24,
-    "DRAW_TRAP": 16,
+    "DRAW_TRAP": 18,
     "UNDERDOG_OVERREACH": 2,
     "FAVORITE_PATTERN_BREAK": 34,
     "ONE_TEAM_FAILED_TO_SCORE": 1
