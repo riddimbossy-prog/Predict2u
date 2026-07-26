@@ -1,7 +1,7 @@
 {
   "version": "v193",
   "schemaVersion": 1,
-  "updated": "2026-07-26T20:35:29.450Z",
+  "updated": "2026-07-26T21:38:10.381Z",
   "minimumSamples": {
     "teamFavorite": 5,
     "teamUnderdog": 5,
@@ -15,7 +15,7 @@
     "settledFixtures": 446,
     "settledDecisions": 796,
     "reviewedLosses": 150,
-    "attachedUpcoming": 2132,
+    "attachedUpcoming": 2117,
     "highRiskUpcoming": 0,
     "stableUpcoming": 0
   },
@@ -18609,7 +18609,7 @@
           "mid": 1,
           "upper": 1
         },
-        "decayedWeight": 1
+        "decayedWeight": 0.99
       },
       "underdog": {
         "sample": 0,
@@ -18652,7 +18652,7 @@
             "mid": 1,
             "upper": 1
           },
-          "decayedWeight": 1
+          "decayedWeight": 0.99
         }
       },
       "underdogUpsets": 0,
@@ -18704,7 +18704,7 @@
           "mid": 0,
           "upper": 0.7935
         },
-        "decayedWeight": 1
+        "decayedWeight": 0.99
       },
       "favoriteBands": {},
       "underdogUpsets": 0,
@@ -20185,7 +20185,7 @@
           "mid": 0.3333,
           "upper": 0.7923
         },
-        "decayedWeight": 2.79
+        "decayedWeight": 2.78
       },
       "awayFavorites": {
         "sample": 3,
@@ -20206,7 +20206,7 @@
           "mid": 0.6667,
           "upper": 0.9385
         },
-        "decayedWeight": 2.79
+        "decayedWeight": 2.78
       },
       "flags": [],
       "stabilityScore": 79.2
@@ -25631,7 +25631,7 @@
           "mid": 0.5,
           "upper": 0.8124
         },
-        "decayedWeight": 5.94
+        "decayedWeight": 5.93
       },
       "bands": {
         "1.61-1.85": {
@@ -25696,7 +25696,7 @@
           "mid": 0.5,
           "upper": 0.8124
         },
-        "decayedWeight": 5.94
+        "decayedWeight": 5.93
       },
       "awayFavorites": {
         "sample": 0,
@@ -30719,7 +30719,7 @@
           "mid": 1,
           "upper": 1
         },
-        "decayedWeight": 1
+        "decayedWeight": 0.99
       },
       "flags": []
     },
@@ -30940,7 +30940,7 @@
         "mid": 0.4182,
         "upper": 0.5497
       },
-      "decayedWeight": 53.45
+      "decayedWeight": 53.43
     },
     "1.01-1.35": {
       "sample": 26,
@@ -30961,7 +30961,7 @@
         "mid": 0.8077,
         "upper": 0.9149
       },
-      "decayedWeight": 25.21
+      "decayedWeight": 25.2
     },
     "1.36-1.60": {
       "sample": 34,
@@ -30982,7 +30982,7 @@
         "mid": 0.5294,
         "upper": 0.6855
       },
-      "decayedWeight": 33.26
+      "decayedWeight": 33.25
     },
     "1.61-1.85": {
       "sample": 42,
@@ -31003,7 +31003,7 @@
         "mid": 0.5714,
         "upper": 0.7088
       },
-      "decayedWeight": 41.07
+      "decayedWeight": 41.06
     }
   },
   "contexts": {

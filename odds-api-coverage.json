@@ -1,6 +1,6 @@
 {
   "version": "v251",
-  "generatedAt": "2026-07-26T21:35:44.117Z",
+  "generatedAt": "2026-07-26T21:32:14.514Z",
   "provider": "The Odds API v4",
   "keyPresent": true,
   "regions": "uk",
@@ -56,12 +56,28 @@
       "matches": 1
     },
     {
+      "league": "Canadian Premier League",
+      "country": "Canada",
+      "sportKey": "soccer_epl",
+      "sportTitle": "EPL",
+      "score": 0.667,
+      "matches": 5
+    },
+    {
+      "league": "Capixaba B",
+      "country": "Brazil",
+      "sportKey": "soccer_brazil_serie_b",
+      "sportTitle": "Brazil Série B",
+      "score": 0.466,
+      "matches": 4
+    },
+    {
       "league": "Super Liga",
       "country": "Serbia",
       "sportKey": "soccer_turkey_super_league",
       "sportTitle": "Turkey Super League",
       "score": 0.286,
-      "matches": 6
+      "matches": 7
     },
     {
       "league": "Paranaense - 3",
@@ -77,7 +93,39 @@
       "sportKey": "soccer_brazil_campeonato",
       "sportTitle": "Brazil Série A",
       "score": 0.929,
-      "matches": 16
+      "matches": 17
+    },
+    {
+      "league": "Primera Nacional",
+      "country": "Argentina",
+      "sportKey": "soccer_argentina_primera_division",
+      "sportTitle": "Primera División - Argentina",
+      "score": 0.513,
+      "matches": 15
+    },
+    {
+      "league": "Primera División",
+      "country": "Chile",
+      "sportKey": "soccer_chile_campeonato",
+      "sportTitle": "Primera División - Chile",
+      "score": 1,
+      "matches": 7
+    },
+    {
+      "league": "Serie B",
+      "country": "Brazil",
+      "sportKey": "soccer_brazil_serie_b",
+      "sportTitle": "Brazil Série B",
+      "score": 1,
+      "matches": 10
+    },
+    {
+      "league": "Serie C",
+      "country": "Brazil",
+      "sportKey": "soccer_brazil_campeonato",
+      "sportTitle": "Brazil Série A",
+      "score": 0.466,
+      "matches": 6
     },
     {
       "league": "Serie D",
@@ -88,8 +136,24 @@
       "matches": 5
     },
     {
-      "league": "Primera Nacional",
+      "league": "Segunda División",
+      "country": "Chile",
+      "sportKey": "soccer_chile_campeonato",
+      "sportTitle": "Primera División - Chile",
+      "score": 0.305,
+      "matches": 2
+    },
+    {
+      "league": "Torneo Federal A",
       "country": "Argentina",
+      "sportKey": "soccer_argentina_primera_division",
+      "sportTitle": "Primera División - Argentina",
+      "score": 0.305,
+      "matches": 2
+    },
+    {
+      "league": "Primera División",
+      "country": "Bolivia",
       "sportKey": "soccer_argentina_primera_division",
       "sportTitle": "Primera División - Argentina",
       "score": 0.513,
@@ -230,6 +294,14 @@
       "sportTitle": "Liga MX",
       "score": 0.555,
       "matches": 7
+    },
+    {
+      "league": "USL League Two",
+      "country": "USA",
+      "sportKey": "soccer_usa_mls",
+      "sportTitle": "MLS",
+      "score": 0.466,
+      "matches": 2
     },
     {
       "league": "Second League - Group 4",
@@ -1248,7 +1320,7 @@
       "matches": 1
     }
   ],
-  "matchesConsidered": 1756,
+  "matchesConsidered": 1787,
   "matchesMatched": 0,
   "matchesUpdated": 0,
   "fieldsFilled": 0,
@@ -1312,10 +1384,28 @@
       "bestScore": 0.143
     },
     {
-      "league": "Úrvalsdeild",
-      "country": "Iceland",
+      "league": "1. SNL",
+      "country": "Slovenia",
       "reason": "No matching soccer sport key",
-      "bestScore": 0
+      "bestScore": 0.125
+    },
+    {
+      "league": "Division Profesional - Clausura",
+      "country": "Paraguay",
+      "reason": "No matching soccer sport key",
+      "bestScore": 0.125
+    },
+    {
+      "league": "Liga Femenina",
+      "country": "Colombia",
+      "reason": "No matching soccer sport key",
+      "bestScore": 0.143
+    },
+    {
+      "league": "Primera A",
+      "country": "Colombia",
+      "reason": "No matching soccer sport key",
+      "bestScore": 0.143
     },
     {
       "league": "Segunda División",
@@ -1331,6 +1421,24 @@
     },
     {
       "league": "CONCACAF U20",
+      "country": "World",
+      "reason": "No matching soccer sport key",
+      "bestScore": 0
+    },
+    {
+      "league": "Segunda División",
+      "country": "Peru",
+      "reason": "No matching soccer sport key",
+      "bestScore": 0.143
+    },
+    {
+      "league": "Liga Pro",
+      "country": "Ecuador",
+      "reason": "No matching soccer sport key",
+      "bestScore": 0.143
+    },
+    {
+      "league": "COTIF Tournament",
       "country": "World",
       "reason": "No matching soccer sport key",
       "bestScore": 0
@@ -2380,6 +2488,66 @@
       "reason": "No event/team match"
     },
     {
+      "league": "Torneo Promocional Amateur",
+      "home": "Alumni Los Hornos",
+      "away": "Control Orientado",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Torneo Promocional Amateur",
+      "home": "Las Mandarinas",
+      "away": "Buenos Aires City",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Torneo Promocional Amateur",
+      "home": "Deportivo Metalurgico",
+      "away": "Defensores Glew",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Torneo Promocional Amateur",
+      "home": "Estrella de Berisso",
+      "away": "Provincial",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Torneo Promocional Amateur",
+      "home": "Juventud de Bernal",
+      "away": "Atletico Pilar",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Torneo Promocional Amateur",
+      "home": "SAT Moreno",
+      "away": "Nautico Hacoaj",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Primera Nacional",
+      "home": "Atletico Mitre",
+      "away": "Almirante Brown",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Primera Nacional",
+      "home": "Gimnasia Jujuy",
+      "away": "Club Atlético Güemes",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Primera Nacional",
+      "home": "Midland",
+      "away": "Patronato",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Primera Nacional",
+      "home": "Racing Cordoba",
+      "away": "San Telmo",
+      "reason": "No event/team match"
+    },
+    {
       "league": "Primera Nacional",
       "home": "Godoy Cruz",
       "away": "Central Norte",
@@ -2443,6 +2611,72 @@
       "league": "Primera Nacional",
       "home": "San Martin S.J.",
       "away": "Atletico DE Rafaela",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Torneo Federal A",
+      "home": "Sarmiento Resistencia",
+      "away": "Sol de América",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Torneo Federal A",
+      "home": "Tucuman Central",
+      "away": "Sarmiento de La Banda",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Primera División",
+      "home": "Blooming",
+      "away": "The Strongest",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Primera División",
+      "home": "Bolívar",
+      "away": "Real Potosí",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Primera División",
+      "home": "Nacional Potosí",
+      "away": "Real Tomayapo",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Primera División",
+      "home": "Gualberto Villarroel SJ",
+      "away": "Universitario de Vinto",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Primera División",
+      "home": "Universitario de Vinto",
+      "away": "Guabirá",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Primera División",
+      "home": "Real Tomayapo",
+      "away": "ABB",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Primera División",
+      "home": "Real Oruro",
+      "away": "Independiente Petrolero",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Primera División",
+      "home": "San Antonio Bulo Bulo",
+      "away": "Blooming",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Primera División",
+      "home": "The Strongest",
+      "away": "Aurora",
       "reason": "No event/team match"
     },
     {
@@ -2599,162 +2833,6 @@
       "league": "Primera División",
       "home": "FC Cajamarca",
       "away": "Sport Huancayo",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Primera División",
-      "home": "Atletico Grau",
-      "away": "Sport Boys",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Primera División",
-      "home": "Cusco",
-      "away": "UTC Cajamarca",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Primera División",
-      "home": "Bolívar",
-      "away": "Real Potosí",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Primera División",
-      "home": "Nacional Potosí",
-      "away": "Real Tomayapo",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Primera División",
-      "home": "Gualberto Villarroel SJ",
-      "away": "Universitario de Vinto",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Primera División",
-      "home": "Universitario de Vinto",
-      "away": "Guabirá",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Primera División",
-      "home": "Real Tomayapo",
-      "away": "ABB",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Primera División",
-      "home": "Real Oruro",
-      "away": "Independiente Petrolero",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Primera División",
-      "home": "San Antonio Bulo Bulo",
-      "away": "Blooming",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Primera División",
-      "home": "The Strongest",
-      "away": "Aurora",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Primera C",
-      "home": "Fénix",
-      "away": "Yupanqui",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Primera C",
-      "home": "Sacachispas",
-      "away": "Leandro N. Alem",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Primera C",
-      "home": "Sportivo Barracas",
-      "away": "El Porvenir",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Primera C",
-      "home": "Central Ballester",
-      "away": "Sportivo Barracas",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Primera C",
-      "home": "Central Cordoba",
-      "away": "General Lamadrid",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Primera C",
-      "home": "Claypole",
-      "away": "Lujan",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Primera C",
-      "home": "Centro Español",
-      "away": "Victoriano Arenas",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Primera C",
-      "home": "Defensores de Cambaceres",
-      "away": "Lugano",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Primera C",
-      "home": "Deportivo Muñiz",
-      "away": "Atletico Atlas",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Primera C",
-      "home": "Deportivo Paraguayo",
-      "away": "Argentino Rosario",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Primera C",
-      "home": "JJ Urquiza",
-      "away": "Berazategui",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Primera C",
-      "home": "Leandro N. Alem",
-      "away": "Juventud Unida",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Primera C",
-      "home": "Mercedes",
-      "away": "Estrella Del Sur",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Primera C",
-      "home": "Deportivo Español",
-      "away": "Leones de Rosario",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Primera C",
-      "home": "El Porvenir",
-      "away": "Fénix",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Primera C",
-      "home": "Yupanqui",
-      "away": "Canuelas",
       "reason": "No event/team match"
     }
   ],
@@ -3953,5 +4031,5 @@
   },
   "skipped": false,
   "skipReason": null,
-  "completedAt": "2026-07-26T21:35:50.826Z"
+  "completedAt": "2026-07-26T21:32:33.949Z"
 }
