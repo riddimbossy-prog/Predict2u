@@ -1,7 +1,7 @@
 {
   "version": "v193",
   "schemaVersion": 1,
-  "updated": "2026-07-26T16:17:10.043Z",
+  "updated": "2026-07-26T17:18:48.203Z",
   "minimumSamples": {
     "teamFavorite": 5,
     "teamUnderdog": 5,
@@ -12,10 +12,10 @@
   },
   "decayHalfLifeDays": 120,
   "summary": {
-    "settledFixtures": 438,
-    "settledDecisions": 787,
+    "settledFixtures": 442,
+    "settledDecisions": 791,
     "reviewedLosses": 150,
-    "attachedUpcoming": 2261,
+    "attachedUpcoming": 2227,
     "highRiskUpcoming": 0,
     "stableUpcoming": 0
   },
@@ -412,7 +412,7 @@
           "mid": 0,
           "upper": 0.6576
         },
-        "decayedWeight": 1.79
+        "decayedWeight": 1.78
       },
       "favoriteBands": {},
       "underdogUpsets": 0,
@@ -19618,7 +19618,7 @@
           "mid": 0.6667,
           "upper": 0.8794
         },
-        "decayedWeight": 8.39
+        "decayedWeight": 8.38
       },
       "bands": {
         "1.61-1.85": {
@@ -19725,7 +19725,7 @@
           "mid": 0.5714,
           "upper": 0.8418
         },
-        "decayedWeight": 6.52
+        "decayedWeight": 6.51
       },
       "awayFavorites": {
         "sample": 2,
@@ -20141,7 +20141,7 @@
           "mid": 0.5,
           "upper": 0.8124
         },
-        "decayedWeight": 5.58
+        "decayedWeight": 5.57
       },
       "bands": {
         "1.86-2.25": {
@@ -20163,7 +20163,7 @@
             "mid": 0.5,
             "upper": 0.8124
           },
-          "decayedWeight": 5.58
+          "decayedWeight": 5.57
         }
       },
       "homeFavorites": {
@@ -30940,7 +30940,7 @@
         "mid": 0.4182,
         "upper": 0.5497
       },
-      "decayedWeight": 53.5
+      "decayedWeight": 53.49
     },
     "1.01-1.35": {
       "sample": 26,
@@ -30961,7 +30961,7 @@
         "mid": 0.8077,
         "upper": 0.9149
       },
-      "decayedWeight": 25.24
+      "decayedWeight": 25.23
     },
     "1.36-1.60": {
       "sample": 34,
@@ -31003,7 +31003,7 @@
         "mid": 0.5714,
         "upper": 0.7088
       },
-      "decayedWeight": 41.12
+      "decayedWeight": 41.11
     }
   },
   "contexts": {
@@ -32702,13 +32702,13 @@
       "hardVeto": false
     },
     "premier soccer league|League Bias|Under 3.5 Goals|unknown|other": {
-      "sample": 3,
-      "wins": 3,
+      "sample": 5,
+      "wins": 5,
       "losses": 0,
       "winRate": 1,
       "lossRate": 0,
       "wilson": {
-        "lower": 0.4385,
+        "lower": 0.5655,
         "mid": 1,
         "upper": 1
       },
@@ -32716,15 +32716,15 @@
       "hardVeto": false
     },
     "*|League Bias|Under 3.5 Goals|unknown|other": {
-      "sample": 17,
-      "wins": 16,
+      "sample": 19,
+      "wins": 18,
       "losses": 1,
-      "winRate": 0.9412,
-      "lossRate": 0.0588,
+      "winRate": 0.9474,
+      "lossRate": 0.0526,
       "wilson": {
-        "lower": 0.7302,
-        "mid": 0.9412,
-        "upper": 0.9895
+        "lower": 0.7536,
+        "mid": 0.9474,
+        "upper": 0.9906
       },
       "adjustment": 2,
       "hardVeto": false
@@ -32926,15 +32926,15 @@
       "hardVeto": false
     },
     "*|League Bias|Home Team Over 0.5 Goals|unknown|other": {
-      "sample": 90,
-      "wins": 75,
+      "sample": 91,
+      "wins": 76,
       "losses": 15,
-      "winRate": 0.8333,
-      "lossRate": 0.1667,
+      "winRate": 0.8352,
+      "lossRate": 0.1648,
       "wilson": {
-        "lower": 0.7431,
-        "mid": 0.8333,
-        "upper": 0.8963
+        "lower": 0.7457,
+        "mid": 0.8352,
+        "upper": 0.8975
       },
       "adjustment": 2,
       "hardVeto": false
@@ -33738,15 +33738,15 @@
       "hardVeto": false
     },
     "friendlies clubs|League Bias|Home Team Over 0.5 Goals|unknown|other": {
-      "sample": 68,
-      "wins": 56,
+      "sample": 69,
+      "wins": 57,
       "losses": 12,
-      "winRate": 0.8235,
-      "lossRate": 0.1765,
+      "winRate": 0.8261,
+      "lossRate": 0.1739,
       "wilson": {
-        "lower": 0.7164,
-        "mid": 0.8235,
-        "upper": 0.8961
+        "lower": 0.7202,
+        "mid": 0.8261,
+        "upper": 0.8976
       },
       "adjustment": 2,
       "hardVeto": false
@@ -33878,15 +33878,15 @@
       "hardVeto": false
     },
     "*|League Bias|Over 1.5 Goals|unknown|other": {
-      "sample": 10,
-      "wins": 8,
+      "sample": 11,
+      "wins": 9,
       "losses": 2,
-      "winRate": 0.8,
-      "lossRate": 0.2,
+      "winRate": 0.8182,
+      "lossRate": 0.1818,
       "wilson": {
-        "lower": 0.4902,
-        "mid": 0.8,
-        "upper": 0.9433
+        "lower": 0.523,
+        "mid": 0.8182,
+        "upper": 0.9486
       },
       "adjustment": 0,
       "hardVeto": false
@@ -33920,15 +33920,15 @@
       "hardVeto": false
     },
     "friendlies clubs|League Bias|Over 1.5 Goals|unknown|other": {
-      "sample": 5,
-      "wins": 4,
+      "sample": 6,
+      "wins": 5,
       "losses": 1,
-      "winRate": 0.8,
-      "lossRate": 0.2,
+      "winRate": 0.8333,
+      "lossRate": 0.1667,
       "wilson": {
-        "lower": 0.3755,
-        "mid": 0.8,
-        "upper": 0.9638
+        "lower": 0.4365,
+        "mid": 0.8333,
+        "upper": 0.9699
       },
       "adjustment": 0,
       "hardVeto": false
