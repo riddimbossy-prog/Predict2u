@@ -1,7 +1,7 @@
 {
   "version": "v193",
   "schemaVersion": 1,
-  "updated": "2026-07-26T12:57:57.544Z",
+  "updated": "2026-07-26T14:04:29.773Z",
   "minimumSamples": {
     "teamFavorite": 5,
     "teamUnderdog": 5,
@@ -12,10 +12,10 @@
   },
   "decayHalfLifeDays": 120,
   "summary": {
-    "settledFixtures": 435,
-    "settledDecisions": 782,
+    "settledFixtures": 436,
+    "settledDecisions": 785,
     "reviewedLosses": 150,
-    "attachedUpcoming": 2393,
+    "attachedUpcoming": 2354,
     "highRiskUpcoming": 0,
     "stableUpcoming": 0
   },
@@ -18586,6 +18586,132 @@
       "patternStability": 100,
       "favoriteReliability": 0
     },
+    "474|kjels s": {
+      "name": "Kjelsås",
+      "league": "2. Division - Group 2",
+      "leagueId": 474,
+      "favorite": {
+        "sample": 1,
+        "wins": 1,
+        "draws": 0,
+        "losses": 0,
+        "winRate": 1,
+        "drawRate": 0,
+        "nonLossRate": 1,
+        "upsetRate": 0,
+        "nonLossWilson": {
+          "lower": 0.2065,
+          "mid": 1,
+          "upper": 1
+        },
+        "winWilson": {
+          "lower": 0.2065,
+          "mid": 1,
+          "upper": 1
+        },
+        "decayedWeight": 1
+      },
+      "underdog": {
+        "sample": 0,
+        "wins": 0,
+        "draws": 0,
+        "losses": 0,
+        "winRate": null,
+        "drawRate": null,
+        "nonLossRate": 0,
+        "upsetRate": null,
+        "nonLossWilson": {
+          "lower": null,
+          "mid": null,
+          "upper": null
+        },
+        "winWilson": {
+          "lower": null,
+          "mid": null,
+          "upper": null
+        },
+        "decayedWeight": 0
+      },
+      "favoriteBands": {
+        "1.61-1.85": {
+          "sample": 1,
+          "wins": 1,
+          "draws": 0,
+          "losses": 0,
+          "winRate": 1,
+          "drawRate": 0,
+          "nonLossRate": 1,
+          "upsetRate": 0,
+          "nonLossWilson": {
+            "lower": 0.2065,
+            "mid": 1,
+            "upper": 1
+          },
+          "winWilson": {
+            "lower": 0.2065,
+            "mid": 1,
+            "upper": 1
+          },
+          "decayedWeight": 1
+        }
+      },
+      "underdogUpsets": 0,
+      "flags": [],
+      "patternStability": 100,
+      "favoriteReliability": 100
+    },
+    "474|rana": {
+      "name": "Rana",
+      "league": "2. Division - Group 2",
+      "leagueId": 474,
+      "favorite": {
+        "sample": 0,
+        "wins": 0,
+        "draws": 0,
+        "losses": 0,
+        "winRate": null,
+        "drawRate": null,
+        "nonLossRate": 0,
+        "upsetRate": null,
+        "nonLossWilson": {
+          "lower": null,
+          "mid": null,
+          "upper": null
+        },
+        "winWilson": {
+          "lower": null,
+          "mid": null,
+          "upper": null
+        },
+        "decayedWeight": 0
+      },
+      "underdog": {
+        "sample": 1,
+        "wins": 0,
+        "draws": 0,
+        "losses": 1,
+        "winRate": 0,
+        "drawRate": 0,
+        "nonLossRate": 0,
+        "upsetRate": 1,
+        "nonLossWilson": {
+          "lower": 0,
+          "mid": 0,
+          "upper": 0.7935
+        },
+        "winWilson": {
+          "lower": 0,
+          "mid": 0,
+          "upper": 0.7935
+        },
+        "decayedWeight": 1
+      },
+      "favoriteBands": {},
+      "underdogUpsets": 0,
+      "flags": [],
+      "patternStability": 100,
+      "favoriteReliability": 0
+    },
     "244|ac oulu": {
       "name": "AC Oulu",
       "league": "Veikkausliiga",
@@ -21810,7 +21936,7 @@
           "mid": 0.5,
           "upper": 0.85
         },
-        "decayedWeight": 3.8
+        "decayedWeight": 3.79
       },
       "bands": {
         "1.86-2.25": {
@@ -23545,47 +23671,47 @@
       "league": "2. Division - Group 2",
       "leagueId": 474,
       "favorite": {
-        "sample": 5,
-        "wins": 2,
+        "sample": 6,
+        "wins": 3,
         "draws": 1,
         "losses": 2,
-        "winRate": 0.4,
-        "drawRate": 0.2,
-        "nonLossRate": 0.6,
-        "upsetRate": 0.4,
+        "winRate": 0.5005,
+        "drawRate": 0.1665,
+        "nonLossRate": 0.667,
+        "upsetRate": 0.333,
         "nonLossWilson": {
-          "lower": 0.2307,
-          "mid": 0.6,
-          "upper": 0.8824
+          "lower": 0.3,
+          "mid": 0.6667,
+          "upper": 0.9032
         },
         "winWilson": {
-          "lower": 0.1176,
-          "mid": 0.4,
-          "upper": 0.7693
+          "lower": 0.1876,
+          "mid": 0.5,
+          "upper": 0.8124
         },
-        "decayedWeight": 4.96
+        "decayedWeight": 5.95
       },
       "bands": {
         "1.61-1.85": {
-          "sample": 2,
-          "wins": 1,
+          "sample": 3,
+          "wins": 2,
           "draws": 0,
           "losses": 1,
-          "winRate": 0.5,
+          "winRate": 0.6673,
           "drawRate": 0,
-          "nonLossRate": 0.5,
-          "upsetRate": 0.5,
+          "nonLossRate": 0.6673,
+          "upsetRate": 0.3327,
           "nonLossWilson": {
-            "lower": 0.0945,
-            "mid": 0.5,
-            "upper": 0.9055
+            "lower": 0.2077,
+            "mid": 0.6667,
+            "upper": 0.9385
           },
           "winWilson": {
-            "lower": 0.0945,
-            "mid": 0.5,
-            "upper": 0.9055
+            "lower": 0.2077,
+            "mid": 0.6667,
+            "upper": 0.9385
           },
-          "decayedWeight": 1.98
+          "decayedWeight": 2.98
         },
         "1.01-1.35": {
           "sample": 1,
@@ -23652,28 +23778,28 @@
         "decayedWeight": 3.96
       },
       "awayFavorites": {
-        "sample": 1,
-        "wins": 0,
+        "sample": 2,
+        "wins": 1,
         "draws": 0,
         "losses": 1,
-        "winRate": 0,
+        "winRate": 0.5014,
         "drawRate": 0,
-        "nonLossRate": 0,
-        "upsetRate": 1,
+        "nonLossRate": 0.5014,
+        "upsetRate": 0.4986,
         "nonLossWilson": {
-          "lower": 0,
-          "mid": 0,
-          "upper": 0.7935
+          "lower": 0.0945,
+          "mid": 0.5,
+          "upper": 0.9055
         },
         "winWilson": {
-          "lower": 0,
-          "mid": 0,
-          "upper": 0.7935
+          "lower": 0.0945,
+          "mid": 0.5,
+          "upper": 0.9055
         },
-        "decayedWeight": 0.99
+        "decayedWeight": 1.99
       },
       "flags": [],
-      "stabilityScore": 65
+      "stabilityScore": 70.9
     },
     "481": {
       "league": "Northern NSW NPL",
@@ -25731,7 +25857,7 @@
           "mid": 0.4,
           "upper": 0.7693
         },
-        "decayedWeight": 4.96
+        "decayedWeight": 4.95
       },
       "bands": {
         "1.61-1.85": {
@@ -25817,7 +25943,7 @@
           "mid": 0.4,
           "upper": 0.7693
         },
-        "decayedWeight": 4.96
+        "decayedWeight": 4.95
       },
       "awayFavorites": {
         "sample": 0,
@@ -30569,6 +30695,34 @@
       },
       "flags": []
     },
+    "474|rana|kjels s": {
+      "home": "Rana",
+      "away": "Kjelsås",
+      "league": "2. Division - Group 2",
+      "leagueId": 474,
+      "favorite": {
+        "sample": 1,
+        "wins": 1,
+        "draws": 0,
+        "losses": 0,
+        "winRate": 1,
+        "drawRate": 0,
+        "nonLossRate": 1,
+        "upsetRate": 0,
+        "nonLossWilson": {
+          "lower": 0.2065,
+          "mid": 1,
+          "upper": 1
+        },
+        "winWilson": {
+          "lower": 0.2065,
+          "mid": 1,
+          "upper": 1
+        },
+        "decayedWeight": 1
+      },
+      "flags": []
+    },
     "244|mariehamn|ac oulu": {
       "home": "Mariehamn",
       "away": "AC Oulu",
@@ -30786,7 +30940,7 @@
         "mid": 0.4182,
         "upper": 0.5497
       },
-      "decayedWeight": 53.54
+      "decayedWeight": 53.53
     },
     "1.01-1.35": {
       "sample": 26,
@@ -30807,7 +30961,7 @@
         "mid": 0.8077,
         "upper": 0.9149
       },
-      "decayedWeight": 25.26
+      "decayedWeight": 25.25
     },
     "1.36-1.60": {
       "sample": 34,
@@ -30828,28 +30982,28 @@
         "mid": 0.5294,
         "upper": 0.6855
       },
-      "decayedWeight": 33.32
+      "decayedWeight": 33.31
     },
     "1.61-1.85": {
-      "sample": 41,
-      "wins": 23,
+      "sample": 42,
+      "wins": 24,
       "draws": 8,
       "losses": 10,
-      "winRate": 0.5618,
-      "drawRate": 0.1943,
-      "nonLossRate": 0.7561,
-      "upsetRate": 0.2439,
+      "winRate": 0.5724,
+      "drawRate": 0.1896,
+      "nonLossRate": 0.762,
+      "upsetRate": 0.238,
       "nonLossWilson": {
-        "lower": 0.6066,
-        "mid": 0.7561,
-        "upper": 0.8618
+        "lower": 0.6147,
+        "mid": 0.7619,
+        "upper": 0.8652
       },
       "winWilson": {
-        "lower": 0.4104,
-        "mid": 0.561,
-        "upper": 0.7011
+        "lower": 0.4221,
+        "mid": 0.5714,
+        "upper": 0.7088
       },
-      "decayedWeight": 40.15
+      "decayedWeight": 41.14
     }
   },
   "contexts": {
@@ -33066,15 +33220,15 @@
       "hardVeto": false
     },
     "*|Halves|Second Half Over 0.5|1.61-1.85|other": {
-      "sample": 27,
-      "wins": 21,
+      "sample": 28,
+      "wins": 22,
       "losses": 6,
-      "winRate": 0.7778,
-      "lossRate": 0.2222,
+      "winRate": 0.7857,
+      "lossRate": 0.2143,
       "wilson": {
-        "lower": 0.5924,
-        "mid": 0.7778,
-        "upper": 0.8939
+        "lower": 0.6046,
+        "mid": 0.7857,
+        "upper": 0.8979
       },
       "adjustment": 0,
       "hardVeto": false
@@ -33430,15 +33584,15 @@
       "hardVeto": false
     },
     "*|League Bias|Home Team Over 0.5 Goals|1.61-1.85|other": {
-      "sample": 1,
-      "wins": 0,
+      "sample": 2,
+      "wins": 1,
       "losses": 1,
-      "winRate": 0,
-      "lossRate": 1,
+      "winRate": 0.5,
+      "lossRate": 0.5,
       "wilson": {
-        "lower": 0,
-        "mid": 0,
-        "upper": 0.7935
+        "lower": 0.0945,
+        "mid": 0.5,
+        "upper": 0.9055
       },
       "adjustment": 0,
       "hardVeto": false
@@ -34592,15 +34746,15 @@
       "hardVeto": false
     },
     "*|Trend|Home Team Over 0.5 Goals|1.61-1.85|other": {
-      "sample": 1,
-      "wins": 0,
+      "sample": 2,
+      "wins": 1,
       "losses": 1,
-      "winRate": 0,
-      "lossRate": 1,
+      "winRate": 0.5,
+      "lossRate": 0.5,
       "wilson": {
-        "lower": 0,
-        "mid": 0,
-        "upper": 0.7935
+        "lower": 0.0945,
+        "mid": 0.5,
+        "upper": 0.9055
       },
       "adjustment": 0,
       "hardVeto": false
@@ -37238,13 +37392,13 @@
       "hardVeto": false
     },
     "2 division group 2|Halves|Second Half Over 0.5|1.61-1.85|other": {
-      "sample": 1,
-      "wins": 1,
+      "sample": 2,
+      "wins": 2,
       "losses": 0,
       "winRate": 1,
       "lossRate": 0,
       "wilson": {
-        "lower": 0.2065,
+        "lower": 0.3424,
         "mid": 1,
         "upper": 1
       },
@@ -38694,6 +38848,34 @@
       "hardVeto": false
     },
     "*|Trend|Double Chance 1X|2.26+|other": {
+      "sample": 1,
+      "wins": 1,
+      "losses": 0,
+      "winRate": 1,
+      "lossRate": 0,
+      "wilson": {
+        "lower": 0.2065,
+        "mid": 1,
+        "upper": 1
+      },
+      "adjustment": 0,
+      "hardVeto": false
+    },
+    "2 division group 2|Trend|Home Team Over 0.5 Goals|1.61-1.85|other": {
+      "sample": 1,
+      "wins": 1,
+      "losses": 0,
+      "winRate": 1,
+      "lossRate": 0,
+      "wilson": {
+        "lower": 0.2065,
+        "mid": 1,
+        "upper": 1
+      },
+      "adjustment": 0,
+      "hardVeto": false
+    },
+    "2 division group 2|League Bias|Home Team Over 0.5 Goals|1.61-1.85|other": {
       "sample": 1,
       "wins": 1,
       "losses": 0,
