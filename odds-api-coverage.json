@@ -1,6 +1,6 @@
 {
   "version": "v251",
-  "generatedAt": "2026-07-26T01:37:03.959Z",
+  "generatedAt": "2026-07-26T01:54:05.411Z",
   "provider": "The Odds API v4",
   "keyPresent": true,
   "regions": "uk",
@@ -125,15 +125,7 @@
       "sportKey": "soccer_brazil_campeonato",
       "sportTitle": "Brazil Série A",
       "score": 0.305,
-      "matches": 2
-    },
-    {
-      "league": "Major League Soccer",
-      "country": "USA",
-      "sportKey": "soccer_usa_mls",
-      "sportTitle": "MLS",
-      "score": 1,
-      "matches": 23
+      "matches": 1
     },
     {
       "league": "USL Championship",
@@ -141,7 +133,7 @@
       "sportKey": "soccer_usa_mls",
       "sportTitle": "MLS",
       "score": 0.323,
-      "matches": 19
+      "matches": 9
     },
     {
       "league": "MLS Next Pro",
@@ -149,31 +141,7 @@
       "sportKey": "soccer_usa_mls",
       "sportTitle": "MLS",
       "score": 1,
-      "matches": 21
-    },
-    {
-      "league": "Liga de Expansión MX",
-      "country": "Mexico",
-      "sportKey": "soccer_mexico_ligamx",
-      "sportTitle": "Liga MX",
-      "score": 0.555,
-      "matches": 10
-    },
-    {
-      "league": "Primera División",
-      "country": "Costa-Rica",
-      "sportKey": "soccer_argentina_primera_division",
-      "sportTitle": "Primera División - Argentina",
-      "score": 0.606,
-      "matches": 5
-    },
-    {
-      "league": "Liga MX",
-      "country": "Mexico",
-      "sportKey": "soccer_mexico_ligamx",
-      "sportTitle": "Liga MX",
-      "score": 1,
-      "matches": 9
+      "matches": 13
     },
     {
       "league": "Premier League - Summer Series",
@@ -184,12 +152,12 @@
       "matches": 3
     },
     {
-      "league": "Serie A",
-      "country": "Brazil",
-      "sportKey": "soccer_brazil_campeonato",
-      "sportTitle": "Brazil Série A",
-      "score": 0.929,
-      "matches": 18
+      "league": "Major League Soccer",
+      "country": "USA",
+      "sportKey": "soccer_usa_mls",
+      "sportTitle": "MLS",
+      "score": 1,
+      "matches": 14
     },
     {
       "league": "Primera División",
@@ -262,6 +230,14 @@
       "sportTitle": "Primera División - Argentina",
       "score": 0.653,
       "matches": 8
+    },
+    {
+      "league": "Liga de Expansión MX",
+      "country": "Mexico",
+      "sportKey": "soccer_mexico_ligamx",
+      "sportTitle": "Liga MX",
+      "score": 0.555,
+      "matches": 4
     },
     {
       "league": "Primera División",
@@ -734,6 +710,14 @@
       "sportTitle": "Brazil Série A",
       "score": 0.305,
       "matches": 9
+    },
+    {
+      "league": "Serie A",
+      "country": "Brazil",
+      "sportKey": "soccer_brazil_campeonato",
+      "sportTitle": "Brazil Série A",
+      "score": 0.929,
+      "matches": 17
     },
     {
       "league": "Serie B",
@@ -1360,7 +1344,7 @@
       "matches": 2
     }
   ],
-  "matchesConsidered": 2193,
+  "matchesConsidered": 1279,
   "matchesMatched": 0,
   "matchesUpdated": 0,
   "fieldsFilled": 0,
@@ -2864,9 +2848,393 @@
       "reason": "No event/team match"
     },
     {
-      "league": "Primera Nacional",
-      "home": "Colegiales",
-      "away": "Gimnasia Jujuy",
+      "league": "Primera C",
+      "home": "Juventud Unida",
+      "away": "Defensores de Cambaceres",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Primera C",
+      "home": "Fénix",
+      "away": "Yupanqui",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Primera C",
+      "home": "Sacachispas",
+      "away": "Leandro N. Alem",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Primera C",
+      "home": "Sportivo Barracas",
+      "away": "El Porvenir",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Torneo Federal A",
+      "home": "Atenas",
+      "away": "Juventud Unida Univ.",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Torneo Federal A",
+      "home": "Boca Unidos",
+      "away": "Juventud Antoniana",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Torneo Federal A",
+      "home": "Douglas Haig",
+      "away": "9 de Julio Rafaela",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Torneo Federal A",
+      "home": "Gimnasia Concepción",
+      "away": "El Linqueño",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Torneo Federal A",
+      "home": "Guillermo Brown",
+      "away": "Germinal de Rawson",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Torneo Federal A",
+      "home": "Huracan Las Heras",
+      "away": "Fundacion Amigos",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Torneo Federal A",
+      "home": "Independiente De Chivilcoy",
+      "away": "Sportivo Las Parejas",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Torneo Federal A",
+      "home": "Olimpo Bahia Blanca",
+      "away": "Santamarina",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Torneo Federal A",
+      "home": "San Martín Mendoza",
+      "away": "Argentino Monte Maíz",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Torneo Federal A",
+      "home": "Sol de Mayo",
+      "away": "Villa Mitre",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Torneo Federal A",
+      "home": "San Martin Formosa",
+      "away": "Bartolomé Mitre",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Torneo Federal A",
+      "home": "Sarmiento Resistencia",
+      "away": "Sol de América",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Torneo Federal A",
+      "home": "Tucuman Central",
+      "away": "Sarmiento de La Banda",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Reserve League",
+      "home": "Banfield Res.",
+      "away": "Vélez Sársfield Res.",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Reserve League",
+      "home": "Talleres Córdoba Res.",
+      "away": "River Plate Res.",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Reserve League",
+      "home": "Boca Juniors Res.",
+      "away": "Belgrano Córdoba Res.",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Reserve League",
+      "home": "Barracas Central Res.",
+      "away": "Racing Club Res.",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Liga MX U21",
+      "home": "Guadalajara Chivas U21",
+      "away": "Juarez U21",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Liga MX U21",
+      "home": "Necaxa U21",
+      "away": "Monterrey U21",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Liga MX U21",
+      "home": "Pachuca U21",
+      "away": "Queretaro U21",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Liga MX U21",
+      "home": "Atl. San Luis U21",
+      "away": "Club Tijuana U21",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Liga MX U21",
+      "home": "Juarez U21",
+      "away": "UNAM Pumas U21",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Liga MX U21",
+      "home": "Puebla U21",
+      "away": "Guadalajara Chivas U21",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Campeón de Campeones",
+      "home": "Toluca",
+      "away": "Cruz Azul",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Liga de Expansión MX",
+      "home": "Monarcas",
+      "away": "CA La Paz",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Liga de Expansión MX",
+      "home": "CDS Tampico Madero",
+      "away": "Piratas",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Liga de Expansión MX",
+      "home": "Tapatío",
+      "away": "Cruz Azul Hidalgo",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Liga de Expansión MX",
+      "home": "Alebrijes de Oaxaca",
+      "away": "Dorados",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Liga MX",
+      "home": "Tigres UANL",
+      "away": "Atletico San Luis",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Liga MX",
+      "home": "Santos Laguna",
+      "away": "Atlas",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Liga MX",
+      "home": "Necaxa",
+      "away": "Monterrey",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Liga MX",
+      "home": "CF Pachuca",
+      "away": "Club Queretaro",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Catarinense U20",
+      "home": "Carlos Renaux U20",
+      "away": "Criciuma U20",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Catarinense U20",
+      "home": "Chapecoense U20",
+      "away": "Nação U20",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Catarinense U20",
+      "home": "Barra SC U20",
+      "away": "Joinville U20",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Cearense U20",
+      "home": "Quixadá U20",
+      "away": "Floresta CE U20",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Cearense U20",
+      "home": "Vila Real FC U20",
+      "away": "Ceará U20",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Cearense U20",
+      "home": "Tirol U20",
+      "away": "Anjos do Céu U20",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Catarinense - 2",
+      "home": "Jaraguá",
+      "away": "Blumenau",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Brasiliense U20",
+      "home": "Planaltina DF U20",
+      "away": "Canaã U20",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Brasiliense U20",
+      "home": "Santa Maria U20",
+      "away": "Luziânia U20",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Brasiliense U20",
+      "home": "Ceilandense U20",
+      "away": "Real Brasília U20",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Brasiliense U20",
+      "home": "Paranoa U20",
+      "away": "Cruzeiro U20",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Baiano - 2",
+      "home": "SSA",
+      "away": "Fluminense De Feira",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Copa Paulista",
+      "home": "Juventus",
+      "away": "Paulista",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Copa Paulista",
+      "home": "Linense",
+      "away": "Marília",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Copa Paulista",
+      "home": "Santo André",
+      "away": "São Caetano",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Copa Paulista",
+      "home": "Grêmio Prudente",
+      "away": "Bandeirante SP",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Paulista - U20",
+      "home": "Porto Football U20",
+      "away": "Referencia U20",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Paulista - U20",
+      "home": "Botafogo SP U20",
+      "away": "Desportivo Brasil U20",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Paulista - U20",
+      "home": "Mirassol U20",
+      "away": "Ferroviária U20",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Paulista - U20",
+      "home": "Palmeiras U20",
+      "away": "RB Bragantino U20",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Paulista - U20",
+      "home": "Santos U20",
+      "away": "Portuguesa U20",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Paulista - U20",
+      "home": "São Paulo U20",
+      "away": "Oeste U20",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Paulista - U20",
+      "home": "América-SP U20",
+      "away": "Mirassol U20",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Paulista - U20",
+      "home": "Oeste U20",
+      "away": "XV de Piracicaba U20",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Paulista - U20",
+      "home": "Água Santa U20",
+      "away": "Sfera U20",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Paulista - U20",
+      "home": "Bandeirante U20",
+      "away": "Ibrachina U20",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Paulista - U20",
+      "home": "Capivariano U20",
+      "away": "Porto Football U20",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Paulista - U20",
+      "home": "Desportivo Brasil U20",
+      "away": "Aguai U20",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Paulista - U20",
+      "home": "EC São Bernardo U20",
+      "away": "Novorizontino U20",
       "reason": "No event/team match"
     }
   ],
@@ -3991,5 +4359,5 @@
   },
   "skipped": false,
   "skipReason": null,
-  "completedAt": "2026-07-26T01:37:22.851Z"
+  "completedAt": "2026-07-26T01:54:11.315Z"
 }
