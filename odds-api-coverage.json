@@ -1,6 +1,6 @@
 {
   "version": "v251",
-  "generatedAt": "2026-07-26T19:23:18.629Z",
+  "generatedAt": "2026-07-26T19:33:34.625Z",
   "provider": "The Odds API v4",
   "keyPresent": true,
   "regions": "uk",
@@ -69,14 +69,6 @@
       "sportKey": "soccer_argentina_primera_division",
       "sportTitle": "Primera División - Argentina",
       "score": 0.305,
-      "matches": 6
-    },
-    {
-      "league": "Eliteserien",
-      "country": "Norway",
-      "sportKey": "soccer_norway_eliteserien",
-      "sportTitle": "Eliteserien - Norway",
-      "score": 1,
       "matches": 6
     },
     {
@@ -398,6 +390,14 @@
       "sportTitle": "Allsvenskan - Sweden",
       "score": 1,
       "matches": 2
+    },
+    {
+      "league": "Eliteserien",
+      "country": "Norway",
+      "sportKey": "soccer_norway_eliteserien",
+      "sportTitle": "Eliteserien - Norway",
+      "score": 1,
+      "matches": 5
     },
     {
       "league": "Damallsvenskan",
@@ -1264,7 +1264,7 @@
       "matches": 2
     }
   ],
-  "matchesConsidered": 1849,
+  "matchesConsidered": 1832,
   "matchesMatched": 0,
   "matchesUpdated": 0,
   "fieldsFilled": 0,
@@ -1320,36 +1320,6 @@
       "country": "Lithuania",
       "reason": "No matching soccer sport key",
       "bestScore": 0.143
-    },
-    {
-      "league": "Super Liga",
-      "country": "Slovakia",
-      "reason": "No matching soccer sport key",
-      "bestScore": 0.125
-    },
-    {
-      "league": "Super Liga",
-      "country": "Serbia",
-      "reason": "No matching soccer sport key",
-      "bestScore": 0.125
-    },
-    {
-      "league": "David Kipiani Cup",
-      "country": "Georgia",
-      "reason": "No matching soccer sport key",
-      "bestScore": 0.125
-    },
-    {
-      "league": "NB II",
-      "country": "Hungary",
-      "reason": "No matching soccer sport key",
-      "bestScore": 0
-    },
-    {
-      "league": "Super Liga",
-      "country": "Moldova",
-      "reason": "No matching soccer sport key",
-      "bestScore": 0.125
     },
     {
       "league": "Africa Cup of Nations - Women",
@@ -1410,6 +1380,12 @@
       "country": "Peru",
       "reason": "No matching soccer sport key",
       "bestScore": 0.143
+    },
+    {
+      "league": "Super Liga",
+      "country": "Serbia",
+      "reason": "No matching soccer sport key",
+      "bestScore": 0.125
     },
     {
       "league": "COTIF Tournament",
@@ -1482,6 +1458,12 @@
       "country": "World",
       "reason": "No matching soccer sport key",
       "bestScore": 0.167
+    },
+    {
+      "league": "David Kipiani Cup",
+      "country": "Georgia",
+      "reason": "No matching soccer sport key",
+      "bestScore": 0.125
     },
     {
       "league": "CECAFA Club Cup",
@@ -2884,30 +2866,6 @@
       "market": "double_chance"
     },
     {
-      "sportKey": "soccer_chile_campeonato",
-      "market": "btts"
-    },
-    {
-      "sportKey": "soccer_chile_campeonato",
-      "market": "draw_no_bet"
-    },
-    {
-      "sportKey": "soccer_chile_campeonato",
-      "market": "double_chance"
-    },
-    {
-      "sportKey": "soccer_norway_eliteserien",
-      "market": "btts"
-    },
-    {
-      "sportKey": "soccer_norway_eliteserien",
-      "market": "draw_no_bet"
-    },
-    {
-      "sportKey": "soccer_norway_eliteserien",
-      "market": "double_chance"
-    },
-    {
       "sportKey": "soccer_poland_ekstraklasa",
       "market": "btts"
     },
@@ -2989,6 +2947,18 @@
     },
     {
       "sportKey": "soccer_russia_premier_league",
+      "market": "double_chance"
+    },
+    {
+      "sportKey": "soccer_norway_eliteserien",
+      "market": "btts"
+    },
+    {
+      "sportKey": "soccer_norway_eliteserien",
+      "market": "draw_no_bet"
+    },
+    {
+      "sportKey": "soccer_norway_eliteserien",
       "market": "double_chance"
     },
     {
@@ -3311,56 +3281,6 @@
       "statusCode": 422
     },
     {
-      "label": "soccer_chile_campeonato:base-combined",
-      "error": "Markets not supported by this endpoint: btts, double_chance, draw_no_bet",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_chile_campeonato:base-core",
-      "error": "Invalid commenceTimeFrom parameter. The format must be YYYY-MM-DDTHH:MM:SSZ, for example 2020-11-24T16:05:00Z",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_chile_campeonato:btts",
-      "error": "Markets not supported by this endpoint: btts",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_chile_campeonato:draw_no_bet",
-      "error": "Markets not supported by this endpoint: draw_no_bet",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_chile_campeonato:double_chance",
-      "error": "Markets not supported by this endpoint: double_chance",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_norway_eliteserien:base-combined",
-      "error": "Markets not supported by this endpoint: btts, double_chance, draw_no_bet",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_norway_eliteserien:base-core",
-      "error": "Invalid commenceTimeFrom parameter. The format must be YYYY-MM-DDTHH:MM:SSZ, for example 2020-11-24T16:05:00Z",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_norway_eliteserien:btts",
-      "error": "Markets not supported by this endpoint: btts",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_norway_eliteserien:draw_no_bet",
-      "error": "Markets not supported by this endpoint: draw_no_bet",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_norway_eliteserien:double_chance",
-      "error": "Markets not supported by this endpoint: double_chance",
-      "statusCode": 422
-    },
-    {
       "label": "soccer_poland_ekstraklasa:base-combined",
       "error": "Markets not supported by this endpoint: btts, double_chance, draw_no_bet",
       "statusCode": 422
@@ -3532,6 +3452,31 @@
     },
     {
       "label": "soccer_russia_premier_league:double_chance",
+      "error": "Markets not supported by this endpoint: double_chance",
+      "statusCode": 422
+    },
+    {
+      "label": "soccer_norway_eliteserien:base-combined",
+      "error": "Markets not supported by this endpoint: btts, double_chance, draw_no_bet",
+      "statusCode": 422
+    },
+    {
+      "label": "soccer_norway_eliteserien:base-core",
+      "error": "Invalid commenceTimeFrom parameter. The format must be YYYY-MM-DDTHH:MM:SSZ, for example 2020-11-24T16:05:00Z",
+      "statusCode": 422
+    },
+    {
+      "label": "soccer_norway_eliteserien:btts",
+      "error": "Markets not supported by this endpoint: btts",
+      "statusCode": 422
+    },
+    {
+      "label": "soccer_norway_eliteserien:draw_no_bet",
+      "error": "Markets not supported by this endpoint: draw_no_bet",
+      "statusCode": 422
+    },
+    {
+      "label": "soccer_norway_eliteserien:double_chance",
       "error": "Markets not supported by this endpoint: double_chance",
       "statusCode": 422
     },
@@ -3937,11 +3882,11 @@
     }
   ],
   "quota": {
-    "remaining": 94528,
-    "used": 5472,
+    "remaining": 94460,
+    "used": 5540,
     "last": 0
   },
   "skipped": false,
   "skipReason": null,
-  "completedAt": "2026-07-26T19:23:24.733Z"
+  "completedAt": "2026-07-26T19:33:54.131Z"
 }
