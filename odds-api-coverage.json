@@ -1,6 +1,6 @@
 {
   "version": "v251",
-  "generatedAt": "2026-07-26T03:25:16.359Z",
+  "generatedAt": "2026-07-26T03:47:55.340Z",
   "provider": "The Odds API v4",
   "keyPresent": true,
   "regions": "uk",
@@ -101,23 +101,7 @@
       "sportKey": "soccer_usa_mls",
       "sportTitle": "MLS",
       "score": 0.323,
-      "matches": 7
-    },
-    {
-      "league": "MLS Next Pro",
-      "country": "USA",
-      "sportKey": "soccer_usa_mls",
-      "sportTitle": "MLS",
-      "score": 1,
-      "matches": 12
-    },
-    {
-      "league": "Liga de Expansión MX",
-      "country": "Mexico",
-      "sportKey": "soccer_mexico_ligamx",
-      "sportTitle": "Liga MX",
-      "score": 0.555,
-      "matches": 3
+      "matches": 6
     },
     {
       "league": "Major League Soccer",
@@ -544,6 +528,14 @@
       "matches": 5
     },
     {
+      "league": "MLS Next Pro",
+      "country": "USA",
+      "sportKey": "soccer_usa_mls",
+      "sportTitle": "MLS",
+      "score": 1,
+      "matches": 11
+    },
+    {
       "league": "Kakkonen - Lohko C",
       "country": "Finland",
       "sportKey": "soccer_finland_veikkausliiga",
@@ -710,6 +702,14 @@
       "sportTitle": "La Liga - Spain",
       "score": 0.429,
       "matches": 7
+    },
+    {
+      "league": "Liga de Expansión MX",
+      "country": "Mexico",
+      "sportKey": "soccer_mexico_ligamx",
+      "sportTitle": "Liga MX",
+      "score": 0.555,
+      "matches": 2
     },
     {
       "league": "Premier League",
@@ -1152,7 +1152,7 @@
       "matches": 1
     }
   ],
-  "matchesConsidered": 1242,
+  "matchesConsidered": 1237,
   "matchesMatched": 0,
   "matchesUpdated": 0,
   "fieldsFilled": 0,
@@ -1212,12 +1212,6 @@
     {
       "league": "Primera A",
       "country": "Colombia",
-      "reason": "No matching soccer sport key",
-      "bestScore": 0.143
-    },
-    {
-      "league": "Liga Nacional",
-      "country": "Guatemala",
       "reason": "No matching soccer sport key",
       "bestScore": 0.143
     },
@@ -1484,6 +1478,12 @@
       "country": "Iceland",
       "reason": "No matching soccer sport key",
       "bestScore": 0
+    },
+    {
+      "league": "Liga Nacional",
+      "country": "Guatemala",
+      "reason": "No matching soccer sport key",
+      "bestScore": 0.143
     },
     {
       "league": "Victoria NPL 2",
@@ -3672,5 +3672,5 @@
   },
   "skipped": false,
   "skipReason": null,
-  "completedAt": "2026-07-26T03:25:22.358Z"
+  "completedAt": "2026-07-26T03:48:16.317Z"
 }
