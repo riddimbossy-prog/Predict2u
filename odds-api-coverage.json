@@ -1,6 +1,6 @@
 {
   "version": "v251",
-  "generatedAt": "2026-07-26T23:36:47.828Z",
+  "generatedAt": "2026-07-26T23:54:57.659Z",
   "provider": "The Odds API v4",
   "keyPresent": true,
   "regions": "uk",
@@ -88,30 +88,6 @@
       "matches": 4
     },
     {
-      "league": "Primera Nacional",
-      "country": "Argentina",
-      "sportKey": "soccer_argentina_primera_division",
-      "sportTitle": "Primera División - Argentina",
-      "score": 0.513,
-      "matches": 10
-    },
-    {
-      "league": "NWSL Women",
-      "country": "USA",
-      "sportKey": "soccer_usa_mls",
-      "sportTitle": "MLS",
-      "score": 0.323,
-      "matches": 9
-    },
-    {
-      "league": "Canadian Premier League",
-      "country": "Canada",
-      "sportKey": "soccer_epl",
-      "sportTitle": "EPL",
-      "score": 0.667,
-      "matches": 4
-    },
-    {
       "league": "Primera Division",
       "country": "Nicaragua",
       "sportKey": "soccer_spain_la_liga",
@@ -125,23 +101,7 @@
       "sportKey": "soccer_brazil_campeonato",
       "sportTitle": "Brazil Série A",
       "score": 0.929,
-      "matches": 15
-    },
-    {
-      "league": "Primera División",
-      "country": "Chile",
-      "sportKey": "soccer_chile_campeonato",
-      "sportTitle": "Primera División - Chile",
-      "score": 1,
-      "matches": 6
-    },
-    {
-      "league": "Primera B",
-      "country": "Chile",
-      "sportKey": "soccer_chile_campeonato",
-      "sportTitle": "Primera División - Chile",
-      "score": 0.466,
-      "matches": 6
+      "matches": 14
     },
     {
       "league": "Serie B",
@@ -149,15 +109,15 @@
       "sportKey": "soccer_brazil_serie_b",
       "sportTitle": "Brazil Série B",
       "score": 1,
-      "matches": 8
+      "matches": 7
     },
     {
-      "league": "Serie C",
-      "country": "Brazil",
-      "sportKey": "soccer_brazil_campeonato",
-      "sportTitle": "Brazil Série A",
-      "score": 0.466,
-      "matches": 4
+      "league": "Primera Nacional",
+      "country": "Argentina",
+      "sportKey": "soccer_argentina_primera_division",
+      "sportTitle": "Primera División - Argentina",
+      "score": 0.513,
+      "matches": 9
     },
     {
       "league": "Primera Nacional",
@@ -182,6 +142,14 @@
       "sportTitle": "Primera División - Argentina",
       "score": 0.78,
       "matches": 18
+    },
+    {
+      "league": "NWSL Women",
+      "country": "USA",
+      "sportKey": "soccer_usa_mls",
+      "sportTitle": "MLS",
+      "score": 0.323,
+      "matches": 8
     },
     {
       "league": "Liga MX",
@@ -209,10 +177,34 @@
     },
     {
       "league": "Primera División",
+      "country": "Bolivia",
+      "sportKey": "soccer_argentina_primera_division",
+      "sportTitle": "Primera División - Argentina",
+      "score": 0.653,
+      "matches": 7
+    },
+    {
+      "league": "Serie C",
+      "country": "Brazil",
+      "sportKey": "soccer_brazil_campeonato",
+      "sportTitle": "Brazil Série A",
+      "score": 0.466,
+      "matches": 3
+    },
+    {
+      "league": "Primera División",
       "country": "Peru",
       "sportKey": "soccer_argentina_primera_division",
       "sportTitle": "Primera División - Argentina",
       "score": 0.653,
+      "matches": 5
+    },
+    {
+      "league": "Primera División",
+      "country": "Chile",
+      "sportKey": "soccer_chile_campeonato",
+      "sportTitle": "Primera División - Chile",
+      "score": 1,
       "matches": 5
     },
     {
@@ -398,6 +390,14 @@
       "sportTitle": "Brazil Série A",
       "score": 0.305,
       "matches": 6
+    },
+    {
+      "league": "Primera B",
+      "country": "Chile",
+      "sportKey": "soccer_chile_campeonato",
+      "sportTitle": "Primera División - Chile",
+      "score": 0.466,
+      "matches": 5
     },
     {
       "league": "Premier League",
@@ -1256,7 +1256,7 @@
       "matches": 1
     }
   ],
-  "matchesConsidered": 1735,
+  "matchesConsidered": 1717,
   "matchesMatched": 0,
   "matchesUpdated": 0,
   "fieldsFilled": 0,
@@ -1498,6 +1498,12 @@
       "country": "Faroe-Islands",
       "reason": "No matching soccer sport key",
       "bestScore": 0
+    },
+    {
+      "league": "Division Profesional - Clausura",
+      "country": "Paraguay",
+      "reason": "No matching soccer sport key",
+      "bestScore": 0.125
     },
     {
       "league": "1. Deild",
@@ -2197,12 +2203,6 @@
     },
     {
       "league": "Serie B",
-      "home": "Londrina",
-      "away": "Novorizontino",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Serie B",
       "home": "Atletico Goianiense",
       "away": "Operario-PR",
       "reason": "No event/team match"
@@ -2293,12 +2293,6 @@
     },
     {
       "league": "Primera Nacional",
-      "home": "Gimnasia Y Tiro",
-      "away": "Deportivo Maipu",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Primera Nacional",
       "home": "Quilmes",
       "away": "Colegiales",
       "reason": "No event/team match"
@@ -2349,54 +2343,6 @@
       "league": "Primera Nacional",
       "home": "San Martin S.J.",
       "away": "Atletico DE Rafaela",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Primera División",
-      "home": "Bolívar",
-      "away": "Real Potosí",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Primera División",
-      "home": "Nacional Potosí",
-      "away": "Real Tomayapo",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Primera División",
-      "home": "Gualberto Villarroel SJ",
-      "away": "Universitario de Vinto",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Primera División",
-      "home": "Universitario de Vinto",
-      "away": "Guabirá",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Primera División",
-      "home": "Real Tomayapo",
-      "away": "ABB",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Primera División",
-      "home": "Real Oruro",
-      "away": "Independiente Petrolero",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Primera División",
-      "home": "San Antonio Bulo Bulo",
-      "away": "Blooming",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Primera División",
-      "home": "The Strongest",
-      "away": "Aurora",
       "reason": "No event/team match"
     },
     {
@@ -2505,6 +2451,48 @@
       "league": "Liga Profesional Argentina",
       "home": "Racing Club",
       "away": "Tigre",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Primera División",
+      "home": "Nacional Potosí",
+      "away": "Real Tomayapo",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Primera División",
+      "home": "Gualberto Villarroel SJ",
+      "away": "Universitario de Vinto",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Primera División",
+      "home": "Universitario de Vinto",
+      "away": "Guabirá",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Primera División",
+      "home": "Real Tomayapo",
+      "away": "ABB",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Primera División",
+      "home": "Real Oruro",
+      "away": "Independiente Petrolero",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Primera División",
+      "home": "San Antonio Bulo Bulo",
+      "away": "Blooming",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Primera División",
+      "home": "The Strongest",
+      "away": "Aurora",
       "reason": "No event/team match"
     },
     {
@@ -2764,6 +2752,30 @@
       "home": "Rokycany",
       "away": "Hořovicko",
       "reason": "No event/team match"
+    },
+    {
+      "league": "Cup",
+      "home": "Slavoj Vyšehrad",
+      "away": "Sokol Hostouň",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Cup",
+      "home": "Vestec",
+      "away": "Benešov",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Cup",
+      "home": "Branik",
+      "away": "Meteor Praha",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Cup",
+      "home": "Petřín Plzeň",
+      "away": "Komárov",
+      "reason": "No event/team match"
     }
   ],
   "unsupportedMarkets": [
@@ -2876,27 +2888,27 @@
       "market": "double_chance"
     },
     {
-      "sportKey": "soccer_usa_mls",
+      "sportKey": "soccer_mexico_ligamx",
       "market": "btts"
     },
     {
-      "sportKey": "soccer_usa_mls",
+      "sportKey": "soccer_mexico_ligamx",
       "market": "draw_no_bet"
     },
     {
-      "sportKey": "soccer_usa_mls",
+      "sportKey": "soccer_mexico_ligamx",
       "market": "double_chance"
     },
     {
-      "sportKey": "soccer_mexico_ligamx",
+      "sportKey": "soccer_chile_campeonato",
       "market": "btts"
     },
     {
-      "sportKey": "soccer_mexico_ligamx",
+      "sportKey": "soccer_chile_campeonato",
       "market": "draw_no_bet"
     },
     {
-      "sportKey": "soccer_mexico_ligamx",
+      "sportKey": "soccer_chile_campeonato",
       "market": "double_chance"
     },
     {
@@ -3354,31 +3366,6 @@
       "statusCode": 422
     },
     {
-      "label": "soccer_chile_campeonato:base-combined",
-      "error": "Markets not supported by this endpoint: btts, double_chance, draw_no_bet",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_chile_campeonato:base-core",
-      "error": "Invalid commenceTimeFrom parameter. The format must be YYYY-MM-DDTHH:MM:SSZ, for example 2020-11-24T16:05:00Z",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_chile_campeonato:btts",
-      "error": "Markets not supported by this endpoint: btts",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_chile_campeonato:draw_no_bet",
-      "error": "Markets not supported by this endpoint: draw_no_bet",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_chile_campeonato:double_chance",
-      "error": "Markets not supported by this endpoint: double_chance",
-      "statusCode": 422
-    },
-    {
       "label": "soccer_usa_mls:base-combined",
       "error": "Markets not supported by this endpoint: btts, double_chance, draw_no_bet",
       "statusCode": 422
@@ -3425,6 +3412,31 @@
     },
     {
       "label": "soccer_mexico_ligamx:double_chance",
+      "error": "Markets not supported by this endpoint: double_chance",
+      "statusCode": 422
+    },
+    {
+      "label": "soccer_chile_campeonato:base-combined",
+      "error": "Markets not supported by this endpoint: btts, double_chance, draw_no_bet",
+      "statusCode": 422
+    },
+    {
+      "label": "soccer_chile_campeonato:base-core",
+      "error": "Invalid commenceTimeFrom parameter. The format must be YYYY-MM-DDTHH:MM:SSZ, for example 2020-11-24T16:05:00Z",
+      "statusCode": 422
+    },
+    {
+      "label": "soccer_chile_campeonato:btts",
+      "error": "Markets not supported by this endpoint: btts",
+      "statusCode": 422
+    },
+    {
+      "label": "soccer_chile_campeonato:draw_no_bet",
+      "error": "Markets not supported by this endpoint: draw_no_bet",
+      "statusCode": 422
+    },
+    {
+      "label": "soccer_chile_campeonato:double_chance",
       "error": "Markets not supported by this endpoint: double_chance",
       "statusCode": 422
     },
@@ -3955,11 +3967,11 @@
     }
   ],
   "quota": {
-    "remaining": 94052,
-    "used": 5948,
+    "remaining": 93984,
+    "used": 6016,
     "last": 0
   },
   "skipped": false,
   "skipReason": null,
-  "completedAt": "2026-07-26T23:37:01.024Z"
+  "completedAt": "2026-07-26T23:55:04.599Z"
 }
