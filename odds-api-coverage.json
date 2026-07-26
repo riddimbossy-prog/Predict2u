@@ -1,6 +1,6 @@
 {
   "version": "v251",
-  "generatedAt": "2026-07-26T21:11:32.570Z",
+  "generatedAt": "2026-07-26T21:23:39.588Z",
   "provider": "The Odds API v4",
   "keyPresent": true,
   "regions": "uk",
@@ -61,7 +61,7 @@
       "sportKey": "soccer_turkey_super_league",
       "sportTitle": "Turkey Super League",
       "score": 0.286,
-      "matches": 7
+      "matches": 6
     },
     {
       "league": "Paranaense - 3",
@@ -85,15 +85,7 @@
       "sportKey": "soccer_argentina_primera_division",
       "sportTitle": "Primera División - Argentina",
       "score": 0.513,
-      "matches": 15
-    },
-    {
-      "league": "Primera División",
-      "country": "Chile",
-      "sportKey": "soccer_chile_campeonato",
-      "sportTitle": "Primera División - Chile",
-      "score": 1,
-      "matches": 7
+      "matches": 13
     },
     {
       "league": "Serie B",
@@ -102,14 +94,6 @@
       "sportTitle": "Brazil Série B",
       "score": 1,
       "matches": 10
-    },
-    {
-      "league": "Serie C",
-      "country": "Brazil",
-      "sportKey": "soccer_brazil_campeonato",
-      "sportTitle": "Brazil Série A",
-      "score": 0.466,
-      "matches": 6
     },
     {
       "league": "Serie D",
@@ -133,7 +117,7 @@
       "sportKey": "soccer_argentina_primera_division",
       "sportTitle": "Primera División - Argentina",
       "score": 0.305,
-      "matches": 2
+      "matches": 1
     },
     {
       "league": "Primera División",
@@ -224,12 +208,28 @@
       "matches": 9
     },
     {
+      "league": "Primera División",
+      "country": "Chile",
+      "sportKey": "soccer_chile_campeonato",
+      "sportTitle": "Primera División - Chile",
+      "score": 1,
+      "matches": 6
+    },
+    {
       "league": "Primera B",
       "country": "Chile",
       "sportKey": "soccer_chile_campeonato",
       "sportTitle": "Primera División - Chile",
       "score": 0.466,
       "matches": 6
+    },
+    {
+      "league": "Serie C",
+      "country": "Brazil",
+      "sportKey": "soccer_brazil_campeonato",
+      "sportTitle": "Brazil Série A",
+      "score": 0.466,
+      "matches": 4
     },
     {
       "league": "Liga MX",
@@ -1256,7 +1256,7 @@
       "matches": 2
     }
   ],
-  "matchesConsidered": 1777,
+  "matchesConsidered": 1767,
   "matchesMatched": 0,
   "matchesUpdated": 0,
   "fieldsFilled": 0,
@@ -1326,16 +1326,10 @@
       "bestScore": 0.125
     },
     {
-      "league": "Liga Femenina",
-      "country": "Colombia",
+      "league": "Úrvalsdeild",
+      "country": "Iceland",
       "reason": "No matching soccer sport key",
-      "bestScore": 0.143
-    },
-    {
-      "league": "Primera A",
-      "country": "Colombia",
-      "reason": "No matching soccer sport key",
-      "bestScore": 0.143
+      "bestScore": 0
     },
     {
       "league": "Segunda División",
@@ -1344,10 +1338,10 @@
       "bestScore": 0.143
     },
     {
-      "league": "Úrvalsdeild",
-      "country": "Iceland",
+      "league": "Liga Femenina",
+      "country": "Colombia",
       "reason": "No matching soccer sport key",
-      "bestScore": 0
+      "bestScore": 0.143
     },
     {
       "league": "CONCACAF U20",
@@ -1384,6 +1378,12 @@
       "country": "Panama",
       "reason": "No matching soccer sport key",
       "bestScore": 0.111
+    },
+    {
+      "league": "Primera A",
+      "country": "Colombia",
+      "reason": "No matching soccer sport key",
+      "bestScore": 0.143
     },
     {
       "league": "Liga Nacional",
@@ -2401,12 +2401,6 @@
     },
     {
       "league": "Primera Nacional",
-      "home": "Atletico Mitre",
-      "away": "Almirante Brown",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Primera Nacional",
       "home": "Gimnasia Jujuy",
       "away": "Club Atlético Güemes",
       "reason": "No event/team match"
@@ -2415,12 +2409,6 @@
       "league": "Primera Nacional",
       "home": "Midland",
       "away": "Patronato",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Primera Nacional",
-      "home": "Racing Cordoba",
-      "away": "San Telmo",
       "reason": "No event/team match"
     },
     {
@@ -2487,12 +2475,6 @@
       "league": "Primera Nacional",
       "home": "San Martin S.J.",
       "away": "Atletico DE Rafaela",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Torneo Federal A",
-      "home": "Sarmiento Resistencia",
-      "away": "Sol de América",
       "reason": "No event/team match"
     },
     {
@@ -2763,6 +2745,24 @@
       "league": "Primera C",
       "home": "Centro Español",
       "away": "Victoriano Arenas",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Primera C",
+      "home": "Defensores de Cambaceres",
+      "away": "Lugano",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Primera C",
+      "home": "Deportivo Muñiz",
+      "away": "Atletico Atlas",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Primera C",
+      "home": "Deportivo Paraguayo",
+      "away": "Argentino Rosario",
       "reason": "No event/team match"
     }
   ],
@@ -3961,5 +3961,5 @@
   },
   "skipped": false,
   "skipReason": null,
-  "completedAt": "2026-07-26T21:11:52.464Z"
+  "completedAt": "2026-07-26T21:23:46.518Z"
 }
