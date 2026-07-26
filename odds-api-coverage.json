@@ -1,6 +1,6 @@
 {
   "version": "v251",
-  "generatedAt": "2026-07-26T18:49:33.215Z",
+  "generatedAt": "2026-07-26T19:01:21.368Z",
   "provider": "The Odds API v4",
   "keyPresent": true,
   "regions": "uk",
@@ -46,22 +46,6 @@
       "sportTitle": "EFL Cup",
       "score": 0.463,
       "matches": 28
-    },
-    {
-      "league": "Premier League",
-      "country": "Russia",
-      "sportKey": "soccer_epl",
-      "sportTitle": "EPL",
-      "score": 0.987,
-      "matches": 7
-    },
-    {
-      "league": "Primera B",
-      "country": "Chile",
-      "sportKey": "soccer_chile_campeonato",
-      "sportTitle": "Primera División - Chile",
-      "score": 0.466,
-      "matches": 8
     },
     {
       "league": "Torneo Promocional Amateur",
@@ -310,6 +294,14 @@
       "sportTitle": "La Liga - Spain",
       "score": 0.429,
       "matches": 9
+    },
+    {
+      "league": "Primera B",
+      "country": "Chile",
+      "sportKey": "soccer_chile_campeonato",
+      "sportTitle": "Primera División - Chile",
+      "score": 0.466,
+      "matches": 6
     },
     {
       "league": "Liga MX",
@@ -800,6 +792,14 @@
       "matches": 5
     },
     {
+      "league": "Premier League",
+      "country": "Russia",
+      "sportKey": "soccer_epl",
+      "sportTitle": "EPL",
+      "score": 0.987,
+      "matches": 5
+    },
+    {
       "league": "Oberliga - Hamburg",
       "country": "Germany",
       "sportKey": "soccer_germany_bundesliga",
@@ -1240,7 +1240,7 @@
       "matches": 2
     }
   ],
-  "matchesConsidered": 1848,
+  "matchesConsidered": 1842,
   "matchesMatched": 0,
   "matchesUpdated": 0,
   "fieldsFilled": 0,
@@ -1922,48 +1922,6 @@
       "reason": "No event/team match"
     },
     {
-      "league": "Premier League",
-      "home": "FC Orenburg",
-      "away": "FC Rostov",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Premier League",
-      "home": "Rubin",
-      "away": "FC Krasnodar",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Premier League",
-      "home": "Rodina Moskva",
-      "away": "FC Rostov",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Premier League",
-      "home": "Akron",
-      "away": "Rubin",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Premier League",
-      "home": "CSKA Moscow",
-      "away": "Krylia Sovetov",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Premier League",
-      "home": "Dinamo Makhachkala",
-      "away": "Lokomotiv",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Premier League",
-      "home": "Baltika",
-      "away": "Dynamo",
-      "reason": "No event/team match"
-    },
-    {
       "league": "Canadian Premier League",
       "home": "Atlético Ottawa",
       "away": "Pacific FC",
@@ -2207,6 +2165,36 @@
       "league": "Premier League",
       "home": "Metalist 1925 Kharkiv",
       "away": "Veres Rivne",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Premier League",
+      "home": "Rodina Moskva",
+      "away": "FC Rostov",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Premier League",
+      "home": "Akron",
+      "away": "Rubin",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Premier League",
+      "home": "CSKA Moscow",
+      "away": "Krylia Sovetov",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Premier League",
+      "home": "Dinamo Makhachkala",
+      "away": "Lokomotiv",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Premier League",
+      "home": "Baltika",
+      "away": "Dynamo",
       "reason": "No event/team match"
     },
     {
@@ -2748,6 +2736,18 @@
       "home": "General Lamadrid",
       "away": "Claypole",
       "reason": "No event/team match"
+    },
+    {
+      "league": "Primera C",
+      "home": "Juventud Unida",
+      "away": "Defensores de Cambaceres",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Primera C",
+      "home": "Fénix",
+      "away": "Yupanqui",
+      "reason": "No event/team match"
     }
   ],
   "unsupportedMarkets": [
@@ -2812,18 +2812,6 @@
       "market": "double_chance"
     },
     {
-      "sportKey": "soccer_chile_campeonato",
-      "market": "btts"
-    },
-    {
-      "sportKey": "soccer_chile_campeonato",
-      "market": "draw_no_bet"
-    },
-    {
-      "sportKey": "soccer_chile_campeonato",
-      "market": "double_chance"
-    },
-    {
       "sportKey": "soccer_norway_eliteserien",
       "market": "btts"
     },
@@ -2857,6 +2845,18 @@
     },
     {
       "sportKey": "soccer_brazil_campeonato",
+      "market": "double_chance"
+    },
+    {
+      "sportKey": "soccer_chile_campeonato",
+      "market": "btts"
+    },
+    {
+      "sportKey": "soccer_chile_campeonato",
+      "market": "draw_no_bet"
+    },
+    {
+      "sportKey": "soccer_chile_campeonato",
       "market": "double_chance"
     },
     {
@@ -3239,31 +3239,6 @@
       "statusCode": 422
     },
     {
-      "label": "soccer_chile_campeonato:base-combined",
-      "error": "Markets not supported by this endpoint: btts, double_chance, draw_no_bet",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_chile_campeonato:base-core",
-      "error": "Invalid commenceTimeFrom parameter. The format must be YYYY-MM-DDTHH:MM:SSZ, for example 2020-11-24T16:05:00Z",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_chile_campeonato:btts",
-      "error": "Markets not supported by this endpoint: btts",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_chile_campeonato:draw_no_bet",
-      "error": "Markets not supported by this endpoint: draw_no_bet",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_chile_campeonato:double_chance",
-      "error": "Markets not supported by this endpoint: double_chance",
-      "statusCode": 422
-    },
-    {
       "label": "soccer_norway_eliteserien:base-combined",
       "error": "Markets not supported by this endpoint: btts, double_chance, draw_no_bet",
       "statusCode": 422
@@ -3335,6 +3310,31 @@
     },
     {
       "label": "soccer_brazil_campeonato:double_chance",
+      "error": "Markets not supported by this endpoint: double_chance",
+      "statusCode": 422
+    },
+    {
+      "label": "soccer_chile_campeonato:base-combined",
+      "error": "Markets not supported by this endpoint: btts, double_chance, draw_no_bet",
+      "statusCode": 422
+    },
+    {
+      "label": "soccer_chile_campeonato:base-core",
+      "error": "Invalid commenceTimeFrom parameter. The format must be YYYY-MM-DDTHH:MM:SSZ, for example 2020-11-24T16:05:00Z",
+      "statusCode": 422
+    },
+    {
+      "label": "soccer_chile_campeonato:btts",
+      "error": "Markets not supported by this endpoint: btts",
+      "statusCode": 422
+    },
+    {
+      "label": "soccer_chile_campeonato:draw_no_bet",
+      "error": "Markets not supported by this endpoint: draw_no_bet",
+      "statusCode": 422
+    },
+    {
+      "label": "soccer_chile_campeonato:double_chance",
       "error": "Markets not supported by this endpoint: double_chance",
       "statusCode": 422
     },
@@ -3871,5 +3871,5 @@
   },
   "skipped": false,
   "skipReason": null,
-  "completedAt": "2026-07-26T18:49:44.134Z"
+  "completedAt": "2026-07-26T19:01:27.844Z"
 }
