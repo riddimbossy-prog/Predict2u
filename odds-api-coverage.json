@@ -1,6 +1,6 @@
 {
   "version": "v251",
-  "generatedAt": "2026-07-26T12:34:33.693Z",
+  "generatedAt": "2026-07-26T12:46:32.557Z",
   "provider": "The Odds API v4",
   "keyPresent": true,
   "regions": "uk",
@@ -2812,18 +2812,6 @@
       "market": "btts"
     },
     {
-      "sportKey": "soccer_sweden_superettan",
-      "market": "draw_no_bet"
-    },
-    {
-      "sportKey": "soccer_sweden_superettan",
-      "market": "double_chance"
-    },
-    {
-      "sportKey": "soccer_china_superleague",
-      "market": "btts"
-    },
-    {
       "sportKey": "soccer_china_superleague",
       "market": "draw_no_bet"
     },
@@ -2877,6 +2865,18 @@
     },
     {
       "sportKey": "soccer_russia_premier_league",
+      "market": "double_chance"
+    },
+    {
+      "sportKey": "soccer_germany_bundesliga",
+      "market": "btts"
+    },
+    {
+      "sportKey": "soccer_germany_bundesliga",
+      "market": "draw_no_bet"
+    },
+    {
+      "sportKey": "soccer_germany_bundesliga",
       "market": "double_chance"
     },
     {
@@ -3316,56 +3316,6 @@
     },
     {
       "label": "soccer_germany_bundesliga:double_chance",
-      "error": "Markets not supported by this endpoint: double_chance",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_china_superleague:base-combined",
-      "error": "Markets not supported by this endpoint: btts, double_chance, draw_no_bet",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_china_superleague:base-core",
-      "error": "Invalid commenceTimeFrom parameter. The format must be YYYY-MM-DDTHH:MM:SSZ, for example 2020-11-24T16:05:00Z",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_china_superleague:btts",
-      "error": "Markets not supported by this endpoint: btts",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_china_superleague:draw_no_bet",
-      "error": "Markets not supported by this endpoint: draw_no_bet",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_china_superleague:double_chance",
-      "error": "Markets not supported by this endpoint: double_chance",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_russia_premier_league:base-combined",
-      "error": "Markets not supported by this endpoint: btts, double_chance, draw_no_bet",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_russia_premier_league:base-core",
-      "error": "Invalid commenceTimeFrom parameter. The format must be YYYY-MM-DDTHH:MM:SSZ, for example 2020-11-24T16:05:00Z",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_russia_premier_league:btts",
-      "error": "Markets not supported by this endpoint: btts",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_russia_premier_league:draw_no_bet",
-      "error": "Markets not supported by this endpoint: draw_no_bet",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_russia_premier_league:double_chance",
       "error": "Markets not supported by this endpoint: double_chance",
       "statusCode": 422
     },
@@ -3977,5 +3927,5 @@
   },
   "skipped": false,
   "skipReason": null,
-  "completedAt": "2026-07-26T12:34:53.272Z"
+  "completedAt": "2026-07-26T12:46:51.074Z"
 }
