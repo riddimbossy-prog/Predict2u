@@ -1,9 +1,9 @@
 {
   "version": "v193",
-  "updated": "2026-07-26T19:30:02.372Z",
+  "updated": "2026-07-26T20:35:29.450Z",
   "summary": {
-    "settledFixtures": 442,
-    "settledDecisions": 791,
+    "settledFixtures": 446,
+    "settledDecisions": 796,
     "reviewedLosses": 150,
     "teamProfiles": 310,
     "leagueProfiles": 65,
@@ -19,7 +19,7 @@
   "commonMissCauses": [
     {
       "cause": "INPUT_COVERAGE_GAP",
-      "count": 156
+      "count": 159
     },
     {
       "cause": "FAVORITE_PATTERN_BREAK",
@@ -39,7 +39,7 @@
     },
     {
       "cause": "TEMPO_COLLAPSE",
-      "count": 6
+      "count": 7
     },
     {
       "cause": "BOTH_ATTACKS_BROKE_SUPPRESSION",
@@ -64,6 +64,19 @@
       "market": "Second Half Over 0.5",
       "score": "0-0",
       "causes": [
+        "INPUT_COVERAGE_GAP"
+      ]
+    },
+    {
+      "matchDate": "2026-07-26",
+      "home": "Pisa",
+      "away": "PRO Vercelli",
+      "league": "Friendlies Clubs",
+      "engine": "League Bias",
+      "market": "Over 1.5 Goals",
+      "score": "0-1",
+      "causes": [
+        "TEMPO_COLLAPSE",
         "INPUT_COVERAGE_GAP"
       ]
     },
@@ -417,19 +430,6 @@
       "away": "West Adelaide",
       "league": "South Australia NPL",
       "engine": "Elite",
-      "market": "Home DNB",
-      "score": "1-3",
-      "causes": [
-        "FAVORITE_PATTERN_BREAK",
-        "INPUT_COVERAGE_GAP"
-      ]
-    },
-    {
-      "matchDate": "2026-07-25",
-      "home": "MetroStars",
-      "away": "West Adelaide",
-      "league": "South Australia NPL",
-      "engine": "Apex",
       "market": "Home DNB",
       "score": "1-3",
       "causes": [
