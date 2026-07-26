@@ -1,7 +1,7 @@
 {
   "version": "v193",
   "schemaVersion": 1,
-  "updated": "2026-07-26T08:30:59.820Z",
+  "updated": "2026-07-26T09:37:26.716Z",
   "minimumSamples": {
     "teamFavorite": 5,
     "teamUnderdog": 5,
@@ -12,10 +12,10 @@
   },
   "decayHalfLifeDays": 120,
   "summary": {
-    "settledFixtures": 431,
-    "settledDecisions": 777,
+    "settledFixtures": 434,
+    "settledDecisions": 781,
     "reviewedLosses": 150,
-    "attachedUpcoming": 2447,
+    "attachedUpcoming": 2434,
     "highRiskUpcoming": 0,
     "stableUpcoming": 0
   },
@@ -21195,7 +21195,7 @@
           "mid": 1,
           "upper": 1
         },
-        "decayedWeight": 1.9
+        "decayedWeight": 1.89
       },
       "bands": {
         "1.86-2.25": {
@@ -21260,7 +21260,7 @@
           "mid": 1,
           "upper": 1
         },
-        "decayedWeight": 1.9
+        "decayedWeight": 1.89
       },
       "awayFavorites": {
         "sample": 0,
@@ -21676,7 +21676,7 @@
           "mid": 1,
           "upper": 1
         },
-        "decayedWeight": 2.92
+        "decayedWeight": 2.91
       },
       "bands": {
         "1.36-1.60": {
@@ -30786,7 +30786,7 @@
         "mid": 0.4182,
         "upper": 0.5497
       },
-      "decayedWeight": 53.6
+      "decayedWeight": 53.59
     },
     "1.01-1.35": {
       "sample": 26,
@@ -30828,7 +30828,7 @@
         "mid": 0.5294,
         "upper": 0.6855
       },
-      "decayedWeight": 33.36
+      "decayedWeight": 33.35
     },
     "1.61-1.85": {
       "sample": 41,
@@ -30849,7 +30849,7 @@
         "mid": 0.561,
         "upper": 0.7011
       },
-      "decayedWeight": 40.2
+      "decayedWeight": 40.19
     }
   },
   "contexts": {
@@ -31694,15 +31694,15 @@
       "hardVeto": false
     },
     "*|Normal|Home Win|unknown|other": {
-      "sample": 13,
-      "wins": 9,
+      "sample": 14,
+      "wins": 10,
       "losses": 4,
-      "winRate": 0.6923,
-      "lossRate": 0.3077,
+      "winRate": 0.7143,
+      "lossRate": 0.2857,
       "wilson": {
-        "lower": 0.4237,
-        "mid": 0.6923,
-        "upper": 0.8732
+        "lower": 0.4535,
+        "mid": 0.7143,
+        "upper": 0.8828
       },
       "adjustment": 0,
       "hardVeto": false
@@ -32534,15 +32534,15 @@
       "hardVeto": false
     },
     "*|Halves|Second Half Over 0.5|unknown|other": {
-      "sample": 89,
-      "wins": 77,
-      "losses": 12,
-      "winRate": 0.8652,
-      "lossRate": 0.1348,
+      "sample": 91,
+      "wins": 78,
+      "losses": 13,
+      "winRate": 0.8571,
+      "lossRate": 0.1429,
       "wilson": {
-        "lower": 0.779,
-        "mid": 0.8652,
-        "upper": 0.9212
+        "lower": 0.7708,
+        "mid": 0.8571,
+        "upper": 0.9146
       },
       "adjustment": 2,
       "hardVeto": false
@@ -32772,15 +32772,15 @@
       "hardVeto": false
     },
     "*|League Bias|Home Team Over 0.5 Goals|unknown|other": {
-      "sample": 89,
-      "wins": 74,
+      "sample": 90,
+      "wins": 75,
       "losses": 15,
-      "winRate": 0.8315,
-      "lossRate": 0.1685,
+      "winRate": 0.8333,
+      "lossRate": 0.1667,
       "wilson": {
-        "lower": 0.7404,
-        "mid": 0.8315,
-        "upper": 0.8951
+        "lower": 0.7431,
+        "mid": 0.8333,
+        "upper": 0.8963
       },
       "adjustment": 2,
       "hardVeto": false
@@ -33584,15 +33584,15 @@
       "hardVeto": false
     },
     "friendlies clubs|League Bias|Home Team Over 0.5 Goals|unknown|other": {
-      "sample": 67,
-      "wins": 55,
+      "sample": 68,
+      "wins": 56,
       "losses": 12,
-      "winRate": 0.8209,
-      "lossRate": 0.1791,
+      "winRate": 0.8235,
+      "lossRate": 0.1765,
       "wilson": {
-        "lower": 0.7125,
-        "mid": 0.8209,
-        "upper": 0.8945
+        "lower": 0.7164,
+        "mid": 0.8235,
+        "upper": 0.8961
       },
       "adjustment": 2,
       "hardVeto": false
@@ -34116,15 +34116,15 @@
       "hardVeto": false
     },
     "nnsw league 1|Halves|Second Half Over 0.5|unknown|other": {
-      "sample": 3,
+      "sample": 4,
       "wins": 3,
-      "losses": 0,
-      "winRate": 1,
-      "lossRate": 0,
+      "losses": 1,
+      "winRate": 0.75,
+      "lossRate": 0.25,
       "wilson": {
-        "lower": 0.4385,
-        "mid": 1,
-        "upper": 1
+        "lower": 0.3006,
+        "mid": 0.75,
+        "upper": 0.9544
       },
       "adjustment": 0,
       "hardVeto": false
@@ -35781,6 +35781,20 @@
       "adjustment": 0,
       "hardVeto": false
     },
+    "kansallinen liiga|Halves|Second Half Over 0.5|unknown|other": {
+      "sample": 4,
+      "wins": 4,
+      "losses": 0,
+      "winRate": 1,
+      "lossRate": 0,
+      "wilson": {
+        "lower": 0.5101,
+        "mid": 1,
+        "upper": 1
+      },
+      "adjustment": 0,
+      "hardVeto": false
+    },
     "friendlies clubs|Trend|Home Team Over 0.5 Goals|unknown|other": {
       "sample": 8,
       "wins": 6,
@@ -36573,20 +36587,6 @@
       "lossRate": 0,
       "wilson": {
         "lower": 0.2065,
-        "mid": 1,
-        "upper": 1
-      },
-      "adjustment": 0,
-      "hardVeto": false
-    },
-    "kansallinen liiga|Halves|Second Half Over 0.5|unknown|other": {
-      "sample": 3,
-      "wins": 3,
-      "losses": 0,
-      "winRate": 1,
-      "lossRate": 0,
-      "wilson": {
-        "lower": 0.4385,
         "mid": 1,
         "upper": 1
       },
@@ -39392,9 +39392,35 @@
       },
       "adjustment": 0,
       "hardVeto": false
+    },
+    "kansallinen liiga|Normal|Home Win|unknown|other": {
+      "sample": 1,
+      "wins": 1,
+      "losses": 0,
+      "winRate": 1,
+      "lossRate": 0,
+      "wilson": {
+        "lower": 0.2065,
+        "mid": 1,
+        "upper": 1
+      },
+      "adjustment": 0,
+      "hardVeto": false
     }
   },
   "lossReviews": [
+    {
+      "matchDate": "2026-07-26",
+      "home": "South Cardiff",
+      "away": "Dudley Redhead United",
+      "league": "NNSW League 1",
+      "engine": "Halves",
+      "market": "Second Half Over 0.5",
+      "score": "0-0",
+      "causes": [
+        "INPUT_COVERAGE_GAP"
+      ]
+    },
     {
       "matchDate": "2026-07-25",
       "home": "Riverside",
@@ -41298,24 +41324,11 @@
         "DRAW_TRAP",
         "INPUT_COVERAGE_GAP"
       ]
-    },
-    {
-      "matchDate": "2026-07-01",
-      "home": "FC Miami City",
-      "away": "Inter Miami II",
-      "league": "USL League Two",
-      "engine": "Prime",
-      "market": "BTTS No",
-      "score": "1-1",
-      "causes": [
-        "BOTH_ATTACKS_BROKE_SUPPRESSION",
-        "INPUT_COVERAGE_GAP"
-      ]
     }
   ],
   "causeCounts": {
     "TEMPO_COLLAPSE": 6,
-    "INPUT_COVERAGE_GAP": 154,
+    "INPUT_COVERAGE_GAP": 155,
     "RESULT_DIRECTION_MISS": 31,
     "BOTH_ATTACKS_BROKE_SUPPRESSION": 5,
     "GOAL_SPIKE": 24,
