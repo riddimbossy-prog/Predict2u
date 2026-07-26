@@ -1,9 +1,9 @@
 {
   "version": "v194",
-  "updated": "2026-07-26T14:04:30.896Z",
+  "updated": "2026-07-26T15:11:55.593Z",
   "summary": {
-    "settled": 785,
-    "winRate": 0.8025,
+    "settled": 786,
+    "winRate": 0.8015,
     "engines": 12,
     "approved": 0,
     "shadow": 12,
@@ -45,7 +45,7 @@
         "distributionShift": 0.4,
         "status": "STABLE"
       },
-      "updated": "2026-07-26T14:04:30.894Z"
+      "updated": "2026-07-26T15:11:55.590Z"
     },
     "Prime": {
       "engine": "Prime",
@@ -78,7 +78,7 @@
         "distributionShift": 0.293,
         "status": "STABLE"
       },
-      "updated": "2026-07-26T14:04:30.894Z"
+      "updated": "2026-07-26T15:11:55.591Z"
     },
     "Value": {
       "engine": "Value",
@@ -111,7 +111,7 @@
         "distributionShift": 0.8,
         "status": "STABLE"
       },
-      "updated": "2026-07-26T14:04:30.894Z"
+      "updated": "2026-07-26T15:11:55.591Z"
     },
     "Pro": {
       "engine": "Pro",
@@ -144,7 +144,7 @@
         "distributionShift": 0.8,
         "status": "STABLE"
       },
-      "updated": "2026-07-26T14:04:30.894Z"
+      "updated": "2026-07-26T15:11:55.591Z"
     },
     "Ultra": {
       "engine": "Ultra",
@@ -177,7 +177,7 @@
         "distributionShift": 0.5,
         "status": "STABLE"
       },
-      "updated": "2026-07-26T14:04:30.894Z"
+      "updated": "2026-07-26T15:11:55.591Z"
     },
     "Elite": {
       "engine": "Elite",
@@ -210,7 +210,7 @@
         "distributionShift": 0.5,
         "status": "STABLE"
       },
-      "updated": "2026-07-26T14:04:30.894Z"
+      "updated": "2026-07-26T15:11:55.591Z"
     },
     "Apex": {
       "engine": "Apex",
@@ -243,7 +243,7 @@
         "distributionShift": 0.5,
         "status": "STABLE"
       },
-      "updated": "2026-07-26T14:04:30.894Z"
+      "updated": "2026-07-26T15:11:55.591Z"
     },
     "Halves": {
       "engine": "Halves",
@@ -256,13 +256,13 @@
         "rate": 0.8571
       },
       "validation": {
-        "sample": 66,
+        "sample": 67,
         "wins": 54,
-        "losses": 12,
-        "rate": 0.8182
+        "losses": 13,
+        "rate": 0.806
       },
-      "validationDelta": -0.0389,
-      "calibrationError": 0.0857,
+      "validationDelta": -0.0511,
+      "calibrationError": 0.0781,
       "shadow": {
         "eligible": 0,
         "avoidedLosses": 0,
@@ -272,11 +272,11 @@
       "drift": {
         "recentSample": 30,
         "priorSample": 30,
-        "confidenceShift": -0.66,
+        "confidenceShift": -0.57,
         "distributionShift": 0,
         "status": "STABLE"
       },
-      "updated": "2026-07-26T14:04:30.894Z"
+      "updated": "2026-07-26T15:11:55.591Z"
     },
     "Streaks": {
       "engine": "Streaks",
@@ -309,7 +309,7 @@
         "distributionShift": 0.5,
         "status": "STABLE"
       },
-      "updated": "2026-07-26T14:04:30.894Z"
+      "updated": "2026-07-26T15:11:55.591Z"
     },
     "Trend": {
       "engine": "Trend",
@@ -342,7 +342,7 @@
         "distributionShift": 0.333,
         "status": "STABLE"
       },
-      "updated": "2026-07-26T14:04:30.894Z"
+      "updated": "2026-07-26T15:11:55.591Z"
     },
     "League Bias": {
       "engine": "League Bias",
@@ -375,7 +375,7 @@
         "distributionShift": 0.1,
         "status": "STABLE"
       },
-      "updated": "2026-07-26T14:04:30.895Z"
+      "updated": "2026-07-26T15:11:55.591Z"
     },
     "Strict": {
       "engine": "Strict",
@@ -408,17 +408,17 @@
         "distributionShift": 0.5,
         "status": "STABLE"
       },
-      "updated": "2026-07-26T14:04:30.895Z"
+      "updated": "2026-07-26T15:11:55.591Z"
     }
   },
   "marketScorecards": [
     {
       "marketFamily": "OTHER",
-      "sample": 219,
+      "sample": 220,
       "wins": 185,
-      "losses": 34,
-      "rate": 0.8447,
-      "calibrationError": 0.0519
+      "losses": 35,
+      "rate": 0.8409,
+      "calibrationError": 0.0488
     },
     {
       "marketFamily": "HOME_TEAM",
@@ -690,6 +690,13 @@
       "rate": 0.6667
     },
     {
+      "league": "Catarinense U20",
+      "sample": 6,
+      "wins": 5,
+      "losses": 1,
+      "rate": 0.8333
+    },
+    {
       "league": "NNSW League 1",
       "sample": 6,
       "wins": 5,
@@ -744,13 +751,6 @@
       "wins": 4,
       "losses": 1,
       "rate": 0.8
-    },
-    {
-      "league": "Catarinense U20",
-      "sample": 5,
-      "wins": 5,
-      "losses": 0,
-      "rate": 1
     },
     {
       "league": "Oberliga - Bayern Nord",
