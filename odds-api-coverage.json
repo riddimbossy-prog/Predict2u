@@ -1,6 +1,6 @@
 {
   "version": "v251",
-  "generatedAt": "2026-07-26T21:23:39.588Z",
+  "generatedAt": "2026-07-26T21:35:44.117Z",
   "provider": "The Odds API v4",
   "keyPresent": true,
   "regions": "uk",
@@ -77,23 +77,7 @@
       "sportKey": "soccer_brazil_campeonato",
       "sportTitle": "Brazil Série A",
       "score": 0.929,
-      "matches": 17
-    },
-    {
-      "league": "Primera Nacional",
-      "country": "Argentina",
-      "sportKey": "soccer_argentina_primera_division",
-      "sportTitle": "Primera División - Argentina",
-      "score": 0.513,
-      "matches": 13
-    },
-    {
-      "league": "Serie B",
-      "country": "Brazil",
-      "sportKey": "soccer_brazil_serie_b",
-      "sportTitle": "Brazil Série B",
-      "score": 1,
-      "matches": 10
+      "matches": 16
     },
     {
       "league": "Serie D",
@@ -101,31 +85,15 @@
       "sportKey": "soccer_brazil_campeonato",
       "sportTitle": "Brazil Série A",
       "score": 0.466,
-      "matches": 6
+      "matches": 5
     },
     {
-      "league": "Segunda División",
-      "country": "Chile",
-      "sportKey": "soccer_chile_campeonato",
-      "sportTitle": "Primera División - Chile",
-      "score": 0.305,
-      "matches": 2
-    },
-    {
-      "league": "Torneo Federal A",
+      "league": "Primera Nacional",
       "country": "Argentina",
       "sportKey": "soccer_argentina_primera_division",
       "sportTitle": "Primera División - Argentina",
-      "score": 0.305,
-      "matches": 1
-    },
-    {
-      "league": "Primera División",
-      "country": "Bolivia",
-      "sportKey": "soccer_argentina_primera_division",
-      "sportTitle": "Primera División - Argentina",
-      "score": 0.653,
-      "matches": 9
+      "score": 0.513,
+      "matches": 11
     },
     {
       "league": "MLS Next Pro",
@@ -209,6 +177,14 @@
     },
     {
       "league": "Primera División",
+      "country": "Bolivia",
+      "sportKey": "soccer_argentina_primera_division",
+      "sportTitle": "Primera División - Argentina",
+      "score": 0.653,
+      "matches": 8
+    },
+    {
+      "league": "Primera División",
       "country": "Chile",
       "sportKey": "soccer_chile_campeonato",
       "sportTitle": "Primera División - Chile",
@@ -222,6 +198,14 @@
       "sportTitle": "Primera División - Chile",
       "score": 0.466,
       "matches": 6
+    },
+    {
+      "league": "Serie B",
+      "country": "Brazil",
+      "sportKey": "soccer_brazil_serie_b",
+      "sportTitle": "Brazil Série B",
+      "score": 1,
+      "matches": 8
     },
     {
       "league": "Serie C",
@@ -1254,9 +1238,17 @@
       "sportTitle": "Brazil Série A",
       "score": 0.291,
       "matches": 2
+    },
+    {
+      "league": "Segunda División",
+      "country": "Chile",
+      "sportKey": "soccer_chile_campeonato",
+      "sportTitle": "Primera División - Chile",
+      "score": 0.305,
+      "matches": 1
     }
   ],
-  "matchesConsidered": 1767,
+  "matchesConsidered": 1756,
   "matchesMatched": 0,
   "matchesUpdated": 0,
   "fieldsFilled": 0,
@@ -1320,12 +1312,6 @@
       "bestScore": 0.143
     },
     {
-      "league": "Division Profesional - Clausura",
-      "country": "Paraguay",
-      "reason": "No matching soccer sport key",
-      "bestScore": 0.125
-    },
-    {
       "league": "Úrvalsdeild",
       "country": "Iceland",
       "reason": "No matching soccer sport key",
@@ -1384,6 +1370,12 @@
       "country": "Colombia",
       "reason": "No matching soccer sport key",
       "bestScore": 0.143
+    },
+    {
+      "league": "Division Profesional - Clausura",
+      "country": "Paraguay",
+      "reason": "No matching soccer sport key",
+      "bestScore": 0.125
     },
     {
       "league": "Liga Nacional",
@@ -2305,18 +2297,6 @@
     },
     {
       "league": "Serie B",
-      "home": "Criciuma",
-      "away": "Nautico Recife",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Serie B",
-      "home": "São Bernardo",
-      "away": "Ceara",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Serie B",
       "home": "America Mineiro",
       "away": "Goias",
       "reason": "No event/team match"
@@ -2401,18 +2381,6 @@
     },
     {
       "league": "Primera Nacional",
-      "home": "Gimnasia Jujuy",
-      "away": "Club Atlético Güemes",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Primera Nacional",
-      "home": "Midland",
-      "away": "Patronato",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Primera Nacional",
       "home": "Godoy Cruz",
       "away": "Central Norte",
       "reason": "No event/team match"
@@ -2475,66 +2443,6 @@
       "league": "Primera Nacional",
       "home": "San Martin S.J.",
       "away": "Atletico DE Rafaela",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Torneo Federal A",
-      "home": "Tucuman Central",
-      "away": "Sarmiento de La Banda",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Primera División",
-      "home": "Blooming",
-      "away": "The Strongest",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Primera División",
-      "home": "Bolívar",
-      "away": "Real Potosí",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Primera División",
-      "home": "Nacional Potosí",
-      "away": "Real Tomayapo",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Primera División",
-      "home": "Gualberto Villarroel SJ",
-      "away": "Universitario de Vinto",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Primera División",
-      "home": "Universitario de Vinto",
-      "away": "Guabirá",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Primera División",
-      "home": "Real Tomayapo",
-      "away": "ABB",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Primera División",
-      "home": "Real Oruro",
-      "away": "Independiente Petrolero",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Primera División",
-      "home": "San Antonio Bulo Bulo",
-      "away": "Blooming",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Primera División",
-      "home": "The Strongest",
-      "away": "Aurora",
       "reason": "No event/team match"
     },
     {
@@ -2706,6 +2614,54 @@
       "reason": "No event/team match"
     },
     {
+      "league": "Primera División",
+      "home": "Bolívar",
+      "away": "Real Potosí",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Primera División",
+      "home": "Nacional Potosí",
+      "away": "Real Tomayapo",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Primera División",
+      "home": "Gualberto Villarroel SJ",
+      "away": "Universitario de Vinto",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Primera División",
+      "home": "Universitario de Vinto",
+      "away": "Guabirá",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Primera División",
+      "home": "Real Tomayapo",
+      "away": "ABB",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Primera División",
+      "home": "Real Oruro",
+      "away": "Independiente Petrolero",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Primera División",
+      "home": "San Antonio Bulo Bulo",
+      "away": "Blooming",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Primera División",
+      "home": "The Strongest",
+      "away": "Aurora",
+      "reason": "No event/team match"
+    },
+    {
       "league": "Primera C",
       "home": "Fénix",
       "away": "Yupanqui",
@@ -2763,6 +2719,42 @@
       "league": "Primera C",
       "home": "Deportivo Paraguayo",
       "away": "Argentino Rosario",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Primera C",
+      "home": "JJ Urquiza",
+      "away": "Berazategui",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Primera C",
+      "home": "Leandro N. Alem",
+      "away": "Juventud Unida",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Primera C",
+      "home": "Mercedes",
+      "away": "Estrella Del Sur",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Primera C",
+      "home": "Deportivo Español",
+      "away": "Leones de Rosario",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Primera C",
+      "home": "El Porvenir",
+      "away": "Fénix",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Primera C",
+      "home": "Yupanqui",
+      "away": "Canuelas",
       "reason": "No event/team match"
     }
   ],
@@ -2852,18 +2844,6 @@
       "market": "double_chance"
     },
     {
-      "sportKey": "soccer_chile_campeonato",
-      "market": "btts"
-    },
-    {
-      "sportKey": "soccer_chile_campeonato",
-      "market": "draw_no_bet"
-    },
-    {
-      "sportKey": "soccer_chile_campeonato",
-      "market": "double_chance"
-    },
-    {
       "sportKey": "soccer_usa_mls",
       "market": "btts"
     },
@@ -2897,6 +2877,18 @@
     },
     {
       "sportKey": "soccer_spain_la_liga",
+      "market": "double_chance"
+    },
+    {
+      "sportKey": "soccer_chile_campeonato",
+      "market": "btts"
+    },
+    {
+      "sportKey": "soccer_chile_campeonato",
+      "market": "draw_no_bet"
+    },
+    {
+      "sportKey": "soccer_chile_campeonato",
       "market": "double_chance"
     },
     {
@@ -3329,31 +3321,6 @@
       "statusCode": 422
     },
     {
-      "label": "soccer_chile_campeonato:base-combined",
-      "error": "Markets not supported by this endpoint: btts, double_chance, draw_no_bet",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_chile_campeonato:base-core",
-      "error": "Invalid commenceTimeFrom parameter. The format must be YYYY-MM-DDTHH:MM:SSZ, for example 2020-11-24T16:05:00Z",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_chile_campeonato:btts",
-      "error": "Markets not supported by this endpoint: btts",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_chile_campeonato:draw_no_bet",
-      "error": "Markets not supported by this endpoint: draw_no_bet",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_chile_campeonato:double_chance",
-      "error": "Markets not supported by this endpoint: double_chance",
-      "statusCode": 422
-    },
-    {
       "label": "soccer_usa_mls:base-combined",
       "error": "Markets not supported by this endpoint: btts, double_chance, draw_no_bet",
       "statusCode": 422
@@ -3425,6 +3392,31 @@
     },
     {
       "label": "soccer_spain_la_liga:double_chance",
+      "error": "Markets not supported by this endpoint: double_chance",
+      "statusCode": 422
+    },
+    {
+      "label": "soccer_chile_campeonato:base-combined",
+      "error": "Markets not supported by this endpoint: btts, double_chance, draw_no_bet",
+      "statusCode": 422
+    },
+    {
+      "label": "soccer_chile_campeonato:base-core",
+      "error": "Invalid commenceTimeFrom parameter. The format must be YYYY-MM-DDTHH:MM:SSZ, for example 2020-11-24T16:05:00Z",
+      "statusCode": 422
+    },
+    {
+      "label": "soccer_chile_campeonato:btts",
+      "error": "Markets not supported by this endpoint: btts",
+      "statusCode": 422
+    },
+    {
+      "label": "soccer_chile_campeonato:draw_no_bet",
+      "error": "Markets not supported by this endpoint: draw_no_bet",
+      "statusCode": 422
+    },
+    {
+      "label": "soccer_chile_campeonato:double_chance",
       "error": "Markets not supported by this endpoint: double_chance",
       "statusCode": 422
     },
@@ -3955,11 +3947,11 @@
     }
   ],
   "quota": {
-    "remaining": 94324,
-    "used": 5676,
+    "remaining": 94256,
+    "used": 5744,
     "last": 0
   },
   "skipped": false,
   "skipReason": null,
-  "completedAt": "2026-07-26T21:23:46.518Z"
+  "completedAt": "2026-07-26T21:35:50.826Z"
 }
