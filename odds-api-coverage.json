@@ -1,6 +1,6 @@
 {
   "version": "v251",
-  "generatedAt": "2026-07-26T21:47:37.639Z",
+  "generatedAt": "2026-07-26T22:01:29.850Z",
   "provider": "The Odds API v4",
   "keyPresent": true,
   "regions": "uk",
@@ -48,6 +48,14 @@
       "matches": 28
     },
     {
+      "league": "Torneo Promocional Amateur",
+      "country": "Argentina",
+      "sportKey": "soccer_argentina_primera_division",
+      "sportTitle": "Primera División - Argentina",
+      "score": 0.305,
+      "matches": 6
+    },
+    {
       "league": "Carioca C",
       "country": "Brazil",
       "sportKey": "soccer_brazil_campeonato",
@@ -93,7 +101,63 @@
       "sportKey": "soccer_argentina_primera_division",
       "sportTitle": "Primera División - Argentina",
       "score": 0.513,
-      "matches": 11
+      "matches": 15
+    },
+    {
+      "league": "Primera División",
+      "country": "Chile",
+      "sportKey": "soccer_chile_campeonato",
+      "sportTitle": "Primera División - Chile",
+      "score": 1,
+      "matches": 7
+    },
+    {
+      "league": "Serie B",
+      "country": "Brazil",
+      "sportKey": "soccer_brazil_serie_b",
+      "sportTitle": "Brazil Série B",
+      "score": 1,
+      "matches": 10
+    },
+    {
+      "league": "Serie C",
+      "country": "Brazil",
+      "sportKey": "soccer_brazil_campeonato",
+      "sportTitle": "Brazil Série A",
+      "score": 0.466,
+      "matches": 6
+    },
+    {
+      "league": "Serie D",
+      "country": "Brazil",
+      "sportKey": "soccer_brazil_campeonato",
+      "sportTitle": "Brazil Série A",
+      "score": 0.466,
+      "matches": 6
+    },
+    {
+      "league": "Segunda División",
+      "country": "Chile",
+      "sportKey": "soccer_chile_campeonato",
+      "sportTitle": "Primera División - Chile",
+      "score": 0.305,
+      "matches": 2
+    },
+    {
+      "league": "Torneo Federal A",
+      "country": "Argentina",
+      "sportKey": "soccer_argentina_primera_division",
+      "sportTitle": "Primera División - Argentina",
+      "score": 0.305,
+      "matches": 2
+    },
+    {
+      "league": "Primera División",
+      "country": "Bolivia",
+      "sportKey": "soccer_argentina_primera_division",
+      "sportTitle": "Primera División - Argentina",
+      "score": 0.653,
+      "matches": 9
     },
     {
       "league": "MLS Next Pro",
@@ -160,14 +224,6 @@
       "matches": 9
     },
     {
-      "league": "Canadian Premier League",
-      "country": "Canada",
-      "sportKey": "soccer_epl",
-      "sportTitle": "EPL",
-      "score": 0.667,
-      "matches": 4
-    },
-    {
       "league": "Primera Division",
       "country": "Nicaragua",
       "sportKey": "soccer_spain_la_liga",
@@ -184,52 +240,12 @@
       "matches": 9
     },
     {
-      "league": "Primera División",
-      "country": "Bolivia",
-      "sportKey": "soccer_argentina_primera_division",
-      "sportTitle": "Primera División - Argentina",
-      "score": 0.653,
-      "matches": 8
-    },
-    {
-      "league": "Serie A",
-      "country": "Brazil",
-      "sportKey": "soccer_brazil_campeonato",
-      "sportTitle": "Brazil Série A",
-      "score": 0.929,
-      "matches": 15
-    },
-    {
-      "league": "Primera División",
-      "country": "Chile",
-      "sportKey": "soccer_chile_campeonato",
-      "sportTitle": "Primera División - Chile",
-      "score": 1,
-      "matches": 6
-    },
-    {
       "league": "Primera B",
       "country": "Chile",
       "sportKey": "soccer_chile_campeonato",
       "sportTitle": "Primera División - Chile",
       "score": 0.466,
       "matches": 6
-    },
-    {
-      "league": "Serie B",
-      "country": "Brazil",
-      "sportKey": "soccer_brazil_serie_b",
-      "sportTitle": "Brazil Série B",
-      "score": 1,
-      "matches": 8
-    },
-    {
-      "league": "Serie C",
-      "country": "Brazil",
-      "sportKey": "soccer_brazil_campeonato",
-      "sportTitle": "Brazil Série A",
-      "score": 0.466,
-      "matches": 4
     },
     {
       "league": "Liga MX",
@@ -1224,28 +1240,12 @@
       "matches": 5
     },
     {
-      "league": "Capixaba B",
-      "country": "Brazil",
-      "sportKey": "soccer_brazil_serie_b",
-      "sportTitle": "Brazil Série B",
-      "score": 0.466,
-      "matches": 2
-    },
-    {
       "league": "Baiano U20",
       "country": "Brazil",
       "sportKey": "soccer_brazil_campeonato",
       "sportTitle": "Brazil Série A",
       "score": 0.305,
       "matches": 1
-    },
-    {
-      "league": "Torneo Promocional Amateur",
-      "country": "Argentina",
-      "sportKey": "soccer_argentina_primera_division",
-      "sportTitle": "Primera División - Argentina",
-      "score": 0.305,
-      "matches": 4
     },
     {
       "league": "Primera B Metropolitana",
@@ -1262,14 +1262,6 @@
       "sportTitle": "Brazil Série A",
       "score": 0.291,
       "matches": 2
-    },
-    {
-      "league": "Segunda División",
-      "country": "Chile",
-      "sportKey": "soccer_chile_campeonato",
-      "sportTitle": "Primera División - Chile",
-      "score": 0.305,
-      "matches": 1
     }
   ],
   "matchesConsidered": 1753,
@@ -1342,31 +1334,13 @@
       "bestScore": 0.143
     },
     {
-      "league": "Liga Femenina",
-      "country": "Colombia",
-      "reason": "No matching soccer sport key",
-      "bestScore": 0.143
-    },
-    {
-      "league": "CONCACAF U20",
-      "country": "World",
+      "league": "Úrvalsdeild",
+      "country": "Iceland",
       "reason": "No matching soccer sport key",
       "bestScore": 0
     },
     {
-      "league": "Segunda División",
-      "country": "Peru",
-      "reason": "No matching soccer sport key",
-      "bestScore": 0.143
-    },
-    {
-      "league": "Liga Pro",
-      "country": "Ecuador",
-      "reason": "No matching soccer sport key",
-      "bestScore": 0.143
-    },
-    {
-      "league": "COTIF Tournament",
+      "league": "CONCACAF U20",
       "country": "World",
       "reason": "No matching soccer sport key",
       "bestScore": 0
@@ -1400,18 +1374,6 @@
       "country": "Panama",
       "reason": "No matching soccer sport key",
       "bestScore": 0.111
-    },
-    {
-      "league": "Primera A",
-      "country": "Colombia",
-      "reason": "No matching soccer sport key",
-      "bestScore": 0.143
-    },
-    {
-      "league": "Division Profesional - Clausura",
-      "country": "Paraguay",
-      "reason": "No matching soccer sport key",
-      "bestScore": 0.125
     },
     {
       "league": "Liga Nacional",
@@ -1804,12 +1766,6 @@
       "bestScore": 0
     },
     {
-      "league": "1. SNL",
-      "country": "Slovenia",
-      "reason": "No matching soccer sport key",
-      "bestScore": 0.125
-    },
-    {
       "league": "National Division",
       "country": "Luxembourg",
       "reason": "No matching soccer sport key",
@@ -1933,6 +1889,12 @@
       "league": "Premier Soccer League",
       "home": "Dynamos",
       "away": "Scotland Mabvuku",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Canadian Premier League",
+      "home": "Atlético Ottawa",
+      "away": "Pacific FC",
       "reason": "No event/team match"
     },
     {
@@ -2338,6 +2300,42 @@
       "reason": "No event/team match"
     },
     {
+      "league": "Capixaba B",
+      "home": "Doze",
+      "away": "Audax São Mateus",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Capixaba B",
+      "home": "Sport Brasil ES",
+      "away": "Rive",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Capixaba B",
+      "home": "Audax São Mateus",
+      "away": "GEL",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Capixaba B",
+      "home": "Rive",
+      "away": "Pinheiros",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Serie B",
+      "home": "Criciuma",
+      "away": "Nautico Recife",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Serie B",
+      "home": "São Bernardo",
+      "away": "Ceara",
+      "reason": "No event/team match"
+    },
+    {
       "league": "Serie B",
       "home": "America Mineiro",
       "away": "Goias",
@@ -2383,18 +2381,6 @@
       "league": "Serie B",
       "home": "Fortaleza EC",
       "away": "Botafogo SP",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Capixaba B",
-      "home": "Audax São Mateus",
-      "away": "GEL",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Capixaba B",
-      "home": "Rive",
-      "away": "Pinheiros",
       "reason": "No event/team match"
     },
     {
@@ -2928,6 +2914,18 @@
       "market": "double_chance"
     },
     {
+      "sportKey": "soccer_chile_campeonato",
+      "market": "btts"
+    },
+    {
+      "sportKey": "soccer_chile_campeonato",
+      "market": "draw_no_bet"
+    },
+    {
+      "sportKey": "soccer_chile_campeonato",
+      "market": "double_chance"
+    },
+    {
       "sportKey": "soccer_usa_mls",
       "market": "btts"
     },
@@ -2961,18 +2959,6 @@
     },
     {
       "sportKey": "soccer_spain_la_liga",
-      "market": "double_chance"
-    },
-    {
-      "sportKey": "soccer_chile_campeonato",
-      "market": "btts"
-    },
-    {
-      "sportKey": "soccer_chile_campeonato",
-      "market": "draw_no_bet"
-    },
-    {
-      "sportKey": "soccer_chile_campeonato",
       "market": "double_chance"
     },
     {
@@ -3405,6 +3391,31 @@
       "statusCode": 422
     },
     {
+      "label": "soccer_chile_campeonato:base-combined",
+      "error": "Markets not supported by this endpoint: btts, double_chance, draw_no_bet",
+      "statusCode": 422
+    },
+    {
+      "label": "soccer_chile_campeonato:base-core",
+      "error": "Invalid commenceTimeFrom parameter. The format must be YYYY-MM-DDTHH:MM:SSZ, for example 2020-11-24T16:05:00Z",
+      "statusCode": 422
+    },
+    {
+      "label": "soccer_chile_campeonato:btts",
+      "error": "Markets not supported by this endpoint: btts",
+      "statusCode": 422
+    },
+    {
+      "label": "soccer_chile_campeonato:draw_no_bet",
+      "error": "Markets not supported by this endpoint: draw_no_bet",
+      "statusCode": 422
+    },
+    {
+      "label": "soccer_chile_campeonato:double_chance",
+      "error": "Markets not supported by this endpoint: double_chance",
+      "statusCode": 422
+    },
+    {
       "label": "soccer_usa_mls:base-combined",
       "error": "Markets not supported by this endpoint: btts, double_chance, draw_no_bet",
       "statusCode": 422
@@ -3476,31 +3487,6 @@
     },
     {
       "label": "soccer_spain_la_liga:double_chance",
-      "error": "Markets not supported by this endpoint: double_chance",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_chile_campeonato:base-combined",
-      "error": "Markets not supported by this endpoint: btts, double_chance, draw_no_bet",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_chile_campeonato:base-core",
-      "error": "Invalid commenceTimeFrom parameter. The format must be YYYY-MM-DDTHH:MM:SSZ, for example 2020-11-24T16:05:00Z",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_chile_campeonato:btts",
-      "error": "Markets not supported by this endpoint: btts",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_chile_campeonato:draw_no_bet",
-      "error": "Markets not supported by this endpoint: draw_no_bet",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_chile_campeonato:double_chance",
       "error": "Markets not supported by this endpoint: double_chance",
       "statusCode": 422
     },
@@ -4037,5 +4023,5 @@
   },
   "skipped": false,
   "skipReason": null,
-  "completedAt": "2026-07-26T21:48:01.969Z"
+  "completedAt": "2026-07-26T22:01:49.952Z"
 }
