@@ -1,28 +1,12 @@
 {
   "version": "v251",
-  "generatedAt": "2026-07-26T13:22:30.580Z",
+  "generatedAt": "2026-07-26T13:34:16.624Z",
   "provider": "The Odds API v4",
   "keyPresent": true,
   "regions": "uk",
   "sportsAvailable": 68,
   "soccerSportsAvailable": 39,
   "sportMappings": [
-    {
-      "league": "Super League",
-      "country": "China",
-      "sportKey": "soccer_china_superleague",
-      "sportTitle": "Super League - China",
-      "score": 1,
-      "matches": 9
-    },
-    {
-      "league": "Oberliga - Hamburg",
-      "country": "Germany",
-      "sportKey": "soccer_germany_bundesliga",
-      "sportTitle": "Bundesliga - Germany",
-      "score": 0.347,
-      "matches": 7
-    },
     {
       "league": "League One",
       "country": "China",
@@ -38,6 +22,14 @@
       "sportTitle": "Super League - China",
       "score": 0.43,
       "matches": 9
+    },
+    {
+      "league": "Super League",
+      "country": "China",
+      "sportKey": "soccer_china_superleague",
+      "sportTitle": "Super League - China",
+      "score": 1,
+      "matches": 8
     },
     {
       "league": "Allsvenskan",
@@ -56,6 +48,14 @@
       "matches": 6
     },
     {
+      "league": "2. Division - Group 2",
+      "country": "Norway",
+      "sportKey": "soccer_norway_eliteserien",
+      "sportTitle": "Eliteserien - Norway",
+      "score": 0.323,
+      "matches": 4
+    },
+    {
       "league": "3. Division - Girone 3",
       "country": "Norway",
       "sportKey": "soccer_norway_eliteserien",
@@ -70,6 +70,14 @@
       "sportTitle": "Eliteserien - Norway",
       "score": 0.305,
       "matches": 7
+    },
+    {
+      "league": "Second League - Group 4",
+      "country": "Russia",
+      "sportKey": "soccer_russia_premier_league",
+      "sportTitle": "Premier League - Russia",
+      "score": 0.43,
+      "matches": 3
     },
     {
       "league": "Superliga",
@@ -200,6 +208,14 @@
       "matches": 24
     },
     {
+      "league": "Oberliga - Hamburg",
+      "country": "Germany",
+      "sportKey": "soccer_germany_bundesliga",
+      "sportTitle": "Bundesliga - Germany",
+      "score": 0.347,
+      "matches": 6
+    },
+    {
       "league": "First League",
       "country": "Russia",
       "sportKey": "soccer_russia_premier_league",
@@ -262,6 +278,14 @@
       "sportTitle": "Brazil Série B",
       "score": 0.466,
       "matches": 7
+    },
+    {
+      "league": "Second League - Group 2",
+      "country": "Russia",
+      "sportKey": "soccer_russia_premier_league",
+      "sportTitle": "Premier League - Russia",
+      "score": 0.43,
+      "matches": 4
     },
     {
       "league": "League Cup",
@@ -1248,7 +1272,7 @@
       "matches": 2
     }
   ],
-  "matchesConsidered": 2012,
+  "matchesConsidered": 2009,
   "matchesMatched": 0,
   "matchesUpdated": 0,
   "fieldsFilled": 0,
@@ -1340,6 +1364,12 @@
       "country": "Hungary",
       "reason": "No matching soccer sport key",
       "bestScore": 0
+    },
+    {
+      "league": "1. Division",
+      "country": "Belarus",
+      "reason": "No matching soccer sport key",
+      "bestScore": 0.143
     },
     {
       "league": "Liga I",
@@ -1816,60 +1846,6 @@
       "bestScore": 0.143
     },
     {
-      "league": "Super League",
-      "home": "Yunnan Yukun",
-      "away": "Sichuan Jiuniu",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Super League",
-      "home": "Chengdu Better City",
-      "away": "Beijing Guoan",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Super League",
-      "home": "Shandong Luneng",
-      "away": "Henan Jianye",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Super League",
-      "home": "Hangzhou Greentown",
-      "away": "Dalian Zhixing",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Super League",
-      "home": "Henan Jianye",
-      "away": "Dalian Zhixing",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Super League",
-      "home": "Tianjin Teda",
-      "away": "Yunnan Yukun",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Super League",
-      "home": "Beijing Guoan",
-      "away": "Hangzhou Greentown",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Super League",
-      "home": "SHANGHAI SIPG",
-      "away": "Shandong Luneng",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Super League",
-      "home": "Chengdu Better City",
-      "away": "Wuhan Three Towns",
-      "reason": "No event/team match"
-    },
-    {
       "league": "League One",
       "home": "Guangxi Hengchen",
       "away": "Heilongjiang Lava Spring",
@@ -1960,483 +1936,51 @@
       "reason": "No event/team match"
     },
     {
-      "league": "Oberliga - Hamburg",
-      "home": "Pinneberg",
-      "away": "Harksheide",
+      "league": "Super League",
+      "home": "Chengdu Better City",
+      "away": "Beijing Guoan",
       "reason": "No event/team match"
     },
     {
-      "league": "Oberliga - Hamburg",
-      "home": "Vorwärts-Wacker 04",
-      "away": "Nikola Tesla",
+      "league": "Super League",
+      "home": "Shandong Luneng",
+      "away": "Henan Jianye",
       "reason": "No event/team match"
     },
     {
-      "league": "Oberliga - Hamburg",
-      "home": "Concordia",
-      "away": "HEBC",
+      "league": "Super League",
+      "home": "Hangzhou Greentown",
+      "away": "Dalian Zhixing",
       "reason": "No event/team match"
     },
     {
-      "league": "Oberliga - Hamburg",
-      "home": "ETSV Hamburg",
-      "away": "Teutonia Ottensen",
+      "league": "Super League",
+      "home": "Henan Jianye",
+      "away": "Dalian Zhixing",
       "reason": "No event/team match"
     },
     {
-      "league": "Oberliga - Hamburg",
-      "home": "Harksheide",
-      "away": "Süderelbe",
+      "league": "Super League",
+      "home": "Tianjin Teda",
+      "away": "Yunnan Yukun",
       "reason": "No event/team match"
     },
     {
-      "league": "Oberliga - Hamburg",
-      "home": "Norderstedt II",
-      "away": "Pinneberg",
+      "league": "Super League",
+      "home": "Beijing Guoan",
+      "away": "Hangzhou Greentown",
       "reason": "No event/team match"
     },
     {
-      "league": "Oberliga - Hamburg",
-      "home": "Altona 93",
-      "away": "Sasel",
+      "league": "Super League",
+      "home": "SHANGHAI SIPG",
+      "away": "Shandong Luneng",
       "reason": "No event/team match"
     },
     {
-      "league": "Oberliga - Bayern Süd",
-      "home": "Schwabmünchen",
-      "away": "1860 München II",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Oberliga - Bayern Süd",
-      "home": "Sportfreunde Schwaig",
-      "away": "1880 Wasserburg",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Oberliga - Bayern Süd",
-      "home": "Ismaning",
-      "away": "Landshut",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Oberliga - Bayern Süd",
-      "home": "Heimstetten",
-      "away": "TuS Geretsried",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Oberliga - Bayern Süd",
-      "home": "1860 München II",
-      "away": "Schalding-Heining",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Oberliga - Bayern Süd",
-      "home": "1860 Rosenheim",
-      "away": "Hankofen-Hailing",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Oberliga - Bayern Süd",
-      "home": "Erlbach",
-      "away": "Deisenhofen",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Oberliga - Bayern Süd",
-      "home": "Sportfreunde Schwaig",
-      "away": "Gundelfingen",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Oberliga - Bayern Süd",
-      "home": "Kottern",
-      "away": "Pfaffenhofen",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Oberliga - Bayern Süd",
-      "home": "Pipinsried",
-      "away": "Schwabmünchen",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Oberliga - Bayern Süd",
-      "home": "Kirchanschöring",
-      "away": "1880 Wasserburg",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Regionalliga - Nordost",
-      "home": "BSG Chemie Leipzig",
-      "away": "SV Babelsberg 03",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Regionalliga - Nordost",
-      "home": "Greifswalder FC",
-      "away": "Hallescher FC",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Regionalliga - Nordost",
-      "home": "FC Carl Zeiss Jena",
-      "away": "FSV Zwickau",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Regionalliga - Nordost",
-      "home": "SV Babelsberg 03",
-      "away": "FC Carl Zeiss Jena",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Regionalliga - Nordost",
-      "home": "Chemnitzer FC",
-      "away": "BFC Preussen",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Regionalliga - Nordost",
-      "home": "Tasmania Berlin",
-      "away": "Erzgebirge Aue",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Regionalliga - Nordost",
-      "home": "Altglienicke",
-      "away": "Hertha BSC II",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Regionalliga - Nordost",
-      "home": "RSV Eintracht",
-      "away": "Luckenwalde",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Regionalliga - Nordost",
-      "home": "FSV Zwickau",
-      "away": "Greifswalder FC",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Regionalliga - Nordost",
-      "home": "BFC Dynamo",
-      "away": "BSG Chemie Leipzig",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Regionalliga - Bayern",
-      "home": "Nürnberg II",
-      "away": "SpVgg Unterhaching",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Regionalliga - Bayern",
-      "home": "Augsburg II",
-      "away": "Landsberg",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Regionalliga - Bayern",
-      "home": "Buchbach",
-      "away": "Eichstätt",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Regionalliga - Bayern",
-      "home": "Wacker Burghausen",
-      "away": "Bayern München II",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Regionalliga - Bayern",
-      "home": "Eltersdorf",
-      "away": "Vilzing",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Regionalliga - Bayern",
-      "home": "Illertissen",
-      "away": "Schwaben Augsburg",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Regionalliga - Bayern",
-      "home": "Memmingen",
-      "away": "Ansbach",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Regionalliga - Bayern",
-      "home": "FC Schweinfurt 05",
-      "away": "TSV 1860 München",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Regionalliga - Bayern",
-      "home": "Greuther Fürth II",
-      "away": "Bayreuth",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Oberliga - Bayern Nord",
-      "home": "ASV Neumarkt",
-      "away": "Kornburg",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Oberliga - Bayern Nord",
-      "home": "Cham",
-      "away": "Fortuna Regensburg",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Oberliga - Bayern Nord",
-      "home": "DJK Bamberg",
-      "away": "Weiden",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Oberliga - Bayern Nord",
-      "home": "Neudrossenfeld",
-      "away": "Gebenbach",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Oberliga - Bayern Nord",
-      "home": "Ammerthal",
-      "away": "Bayern Hof",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Oberliga - Bayern Nord",
-      "home": "Eintracht Bamberg",
-      "away": "Stadeln",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Oberliga - Bayern Nord",
-      "home": "Ingolstadt II",
-      "away": "Jahn Regensburg II",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Oberliga - Bayern Nord",
-      "home": "Nordlingen",
-      "away": "Viktoria Aschaffenburg",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Oberliga - Schleswig-Holstein",
-      "home": "Union Neumünster",
-      "away": "VfR Neumünster",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Oberliga - Schleswig-Holstein",
-      "home": "SV Eichede",
-      "away": "Holstein Kiel II",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Oberliga - Schleswig-Holstein",
-      "home": "Heider SV",
-      "away": "VfB Lübeck",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Oberliga - Schleswig-Holstein",
-      "home": "Kaltenkirchen",
-      "away": "Kilia Kiel",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Oberliga - Schleswig-Holstein",
-      "home": "Rotenhof",
-      "away": "Hohenwestedt",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Oberliga - Schleswig-Holstein",
-      "home": "Eckernförder SV",
-      "away": "Lübeck II",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Oberliga - Schleswig-Holstein",
-      "home": "TSB Flensburg",
-      "away": "Oldenburger SV",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Oberliga - Schleswig-Holstein",
-      "home": "Phönix L. II",
-      "away": "Nordmark Satrup",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Oberliga - Hessen",
-      "home": "Fernwald",
-      "away": "Eintracht Stadtallendorf",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Oberliga - Hessen",
-      "home": "Hadamar",
-      "away": "Baunatal",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Oberliga - Hessen",
-      "home": "FC Gießen",
-      "away": "Kassel 2",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Oberliga - Hessen",
-      "home": "Vfb Marburg",
-      "away": "Bayern Alzenau",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Oberliga - Hessen",
-      "home": "Hummetroth",
-      "away": "Friedberg",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Regionalliga - Nord",
-      "home": "Werder Bremen II",
-      "away": "VfB Oldenburg",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Regionalliga - Nord",
-      "home": "SV Drochtersen/Assel",
-      "away": "Phönix Lübeck",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Regionalliga - Nord",
-      "home": "HSC Hannover",
-      "away": "Kickers Emden",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Regionalliga - Nord",
-      "home": "VfB Lübeck",
-      "away": "Weiche Flensburg",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Regionalliga - Nord",
-      "home": "SSV Jeddeloh",
-      "away": "Schöningen",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Regionalliga - Nord",
-      "home": "Bremer SV",
-      "away": "Hannover 96 II",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Regionalliga - West",
-      "home": "Bonner SC",
-      "away": "Rot-weiss Oberhausen",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Regionalliga - West",
-      "home": "Bergisch Gladbach",
-      "away": "SG Wattenscheid 09",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Regionalliga - West",
-      "home": "Borussia M'gladbach II",
-      "away": "SV Rodinghausen",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Regionalliga - West",
-      "home": "Bochum II",
-      "away": "Borussia Dortmund II",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Regionalliga - West",
-      "home": "Köln II",
-      "away": "Wiedenbrück",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Regionalliga - West",
-      "home": "Sportfreunde Lotte",
-      "away": "FC Gutersloh",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Regionalliga - West",
-      "home": "Schalke 04 II",
-      "away": "Paderborn II",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Regionalliga - West",
-      "home": "Westfalia Rhynern",
-      "away": "Sportfreunde Siegen",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Regionalliga - West",
-      "home": "Hilden",
-      "away": "FC Bocholt",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Oberliga - Rheinland-Pfalz / Saar",
-      "home": "Cosmos Koblenz",
-      "away": "Mechtersheim",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Oberliga - Rheinland-Pfalz / Saar",
-      "home": "FC Emmelshausen-Karbach",
-      "away": "Eisbachtal",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Oberliga - Rheinland-Pfalz / Saar",
-      "home": "Elversberg II",
-      "away": "TuS Koblenz",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Oberliga - Rheinland-Pfalz / Saar",
-      "home": "Pirmasens",
-      "away": "Hertha Wiesbach",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Oberliga - Rheinland-Pfalz / Saar",
-      "home": "TuS RW Koblenz",
-      "away": "Wormatia Worms",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Oberliga - Rheinland-Pfalz / Saar",
-      "home": "Auersmacher",
-      "away": "Gau-Odernheim",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Oberliga - Rheinland-Pfalz / Saar",
-      "home": "FV Engers 07",
-      "away": "Diefflen",
+      "league": "Super League",
+      "home": "Chengdu Better City",
+      "away": "Wuhan Three Towns",
       "reason": "No event/team match"
     },
     {
@@ -2750,6 +2294,492 @@
       "home": "Järfälla",
       "away": "Stockholm Internazionale",
       "reason": "No event/team match"
+    },
+    {
+      "league": "Ettan - Norra",
+      "home": "Stocksund",
+      "away": "Karlberg",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Veikkausliiga",
+      "home": "Ilves",
+      "away": "Lahti",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Veikkausliiga",
+      "home": "Inter Turku",
+      "away": "Gnistan",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Veikkausliiga",
+      "home": "HJK Helsinki",
+      "away": "Turku PS",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Veikkausliiga",
+      "home": "Turku PS",
+      "away": "Mariehamn",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Veikkausliiga",
+      "home": "Lahti",
+      "away": "FF Jaro",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Veikkausliiga",
+      "home": "Gnistan",
+      "away": "KuPS",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Ykkönen",
+      "home": "KuPS Akatemia",
+      "away": "VJS",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Ykkönen",
+      "home": "OLS",
+      "away": "KPV-j",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Ykkönen",
+      "home": "FC jazz",
+      "away": "KuPS Akatemia",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Ykkönen",
+      "home": "Inter Turku II",
+      "away": "VJS",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Ykkönen",
+      "home": "PKKU",
+      "away": "Tampere United",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Ykkönen",
+      "home": "KPV-j",
+      "away": "SalPa",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Ykkönen",
+      "home": "TPV",
+      "away": "Rops",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Kakkonen - Lohko C",
+      "home": "Kraft",
+      "away": "Vaajakoski",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Kakkonen - Lohko C",
+      "home": "SJK-juniorit",
+      "away": "GBK",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Kakkonen - Lohko C",
+      "home": "Huima / Urho",
+      "away": "TP-47",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Kakkonen - Lohko C",
+      "home": "Kraft",
+      "away": "JS Hercules",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Kakkonen - Lohko C",
+      "home": "JBK",
+      "away": "Vaajakoski",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Ykkösliiga",
+      "home": "MP",
+      "away": "KäPa",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Ykkösliiga",
+      "home": "JIPPO",
+      "away": "JäPS",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Ykkösliiga",
+      "home": "EIF",
+      "away": "Klubi-04",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Ykkösliiga",
+      "home": "Kooteepee",
+      "away": "SJK Akatemia",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Ykkösliiga",
+      "home": "PK-35",
+      "away": "Haka",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Kakkonen - Lohko B",
+      "home": "ÅIFK",
+      "away": "HJS Akatemia",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Kakkonen - Lohko B",
+      "home": "GrIFK",
+      "away": "EBK",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Kakkonen - Lohko B",
+      "home": "EPS",
+      "away": "Honka",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Kakkonen - Lohko B",
+      "home": "NJS",
+      "away": "P-Iirot",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Kakkonen - Lohko A",
+      "home": "Union Plaani",
+      "away": "PEPO",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Kakkonen - Lohko A",
+      "home": "HPS",
+      "away": "HIFK Helsinki",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Kakkonen - Lohko A",
+      "home": "MyPa",
+      "away": "Kiffen",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Kakkonen - Lohko A",
+      "home": "PuiU Helsinki",
+      "away": "Atlantis",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "2. Division - Group 2",
+      "home": "Trygg/Lade",
+      "away": "Eidsvold",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "2. Division - Group 2",
+      "home": "Stjørdals-Blink",
+      "away": "Rana",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "2. Division - Group 2",
+      "home": "Lørenskog",
+      "away": "Hønefoss",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "2. Division - Group 2",
+      "home": "Skeid",
+      "away": "Grorud",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "3. Division - Girone 3",
+      "home": "Os",
+      "away": "Varegg",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "3. Division - Girone 3",
+      "home": "Fyllingsdalen",
+      "away": "Åsane II",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "3. Division - Girone 3",
+      "home": "Gneist",
+      "away": "Brann II",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "3. Division - Girone 3",
+      "home": "Vard",
+      "away": "Sogndal II",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "3. Division - Girone 3",
+      "home": "Askøy",
+      "away": "Fyllingsdalen",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "3. Division - Girone 3",
+      "home": "Gneist",
+      "away": "Vard",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "3. Division - Girone 3",
+      "home": "Austevoll",
+      "away": "Os",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "3. Division - Girone 4",
+      "home": "Åkra",
+      "away": "Brodd",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "3. Division - Girone 4",
+      "home": "Odd II",
+      "away": "Våg",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "3. Division - Girone 4",
+      "home": "Haugesund II",
+      "away": "Varhaug",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "3. Division - Girone 4",
+      "home": "Varhaug",
+      "away": "Hinna",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "3. Division - Girone 4",
+      "home": "Flekkerøy",
+      "away": "Haugesund II",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "3. Division - Girone 4",
+      "home": "Staal Jørpeland",
+      "away": "Åkra",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "3. Division - Girone 4",
+      "home": "Våg",
+      "away": "Madla",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Eliteserien",
+      "home": "Brann",
+      "away": "Valerenga",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Eliteserien",
+      "home": "KFUM Oslo",
+      "away": "Molde",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Eliteserien",
+      "home": "Sandefjord",
+      "away": "Bodo/Glimt",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Eliteserien",
+      "home": "Sarpsborg 08 FF",
+      "away": "Ham-Kam",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Eliteserien",
+      "home": "Aalesund",
+      "away": "Viking",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Eliteserien",
+      "home": "Rosenborg",
+      "away": "Fredrikstad",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Eliteserien",
+      "home": "Valerenga",
+      "away": "Ham-Kam",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Eliteserien",
+      "home": "Bodo/Glimt",
+      "away": "Lillestrom",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Eliteserien",
+      "home": "Fredrikstad",
+      "away": "Sandefjord",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Eliteserien",
+      "home": "Start",
+      "away": "Viking",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "2. Division - Group 1",
+      "home": "jerv",
+      "away": "Lysekloster",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "2. Division - Group 1",
+      "home": "Pors Grenland",
+      "away": "Brattvåg",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "2. Division - Group 1",
+      "home": "Sandviken",
+      "away": "Kvik Halden",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "2. Division - Group 1",
+      "home": "Mjondalen",
+      "away": "Notodden",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "2. Division - Group 1",
+      "home": "Lysekloster",
+      "away": "Bjarg",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "3. Division - Girone 2",
+      "home": "Rosenborg II",
+      "away": "Strindheim",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "3. Division - Girone 2",
+      "home": "Volda",
+      "away": "Ranheim II",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "3. Division - Girone 2",
+      "home": "Herd",
+      "away": "Volda",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "3. Division - Girone 2",
+      "home": "Byåsen",
+      "away": "Spjelkavik",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "1. Division",
+      "home": "Asane",
+      "away": "Egersund",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "1. Division",
+      "home": "Moss",
+      "away": "Raufoss",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "1. Division",
+      "home": "Sandnes ULF",
+      "away": "Kongsvinger",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "1. Division",
+      "home": "Sogndal",
+      "away": "Ranheim",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "1. Division",
+      "home": "Strommen",
+      "away": "ODD Ballklubb",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "1. Division",
+      "home": "Stabaek",
+      "away": "hodd",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "1. Division",
+      "home": "Bryne",
+      "away": "Stromsgodset",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "3. Division - Girone 1",
+      "home": "Lokomotiv Oslo",
+      "away": "KFUM II",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "3. Division - Girone 1",
+      "home": "IF Ready",
+      "away": "Frigg",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "3. Division - Girone 1",
+      "home": "Union Carl Berner",
+      "away": "Asker",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "3. Division - Girone 1",
+      "home": "Gamle Oslo",
+      "away": "Union Carl Berner",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "3. Division - Girone 1",
+      "home": "Frigg",
+      "away": "Ullern",
+      "reason": "No event/team match"
     }
   ],
   "unsupportedMarkets": [
@@ -2766,18 +2796,6 @@
       "market": "double_chance"
     },
     {
-      "sportKey": "soccer_germany_bundesliga",
-      "market": "btts"
-    },
-    {
-      "sportKey": "soccer_germany_bundesliga",
-      "market": "draw_no_bet"
-    },
-    {
-      "sportKey": "soccer_germany_bundesliga",
-      "market": "double_chance"
-    },
-    {
       "sportKey": "soccer_sweden_allsvenskan",
       "market": "btts"
     },
@@ -2859,6 +2877,18 @@
     },
     {
       "sportKey": "soccer_england_efl_cup",
+      "market": "double_chance"
+    },
+    {
+      "sportKey": "soccer_germany_bundesliga",
+      "market": "btts"
+    },
+    {
+      "sportKey": "soccer_germany_bundesliga",
+      "market": "draw_no_bet"
+    },
+    {
+      "sportKey": "soccer_germany_bundesliga",
       "market": "double_chance"
     },
     {
@@ -3141,31 +3171,6 @@
       "statusCode": 422
     },
     {
-      "label": "soccer_germany_bundesliga:base-combined",
-      "error": "Markets not supported by this endpoint: btts, double_chance, draw_no_bet",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_sweden_superettan:base-core",
-      "error": "Invalid commenceTimeFrom parameter. The format must be YYYY-MM-DDTHH:MM:SSZ, for example 2020-11-24T16:05:00Z",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_sweden_superettan:btts",
-      "error": "Markets not supported by this endpoint: btts",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_sweden_superettan:draw_no_bet",
-      "error": "Markets not supported by this endpoint: draw_no_bet",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_sweden_superettan:double_chance",
-      "error": "Markets not supported by this endpoint: double_chance",
-      "statusCode": 422
-    },
-    {
       "label": "soccer_sweden_allsvenskan:base-combined",
       "error": "Markets not supported by this endpoint: btts, double_chance, draw_no_bet",
       "statusCode": 422
@@ -3337,6 +3342,31 @@
     },
     {
       "label": "soccer_england_efl_cup:double_chance",
+      "error": "Markets not supported by this endpoint: double_chance",
+      "statusCode": 422
+    },
+    {
+      "label": "soccer_germany_bundesliga:base-combined",
+      "error": "Markets not supported by this endpoint: btts, double_chance, draw_no_bet",
+      "statusCode": 422
+    },
+    {
+      "label": "soccer_germany_bundesliga:base-core",
+      "error": "Invalid commenceTimeFrom parameter. The format must be YYYY-MM-DDTHH:MM:SSZ, for example 2020-11-24T16:05:00Z",
+      "statusCode": 422
+    },
+    {
+      "label": "soccer_germany_bundesliga:btts",
+      "error": "Markets not supported by this endpoint: btts",
+      "statusCode": 422
+    },
+    {
+      "label": "soccer_germany_bundesliga:draw_no_bet",
+      "error": "Markets not supported by this endpoint: draw_no_bet",
+      "statusCode": 422
+    },
+    {
+      "label": "soccer_germany_bundesliga:double_chance",
       "error": "Markets not supported by this endpoint: double_chance",
       "statusCode": 422
     },
@@ -3867,11 +3897,11 @@
     }
   ],
   "quota": {
-    "remaining": 95208,
-    "used": 4792,
+    "remaining": 95128,
+    "used": 4872,
     "last": 0
   },
   "skipped": false,
   "skipReason": null,
-  "completedAt": "2026-07-26T13:22:41.301Z"
+  "completedAt": "2026-07-26T13:34:36.586Z"
 }
