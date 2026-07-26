@@ -1,11 +1,11 @@
 {
   "version": "v251",
-  "generatedAt": "2026-07-26T20:11:52.987Z",
+  "generatedAt": "2026-07-26T20:23:44.611Z",
   "provider": "The Odds API v4",
   "keyPresent": true,
   "regions": "uk",
   "sportsAvailable": 68,
-  "soccerSportsAvailable": 39,
+  "soccerSportsAvailable": 41,
   "sportMappings": [
     {
       "league": "League Two",
@@ -37,7 +37,7 @@
       "sportKey": "soccer_argentina_primera_division",
       "sportTitle": "Primera División - Argentina",
       "score": 0.286,
-      "matches": 5
+      "matches": 4
     },
     {
       "league": "Cup",
@@ -64,20 +64,12 @@
       "matches": 1
     },
     {
-      "league": "Liga Profesional Argentina",
-      "country": "Argentina",
-      "sportKey": "soccer_argentina_primera_division",
-      "sportTitle": "Primera División - Argentina",
-      "score": 0.78,
-      "matches": 20
-    },
-    {
       "league": "Primera Nacional",
       "country": "Argentina",
       "sportKey": "soccer_argentina_primera_division",
       "sportTitle": "Primera División - Argentina",
       "score": 0.513,
-      "matches": 21
+      "matches": 20
     },
     {
       "league": "Primera C",
@@ -85,7 +77,7 @@
       "sportKey": "soccer_argentina_primera_division",
       "sportTitle": "Primera División - Argentina",
       "score": 0.513,
-      "matches": 19
+      "matches": 18
     },
     {
       "league": "Canadian Premier League",
@@ -96,28 +88,12 @@
       "matches": 5
     },
     {
-      "league": "Paulista - U20",
-      "country": "Brazil",
-      "sportKey": "soccer_brazil_campeonato",
-      "sportTitle": "Brazil Série A",
-      "score": 0.305,
-      "matches": 23
-    },
-    {
       "league": "Capixaba B",
       "country": "Brazil",
       "sportKey": "soccer_brazil_serie_b",
       "sportTitle": "Brazil Série B",
       "score": 0.466,
       "matches": 4
-    },
-    {
-      "league": "Primera División",
-      "country": "Peru",
-      "sportKey": "soccer_argentina_primera_division",
-      "sportTitle": "Primera División - Argentina",
-      "score": 0.653,
-      "matches": 7
     },
     {
       "league": "Mineiro - 2",
@@ -133,7 +109,7 @@
       "sportKey": "soccer_argentina_primera_division",
       "sportTitle": "Primera División - Argentina",
       "score": 0.305,
-      "matches": 13
+      "matches": 7
     },
     {
       "league": "Ekstraklasa",
@@ -142,6 +118,14 @@
       "sportTitle": "Ekstraklasa - Poland",
       "score": 1,
       "matches": 7
+    },
+    {
+      "league": "Super Liga",
+      "country": "Serbia",
+      "sportKey": "soccer_turkey_super_league",
+      "sportTitle": "Turkey Super League",
+      "score": 0.286,
+      "matches": 8
     },
     {
       "league": "Paranaense - 3",
@@ -246,6 +230,22 @@
       "sportTitle": "La Liga - Spain",
       "score": 0.5,
       "matches": 4
+    },
+    {
+      "league": "Liga Profesional Argentina",
+      "country": "Argentina",
+      "sportKey": "soccer_argentina_primera_division",
+      "sportTitle": "Primera División - Argentina",
+      "score": 0.78,
+      "matches": 19
+    },
+    {
+      "league": "Primera División",
+      "country": "Peru",
+      "sportKey": "soccer_argentina_primera_division",
+      "sportTitle": "Primera División - Argentina",
+      "score": 0.653,
+      "matches": 6
     },
     {
       "league": "NWSL Women",
@@ -496,6 +496,14 @@
       "matches": 2
     },
     {
+      "league": "UEFA Europa Conference League",
+      "country": "World",
+      "sportKey": "soccer_uefa_nations_league",
+      "sportTitle": "UEFA Nations League",
+      "score": 0.333,
+      "matches": 49
+    },
+    {
       "league": "Oberliga - Bayern Süd",
       "country": "Germany",
       "sportKey": "soccer_germany_bundesliga",
@@ -590,6 +598,14 @@
       "sportTitle": "Allsvenskan - Sweden",
       "score": 0.305,
       "matches": 3
+    },
+    {
+      "league": "Paulista - U20",
+      "country": "Brazil",
+      "sportKey": "soccer_brazil_campeonato",
+      "sportTitle": "Brazil Série A",
+      "score": 0.305,
+      "matches": 18
     },
     {
       "league": "Brasileiro U20 A",
@@ -1200,12 +1216,28 @@
       "matches": 1
     },
     {
+      "league": "Super Liga",
+      "country": "Slovakia",
+      "sportKey": "soccer_turkey_super_league",
+      "sportTitle": "Turkey Super League",
+      "score": 0.286,
+      "matches": 3
+    },
+    {
       "league": "Super League",
       "country": "Switzerland",
       "sportKey": "soccer_greece_super_league",
       "sportTitle": "Super League - Greece",
       "score": 0.653,
       "matches": 3
+    },
+    {
+      "league": "Super Liga",
+      "country": "Moldova",
+      "sportKey": "soccer_turkey_super_league",
+      "sportTitle": "Turkey Super League",
+      "score": 0.286,
+      "matches": 1
     },
     {
       "league": "Catarinense U20",
@@ -1240,7 +1272,7 @@
       "matches": 2
     }
   ],
-  "matchesConsidered": 1826,
+  "matchesConsidered": 1808,
   "matchesMatched": 0,
   "matchesUpdated": 0,
   "fieldsFilled": 0,
@@ -1289,7 +1321,7 @@
       "league": "Africa Cup of Nations - Women",
       "country": "World",
       "reason": "No matching soccer sport key",
-      "bestScore": 0.1
+      "bestScore": 0.111
     },
     {
       "league": "CONCACAF Caribbean Club Shield",
@@ -1304,18 +1336,6 @@
       "bestScore": 0.143
     },
     {
-      "league": "Czech Liga",
-      "country": "Czech-Republic",
-      "reason": "No matching soccer sport key",
-      "bestScore": 0.143
-    },
-    {
-      "league": "NB I",
-      "country": "Hungary",
-      "reason": "No matching soccer sport key",
-      "bestScore": 0
-    },
-    {
       "league": "Liga Pro",
       "country": "Ecuador",
       "reason": "No matching soccer sport key",
@@ -1325,7 +1345,7 @@
       "league": "First League",
       "country": "Bulgaria",
       "reason": "No matching soccer sport key",
-      "bestScore": 0.143
+      "bestScore": 0.167
     },
     {
       "league": "1. SNL",
@@ -1338,12 +1358,6 @@
       "country": "Peru",
       "reason": "No matching soccer sport key",
       "bestScore": 0.143
-    },
-    {
-      "league": "Super Liga",
-      "country": "Serbia",
-      "reason": "No matching soccer sport key",
-      "bestScore": 0.125
     },
     {
       "league": "COTIF Tournament",
@@ -1466,6 +1480,18 @@
       "bestScore": 0
     },
     {
+      "league": "Czech Liga",
+      "country": "Czech-Republic",
+      "reason": "No matching soccer sport key",
+      "bestScore": 0.143
+    },
+    {
+      "league": "NB I",
+      "country": "Hungary",
+      "reason": "No matching soccer sport key",
+      "bestScore": 0
+    },
+    {
       "league": "Division Intermedia",
       "country": "Paraguay",
       "reason": "No matching soccer sport key",
@@ -1487,19 +1513,13 @@
       "league": "Second League",
       "country": "Bulgaria",
       "reason": "No matching soccer sport key",
-      "bestScore": 0.143
+      "bestScore": 0.167
     },
     {
       "league": "Toto Cup Ligat Al",
       "country": "Israel",
       "reason": "No matching soccer sport key",
       "bestScore": 0.111
-    },
-    {
-      "league": "UEFA Europa Conference League",
-      "country": "World",
-      "reason": "No matching soccer sport key",
-      "bestScore": 0.222
     },
     {
       "league": "Meistaradeildin",
@@ -1577,13 +1597,13 @@
       "league": "Pro League A",
       "country": "Uzbekistan",
       "reason": "No matching soccer sport key",
-      "bestScore": 0.125
+      "bestScore": 0.143
     },
     {
       "league": "UEFA Europa League",
       "country": "World",
       "reason": "No matching soccer sport key",
-      "bestScore": 0.125
+      "bestScore": 0.143
     },
     {
       "league": "Druha Liga",
@@ -1772,22 +1792,10 @@
       "bestScore": 0
     },
     {
-      "league": "Super Liga",
-      "country": "Slovakia",
-      "reason": "No matching soccer sport key",
-      "bestScore": 0.125
-    },
-    {
       "league": "National Division",
       "country": "Luxembourg",
       "reason": "No matching soccer sport key",
       "bestScore": 0.143
-    },
-    {
-      "league": "Super Liga",
-      "country": "Moldova",
-      "reason": "No matching soccer sport key",
-      "bestScore": 0.125
     },
     {
       "league": "League Two",
@@ -2409,12 +2417,6 @@
     },
     {
       "league": "Primera División - Apertura",
-      "home": "Cerro",
-      "away": "Racing Montevideo",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Primera División - Apertura",
       "home": "Albion FC",
       "away": "Danubio",
       "reason": "No event/team match"
@@ -2468,135 +2470,9 @@
       "reason": "No event/team match"
     },
     {
-      "league": "Liga Profesional Argentina",
-      "home": "Atletico Tucuman",
-      "away": "Independ. Rivadavia",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Liga Profesional Argentina",
-      "home": "Estudiantes L.P.",
-      "away": "Independiente",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Liga Profesional Argentina",
-      "home": "Deportivo Riestra",
-      "away": "Boca Juniors",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Liga Profesional Argentina",
-      "home": "Banfield",
-      "away": "Sarmiento Junin",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Liga Profesional Argentina",
-      "home": "San Lorenzo",
-      "away": "Gimnasia M.",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Liga Profesional Argentina",
-      "home": "Argentinos JRS",
-      "away": "Estudiantes de Rio Cuarto",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Liga Profesional Argentina",
-      "home": "Rosario Central",
-      "away": "Racing Club",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Liga Profesional Argentina",
-      "home": "Barracas Central",
-      "away": "Aldosivi",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Liga Profesional Argentina",
-      "home": "Defensa Y Justicia",
-      "away": "Deportivo Riestra",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Liga Profesional Argentina",
-      "home": "Gimnasia L.P.",
-      "away": "River Plate",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Liga Profesional Argentina",
-      "home": "Instituto Cordoba",
-      "away": "Platense",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Liga Profesional Argentina",
-      "home": "Independ. Rivadavia",
-      "away": "Huracan",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Liga Profesional Argentina",
-      "home": "Talleres Cordoba",
-      "away": "Velez Sarsfield",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Liga Profesional Argentina",
-      "home": "Central Cordoba de Santiago",
-      "away": "Atletico Tucuman",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Liga Profesional Argentina",
-      "home": "Independiente",
-      "away": "Newells Old Boys",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Liga Profesional Argentina",
-      "home": "Estudiantes de Rio Cuarto",
-      "away": "Banfield",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Liga Profesional Argentina",
-      "home": "Gimnasia M.",
-      "away": "Union Santa Fe",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Liga Profesional Argentina",
-      "home": "Belgrano Cordoba",
-      "away": "Argentinos JRS",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Liga Profesional Argentina",
-      "home": "Estudiantes L.P.",
-      "away": "Defensa Y Justicia",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Liga Profesional Argentina",
-      "home": "Racing Club",
-      "away": "Tigre",
-      "reason": "No event/team match"
-    },
-    {
       "league": "Primera Nacional",
       "home": "Agropecuario",
       "away": "San Martin S.J.",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Primera Nacional",
-      "home": "All Boys",
-      "away": "Defensores De Belgrano",
       "reason": "No event/team match"
     },
     {
@@ -2727,12 +2603,6 @@
     },
     {
       "league": "Primera C",
-      "home": "Juventud Unida",
-      "away": "Defensores de Cambaceres",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Primera C",
       "home": "Fénix",
       "away": "Yupanqui",
       "reason": "No event/team match"
@@ -2747,6 +2617,168 @@
       "league": "Primera C",
       "home": "Sportivo Barracas",
       "away": "El Porvenir",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Primera C",
+      "home": "Central Ballester",
+      "away": "Sportivo Barracas",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Primera C",
+      "home": "Central Cordoba",
+      "away": "General Lamadrid",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Primera C",
+      "home": "Claypole",
+      "away": "Lujan",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Primera C",
+      "home": "Centro Español",
+      "away": "Victoriano Arenas",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Primera C",
+      "home": "Defensores de Cambaceres",
+      "away": "Lugano",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Primera C",
+      "home": "Deportivo Muñiz",
+      "away": "Atletico Atlas",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Primera C",
+      "home": "Deportivo Paraguayo",
+      "away": "Argentino Rosario",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Primera C",
+      "home": "JJ Urquiza",
+      "away": "Berazategui",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Primera C",
+      "home": "Leandro N. Alem",
+      "away": "Juventud Unida",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Primera C",
+      "home": "Mercedes",
+      "away": "Estrella Del Sur",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Primera C",
+      "home": "Deportivo Español",
+      "away": "Leones de Rosario",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Primera C",
+      "home": "El Porvenir",
+      "away": "Fénix",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Primera C",
+      "home": "Yupanqui",
+      "away": "Canuelas",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Torneo Federal A",
+      "home": "Douglas Haig",
+      "away": "9 de Julio Rafaela",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Torneo Federal A",
+      "home": "Guillermo Brown",
+      "away": "Germinal de Rawson",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Torneo Federal A",
+      "home": "Olimpo Bahia Blanca",
+      "away": "Santamarina",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Torneo Federal A",
+      "home": "Sol de Mayo",
+      "away": "Villa Mitre",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Torneo Federal A",
+      "home": "San Martin Formosa",
+      "away": "Bartolomé Mitre",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Torneo Federal A",
+      "home": "Sarmiento Resistencia",
+      "away": "Sol de América",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Torneo Federal A",
+      "home": "Tucuman Central",
+      "away": "Sarmiento de La Banda",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Primera División",
+      "home": "Blooming",
+      "away": "The Strongest",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Primera División",
+      "home": "Bolívar",
+      "away": "Real Potosí",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Primera División",
+      "home": "Nacional Potosí",
+      "away": "Real Tomayapo",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Primera División",
+      "home": "Gualberto Villarroel SJ",
+      "away": "Universitario de Vinto",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Primera División",
+      "home": "Universitario de Vinto",
+      "away": "Guabirá",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Primera División",
+      "home": "Real Tomayapo",
+      "away": "ABB",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Primera División",
+      "home": "Real Oruro",
+      "away": "Independiente Petrolero",
       "reason": "No event/team match"
     }
   ],
@@ -2836,6 +2868,18 @@
       "market": "double_chance"
     },
     {
+      "sportKey": "soccer_turkey_super_league",
+      "market": "btts"
+    },
+    {
+      "sportKey": "soccer_turkey_super_league",
+      "market": "draw_no_bet"
+    },
+    {
+      "sportKey": "soccer_turkey_super_league",
+      "market": "double_chance"
+    },
+    {
       "sportKey": "soccer_chile_campeonato",
       "market": "btts"
     },
@@ -2965,6 +3009,18 @@
     },
     {
       "sportKey": "soccer_uefa_champs_league_qualification",
+      "market": "double_chance"
+    },
+    {
+      "sportKey": "soccer_uefa_nations_league",
+      "market": "btts"
+    },
+    {
+      "sportKey": "soccer_uefa_nations_league",
+      "market": "draw_no_bet"
+    },
+    {
+      "sportKey": "soccer_uefa_nations_league",
       "market": "double_chance"
     },
     {
@@ -3289,6 +3345,31 @@
       "statusCode": 422
     },
     {
+      "label": "soccer_turkey_super_league:base-combined",
+      "error": "Markets not supported by this endpoint: btts, double_chance, draw_no_bet",
+      "statusCode": 422
+    },
+    {
+      "label": "soccer_turkey_super_league:base-core",
+      "error": "Invalid commenceTimeFrom parameter. The format must be YYYY-MM-DDTHH:MM:SSZ, for example 2020-11-24T16:05:00Z",
+      "statusCode": 422
+    },
+    {
+      "label": "soccer_turkey_super_league:btts",
+      "error": "Markets not supported by this endpoint: btts",
+      "statusCode": 422
+    },
+    {
+      "label": "soccer_turkey_super_league:draw_no_bet",
+      "error": "Markets not supported by this endpoint: draw_no_bet",
+      "statusCode": 422
+    },
+    {
+      "label": "soccer_turkey_super_league:double_chance",
+      "error": "Markets not supported by this endpoint: double_chance",
+      "statusCode": 422
+    },
+    {
       "label": "soccer_chile_campeonato:base-combined",
       "error": "Markets not supported by this endpoint: btts, double_chance, draw_no_bet",
       "statusCode": 422
@@ -3560,6 +3641,31 @@
     },
     {
       "label": "soccer_uefa_champs_league_qualification:double_chance",
+      "error": "Markets not supported by this endpoint: double_chance",
+      "statusCode": 422
+    },
+    {
+      "label": "soccer_uefa_nations_league:base-combined",
+      "error": "Markets not supported by this endpoint: btts, double_chance, draw_no_bet",
+      "statusCode": 422
+    },
+    {
+      "label": "soccer_uefa_nations_league:base-core",
+      "error": "Invalid commenceTimeFrom parameter. The format must be YYYY-MM-DDTHH:MM:SSZ, for example 2020-11-24T16:05:00Z",
+      "statusCode": 422
+    },
+    {
+      "label": "soccer_uefa_nations_league:btts",
+      "error": "Markets not supported by this endpoint: btts",
+      "statusCode": 422
+    },
+    {
+      "label": "soccer_uefa_nations_league:draw_no_bet",
+      "error": "Markets not supported by this endpoint: draw_no_bet",
+      "statusCode": 422
+    },
+    {
+      "label": "soccer_uefa_nations_league:double_chance",
       "error": "Markets not supported by this endpoint: double_chance",
       "statusCode": 422
     },
@@ -3871,5 +3977,5 @@
   },
   "skipped": false,
   "skipReason": null,
-  "completedAt": "2026-07-26T20:12:01.730Z"
+  "completedAt": "2026-07-26T20:24:06.082Z"
 }
