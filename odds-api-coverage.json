@@ -1,6 +1,6 @@
 {
   "version": "v251",
-  "generatedAt": "2026-07-26T00:25:08.833Z",
+  "generatedAt": "2026-07-26T00:35:41.887Z",
   "provider": "The Odds API v4",
   "keyPresent": true,
   "regions": "uk",
@@ -144,54 +144,6 @@
       "matches": 9
     },
     {
-      "league": "Copa Paulista",
-      "country": "Brazil",
-      "sportKey": "soccer_brazil_campeonato",
-      "sportTitle": "Brazil Série A",
-      "score": 0.305,
-      "matches": 6
-    },
-    {
-      "league": "Primera Nacional",
-      "country": "Argentina",
-      "sportKey": "soccer_argentina_primera_division",
-      "sportTitle": "Primera División - Argentina",
-      "score": 0.513,
-      "matches": 15
-    },
-    {
-      "league": "Serie C",
-      "country": "Brazil",
-      "sportKey": "soccer_brazil_campeonato",
-      "sportTitle": "Brazil Série A",
-      "score": 0.466,
-      "matches": 7
-    },
-    {
-      "league": "Paulista - U20",
-      "country": "Brazil",
-      "sportKey": "soccer_brazil_campeonato",
-      "sportTitle": "Brazil Série A",
-      "score": 0.305,
-      "matches": 24
-    },
-    {
-      "league": "Liga de Expansión MX",
-      "country": "Mexico",
-      "sportKey": "soccer_mexico_ligamx",
-      "sportTitle": "Liga MX",
-      "score": 0.555,
-      "matches": 6
-    },
-    {
-      "league": "Premier League - Summer Series",
-      "country": "England",
-      "sportKey": "soccer_epl",
-      "sportTitle": "EPL",
-      "score": 0.667,
-      "matches": 4
-    },
-    {
       "league": "Liga Profesional Argentina",
       "country": "Argentina",
       "sportKey": "soccer_argentina_primera_division",
@@ -224,6 +176,14 @@
       "matches": 15
     },
     {
+      "league": "Liga de Expansión MX",
+      "country": "Mexico",
+      "sportKey": "soccer_mexico_ligamx",
+      "sportTitle": "Liga MX",
+      "score": 0.555,
+      "matches": 5
+    },
+    {
       "league": "Primera División",
       "country": "Costa-Rica",
       "sportKey": "soccer_argentina_primera_division",
@@ -238,6 +198,14 @@
       "sportTitle": "Liga MX",
       "score": 1,
       "matches": 5
+    },
+    {
+      "league": "Premier League - Summer Series",
+      "country": "England",
+      "sportKey": "soccer_epl",
+      "sportTitle": "EPL",
+      "score": 0.667,
+      "matches": 3
     },
     {
       "league": "Serie A",
@@ -686,6 +654,14 @@
       "sportTitle": "Brazil Série A",
       "score": 0.305,
       "matches": 1
+    },
+    {
+      "league": "Primera Nacional",
+      "country": "Argentina",
+      "sportKey": "soccer_argentina_primera_division",
+      "sportTitle": "Primera División - Argentina",
+      "score": 0.513,
+      "matches": 14
     },
     {
       "league": "Primera C",
@@ -1184,7 +1160,7 @@
       "matches": 1
     }
   ],
-  "matchesConsidered": 1331,
+  "matchesConsidered": 1317,
   "matchesMatched": 0,
   "matchesUpdated": 0,
   "fieldsFilled": 0,
@@ -1193,12 +1169,6 @@
   "derivedHtftMatches": 0,
   "bookmakerRows": 0,
   "unmatched": [
-    {
-      "league": "David Kipiani Cup",
-      "country": "Georgia",
-      "reason": "No matching soccer sport key",
-      "bestScore": 0.125
-    },
     {
       "league": "Friendlies Clubs",
       "country": "World",
@@ -1432,6 +1402,12 @@
       "country": "Macao",
       "reason": "No matching soccer sport key",
       "bestScore": 0.143
+    },
+    {
+      "league": "David Kipiani Cup",
+      "country": "Georgia",
+      "reason": "No matching soccer sport key",
+      "bestScore": 0.125
     },
     {
       "league": "Czech Liga",
@@ -1812,15 +1788,111 @@
       "reason": "No event/team match"
     },
     {
-      "league": "Copa Paulista",
-      "home": "Primavera SP",
-      "away": "Oeste",
+      "league": "Serie A",
+      "home": "Vasco DA Gama",
+      "away": "Mirassol",
       "reason": "No event/team match"
     },
     {
-      "league": "Copa Paulista",
-      "home": "São José EC",
-      "away": "EC São Bernardo",
+      "league": "Serie A",
+      "home": "Bahia",
+      "away": "Corinthians",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Serie A",
+      "home": "Cruzeiro",
+      "away": "Botafogo",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Serie A",
+      "home": "RB Bragantino",
+      "away": "Coritiba",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Serie A",
+      "home": "Flamengo",
+      "away": "Sao Paulo",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Serie A",
+      "home": "Gremio",
+      "away": "Fluminense",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Serie A",
+      "home": "Palmeiras",
+      "away": "Atletico-MG",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Serie A",
+      "home": "Remo",
+      "away": "Vitoria",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Serie A",
+      "home": "Atletico-MG",
+      "away": "RB Bragantino",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Serie A",
+      "home": "Botafogo",
+      "away": "Gremio",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Serie A",
+      "home": "Chapecoense-sc",
+      "away": "Vasco DA Gama",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Serie A",
+      "home": "Sao Paulo",
+      "away": "Santos",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Serie A",
+      "home": "Internacional",
+      "away": "Flamengo",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Serie A",
+      "home": "Mirassol",
+      "away": "Remo",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Serie A",
+      "home": "Fluminense",
+      "away": "Bahia",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Serie A",
+      "home": "Vitoria",
+      "away": "Palmeiras",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Serie A",
+      "home": "Corinthians",
+      "away": "Atletico Paranaense",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Serie A",
+      "home": "Coritiba",
+      "away": "Cruzeiro",
       "reason": "No event/team match"
     },
     {
@@ -1845,48 +1917,6 @@
       "league": "Copa Paulista",
       "home": "Grêmio Prudente",
       "away": "Bandeirante SP",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Serie C",
-      "home": "Volta Redonda",
-      "away": "Anápolis",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Serie C",
-      "home": "Brusque",
-      "away": "Ituano",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Serie C",
-      "home": "Ypiranga-RS",
-      "away": "Barra",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Serie C",
-      "home": "Caxias",
-      "away": "Botafogo PB",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Serie C",
-      "home": "Amazonas",
-      "away": "Paysandu",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Serie C",
-      "home": "Floresta",
-      "away": "Maringá",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Serie C",
-      "home": "Guarani Campinas",
-      "away": "Inter De Limeira",
       "reason": "No event/team match"
     },
     {
@@ -2664,63 +2694,87 @@
       "reason": "No event/team match"
     },
     {
-      "league": "Primera B Metropolitana",
-      "home": "Deportivo Merlo",
-      "away": "Villa San Carlos",
+      "league": "Liga Profesional Argentina",
+      "home": "River Plate",
+      "away": "Barracas Central",
       "reason": "No event/team match"
     },
     {
-      "league": "Primera Nacional",
-      "home": "San Martin Tucuman",
-      "away": "Temperley",
+      "league": "Liga Profesional Argentina",
+      "home": "Lanus",
+      "away": "San Lorenzo",
       "reason": "No event/team match"
     },
     {
-      "league": "Primera Nacional",
-      "home": "Agropecuario",
-      "away": "San Martin S.J.",
+      "league": "Liga Profesional Argentina",
+      "home": "Atletico Tucuman",
+      "away": "Independ. Rivadavia",
       "reason": "No event/team match"
     },
     {
-      "league": "Primera Nacional",
-      "home": "All Boys",
-      "away": "Defensores De Belgrano",
+      "league": "Liga Profesional Argentina",
+      "home": "Estudiantes L.P.",
+      "away": "Independiente",
       "reason": "No event/team match"
     },
     {
-      "league": "Primera Nacional",
-      "home": "Deportivo Moron",
-      "away": "Ferro Carril Oeste",
+      "league": "Liga Profesional Argentina",
+      "home": "Deportivo Riestra",
+      "away": "Boca Juniors",
       "reason": "No event/team match"
     },
     {
-      "league": "Primera Nacional",
-      "home": "Los Andes",
-      "away": "Deportivo Madryn",
+      "league": "Liga Profesional Argentina",
+      "home": "Banfield",
+      "away": "Sarmiento Junin",
       "reason": "No event/team match"
     },
     {
-      "league": "Primera Nacional",
-      "home": "Colon Santa Fe",
-      "away": "Chaco For Ever",
+      "league": "Liga Profesional Argentina",
+      "home": "San Lorenzo",
+      "away": "Gimnasia M.",
       "reason": "No event/team match"
     },
     {
-      "league": "Primera Nacional",
-      "home": "San Miguel",
-      "away": "Acassuso",
+      "league": "Liga Profesional Argentina",
+      "home": "Argentinos JRS",
+      "away": "Estudiantes de Rio Cuarto",
       "reason": "No event/team match"
     },
     {
-      "league": "Primera Nacional",
-      "home": "Atletico Mitre",
-      "away": "Almirante Brown",
+      "league": "Liga Profesional Argentina",
+      "home": "Rosario Central",
+      "away": "Racing Club",
       "reason": "No event/team match"
     },
     {
-      "league": "Primera Nacional",
-      "home": "Gimnasia Jujuy",
-      "away": "Club Atlético Güemes",
+      "league": "Liga Profesional Argentina",
+      "home": "Barracas Central",
+      "away": "Aldosivi",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Liga Profesional Argentina",
+      "home": "Defensa Y Justicia",
+      "away": "Deportivo Riestra",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Liga Profesional Argentina",
+      "home": "Gimnasia L.P.",
+      "away": "River Plate",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Liga Profesional Argentina",
+      "home": "Instituto Cordoba",
+      "away": "Platense",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Liga Profesional Argentina",
+      "home": "Independ. Rivadavia",
+      "away": "Huracan",
       "reason": "No event/team match"
     }
   ],
@@ -3734,5 +3788,5 @@
   },
   "skipped": false,
   "skipReason": null,
-  "completedAt": "2026-07-26T00:25:18.276Z"
+  "completedAt": "2026-07-26T00:36:00.062Z"
 }
