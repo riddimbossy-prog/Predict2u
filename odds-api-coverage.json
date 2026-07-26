@@ -1,6 +1,6 @@
 {
   "version": "v251",
-  "generatedAt": "2026-07-26T19:47:14.014Z",
+  "generatedAt": "2026-07-26T19:59:21.419Z",
   "provider": "The Odds API v4",
   "keyPresent": true,
   "regions": "uk",
@@ -48,44 +48,12 @@
       "matches": 28
     },
     {
-      "league": "Premier League",
-      "country": "Russia",
-      "sportKey": "soccer_epl",
-      "sportTitle": "EPL",
-      "score": 0.987,
-      "matches": 7
-    },
-    {
-      "league": "Primera B",
-      "country": "Chile",
-      "sportKey": "soccer_chile_campeonato",
-      "sportTitle": "Primera División - Chile",
-      "score": 0.466,
-      "matches": 8
-    },
-    {
       "league": "Torneo Promocional Amateur",
       "country": "Argentina",
       "sportKey": "soccer_argentina_primera_division",
       "sportTitle": "Primera División - Argentina",
       "score": 0.305,
       "matches": 6
-    },
-    {
-      "league": "I Liga",
-      "country": "Poland",
-      "sportKey": "soccer_poland_ekstraklasa",
-      "sportTitle": "Ekstraklasa - Poland",
-      "score": 0.347,
-      "matches": 7
-    },
-    {
-      "league": "II Liga - East",
-      "country": "Poland",
-      "sportKey": "soccer_poland_ekstraklasa",
-      "sportTitle": "Ekstraklasa - Poland",
-      "score": 0.323,
-      "matches": 8
     },
     {
       "league": "Carioca C",
@@ -328,14 +296,6 @@
       "matches": 7
     },
     {
-      "league": "USL League Two",
-      "country": "USA",
-      "sportKey": "soccer_usa_mls",
-      "sportTitle": "MLS",
-      "score": 0.466,
-      "matches": 2
-    },
-    {
       "league": "Second League - Group 4",
       "country": "Russia",
       "sportKey": "soccer_russia_premier_league",
@@ -462,6 +422,14 @@
       "sportTitle": "Denmark Superliga",
       "score": 1,
       "matches": 2
+    },
+    {
+      "league": "I Liga",
+      "country": "Poland",
+      "sportKey": "soccer_poland_ekstraklasa",
+      "sportTitle": "Ekstraklasa - Poland",
+      "score": 0.347,
+      "matches": 6
     },
     {
       "league": "First League",
@@ -750,6 +718,14 @@
       "sportTitle": "Denmark Superliga",
       "score": 0.347,
       "matches": 5
+    },
+    {
+      "league": "II Liga - East",
+      "country": "Poland",
+      "sportKey": "soccer_poland_ekstraklasa",
+      "sportTitle": "Ekstraklasa - Poland",
+      "score": 0.323,
+      "matches": 7
     },
     {
       "league": "III Liga - Group 3",
@@ -1264,7 +1240,7 @@
       "matches": 2
     }
   ],
-  "matchesConsidered": 1829,
+  "matchesConsidered": 1826,
   "matchesMatched": 0,
   "matchesUpdated": 0,
   "fieldsFilled": 0,
@@ -1314,12 +1290,6 @@
       "country": "World",
       "reason": "No matching soccer sport key",
       "bestScore": 0.1
-    },
-    {
-      "league": "Liga I",
-      "country": "Romania",
-      "reason": "No matching soccer sport key",
-      "bestScore": 0.143
     },
     {
       "league": "CONCACAF Caribbean Club Shield",
@@ -1474,6 +1444,12 @@
     {
       "league": "2. liga",
       "country": "Slovakia",
+      "reason": "No matching soccer sport key",
+      "bestScore": 0.143
+    },
+    {
+      "league": "Liga I",
+      "country": "Romania",
       "reason": "No matching soccer sport key",
       "bestScore": 0.143
     },
@@ -1931,48 +1907,6 @@
       "league": "Premier Soccer League",
       "home": "Dynamos",
       "away": "Scotland Mabvuku",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Premier League",
-      "home": "FC Orenburg",
-      "away": "FC Rostov",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Premier League",
-      "home": "Rubin",
-      "away": "FC Krasnodar",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Premier League",
-      "home": "Rodina Moskva",
-      "away": "FC Rostov",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Premier League",
-      "home": "Akron",
-      "away": "Rubin",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Premier League",
-      "home": "CSKA Moscow",
-      "away": "Krylia Sovetov",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Premier League",
-      "home": "Dinamo Makhachkala",
-      "away": "Lokomotiv",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Premier League",
-      "home": "Baltika",
-      "away": "Dynamo",
       "reason": "No event/team match"
     },
     {
@@ -2667,14 +2601,14 @@
     },
     {
       "league": "Primera Nacional",
-      "home": "Los Andes",
-      "away": "Deportivo Madryn",
+      "home": "Deportivo Moron",
+      "away": "Ferro Carril Oeste",
       "reason": "No event/team match"
     },
     {
       "league": "Primera Nacional",
-      "home": "Deportivo Moron",
-      "away": "Ferro Carril Oeste",
+      "home": "Los Andes",
+      "away": "Deportivo Madryn",
       "reason": "No event/team match"
     },
     {
@@ -2878,6 +2812,18 @@
       "market": "double_chance"
     },
     {
+      "sportKey": "soccer_brazil_campeonato",
+      "market": "btts"
+    },
+    {
+      "sportKey": "soccer_brazil_campeonato",
+      "market": "draw_no_bet"
+    },
+    {
+      "sportKey": "soccer_brazil_campeonato",
+      "market": "double_chance"
+    },
+    {
       "sportKey": "soccer_poland_ekstraklasa",
       "market": "btts"
     },
@@ -2890,15 +2836,15 @@
       "market": "double_chance"
     },
     {
-      "sportKey": "soccer_brazil_campeonato",
+      "sportKey": "soccer_chile_campeonato",
       "market": "btts"
     },
     {
-      "sportKey": "soccer_usa_mls",
+      "sportKey": "soccer_chile_campeonato",
       "market": "draw_no_bet"
     },
     {
-      "sportKey": "soccer_usa_mls",
+      "sportKey": "soccer_chile_campeonato",
       "market": "double_chance"
     },
     {
@@ -3293,6 +3239,31 @@
       "statusCode": 422
     },
     {
+      "label": "soccer_brazil_campeonato:base-combined",
+      "error": "Markets not supported by this endpoint: btts, double_chance, draw_no_bet",
+      "statusCode": 422
+    },
+    {
+      "label": "soccer_brazil_campeonato:base-core",
+      "error": "Invalid commenceTimeFrom parameter. The format must be YYYY-MM-DDTHH:MM:SSZ, for example 2020-11-24T16:05:00Z",
+      "statusCode": 422
+    },
+    {
+      "label": "soccer_brazil_campeonato:btts",
+      "error": "Markets not supported by this endpoint: btts",
+      "statusCode": 422
+    },
+    {
+      "label": "soccer_brazil_campeonato:draw_no_bet",
+      "error": "Markets not supported by this endpoint: draw_no_bet",
+      "statusCode": 422
+    },
+    {
+      "label": "soccer_brazil_campeonato:double_chance",
+      "error": "Markets not supported by this endpoint: double_chance",
+      "statusCode": 422
+    },
+    {
       "label": "soccer_poland_ekstraklasa:base-combined",
       "error": "Markets not supported by this endpoint: btts, double_chance, draw_no_bet",
       "statusCode": 422
@@ -3318,27 +3289,27 @@
       "statusCode": 422
     },
     {
-      "label": "soccer_brazil_campeonato:base-combined",
+      "label": "soccer_chile_campeonato:base-combined",
       "error": "Markets not supported by this endpoint: btts, double_chance, draw_no_bet",
       "statusCode": 422
     },
     {
-      "label": "soccer_usa_mls:base-core",
+      "label": "soccer_chile_campeonato:base-core",
       "error": "Invalid commenceTimeFrom parameter. The format must be YYYY-MM-DDTHH:MM:SSZ, for example 2020-11-24T16:05:00Z",
       "statusCode": 422
     },
     {
-      "label": "soccer_usa_mls:btts",
+      "label": "soccer_chile_campeonato:btts",
       "error": "Markets not supported by this endpoint: btts",
       "statusCode": 422
     },
     {
-      "label": "soccer_usa_mls:draw_no_bet",
+      "label": "soccer_chile_campeonato:draw_no_bet",
       "error": "Markets not supported by this endpoint: draw_no_bet",
       "statusCode": 422
     },
     {
-      "label": "soccer_usa_mls:double_chance",
+      "label": "soccer_chile_campeonato:double_chance",
       "error": "Markets not supported by this endpoint: double_chance",
       "statusCode": 422
     },
@@ -3900,5 +3871,5 @@
   },
   "skipped": false,
   "skipReason": null,
-  "completedAt": "2026-07-26T19:47:33.743Z"
+  "completedAt": "2026-07-26T19:59:41.835Z"
 }
