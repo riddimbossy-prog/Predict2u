@@ -1,6 +1,6 @@
 {
   "version": "v251",
-  "generatedAt": "2026-07-26T06:10:22.210Z",
+  "generatedAt": "2026-07-26T06:08:40.783Z",
   "provider": "The Odds API v4",
   "keyPresent": true,
   "regions": "uk",
@@ -70,6 +70,14 @@
       "sportTitle": "MLS",
       "score": 0.323,
       "matches": 8
+    },
+    {
+      "league": "Liga MX",
+      "country": "Mexico",
+      "sportKey": "soccer_mexico_ligamx",
+      "sportTitle": "Liga MX",
+      "score": 1,
+      "matches": 7
     },
     {
       "league": "League Two",
@@ -662,14 +670,6 @@
       "sportTitle": "La Liga - Spain",
       "score": 0.429,
       "matches": 9
-    },
-    {
-      "league": "Liga MX",
-      "country": "Mexico",
-      "sportKey": "soccer_mexico_ligamx",
-      "sportTitle": "Liga MX",
-      "score": 1,
-      "matches": 6
     },
     {
       "league": "Liga de Expansión MX",
@@ -1296,7 +1296,7 @@
       "matches": 2
     }
   ],
-  "matchesConsidered": 2088,
+  "matchesConsidered": 2090,
   "matchesMatched": 0,
   "matchesUpdated": 0,
   "fieldsFilled": 0,
@@ -2237,12 +2237,6 @@
     },
     {
       "league": "Primera Nacional",
-      "home": "Quilmes",
-      "away": "Colegiales",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Primera Nacional",
       "home": "Racing Cordoba",
       "away": "San Telmo",
       "reason": "No event/team match"
@@ -2257,6 +2251,12 @@
       "league": "Primera Nacional",
       "home": "Gimnasia Y Tiro",
       "away": "Deportivo Maipu",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Primera Nacional",
+      "home": "Quilmes",
+      "away": "Colegiales",
       "reason": "No event/team match"
     },
     {
@@ -3024,18 +3024,6 @@
       "market": "double_chance"
     },
     {
-      "sportKey": "soccer_mexico_ligamx",
-      "market": "btts"
-    },
-    {
-      "sportKey": "soccer_mexico_ligamx",
-      "market": "draw_no_bet"
-    },
-    {
-      "sportKey": "soccer_mexico_ligamx",
-      "market": "double_chance"
-    },
-    {
       "sportKey": "soccer_spain_la_liga",
       "market": "btts"
     },
@@ -3620,31 +3608,6 @@
       "statusCode": 422
     },
     {
-      "label": "soccer_mexico_ligamx:base-combined",
-      "error": "Markets not supported by this endpoint: btts, double_chance, draw_no_bet",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_mexico_ligamx:base-core",
-      "error": "Invalid commenceTimeFrom parameter. The format must be YYYY-MM-DDTHH:MM:SSZ, for example 2020-11-24T16:05:00Z",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_mexico_ligamx:btts",
-      "error": "Markets not supported by this endpoint: btts",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_mexico_ligamx:draw_no_bet",
-      "error": "Markets not supported by this endpoint: draw_no_bet",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_mexico_ligamx:double_chance",
-      "error": "Markets not supported by this endpoint: double_chance",
-      "statusCode": 422
-    },
-    {
       "label": "soccer_spain_la_liga:base-combined",
       "error": "Markets not supported by this endpoint: btts, double_chance, draw_no_bet",
       "statusCode": 422
@@ -3927,5 +3890,5 @@
   },
   "skipped": false,
   "skipReason": null,
-  "completedAt": "2026-07-26T06:10:42.062Z"
+  "completedAt": "2026-07-26T06:09:09.340Z"
 }
