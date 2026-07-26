@@ -1,9 +1,9 @@
 {
   "version": "v194",
-  "updated": "2026-07-26T06:16:21.959Z",
+  "updated": "2026-07-26T07:22:58.789Z",
   "summary": {
-    "settled": 776,
-    "winRate": 0.8015,
+    "settled": 777,
+    "winRate": 0.8018,
     "engines": 12,
     "approved": 1,
     "shadow": 10,
@@ -45,7 +45,7 @@
         "distributionShift": 0.429,
         "status": "STABLE"
       },
-      "updated": "2026-07-26T06:16:21.956Z"
+      "updated": "2026-07-26T07:22:58.787Z"
     },
     "Prime": {
       "engine": "Prime",
@@ -78,7 +78,7 @@
         "distributionShift": 0.293,
         "status": "STABLE"
       },
-      "updated": "2026-07-26T06:16:21.957Z"
+      "updated": "2026-07-26T07:22:58.787Z"
     },
     "Value": {
       "engine": "Value",
@@ -111,7 +111,7 @@
         "distributionShift": 0.8,
         "status": "STABLE"
       },
-      "updated": "2026-07-26T06:16:21.957Z"
+      "updated": "2026-07-26T07:22:58.787Z"
     },
     "Pro": {
       "engine": "Pro",
@@ -144,7 +144,7 @@
         "distributionShift": 0.8,
         "status": "STABLE"
       },
-      "updated": "2026-07-26T06:16:21.957Z"
+      "updated": "2026-07-26T07:22:58.787Z"
     },
     "Ultra": {
       "engine": "Ultra",
@@ -177,7 +177,7 @@
         "distributionShift": 0.5,
         "status": "STABLE"
       },
-      "updated": "2026-07-26T06:16:21.957Z"
+      "updated": "2026-07-26T07:22:58.787Z"
     },
     "Elite": {
       "engine": "Elite",
@@ -210,7 +210,7 @@
         "distributionShift": 0.5,
         "status": "STABLE"
       },
-      "updated": "2026-07-26T06:16:21.957Z"
+      "updated": "2026-07-26T07:22:58.787Z"
     },
     "Apex": {
       "engine": "Apex",
@@ -243,17 +243,17 @@
         "distributionShift": 0.5,
         "status": "STABLE"
       },
-      "updated": "2026-07-26T06:16:21.957Z"
+      "updated": "2026-07-26T07:22:58.787Z"
     },
     "Halves": {
       "engine": "Halves",
       "state": "APPROVED",
       "reason": "Forward validation, calibration and drift checks passed.",
       "train": {
-        "sample": 150,
-        "wins": 128,
+        "sample": 151,
+        "wins": 129,
         "losses": 22,
-        "rate": 0.8533
+        "rate": 0.8543
       },
       "validation": {
         "sample": 65,
@@ -261,8 +261,8 @@
         "losses": 11,
         "rate": 0.8308
       },
-      "validationDelta": -0.0225,
-      "calibrationError": 0.0828,
+      "validationDelta": -0.0235,
+      "calibrationError": 0.0797,
       "shadow": {
         "eligible": 0,
         "avoidedLosses": 0,
@@ -272,11 +272,11 @@
       "drift": {
         "recentSample": 30,
         "priorSample": 30,
-        "confidenceShift": -0.76,
+        "confidenceShift": -0.81,
         "distributionShift": 0,
         "status": "STABLE"
       },
-      "updated": "2026-07-26T06:16:21.957Z"
+      "updated": "2026-07-26T07:22:58.787Z"
     },
     "Streaks": {
       "engine": "Streaks",
@@ -309,7 +309,7 @@
         "distributionShift": 0.5,
         "status": "STABLE"
       },
-      "updated": "2026-07-26T06:16:21.957Z"
+      "updated": "2026-07-26T07:22:58.787Z"
     },
     "Trend": {
       "engine": "Trend",
@@ -342,7 +342,7 @@
         "distributionShift": 0.4,
         "status": "DRIFT"
       },
-      "updated": "2026-07-26T06:16:21.957Z"
+      "updated": "2026-07-26T07:22:58.787Z"
     },
     "League Bias": {
       "engine": "League Bias",
@@ -375,7 +375,7 @@
         "distributionShift": 0.167,
         "status": "STABLE"
       },
-      "updated": "2026-07-26T06:16:21.957Z"
+      "updated": "2026-07-26T07:22:58.788Z"
     },
     "Strict": {
       "engine": "Strict",
@@ -408,17 +408,17 @@
         "distributionShift": 0.5,
         "status": "STABLE"
       },
-      "updated": "2026-07-26T06:16:21.957Z"
+      "updated": "2026-07-26T07:22:58.788Z"
     }
   },
   "marketScorecards": [
     {
       "marketFamily": "OTHER",
-      "sample": 214,
-      "wins": 181,
+      "sample": 215,
+      "wins": 182,
       "losses": 33,
-      "rate": 0.8458,
-      "calibrationError": 0.0502
+      "rate": 0.8465,
+      "calibrationError": 0.0494
     },
     {
       "marketFamily": "HOME_TEAM",
@@ -823,14 +823,14 @@
       "rate": 0.75
     },
     {
-      "league": "Tasmania NPL",
+      "league": "NNSW League 1",
       "sample": 4,
-      "wins": 3,
-      "losses": 1,
-      "rate": 0.75
+      "wins": 4,
+      "losses": 0,
+      "rate": 1
     },
     {
-      "league": "Queensland NPL",
+      "league": "Tasmania NPL",
       "sample": 4,
       "wins": 3,
       "losses": 1,
