@@ -1,6 +1,6 @@
 {
   "version": "v251",
-  "generatedAt": "2026-07-26T17:02:11.791Z",
+  "generatedAt": "2026-07-26T17:14:24.408Z",
   "provider": "The Odds API v4",
   "keyPresent": true,
   "regions": "uk",
@@ -53,15 +53,7 @@
       "sportKey": "soccer_norway_eliteserien",
       "sportTitle": "Eliteserien - Norway",
       "score": 0.347,
-      "matches": 7
-    },
-    {
-      "league": "Superettan",
-      "country": "Sweden",
-      "sportKey": "soccer_sweden_superettan",
-      "sportTitle": "Superettan - Sweden",
-      "score": 1,
-      "matches": 11
+      "matches": 6
     },
     {
       "league": "Super League",
@@ -141,7 +133,7 @@
       "sportKey": "soccer_england_efl_cup",
       "sportTitle": "EFL Cup",
       "score": 0.463,
-      "matches": 38
+      "matches": 36
     },
     {
       "league": "Liga MX U21",
@@ -502,6 +494,14 @@
       "sportTitle": "Eliteserien - Norway",
       "score": 0.305,
       "matches": 7
+    },
+    {
+      "league": "Superettan",
+      "country": "Sweden",
+      "sportKey": "soccer_sweden_superettan",
+      "sportTitle": "Superettan - Sweden",
+      "score": 1,
+      "matches": 10
     },
     {
       "league": "Svenska Cupen",
@@ -1240,7 +1240,7 @@
       "matches": 2
     }
   ],
-  "matchesConsidered": 1909,
+  "matchesConsidered": 1905,
   "matchesMatched": 0,
   "matchesUpdated": 0,
   "fieldsFilled": 0,
@@ -2812,18 +2812,6 @@
       "market": "double_chance"
     },
     {
-      "sportKey": "soccer_sweden_superettan",
-      "market": "btts"
-    },
-    {
-      "sportKey": "soccer_sweden_superettan",
-      "market": "draw_no_bet"
-    },
-    {
-      "sportKey": "soccer_sweden_superettan",
-      "market": "double_chance"
-    },
-    {
       "sportKey": "soccer_greece_super_league",
       "market": "btts"
     },
@@ -2965,6 +2953,18 @@
     },
     {
       "sportKey": "soccer_sweden_allsvenskan",
+      "market": "double_chance"
+    },
+    {
+      "sportKey": "soccer_sweden_superettan",
+      "market": "btts"
+    },
+    {
+      "sportKey": "soccer_sweden_superettan",
+      "market": "draw_no_bet"
+    },
+    {
+      "sportKey": "soccer_sweden_superettan",
       "market": "double_chance"
     },
     {
@@ -3235,31 +3235,6 @@
     },
     {
       "label": "soccer_norway_eliteserien:double_chance",
-      "error": "Markets not supported by this endpoint: double_chance",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_sweden_superettan:base-combined",
-      "error": "Markets not supported by this endpoint: btts, double_chance, draw_no_bet",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_sweden_superettan:base-core",
-      "error": "Invalid commenceTimeFrom parameter. The format must be YYYY-MM-DDTHH:MM:SSZ, for example 2020-11-24T16:05:00Z",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_sweden_superettan:btts",
-      "error": "Markets not supported by this endpoint: btts",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_sweden_superettan:draw_no_bet",
-      "error": "Markets not supported by this endpoint: draw_no_bet",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_sweden_superettan:double_chance",
       "error": "Markets not supported by this endpoint: double_chance",
       "statusCode": 422
     },
@@ -3560,6 +3535,31 @@
     },
     {
       "label": "soccer_sweden_allsvenskan:double_chance",
+      "error": "Markets not supported by this endpoint: double_chance",
+      "statusCode": 422
+    },
+    {
+      "label": "soccer_sweden_superettan:base-combined",
+      "error": "Markets not supported by this endpoint: btts, double_chance, draw_no_bet",
+      "statusCode": 422
+    },
+    {
+      "label": "soccer_sweden_superettan:base-core",
+      "error": "Invalid commenceTimeFrom parameter. The format must be YYYY-MM-DDTHH:MM:SSZ, for example 2020-11-24T16:05:00Z",
+      "statusCode": 422
+    },
+    {
+      "label": "soccer_sweden_superettan:btts",
+      "error": "Markets not supported by this endpoint: btts",
+      "statusCode": 422
+    },
+    {
+      "label": "soccer_sweden_superettan:draw_no_bet",
+      "error": "Markets not supported by this endpoint: draw_no_bet",
+      "statusCode": 422
+    },
+    {
+      "label": "soccer_sweden_superettan:double_chance",
       "error": "Markets not supported by this endpoint: double_chance",
       "statusCode": 422
     },
@@ -3871,5 +3871,5 @@
   },
   "skipped": false,
   "skipReason": null,
-  "completedAt": "2026-07-26T17:02:30.718Z"
+  "completedAt": "2026-07-26T17:14:30.859Z"
 }
