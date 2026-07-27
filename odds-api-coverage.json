@@ -1,6 +1,6 @@
 {
   "version": "v251",
-  "generatedAt": "2026-07-27T09:05:26.547Z",
+  "generatedAt": "2026-07-27T09:17:36.836Z",
   "provider": "The Odds API v4",
   "keyPresent": true,
   "regions": "uk",
@@ -904,6 +904,14 @@
       "matches": 8
     },
     {
+      "league": "Liga MX Femenil",
+      "country": "Mexico",
+      "sportKey": "soccer_mexico_ligamx",
+      "sportTitle": "Liga MX",
+      "score": 0.68,
+      "matches": 7
+    },
+    {
       "league": "League One",
       "country": "China",
       "sportKey": "soccer_china_superleague",
@@ -1216,6 +1224,14 @@
       "matches": 1
     },
     {
+      "league": "USL League Two",
+      "country": "USA",
+      "sportKey": "soccer_usa_mls",
+      "sportTitle": "MLS",
+      "score": 0.466,
+      "matches": 1
+    },
+    {
       "league": "Second League A - Division A Gold",
       "country": "Russia",
       "sportKey": "soccer_russia_premier_league",
@@ -1256,7 +1272,7 @@
       "matches": 1
     }
   ],
-  "matchesConsidered": 2105,
+  "matchesConsidered": 2133,
   "matchesMatched": 0,
   "matchesUpdated": 0,
   "fieldsFilled": 0,
@@ -1492,6 +1508,12 @@
       "country": "Iceland",
       "reason": "No matching soccer sport key",
       "bestScore": 0.125
+    },
+    {
+      "league": "Segunda División",
+      "country": "Venezuela",
+      "reason": "No matching soccer sport key",
+      "bestScore": 0.143
     },
     {
       "league": "Copa Ecuador",
@@ -1730,6 +1752,12 @@
     {
       "league": "Esiliiga B",
       "country": "Estonia",
+      "reason": "No matching soccer sport key",
+      "bestScore": 0.143
+    },
+    {
+      "league": "Third League - Southwest",
+      "country": "Bulgaria",
       "reason": "No matching soccer sport key",
       "bestScore": 0.143
     },
@@ -2751,18 +2779,6 @@
       "league": "Youth Championship",
       "home": "Fakel U19",
       "away": "Dynamo Makhachkala U19",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Youth Championship",
-      "home": "Spartak Moskva U19",
-      "away": "Dinamo Moskva U19",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Youth Championship",
-      "home": "Zenit U19",
-      "away": "Rodina Moscow U19",
       "reason": "No event/team match"
     }
   ],
@@ -3998,5 +4014,5 @@
   },
   "skipped": false,
   "skipReason": null,
-  "completedAt": "2026-07-27T09:05:38.335Z"
+  "completedAt": "2026-07-27T09:17:43.353Z"
 }

@@ -1,7 +1,7 @@
 {
   "version": "v193",
   "schemaVersion": 1,
-  "updated": "2026-07-27T08:12:39.997Z",
+  "updated": "2026-07-27T09:25:02.365Z",
   "minimumSamples": {
     "teamFavorite": 5,
     "teamUnderdog": 5,
@@ -12,10 +12,10 @@
   },
   "decayHalfLifeDays": 120,
   "summary": {
-    "settledFixtures": 454,
-    "settledDecisions": 805,
+    "settledFixtures": 455,
+    "settledDecisions": 806,
     "reviewedLosses": 150,
-    "attachedUpcoming": 2494,
+    "attachedUpcoming": 2520,
     "highRiskUpcoming": 0,
     "stableUpcoming": 0
   },
@@ -769,7 +769,7 @@
           "mid": 0,
           "upper": 0.7935
         },
-        "decayedWeight": 0.92
+        "decayedWeight": 0.91
       },
       "underdog": {
         "sample": 0,
@@ -812,7 +812,7 @@
             "mid": 0,
             "upper": 0.7935
           },
-          "decayedWeight": 0.92
+          "decayedWeight": 0.91
         }
       },
       "underdogUpsets": 0,
@@ -864,7 +864,7 @@
           "mid": 0,
           "upper": 0.7935
         },
-        "decayedWeight": 0.92
+        "decayedWeight": 0.91
       },
       "favoriteBands": {},
       "underdogUpsets": 0,
@@ -2862,25 +2862,25 @@
         "decayedWeight": 0
       },
       "underdog": {
-        "sample": 1,
+        "sample": 2,
         "wins": 0,
-        "draws": 0,
+        "draws": 1,
         "losses": 1,
         "winRate": 0,
-        "drawRate": 0,
-        "nonLossRate": 0,
-        "upsetRate": 1,
+        "drawRate": 0.5159,
+        "nonLossRate": 0.5159,
+        "upsetRate": 0.4841,
         "nonLossWilson": {
-          "lower": 0,
-          "mid": 0,
-          "upper": 0.7935
+          "lower": 0.0945,
+          "mid": 0.5,
+          "upper": 0.9055
         },
         "winWilson": {
           "lower": 0,
           "mid": 0,
-          "upper": 0.7935
+          "upper": 0.6576
         },
-        "decayedWeight": 0.93
+        "decayedWeight": 1.91
       },
       "favoriteBands": {},
       "underdogUpsets": 0,
@@ -18208,6 +18208,80 @@
       "patternStability": 100,
       "favoriteReliability": 0
     },
+    "131|sportivo italiano": {
+      "name": "Sportivo Italiano",
+      "league": "Primera B Metropolitana",
+      "leagueId": 131,
+      "favorite": {
+        "sample": 1,
+        "wins": 0,
+        "draws": 1,
+        "losses": 0,
+        "winRate": 0,
+        "drawRate": 1,
+        "nonLossRate": 1,
+        "upsetRate": 0,
+        "nonLossWilson": {
+          "lower": 0.2065,
+          "mid": 1,
+          "upper": 1
+        },
+        "winWilson": {
+          "lower": 0,
+          "mid": 0,
+          "upper": 0.7935
+        },
+        "decayedWeight": 0.99
+      },
+      "underdog": {
+        "sample": 0,
+        "wins": 0,
+        "draws": 0,
+        "losses": 0,
+        "winRate": null,
+        "drawRate": null,
+        "nonLossRate": 0,
+        "upsetRate": null,
+        "nonLossWilson": {
+          "lower": null,
+          "mid": null,
+          "upper": null
+        },
+        "winWilson": {
+          "lower": null,
+          "mid": null,
+          "upper": null
+        },
+        "decayedWeight": 0
+      },
+      "favoriteBands": {
+        "1.61-1.85": {
+          "sample": 1,
+          "wins": 0,
+          "draws": 1,
+          "losses": 0,
+          "winRate": 0,
+          "drawRate": 1,
+          "nonLossRate": 1,
+          "upsetRate": 0,
+          "nonLossWilson": {
+            "lower": 0.2065,
+            "mid": 1,
+            "upper": 1
+          },
+          "winWilson": {
+            "lower": 0,
+            "mid": 0,
+            "upper": 0.7935
+          },
+          "decayedWeight": 0.99
+        }
+      },
+      "underdogUpsets": 0,
+      "flags": [],
+      "patternStability": 70,
+      "favoriteReliability": 100
+    },
     "74|rb bragantino w": {
       "name": "RB Bragantino W",
       "league": "Brasileiro Women",
@@ -20249,25 +20323,25 @@
       "league": "Primera B Metropolitana",
       "leagueId": 131,
       "favorite": {
-        "sample": 6,
+        "sample": 7,
         "wins": 3,
-        "draws": 2,
+        "draws": 3,
         "losses": 1,
-        "winRate": 0.5,
-        "drawRate": 0.3333,
-        "nonLossRate": 0.8333,
-        "upsetRate": 0.1667,
+        "winRate": 0.4246,
+        "drawRate": 0.4339,
+        "nonLossRate": 0.8585,
+        "upsetRate": 0.1415,
         "nonLossWilson": {
-          "lower": 0.4365,
-          "mid": 0.8333,
-          "upper": 0.9699
+          "lower": 0.4869,
+          "mid": 0.8571,
+          "upper": 0.9743
         },
         "winWilson": {
-          "lower": 0.1876,
-          "mid": 0.5,
-          "upper": 0.8124
+          "lower": 0.1582,
+          "mid": 0.4286,
+          "upper": 0.7495
         },
-        "decayedWeight": 5.55
+        "decayedWeight": 6.54
       },
       "bands": {
         "1.86-2.25": {
@@ -20290,6 +20364,27 @@
             "upper": 0.8124
           },
           "decayedWeight": 5.55
+        },
+        "1.61-1.85": {
+          "sample": 1,
+          "wins": 0,
+          "draws": 1,
+          "losses": 0,
+          "winRate": 0,
+          "drawRate": 1,
+          "nonLossRate": 1,
+          "upsetRate": 0,
+          "nonLossWilson": {
+            "lower": 0.2065,
+            "mid": 1,
+            "upper": 1
+          },
+          "winWilson": {
+            "lower": 0,
+            "mid": 0,
+            "upper": 0.7935
+          },
+          "decayedWeight": 0.99
         }
       },
       "homeFavorites": {
@@ -20314,28 +20409,28 @@
         "decayedWeight": 2.78
       },
       "awayFavorites": {
-        "sample": 3,
+        "sample": 4,
         "wins": 2,
-        "draws": 0,
+        "draws": 1,
         "losses": 1,
-        "winRate": 0.6667,
-        "drawRate": 0,
-        "nonLossRate": 0.6667,
-        "upsetRate": 0.3333,
+        "winRate": 0.4919,
+        "drawRate": 0.2621,
+        "nonLossRate": 0.754,
+        "upsetRate": 0.246,
         "nonLossWilson": {
-          "lower": 0.2077,
-          "mid": 0.6667,
-          "upper": 0.9385
+          "lower": 0.3006,
+          "mid": 0.75,
+          "upper": 0.9544
         },
         "winWilson": {
-          "lower": 0.2077,
-          "mid": 0.6667,
-          "upper": 0.9385
+          "lower": 0.15,
+          "mid": 0.5,
+          "upper": 0.85
         },
-        "decayedWeight": 2.78
+        "decayedWeight": 3.76
       },
       "flags": [],
-      "stabilityScore": 79.2
+      "stabilityScore": 78.5
     },
     "165": {
       "league": "1. Deild",
@@ -20564,7 +20659,7 @@
           "mid": 0.75,
           "upper": 0.9544
         },
-        "decayedWeight": 3.89
+        "decayedWeight": 3.88
       },
       "bands": {
         "1.36-1.60": {
@@ -20629,7 +20724,7 @@
           "mid": 0.75,
           "upper": 0.9544
         },
-        "decayedWeight": 3.89
+        "decayedWeight": 3.88
       },
       "awayFavorites": {
         "sample": 0,
@@ -23815,7 +23910,7 @@
           "mid": 0.5,
           "upper": 0.8124
         },
-        "decayedWeight": 5.93
+        "decayedWeight": 5.92
       },
       "bands": {
         "1.61-1.85": {
@@ -23837,7 +23932,7 @@
             "mid": 0.6667,
             "upper": 0.9385
           },
-          "decayedWeight": 2.97
+          "decayedWeight": 2.96
         },
         "1.01-1.35": {
           "sample": 1,
@@ -26862,7 +26957,7 @@
           "mid": 0,
           "upper": 0.7935
         },
-        "decayedWeight": 0.92
+        "decayedWeight": 0.91
       },
       "flags": []
     },
@@ -30758,6 +30853,34 @@
       },
       "flags": []
     },
+    "131|ituzaing|sportivo italiano": {
+      "home": "Ituzaingó",
+      "away": "Sportivo Italiano",
+      "league": "Primera B Metropolitana",
+      "leagueId": 131,
+      "favorite": {
+        "sample": 1,
+        "wins": 0,
+        "draws": 1,
+        "losses": 0,
+        "winRate": 0,
+        "drawRate": 1,
+        "nonLossRate": 1,
+        "upsetRate": 0,
+        "nonLossWilson": {
+          "lower": 0.2065,
+          "mid": 1,
+          "upper": 1
+        },
+        "winWilson": {
+          "lower": 0,
+          "mid": 0,
+          "upper": 0.7935
+        },
+        "decayedWeight": 0.99
+      },
+      "flags": []
+    },
     "74|rb bragantino w|atl tico mineiro w": {
       "home": "RB Bragantino W",
       "away": "Atlético Mineiro W",
@@ -31115,7 +31238,7 @@
         "mid": 0.4182,
         "upper": 0.5497
       },
-      "decayedWeight": 53.3
+      "decayedWeight": 53.28
     },
     "1.01-1.35": {
       "sample": 26,
@@ -31136,7 +31259,7 @@
         "mid": 0.8077,
         "upper": 0.9149
       },
-      "decayedWeight": 25.14
+      "decayedWeight": 25.13
     },
     "1.36-1.60": {
       "sample": 35,
@@ -31157,28 +31280,28 @@
         "mid": 0.5429,
         "upper": 0.6953
       },
-      "decayedWeight": 34.16
+      "decayedWeight": 34.15
     },
     "1.61-1.85": {
-      "sample": 42,
+      "sample": 43,
       "wins": 24,
-      "draws": 8,
+      "draws": 9,
       "losses": 10,
-      "winRate": 0.5724,
-      "drawRate": 0.1896,
-      "nonLossRate": 0.762,
-      "upsetRate": 0.238,
+      "winRate": 0.5589,
+      "drawRate": 0.2086,
+      "nonLossRate": 0.7675,
+      "upsetRate": 0.2324,
       "nonLossWilson": {
-        "lower": 0.6147,
-        "mid": 0.7619,
-        "upper": 0.8652
+        "lower": 0.6226,
+        "mid": 0.7674,
+        "upper": 0.8685
       },
       "winWilson": {
-        "lower": 0.4221,
-        "mid": 0.5714,
-        "upper": 0.7088
+        "lower": 0.4111,
+        "mid": 0.5581,
+        "upper": 0.6957
       },
-      "decayedWeight": 40.96
+      "decayedWeight": 41.93
     }
   },
   "contexts": {
@@ -36251,13 +36374,13 @@
       "hardVeto": false
     },
     "*|League Bias|Under 3.5 Goals|1.61-1.85|other": {
-      "sample": 3,
-      "wins": 3,
+      "sample": 4,
+      "wins": 4,
       "losses": 0,
       "winRate": 1,
       "lossRate": 0,
       "wilson": {
-        "lower": 0.4385,
+        "lower": 0.5101,
         "mid": 1,
         "upper": 1
       },
@@ -38752,6 +38875,20 @@
         "lower": 0,
         "mid": 0,
         "upper": 0.7935
+      },
+      "adjustment": 0,
+      "hardVeto": false
+    },
+    "primera b metropolitana|League Bias|Under 3.5 Goals|1.61-1.85|other": {
+      "sample": 1,
+      "wins": 1,
+      "losses": 0,
+      "winRate": 1,
+      "lossRate": 0,
+      "wilson": {
+        "lower": 0.2065,
+        "mid": 1,
+        "upper": 1
       },
       "adjustment": 0,
       "hardVeto": false
