@@ -1,6 +1,6 @@
 {
   "version": "v251",
-  "generatedAt": "2026-07-27T19:01:27.095Z",
+  "generatedAt": "2026-07-27T19:13:26.925Z",
   "provider": "The Odds API v4",
   "keyPresent": true,
   "regions": "uk",
@@ -30,22 +30,6 @@
       "sportTitle": "Eliteserien - Norway",
       "score": 1,
       "matches": 9
-    },
-    {
-      "league": "Damallsvenskan",
-      "country": "Sweden",
-      "sportKey": "soccer_sweden_allsvenskan",
-      "sportTitle": "Allsvenskan - Sweden",
-      "score": 0.38,
-      "matches": 7
-    },
-    {
-      "league": "1. Division",
-      "country": "Norway",
-      "sportKey": "soccer_norway_eliteserien",
-      "sportTitle": "Eliteserien - Norway",
-      "score": 0.347,
-      "matches": 8
     },
     {
       "league": "3. Division - Girone 1",
@@ -109,14 +93,6 @@
       "sportKey": "soccer_poland_ekstraklasa",
       "sportTitle": "Ekstraklasa - Poland",
       "score": 1,
-      "matches": 9
-    },
-    {
-      "league": "I Liga",
-      "country": "Poland",
-      "sportKey": "soccer_poland_ekstraklasa",
-      "sportTitle": "Ekstraklasa - Poland",
-      "score": 0.347,
       "matches": 9
     },
     {
@@ -560,6 +536,14 @@
       "matches": 4
     },
     {
+      "league": "Damallsvenskan",
+      "country": "Sweden",
+      "sportKey": "soccer_sweden_allsvenskan",
+      "sportTitle": "Allsvenskan - Sweden",
+      "score": 0.38,
+      "matches": 6
+    },
+    {
       "league": "Kakkonen - Lohko A",
       "country": "Finland",
       "sportKey": "soccer_finland_veikkausliiga",
@@ -574,6 +558,14 @@
       "sportTitle": "Denmark Superliga",
       "score": 0.347,
       "matches": 6
+    },
+    {
+      "league": "I Liga",
+      "country": "Poland",
+      "sportKey": "soccer_poland_ekstraklasa",
+      "sportTitle": "Ekstraklasa - Poland",
+      "score": 0.347,
+      "matches": 8
     },
     {
       "league": "II Liga - East",
@@ -1104,6 +1096,14 @@
       "matches": 5
     },
     {
+      "league": "1. Division",
+      "country": "Norway",
+      "sportKey": "soccer_norway_eliteserien",
+      "sportTitle": "Eliteserien - Norway",
+      "score": 0.347,
+      "matches": 7
+    },
+    {
       "league": "Super Cup",
       "country": "Portugal",
       "sportKey": "soccer_portugal_primeira_liga",
@@ -1272,7 +1272,7 @@
       "matches": 1
     }
   ],
-  "matchesConsidered": 2146,
+  "matchesConsidered": 2072,
   "matchesMatched": 0,
   "matchesUpdated": 0,
   "fieldsFilled": 0,
@@ -2332,9 +2332,39 @@
       "reason": "No event/team match"
     },
     {
-      "league": "Damallsvenskan",
-      "home": "Vittsjö W",
-      "away": "Malmö FF W",
+      "league": "Svenska Cupen",
+      "home": "IFK Skövde",
+      "away": "Jonkopings Sodra",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Division 2 - Södra Götaland",
+      "home": "Karlskrona",
+      "away": "Nosaby",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Division 2 - Södra Götaland",
+      "home": "Karlshamn",
+      "away": "Räppe",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Division 2 - Södra Götaland",
+      "home": "Linero",
+      "away": "Österlen",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Division 2 - Södra Götaland",
+      "home": "Berga",
+      "away": "IFK Trelleborg",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Division 2 - Södra Götaland",
+      "home": "Lilla Torg",
+      "away": "Oskarshamns AIK",
       "reason": "No event/team match"
     },
     {
@@ -2371,42 +2401,6 @@
       "league": "Damallsvenskan",
       "home": "Häcken W",
       "away": "Eskilstuna United W",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Svenska Cupen",
-      "home": "IFK Skövde",
-      "away": "Jonkopings Sodra",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Division 2 - Södra Götaland",
-      "home": "Karlskrona",
-      "away": "Nosaby",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Division 2 - Södra Götaland",
-      "home": "Karlshamn",
-      "away": "Räppe",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Division 2 - Södra Götaland",
-      "home": "Linero",
-      "away": "Österlen",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Division 2 - Södra Götaland",
-      "home": "Berga",
-      "away": "IFK Trelleborg",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Division 2 - Södra Götaland",
-      "home": "Lilla Torg",
-      "away": "Oskarshamns AIK",
       "reason": "No event/team match"
     },
     {
@@ -2770,15 +2764,57 @@
       "reason": "No event/team match"
     },
     {
-      "league": "1. Division",
-      "home": "Stabaek",
-      "away": "hodd",
+      "league": "3. Division - Girone 1",
+      "home": "Lokomotiv Oslo",
+      "away": "KFUM II",
       "reason": "No event/team match"
     },
     {
-      "league": "1. Division",
-      "home": "Bryne",
-      "away": "Stromsgodset",
+      "league": "3. Division - Girone 1",
+      "home": "IF Ready",
+      "away": "Frigg",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "3. Division - Girone 1",
+      "home": "Union Carl Berner",
+      "away": "Asker",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "3. Division - Girone 1",
+      "home": "Gamle Oslo",
+      "away": "Union Carl Berner",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "3. Division - Girone 1",
+      "home": "Frigg",
+      "away": "Ullern",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "3. Division - Girone 1",
+      "home": "Konnerud",
+      "away": "Nordstrand",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "3. Division - Girone 1",
+      "home": "Heming",
+      "away": "Bærum",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "3. Division - Girone 1",
+      "home": "Vålerenga II",
+      "away": "Lokomotiv Oslo",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "3. Division - Girone 1",
+      "home": "Asker",
+      "away": "IF Ready",
       "reason": "No event/team match"
     }
   ],
@@ -4014,5 +4050,5 @@
   },
   "skipped": false,
   "skipReason": null,
-  "completedAt": "2026-07-27T19:01:34.039Z"
+  "completedAt": "2026-07-27T19:13:40.405Z"
 }
