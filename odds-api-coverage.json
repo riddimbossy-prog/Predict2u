@@ -1,6 +1,6 @@
 {
   "version": "v251",
-  "generatedAt": "2026-07-27T11:45:12.139Z",
+  "generatedAt": "2026-07-27T11:44:35.719Z",
   "provider": "The Odds API v4",
   "keyPresent": true,
   "regions": "uk",
@@ -896,6 +896,14 @@
       "matches": 8
     },
     {
+      "league": "Liga MX Femenil",
+      "country": "Mexico",
+      "sportKey": "soccer_mexico_ligamx",
+      "sportTitle": "Liga MX",
+      "score": 0.68,
+      "matches": 7
+    },
+    {
       "league": "League One",
       "country": "China",
       "sportKey": "soccer_china_superleague",
@@ -1216,6 +1224,14 @@
       "matches": 3
     },
     {
+      "league": "USL League Two",
+      "country": "USA",
+      "sportKey": "soccer_usa_mls",
+      "sportTitle": "MLS",
+      "score": 0.466,
+      "matches": 1
+    },
+    {
       "league": "Second League A - Division A Gold",
       "country": "Russia",
       "sportKey": "soccer_russia_premier_league",
@@ -1256,7 +1272,7 @@
       "matches": 1
     }
   ],
-  "matchesConsidered": 2102,
+  "matchesConsidered": 2174,
   "matchesMatched": 0,
   "matchesUpdated": 0,
   "fieldsFilled": 0,
@@ -1270,6 +1286,12 @@
       "country": "Australia",
       "reason": "No matching soccer sport key",
       "bestScore": 0.111
+    },
+    {
+      "league": "Calcutta Premier Division",
+      "country": "India",
+      "reason": "No matching soccer sport key",
+      "bestScore": 0.222
     },
     {
       "league": "ASEAN Championship",
@@ -1440,6 +1462,12 @@
       "bestScore": 0.111
     },
     {
+      "league": "CONCACAF Caribbean Club Shield",
+      "country": "World",
+      "reason": "No matching soccer sport key",
+      "bestScore": 0
+    },
+    {
       "league": "Meistaradeildin",
       "country": "Faroe-Islands",
       "reason": "No matching soccer sport key",
@@ -1482,6 +1510,12 @@
       "bestScore": 0.125
     },
     {
+      "league": "Cupa României",
+      "country": "Romania",
+      "reason": "No matching soccer sport key",
+      "bestScore": 0
+    },
+    {
       "league": "Division 1",
       "country": "Kuwait",
       "reason": "No matching soccer sport key",
@@ -1492,6 +1526,12 @@
       "country": "Iceland",
       "reason": "No matching soccer sport key",
       "bestScore": 0.125
+    },
+    {
+      "league": "Segunda División",
+      "country": "Venezuela",
+      "reason": "No matching soccer sport key",
+      "bestScore": 0.143
     },
     {
       "league": "Copa Ecuador",
@@ -1730,6 +1770,12 @@
     {
       "league": "Esiliiga B",
       "country": "Estonia",
+      "reason": "No matching soccer sport key",
+      "bestScore": 0.143
+    },
+    {
+      "league": "Third League - Southwest",
+      "country": "Bulgaria",
       "reason": "No matching soccer sport key",
       "bestScore": 0.143
     },
@@ -2733,36 +2779,6 @@
       "league": "Premier Soccer League",
       "home": "Golden Arrows",
       "away": "Chippa United",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Premier Soccer League",
-      "home": "Orlando Pirates",
-      "away": "Milford FC",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Premier Soccer League",
-      "home": "Stellenbosch",
-      "away": "Amazulu",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Premier Soccer League",
-      "home": "Mamelodi Sundowns",
-      "away": "Marumo Gallants",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Premier Soccer League",
-      "home": "Sekhukhune United",
-      "away": "Durban City",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Premier Soccer League",
-      "home": "Kruger United",
-      "away": "Kaizer Chiefs",
       "reason": "No event/team match"
     }
   ],
@@ -3998,5 +4014,5 @@
   },
   "skipped": false,
   "skipReason": null,
-  "completedAt": "2026-07-27T11:45:32.986Z"
+  "completedAt": "2026-07-27T11:44:45.121Z"
 }
