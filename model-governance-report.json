@@ -1,13 +1,13 @@
 {
   "version": "v194",
-  "updated": "2026-07-27T02:03:07.774Z",
+  "updated": "2026-07-27T03:16:50.280Z",
   "summary": {
-    "settled": 799,
-    "winRate": 0.801,
+    "settled": 800,
+    "winRate": 0.8013,
     "engines": 12,
-    "approved": 0,
+    "approved": 1,
     "shadow": 11,
-    "hold": 1,
+    "hold": 0,
     "rollback": 0,
     "dataQualityFailures": 221,
     "duplicateDecisions": 0,
@@ -45,7 +45,7 @@
         "distributionShift": 0.4,
         "status": "STABLE"
       },
-      "updated": "2026-07-27T02:03:07.771Z"
+      "updated": "2026-07-27T03:16:50.278Z"
     },
     "Prime": {
       "engine": "Prime",
@@ -78,7 +78,7 @@
         "distributionShift": 0.293,
         "status": "STABLE"
       },
-      "updated": "2026-07-27T02:03:07.772Z"
+      "updated": "2026-07-27T03:16:50.278Z"
     },
     "Value": {
       "engine": "Value",
@@ -111,7 +111,7 @@
         "distributionShift": 0.8,
         "status": "STABLE"
       },
-      "updated": "2026-07-27T02:03:07.772Z"
+      "updated": "2026-07-27T03:16:50.278Z"
     },
     "Pro": {
       "engine": "Pro",
@@ -144,7 +144,7 @@
         "distributionShift": 0.8,
         "status": "STABLE"
       },
-      "updated": "2026-07-27T02:03:07.772Z"
+      "updated": "2026-07-27T03:16:50.278Z"
     },
     "Ultra": {
       "engine": "Ultra",
@@ -177,7 +177,7 @@
         "distributionShift": 0.5,
         "status": "STABLE"
       },
-      "updated": "2026-07-27T02:03:07.772Z"
+      "updated": "2026-07-27T03:16:50.278Z"
     },
     "Elite": {
       "engine": "Elite",
@@ -210,7 +210,7 @@
         "distributionShift": 0.5,
         "status": "STABLE"
       },
-      "updated": "2026-07-27T02:03:07.772Z"
+      "updated": "2026-07-27T03:16:50.278Z"
     },
     "Apex": {
       "engine": "Apex",
@@ -243,7 +243,7 @@
         "distributionShift": 0.5,
         "status": "STABLE"
       },
-      "updated": "2026-07-27T02:03:07.772Z"
+      "updated": "2026-07-27T03:16:50.278Z"
     },
     "Halves": {
       "engine": "Halves",
@@ -276,7 +276,7 @@
         "distributionShift": 0,
         "status": "STABLE"
       },
-      "updated": "2026-07-27T02:03:07.772Z"
+      "updated": "2026-07-27T03:16:50.278Z"
     },
     "Streaks": {
       "engine": "Streaks",
@@ -309,12 +309,12 @@
         "distributionShift": 0.5,
         "status": "STABLE"
       },
-      "updated": "2026-07-27T02:03:07.772Z"
+      "updated": "2026-07-27T03:16:50.278Z"
     },
     "Trend": {
       "engine": "Trend",
-      "state": "HOLD",
-      "reason": "Prediction behaviour changed too sharply.",
+      "state": "APPROVED",
+      "reason": "Forward validation, calibration and drift checks passed.",
       "train": {
         "sample": 93,
         "wins": 79,
@@ -322,13 +322,13 @@
         "rate": 0.8495
       },
       "validation": {
-        "sample": 40,
-        "wins": 33,
+        "sample": 41,
+        "wins": 34,
         "losses": 7,
-        "rate": 0.825
+        "rate": 0.8293
       },
-      "validationDelta": -0.0245,
-      "calibrationError": 0.068,
+      "validationDelta": -0.0202,
+      "calibrationError": 0.0625,
       "shadow": {
         "eligible": 0,
         "avoidedLosses": 0,
@@ -338,11 +338,11 @@
       "drift": {
         "recentSample": 30,
         "priorSample": 30,
-        "confidenceShift": -1.42,
-        "distributionShift": 0.367,
-        "status": "DRIFT"
+        "confidenceShift": -1.5,
+        "distributionShift": 0.333,
+        "status": "STABLE"
       },
-      "updated": "2026-07-27T02:03:07.772Z"
+      "updated": "2026-07-27T03:16:50.279Z"
     },
     "League Bias": {
       "engine": "League Bias",
@@ -375,7 +375,7 @@
         "distributionShift": 0.2,
         "status": "STABLE"
       },
-      "updated": "2026-07-27T02:03:07.772Z"
+      "updated": "2026-07-27T03:16:50.279Z"
     },
     "Strict": {
       "engine": "Strict",
@@ -408,7 +408,7 @@
         "distributionShift": 0.5,
         "status": "STABLE"
       },
-      "updated": "2026-07-27T02:03:07.772Z"
+      "updated": "2026-07-27T03:16:50.279Z"
     }
   },
   "marketScorecards": [
@@ -430,11 +430,11 @@
     },
     {
       "marketFamily": "HOME_RESULT",
-      "sample": 101,
-      "wins": 79,
+      "sample": 102,
+      "wins": 80,
       "losses": 22,
-      "rate": 0.7822,
-      "calibrationError": 0.3448
+      "rate": 0.7843,
+      "calibrationError": 0.3396
     },
     {
       "marketFamily": "MATCH_UNDER",
