@@ -1,20 +1,12 @@
 {
   "version": "v251",
-  "generatedAt": "2026-07-27T06:26:11.334Z",
+  "generatedAt": "2026-07-27T06:38:30.002Z",
   "provider": "The Odds API v4",
   "keyPresent": true,
   "regions": "uk",
   "sportsAvailable": 68,
   "soccerSportsAvailable": 41,
   "sportMappings": [
-    {
-      "league": "Super Liga",
-      "country": "Serbia",
-      "sportKey": "soccer_turkey_super_league",
-      "sportTitle": "Turkey Super League",
-      "score": 0.286,
-      "matches": 6
-    },
     {
       "league": "Northern Super League",
       "country": "Canada",
@@ -1144,6 +1136,14 @@
       "matches": 3
     },
     {
+      "league": "Super Liga",
+      "country": "Serbia",
+      "sportKey": "soccer_turkey_super_league",
+      "sportTitle": "Turkey Super League",
+      "score": 0.286,
+      "matches": 5
+    },
+    {
       "league": "Super League",
       "country": "Switzerland",
       "sportKey": "soccer_greece_super_league",
@@ -1224,7 +1224,7 @@
       "matches": 1
     }
   ],
-  "matchesConsidered": 1665,
+  "matchesConsidered": 1664,
   "matchesMatched": 0,
   "matchesUpdated": 0,
   "fieldsFilled": 0,
@@ -1724,66 +1724,6 @@
       "country": "Guatemala",
       "reason": "No matching soccer sport key",
       "bestScore": 0.143
-    },
-    {
-      "league": "Super Liga",
-      "home": "Radnicki 1923",
-      "away": "Železničar Pančevo",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Super Liga",
-      "home": "Radnik Surdulica",
-      "away": "FK Crvena Zvezda",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Super Liga",
-      "home": "Vojvodina",
-      "away": "Macva",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Super Liga",
-      "home": "Železničar Pančevo",
-      "away": "Mladost Lucani",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Super Liga",
-      "home": "Novi Pazar",
-      "away": "OFK Beograd",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Super Liga",
-      "home": "Cukaricki",
-      "away": "Radnicki 1923",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Super Liga",
-      "home": "Skalica",
-      "away": "Ružomberok",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Super Liga",
-      "home": "Slovan Bratislava",
-      "away": "Podbrezová",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Super Liga",
-      "home": "FK Košice",
-      "away": "AS Trencin",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Super Liga",
-      "home": "Milsami Orhei",
-      "away": "Sireți",
-      "reason": "No event/team match"
     },
     {
       "league": "Northern Super League",
@@ -2732,22 +2672,70 @@
       "home": "Shahter Taganrog",
       "away": "Astrakhan",
       "reason": "No event/team match"
+    },
+    {
+      "league": "Second League - Group 1",
+      "home": "FK Chayka 2",
+      "away": "Pobeda",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Second League - Group 1",
+      "home": "Rostov II",
+      "away": "Izberbash",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Premier League",
+      "home": "Reyady Abaseya",
+      "away": "Tadamon Sour",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Premier League",
+      "home": "Al Nejmeh",
+      "away": "Al Ahed",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Premier League",
+      "home": "Jwaaya FC",
+      "away": "Al Ansar",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Premier League",
+      "home": "Al Ahed",
+      "away": "Jwaaya FC",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Premier League",
+      "home": "Al Nejmeh",
+      "away": "Al Ansar",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Premier League",
+      "home": "Paro",
+      "away": "Thimphu",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Premier League",
+      "home": "Thimphu City",
+      "away": "Tensung",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Premier League",
+      "home": "Ugyen Academy",
+      "away": "RTC",
+      "reason": "No event/team match"
     }
   ],
   "unsupportedMarkets": [
     {
-      "sportKey": "soccer_turkey_super_league",
-      "market": "btts"
-    },
-    {
-      "sportKey": "soccer_turkey_super_league",
-      "market": "draw_no_bet"
-    },
-    {
-      "sportKey": "soccer_turkey_super_league",
-      "market": "double_chance"
-    },
-    {
       "sportKey": "soccer_greece_super_league",
       "market": "btts"
     },
@@ -3117,35 +3105,22 @@
     },
     {
       "sportKey": "soccer_portugal_primeira_liga",
+      "market": "double_chance"
+    },
+    {
+      "sportKey": "soccer_turkey_super_league",
+      "market": "btts"
+    },
+    {
+      "sportKey": "soccer_turkey_super_league",
+      "market": "draw_no_bet"
+    },
+    {
+      "sportKey": "soccer_turkey_super_league",
       "market": "double_chance"
     }
   ],
   "requestErrors": [
-    {
-      "label": "soccer_turkey_super_league:base-combined",
-      "error": "Markets not supported by this endpoint: btts, double_chance, draw_no_bet",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_turkey_super_league:base-core",
-      "error": "Invalid commenceTimeFrom parameter. The format must be YYYY-MM-DDTHH:MM:SSZ, for example 2020-11-24T16:05:00Z",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_turkey_super_league:btts",
-      "error": "Markets not supported by this endpoint: btts",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_turkey_super_league:draw_no_bet",
-      "error": "Markets not supported by this endpoint: draw_no_bet",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_turkey_super_league:double_chance",
-      "error": "Markets not supported by this endpoint: double_chance",
-      "statusCode": 422
-    },
     {
       "label": "soccer_greece_super_league:base-combined",
       "error": "Markets not supported by this endpoint: btts, double_chance, draw_no_bet",
@@ -3920,6 +3895,31 @@
       "label": "soccer_portugal_primeira_liga:double_chance",
       "error": "Markets not supported by this endpoint: double_chance",
       "statusCode": 422
+    },
+    {
+      "label": "soccer_turkey_super_league:base-combined",
+      "error": "Markets not supported by this endpoint: btts, double_chance, draw_no_bet",
+      "statusCode": 422
+    },
+    {
+      "label": "soccer_turkey_super_league:base-core",
+      "error": "Invalid commenceTimeFrom parameter. The format must be YYYY-MM-DDTHH:MM:SSZ, for example 2020-11-24T16:05:00Z",
+      "statusCode": 422
+    },
+    {
+      "label": "soccer_turkey_super_league:btts",
+      "error": "Markets not supported by this endpoint: btts",
+      "statusCode": 422
+    },
+    {
+      "label": "soccer_turkey_super_league:draw_no_bet",
+      "error": "Markets not supported by this endpoint: draw_no_bet",
+      "statusCode": 422
+    },
+    {
+      "label": "soccer_turkey_super_league:double_chance",
+      "error": "Markets not supported by this endpoint: double_chance",
+      "statusCode": 422
     }
   ],
   "quota": {
@@ -3929,5 +3929,5 @@
   },
   "skipped": false,
   "skipReason": null,
-  "completedAt": "2026-07-27T06:26:20.513Z"
+  "completedAt": "2026-07-27T06:38:56.660Z"
 }
