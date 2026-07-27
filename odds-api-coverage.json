@@ -1,6 +1,6 @@
 {
   "version": "v251",
-  "generatedAt": "2026-07-27T16:30:56.600Z",
+  "generatedAt": "2026-07-27T16:35:44.208Z",
   "provider": "The Odds API v4",
   "keyPresent": true,
   "regions": "uk",
@@ -880,6 +880,14 @@
       "matches": 8
     },
     {
+      "league": "Liga MX Femenil",
+      "country": "Mexico",
+      "sportKey": "soccer_mexico_ligamx",
+      "sportTitle": "Liga MX",
+      "score": 0.68,
+      "matches": 7
+    },
+    {
       "league": "League Two",
       "country": "China",
       "sportKey": "soccer_china_superleague",
@@ -1208,6 +1216,14 @@
       "matches": 3
     },
     {
+      "league": "USL League Two",
+      "country": "USA",
+      "sportKey": "soccer_usa_mls",
+      "sportTitle": "MLS",
+      "score": 0.466,
+      "matches": 1
+    },
+    {
       "league": "Second League - Group 4",
       "country": "Russia",
       "sportKey": "soccer_russia_premier_league",
@@ -1256,7 +1272,7 @@
       "matches": 1
     }
   ],
-  "matchesConsidered": 2094,
+  "matchesConsidered": 2165,
   "matchesMatched": 0,
   "matchesUpdated": 0,
   "fieldsFilled": 0,
@@ -1404,6 +1420,12 @@
       "bestScore": 0
     },
     {
+      "league": "Calcutta Premier Division",
+      "country": "India",
+      "reason": "No matching soccer sport key",
+      "bestScore": 0.222
+    },
+    {
       "league": "ASEAN Championship",
       "country": "World",
       "reason": "No matching soccer sport key",
@@ -1426,6 +1448,12 @@
       "country": "Israel",
       "reason": "No matching soccer sport key",
       "bestScore": 0.111
+    },
+    {
+      "league": "CONCACAF Caribbean Club Shield",
+      "country": "World",
+      "reason": "No matching soccer sport key",
+      "bestScore": 0
     },
     {
       "league": "Meistaradeildin",
@@ -1470,6 +1498,12 @@
       "bestScore": 0.125
     },
     {
+      "league": "Cupa României",
+      "country": "Romania",
+      "reason": "No matching soccer sport key",
+      "bestScore": 0
+    },
+    {
       "league": "Division 1",
       "country": "Kuwait",
       "reason": "No matching soccer sport key",
@@ -1480,6 +1514,12 @@
       "country": "Iceland",
       "reason": "No matching soccer sport key",
       "bestScore": 0.125
+    },
+    {
+      "league": "Segunda División",
+      "country": "Venezuela",
+      "reason": "No matching soccer sport key",
+      "bestScore": 0.143
     },
     {
       "league": "Copa Ecuador",
@@ -1724,6 +1764,18 @@
     {
       "league": "Esiliiga B",
       "country": "Estonia",
+      "reason": "No matching soccer sport key",
+      "bestScore": 0.143
+    },
+    {
+      "league": "David Kipiani Cup",
+      "country": "Georgia",
+      "reason": "No matching soccer sport key",
+      "bestScore": 0.125
+    },
+    {
+      "league": "Third League - Southwest",
+      "country": "Bulgaria",
       "reason": "No matching soccer sport key",
       "bestScore": 0.143
     },
@@ -2727,42 +2779,6 @@
       "league": "1. Division Women",
       "home": "Frigg Oslo FK W",
       "away": "Kolbotn W",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "1. Division Women",
-      "home": "Fyllingsdalen W",
-      "away": "Åsane W",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "1. Division Women",
-      "home": "Arna-Bjørnar W",
-      "away": "Klepp W",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "1. Division Women",
-      "home": "Grei W",
-      "away": "Start W",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Super League",
-      "home": "Andijan",
-      "away": "Buxoro",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Super League",
-      "home": "Lokomotiv",
-      "away": "Sogdiana",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Super League",
-      "home": "Olmaliq",
-      "away": "Mash'al",
       "reason": "No event/team match"
     }
   ],
@@ -3998,5 +4014,5 @@
   },
   "skipped": false,
   "skipReason": null,
-  "completedAt": "2026-07-27T16:31:03.954Z"
+  "completedAt": "2026-07-27T16:36:04.750Z"
 }
