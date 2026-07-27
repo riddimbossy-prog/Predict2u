@@ -1,6 +1,6 @@
 {
   "version": "v251",
-  "generatedAt": "2026-07-26T23:54:57.659Z",
+  "generatedAt": "2026-07-27T00:08:31.465Z",
   "provider": "The Odds API v4",
   "keyPresent": true,
   "regions": "uk",
@@ -96,30 +96,6 @@
       "matches": 5
     },
     {
-      "league": "Serie A",
-      "country": "Brazil",
-      "sportKey": "soccer_brazil_campeonato",
-      "sportTitle": "Brazil Série A",
-      "score": 0.929,
-      "matches": 14
-    },
-    {
-      "league": "Serie B",
-      "country": "Brazil",
-      "sportKey": "soccer_brazil_serie_b",
-      "sportTitle": "Brazil Série B",
-      "score": 1,
-      "matches": 7
-    },
-    {
-      "league": "Primera Nacional",
-      "country": "Argentina",
-      "sportKey": "soccer_argentina_primera_division",
-      "sportTitle": "Primera División - Argentina",
-      "score": 0.513,
-      "matches": 9
-    },
-    {
       "league": "Primera Nacional",
       "country": "Argentina",
       "sportKey": "soccer_argentina_primera_division",
@@ -134,6 +110,14 @@
       "sportTitle": "MLS",
       "score": 1,
       "matches": 15
+    },
+    {
+      "league": "Serie A",
+      "country": "Brazil",
+      "sportKey": "soccer_brazil_campeonato",
+      "sportTitle": "Brazil Série A",
+      "score": 0.929,
+      "matches": 12
     },
     {
       "league": "Liga Profesional Argentina",
@@ -168,12 +152,20 @@
       "matches": 7
     },
     {
-      "league": "USL League Two",
-      "country": "USA",
-      "sportKey": "soccer_usa_mls",
-      "sportTitle": "MLS",
+      "league": "Primera División",
+      "country": "Bolivia",
+      "sportKey": "soccer_argentina_primera_division",
+      "sportTitle": "Primera División - Argentina",
+      "score": 0.653,
+      "matches": 7
+    },
+    {
+      "league": "Serie C",
+      "country": "Brazil",
+      "sportKey": "soccer_brazil_campeonato",
+      "sportTitle": "Brazil Série A",
       "score": 0.466,
-      "matches": 2
+      "matches": 3
     },
     {
       "league": "Primera División",
@@ -382,6 +374,14 @@
       "sportTitle": "Primera División - Argentina",
       "score": 0.323,
       "matches": 4
+    },
+    {
+      "league": "Serie B",
+      "country": "Brazil",
+      "sportKey": "soccer_brazil_serie_b",
+      "sportTitle": "Brazil Série B",
+      "score": 1,
+      "matches": 6
     },
     {
       "league": "Copa Paulista",
@@ -1256,7 +1256,7 @@
       "matches": 1
     }
   ],
-  "matchesConsidered": 1717,
+  "matchesConsidered": 1711,
   "matchesMatched": 0,
   "matchesUpdated": 0,
   "fieldsFilled": 0,
@@ -1266,28 +1266,16 @@
   "bookmakerRows": 0,
   "unmatched": [
     {
-      "league": "Virsliga",
-      "country": "Latvia",
+      "league": "Coppa",
+      "country": "Belarus",
       "reason": "No matching soccer sport key",
       "bestScore": 0
-    },
-    {
-      "league": "Primeira Divisão",
-      "country": "Macao",
-      "reason": "No matching soccer sport key",
-      "bestScore": 0.143
     },
     {
       "league": "Segunda División",
       "country": "Uruguay",
       "reason": "No matching soccer sport key",
       "bestScore": 0.143
-    },
-    {
-      "league": "Coppa",
-      "country": "Belarus",
-      "reason": "No matching soccer sport key",
-      "bestScore": 0
     },
     {
       "league": "Friendlies Clubs",
@@ -1320,22 +1308,10 @@
       "bestScore": 0.143
     },
     {
-      "league": "Liga Pro",
-      "country": "Ecuador",
-      "reason": "No matching soccer sport key",
-      "bestScore": 0.143
-    },
-    {
       "league": "COTIF Tournament",
       "country": "World",
       "reason": "No matching soccer sport key",
       "bestScore": 0
-    },
-    {
-      "league": "Division Profesional - Clausura",
-      "country": "Paraguay",
-      "reason": "No matching soccer sport key",
-      "bestScore": 0.125
     },
     {
       "league": "Primera B",
@@ -1396,6 +1372,12 @@
       "country": "World",
       "reason": "No matching soccer sport key",
       "bestScore": 0.125
+    },
+    {
+      "league": "Virsliga",
+      "country": "Latvia",
+      "reason": "No matching soccer sport key",
+      "bestScore": 0
     },
     {
       "league": "1. Liga",
@@ -2197,12 +2179,6 @@
     },
     {
       "league": "Serie B",
-      "home": "America Mineiro",
-      "away": "Goias",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Serie B",
       "home": "Atletico Goianiense",
       "away": "Operario-PR",
       "reason": "No event/team match"
@@ -2776,6 +2752,18 @@
       "home": "Petřín Plzeň",
       "away": "Komárov",
       "reason": "No event/team match"
+    },
+    {
+      "league": "Cup",
+      "home": "Slavia Hradec Králové",
+      "away": "Trutnov",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Cup",
+      "home": "Klasterec n. Oh.",
+      "away": "Ostrov",
+      "reason": "No event/team match"
     }
   ],
   "unsupportedMarkets": [
@@ -2876,27 +2864,27 @@
       "market": "double_chance"
     },
     {
-      "sportKey": "soccer_chile_campeonato",
+      "sportKey": "soccer_usa_mls",
       "market": "btts"
     },
     {
-      "sportKey": "soccer_chile_campeonato",
+      "sportKey": "soccer_mexico_ligamx",
       "market": "draw_no_bet"
     },
     {
-      "sportKey": "soccer_chile_campeonato",
+      "sportKey": "soccer_mexico_ligamx",
       "market": "double_chance"
     },
     {
-      "sportKey": "soccer_mexico_ligamx",
+      "sportKey": "soccer_chile_campeonato",
       "market": "btts"
     },
     {
-      "sportKey": "soccer_mexico_ligamx",
+      "sportKey": "soccer_chile_campeonato",
       "market": "draw_no_bet"
     },
     {
-      "sportKey": "soccer_mexico_ligamx",
+      "sportKey": "soccer_chile_campeonato",
       "market": "double_chance"
     },
     {
@@ -3973,5 +3961,5 @@
   },
   "skipped": false,
   "skipReason": null,
-  "completedAt": "2026-07-26T23:55:04.599Z"
+  "completedAt": "2026-07-27T00:08:45.106Z"
 }
