@@ -1,9 +1,9 @@
 {
   "version": "v194",
-  "updated": "2026-07-27T21:34:33.320Z",
+  "updated": "2026-07-27T23:01:33.448Z",
   "summary": {
-    "settled": 809,
-    "winRate": 0.801,
+    "settled": 811,
+    "winRate": 0.8015,
     "engines": 12,
     "approved": 0,
     "shadow": 12,
@@ -45,7 +45,7 @@
         "distributionShift": 0.375,
         "status": "STABLE"
       },
-      "updated": "2026-07-27T21:34:33.318Z"
+      "updated": "2026-07-27T23:01:33.445Z"
     },
     "Prime": {
       "engine": "Prime",
@@ -78,7 +78,7 @@
         "distributionShift": 0.293,
         "status": "STABLE"
       },
-      "updated": "2026-07-27T21:34:33.318Z"
+      "updated": "2026-07-27T23:01:33.446Z"
     },
     "Value": {
       "engine": "Value",
@@ -111,7 +111,7 @@
         "distributionShift": 0.8,
         "status": "STABLE"
       },
-      "updated": "2026-07-27T21:34:33.318Z"
+      "updated": "2026-07-27T23:01:33.446Z"
     },
     "Pro": {
       "engine": "Pro",
@@ -144,7 +144,7 @@
         "distributionShift": 0.8,
         "status": "STABLE"
       },
-      "updated": "2026-07-27T21:34:33.319Z"
+      "updated": "2026-07-27T23:01:33.446Z"
     },
     "Ultra": {
       "engine": "Ultra",
@@ -177,7 +177,7 @@
         "distributionShift": 0.5,
         "status": "STABLE"
       },
-      "updated": "2026-07-27T21:34:33.319Z"
+      "updated": "2026-07-27T23:01:33.446Z"
     },
     "Elite": {
       "engine": "Elite",
@@ -210,7 +210,7 @@
         "distributionShift": 0.5,
         "status": "STABLE"
       },
-      "updated": "2026-07-27T21:34:33.319Z"
+      "updated": "2026-07-27T23:01:33.446Z"
     },
     "Apex": {
       "engine": "Apex",
@@ -243,7 +243,7 @@
         "distributionShift": 0.5,
         "status": "STABLE"
       },
-      "updated": "2026-07-27T21:34:33.319Z"
+      "updated": "2026-07-27T23:01:33.446Z"
     },
     "Halves": {
       "engine": "Halves",
@@ -276,7 +276,7 @@
         "distributionShift": 0,
         "status": "STABLE"
       },
-      "updated": "2026-07-27T21:34:33.319Z"
+      "updated": "2026-07-27T23:01:33.446Z"
     },
     "Streaks": {
       "engine": "Streaks",
@@ -309,17 +309,17 @@
         "distributionShift": 0.5,
         "status": "STABLE"
       },
-      "updated": "2026-07-27T21:34:33.319Z"
+      "updated": "2026-07-27T23:01:33.446Z"
     },
     "Trend": {
       "engine": "Trend",
       "state": "SHADOW",
       "reason": "Needs a larger forward validation sample.",
       "train": {
-        "sample": 95,
-        "wins": 81,
+        "sample": 96,
+        "wins": 82,
         "losses": 14,
-        "rate": 0.8526
+        "rate": 0.8542
       },
       "validation": {
         "sample": 42,
@@ -327,7 +327,7 @@
         "losses": 8,
         "rate": 0.8095
       },
-      "validationDelta": -0.0431,
+      "validationDelta": -0.0447,
       "calibrationError": 0.077,
       "shadow": {
         "eligible": 0,
@@ -338,21 +338,21 @@
       "drift": {
         "recentSample": 30,
         "priorSample": 30,
-        "confidenceShift": -1.25,
-        "distributionShift": 0.267,
+        "confidenceShift": -1.1,
+        "distributionShift": 0.3,
         "status": "STABLE"
       },
-      "updated": "2026-07-27T21:34:33.319Z"
+      "updated": "2026-07-27T23:01:33.446Z"
     },
     "League Bias": {
       "engine": "League Bias",
       "state": "SHADOW",
       "reason": "Needs a larger forward validation sample.",
       "train": {
-        "sample": 139,
-        "wins": 122,
+        "sample": 140,
+        "wins": 123,
         "losses": 17,
-        "rate": 0.8777
+        "rate": 0.8786
       },
       "validation": {
         "sample": 60,
@@ -360,8 +360,8 @@
         "losses": 12,
         "rate": 0.8
       },
-      "validationDelta": -0.0777,
-      "calibrationError": 0.0679,
+      "validationDelta": -0.0786,
+      "calibrationError": 0.0681,
       "shadow": {
         "eligible": 0,
         "avoidedLosses": 0,
@@ -371,11 +371,11 @@
       "drift": {
         "recentSample": 30,
         "priorSample": 30,
-        "confidenceShift": 0.93,
-        "distributionShift": 0.233,
+        "confidenceShift": 0.89,
+        "distributionShift": 0.2,
         "status": "STABLE"
       },
-      "updated": "2026-07-27T21:34:33.319Z"
+      "updated": "2026-07-27T23:01:33.446Z"
     },
     "Strict": {
       "engine": "Strict",
@@ -408,7 +408,7 @@
         "distributionShift": 0.5,
         "status": "STABLE"
       },
-      "updated": "2026-07-27T21:34:33.319Z"
+      "updated": "2026-07-27T23:01:33.446Z"
     }
   },
   "marketScorecards": [
@@ -430,19 +430,19 @@
     },
     {
       "marketFamily": "HOME_RESULT",
-      "sample": 104,
-      "wins": 82,
+      "sample": 105,
+      "wins": 83,
       "losses": 22,
-      "rate": 0.7885,
-      "calibrationError": 0.3307
+      "rate": 0.7905,
+      "calibrationError": 0.3259
     },
     {
       "marketFamily": "MATCH_UNDER",
-      "sample": 89,
-      "wins": 65,
+      "sample": 90,
+      "wins": 66,
       "losses": 24,
-      "rate": 0.7303,
-      "calibrationError": 0.0281
+      "rate": 0.7333,
+      "calibrationError": 0.0263
     },
     {
       "marketFamily": "MATCH_OVER",
