@@ -1,6 +1,8 @@
-/* Predict2U v270 — Team Intelligence, Daily Auto Picks and private learning guard. */
+/* Predict2U v271 — Team Intelligence and Auto Picks Gatekeeper v2. */
 (function(){
   'use strict';
+  const Gate=window.P2UAutoGatekeeperV271;
+  if(!Gate)throw new Error('Auto Picks Gatekeeper v271 is not loaded.');
   const $=id=>document.getElementById(id);
   const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':'&quot;',"'":'&#39;'}[c]));
   const num=v=>v===null||v===undefined||v===''||!Number.isFinite(Number(v))?null:Number(v);
@@ -27,6 +29,12 @@
   const requestedDate=new URLSearchParams(location.search).get('date');
   let selectedDate=validDate(requestedDate)&&availableDates.includes(requestedDate)?requestedDate:'all';
   const selectedFixturePool=()=>selectedDate==='all'?fixturePool:fixturePool.filter(m=>dateOf(m)===selectedDate);
+  const preKickoff=m=>{const t=Date.parse(m&&m.kickoff||'');return !Number.isFinite(t)||t>Date.now()+10*60000;};
+  const autoFixturePool=()=>{
+    let pool=currentPool.filter(preKickoff);
+    if(selectedDate!=='all')pool=pool.filter(m=>dateOf(m)===selectedDate);
+    return pool;
+  };
 
   function sideRow(m,side){
     const home=side==='home',st=m&&m[`${side}Streaks`]||{},htft=st.htft||{},advanced=st.advanced||{};
@@ -51,7 +59,10 @@
     const noLoss=first(st.noLoss,0),noWin=first(st.noWin,0),noDraw=first(st.noDraw,0),winStreak=first(st.win,0),lossStreak=first(st.loss,0);
     const position=first(m&&m[`${side}Pos`]),tableSize=first(m&&m.tableSize,m&&m.venueTableSize);
     const odds=first(m&&m.odds&&m.odds[home?'home':'away']);
-    return {fixture:m,team,league:m&&m.league||'Unknown league',country:m&&m.country||'',logo:m&&m[`${side}Logo`]||'',side,games,ppg,gf,ga,cs,fts,win,draw,loss,unbeaten,over15,over25,over35,under15:over15===null?null:1-over15,under25:over25===null?null:1-over25,under35:over35===null?null:1-over35,btts,noBtts,scored,conceded,noLoss,noWin,noDraw,winStreak,lossStreak,position,tableSize,odds,opponent:m&&m[home?'away':'home'],kickoff:m&&m.kickoff||'',matchDate:dateOf(m)};
+    const form=String(first(m&&m[`${side}Recent10Form`])||m&&m[`${side}Recent10Form`]||m&&m[`${side}Form`]||'');
+    const recentForm=Gate.formStats(form);
+    const recentPPG=first(m&&m[`${side}Recent10PPG`],advanced.recent10PPG);
+    return {fixture:m,team,league:m&&m.league||'Unknown league',country:m&&m.country||'',logo:m&&m[`${side}Logo`]||'',side,games,ppg,gf,ga,cs,fts,win,draw,loss,unbeaten,over15,over25,over35,under15:over15===null?null:1-over15,under25:over25===null?null:1-over25,under35:over35===null?null:1-over35,btts,noBtts,scored,conceded,noLoss,noWin,noDraw,winStreak,lossStreak,position,tableSize,odds,opponent:m&&m[home?'away':'home'],kickoff:m&&m.kickoff||'',matchDate:dateOf(m),recentPPG,recentForm,form,profileSource:profile.usedSplit||''};
   }
   function latestProfiles(pool=selectedFixturePool()){
     const map=new Map();
@@ -107,15 +118,13 @@
   let category=['best','worst','attack','defence'].includes(params.get('category'))?params.get('category'):'best';
   let polarity=['Best','Worst'].includes(params.get('polarity'))?params.get('polarity'):'Best';
   let trend=trends[params.get('trend')]?params.get('trend'):'unbeaten';
-  let rankQuery='',rankLeague='all',trendQuery='',trendLeague='all',autoQuery='',autoLeague='all',autoMarket='all';
+  let rankQuery='',rankLeague='all',trendQuery='',trendLeague='all',autoQuery='',autoLeague='all',autoMarket='all',autoView='core';
   let autoRegistry=new Map();
   const autoCache=new Map();
-  const AUTO_MODEL_VERSION='Auto Profile v1.1';
-  const learningGuard=window.P2U_AUTO_LEARNING_GUARD_V270||{entries:{}};
+  const AUTO_MODEL_VERSION=Gate.MODEL_VERSION;
+  const learningGuard=window.P2U_AUTO_LEARNING_GUARD_V271||{fixtures:{}};
   const fixtureKey=m=>m&&m.id!=null?`f${m.id}`:`${m&&m.home||''}|${m&&m.away||''}|${dateOf(m)}`;
-  function learningOddsBand(v){const n=Number(v);if(!Number.isFinite(n))return 'na';if(n<1.30)return 'a';if(n<1.45)return 'b';if(n<1.60)return 'c';if(n<1.81)return 'd';return 'e';}
-  function learningHash(value){let h=0x811c9dc5;for(const ch of String(value)){h^=ch.charCodeAt(0);h=Math.imul(h,0x01000193);}return (h>>>0).toString(16).padStart(8,'0');}
-  function learningDecision(m,homeTrait,awayTrait,market,odds){const hash=learningHash([homeTrait,awayTrait,market,m&&m.league||'',learningOddsBand(odds)].join('|').toLowerCase());const e=learningGuard.entries&&learningGuard.entries[hash]||null;if(!e)return{hash,state:'monitor',delta:0};const state=e.s==='b'?'block':e.s==='w'?'watch':e.s==='p'?'boost':'stable';return{hash,state,delta:Number(e.d)||0};}
+  function learningDecision(m){const e=learningGuard.fixtures&&learningGuard.fixtures[fixtureKey(m)]||null;if(!e)return{state:'monitor',delta:0};const state=e.s==='b'?'block':e.s==='w'?'watch':e.s==='p'?'boost':'stable';return{state,delta:Number(e.d)||0};}
   const rankKey=()=>category==='attack'?`attack${polarity}`:category==='defence'?`defence${polarity}`:category;
   const allProfiles=latestProfiles(fixturePool);
   const activeProfiles=()=>latestProfiles(selectedFixturePool());
@@ -204,48 +213,46 @@
   function oddsValue(m,key){return first(m&&m.odds&&m.odds[key]);}
   function leagueRate(m,key){return rate(m&&m.leagueTrends&&m.leagueTrends.rates&&m.leagueTrends.rates[key]);}
   function average(values){const xs=values.filter(v=>v!==null&&Number.isFinite(v));return xs.length?xs.reduce((a,b)=>a+b,0)/xs.length:null;}
-  function analyseMatch(m,homeTrait,awayTrait){
+  function analyseMatch(m,homeTrait,awayTrait,options={}){
     const h=sideRow(m,'home'),a=sideRow(m,'away');
     const candidates=[];const projection=((h.gf??1.2)+(a.ga??1.2))/2+((a.gf??1.1)+(h.ga??1.1))/2;
     const sample=Math.min(h.games||0,a.games||0),sampleScore=clamp((sample-6)*2,0,10);
-    const addCandidate=(market,score,oddsKey,reasons,checks=[])=>{
-      const odds=oddsValue(m,oddsKey);if(odds===null)return;
-      if(checks.some(Boolean))return;
-      candidates.push({market,score:clamp(score+sampleScore),odds,reasons});
+    const addCandidate=(id,market,canonical,score,oddsKey,reasons,checks=[])=>{
+      const odds=oddsValue(m,oddsKey);if(odds===null||checks.some(Boolean))return;
+      candidates.push({id,market,canonical,score:clamp(score+sampleScore),odds,reasons,oddsKey});
     };
-    const ppgEdge=(h.ppg??1.2)-(a.ppg??1.2),attackEdge=(h.gf??1.2)-(a.ga??1.2),awayEdge=(a.ppg??1.2)-(h.ppg??1.2);
-    addCandidate(`${h.team} to win`,64+ppgEdge*12+((h.win??.35)-(a.win??.35))*24+((a.loss??.35)-(h.loss??.35))*12,'home',[`Home split PPG edge ${fmt(ppgEdge)}`,`Home win rate ${pct(h.win)}`,`Away loss rate ${pct(a.loss)}`],[ppgEdge<.55,(h.win??0)<.45,(a.unbeaten??0)>.72,oddsValue(m,'home')>2.20]);
-    addCandidate(`${a.team} to win`,64+awayEdge*12+((a.win??.35)-(h.win??.35))*24+((h.loss??.35)-(a.loss??.35))*12,'away',[`Away split PPG edge ${fmt(awayEdge)}`,`Away win rate ${pct(a.win)}`,`Home loss rate ${pct(h.loss)}`],[awayEdge<.55,(a.win??0)<.45,(h.unbeaten??0)>.72,oddsValue(m,'away')>2.20]);
-    addCandidate(`${h.team} or Draw`,70+((h.unbeaten??.5)-.65)*40+(.30-(a.win??.3))*25,'dc1x',[`Home unbeaten ${pct(h.unbeaten)}`,`Away win rate ${pct(a.win)}`],[(h.unbeaten??0)<.70,(a.win??1)>.32,oddsValue(m,'dc1x')>1.48]);
-    addCandidate(`Draw or ${a.team}`,70+((a.unbeaten??.5)-.65)*40+(.30-(h.win??.3))*25,'dcx2',[`Away unbeaten ${pct(a.unbeaten)}`,`Home win rate ${pct(h.win)}`],[(a.unbeaten??0)<.70,(h.win??1)>.32,oddsValue(m,'dcx2')>1.48]);
+    const addSignal=(id,score,reasons=[])=>candidates.push({id,market:id,canonical:id,score:clamp(score),odds:null,reasons,publishable:false});
+    const ppgEdge=(h.ppg??1.2)-(a.ppg??1.2),awayEdge=(a.ppg??1.2)-(h.ppg??1.2);
+    addCandidate('HOME_WIN',`${h.team} to win`,'Home Win',64+ppgEdge*12+((h.win??.35)-(a.win??.35))*24+((a.loss??.35)-(h.loss??.35))*12,'home',[`Home split PPG edge ${fmt(ppgEdge)}`,`Home win rate ${pct(h.win)}`,`Away loss rate ${pct(a.loss)}`],[ppgEdge<.55,(h.win??0)<.45,(a.unbeaten??0)>.72,oddsValue(m,'home')>2.20]);
+    addCandidate('AWAY_WIN',`${a.team} to win`,'Away Win',64+awayEdge*12+((a.win??.35)-(h.win??.35))*24+((h.loss??.35)-(a.loss??.35))*12,'away',[`Away split PPG edge ${fmt(awayEdge)}`,`Away win rate ${pct(a.win)}`,`Home loss rate ${pct(h.loss)}`],[awayEdge<.55,(a.win??0)<.45,(h.unbeaten??0)>.72,oddsValue(m,'away')>2.20]);
+    addCandidate('DC1X',`${h.team} or Draw`,'Double Chance 1X',70+((h.unbeaten??.5)-.65)*40+(.30-(a.win??.3))*25,'dc1x',[`Home unbeaten ${pct(h.unbeaten)}`,`Away win rate ${pct(a.win)}`],[(h.unbeaten??0)<.70,(a.win??1)>.32,oddsValue(m,'dc1x')>1.55]);
+    addCandidate('DCX2',`Draw or ${a.team}`,'Double Chance X2',70+((a.unbeaten??.5)-.65)*40+(.30-(h.win??.3))*25,'dcx2',[`Away unbeaten ${pct(a.unbeaten)}`,`Home win rate ${pct(h.win)}`],[(a.unbeaten??0)<.70,(h.win??1)>.32,oddsValue(m,'dcx2')>1.55]);
     const o15=average([h.over15,a.over15,leagueRate(m,'Over 1.5')]);
     const o25=average([h.over25,a.over25,leagueRate(m,'Over 2.5')]);
     const o35=average([h.over35,a.over35,leagueRate(m,'Over 3.5')]);
     const u15=o15===null?null:1-o15,u25=o25===null?null:1-o25,u35=o35===null?null:1-o35;
-    addCandidate('Over 1.5 Goals',(o15??0)*86+Math.min(10,Math.max(0,projection-2.2)*8),'over15',[`Combined Over 1.5 profile ${pct(o15)}`,`Projected total ${fmt(projection)}`,`League Over 1.5 ${pct(leagueRate(m,'Over 1.5'))}`],[(o15??0)<.78,projection<2.25,oddsValue(m,'over15')>1.45]);
-    addCandidate('Under 1.5 Goals',(u15??0)*90+Math.min(8,Math.max(0,1.8-projection)*10),'under15',[`Combined Under 1.5 profile ${pct(u15)}`,`Projected total ${fmt(projection)}`],[(u15??0)<.58,projection>1.85,oddsValue(m,'under15')>2.25]);
-    addCandidate('Over 2.5 Goals',(o25??0)*90+Math.min(8,Math.max(0,projection-2.7)*8),'over25',[`Combined Over 2.5 profile ${pct(o25)}`,`Projected total ${fmt(projection)}`,`League Over 2.5 ${pct(leagueRate(m,'Over 2.5'))}`],[(o25??0)<.65,projection<2.65,oddsValue(m,'over25')>2.05]);
-    addCandidate('Under 2.5 Goals',(u25??0)*90+Math.min(8,Math.max(0,2.45-projection)*8),'under25',[`Combined Under 2.5 profile ${pct(u25)}`,`Projected total ${fmt(projection)}`],[(u25??0)<.65,projection>2.50,oddsValue(m,'under25')>2.05]);
-    addCandidate('Over 3.5 Goals',(o35??0)*92+Math.min(8,Math.max(0,projection-3.3)*7),'over35',[`Combined Over 3.5 profile ${pct(o35)}`,`Projected total ${fmt(projection)}`],[(o35??0)<.52,projection<3.20,oddsValue(m,'over35')>3.10]);
-    addCandidate('Under 3.5 Goals',(u35??0)*88+Math.min(9,Math.max(0,3.15-projection)*7),'under35',[`Combined Under 3.5 profile ${pct(u35)}`,`Projected total ${fmt(projection)}`,`League Under 3.5 ${pct(leagueRate(m,'Under 3.5'))}`],[(u35??0)<.76,projection>3.20,oddsValue(m,'under35')>1.60]);
+    addCandidate('OVER15','Over 1.5 Goals','Over 1.5 Goals',(o15??0)*86+Math.min(10,Math.max(0,projection-2.2)*8),'over15',[`Combined Over 1.5 profile ${pct(o15)}`,`Projected total ${fmt(projection)}`,`League Over 1.5 ${pct(leagueRate(m,'Over 1.5'))}`],[(o15??0)<.78,projection<2.25]);
+    addCandidate('UNDER15','Under 1.5 Goals','Under 1.5 Goals',(u15??0)*90+Math.min(8,Math.max(0,1.8-projection)*10),'under15',[`Combined Under 1.5 profile ${pct(u15)}`,`Projected total ${fmt(projection)}`],[(u15??0)<.58,projection>1.85]);
+    addCandidate('OVER25','Over 2.5 Goals','Over 2.5 Goals',(o25??0)*90+Math.min(8,Math.max(0,projection-2.7)*8),'over25',[`Combined Over 2.5 profile ${pct(o25)}`,`Projected total ${fmt(projection)}`,`League Over 2.5 ${pct(leagueRate(m,'Over 2.5'))}`],[(o25??0)<.65,projection<2.65]);
+    addCandidate('UNDER25','Under 2.5 Goals','Under 2.5 Goals',(u25??0)*90+Math.min(8,Math.max(0,2.45-projection)*8),'under25',[`Combined Under 2.5 profile ${pct(u25)}`,`Projected total ${fmt(projection)}`],[(u25??0)<.65,projection>2.50]);
+    addCandidate('OVER35','Over 3.5 Goals','Over 3.5 Goals',(o35??0)*92+Math.min(8,Math.max(0,projection-3.3)*7),'over35',[`Combined Over 3.5 profile ${pct(o35)}`,`Projected total ${fmt(projection)}`],[(o35??0)<.52,projection<3.20]);
+    addCandidate('UNDER35','Under 3.5 Goals','Under 3.5 Goals',(u35??0)*88+Math.min(9,Math.max(0,3.15-projection)*7),'under35',[`Combined Under 3.5 profile ${pct(u35)}`,`Projected total ${fmt(projection)}`,`League Under 3.5 ${pct(leagueRate(m,'Under 3.5'))}`],[(u35??0)<.76,projection>3.20]);
     const gg=average([h.btts,a.btts,leagueRate(m,'BTTS Yes')]);
-    addCandidate('Both Teams to Score — Yes',(gg??0)*88+average([h.scored,a.scored,h.conceded,a.conceded])*10,'bttsYes',[`Direct split GG profile ${pct(gg)}`,`${h.team} scoring ${pct(h.scored)}`,`${a.team} scoring ${pct(a.scored)}`],[(gg??0)<.65,(h.scored??0)<.70,(a.scored??0)<.70,(h.conceded??0)<.65,(a.conceded??0)<.65,oddsValue(m,'bttsYes')>1.78]);
+    addCandidate('BTTS_YES','Both Teams to Score — Yes','BTTS Yes',(gg??0)*88+(average([h.scored,a.scored,h.conceded,a.conceded])??0)*10,'bttsYes',[`Direct split GG profile ${pct(gg)}`,`${h.team} scoring ${pct(h.scored)}`,`${a.team} scoring ${pct(a.scored)}`],[(gg??0)<.65,(h.scored??0)<.70,(a.scored??0)<.70,(h.conceded??0)<.65,(a.conceded??0)<.65]);
     const ng=average([h.noBtts,a.noBtts,leagueRate(m,'BTTS No')]);
-    addCandidate('Both Teams to Score — No',(ng??0)*90+Math.max(h.fts??0,a.fts??0)*8,'bttsNo',[`Direct split NG profile ${pct(ng)}`,`Highest failed-to-score rate ${pct(Math.max(h.fts??0,a.fts??0))}`,`Best clean-sheet rate ${pct(Math.max(h.cs??0,a.cs??0))}`],[(ng??0)<.64,oddsValue(m,'bttsNo')>1.90]);
+    addCandidate('BTTS_NO','Both Teams to Score — No','BTTS No',(ng??0)*90+Math.max(h.fts??0,a.fts??0)*8,'bttsNo',[`Direct split NG profile ${pct(ng)}`,`Highest failed-to-score rate ${pct(Math.max(h.fts??0,a.fts??0))}`,`Best clean-sheet rate ${pct(Math.max(h.cs??0,a.cs??0))}`],[(ng??0)<.64]);
     const noDrawStrength=average([h.draw===null?null:1-h.draw,a.draw===null?null:1-a.draw,leagueRate(m,'Draw')===null?null:1-leagueRate(m,'Draw')]);
-    addCandidate('No Draw — 12',(noDrawStrength??0)*88+Math.min(10,(h.noDraw+a.noDraw)*1.2),'dc12',[`Home no-draw run ${h.noDraw}`,`Away no-draw run ${a.noDraw}`,`Combined no-draw profile ${pct(noDrawStrength)}`],[(h.draw??1)>.22,(a.draw??1)>.22,h.noDraw+a.noDraw<6,oddsValue(m,'dc12')>1.55]);
-    if(homeTrait==='winless'&&awayTrait==='nodraws')for(const c of candidates){if(c.market.includes(a.team)||c.market==='No Draw — 12')c.score=clamp(c.score+4);}
-    if(homeTrait==='unbeaten'&&awayTrait==='losses')for(const c of candidates){if(c.market.includes(h.team)||c.market.includes('or Draw'))c.score=clamp(c.score+4);}
+    addCandidate('NO_DRAW','No Draw — 12','Double Chance 12',(noDrawStrength??0)*88+Math.min(10,(h.noDraw+a.noDraw)*1.2),'dc12',[`Home no-draw run ${h.noDraw}`,`Away no-draw run ${a.noDraw}`,`Combined no-draw profile ${pct(noDrawStrength)}`],[(h.draw??1)>.22,(a.draw??1)>.22,h.noDraw+a.noDraw<6]);
+    const drawPressure=average([h.draw,a.draw,leagueRate(m,'Draw')]);
+    addSignal('DRAW_PRESSURE',(drawPressure??0)*100+Math.max(0,10-(h.noDraw+a.noDraw)),[`Combined draw pressure ${pct(drawPressure)}`]);
     candidates.sort((x,y)=>y.score-x.score);
-    const qualified=candidates.filter(c=>c.score>=76);
-    const primary=qualified[0]||null;
-    const supporting=qualified.slice(1,3).filter(c=>!primary||Math.abs(c.score-primary.score)<=10);
-    const warnings=[];
-    if(sample<MIN_SAMPLE)warnings.push(`Minimum split sample not met: ${sample}.`);
-    if(usingFallback)warnings.push('No current-window fixture was loaded, so this analysis uses the latest unresolved fixture in the public dataset.');
-    if(!m.odds||!Object.keys(m.odds).length)warnings.push('Market odds are unavailable.');
-    if(primary&&qualified[1]&&primary.score-qualified[1].score<2)warnings.push('Top markets are very close; treat the selection as lower confidence.');
-    return {h,a,projection,candidates,primary,supporting,warnings,sample,homeTrait,awayTrait};
+    const decision=Gate.select({m,h,a,homeTrait,awayTrait,candidates,meta:window.P2U_DATA_META||{},today,automatic:!!options.automatic});
+    const primary=decision.primary;
+    const supporting=primary?(decision.evaluated||[]).filter(c=>c.id!==primary.id&&Math.abs(c.grade-primary.grade)<=8).slice(0,2):[];
+    const warnings=[...(decision.warnings||[])];
+    if(usingFallback&&!options.automatic)warnings.push('This manual analysis uses the latest unresolved fixture because no current fixture is loaded.');
+    if(primary&&primary.valueNote)warnings.push(primary.valueNote);
+    return {h,a,projection,candidates,primary,supporting,warnings,sample,homeTrait,awayTrait,route:decision.route,quality:decision.quality,rejected:decision.rejected};
   }
   function renderLabPlaceholder(selected){
     $('lab-result').innerHTML=`<div class="p2u-lab-preview"><strong>${esc(selected.home.team)} vs ${esc(selected.away.team)}</strong><span>${esc(selected.m.league)} · ${esc(selected.m.matchDate||'')}</span><small>Tap Analyse matchup to generate the safest qualifying market.</small></div>`;
@@ -253,8 +260,8 @@
   function renderAnalysis(m){
     const homeTrait=$('lab-home-trait').value,awayTrait=$('lab-away-trait').value,result=analyseMatch(m,homeTrait,awayTrait),{h,a,primary,supporting,warnings}=result;
     const profileBox=(r,trait)=>`<article><span>${r.side==='home'?'HOME PROFILE':'AWAY PROFILE'}</span><h3>${esc(r.team)}</h3><b>${esc(trends[trait].label)}</b><div><small>PPG <strong>${fmt(r.ppg)}</strong></small><small>W/D/L <strong>${pct(r.win)} / ${pct(r.draw)} / ${pct(r.loss)}</strong></small><small>GF/GA <strong>${fmt(r.gf)} / ${fmt(r.ga)}</strong></small><small>Sample <strong>${r.games}</strong></small></div></article>`;
-    const primaryHtml=primary?`<div class="p2u-lab-pick"><span>SAFEST QUALIFYING PICK</span><h2>${esc(primary.market)}</h2><div class="p2u-lab-pick-meta"><b>${Math.round(primary.score)}% model strength</b><b>Odds ${fmt(primary.odds)}</b></div><ul>${primary.reasons.map(x=>`<li>${esc(x)}</li>`).join('')}</ul></div>`:`<div class="p2u-lab-no-bet"><span>STRICT RESULT</span><h2>No Bet</h2><p>No market cleared the minimum evidence, price and contradiction checks. The Lab will not force a selection.</p></div>`;
-    const supportHtml=supporting.length?`<div class="p2u-lab-support"><h3>Supporting markets</h3>${supporting.map(c=>`<div><b>${esc(c.market)}</b><span>${Math.round(c.score)}% · ${fmt(c.odds)}</span></div>`).join('')}</div>`:'';
+    const primaryHtml=primary?`<div class="p2u-lab-pick"><span>SAFEST QUALIFYING PICK</span><h2>${esc(primary.market)}</h2><div class="p2u-lab-pick-meta"><b>Grade ${Math.round(primary.score)}/100</b><b>Odds ${fmt(primary.odds)}</b></div><ul>${primary.reasons.map(x=>`<li>${esc(x)}</li>`).join('')}</ul></div>`:`<div class="p2u-lab-no-bet"><span>STRICT RESULT</span><h2>No Bet</h2><p>No market cleared the minimum evidence, price and contradiction checks. The Lab will not force a selection.</p></div>`;
+    const supportHtml=supporting.length?`<div class="p2u-lab-support"><h3>Supporting markets</h3>${supporting.map(c=>`<div><b>${esc(c.market)}</b><span>Grade ${Math.round(c.score)}/100 · ${fmt(c.odds)}</span></div>`).join('')}</div>`:'';
     const warnHtml=warnings.length?`<div class="p2u-lab-warnings"><strong>Data notes</strong>${warnings.map(x=>`<p>${esc(x)}</p>`).join('')}</div>`:'';
     $('lab-result').innerHTML=`<div class="p2u-lab-result-head"><div><span>${esc(m.league||'')}</span><h2>${esc(h.team)} <i>vs</i> ${esc(a.team)}</h2><p>${esc(m.matchDate||'')} · projected total ${fmt(result.projection)}</p></div></div><div class="p2u-lab-profiles">${profileBox(h,homeTrait)}${profileBox(a,awayTrait)}</div>${primaryHtml}${supportHtml}${warnHtml}<p class="p2u-lab-disclaimer">This is a statistical match classification, not a guarantee. It only uses the currently loaded split data and odds.</p>`;
   }
@@ -263,119 +270,87 @@
   function traitStrength(r,key){
     if(!r)return 0;
     const values={
-      wins:(r.win??0)*82+Math.min(18,Math.max(0,(r.ppg??0)-1.5)*18),
-      losses:(r.loss??0)*82+Math.min(18,Math.max(0,1.2-(r.ppg??1.2))*18),
-      winless:Math.max(Math.min(100,(r.noWin||0)*10),r.win===null?0:(1-r.win)*100),
-      unbeaten:Math.max(Math.min(100,(r.noLoss||0)*10),(r.unbeaten??0)*100),
-      draws:(r.draw??0)*100,nodraws:Math.max(Math.min(100,(r.noDraw||0)*10),r.draw===null?0:(1-r.draw)*100),
-      over15:(r.over15??0)*100,under15:(r.under15??0)*100,over25:(r.over25??0)*100,under25:(r.under25??0)*100,
-      over35:(r.over35??0)*100,under35:(r.under35??0)*100,gg:(r.btts??0)*100,ng:(r.noBtts??0)*100
+      wins:(r.win??0)*82+Math.min(18,Math.max(0,(r.ppg??0)-1.5)*18),losses:(r.loss??0)*82+Math.min(18,Math.max(0,1.2-(r.ppg??1.2))*18),
+      winless:Math.max(Math.min(100,(r.noWin||0)*10),r.win===null?0:(1-r.win)*100),unbeaten:Math.max(Math.min(100,(r.noLoss||0)*10),(r.unbeaten??0)*100),
+      draws:(r.draw??0)*100,nodraws:Math.max(Math.min(100,(r.noDraw||0)*10),r.draw===null?0:(1-r.draw)*100),over15:(r.over15??0)*100,under15:(r.under15??0)*100,
+      over25:(r.over25??0)*100,under25:(r.under25??0)*100,over35:(r.over35??0)*100,under35:(r.under35??0)*100,gg:(r.btts??0)*100,ng:(r.noBtts??0)*100
     };
     return clamp(values[key]||0);
   }
-  function qualifyingTraits(r){
-    return Object.keys(trends).filter(key=>traitPass(r,key)).sort((a,b)=>traitStrength(r,b)-traitStrength(r,a));
-  }
+  function qualifyingTraits(r){return Object.keys(trends).filter(key=>traitPass(r,key)).sort((a,b)=>traitStrength(r,b)-traitStrength(r,a));}
   function marketFamily(market){
-    const x=String(market||'');
-    if(x==='No Draw — 12')return 'nodraw';
-    if(x.includes('Both Teams to Score'))return 'btts';
-    if(x.includes('Over ')||x.includes('Under '))return 'goals';
-    if(x.includes('or Draw'))return 'double';
-    if(x.includes('to win'))return 'result';
-    return 'other';
+    const x=String(market||'');if(x==='No Draw — 12')return'nodraw';if(x.includes('Both Teams to Score'))return'btts';if(x.includes('Over ')||x.includes('Under '))return'goals';if(x.includes('or Draw'))return'double';if(x.includes('to win'))return'result';return'other';
   }
-  function profileMarketCompatibility(homeTrait,awayTrait,market,h,a){
-    const x=String(market||'');
-    const inSet=(key,list)=>list.includes(key);
-    if(x===`${h.team} to win`)return inSet(homeTrait,['wins','unbeaten'])&&inSet(awayTrait,['losses','winless'])?12:0;
-    if(x===`${a.team} to win`)return inSet(homeTrait,['losses','winless'])&&inSet(awayTrait,['wins','unbeaten'])?12:0;
-    if(x===`${h.team} or Draw`)return inSet(homeTrait,['unbeaten','wins'])&&inSet(awayTrait,['winless','losses'])?10:0;
-    if(x===`Draw or ${a.team}`)return inSet(homeTrait,['winless','losses'])&&inSet(awayTrait,['unbeaten','wins'])?10:0;
-    if(x==='No Draw — 12')return (homeTrait==='nodraws'&&awayTrait==='nodraws')||(['wins','losses'].includes(homeTrait)&&['wins','losses'].includes(awayTrait))?10:0;
-    const both=(list)=>inSet(homeTrait,list)&&inSet(awayTrait,list);
-    if(x==='Over 1.5 Goals')return both(['over15','over25','gg'])?9:0;
-    if(x==='Under 1.5 Goals')return both(['under15','under25','ng'])?9:0;
-    if(x==='Over 2.5 Goals')return both(['over25','over35','gg'])?9:0;
-    if(x==='Under 2.5 Goals')return both(['under25','under35','ng'])?9:0;
-    if(x==='Over 3.5 Goals')return both(['over35','over25','gg'])?9:0;
-    if(x==='Under 3.5 Goals')return both(['under35','under25','ng'])?9:0;
-    if(x==='Both Teams to Score — Yes')return both(['gg','over15','over25'])?11:0;
-    if(x==='Both Teams to Score — No')return both(['ng','under25','under35','winless'])?11:0;
-    return 0;
+  function approvedPairs(h,a){
+    const bestByRoute=new Map(),homeTraits=qualifyingTraits(h).slice(0,5),awayTraits=qualifyingTraits(a).slice(0,5);
+    for(const ht of homeTraits)for(const at of awayTraits){
+      const route=Gate.approvedRoute(ht,at);if(!route)continue;
+      const pairStrength=(traitStrength(h,ht)+traitStrength(a,at))/2;
+      const old=bestByRoute.get(route.id);if(!old||pairStrength>old.pairStrength)bestByRoute.set(route.id,{ht,at,route,pairStrength});
+    }
+    return [...bestByRoute.values()].sort((x,y)=>y.pairStrength-x.pairStrength);
   }
   function autoSelectionFor(m){
-    const h=sideRow(m,'home'),a=sideRow(m,'away');
-    if((h.games||0)<MIN_SAMPLE||(a.games||0)<MIN_SAMPLE)return null;
-    const homeTraits=qualifyingTraits(h).slice(0,6),awayTraits=qualifyingTraits(a).slice(0,6);
-    if(!homeTraits.length||!awayTraits.length)return null;
+    const h=sideRow(m,'home'),a=sideRow(m,'away');if((h.games||0)<MIN_SAMPLE||(a.games||0)<MIN_SAMPLE)return null;
+    const pairs=approvedPairs(h,a);if(!pairs.length)return null;
     let best=null;
-    for(const ht of homeTraits){
-      for(const at of awayTraits){
-        const result=analyseMatch(m,ht,at),basePrimary=result.primary;
-        if(!basePrimary||basePrimary.score<80||basePrimary.odds===null||basePrimary.odds<1.15)continue;
-        const primary={...basePrimary,reasons:[...(basePrimary.reasons||[])]};
-        const learning=learningDecision(m,ht,at,primary.market,primary.odds);
-        if(learning.state==='block')continue;
-        primary.score=clamp(primary.score+learning.delta);
-        if(primary.score<80)continue;
-        const compatibility=profileMarketCompatibility(ht,at,primary.market,h,a);
-        if(!compatibility)continue;
-        const second=result.candidates.filter(c=>c.market!==primary.market)[0]||null;
-        const margin=second?primary.score-second.score:10;
-        if(margin<2.5)continue;
-        const pairStrength=(traitStrength(h,ht)+traitStrength(a,at))/2;
-        const rank=primary.score+pairStrength*.04+compatibility+Math.min(4,margin*.25);
-        const row={m,h,a,homeTrait:ht,awayTrait:at,primary,supporting:result.supporting,warnings:result.warnings,projection:result.projection,sample:result.sample,margin,pairStrength,compatibility,rank,learningState:learning.state,learningHash:learning.hash,modelVersion:AUTO_MODEL_VERSION};
-        if(!best||row.rank>best.rank)best=row;
-      }
+    for(const pair of pairs){
+      const result=analyseMatch(m,pair.ht,pair.at,{automatic:true}),base=result.primary;if(!base)continue;
+      const learning=learningDecision(m);if(learning.state==='block')continue;
+      const primary={...base,reasons:[...(base.reasons||[])]};primary.score=clamp(primary.score+learning.delta);primary.grade=primary.score;
+      if(primary.score<(primary.rule&&primary.rule.minGrade||84))continue;
+      const rank=primary.score+pair.pairStrength*.035+(result.quality&&result.quality.grade||0)*.025+Math.min(4,primary.margin*.2);
+      const row={m,h,a,homeTrait:pair.ht,awayTrait:pair.at,primary,supporting:result.supporting,warnings:result.warnings,projection:result.projection,sample:result.sample,margin:primary.margin,pairStrength:pair.pairStrength,rank,routeId:pair.route.id,quality:result.quality,learningState:learning.state,modelVersion:AUTO_MODEL_VERSION};
+      if(!best||row.rank>best.rank)best=row;
     }
     return best;
   }
   function automaticSelections(){
-    const cacheKey=selectedDate;
-    if(autoCache.has(cacheKey))return autoCache.get(cacheKey);
-    const rows=selectedFixturePool().map(autoSelectionFor).filter(Boolean);
-    const unique=new Map();
-    for(const row of rows){
-      const key=String(row.m.id??`${row.m.home}|${row.m.away}|${dateOf(row.m)}`);
-      const old=unique.get(key);if(!old||row.rank>old.rank)unique.set(key,row);
-    }
-    const result=[...unique.values()].sort((a,b)=>String(dateOf(a.m)).localeCompare(String(dateOf(b.m)))||b.primary.score-a.primary.score);
-    autoCache.set(cacheKey,result);
-    return result;
+    const cacheKey=`auto|${selectedDate}|${AUTO_MODEL_VERSION}`;if(autoCache.has(cacheKey))return autoCache.get(cacheKey);
+    const rows=autoFixturePool().map(autoSelectionFor).filter(Boolean),unique=new Map();
+    for(const row of rows){const key=fixtureKey(row.m),old=unique.get(key);if(!old||row.rank>old.rank)unique.set(key,row);}
+    const result=[...unique.values()].sort((a,b)=>String(dateOf(a.m)).localeCompare(String(dateOf(b.m)))||b.primary.score-a.primary.score);autoCache.set(cacheKey,result);return result;
   }
+  function dailyCoreRows(rows){
+    const groups=new Map(),out=[];for(const row of rows){const d=dateOf(row.m);if(!groups.has(d))groups.set(d,[]);groups.get(d).push(row);}for(const list of groups.values())out.push(...Gate.buildDailyCore(list,4));return out;
+  }
+  function slipMarket(row){return row&&row.primary&&row.primary.settleMarket||row&&row.primary&&row.primary.canonical||row&&row.primary&&row.primary.market;}
   function autoPickCard(row,key){
-    const {m,h,a,homeTrait,awayTrait,primary,sample,margin}=row;
-    const reasons=primary.reasons.slice(0,3).map(x=>`<li>${esc(x)}</li>`).join('');
+    const {m,h,a,homeTrait,awayTrait,primary,sample}=row,reasons=primary.reasons.slice(0,2).map(x=>`<li>${esc(x)}</li>`).join(''),quality=row.quality&&row.quality.grade||0;
     return `<article class="p2u-auto-pick-card" data-auto-fixture="${esc(fixtureKey(m))}" data-auto-market="${esc(primary.market)}">
-      <div class="p2u-auto-pick-top"><div><span>${esc(m.league||'Unknown league')}</span><small>${esc(dateOf(m))}${m.kickoff?` · ${esc(String(m.kickoff).slice(11,16))}`:''}</small></div><div><span class="p2u-auto-learning-pill" data-learning-state="${esc(row.learningState||'monitor')}">Learning tracked</span><b>${Math.round(primary.score)}%</b></div></div>
+      <div class="p2u-auto-pick-top"><div><span>${esc(m.league||'Unknown league')}</span><small>${esc(dateOf(m))}${m.kickoff?` · ${esc(String(m.kickoff).slice(11,16))}`:''}</small></div><div><span class="p2u-auto-learning-pill" data-learning-state="${esc(row.learningState||'monitor')}">Learning tracked</span><b>${Math.round(primary.score)}/100</b></div></div>
       <div class="p2u-auto-teams"><h3>${esc(h.team)} <i>vs</i> ${esc(a.team)}</h3><p>${esc(m.country||'')} · split sample ${sample}+</p></div>
       <div class="p2u-auto-profiles"><span><small>HOME PROFILE</small><b>${esc(trends[homeTrait].label)}</b></span><span><small>AWAY PROFILE</small><b>${esc(trends[awayTrait].label)}</b></span></div>
-      <div class="p2u-auto-market"><span>AUTOMATIC PICK</span><h3>${esc(primary.market)}</h3><div><b>Odds ${fmt(primary.odds)}</b><b>${Math.round(primary.score)}% strength</b><b>${fmt(margin)} margin</b></div></div>
+      <div class="p2u-auto-market"><span>AUTOMATIC PICK</span><h3>${esc(primary.market)}</h3><div><b>Odds ${fmt(primary.odds)}</b><b>Grade ${Math.round(primary.score)}/100</b><b>Data ${Math.round(quality)}/100</b></div></div>
       <ul class="p2u-auto-reasons">${reasons}</ul>
-      <button type="button" class="p2u-auto-open-lab" data-auto-open="${esc(key)}">Open in Matchup Lab</button>
+      <div class="p2u-auto-actions"><button type="button" class="p2u-auto-add-slip" data-auto-slip="${esc(key)}">+ Add to Slip</button><button type="button" class="p2u-auto-open-lab" data-auto-open="${esc(key)}">Open analysis</button></div>
     </article>`;
   }
-  function renderAutoPicks(){
-    const raw=automaticSelections();
-    autoRegistry=new Map();
-    raw.forEach((row,i)=>autoRegistry.set(String(i),row));
-    let rows=raw.filter(row=>{
-      if(autoLeague!=='all'&&row.m.league!==autoLeague)return false;
-      if(autoMarket!=='all'&&marketFamily(row.primary.market)!==autoMarket)return false;
-      if(autoQuery&&!`${row.h.team} ${row.a.team} ${row.m.league} ${row.primary.market}`.toLowerCase().includes(autoQuery))return false;
-      return true;
-    });
-    const checked=selectedFixturePool().length,noBet=Math.max(0,checked-raw.length);
-    $('team-auto-summary').innerHTML=`<span><b>${checked}</b><small>Fixtures checked</small></span><span><b>${raw.length}</b><small>Qualified picks</small></span><span><b>${noBet}</b><small>No Bet / insufficient profile</small></span>`;
-    $('team-auto-count').textContent=`${rows.length} selection${rows.length===1?'':'s'}`;
-    const groups=new Map();
-    for(const row of rows){const d=dateOf(row.m)||'Unknown date';if(!groups.has(d))groups.set(d,[]);groups.get(d).push(row);}
-    $('team-auto-grid').innerHTML=rows.length?[...groups.entries()].map(([d,list])=>`<section class="p2u-auto-date-group"><header><div><span>${esc(friendlyDate(d))}</span><small>${list.length} automatic selection${list.length===1?'':'s'}</small></div></header><div class="p2u-auto-pick-grid">${list.map(row=>{const key=[...autoRegistry.entries()].find(([,v])=>v===row)?.[0]||'';return autoPickCard(row,key);}).join('')}</div></section>`).join(''):'<div class="p2u-team-rank-empty">No fixture cleared the automatic profile, sample, odds, strength and market-separation checks for this date.</div>';
-    document.querySelectorAll('[data-auto-open]').forEach(button=>button.onclick=()=>openAutoInLab(button.dataset.autoOpen));
-    if(window.P2UAutoLearningV270&&typeof window.P2UAutoLearningV270.decorate==='function')window.P2UAutoLearningV270.decorate(raw);
+  function settledMarkup(){
+    const state=window.P2UAutoLearningV271&&window.P2UAutoLearningV271.state,rows=state&&Array.isArray(state.recent)?state.recent:[];
+    if(!rows.length)return'<div class="p2u-team-rank-empty">No verified settled Auto Picks are available yet.</div>';
+    return `<section class="p2u-auto-settled-grid">${rows.map(r=>`<article class="is-${String(r.result||'').toLowerCase()}"><div><span>${esc(r.date||'')}</span><b>${esc(r.home)} vs ${esc(r.away)}</b><small>${esc(r.market)}</small></div><strong>${esc(r.result||'')}</strong><em>${esc(r.score||'')}</em></article>`).join('')}</section>`;
   }
+  function renderAutoPicks(){
+    const raw=automaticSelections(),core=dailyCoreRows(raw);autoRegistry=new Map();raw.forEach((row,i)=>autoRegistry.set(String(i),row));
+    let source=autoView==='core'?core:raw;
+    let rows=source.filter(row=>{if(autoLeague!=='all'&&row.m.league!==autoLeague)return false;if(autoMarket!=='all'&&marketFamily(row.primary.market)!==autoMarket)return false;if(autoQuery&&!`${row.h.team} ${row.a.team} ${row.m.league} ${row.primary.market}`.toLowerCase().includes(autoQuery))return false;return true;});
+    const checked=autoFixturePool().length,noBet=Math.max(0,checked-raw.length);
+    $('team-auto-summary').innerHTML=`<span><b>${checked}</b><small>Current fixtures checked</small></span><span><b>${raw.length}</b><small>All qualified</small></span><span><b>${core.length}</b><small>Daily Core</small></span><span><b>${noBet}</b><small>No Bet</small></span>`;
+    document.querySelectorAll('[data-auto-view]').forEach(b=>b.classList.toggle('is-active',b.dataset.autoView===autoView));
+    const addCore=$('team-auto-add-core');if(addCore){addCore.hidden=autoView!=='core'||!core.length;addCore.disabled=!core.length;addCore.textContent=core.length?`+ Add Core ${core.length} to Slip`:'+ Add Core to Slip';}
+    if(autoView==='settled'){$('team-auto-count').textContent='Verified results';$('team-auto-grid').innerHTML=settledMarkup();return;}
+    $('team-auto-count').textContent=`${rows.length} selection${rows.length===1?'':'s'}`;
+    const groups=new Map();for(const row of rows){const d=dateOf(row.m)||'Unknown date';if(!groups.has(d))groups.set(d,[]);groups.get(d).push(row);}
+    let empty='No current fixture cleared the approved profile route, data-quality, price, value and conflict gates.';
+    if(autoView==='core'&&raw.length&&core.length===0)empty='Qualified fixtures exist, but fewer than three independent selections passed the Daily Core portfolio gate. Open All Qualified to review them.';
+    $('team-auto-grid').innerHTML=rows.length?[...groups.entries()].map(([d,list])=>`<section class="p2u-auto-date-group"><header><div><span>${esc(friendlyDate(d))}</span><small>${list.length} ${autoView==='core'?'core':'qualified'} selection${list.length===1?'':'s'}</small></div></header><div class="p2u-auto-pick-grid">${list.map(row=>{const key=[...autoRegistry.entries()].find(([,v])=>v===row)?.[0]||'';return autoPickCard(row,key);}).join('')}</div></section>`).join(''):`<div class="p2u-team-rank-empty">${esc(empty)}</div>`;
+    document.querySelectorAll('[data-auto-open]').forEach(button=>button.onclick=()=>openAutoInLab(button.dataset.autoOpen));
+    document.querySelectorAll('[data-auto-slip]').forEach(button=>button.onclick=()=>addAutoToSlip(button.dataset.autoSlip));
+    if(window.P2UAutoLearningV271&&typeof window.P2UAutoLearningV271.decorate==='function')window.P2UAutoLearningV271.decorate(raw);
+  }
+  function addAutoToSlip(key){const row=autoRegistry.get(String(key));if(!row||!window.P2USlip)return;window.P2USlip.add(row.m,slipMarket(row),'Team Intelligence Auto Picks');}
+  function addCoreToSlip(){const rows=dailyCoreRows(automaticSelections());if(!rows.length||!window.P2USlip)return;window.P2USlip.addMany(rows.map(row=>({m:row.m,market:slipMarket(row),engine:'Team Intelligence Daily Core'})),'Team Intelligence Daily Core');window.P2USlip.open();}
   function openAutoInLab(key){
     const row=autoRegistry.get(String(key));if(!row)return;
     $('lab-home-trait').value=row.homeTrait;$('lab-away-trait').value=row.awayTrait;populateLabMatches();
@@ -409,8 +384,11 @@
     $('team-auto-league').onchange=e=>{autoLeague=e.target.value;renderAutoPicks();};
     $('team-auto-market').onchange=e=>{autoMarket=e.target.value;renderAutoPicks();};
     $('team-auto-search').oninput=e=>{autoQuery=String(e.target.value||'').trim().toLowerCase();renderAutoPicks();};
+    document.querySelectorAll('[data-auto-view]').forEach(b=>b.onclick=()=>{autoView=b.dataset.autoView;renderAutoPicks();});
+    if($('team-auto-add-core'))$('team-auto-add-core').onclick=addCoreToSlip;
+    window.addEventListener('p2u:auto-learning-loaded',()=>{if(autoView==='settled')renderAutoPicks();});
     renderRankings();renderTrends();populateLabMatches();renderAutoPicks();setMode(mode);
   }
-  if(window.P2U_HEADLESS_AUTO_V270){window.P2UAutoHeadlessV270={modelVersion:AUTO_MODEL_VERSION,automaticSelections,selectedFixturePool,sideRow,dateOf,fixtureKey};return;}
+  if(window.P2U_HEADLESS_AUTO_V271){window.P2UAutoHeadlessV271={modelVersion:AUTO_MODEL_VERSION,automaticSelections,autoFixturePool,selectedFixturePool,sideRow,dateOf,fixtureKey,dailyCoreRows};return;}
   if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',init);else init();
 })();

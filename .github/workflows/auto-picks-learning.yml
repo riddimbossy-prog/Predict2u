@@ -31,22 +31,23 @@ jobs:
         env:
           SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
           SUPABASE_SECRET_KEY: ${{ secrets.SUPABASE_SECRET_KEY }}
+          API_FOOTBALL_KEY: ${{ secrets.API_FOOTBALL_KEY }}
           AUTO_LEARNING_POLICY_B64: ${{ secrets.AUTO_LEARNING_POLICY_B64 }}
           DRY_RUN: ${{ inputs.dry_run && '1' || '0' }}
-          PRIVATE_REPORT_PATH: ${{ runner.temp }}/auto-picks-learning-private-v270.json
-        run: node auto-picks-learning-worker-v270.js
+          PRIVATE_REPORT_PATH: ${{ runner.temp }}/auto-picks-learning-private-v271.json
+        run: node auto-picks-learning-worker-v271.js
       - name: Upload private learning report
         uses: actions/upload-artifact@v4
         with:
-          name: auto-picks-learning-private-v270
-          path: ${{ runner.temp }}/auto-picks-learning-private-v270.json
+          name: auto-picks-learning-private-v271
+          path: ${{ runner.temp }}/auto-picks-learning-private-v271.json
           retention-days: 14
       - name: Publish compact learning status
         if: ${{ !inputs.dry_run }}
         run: |
           git config user.name "predict2u-learning-bot"
           git config user.email "bot@users.noreply.github.com"
-          git add auto-picks-learning-public-v270.json auto-picks-learning-guard-v270.js
+          git add auto-picks-learning-public-v271.json auto-picks-learning-guard-v271.js
           if git diff --staged --quiet; then echo "No public learning change."; exit 0; fi
           git commit -m "Update Auto Picks learning status"
           for i in 1 2 3 4 5; do

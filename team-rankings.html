@@ -19,7 +19,8 @@
   <link rel="stylesheet" href="controls-v267.css" data-p2u-controls-v267="true">
   <link rel="stylesheet" href="team-date-filter-v268.css" data-p2u-team-date-v268="true">
   <link rel="stylesheet" href="team-auto-picks-v269.css" data-p2u-team-auto-v269="true">
-  <link rel="stylesheet" href="auto-picks-learning-v270.css" data-p2u-auto-learning-v270="true">
+  <link rel="stylesheet" href="auto-picks-learning-v271.css" data-p2u-auto-learning-v271="true">
+  <link rel="stylesheet" href="auto-picks-gatekeeper-v271.css" data-p2u-auto-gatekeeper-v271="true">
 </head>
 <body>
 <script src="unified-shell-v234.js"></script>
@@ -130,18 +131,27 @@
       <div>
         <span class="p2u-team-rank-kicker">DAILY PROFILE PICKS</span>
         <h2>Automatic matchup selections</h2>
-        <p>Predict2U scans every loaded fixture for qualifying home and away profiles, tests every compatible profile pairing through the Matchup Lab, removes borderline outcomes and publishes only the strongest market for each match.</p>
+        <p>Predict2U scans current pre-kickoff fixtures, checks approved profile routes, price quality and conflicting outcomes, then publishes one strongest market or No Bet.</p>
       </div>
       <div class="p2u-auto-picks-rules">
-        <span>8+ split matches</span>
-        <span>80%+ model strength</span>
+        <span>Current fixtures only</span>
+        <span>Approved profile routes</span>
         <span>One pick per fixture</span>
         <span>No forced picks</span>
       </div>
     </section>
 
-    <section id="team-auto-learning" class="p2u-auto-learning" aria-live="polite"><div><span>LEARNING SUPERVISOR</span><b>Monitoring</b></div><p>Auto Profile v1.1</p><small>Settled results are reviewed privately.</small></section>
+    <section id="team-auto-learning" class="p2u-auto-learning" aria-live="polite"><div><span>LEARNING SUPERVISOR</span><b>Monitoring</b></div><p>Auto Profile v2.0</p><small>Settled results are reviewed privately.</small></section>
     <section id="team-auto-learning-recent" aria-live="polite"></section>
+
+    <section class="p2u-auto-viewbar" aria-label="Automatic pick view">
+      <div class="p2u-auto-view-tabs" role="tablist">
+        <button type="button" class="is-active" data-auto-view="core">Daily Core</button>
+        <button type="button" data-auto-view="all">All Qualified</button>
+        <button type="button" data-auto-view="settled">Settled</button>
+      </div>
+      <button id="team-auto-add-core" class="p2u-auto-add-core" type="button" hidden>+ Add Core to Slip</button>
+    </section>
 
     <section class="p2u-auto-picks-controls" aria-label="Daily automatic selection filters">
       <label class="p2u-team-field"><span>League</span><select id="team-auto-league" aria-label="Automatic picks league"><option value="all">All leagues</option></select></label>
@@ -151,7 +161,7 @@
 
     <div class="p2u-auto-summary" id="team-auto-summary" aria-live="polite"></div>
     <div class="p2u-team-rank-section-head">
-      <div><h2>Daily automatic selections</h2><p>Each fixture is analysed once. Only the highest-ranked non-borderline market is shown.</p></div>
+      <div><h2>Daily automatic selections</h2><p>Daily Core controls correlation. All Qualified shows every fixture that passed the individual gate.</p></div>
       <span id="team-auto-count" class="p2u-team-rank-count">0 selections</span>
     </div>
     <section id="team-auto-grid" class="p2u-auto-date-list"><div class="p2u-team-rank-empty">Scanning loaded fixtures and compatible team profiles…</div></section>
@@ -160,8 +170,10 @@
 </main>
 <script src="current-data.js"></script>
 <script src="data-freshness-v264.js"></script>
-<script src="auto-picks-learning-guard-v270.js"></script>
-<script src="auto-picks-learning-v270.js"></script>
+<script src="slip.js"></script>
+<script src="auto-picks-learning-guard-v271.js"></script>
+<script src="auto-picks-learning-v271.js"></script>
+<script src="auto-picks-gatekeeper-v271.js"></script>
 <script src="team-rankings.js"></script>
 <script src="football-assets.js" defer></script>
 <script src="pwa-launch.js" defer></script>
