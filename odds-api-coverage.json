@@ -1,6 +1,6 @@
 {
   "version": "v251",
-  "generatedAt": "2026-07-27T17:59:56.525Z",
+  "generatedAt": "2026-07-27T18:12:35.839Z",
   "provider": "The Odds API v4",
   "keyPresent": true,
   "regions": "uk",
@@ -14,14 +14,6 @@
       "sportTitle": "EPL",
       "score": 0.987,
       "matches": 5
-    },
-    {
-      "league": "3. Division - Girone 2",
-      "country": "Norway",
-      "sportKey": "soccer_norway_eliteserien",
-      "sportTitle": "Eliteserien - Norway",
-      "score": 0.305,
-      "matches": 3
     },
     {
       "league": "3. Division - Girone 3",
@@ -648,6 +640,14 @@
       "matches": 8
     },
     {
+      "league": "3. Division - Girone 2",
+      "country": "Norway",
+      "sportKey": "soccer_norway_eliteserien",
+      "sportTitle": "Eliteserien - Norway",
+      "score": 0.305,
+      "matches": 2
+    },
+    {
       "league": "Division 2 - Norra Götaland",
       "country": "Sweden",
       "sportKey": "soccer_sweden_allsvenskan",
@@ -878,14 +878,6 @@
       "sportTitle": "Liga MX",
       "score": 1,
       "matches": 8
-    },
-    {
-      "league": "Liga MX Femenil",
-      "country": "Mexico",
-      "sportKey": "soccer_mexico_ligamx",
-      "sportTitle": "Liga MX",
-      "score": 0.68,
-      "matches": 7
     },
     {
       "league": "League Two",
@@ -1216,14 +1208,6 @@
       "matches": 3
     },
     {
-      "league": "USL League Two",
-      "country": "USA",
-      "sportKey": "soccer_usa_mls",
-      "sportTitle": "MLS",
-      "score": 0.466,
-      "matches": 1
-    },
-    {
       "league": "Second League - Group 4",
       "country": "Russia",
       "sportKey": "soccer_russia_premier_league",
@@ -1272,7 +1256,7 @@
       "matches": 1
     }
   ],
-  "matchesConsidered": 2086,
+  "matchesConsidered": 2080,
   "matchesMatched": 0,
   "matchesUpdated": 0,
   "fieldsFilled": 0,
@@ -1286,36 +1270,6 @@
       "country": "Nigeria",
       "reason": "No matching soccer sport key",
       "bestScore": 0.143
-    },
-    {
-      "league": "A Lyga",
-      "country": "Lithuania",
-      "reason": "No matching soccer sport key",
-      "bestScore": 0.143
-    },
-    {
-      "league": "Virsliga",
-      "country": "Latvia",
-      "reason": "No matching soccer sport key",
-      "bestScore": 0
-    },
-    {
-      "league": "Esiliiga A",
-      "country": "Estonia",
-      "reason": "No matching soccer sport key",
-      "bestScore": 0.143
-    },
-    {
-      "league": "1. Liga",
-      "country": "Latvia",
-      "reason": "No matching soccer sport key",
-      "bestScore": 0.143
-    },
-    {
-      "league": "First League",
-      "country": "Bulgaria",
-      "reason": "No matching soccer sport key",
-      "bestScore": 0.167
     },
     {
       "league": "FNL",
@@ -1366,6 +1320,12 @@
       "bestScore": 0.143
     },
     {
+      "league": "First League",
+      "country": "Bulgaria",
+      "reason": "No matching soccer sport key",
+      "bestScore": 0.167
+    },
+    {
       "league": "Liga I",
       "country": "Romania",
       "reason": "No matching soccer sport key",
@@ -1414,12 +1374,6 @@
       "bestScore": 0
     },
     {
-      "league": "Calcutta Premier Division",
-      "country": "India",
-      "reason": "No matching soccer sport key",
-      "bestScore": 0.222
-    },
-    {
       "league": "ASEAN Championship",
       "country": "World",
       "reason": "No matching soccer sport key",
@@ -1442,12 +1396,6 @@
       "country": "Israel",
       "reason": "No matching soccer sport key",
       "bestScore": 0.111
-    },
-    {
-      "league": "CONCACAF Caribbean Club Shield",
-      "country": "World",
-      "reason": "No matching soccer sport key",
-      "bestScore": 0
     },
     {
       "league": "Meistaradeildin",
@@ -1492,12 +1440,6 @@
       "bestScore": 0.125
     },
     {
-      "league": "Cupa României",
-      "country": "Romania",
-      "reason": "No matching soccer sport key",
-      "bestScore": 0
-    },
-    {
       "league": "Division 1",
       "country": "Kuwait",
       "reason": "No matching soccer sport key",
@@ -1508,12 +1450,6 @@
       "country": "Iceland",
       "reason": "No matching soccer sport key",
       "bestScore": 0.125
-    },
-    {
-      "league": "Segunda División",
-      "country": "Venezuela",
-      "reason": "No matching soccer sport key",
-      "bestScore": 0.143
     },
     {
       "league": "Copa Ecuador",
@@ -1666,6 +1602,12 @@
       "bestScore": 0
     },
     {
+      "league": "1. Liga",
+      "country": "Latvia",
+      "reason": "No matching soccer sport key",
+      "bestScore": 0.143
+    },
+    {
       "league": "HNL",
       "country": "Croatia",
       "reason": "No matching soccer sport key",
@@ -1762,20 +1704,14 @@
       "bestScore": 0.111
     },
     {
+      "league": "Virsliga",
+      "country": "Latvia",
+      "reason": "No matching soccer sport key",
+      "bestScore": 0
+    },
+    {
       "league": "Esiliiga B",
       "country": "Estonia",
-      "reason": "No matching soccer sport key",
-      "bestScore": 0.143
-    },
-    {
-      "league": "David Kipiani Cup",
-      "country": "Georgia",
-      "reason": "No matching soccer sport key",
-      "bestScore": 0.125
-    },
-    {
-      "league": "Third League - Southwest",
-      "country": "Bulgaria",
       "reason": "No matching soccer sport key",
       "bestScore": 0.143
     },
@@ -1784,6 +1720,12 @@
       "country": "Hungary",
       "reason": "No matching soccer sport key",
       "bestScore": 0
+    },
+    {
+      "league": "Esiliiga A",
+      "country": "Estonia",
+      "reason": "No matching soccer sport key",
+      "bestScore": 0.143
     },
     {
       "league": "1. SNL",
@@ -1800,6 +1742,12 @@
     {
       "league": "Liga Nacional",
       "country": "Guatemala",
+      "reason": "No matching soccer sport key",
+      "bestScore": 0.143
+    },
+    {
+      "league": "A Lyga",
+      "country": "Lithuania",
       "reason": "No matching soccer sport key",
       "bestScore": 0.143
     },
@@ -2302,24 +2250,6 @@
       "reason": "No event/team match"
     },
     {
-      "league": "3. Division - Girone 2",
-      "home": "Volda",
-      "away": "Ranheim II",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "3. Division - Girone 2",
-      "home": "Herd",
-      "away": "Volda",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "3. Division - Girone 2",
-      "home": "Byåsen",
-      "away": "Spjelkavik",
-      "reason": "No event/team match"
-    },
-    {
       "league": "3. Division - Girone 3",
       "home": "Vard",
       "away": "Sogndal II",
@@ -2674,6 +2604,18 @@
       "reason": "No event/team match"
     },
     {
+      "league": "3. Division - Girone 2",
+      "home": "Herd",
+      "away": "Volda",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "3. Division - Girone 2",
+      "home": "Byåsen",
+      "away": "Spjelkavik",
+      "reason": "No event/team match"
+    },
+    {
       "league": "2. Division - Group 1",
       "home": "Pors Grenland",
       "away": "Brattvåg",
@@ -2773,6 +2715,54 @@
       "league": "1. Division Women",
       "home": "Frigg Oslo FK W",
       "away": "Kolbotn W",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "1. Division Women",
+      "home": "Fyllingsdalen W",
+      "away": "Åsane W",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "1. Division Women",
+      "home": "Arna-Bjørnar W",
+      "away": "Klepp W",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "1. Division Women",
+      "home": "Grei W",
+      "away": "Start W",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Allsvenskan",
+      "home": "BK Hacken",
+      "away": "AIK Stockholm",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Allsvenskan",
+      "home": "BK Hacken",
+      "away": "Kalmar FF",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Allsvenskan",
+      "home": "IF Brommapojkarna",
+      "away": "Malmo FF",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Allsvenskan",
+      "home": "IFK Goteborg",
+      "away": "Degerfors IF",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Allsvenskan",
+      "home": "AIK Stockholm",
+      "away": "Orgryte IS",
       "reason": "No event/team match"
     }
   ],
@@ -4008,5 +3998,5 @@
   },
   "skipped": false,
   "skipReason": null,
-  "completedAt": "2026-07-27T18:00:23.041Z"
+  "completedAt": "2026-07-27T18:12:43.939Z"
 }
