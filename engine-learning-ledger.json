@@ -1,7 +1,7 @@
 {
   "version": "v193",
   "schemaVersion": 1,
-  "updated": "2026-07-27T13:06:16.934Z",
+  "updated": "2026-07-27T14:17:09.464Z",
   "minimumSamples": {
     "teamFavorite": 5,
     "teamUnderdog": 5,
@@ -12,10 +12,10 @@
   },
   "decayHalfLifeDays": 120,
   "summary": {
-    "settledFixtures": 455,
-    "settledDecisions": 806,
+    "settledFixtures": 456,
+    "settledDecisions": 807,
     "reviewedLosses": 150,
-    "attachedUpcoming": 2558,
+    "attachedUpcoming": 2556,
     "highRiskUpcoming": 0,
     "stableUpcoming": 0
   },
@@ -18786,6 +18786,132 @@
       "patternStability": 100,
       "favoriteReliability": 0
     },
+    "929|guangdong mingtu": {
+      "name": "Guangdong Mingtu",
+      "league": "League Two",
+      "leagueId": 929,
+      "favorite": {
+        "sample": 1,
+        "wins": 0,
+        "draws": 1,
+        "losses": 0,
+        "winRate": 0,
+        "drawRate": 1,
+        "nonLossRate": 1,
+        "upsetRate": 0,
+        "nonLossWilson": {
+          "lower": 0.2065,
+          "mid": 1,
+          "upper": 1
+        },
+        "winWilson": {
+          "lower": 0,
+          "mid": 0,
+          "upper": 0.7935
+        },
+        "decayedWeight": 0.99
+      },
+      "underdog": {
+        "sample": 0,
+        "wins": 0,
+        "draws": 0,
+        "losses": 0,
+        "winRate": null,
+        "drawRate": null,
+        "nonLossRate": 0,
+        "upsetRate": null,
+        "nonLossWilson": {
+          "lower": null,
+          "mid": null,
+          "upper": null
+        },
+        "winWilson": {
+          "lower": null,
+          "mid": null,
+          "upper": null
+        },
+        "decayedWeight": 0
+      },
+      "favoriteBands": {
+        "1.86-2.25": {
+          "sample": 1,
+          "wins": 0,
+          "draws": 1,
+          "losses": 0,
+          "winRate": 0,
+          "drawRate": 1,
+          "nonLossRate": 1,
+          "upsetRate": 0,
+          "nonLossWilson": {
+            "lower": 0.2065,
+            "mid": 1,
+            "upper": 1
+          },
+          "winWilson": {
+            "lower": 0,
+            "mid": 0,
+            "upper": 0.7935
+          },
+          "decayedWeight": 0.99
+        }
+      },
+      "underdogUpsets": 0,
+      "flags": [],
+      "patternStability": 70,
+      "favoriteReliability": 100
+    },
+    "929|chengdu rongcheng ii": {
+      "name": "Chengdu Rongcheng II",
+      "league": "League Two",
+      "leagueId": 929,
+      "favorite": {
+        "sample": 0,
+        "wins": 0,
+        "draws": 0,
+        "losses": 0,
+        "winRate": null,
+        "drawRate": null,
+        "nonLossRate": 0,
+        "upsetRate": null,
+        "nonLossWilson": {
+          "lower": null,
+          "mid": null,
+          "upper": null
+        },
+        "winWilson": {
+          "lower": null,
+          "mid": null,
+          "upper": null
+        },
+        "decayedWeight": 0
+      },
+      "underdog": {
+        "sample": 1,
+        "wins": 0,
+        "draws": 1,
+        "losses": 0,
+        "winRate": 0,
+        "drawRate": 1,
+        "nonLossRate": 1,
+        "upsetRate": 0,
+        "nonLossWilson": {
+          "lower": 0.2065,
+          "mid": 1,
+          "upper": 1
+        },
+        "winWilson": {
+          "lower": 0,
+          "mid": 0,
+          "upper": 0.7935
+        },
+        "decayedWeight": 0.99
+      },
+      "favoriteBands": {},
+      "underdogUpsets": 0,
+      "flags": [],
+      "patternStability": 100,
+      "favoriteReliability": 0
+    },
     "1229|atl andahuaylas w": {
       "name": "Atl. Andahuaylas W",
       "league": "Liga Women",
@@ -19973,7 +20099,7 @@
           "mid": 0.5,
           "upper": 0.9055
         },
-        "decayedWeight": 1.97
+        "decayedWeight": 1.96
       },
       "bands": {
         "1.61-1.85": {
@@ -19995,7 +20121,7 @@
             "mid": 0.5,
             "upper": 0.9055
           },
-          "decayedWeight": 1.97
+          "decayedWeight": 1.96
         }
       },
       "homeFavorites": {
@@ -20017,7 +20143,7 @@
           "mid": 0.5,
           "upper": 0.9055
         },
-        "decayedWeight": 1.97
+        "decayedWeight": 1.96
       },
       "awayFavorites": {
         "sample": 0,
@@ -22023,7 +22149,7 @@
           "mid": 1,
           "upper": 1
         },
-        "decayedWeight": 2.9
+        "decayedWeight": 2.89
       },
       "bands": {
         "1.36-1.60": {
@@ -26060,25 +26186,25 @@
       "league": "League Two",
       "leagueId": 929,
       "favorite": {
-        "sample": 5,
+        "sample": 6,
         "wins": 2,
-        "draws": 3,
+        "draws": 4,
         "losses": 0,
-        "winRate": 0.4,
-        "drawRate": 0.6,
+        "winRate": 0.333,
+        "drawRate": 0.667,
         "nonLossRate": 1,
         "upsetRate": 0,
         "nonLossWilson": {
-          "lower": 0.5655,
+          "lower": 0.6097,
           "mid": 1,
           "upper": 1
         },
         "winWilson": {
-          "lower": 0.1176,
-          "mid": 0.4,
-          "upper": 0.7693
+          "lower": 0.0968,
+          "mid": 0.3333,
+          "upper": 0.7
         },
-        "decayedWeight": 4.93
+        "decayedWeight": 5.92
       },
       "bands": {
         "1.61-1.85": {
@@ -26103,25 +26229,25 @@
           "decayedWeight": 0.99
         },
         "1.86-2.25": {
-          "sample": 2,
+          "sample": 3,
           "wins": 0,
-          "draws": 2,
+          "draws": 3,
           "losses": 0,
           "winRate": 0,
           "drawRate": 1,
           "nonLossRate": 1,
           "upsetRate": 0,
           "nonLossWilson": {
-            "lower": 0.3424,
+            "lower": 0.4385,
             "mid": 1,
             "upper": 1
           },
           "winWilson": {
             "lower": 0,
             "mid": 0,
-            "upper": 0.6576
+            "upper": 0.5615
           },
-          "decayedWeight": 1.97
+          "decayedWeight": 2.96
         },
         "1.36-1.60": {
           "sample": 2,
@@ -26146,25 +26272,25 @@
         }
       },
       "homeFavorites": {
-        "sample": 5,
+        "sample": 6,
         "wins": 2,
-        "draws": 3,
+        "draws": 4,
         "losses": 0,
-        "winRate": 0.4,
-        "drawRate": 0.6,
+        "winRate": 0.333,
+        "drawRate": 0.667,
         "nonLossRate": 1,
         "upsetRate": 0,
         "nonLossWilson": {
-          "lower": 0.5655,
+          "lower": 0.6097,
           "mid": 1,
           "upper": 1
         },
         "winWilson": {
-          "lower": 0.1176,
-          "mid": 0.4,
-          "upper": 0.7693
+          "lower": 0.0968,
+          "mid": 0.3333,
+          "upper": 0.7
         },
-        "decayedWeight": 4.93
+        "decayedWeight": 5.92
       },
       "awayFavorites": {
         "sample": 0,
@@ -26188,7 +26314,7 @@
         "decayedWeight": 0
       },
       "flags": [],
-      "stabilityScore": 85
+      "stabilityScore": 83.3
     },
     "1026": {
       "league": "Second League A - Division A Silver",
@@ -30993,6 +31119,34 @@
       },
       "flags": []
     },
+    "929|guangdong mingtu|chengdu rongcheng ii": {
+      "home": "Guangdong Mingtu",
+      "away": "Chengdu Rongcheng II",
+      "league": "League Two",
+      "leagueId": 929,
+      "favorite": {
+        "sample": 1,
+        "wins": 0,
+        "draws": 1,
+        "losses": 0,
+        "winRate": 0,
+        "drawRate": 1,
+        "nonLossRate": 1,
+        "upsetRate": 0,
+        "nonLossWilson": {
+          "lower": 0.2065,
+          "mid": 1,
+          "upper": 1
+        },
+        "winWilson": {
+          "lower": 0,
+          "mid": 0,
+          "upper": 0.7935
+        },
+        "decayedWeight": 0.99
+      },
+      "flags": []
+    },
     "1229|flamengo fbc w|atl andahuaylas w": {
       "home": "Flamengo FBC W",
       "away": "Atl. Andahuaylas W",
@@ -31220,25 +31374,25 @@
   },
   "oddsBands": {
     "1.86-2.25": {
-      "sample": 55,
+      "sample": 56,
       "wins": 23,
-      "draws": 15,
+      "draws": 16,
       "losses": 17,
-      "winRate": 0.4171,
-      "drawRate": 0.2737,
-      "nonLossRate": 0.6908,
-      "upsetRate": 0.3093,
+      "winRate": 0.4095,
+      "drawRate": 0.2869,
+      "nonLossRate": 0.6964,
+      "upsetRate": 0.3036,
       "nonLossWilson": {
-        "lower": 0.5597,
-        "mid": 0.6909,
-        "upper": 0.7972
+        "lower": 0.5666,
+        "mid": 0.6964,
+        "upper": 0.801
       },
       "winWilson": {
-        "lower": 0.2974,
-        "mid": 0.4182,
-        "upper": 0.5497
+        "lower": 0.2917,
+        "mid": 0.4107,
+        "upper": 0.5412
       },
-      "decayedWeight": 53.23
+      "decayedWeight": 54.21
     },
     "1.01-1.35": {
       "sample": 26,
@@ -31259,7 +31413,7 @@
         "mid": 0.8077,
         "upper": 0.9149
       },
-      "decayedWeight": 25.11
+      "decayedWeight": 25.1
     },
     "1.36-1.60": {
       "sample": 35,
@@ -31280,7 +31434,7 @@
         "mid": 0.5429,
         "upper": 0.6953
       },
-      "decayedWeight": 34.12
+      "decayedWeight": 34.11
     },
     "1.61-1.85": {
       "sample": 43,
@@ -31301,7 +31455,7 @@
         "mid": 0.5581,
         "upper": 0.6957
       },
-      "decayedWeight": 41.9
+      "decayedWeight": 41.89
     }
   },
   "contexts": {
@@ -33588,15 +33742,15 @@
       "hardVeto": false
     },
     "*|League Bias|Under 3.5 Goals|1.86-2.25|other": {
-      "sample": 11,
-      "wins": 9,
+      "sample": 12,
+      "wins": 10,
       "losses": 2,
-      "winRate": 0.8182,
-      "lossRate": 0.1818,
+      "winRate": 0.8333,
+      "lossRate": 0.1667,
       "wilson": {
-        "lower": 0.523,
-        "mid": 0.8182,
-        "upper": 0.9486
+        "lower": 0.552,
+        "mid": 0.8333,
+        "upper": 0.953
       },
       "adjustment": 0,
       "hardVeto": false
@@ -36878,15 +37032,15 @@
       "hardVeto": false
     },
     "league two|League Bias|Under 3.5 Goals|1.86-2.25|other": {
-      "sample": 2,
-      "wins": 1,
+      "sample": 3,
+      "wins": 2,
       "losses": 1,
-      "winRate": 0.5,
-      "lossRate": 0.5,
+      "winRate": 0.6667,
+      "lossRate": 0.3333,
       "wilson": {
-        "lower": 0.0945,
-        "mid": 0.5,
-        "upper": 0.9055
+        "lower": 0.2077,
+        "mid": 0.6667,
+        "upper": 0.9385
       },
       "adjustment": 0,
       "hardVeto": false
