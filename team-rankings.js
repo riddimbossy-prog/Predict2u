@@ -1,4 +1,4 @@
-/* Predict2U v271 — Team Intelligence and Auto Picks Gatekeeper v2. */
+/* Predict2U v272 — Expanded Team Intelligence trends + Auto Picks Gatekeeper v2.1. */
 (function(){
   'use strict';
   const Gate=window.P2UAutoGatekeeperV271;
@@ -56,13 +56,30 @@
     const btts=rate(first(htft.ftBtts));
     const noBtts=btts===null?null:1-btts;
     const scored=fts===null?null:1-fts,conceded=cs===null?null:1-cs;
+    // Team-specific half and HT/FT profiles. Values remain null when the feed does not supply them.
+    const htWin=rate(first(htft.htWin)),htDraw=rate(first(htft.htDraw)),htLoss=rate(first(htft.htLoss));
+    const htUnbeaten=htWin!==null&&htDraw!==null?htWin+htDraw:null;
+    const htWinless=htWin===null?null:1-htWin,htNoDraw=htDraw===null?null:1-htDraw;
+    const fhOver05=rate(first(htft.fhOver05,m&&m[`${side}FHOver05Rate`]));
+    const fhUnder05=fhOver05===null?null:1-fhOver05;
+    const fhUnder15=rate(first(htft.fhUnder15,m&&m[`${side}FHUnder15Rate`]));
+    const fhOver15=fhUnder15===null?null:1-fhUnder15;
+    const fhBtts=rate(first(htft.fhBtts,m&&m[`${side}FHBttsRate`])),fhNoBtts=fhBtts===null?null:1-fhBtts;
+    const shOver05=rate(first(htft.shOver05,m&&m[`${side}SHOver05Rate`]));
+    const shUnder05=shOver05===null?null:1-shOver05;
+    const shUnder15=rate(first(htft.shUnder15,m&&m[`${side}SHUnder15Rate`]));
+    const shOver15=shUnder15===null?null:1-shUnder15;
+    const shBtts=rate(first(htft.shBtts,m&&m[`${side}SHBttsRate`])),shNoBtts=shBtts===null?null:1-shBtts;
+    const cells=htft.cells||{},htftSample=first(htft.samples,htft.sample,games);
+    const htft11=htftSample?div(first(cells.WW,0),htftSample):null;
+    const htft22=htftSample?div(first(cells.LL,0),htftSample):null;
     const noLoss=first(st.noLoss,0),noWin=first(st.noWin,0),noDraw=first(st.noDraw,0),winStreak=first(st.win,0),lossStreak=first(st.loss,0);
     const position=first(m&&m[`${side}Pos`]),tableSize=first(m&&m.tableSize,m&&m.venueTableSize);
     const odds=first(m&&m.odds&&m.odds[home?'home':'away']);
     const form=String(first(m&&m[`${side}Recent10Form`])||m&&m[`${side}Recent10Form`]||m&&m[`${side}Form`]||'');
     const recentForm=Gate.formStats(form);
     const recentPPG=first(m&&m[`${side}Recent10PPG`],advanced.recent10PPG);
-    return {fixture:m,team,league:m&&m.league||'Unknown league',country:m&&m.country||'',logo:m&&m[`${side}Logo`]||'',side,games,ppg,gf,ga,cs,fts,win,draw,loss,unbeaten,over15,over25,over35,under15:over15===null?null:1-over15,under25:over25===null?null:1-over25,under35:over35===null?null:1-over35,btts,noBtts,scored,conceded,noLoss,noWin,noDraw,winStreak,lossStreak,position,tableSize,odds,opponent:m&&m[home?'away':'home'],kickoff:m&&m.kickoff||'',matchDate:dateOf(m),recentPPG,recentForm,form,profileSource:profile.usedSplit||''};
+    return {fixture:m,team,league:m&&m.league||'Unknown league',country:m&&m.country||'',logo:m&&m[`${side}Logo`]||'',side,games,ppg,gf,ga,cs,fts,win,draw,loss,unbeaten,over15,over25,over35,under15:over15===null?null:1-over15,under25:over25===null?null:1-over25,under35:over35===null?null:1-over35,btts,noBtts,scored,conceded,htWin,htDraw,htLoss,htUnbeaten,htWinless,htNoDraw,fhOver05,fhUnder05,fhOver15,fhUnder15,fhBtts,fhNoBtts,shOver05,shUnder05,shOver15,shUnder15,shBtts,shNoBtts,htft11,htft22,noLoss,noWin,noDraw,winStreak,lossStreak,position,tableSize,odds,opponent:m&&m[home?'away':'home'],kickoff:m&&m.kickoff||'',matchDate:dateOf(m),recentPPG,recentForm,form,profileSource:profile.usedSplit||''};
   }
   function latestProfiles(pool=selectedFixturePool()){
     const map=new Map();
@@ -91,6 +108,30 @@
     under25:{label:'Under 2.5',title:'Under 2.5 teams',copy:'Venue Under 2.5 rate of at least 65%.',filter:r=>r.under25!==null&&r.under25>=.65,sort:(a,b)=>b.under25-a.under25,metrics:r=>[['Under 2.5',pct(r.under25)],['Scores',fmt(r.gf)],['Concedes',fmt(r.ga)]]},
     over35:{label:'Over 3.5',title:'Over 3.5 teams',copy:'Venue Over 3.5 rate of at least 55%.',filter:r=>r.over35!==null&&r.over35>=.55,sort:(a,b)=>b.over35-a.over35,metrics:r=>[['Over 3.5',pct(r.over35)],['Scores',fmt(r.gf)],['Concedes',fmt(r.ga)]]},
     under35:{label:'Under 3.5',title:'Under 3.5 teams',copy:'Venue Under 3.5 rate of at least 80%.',filter:r=>r.under35!==null&&r.under35>=.80,sort:(a,b)=>b.under35-a.under35,metrics:r=>[['Under 3.5',pct(r.under35)],['Scores',fmt(r.gf)],['Concedes',fmt(r.ga)]]},
+    cleansheet:{label:'Clean Sheet',title:'Clean-sheet teams',copy:'Team-specific venue clean-sheet rate of at least 40%.',filter:r=>r.cs!==null&&r.cs>=.40,sort:(a,b)=>b.cs-a.cs,metrics:r=>[['Clean sheets',pct(r.cs)],['Concedes',fmt(r.ga)],['Sample',r.games]]},
+    failedscore:{label:'Fail to Score',title:'Teams failing to score',copy:'Team-specific venue failed-to-score rate of at least 40%.',filter:r=>r.fts!==null&&r.fts>=.40,sort:(a,b)=>b.fts-a.fts,metrics:r=>[['Fail to score',pct(r.fts)],['Scores',fmt(r.gf)],['Sample',r.games]]},
+    scored:{label:'Goals Scored',title:'Reliable scoring teams',copy:'Scores in at least 75% of venue matches and averages 1.25+ goals.',filter:r=>r.scored!==null&&r.scored>=.75&&r.gf!==null&&r.gf>=1.25,sort:(a,b)=>b.scored-a.scored||b.gf-a.gf,metrics:r=>[['Scoring rate',pct(r.scored)],['Goals scored',fmt(r.gf)],['FTS',pct(r.fts)]]},
+    conceded:{label:'Goals Conceded',title:'Teams regularly conceding',copy:'Concedes in at least 75% of venue matches and averages 1.20+ conceded.',filter:r=>r.conceded!==null&&r.conceded>=.75&&r.ga!==null&&r.ga>=1.20,sort:(a,b)=>b.conceded-a.conceded||b.ga-a.ga,metrics:r=>[['Conceding rate',pct(r.conceded)],['Goals conceded',fmt(r.ga)],['Clean sheets',pct(r.cs)]]},
+    htwins:{label:'Wins 1st Half',title:'First-half winning teams',copy:'Team-specific first-half win rate of at least 40%.',filter:r=>r.htWin!==null&&r.htWin>=.40,sort:(a,b)=>b.htWin-a.htWin,metrics:r=>[['1H wins',pct(r.htWin)],['1H unbeaten',pct(r.htUnbeaten)],['Sample',r.games]]},
+    htunbeaten:{label:'Unbeaten 1st Half',title:'First-half unbeaten teams',copy:'Team-specific first-half unbeaten rate of at least 75%.',filter:r=>r.htUnbeaten!==null&&r.htUnbeaten>=.75,sort:(a,b)=>b.htUnbeaten-a.htUnbeaten,metrics:r=>[['1H unbeaten',pct(r.htUnbeaten)],['1H wins',pct(r.htWin)],['1H draws',pct(r.htDraw)]]},
+    htdefeats:{label:'Defeats 1st Half',title:'First-half losing teams',copy:'Team-specific first-half loss rate of at least 40%.',filter:r=>r.htLoss!==null&&r.htLoss>=.40,sort:(a,b)=>b.htLoss-a.htLoss,metrics:r=>[['1H defeats',pct(r.htLoss)],['1H winless',pct(r.htWinless)],['Sample',r.games]]},
+    htwinless:{label:'Winless 1st Half',title:'First-half winless teams',copy:'Team-specific first-half winless rate of at least 75%.',filter:r=>r.htWinless!==null&&r.htWinless>=.75,sort:(a,b)=>b.htWinless-a.htWinless,metrics:r=>[['1H winless',pct(r.htWinless)],['1H wins',pct(r.htWin)],['1H draws',pct(r.htDraw)]]},
+    htdraws:{label:'Draws 1st Half',title:'First-half draw teams',copy:'Team-specific first-half draw rate of at least 45%.',filter:r=>r.htDraw!==null&&r.htDraw>=.45,sort:(a,b)=>b.htDraw-a.htDraw,metrics:r=>[['1H draws',pct(r.htDraw)],['1H wins',pct(r.htWin)],['1H losses',pct(r.htLoss)]]},
+    htnodraws:{label:'No Draws 1st Half',title:'First-half no-draw teams',copy:'Team-specific first-half no-draw rate of at least 70%.',filter:r=>r.htNoDraw!==null&&r.htNoDraw>=.70,sort:(a,b)=>b.htNoDraw-a.htNoDraw,metrics:r=>[['1H no draw',pct(r.htNoDraw)],['1H wins',pct(r.htWin)],['1H losses',pct(r.htLoss)]]},
+    fhunder05:{label:'1H Under 0.5',title:'First-half Under 0.5 teams',copy:'No first-half goal in at least 45% of venue matches.',filter:r=>r.fhUnder05!==null&&r.fhUnder05>=.45,sort:(a,b)=>b.fhUnder05-a.fhUnder05,metrics:r=>[['1H U0.5',pct(r.fhUnder05)],['1H O0.5',pct(r.fhOver05)],['Sample',r.games]]},
+    fhover05:{label:'1H Over 0.5',title:'First-half Over 0.5 teams',copy:'At least one first-half goal in 70%+ of venue matches.',filter:r=>r.fhOver05!==null&&r.fhOver05>=.70,sort:(a,b)=>b.fhOver05-a.fhOver05,metrics:r=>[['1H O0.5',pct(r.fhOver05)],['1H U1.5',pct(r.fhUnder15)],['Sample',r.games]]},
+    fhunder15:{label:'1H Under 1.5',title:'First-half Under 1.5 teams',copy:'Zero or one first-half goal in 75%+ of venue matches.',filter:r=>r.fhUnder15!==null&&r.fhUnder15>=.75,sort:(a,b)=>b.fhUnder15-a.fhUnder15,metrics:r=>[['1H U1.5',pct(r.fhUnder15)],['1H O0.5',pct(r.fhOver05)],['Sample',r.games]]},
+    fhover15:{label:'1H Over 1.5',title:'First-half Over 1.5 teams',copy:'Two or more first-half goals in at least 35% of venue matches.',filter:r=>r.fhOver15!==null&&r.fhOver15>=.35,sort:(a,b)=>b.fhOver15-a.fhOver15,metrics:r=>[['1H O1.5',pct(r.fhOver15)],['1H O0.5',pct(r.fhOver05)],['Sample',r.games]]},
+    shunder05:{label:'2H Under 0.5',title:'Second-half Under 0.5 teams',copy:'Shown only when the feed supplies a direct team-specific second-half rate.',filter:r=>r.shUnder05!==null&&r.shUnder05>=.35,sort:(a,b)=>b.shUnder05-a.shUnder05,metrics:r=>[['2H U0.5',pct(r.shUnder05)],['2H O0.5',pct(r.shOver05)],['Sample',r.games]]},
+    shover05:{label:'2H Over 0.5',title:'Second-half Over 0.5 teams',copy:'Shown only when the feed supplies a direct team-specific second-half rate.',filter:r=>r.shOver05!==null&&r.shOver05>=.75,sort:(a,b)=>b.shOver05-a.shOver05,metrics:r=>[['2H O0.5',pct(r.shOver05)],['2H U1.5',pct(r.shUnder15)],['Sample',r.games]]},
+    shunder15:{label:'2H Under 1.5',title:'Second-half Under 1.5 teams',copy:'Shown only when the feed supplies a direct team-specific second-half rate.',filter:r=>r.shUnder15!==null&&r.shUnder15>=.70,sort:(a,b)=>b.shUnder15-a.shUnder15,metrics:r=>[['2H U1.5',pct(r.shUnder15)],['2H O0.5',pct(r.shOver05)],['Sample',r.games]]},
+    shover15:{label:'2H Over 1.5',title:'Second-half Over 1.5 teams',copy:'Shown only when the feed supplies a direct team-specific second-half rate.',filter:r=>r.shOver15!==null&&r.shOver15>=.40,sort:(a,b)=>b.shOver15-a.shOver15,metrics:r=>[['2H O1.5',pct(r.shOver15)],['2H O0.5',pct(r.shOver05)],['Sample',r.games]]},
+    fhgg:{label:'GG 1st Half',title:'Both teams score in first half',copy:'Team-specific first-half BTTS rate of at least 25%.',filter:r=>r.fhBtts!==null&&r.fhBtts>=.25,sort:(a,b)=>b.fhBtts-a.fhBtts,metrics:r=>[['1H GG',pct(r.fhBtts)],['1H NG',pct(r.fhNoBtts)],['Sample',r.games]]},
+    fhng:{label:'NG 1st Half',title:'First-half BTTS No teams',copy:'Team-specific first-half BTTS No rate of at least 75%.',filter:r=>r.fhNoBtts!==null&&r.fhNoBtts>=.75,sort:(a,b)=>b.fhNoBtts-a.fhNoBtts,metrics:r=>[['1H NG',pct(r.fhNoBtts)],['1H GG',pct(r.fhBtts)],['Sample',r.games]]},
+    shgg:{label:'GG 2nd Half',title:'Both teams score in second half',copy:'Shown only when the feed supplies a direct team-specific second-half BTTS rate.',filter:r=>r.shBtts!==null&&r.shBtts>=.30,sort:(a,b)=>b.shBtts-a.shBtts,metrics:r=>[['2H GG',pct(r.shBtts)],['2H NG',pct(r.shNoBtts)],['Sample',r.games]]},
+    shng:{label:'NG 2nd Half',title:'Second-half BTTS No teams',copy:'Shown only when the feed supplies a direct team-specific second-half BTTS rate.',filter:r=>r.shNoBtts!==null&&r.shNoBtts>=.70,sort:(a,b)=>b.shNoBtts-a.shNoBtts,metrics:r=>[['2H NG',pct(r.shNoBtts)],['2H GG',pct(r.shBtts)],['Sample',r.games]]},
+    htft11:{label:'HT 1 - FT 1',title:'Lead and win teams',copy:'Team leads at half-time and wins at full-time in at least 25% of its sample.',filter:r=>r.htft11!==null&&r.htft11>=.25,sort:(a,b)=>b.htft11-a.htft11,metrics:r=>[['HT1-FT1',pct(r.htft11)],['1H wins',pct(r.htWin)],['FT wins',pct(r.win)]]},
+    htft22:{label:'HT 2 - FT 2',title:'Behind and lose teams',copy:'Team trails at half-time and loses at full-time in at least 25% of its sample.',filter:r=>r.htft22!==null&&r.htft22>=.25,sort:(a,b)=>b.htft22-a.htft22,metrics:r=>[['HT2-FT2',pct(r.htft22)],['1H defeats',pct(r.htLoss)],['FT losses',pct(r.loss)]]},
     gg:{label:'GG',title:'Both teams to score profiles',copy:'Direct venue BTTS rate 65%+, scoring 70%+ and conceding 65%+.',filter:r=>r.btts!==null&&r.btts>=.65&&(r.scored??0)>=.70&&(r.conceded??0)>=.65,sort:(a,b)=>b.btts-a.btts,metrics:r=>[['GG rate',pct(r.btts)],['Scoring',pct(r.scored)],['Conceding',pct(r.conceded)]]},
     ng:{label:'NG',title:'BTTS No profiles',copy:'Direct venue BTTS No rate of at least 65%.',filter:r=>r.noBtts!==null&&r.noBtts>=.65,sort:(a,b)=>b.noBtts-a.noBtts,metrics:r=>[['NG rate',pct(r.noBtts)],['Clean sheets',pct(r.cs)],['FTS',pct(r.fts)]]}
   };
@@ -241,6 +282,9 @@
     addCandidate('BTTS_YES','Both Teams to Score — Yes','BTTS Yes',(gg??0)*88+(average([h.scored,a.scored,h.conceded,a.conceded])??0)*10,'bttsYes',[`Direct split GG profile ${pct(gg)}`,`${h.team} scoring ${pct(h.scored)}`,`${a.team} scoring ${pct(a.scored)}`],[(gg??0)<.65,(h.scored??0)<.70,(a.scored??0)<.70,(h.conceded??0)<.65,(a.conceded??0)<.65]);
     const ng=average([h.noBtts,a.noBtts,leagueRate(m,'BTTS No')]);
     addCandidate('BTTS_NO','Both Teams to Score — No','BTTS No',(ng??0)*90+Math.max(h.fts??0,a.fts??0)*8,'bttsNo',[`Direct split NG profile ${pct(ng)}`,`Highest failed-to-score rate ${pct(Math.max(h.fts??0,a.fts??0))}`,`Best clean-sheet rate ${pct(Math.max(h.cs??0,a.cs??0))}`],[(ng??0)<.64]);
+    const fhO05=average([h.fhOver05,a.fhOver05]),fhU15=average([h.fhUnder15,a.fhUnder15]);
+    addCandidate('FH_OVER05','First Half Over 0.5 Goals','First Half Over 0.5',(fhO05??0)*90+Math.min(8,((h.fhOver05??0)+(a.fhOver05??0))*4),'fhOver05',[`Home 1H Over 0.5 ${pct(h.fhOver05)}`,`Away 1H Over 0.5 ${pct(a.fhOver05)}`,`Combined first-half profile ${pct(fhO05)}`],[(fhO05??0)<.70,(h.fhOver05??0)<.65,(a.fhOver05??0)<.65]);
+    addCandidate('FH_UNDER15','First Half Under 1.5 Goals','First Half Under 1.5',(fhU15??0)*90+Math.min(8,((h.fhUnder15??0)+(a.fhUnder15??0))*4),'fhUnder15',[`Home 1H Under 1.5 ${pct(h.fhUnder15)}`,`Away 1H Under 1.5 ${pct(a.fhUnder15)}`,`Combined first-half profile ${pct(fhU15)}`],[(fhU15??0)<.75,(h.fhUnder15??0)<.70,(a.fhUnder15??0)<.70]);
     const noDrawStrength=average([h.draw===null?null:1-h.draw,a.draw===null?null:1-a.draw,leagueRate(m,'Draw')===null?null:1-leagueRate(m,'Draw')]);
     addCandidate('NO_DRAW','No Draw — 12','Double Chance 12',(noDrawStrength??0)*88+Math.min(10,(h.noDraw+a.noDraw)*1.2),'dc12',[`Home no-draw run ${h.noDraw}`,`Away no-draw run ${a.noDraw}`,`Combined no-draw profile ${pct(noDrawStrength)}`],[(h.draw??1)>.22,(a.draw??1)>.22,h.noDraw+a.noDraw<6]);
     const drawPressure=average([h.draw,a.draw,leagueRate(m,'Draw')]);
