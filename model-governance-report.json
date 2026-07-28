@@ -1,9 +1,9 @@
 {
   "version": "v194",
-  "updated": "2026-07-28T02:40:10.823Z",
+  "updated": "2026-07-28T03:53:23.441Z",
   "summary": {
-    "settled": 813,
-    "winRate": 0.802,
+    "settled": 814,
+    "winRate": 0.8022,
     "engines": 12,
     "approved": 0,
     "shadow": 12,
@@ -45,7 +45,7 @@
         "distributionShift": 0.375,
         "status": "STABLE"
       },
-      "updated": "2026-07-28T02:40:10.821Z"
+      "updated": "2026-07-28T03:53:23.438Z"
     },
     "Prime": {
       "engine": "Prime",
@@ -78,7 +78,7 @@
         "distributionShift": 0.293,
         "status": "STABLE"
       },
-      "updated": "2026-07-28T02:40:10.821Z"
+      "updated": "2026-07-28T03:53:23.439Z"
     },
     "Value": {
       "engine": "Value",
@@ -111,7 +111,7 @@
         "distributionShift": 0.8,
         "status": "STABLE"
       },
-      "updated": "2026-07-28T02:40:10.821Z"
+      "updated": "2026-07-28T03:53:23.439Z"
     },
     "Pro": {
       "engine": "Pro",
@@ -144,7 +144,7 @@
         "distributionShift": 0.8,
         "status": "STABLE"
       },
-      "updated": "2026-07-28T02:40:10.821Z"
+      "updated": "2026-07-28T03:53:23.439Z"
     },
     "Ultra": {
       "engine": "Ultra",
@@ -177,7 +177,7 @@
         "distributionShift": 0.5,
         "status": "STABLE"
       },
-      "updated": "2026-07-28T02:40:10.821Z"
+      "updated": "2026-07-28T03:53:23.439Z"
     },
     "Elite": {
       "engine": "Elite",
@@ -210,7 +210,7 @@
         "distributionShift": 0.5,
         "status": "STABLE"
       },
-      "updated": "2026-07-28T02:40:10.821Z"
+      "updated": "2026-07-28T03:53:23.439Z"
     },
     "Apex": {
       "engine": "Apex",
@@ -243,7 +243,7 @@
         "distributionShift": 0.5,
         "status": "STABLE"
       },
-      "updated": "2026-07-28T02:40:10.821Z"
+      "updated": "2026-07-28T03:53:23.439Z"
     },
     "Halves": {
       "engine": "Halves",
@@ -276,7 +276,7 @@
         "distributionShift": 0,
         "status": "STABLE"
       },
-      "updated": "2026-07-28T02:40:10.822Z"
+      "updated": "2026-07-28T03:53:23.439Z"
     },
     "Streaks": {
       "engine": "Streaks",
@@ -309,17 +309,17 @@
         "distributionShift": 0.5,
         "status": "STABLE"
       },
-      "updated": "2026-07-28T02:40:10.822Z"
+      "updated": "2026-07-28T03:53:23.439Z"
     },
     "Trend": {
       "engine": "Trend",
       "state": "SHADOW",
       "reason": "Needs a larger forward validation sample.",
       "train": {
-        "sample": 96,
-        "wins": 82,
+        "sample": 97,
+        "wins": 83,
         "losses": 14,
-        "rate": 0.8542
+        "rate": 0.8557
       },
       "validation": {
         "sample": 42,
@@ -327,8 +327,8 @@
         "losses": 8,
         "rate": 0.8095
       },
-      "validationDelta": -0.0447,
-      "calibrationError": 0.077,
+      "validationDelta": -0.0462,
+      "calibrationError": 0.0714,
       "shadow": {
         "eligible": 0,
         "avoidedLosses": 0,
@@ -338,11 +338,11 @@
       "drift": {
         "recentSample": 30,
         "priorSample": 30,
-        "confidenceShift": -1.1,
-        "distributionShift": 0.3,
+        "confidenceShift": -1.17,
+        "distributionShift": 0.333,
         "status": "STABLE"
       },
-      "updated": "2026-07-28T02:40:10.822Z"
+      "updated": "2026-07-28T03:53:23.439Z"
     },
     "League Bias": {
       "engine": "League Bias",
@@ -375,7 +375,7 @@
         "distributionShift": 0.167,
         "status": "STABLE"
       },
-      "updated": "2026-07-28T02:40:10.822Z"
+      "updated": "2026-07-28T03:53:23.439Z"
     },
     "Strict": {
       "engine": "Strict",
@@ -408,7 +408,7 @@
         "distributionShift": 0.5,
         "status": "STABLE"
       },
-      "updated": "2026-07-28T02:40:10.822Z"
+      "updated": "2026-07-28T03:53:23.439Z"
     }
   },
   "marketScorecards": [
@@ -430,11 +430,11 @@
     },
     {
       "marketFamily": "HOME_RESULT",
-      "sample": 105,
-      "wins": 83,
+      "sample": 106,
+      "wins": 84,
       "losses": 22,
-      "rate": 0.7905,
-      "calibrationError": 0.3259
+      "rate": 0.7925,
+      "calibrationError": 0.3211
     },
     {
       "marketFamily": "MATCH_UNDER",
