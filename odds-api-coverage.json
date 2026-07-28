@@ -1,6 +1,6 @@
 {
   "version": "v251",
-  "generatedAt": "2026-07-28T11:01:58.943Z",
+  "generatedAt": "2026-07-28T11:03:02.357Z",
   "provider": "The Odds API v4",
   "keyPresent": true,
   "regions": "uk",
@@ -13,7 +13,7 @@
       "sportKey": "soccer_epl",
       "sportTitle": "EPL",
       "score": 0.987,
-      "matches": 4
+      "matches": 6
     },
     {
       "league": "Cup",
@@ -352,6 +352,14 @@
       "matches": 7
     },
     {
+      "league": "Premier Soccer League",
+      "country": "Zimbabwe",
+      "sportKey": "soccer_epl",
+      "sportTitle": "EPL",
+      "score": 0.5,
+      "matches": 9
+    },
+    {
       "league": "Premier League",
       "country": "Belarus",
       "sportKey": "soccer_epl",
@@ -461,7 +469,7 @@
       "sportKey": "soccer_poland_ekstraklasa",
       "sportTitle": "Ekstraklasa - Poland",
       "score": 0.305,
-      "matches": 8
+      "matches": 9
     },
     {
       "league": "III Liga - Group 2",
@@ -1256,7 +1264,7 @@
       "matches": 1
     }
   ],
-  "matchesConsidered": 2184,
+  "matchesConsidered": 2317,
   "matchesMatched": 0,
   "matchesUpdated": 0,
   "fieldsFilled": 0,
@@ -1328,6 +1336,12 @@
     {
       "league": "Meistaradeildin",
       "country": "Faroe-Islands",
+      "reason": "No matching soccer sport key",
+      "bestScore": 0
+    },
+    {
+      "league": "COTIF Tournament",
+      "country": "World",
       "reason": "No matching soccer sport key",
       "bestScore": 0
     },
@@ -1819,6 +1833,18 @@
     },
     {
       "league": "Premier League",
+      "home": "Transport United",
+      "away": "Tensung",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Premier League",
+      "home": "Drukpa",
+      "away": "Paro",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Premier League",
       "home": "Al Nejmeh",
       "away": "Al Ahed",
       "reason": "No event/team match"
@@ -2007,6 +2033,60 @@
       "league": "Premier League",
       "home": "Alashkert",
       "away": "Ararat",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Premier Soccer League",
+      "home": "Herentals",
+      "away": "TelOne",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Premier Soccer League",
+      "home": "Triangle United",
+      "away": "Hunters",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Premier Soccer League",
+      "home": "Kariba",
+      "away": "Dynamos",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Premier Soccer League",
+      "home": "Agama",
+      "away": "Ngezi Platinum",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Premier Soccer League",
+      "home": "Chicken Inn",
+      "away": "Bulawayo Chiefs",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Premier Soccer League",
+      "home": "Hardrock",
+      "away": "Manica Diamonds",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Premier Soccer League",
+      "home": "Platinum",
+      "away": "Simba Bhora",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Premier Soccer League",
+      "home": "Scotland Mabvuku",
+      "away": "MWOS",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Premier Soccer League",
+      "home": "CAPS United",
+      "away": "Highlanders",
       "reason": "No event/team match"
     },
     {
@@ -2691,78 +2771,6 @@
       "league": "Super League",
       "home": "FC Vaduz",
       "away": "FC ST. Gallen",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Super League",
-      "home": "Grasshoppers",
-      "away": "FC Lugano",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Super League",
-      "home": "FC Sion",
-      "away": "FC Luzern",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "UEFA Champions League",
-      "home": "KuPS",
-      "away": "Sabah FA",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "UEFA Champions League",
-      "home": "Lincoln Red Imps FC",
-      "away": "Mjallby AIF",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "UEFA Champions League",
-      "home": "Dinamo Zagreb",
-      "away": "FC Thun",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "UEFA Champions League",
-      "home": "Celje",
-      "away": "Egnatia Rrogozhinë",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "UEFA Champions League",
-      "home": "Heart Of Midlothian",
-      "away": "Sturm Graz",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "UEFA Champions League",
-      "home": "Shamrock Rovers",
-      "away": "Ararat-Armenia",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "UEFA Champions League",
-      "home": "Kairat Almaty",
-      "away": "Omonia Nicosia",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "UEFA Champions League",
-      "home": "Kauno Žalgiris",
-      "away": "KI Klaksvik",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "UEFA Champions League",
-      "home": "Lech Poznan",
-      "away": "Aarhus",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "UEFA Champions League",
-      "home": "Hapoel Beer Sheva",
-      "away": "Vikingur Reykjavik",
       "reason": "No event/team match"
     }
   ],
@@ -3998,5 +4006,5 @@
   },
   "skipped": false,
   "skipReason": null,
-  "completedAt": "2026-07-28T11:02:21.039Z"
+  "completedAt": "2026-07-28T11:03:14.632Z"
 }
