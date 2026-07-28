@@ -1,7 +1,7 @@
 {
   "version": "v193",
   "schemaVersion": 1,
-  "updated": "2026-07-28T20:56:06.615Z",
+  "updated": "2026-07-28T22:09:14.386Z",
   "minimumSamples": {
     "teamFavorite": 5,
     "teamUnderdog": 5,
@@ -12,10 +12,10 @@
   },
   "decayHalfLifeDays": 120,
   "summary": {
-    "settledFixtures": 466,
-    "settledDecisions": 820,
+    "settledFixtures": 467,
+    "settledDecisions": 822,
     "reviewedLosses": 150,
-    "attachedUpcoming": 2573,
+    "attachedUpcoming": 2555,
     "highRiskUpcoming": 0,
     "stableUpcoming": 0
   },
@@ -20363,7 +20363,7 @@
             "mid": 0.5,
             "upper": 0.8124
           },
-          "decayedWeight": 5.51
+          "decayedWeight": 5.5
         },
         "1.61-1.85": {
           "sample": 1,
@@ -20519,7 +20519,7 @@
           "mid": 0.5,
           "upper": 0.9055
         },
-        "decayedWeight": 1.84
+        "decayedWeight": 1.83
       },
       "awayFavorites": {
         "sample": 1,
@@ -22561,7 +22561,7 @@
           "mid": 0.3333,
           "upper": 0.7923
         },
-        "decayedWeight": 2.77
+        "decayedWeight": 2.76
       },
       "awayFavorites": {
         "sample": 3,
@@ -31238,7 +31238,7 @@
         "mid": 0.4182,
         "upper": 0.5497
       },
-      "decayedWeight": 52.83
+      "decayedWeight": 52.81
     },
     "1.01-1.35": {
       "sample": 26,
@@ -31259,7 +31259,7 @@
         "mid": 0.8077,
         "upper": 0.9149
       },
-      "decayedWeight": 24.92
+      "decayedWeight": 24.91
     },
     "1.36-1.60": {
       "sample": 35,
@@ -31280,7 +31280,7 @@
         "mid": 0.5429,
         "upper": 0.6953
       },
-      "decayedWeight": 33.86
+      "decayedWeight": 33.85
     },
     "1.61-1.85": {
       "sample": 43,
@@ -31301,7 +31301,7 @@
         "mid": 0.5581,
         "upper": 0.6957
       },
-      "decayedWeight": 41.58
+      "decayedWeight": 41.57
     }
   },
   "contexts": {
@@ -33224,15 +33224,15 @@
       "hardVeto": false
     },
     "*|League Bias|Home Team Over 0.5 Goals|unknown|other": {
-      "sample": 93,
-      "wins": 78,
+      "sample": 94,
+      "wins": 79,
       "losses": 15,
-      "winRate": 0.8387,
-      "lossRate": 0.1613,
+      "winRate": 0.8404,
+      "lossRate": 0.1596,
       "wilson": {
-        "lower": 0.7508,
-        "mid": 0.8387,
-        "upper": 0.8998
+        "lower": 0.7533,
+        "mid": 0.8404,
+        "upper": 0.9008
       },
       "adjustment": 2,
       "hardVeto": false
@@ -34302,13 +34302,13 @@
       "hardVeto": false
     },
     "*|Trend|Double Chance 1X|unknown|other": {
-      "sample": 9,
-      "wins": 9,
+      "sample": 10,
+      "wins": 10,
       "losses": 0,
       "winRate": 1,
       "lossRate": 0,
       "wilson": {
-        "lower": 0.7008,
+        "lower": 0.7225,
         "mid": 1,
         "upper": 1
       },
@@ -37536,13 +37536,13 @@
       "hardVeto": false
     },
     "oberliga bayern s d|League Bias|Home Team Over 0.5 Goals|unknown|other": {
-      "sample": 1,
-      "wins": 1,
+      "sample": 2,
+      "wins": 2,
       "losses": 0,
       "winRate": 1,
       "lossRate": 0,
       "wilson": {
-        "lower": 0.2065,
+        "lower": 0.3424,
         "mid": 1,
         "upper": 1
       },
@@ -40070,6 +40070,20 @@
       "hardVeto": false
     },
     "kansallinen liiga|Normal|Home Win|unknown|other": {
+      "sample": 1,
+      "wins": 1,
+      "losses": 0,
+      "winRate": 1,
+      "lossRate": 0,
+      "wilson": {
+        "lower": 0.2065,
+        "mid": 1,
+        "upper": 1
+      },
+      "adjustment": 0,
+      "hardVeto": false
+    },
+    "oberliga bayern s d|Trend|Double Chance 1X|unknown|other": {
       "sample": 1,
       "wins": 1,
       "losses": 0,

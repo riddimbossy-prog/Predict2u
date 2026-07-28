@@ -1,6 +1,6 @@
 {
   "version": "v251",
-  "generatedAt": "2026-07-28T22:03:41.979Z",
+  "generatedAt": "2026-07-28T22:00:46.669Z",
   "provider": "The Odds API v4",
   "keyPresent": true,
   "regions": "uk",
@@ -14,6 +14,14 @@
       "sportTitle": "Brazil Série A",
       "score": 0.305,
       "matches": 6
+    },
+    {
+      "league": "UEFA Champions League",
+      "country": "World",
+      "sportKey": "soccer_uefa_champs_league_qualification",
+      "sportTitle": "UEFA Champions League Qualification",
+      "score": 0.695,
+      "matches": 9
     },
     {
       "league": "Football League - Lowland League",
@@ -1280,7 +1288,7 @@
       "matches": 1
     }
   ],
-  "matchesConsidered": 2177,
+  "matchesConsidered": 2179,
   "matchesMatched": 0,
   "matchesUpdated": 0,
   "fieldsFilled": 0,
@@ -1306,6 +1314,12 @@
       "country": "World",
       "reason": "No matching soccer sport key",
       "bestScore": 0
+    },
+    {
+      "league": "1. Deild",
+      "country": "Iceland",
+      "reason": "No matching soccer sport key",
+      "bestScore": 0.125
     },
     {
       "league": "Copa Colombia",
@@ -2286,6 +2300,60 @@
       "reason": "No event/team match"
     },
     {
+      "league": "UEFA Champions League",
+      "home": "Celje",
+      "away": "Egnatia Rrogozhinë",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "UEFA Champions League",
+      "home": "Kairat Almaty",
+      "away": "Omonia Nicosia",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Football League - Lowland League",
+      "home": "Newton Stewart",
+      "away": "Auchinleck Talbot",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Football League - Lowland League",
+      "home": "Tranent Juniors",
+      "away": "Linlithgow Rose",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Football League - Lowland League",
+      "home": "Troon FC",
+      "away": "Gretna 2008",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Premiership",
+      "home": "Dundee Utd",
+      "away": "Rangers",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Premiership",
+      "home": "Falkirk",
+      "away": "ST Mirren",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Premiership",
+      "home": "Aberdeen",
+      "away": "Heart Of Midlothian",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Premiership",
+      "home": "ST Johnstone",
+      "away": "Kilmarnock",
+      "reason": "No event/team match"
+    },
+    {
       "league": "Football League - Lowland League",
       "home": "Bo'ness United",
       "away": "Bonnyrigg Rose Athletic",
@@ -2734,60 +2802,6 @@
       "home": "Newells Old Boys",
       "away": "Boca Juniors",
       "reason": "No event/team match"
-    },
-    {
-      "league": "Liga Profesional Argentina",
-      "home": "River Plate",
-      "away": "Rosario Central",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Liga Profesional Argentina",
-      "home": "Lanus",
-      "away": "Instituto Cordoba",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Liga Profesional Argentina",
-      "home": "Sarmiento Junin",
-      "away": "Independ. Rivadavia",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Liga Profesional Argentina",
-      "home": "Platense",
-      "away": "Talleres Cordoba",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Liga Profesional Argentina",
-      "home": "Velez Sarsfield",
-      "away": "Independiente",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Primera C",
-      "home": "Central Ballester",
-      "away": "Sportivo Barracas",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Primera C",
-      "home": "Central Cordoba",
-      "away": "General Lamadrid",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Primera C",
-      "home": "Claypole",
-      "away": "Lujan",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Primera C",
-      "home": "Centro Español",
-      "away": "Victoriano Arenas",
-      "reason": "No event/team match"
     }
   ],
   "unsupportedMarkets": [
@@ -2804,6 +2818,18 @@
       "market": "double_chance"
     },
     {
+      "sportKey": "soccer_uefa_champs_league_qualification",
+      "market": "btts"
+    },
+    {
+      "sportKey": "soccer_uefa_champs_league_qualification",
+      "market": "draw_no_bet"
+    },
+    {
+      "sportKey": "soccer_uefa_champs_league_qualification",
+      "market": "double_chance"
+    },
+    {
       "sportKey": "soccer_spl",
       "market": "btts"
     },
@@ -2921,18 +2947,6 @@
     },
     {
       "sportKey": "soccer_uefa_nations_league",
-      "market": "double_chance"
-    },
-    {
-      "sportKey": "soccer_uefa_champs_league_qualification",
-      "market": "btts"
-    },
-    {
-      "sportKey": "soccer_uefa_champs_league_qualification",
-      "market": "draw_no_bet"
-    },
-    {
-      "sportKey": "soccer_uefa_champs_league_qualification",
       "market": "double_chance"
     },
     {
@@ -3215,6 +3229,31 @@
       "statusCode": 422
     },
     {
+      "label": "soccer_uefa_champs_league_qualification:base-combined",
+      "error": "Markets not supported by this endpoint: btts, double_chance, draw_no_bet",
+      "statusCode": 422
+    },
+    {
+      "label": "soccer_uefa_champs_league_qualification:base-core",
+      "error": "Invalid commenceTimeFrom parameter. The format must be YYYY-MM-DDTHH:MM:SSZ, for example 2020-11-24T16:05:00Z",
+      "statusCode": 422
+    },
+    {
+      "label": "soccer_uefa_champs_league_qualification:btts",
+      "error": "Markets not supported by this endpoint: btts",
+      "statusCode": 422
+    },
+    {
+      "label": "soccer_uefa_champs_league_qualification:draw_no_bet",
+      "error": "Markets not supported by this endpoint: draw_no_bet",
+      "statusCode": 422
+    },
+    {
+      "label": "soccer_uefa_champs_league_qualification:double_chance",
+      "error": "Markets not supported by this endpoint: double_chance",
+      "statusCode": 422
+    },
+    {
       "label": "soccer_spl:base-combined",
       "error": "Markets not supported by this endpoint: btts, double_chance, draw_no_bet",
       "statusCode": 422
@@ -3461,31 +3500,6 @@
     },
     {
       "label": "soccer_uefa_nations_league:double_chance",
-      "error": "Markets not supported by this endpoint: double_chance",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_uefa_champs_league_qualification:base-combined",
-      "error": "Markets not supported by this endpoint: btts, double_chance, draw_no_bet",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_uefa_champs_league_qualification:base-core",
-      "error": "Invalid commenceTimeFrom parameter. The format must be YYYY-MM-DDTHH:MM:SSZ, for example 2020-11-24T16:05:00Z",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_uefa_champs_league_qualification:btts",
-      "error": "Markets not supported by this endpoint: btts",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_uefa_champs_league_qualification:draw_no_bet",
-      "error": "Markets not supported by this endpoint: draw_no_bet",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_uefa_champs_league_qualification:double_chance",
       "error": "Markets not supported by this endpoint: double_chance",
       "statusCode": 422
     },
@@ -4022,5 +4036,5 @@
   },
   "skipped": false,
   "skipReason": null,
-  "completedAt": "2026-07-28T22:03:49.385Z"
+  "completedAt": "2026-07-28T22:00:58.570Z"
 }
