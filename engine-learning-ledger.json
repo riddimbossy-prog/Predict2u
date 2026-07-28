@@ -1,7 +1,7 @@
 {
   "version": "v193",
   "schemaVersion": 1,
-  "updated": "2026-07-28T01:26:49.354Z",
+  "updated": "2026-07-28T02:40:09.589Z",
   "minimumSamples": {
     "teamFavorite": 5,
     "teamUnderdog": 5,
@@ -12,10 +12,10 @@
   },
   "decayHalfLifeDays": 120,
   "summary": {
-    "settledFixtures": 458,
-    "settledDecisions": 811,
+    "settledFixtures": 460,
+    "settledDecisions": 813,
     "reviewedLosses": 150,
-    "attachedUpcoming": 2578,
+    "attachedUpcoming": 2575,
     "highRiskUpcoming": 0,
     "stableUpcoming": 0
   },
@@ -191,7 +191,7 @@
           "mid": 1,
           "upper": 1
         },
-        "decayedWeight": 0.87
+        "decayedWeight": 0.86
       },
       "underdog": {
         "sample": 0,
@@ -234,7 +234,7 @@
             "mid": 1,
             "upper": 1
           },
-          "decayedWeight": 0.87
+          "decayedWeight": 0.86
         }
       },
       "underdogUpsets": 0,
@@ -286,7 +286,7 @@
           "mid": 0,
           "upper": 0.7935
         },
-        "decayedWeight": 0.87
+        "decayedWeight": 0.86
       },
       "favoriteBands": {},
       "underdogUpsets": 0,
@@ -22601,7 +22601,7 @@
           "mid": 0.6667,
           "upper": 0.9032
         },
-        "decayedWeight": 5.42
+        "decayedWeight": 5.41
       },
       "bands": {
         "1.01-1.35": {
@@ -26943,7 +26943,7 @@
           "mid": 1,
           "upper": 1
         },
-        "decayedWeight": 0.87
+        "decayedWeight": 0.86
       },
       "flags": []
     },
@@ -31392,7 +31392,7 @@
         "mid": 0.4107,
         "upper": 0.5412
       },
-      "decayedWeight": 54.06
+      "decayedWeight": 54.05
     },
     "1.01-1.35": {
       "sample": 26,
@@ -31434,7 +31434,7 @@
         "mid": 0.5429,
         "upper": 0.6953
       },
-      "decayedWeight": 34.02
+      "decayedWeight": 34.01
     },
     "1.61-1.85": {
       "sample": 43,
@@ -31455,7 +31455,7 @@
         "mid": 0.5581,
         "upper": 0.6957
       },
-      "decayedWeight": 41.77
+      "decayedWeight": 41.76
     }
   },
   "contexts": {
@@ -33140,15 +33140,15 @@
       "hardVeto": false
     },
     "*|Halves|Second Half Over 0.5|unknown|other": {
-      "sample": 98,
-      "wins": 81,
+      "sample": 99,
+      "wins": 82,
       "losses": 17,
-      "winRate": 0.8265,
-      "lossRate": 0.1735,
+      "winRate": 0.8283,
+      "lossRate": 0.1717,
       "wilson": {
-        "lower": 0.7396,
-        "mid": 0.8265,
-        "upper": 0.8888
+        "lower": 0.7421,
+        "mid": 0.8283,
+        "upper": 0.8899
       },
       "adjustment": 2,
       "hardVeto": false
@@ -33168,15 +33168,15 @@
       "hardVeto": false
     },
     "*|League Bias|Under 3.5 Goals|unknown|other": {
-      "sample": 22,
-      "wins": 21,
+      "sample": 23,
+      "wins": 22,
       "losses": 1,
-      "winRate": 0.9545,
-      "lossRate": 0.0455,
+      "winRate": 0.9565,
+      "lossRate": 0.0435,
       "wilson": {
-        "lower": 0.782,
-        "mid": 0.9545,
-        "upper": 0.9919
+        "lower": 0.7901,
+        "mid": 0.9565,
+        "upper": 0.9923
       },
       "adjustment": 2,
       "hardVeto": false
@@ -39020,15 +39020,15 @@
       "hardVeto": false
     },
     "brasileiro women|Halves|Second Half Over 0.5|unknown|other": {
-      "sample": 1,
-      "wins": 0,
+      "sample": 2,
+      "wins": 1,
       "losses": 1,
-      "winRate": 0,
-      "lossRate": 1,
+      "winRate": 0.5,
+      "lossRate": 0.5,
       "wilson": {
-        "lower": 0,
-        "mid": 0,
-        "upper": 0.7935
+        "lower": 0.0945,
+        "mid": 0.5,
+        "upper": 0.9055
       },
       "adjustment": 0,
       "hardVeto": false
@@ -39061,21 +39061,21 @@
       "adjustment": 0,
       "hardVeto": false
     },
-    "primera b|Trend|Double Chance 1X|unknown|other": {
-      "sample": 1,
-      "wins": 1,
+    "primera b|League Bias|Under 3.5 Goals|unknown|other": {
+      "sample": 2,
+      "wins": 2,
       "losses": 0,
       "winRate": 1,
       "lossRate": 0,
       "wilson": {
-        "lower": 0.2065,
+        "lower": 0.3424,
         "mid": 1,
         "upper": 1
       },
       "adjustment": 0,
       "hardVeto": false
     },
-    "primera b|League Bias|Under 3.5 Goals|unknown|other": {
+    "primera b|Trend|Double Chance 1X|unknown|other": {
       "sample": 1,
       "wins": 1,
       "losses": 0,
