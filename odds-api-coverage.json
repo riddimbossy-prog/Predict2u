@@ -1,20 +1,12 @@
 {
   "version": "v251",
-  "generatedAt": "2026-07-28T18:47:32.490Z",
+  "generatedAt": "2026-07-28T19:01:32.436Z",
   "provider": "The Odds API v4",
   "keyPresent": true,
   "regions": "uk",
   "sportsAvailable": 70,
   "soccerSportsAvailable": 41,
   "sportMappings": [
-    {
-      "league": "Cup",
-      "country": "Estonia",
-      "sportKey": "soccer_england_efl_cup",
-      "sportTitle": "EFL Cup",
-      "score": 0.487,
-      "matches": 2
-    },
     {
       "league": "Superettan",
       "country": "Sweden",
@@ -190,6 +182,14 @@
       "sportTitle": "Veikkausliiga - Finland",
       "score": 0.38,
       "matches": 5
+    },
+    {
+      "league": "Cup",
+      "country": "Estonia",
+      "sportKey": "soccer_england_efl_cup",
+      "sportTitle": "EFL Cup",
+      "score": 0.487,
+      "matches": 1
     },
     {
       "league": "Serie A",
@@ -1280,7 +1280,7 @@
       "matches": 1
     }
   ],
-  "matchesConsidered": 2280,
+  "matchesConsidered": 2279,
   "matchesMatched": 0,
   "matchesUpdated": 0,
   "fieldsFilled": 0,
@@ -1824,15 +1824,63 @@
       "bestScore": 0.167
     },
     {
-      "league": "Cup",
-      "home": "FC Tallinn",
-      "away": "Tallinna FC Zapoos",
+      "league": "Superettan",
+      "home": "Helsingborg",
+      "away": "United Nordic",
       "reason": "No event/team match"
     },
     {
-      "league": "Cup",
-      "home": "Flora III",
-      "away": "Põhja-Tallinna JK Volta",
+      "league": "Superettan",
+      "home": "Landskrona BoIS",
+      "away": "IFK Norrkoping",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Superettan",
+      "home": "Oddevold",
+      "away": "Norrby IF",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Superettan",
+      "home": "Ostersunds FK",
+      "away": "Osters IF",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Superettan",
+      "home": "Sandviken",
+      "away": "GIF Sundsvall",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Superettan",
+      "home": "Varbergs BoIS FC",
+      "away": "Falkenbergs FF",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Superettan",
+      "home": "IK brage",
+      "away": "Landskrona BoIS",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Superettan",
+      "home": "IFK Norrkoping",
+      "away": "Helsingborg",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Superettan",
+      "home": "United Nordic",
+      "away": "Ljungskile SK",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Superettan",
+      "home": "Orebro SK",
+      "away": "IFK Varnamo",
       "reason": "No event/team match"
     },
     {
@@ -1893,6 +1941,12 @@
       "league": "Cup",
       "home": "Kaisar",
       "away": "Zhenys",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Cup",
+      "home": "Flora III",
+      "away": "Põhja-Tallinna JK Volta",
       "reason": "No event/team match"
     },
     {
@@ -2085,66 +2139,6 @@
       "league": "League Cup",
       "home": "York",
       "away": "Crawley Town",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Superettan",
-      "home": "Helsingborg",
-      "away": "United Nordic",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Superettan",
-      "home": "Landskrona BoIS",
-      "away": "IFK Norrkoping",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Superettan",
-      "home": "Oddevold",
-      "away": "Norrby IF",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Superettan",
-      "home": "Ostersunds FK",
-      "away": "Osters IF",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Superettan",
-      "home": "Sandviken",
-      "away": "GIF Sundsvall",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Superettan",
-      "home": "Varbergs BoIS FC",
-      "away": "Falkenbergs FF",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Superettan",
-      "home": "IK brage",
-      "away": "Landskrona BoIS",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Superettan",
-      "home": "IFK Norrkoping",
-      "away": "Helsingborg",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Superettan",
-      "home": "United Nordic",
-      "away": "Ljungskile SK",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Superettan",
-      "home": "Orebro SK",
-      "away": "IFK Varnamo",
       "reason": "No event/team match"
     },
     {
@@ -2788,31 +2782,37 @@
       "home": "Concordia",
       "away": "HEBC",
       "reason": "No event/team match"
+    },
+    {
+      "league": "Oberliga - Hamburg",
+      "home": "ETSV Hamburg",
+      "away": "Teutonia Ottensen",
+      "reason": "No event/team match"
     }
   ],
   "unsupportedMarkets": [
     {
-      "sportKey": "soccer_england_efl_cup",
+      "sportKey": "soccer_sweden_superettan",
       "market": "btts"
     },
     {
-      "sportKey": "soccer_england_efl_cup",
+      "sportKey": "soccer_sweden_superettan",
       "market": "draw_no_bet"
     },
     {
-      "sportKey": "soccer_england_efl_cup",
+      "sportKey": "soccer_sweden_superettan",
       "market": "double_chance"
     },
     {
-      "sportKey": "soccer_sweden_superettan",
+      "sportKey": "soccer_england_efl_cup",
       "market": "btts"
     },
     {
-      "sportKey": "soccer_sweden_superettan",
+      "sportKey": "soccer_england_efl_cup",
       "market": "draw_no_bet"
     },
     {
-      "sportKey": "soccer_sweden_superettan",
+      "sportKey": "soccer_england_efl_cup",
       "market": "double_chance"
     },
     {
@@ -3190,31 +3190,6 @@
   ],
   "requestErrors": [
     {
-      "label": "soccer_england_efl_cup:base-combined",
-      "error": "Markets not supported by this endpoint: btts, double_chance, draw_no_bet",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_england_efl_cup:base-core",
-      "error": "Invalid commenceTimeFrom parameter. The format must be YYYY-MM-DDTHH:MM:SSZ, for example 2020-11-24T16:05:00Z",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_england_efl_cup:btts",
-      "error": "Markets not supported by this endpoint: btts",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_england_efl_cup:draw_no_bet",
-      "error": "Markets not supported by this endpoint: draw_no_bet",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_england_efl_cup:double_chance",
-      "error": "Markets not supported by this endpoint: double_chance",
-      "statusCode": 422
-    },
-    {
       "label": "soccer_sweden_superettan:base-combined",
       "error": "Markets not supported by this endpoint: btts, double_chance, draw_no_bet",
       "statusCode": 422
@@ -3236,6 +3211,31 @@
     },
     {
       "label": "soccer_sweden_superettan:double_chance",
+      "error": "Markets not supported by this endpoint: double_chance",
+      "statusCode": 422
+    },
+    {
+      "label": "soccer_england_efl_cup:base-combined",
+      "error": "Markets not supported by this endpoint: btts, double_chance, draw_no_bet",
+      "statusCode": 422
+    },
+    {
+      "label": "soccer_england_efl_cup:base-core",
+      "error": "Invalid commenceTimeFrom parameter. The format must be YYYY-MM-DDTHH:MM:SSZ, for example 2020-11-24T16:05:00Z",
+      "statusCode": 422
+    },
+    {
+      "label": "soccer_england_efl_cup:btts",
+      "error": "Markets not supported by this endpoint: btts",
+      "statusCode": 422
+    },
+    {
+      "label": "soccer_england_efl_cup:draw_no_bet",
+      "error": "Markets not supported by this endpoint: draw_no_bet",
+      "statusCode": 422
+    },
+    {
+      "label": "soccer_england_efl_cup:double_chance",
       "error": "Markets not supported by this endpoint: double_chance",
       "statusCode": 422
     },
@@ -4022,5 +4022,5 @@
   },
   "skipped": false,
   "skipReason": null,
-  "completedAt": "2026-07-28T18:47:54.342Z"
+  "completedAt": "2026-07-28T19:01:46.363Z"
 }
