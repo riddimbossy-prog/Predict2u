@@ -173799,9 +173799,13 @@
         "dataFields": 0
       },
       "recordedAt": "2026-07-25T19:06:42.616Z",
-      "status": "pending",
-      "result": null,
-      "score": null
+      "status": "settled",
+      "result": "Won",
+      "score": "5-1",
+      "finalHomeGoals": 5,
+      "finalAwayGoals": 1,
+      "actualResult": "home",
+      "settledAt": "2026-07-28T19:58:28.410Z"
     },
     {
       "matchDate": "2026-07-28",
@@ -173842,9 +173846,13 @@
         "dataFields": 0
       },
       "recordedAt": "2026-07-25T19:06:42.616Z",
-      "status": "pending",
-      "result": null,
-      "score": null
+      "status": "settled",
+      "result": "Won",
+      "score": "5-1",
+      "finalHomeGoals": 5,
+      "finalAwayGoals": 1,
+      "actualResult": "home",
+      "settledAt": "2026-07-28T19:58:28.411Z"
     },
     {
       "matchDate": "2026-07-28",
@@ -233666,10 +233674,53 @@
       "status": "pending",
       "result": null,
       "score": null
+    },
+    {
+      "matchDate": "2026-08-02",
+      "home": "Barranquilla",
+      "away": "Depor FC",
+      "league": "Primera B",
+      "engine": "League Bias",
+      "engineKey": "league-bias",
+      "engineFamily": "Specialist",
+      "engineVersion": "1.0",
+      "market": "Under 3.5 Goals",
+      "confidence": 86,
+      "suiteVersion": "2026.07-new-family",
+      "leagueClass": "Low-Scoring",
+      "oddsAtPick": null,
+      "fairMarketProbabilityAtPick": null,
+      "snapshot": {
+        "fixtureId": 1549571,
+        "leagueId": 240,
+        "round": "Clausura - 2",
+        "competitionType": "league",
+        "homeOdds": null,
+        "drawOdds": null,
+        "awayOdds": null,
+        "favoriteSide": null,
+        "favoriteOdds": null,
+        "favoriteGap": null,
+        "homeOverallPPG": null,
+        "awayOverallPPG": null,
+        "homeVenuePPG": null,
+        "awayVenuePPG": null,
+        "homeRecent5PPG": null,
+        "awayRecent5PPG": null,
+        "homeForm": "L",
+        "awayForm": "L",
+        "leagueGoalsPerGame": 2.28,
+        "leagueDrawRate": 0.28,
+        "dataFields": 0
+      },
+      "recordedAt": "2026-07-28T19:58:31.235Z",
+      "status": "pending",
+      "result": null,
+      "score": null
     }
   ],
   "meta": {
     "created": "2026-06-30T22:00:54.285Z",
-    "updated": "2026-07-28T19:48:37.913Z"
+    "updated": "2026-07-28T19:58:31.364Z"
   }
 }
