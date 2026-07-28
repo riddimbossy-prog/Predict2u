@@ -1,7 +1,7 @@
 {
   "version": "v193",
   "schemaVersion": 1,
-  "updated": "2026-07-28T14:58:37.522Z",
+  "updated": "2026-07-28T16:12:11.748Z",
   "minimumSamples": {
     "teamFavorite": 5,
     "teamUnderdog": 5,
@@ -12,10 +12,10 @@
   },
   "decayHalfLifeDays": 120,
   "summary": {
-    "settledFixtures": 463,
-    "settledDecisions": 817,
+    "settledFixtures": 464,
+    "settledDecisions": 818,
     "reviewedLosses": 150,
-    "attachedUpcoming": 2690,
+    "attachedUpcoming": 2688,
     "highRiskUpcoming": 0,
     "stableUpcoming": 0
   },
@@ -412,7 +412,7 @@
           "mid": 0,
           "upper": 0.6576
         },
-        "decayedWeight": 1.77
+        "decayedWeight": 1.76
       },
       "favoriteBands": {},
       "underdogUpsets": 0,
@@ -19840,7 +19840,7 @@
             "mid": 0.4,
             "upper": 0.7693
           },
-          "decayedWeight": 4.61
+          "decayedWeight": 4.6
         },
         "1.36-1.60": {
           "sample": 1,
@@ -24766,7 +24766,7 @@
           "mid": 0.5,
           "upper": 0.9055
         },
-        "decayedWeight": 1.93
+        "decayedWeight": 1.92
       },
       "awayFavorites": {
         "sample": 1,
@@ -25852,7 +25852,7 @@
           "mid": 0.5,
           "upper": 0.8124
         },
-        "decayedWeight": 5.88
+        "decayedWeight": 5.87
       },
       "bands": {
         "1.61-1.85": {
@@ -25917,7 +25917,7 @@
           "mid": 0.5,
           "upper": 0.8124
         },
-        "decayedWeight": 5.88
+        "decayedWeight": 5.87
       },
       "awayFavorites": {
         "sample": 0,
@@ -26078,7 +26078,7 @@
           "mid": 0.4,
           "upper": 0.7693
         },
-        "decayedWeight": 4.9
+        "decayedWeight": 4.89
       },
       "bands": {
         "1.61-1.85": {
@@ -26164,7 +26164,7 @@
           "mid": 0.4,
           "upper": 0.7693
         },
-        "decayedWeight": 4.9
+        "decayedWeight": 4.89
       },
       "awayFavorites": {
         "sample": 0,
@@ -31238,7 +31238,7 @@
         "mid": 0.4182,
         "upper": 0.5497
       },
-      "decayedWeight": 52.9
+      "decayedWeight": 52.89
     },
     "1.01-1.35": {
       "sample": 26,
@@ -31280,7 +31280,7 @@
         "mid": 0.5429,
         "upper": 0.6953
       },
-      "decayedWeight": 33.91
+      "decayedWeight": 33.9
     },
     "1.61-1.85": {
       "sample": 43,
@@ -31301,7 +31301,7 @@
         "mid": 0.5581,
         "upper": 0.6957
       },
-      "decayedWeight": 41.64
+      "decayedWeight": 41.63
     }
   },
   "contexts": {
@@ -32986,15 +32986,15 @@
       "hardVeto": false
     },
     "*|Halves|Second Half Over 0.5|unknown|other": {
-      "sample": 101,
-      "wins": 83,
+      "sample": 102,
+      "wins": 84,
       "losses": 18,
-      "winRate": 0.8218,
-      "lossRate": 0.1782,
+      "winRate": 0.8235,
+      "lossRate": 0.1765,
       "wilson": {
-        "lower": 0.7358,
-        "mid": 0.8218,
-        "upper": 0.8842
+        "lower": 0.7382,
+        "mid": 0.8235,
+        "upper": 0.8854
       },
       "adjustment": 2,
       "hardVeto": false
@@ -40042,6 +40042,20 @@
       "hardVeto": false
     },
     "veikkausliiga|Normal|Home Win|1.61-1.85|fav-aligned": {
+      "sample": 1,
+      "wins": 1,
+      "losses": 0,
+      "winRate": 1,
+      "lossRate": 0,
+      "wilson": {
+        "lower": 0.2065,
+        "mid": 1,
+        "upper": 1
+      },
+      "adjustment": 0,
+      "hardVeto": false
+    },
+    "carioca c|Halves|Second Half Over 0.5|unknown|other": {
       "sample": 1,
       "wins": 1,
       "losses": 0,
