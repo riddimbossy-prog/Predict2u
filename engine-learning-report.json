@@ -1,13 +1,13 @@
 {
   "version": "v193",
-  "updated": "2026-07-29T01:53:48.994Z",
+  "updated": "2026-07-29T03:08:54.266Z",
   "summary": {
-    "settledFixtures": 468,
-    "settledDecisions": 823,
+    "settledFixtures": 471,
+    "settledDecisions": 826,
     "reviewedLosses": 150,
-    "teamProfiles": 313,
-    "leagueProfiles": 65,
-    "matchupProfiles": 159,
+    "teamProfiles": 317,
+    "leagueProfiles": 66,
+    "matchupProfiles": 161,
     "activePatternBreakers": 0,
     "upsetResistantTeams": 0
   },
@@ -19,7 +19,7 @@
   "commonMissCauses": [
     {
       "cause": "INPUT_COVERAGE_GAP",
-      "count": 162
+      "count": 163
     },
     {
       "cause": "FAVORITE_PATTERN_BREAK",
@@ -31,7 +31,7 @@
     },
     {
       "cause": "GOAL_SPIKE",
-      "count": 24
+      "count": 25
     },
     {
       "cause": "DRAW_TRAP",
@@ -55,6 +55,19 @@
     }
   ],
   "recentLossReviews": [
+    {
+      "matchDate": "2026-07-27",
+      "home": "Sportivo Barracas",
+      "away": "El Porvenir",
+      "league": "Primera C",
+      "engine": "League Bias",
+      "market": "Under 3.5 Goals",
+      "score": "3-2",
+      "causes": [
+        "GOAL_SPIKE",
+        "INPUT_COVERAGE_GAP"
+      ]
+    },
     {
       "matchDate": "2026-07-26",
       "home": "South Cardiff",
@@ -418,19 +431,6 @@
       "league": "South Australia NPL",
       "engine": "Ultra",
       "market": "Double Chance 1X",
-      "score": "1-3",
-      "causes": [
-        "FAVORITE_PATTERN_BREAK",
-        "INPUT_COVERAGE_GAP"
-      ]
-    },
-    {
-      "matchDate": "2026-07-25",
-      "home": "MetroStars",
-      "away": "West Adelaide",
-      "league": "South Australia NPL",
-      "engine": "Elite",
-      "market": "Home DNB",
       "score": "1-3",
       "causes": [
         "FAVORITE_PATTERN_BREAK",

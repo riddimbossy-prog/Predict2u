@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-29T01:53:39.316Z",
+  "updated": "2026-07-29T03:08:44.853Z",
   "minSample": 300,
   "groups": {
     "LEM|USL League Two|Prime|Double Chance 1X|90-99": {
@@ -1070,14 +1070,14 @@
       "validated": false
     },
     "M|*|*|Double Chance X2|80-89": {
-      "sample": 23,
-      "wins": 16,
+      "sample": 24,
+      "wins": 17,
       "losses": 7,
-      "lower": 0.4913,
-      "mid": 0.6957,
-      "upper": 0.844,
+      "lower": 0.5083,
+      "mid": 0.7083,
+      "upper": 0.8509,
       "grade": "Learning",
-      "leagueReliability": 48,
+      "leagueReliability": 48.3,
       "validated": false
     },
     "LEM|USL League Two|Pro|Double Chance X2|80-89": {
@@ -1136,14 +1136,14 @@
       "validated": false
     },
     "M|*|*|Home Win|80-89": {
-      "sample": 6,
-      "wins": 4,
+      "sample": 7,
+      "wins": 5,
       "losses": 2,
-      "lower": 0.3,
-      "mid": 0.6667,
-      "upper": 0.9032,
+      "lower": 0.3589,
+      "mid": 0.7143,
+      "upper": 0.9178,
       "grade": "Learning",
-      "leagueReliability": 40.1,
+      "leagueReliability": 41.4,
       "validated": false
     },
     "LEM|USL League Two|Prime|Home Team Over 1.5 Goals|100-109": {
@@ -2412,14 +2412,14 @@
       "validated": false
     },
     "EM|*|league-bias|Under 3.5 Goals|90-99": {
-      "sample": 13,
+      "sample": 14,
       "wins": 12,
-      "losses": 1,
-      "lower": 0.6669,
-      "mid": 0.9231,
-      "upper": 0.9863,
+      "losses": 2,
+      "lower": 0.6006,
+      "mid": 0.8571,
+      "upper": 0.9599,
       "grade": "Learning",
-      "leagueReliability": 48.7,
+      "leagueReliability": 47.6,
       "validated": false
     },
     "LM|Premier Soccer League|*|Under 3.5 Goals|90-99": {
@@ -2434,14 +2434,14 @@
       "validated": false
     },
     "M|*|*|Under 3.5 Goals|90-99": {
-      "sample": 16,
+      "sample": 17,
       "wins": 15,
-      "losses": 1,
-      "lower": 0.7167,
-      "mid": 0.9375,
-      "upper": 0.9889,
+      "losses": 2,
+      "lower": 0.6566,
+      "mid": 0.8824,
+      "upper": 0.9671,
       "grade": "Learning",
-      "leagueReliability": 50.2,
+      "leagueReliability": 49.1,
       "validated": false
     },
     "LEM|Premier Soccer League|normal|Double Chance X2|80-89": {
@@ -5492,14 +5492,14 @@
       "validated": false
     },
     "EM|*|trend|Double Chance X2|80-89": {
-      "sample": 9,
-      "wins": 6,
+      "sample": 10,
+      "wins": 7,
       "losses": 3,
-      "lower": 0.3542,
-      "mid": 0.6667,
-      "upper": 0.8794,
+      "lower": 0.3968,
+      "mid": 0.7,
+      "upper": 0.8922,
       "grade": "Learning",
-      "leagueReliability": 42.5,
+      "leagueReliability": 43.4,
       "validated": false
     },
     "LM|K3 League|*|Double Chance X2|80-89": {
@@ -5525,14 +5525,14 @@
       "validated": false
     },
     "EM|*|normal|Home Win|80-89": {
-      "sample": 2,
-      "wins": 2,
+      "sample": 3,
+      "wins": 3,
       "losses": 0,
-      "lower": 0.3424,
+      "lower": 0.4385,
       "mid": 1,
       "upper": 1,
       "grade": "Learning",
-      "leagueReliability": 38.3,
+      "leagueReliability": 41.2,
       "validated": false
     },
     "LM|Victoria NPL 2|*|Home Win|80-89": {
@@ -9143,6 +9143,28 @@
       "leagueReliability": 42.2,
       "validated": false
     },
+    "LEM|Primera C|league-bias|Under 3.5 Goals|90-99": {
+      "sample": 1,
+      "wins": 0,
+      "losses": 1,
+      "lower": 0,
+      "mid": 0,
+      "upper": 0.7935,
+      "grade": "Learning",
+      "leagueReliability": 42.2,
+      "validated": false
+    },
+    "LM|Primera C|*|Under 3.5 Goals|90-99": {
+      "sample": 1,
+      "wins": 0,
+      "losses": 1,
+      "lower": 0,
+      "mid": 0,
+      "upper": 0.7935,
+      "grade": "Learning",
+      "leagueReliability": 42.2,
+      "validated": false
+    },
     "LEM|Baiano - 2|halves|Second Half Over 0.5|80-89": {
       "sample": 1,
       "wins": 0,
@@ -9298,6 +9320,28 @@
       "validated": false
     },
     "LM|Division Intermedia|*|Away Team Over 0.5 Goals|80-89": {
+      "sample": 1,
+      "wins": 1,
+      "losses": 0,
+      "lower": 0.2065,
+      "mid": 1,
+      "upper": 1,
+      "grade": "Learning",
+      "leagueReliability": 42.2,
+      "validated": false
+    },
+    "LEM|Football League - Lowland League|normal|Home Win|80-89": {
+      "sample": 1,
+      "wins": 1,
+      "losses": 0,
+      "lower": 0.2065,
+      "mid": 1,
+      "upper": 1,
+      "grade": "Learning",
+      "leagueReliability": 42.2,
+      "validated": false
+    },
+    "LM|Football League - Lowland League|*|Home Win|80-89": {
       "sample": 1,
       "wins": 1,
       "losses": 0,
@@ -9760,6 +9804,28 @@
       "validated": false
     },
     "LM|Oberliga - Bayern Süd|*|Double Chance 1X|80-89": {
+      "sample": 1,
+      "wins": 1,
+      "losses": 0,
+      "lower": 0.2065,
+      "mid": 1,
+      "upper": 1,
+      "grade": "Learning",
+      "leagueReliability": 42.2,
+      "validated": false
+    },
+    "LEM|Football League - Lowland League|trend|Double Chance X2|80-89": {
+      "sample": 1,
+      "wins": 1,
+      "losses": 0,
+      "lower": 0.2065,
+      "mid": 1,
+      "upper": 1,
+      "grade": "Learning",
+      "leagueReliability": 42.2,
+      "validated": false
+    },
+    "LM|Football League - Lowland League|*|Double Chance X2|80-89": {
       "sample": 1,
       "wins": 1,
       "losses": 0,
