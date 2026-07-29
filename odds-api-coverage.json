@@ -1,6 +1,6 @@
 {
   "version": "v251",
-  "generatedAt": "2026-07-29T18:18:47.165Z",
+  "generatedAt": "2026-07-29T18:29:45.042Z",
   "provider": "The Odds API v4",
   "keyPresent": true,
   "regions": "uk",
@@ -2882,18 +2882,6 @@
       "market": "double_chance"
     },
     {
-      "sportKey": "soccer_uefa_nations_league",
-      "market": "btts"
-    },
-    {
-      "sportKey": "soccer_uefa_nations_league",
-      "market": "draw_no_bet"
-    },
-    {
-      "sportKey": "soccer_uefa_nations_league",
-      "market": "double_chance"
-    },
-    {
       "sportKey": "soccer_argentina_primera_division",
       "market": "btts"
     },
@@ -3315,31 +3303,6 @@
     },
     {
       "label": "soccer_uefa_champs_league_qualification:double_chance",
-      "error": "Markets not supported by this endpoint: double_chance",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_uefa_nations_league:base-combined",
-      "error": "Markets not supported by this endpoint: btts, double_chance, draw_no_bet",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_uefa_nations_league:base-core",
-      "error": "Invalid commenceTimeFrom parameter. The format must be YYYY-MM-DDTHH:MM:SSZ, for example 2020-11-24T16:05:00Z",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_uefa_nations_league:btts",
-      "error": "Markets not supported by this endpoint: btts",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_uefa_nations_league:draw_no_bet",
-      "error": "Markets not supported by this endpoint: draw_no_bet",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_uefa_nations_league:double_chance",
       "error": "Markets not supported by this endpoint: double_chance",
       "statusCode": 422
     },
@@ -4101,5 +4064,5 @@
   },
   "skipped": false,
   "skipReason": null,
-  "completedAt": "2026-07-29T18:19:06.999Z"
+  "completedAt": "2026-07-29T18:29:57.978Z"
 }
