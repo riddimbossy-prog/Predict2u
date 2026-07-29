@@ -1,6 +1,6 @@
 {
   "version": "v251",
-  "generatedAt": "2026-07-29T17:00:54.411Z",
+  "generatedAt": "2026-07-29T17:16:06.137Z",
   "provider": "The Odds API v4",
   "keyPresent": true,
   "regions": "uk",
@@ -16,20 +16,20 @@
       "matches": 5
     },
     {
+      "league": "Cup",
+      "country": "Russia",
+      "sportKey": "soccer_england_efl_cup",
+      "sportTitle": "EFL Cup",
+      "score": 0.487,
+      "matches": 12
+    },
+    {
       "league": "UEFA Europa Conference League",
       "country": "World",
       "sportKey": "soccer_uefa_nations_league",
       "sportTitle": "UEFA Nations League",
       "score": 0.333,
       "matches": 45
-    },
-    {
-      "league": "Cup",
-      "country": "Russia",
-      "sportKey": "soccer_england_efl_cup",
-      "sportTitle": "EFL Cup",
-      "score": 0.487,
-      "matches": 11
     },
     {
       "league": "Super League",
@@ -2848,6 +2848,18 @@
       "market": "double_chance"
     },
     {
+      "sportKey": "soccer_uefa_nations_league",
+      "market": "btts"
+    },
+    {
+      "sportKey": "soccer_uefa_nations_league",
+      "market": "draw_no_bet"
+    },
+    {
+      "sportKey": "soccer_uefa_nations_league",
+      "market": "double_chance"
+    },
+    {
       "sportKey": "soccer_greece_super_league",
       "market": "btts"
     },
@@ -3256,6 +3268,31 @@
     },
     {
       "label": "soccer_england_efl_cup:double_chance",
+      "error": "Markets not supported by this endpoint: double_chance",
+      "statusCode": 422
+    },
+    {
+      "label": "soccer_uefa_nations_league:base-combined",
+      "error": "Markets not supported by this endpoint: btts, double_chance, draw_no_bet",
+      "statusCode": 422
+    },
+    {
+      "label": "soccer_uefa_nations_league:base-core",
+      "error": "Invalid commenceTimeFrom parameter. The format must be YYYY-MM-DDTHH:MM:SSZ, for example 2020-11-24T16:05:00Z",
+      "statusCode": 422
+    },
+    {
+      "label": "soccer_uefa_nations_league:btts",
+      "error": "Markets not supported by this endpoint: btts",
+      "statusCode": 422
+    },
+    {
+      "label": "soccer_uefa_nations_league:draw_no_bet",
+      "error": "Markets not supported by this endpoint: draw_no_bet",
+      "statusCode": 422
+    },
+    {
+      "label": "soccer_uefa_nations_league:double_chance",
       "error": "Markets not supported by this endpoint: double_chance",
       "statusCode": 422
     },
@@ -4017,5 +4054,5 @@
   },
   "skipped": false,
   "skipReason": null,
-  "completedAt": "2026-07-29T17:01:20.913Z"
+  "completedAt": "2026-07-29T17:16:14.522Z"
 }
