@@ -1,9 +1,9 @@
 {
   "version": "v194",
-  "updated": "2026-07-29T15:39:54.099Z",
+  "updated": "2026-07-29T16:55:58.367Z",
   "summary": {
-    "settled": 826,
-    "winRate": 0.8027,
+    "settled": 827,
+    "winRate": 0.8029,
     "engines": 12,
     "approved": 0,
     "shadow": 10,
@@ -45,7 +45,7 @@
         "distributionShift": 0.353,
         "status": "STABLE"
       },
-      "updated": "2026-07-29T15:39:54.097Z"
+      "updated": "2026-07-29T16:55:58.365Z"
     },
     "Prime": {
       "engine": "Prime",
@@ -78,7 +78,7 @@
         "distributionShift": 0.293,
         "status": "STABLE"
       },
-      "updated": "2026-07-29T15:39:54.097Z"
+      "updated": "2026-07-29T16:55:58.365Z"
     },
     "Value": {
       "engine": "Value",
@@ -111,7 +111,7 @@
         "distributionShift": 0.8,
         "status": "STABLE"
       },
-      "updated": "2026-07-29T15:39:54.097Z"
+      "updated": "2026-07-29T16:55:58.365Z"
     },
     "Pro": {
       "engine": "Pro",
@@ -144,7 +144,7 @@
         "distributionShift": 0.8,
         "status": "STABLE"
       },
-      "updated": "2026-07-29T15:39:54.097Z"
+      "updated": "2026-07-29T16:55:58.365Z"
     },
     "Ultra": {
       "engine": "Ultra",
@@ -177,7 +177,7 @@
         "distributionShift": 0.5,
         "status": "STABLE"
       },
-      "updated": "2026-07-29T15:39:54.097Z"
+      "updated": "2026-07-29T16:55:58.365Z"
     },
     "Elite": {
       "engine": "Elite",
@@ -210,7 +210,7 @@
         "distributionShift": 0.5,
         "status": "STABLE"
       },
-      "updated": "2026-07-29T15:39:54.097Z"
+      "updated": "2026-07-29T16:55:58.365Z"
     },
     "Apex": {
       "engine": "Apex",
@@ -243,7 +243,7 @@
         "distributionShift": 0.5,
         "status": "STABLE"
       },
-      "updated": "2026-07-29T15:39:54.097Z"
+      "updated": "2026-07-29T16:55:58.365Z"
     },
     "Halves": {
       "engine": "Halves",
@@ -276,7 +276,7 @@
         "distributionShift": 0,
         "status": "STABLE"
       },
-      "updated": "2026-07-29T15:39:54.097Z"
+      "updated": "2026-07-29T16:55:58.366Z"
     },
     "Streaks": {
       "engine": "Streaks",
@@ -309,7 +309,7 @@
         "distributionShift": 0.5,
         "status": "STABLE"
       },
-      "updated": "2026-07-29T15:39:54.097Z"
+      "updated": "2026-07-29T16:55:58.366Z"
     },
     "Trend": {
       "engine": "Trend",
@@ -342,7 +342,7 @@
         "distributionShift": 0.3,
         "status": "STABLE"
       },
-      "updated": "2026-07-29T15:39:54.098Z"
+      "updated": "2026-07-29T16:55:58.366Z"
     },
     "League Bias": {
       "engine": "League Bias",
@@ -355,13 +355,13 @@
         "rate": 0.8819
       },
       "validation": {
-        "sample": 62,
-        "wins": 49,
+        "sample": 63,
+        "wins": 50,
         "losses": 13,
-        "rate": 0.7903
+        "rate": 0.7937
       },
-      "validationDelta": -0.0916,
-      "calibrationError": 0.0791,
+      "validationDelta": -0.0882,
+      "calibrationError": 0.0754,
       "shadow": {
         "eligible": 0,
         "avoidedLosses": 0,
@@ -371,11 +371,11 @@
       "drift": {
         "recentSample": 30,
         "priorSample": 30,
-        "confidenceShift": -0.19,
-        "distributionShift": 0.067,
+        "confidenceShift": -0.22,
+        "distributionShift": 0.033,
         "status": "STABLE"
       },
-      "updated": "2026-07-29T15:39:54.098Z"
+      "updated": "2026-07-29T16:55:58.366Z"
     },
     "Strict": {
       "engine": "Strict",
@@ -408,7 +408,7 @@
         "distributionShift": 0.5,
         "status": "STABLE"
       },
-      "updated": "2026-07-29T15:39:54.098Z"
+      "updated": "2026-07-29T16:55:58.366Z"
     }
   },
   "marketScorecards": [
@@ -438,11 +438,11 @@
     },
     {
       "marketFamily": "MATCH_UNDER",
-      "sample": 92,
-      "wins": 67,
+      "sample": 93,
+      "wins": 68,
       "losses": 25,
-      "rate": 0.7283,
-      "calibrationError": 0.0287
+      "rate": 0.7312,
+      "calibrationError": 0.0266
     },
     {
       "marketFamily": "MATCH_OVER",
@@ -502,10 +502,10 @@
     },
     {
       "league": "Premier League",
-      "sample": 20,
-      "wins": 13,
+      "sample": 21,
+      "wins": 14,
       "losses": 7,
-      "rate": 0.65
+      "rate": 0.6667
     },
     {
       "league": "Primera B Metropolitana",
