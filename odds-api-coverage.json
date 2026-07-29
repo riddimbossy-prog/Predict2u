@@ -1,6 +1,6 @@
 {
   "version": "v251",
-  "generatedAt": "2026-07-28T23:50:02.020Z",
+  "generatedAt": "2026-07-29T00:06:21.622Z",
   "provider": "The Odds API v4",
   "keyPresent": true,
   "regions": "uk",
@@ -22,14 +22,6 @@
       "sportTitle": "Premiership - Scotland",
       "score": 0.305,
       "matches": 28
-    },
-    {
-      "league": "Primera Division",
-      "country": "El-Salvador",
-      "sportKey": "soccer_spain_la_liga",
-      "sportTitle": "La Liga - Spain",
-      "score": 0.429,
-      "matches": 10
     },
     {
       "league": "Liga Profesional Argentina",
@@ -166,6 +158,14 @@
       "sportTitle": "MLS",
       "score": 0.466,
       "matches": 11
+    },
+    {
+      "league": "Primera Division",
+      "country": "El-Salvador",
+      "sportKey": "soccer_spain_la_liga",
+      "sportTitle": "La Liga - Spain",
+      "score": 0.429,
+      "matches": 9
     },
     {
       "league": "Premier League - Summer Series",
@@ -1280,7 +1280,7 @@
       "matches": 1
     }
   ],
-  "matchesConsidered": 2170,
+  "matchesConsidered": 2168,
   "matchesMatched": 0,
   "matchesUpdated": 0,
   "fieldsFilled": 0,
@@ -1306,12 +1306,6 @@
       "country": "Colombia",
       "reason": "No matching soccer sport key",
       "bestScore": 0.2
-    },
-    {
-      "league": "Division Profesional - Clausura",
-      "country": "Paraguay",
-      "reason": "No matching soccer sport key",
-      "bestScore": 0.125
     },
     {
       "league": "Division Intermedia",
@@ -1382,6 +1376,12 @@
     {
       "league": "2. Deild",
       "country": "Iceland",
+      "reason": "No matching soccer sport key",
+      "bestScore": 0.125
+    },
+    {
+      "league": "Division Profesional - Clausura",
+      "country": "Paraguay",
       "reason": "No matching soccer sport key",
       "bestScore": 0.125
     },
@@ -2592,96 +2592,6 @@
       "reason": "No event/team match"
     },
     {
-      "league": "Primera Division",
-      "home": "Cacahuatique",
-      "away": "Atletico Balboa",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Primera Division",
-      "home": "Municipal Limeño",
-      "away": "Inca Aruba",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Primera Division",
-      "home": "Firpo",
-      "away": "Fuerte San Francisco",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Primera Division",
-      "home": "Isidro Metapán",
-      "away": "FAS",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Primera Division",
-      "home": "Inter",
-      "away": "Águila",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Primera Division",
-      "home": "Fuerte San Francisco",
-      "away": "Inter",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Primera Division",
-      "home": "Municipal Limeño",
-      "away": "Platense",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Primera Division",
-      "home": "Águila",
-      "away": "Cacahuatique",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Primera Division",
-      "home": "Atletico Balboa",
-      "away": "Isidro Metapán",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Primera Division",
-      "home": "Inca Aruba",
-      "away": "FAS",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Primera Division",
-      "home": "Jalapa",
-      "away": "Real Estelí",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Primera Division",
-      "home": "Diriangén",
-      "away": "UNAN Managua",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Primera Division",
-      "home": "Rancho Santana",
-      "away": "H&H Export",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Primera Division",
-      "home": "San Marcos",
-      "away": "Managua",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Primera Division",
-      "home": "Walter Ferretti",
-      "away": "Matagalpa",
-      "reason": "No event/team match"
-    },
-    {
       "league": "Liga Profesional Argentina",
       "home": "Banfield",
       "away": "Sarmiento Junin",
@@ -2788,6 +2698,96 @@
       "home": "Aldosivi",
       "away": "Gimnasia L.P.",
       "reason": "No event/team match"
+    },
+    {
+      "league": "Liga Profesional Argentina",
+      "home": "Deportivo Riestra",
+      "away": "Barracas Central",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Liga Profesional Argentina",
+      "home": "Newells Old Boys",
+      "away": "Boca Juniors",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Liga Profesional Argentina",
+      "home": "River Plate",
+      "away": "Rosario Central",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Liga Profesional Argentina",
+      "home": "Lanus",
+      "away": "Instituto Cordoba",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Liga Profesional Argentina",
+      "home": "Sarmiento Junin",
+      "away": "Independ. Rivadavia",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Liga Profesional Argentina",
+      "home": "Platense",
+      "away": "Talleres Cordoba",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Liga Profesional Argentina",
+      "home": "Velez Sarsfield",
+      "away": "Independiente",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Reserve League",
+      "home": "Barracas Central Res.",
+      "away": "Racing Club Res.",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Primera C",
+      "home": "Central Ballester",
+      "away": "Sportivo Barracas",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Primera C",
+      "home": "Central Cordoba",
+      "away": "General Lamadrid",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Primera C",
+      "home": "Claypole",
+      "away": "Lujan",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Primera C",
+      "home": "Centro Español",
+      "away": "Victoriano Arenas",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Primera C",
+      "home": "Defensores de Cambaceres",
+      "away": "Lugano",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Primera C",
+      "home": "Deportivo Muñiz",
+      "away": "Atletico Atlas",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Primera C",
+      "home": "Deportivo Paraguayo",
+      "away": "Argentino Rosario",
+      "reason": "No event/team match"
     }
   ],
   "unsupportedMarkets": [
@@ -2816,18 +2816,6 @@
       "market": "double_chance"
     },
     {
-      "sportKey": "soccer_spain_la_liga",
-      "market": "btts"
-    },
-    {
-      "sportKey": "soccer_spain_la_liga",
-      "market": "draw_no_bet"
-    },
-    {
-      "sportKey": "soccer_spain_la_liga",
-      "market": "double_chance"
-    },
-    {
       "sportKey": "soccer_argentina_primera_division",
       "market": "btts"
     },
@@ -2957,6 +2945,18 @@
     },
     {
       "sportKey": "soccer_usa_mls",
+      "market": "double_chance"
+    },
+    {
+      "sportKey": "soccer_spain_la_liga",
+      "market": "btts"
+    },
+    {
+      "sportKey": "soccer_spain_la_liga",
+      "market": "draw_no_bet"
+    },
+    {
+      "sportKey": "soccer_spain_la_liga",
       "market": "double_chance"
     },
     {
@@ -3240,31 +3240,6 @@
       "statusCode": 422
     },
     {
-      "label": "soccer_spain_la_liga:base-combined",
-      "error": "Markets not supported by this endpoint: btts, double_chance, draw_no_bet",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_spain_la_liga:base-core",
-      "error": "Invalid commenceTimeFrom parameter. The format must be YYYY-MM-DDTHH:MM:SSZ, for example 2020-11-24T16:05:00Z",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_spain_la_liga:btts",
-      "error": "Markets not supported by this endpoint: btts",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_spain_la_liga:draw_no_bet",
-      "error": "Markets not supported by this endpoint: draw_no_bet",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_spain_la_liga:double_chance",
-      "error": "Markets not supported by this endpoint: double_chance",
-      "statusCode": 422
-    },
-    {
       "label": "soccer_argentina_primera_division:base-combined",
       "error": "Markets not supported by this endpoint: btts, double_chance, draw_no_bet",
       "statusCode": 422
@@ -3536,6 +3511,31 @@
     },
     {
       "label": "soccer_usa_mls:double_chance",
+      "error": "Markets not supported by this endpoint: double_chance",
+      "statusCode": 422
+    },
+    {
+      "label": "soccer_spain_la_liga:base-combined",
+      "error": "Markets not supported by this endpoint: btts, double_chance, draw_no_bet",
+      "statusCode": 422
+    },
+    {
+      "label": "soccer_spain_la_liga:base-core",
+      "error": "Invalid commenceTimeFrom parameter. The format must be YYYY-MM-DDTHH:MM:SSZ, for example 2020-11-24T16:05:00Z",
+      "statusCode": 422
+    },
+    {
+      "label": "soccer_spain_la_liga:btts",
+      "error": "Markets not supported by this endpoint: btts",
+      "statusCode": 422
+    },
+    {
+      "label": "soccer_spain_la_liga:draw_no_bet",
+      "error": "Markets not supported by this endpoint: draw_no_bet",
+      "statusCode": 422
+    },
+    {
+      "label": "soccer_spain_la_liga:double_chance",
       "error": "Markets not supported by this endpoint: double_chance",
       "statusCode": 422
     },
@@ -4022,5 +4022,5 @@
   },
   "skipped": false,
   "skipReason": null,
-  "completedAt": "2026-07-28T23:50:09.902Z"
+  "completedAt": "2026-07-29T00:06:42.889Z"
 }
