@@ -153489,8 +153489,8 @@
         "dataFields": 0
       },
       "recordedAt": "2026-07-23T02:54:32.705Z",
-      "status": "pending",
-      "result": null,
+      "status": "void",
+      "result": "Void",
       "score": null
     },
     {
@@ -230943,9 +230943,13 @@
         "dataFields": 0
       },
       "recordedAt": "2026-07-28T12:37:32.711Z",
-      "status": "pending",
-      "result": null,
-      "score": null
+      "status": "settled",
+      "result": "Lost",
+      "score": "0-2",
+      "finalHomeGoals": 0,
+      "finalAwayGoals": 2,
+      "actualResult": "away",
+      "settledAt": "2026-07-29T18:29:49.992Z"
     },
     {
       "matchDate": "2026-07-29",
@@ -238002,6 +238006,6 @@
   ],
   "meta": {
     "created": "2026-06-30T22:00:54.285Z",
-    "updated": "2026-07-29T18:20:09.137Z"
+    "updated": "2026-07-29T18:29:52.934Z"
   }
 }
