@@ -1,6 +1,6 @@
 {
   "version": "v251",
-  "generatedAt": "2026-07-29T23:00:35.376Z",
+  "generatedAt": "2026-07-29T23:14:01.593Z",
   "provider": "The Odds API v4",
   "keyPresent": true,
   "regions": "uk",
@@ -1296,7 +1296,7 @@
       "matches": 2
     }
   ],
-  "matchesConsidered": 2158,
+  "matchesConsidered": 2113,
   "matchesMatched": 0,
   "matchesUpdated": 0,
   "fieldsFilled": 0,
@@ -1330,30 +1330,6 @@
       "bestScore": 0.125
     },
     {
-      "league": "CONCACAF U20",
-      "country": "World",
-      "reason": "No matching soccer sport key",
-      "bestScore": 0
-    },
-    {
-      "league": "Copa Ecuador",
-      "country": "Ecuador",
-      "reason": "No matching soccer sport key",
-      "bestScore": 0.2
-    },
-    {
-      "league": "Segunda División",
-      "country": "Venezuela",
-      "reason": "No matching soccer sport key",
-      "bestScore": 0.143
-    },
-    {
-      "league": "Liga Pro Serie B",
-      "country": "Ecuador",
-      "reason": "No matching soccer sport key",
-      "bestScore": 0.25
-    },
-    {
       "league": "Division Profesional - Clausura",
       "country": "Paraguay",
       "reason": "No matching soccer sport key",
@@ -1366,10 +1342,22 @@
       "bestScore": 0.2
     },
     {
+      "league": "Liga Pro Serie B",
+      "country": "Ecuador",
+      "reason": "No matching soccer sport key",
+      "bestScore": 0.25
+    },
+    {
       "league": "CONCACAF Central American Cup",
       "country": "World",
       "reason": "No matching soccer sport key",
       "bestScore": 0.111
+    },
+    {
+      "league": "Copa Ecuador",
+      "country": "Ecuador",
+      "reason": "No matching soccer sport key",
+      "bestScore": 0.2
     },
     {
       "league": "CONCACAF U20",
@@ -2423,14 +2411,14 @@
     },
     {
       "league": "Mineiro U20",
-      "home": "Cruzeiro U20",
-      "away": "América Mineiro U20",
+      "home": "Villa Real U20",
+      "away": "Sao Joao del Rei U20",
       "reason": "No event/team match"
     },
     {
       "league": "Mineiro U20",
-      "home": "Villa Real U20",
-      "away": "Sao Joao del Rei U20",
+      "home": "Cruzeiro U20",
+      "away": "América Mineiro U20",
       "reason": "No event/team match"
     },
     {
@@ -2455,54 +2443,6 @@
       "league": "Mineiro U20",
       "home": "Social U20",
       "away": "Betim U20",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Copa Paulista",
-      "home": "Comercial",
-      "away": "União São João",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Copa Paulista",
-      "home": "São Caetano",
-      "away": "EC São Bernardo",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Copa Paulista",
-      "home": "Paulista",
-      "away": "Oeste",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Copa Paulista",
-      "home": "XV de Piracicaba",
-      "away": "Noroeste",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Copa Paulista",
-      "home": "Bandeirante SP",
-      "away": "Marília",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Copa Paulista",
-      "home": "Santo André",
-      "away": "São José EC",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Copa Paulista",
-      "home": "Juventus",
-      "away": "Primavera SP",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Copa Paulista",
-      "home": "Grêmio Prudente",
-      "away": "Linense",
       "reason": "No event/team match"
     },
     {
@@ -2533,6 +2473,54 @@
       "league": "Catarinense U20",
       "home": "Joinville U20",
       "away": "Carlos Renaux U20",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Copa Paulista",
+      "home": "São Caetano",
+      "away": "EC São Bernardo",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Copa Paulista",
+      "home": "Paulista",
+      "away": "Oeste",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Copa Paulista",
+      "home": "Comercial",
+      "away": "União São João",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Copa Paulista",
+      "home": "XV de Piracicaba",
+      "away": "Noroeste",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Copa Paulista",
+      "home": "Bandeirante SP",
+      "away": "Marília",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Copa Paulista",
+      "home": "Santo André",
+      "away": "São José EC",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Copa Paulista",
+      "home": "Juventus",
+      "away": "Primavera SP",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Copa Paulista",
+      "home": "Grêmio Prudente",
+      "away": "Linense",
       "reason": "No event/team match"
     },
     {
@@ -2809,6 +2797,90 @@
       "league": "Liga Profesional Argentina",
       "home": "Platense",
       "away": "Talleres Cordoba",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Liga Profesional Argentina",
+      "home": "Velez Sarsfield",
+      "away": "Independiente",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Liga Profesional Argentina",
+      "home": "Central Cordoba de Santiago",
+      "away": "San Lorenzo",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Liga Profesional Argentina",
+      "home": "Huracan",
+      "away": "Atletico Tucuman",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Reserve League",
+      "home": "Barracas Central Res.",
+      "away": "Racing Club Res.",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Reserve League",
+      "home": "Atlético Tucumán Res.",
+      "away": "Sarmiento Res.",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Reserve League",
+      "home": "Banfield Res.",
+      "away": "Tigre Res.",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Reserve League",
+      "home": "Gimnasia La Plata Res.",
+      "away": "Aldosivi Res.",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Reserve League",
+      "home": "Godoy Cruz Res.",
+      "away": "Racing Club Res.",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Reserve League",
+      "home": "Gimnasia Mendoza 2",
+      "away": "River Plate Res.",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Reserve League",
+      "home": "Boca Juniors Res.",
+      "away": "Independiente Riva. Res.",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Primera C",
+      "home": "Central Ballester",
+      "away": "Sportivo Barracas",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Primera C",
+      "home": "Central Cordoba",
+      "away": "General Lamadrid",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Primera C",
+      "home": "Claypole",
+      "away": "Lujan",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Primera C",
+      "home": "Centro Español",
+      "away": "Victoriano Arenas",
       "reason": "No event/team match"
     }
   ],
@@ -4007,5 +4079,5 @@
   },
   "skipped": false,
   "skipReason": null,
-  "completedAt": "2026-07-29T23:00:56.252Z"
+  "completedAt": "2026-07-29T23:14:14.322Z"
 }
