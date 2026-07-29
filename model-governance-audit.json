@@ -2,6 +2,71 @@
   "version": "v194",
   "events": [
     {
+      "at": "2026-07-29T23:07:47.685Z",
+      "policies": [
+        {
+          "engine": "Normal",
+          "state": "HOLD",
+          "reason": "Prediction behaviour changed too sharply."
+        },
+        {
+          "engine": "Prime",
+          "state": "SHADOW",
+          "reason": "Needs a larger forward validation sample."
+        },
+        {
+          "engine": "Value",
+          "state": "SHADOW",
+          "reason": "Needs a larger forward validation sample."
+        },
+        {
+          "engine": "Pro",
+          "state": "SHADOW",
+          "reason": "Needs a larger forward validation sample."
+        },
+        {
+          "engine": "Ultra",
+          "state": "SHADOW",
+          "reason": "Needs a larger forward validation sample."
+        },
+        {
+          "engine": "Elite",
+          "state": "SHADOW",
+          "reason": "Needs a larger forward validation sample."
+        },
+        {
+          "engine": "Apex",
+          "state": "SHADOW",
+          "reason": "Needs a larger forward validation sample."
+        },
+        {
+          "engine": "Halves",
+          "state": "ROLLBACK",
+          "reason": "Validation performance fell materially below training performance."
+        },
+        {
+          "engine": "Streaks",
+          "state": "SHADOW",
+          "reason": "Needs a larger forward validation sample."
+        },
+        {
+          "engine": "Trend",
+          "state": "SHADOW",
+          "reason": "Needs a larger forward validation sample."
+        },
+        {
+          "engine": "League Bias",
+          "state": "ROLLBACK",
+          "reason": "Validation performance fell materially below training performance."
+        },
+        {
+          "engine": "Strict",
+          "state": "SHADOW",
+          "reason": "Needs a larger forward validation sample."
+        }
+      ]
+    },
+    {
       "at": "2026-07-29T04:23:40.252Z",
       "policies": [
         {
