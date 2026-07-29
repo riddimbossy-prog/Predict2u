@@ -1,9 +1,9 @@
 {
   "version": "v193",
-  "updated": "2026-07-29T19:26:20.644Z",
+  "updated": "2026-07-29T20:40:42.373Z",
   "summary": {
-    "settledFixtures": 473,
-    "settledDecisions": 828,
+    "settledFixtures": 474,
+    "settledDecisions": 829,
     "reviewedLosses": 150,
     "teamProfiles": 317,
     "leagueProfiles": 66,
@@ -19,7 +19,7 @@
   "commonMissCauses": [
     {
       "cause": "INPUT_COVERAGE_GAP",
-      "count": 163
+      "count": 164
     },
     {
       "cause": "FAVORITE_PATTERN_BREAK",
@@ -27,7 +27,7 @@
     },
     {
       "cause": "RESULT_DIRECTION_MISS",
-      "count": 31
+      "count": 32
     },
     {
       "cause": "GOAL_SPIKE",
@@ -55,6 +55,19 @@
     }
   ],
   "recentLossReviews": [
+    {
+      "matchDate": "2026-07-29",
+      "home": "Al-Hilal Saudi FC",
+      "away": "MC Alger",
+      "league": "Friendlies Clubs",
+      "engine": "League Bias",
+      "market": "Home Team Over 0.5 Goals",
+      "score": "0-2",
+      "causes": [
+        "RESULT_DIRECTION_MISS",
+        "INPUT_COVERAGE_GAP"
+      ]
+    },
     {
       "matchDate": "2026-07-27",
       "home": "Sportivo Barracas",
@@ -418,19 +431,6 @@
       "league": "South Australia NPL",
       "engine": "Strict",
       "market": "Home Win",
-      "score": "1-3",
-      "causes": [
-        "FAVORITE_PATTERN_BREAK",
-        "INPUT_COVERAGE_GAP"
-      ]
-    },
-    {
-      "matchDate": "2026-07-25",
-      "home": "MetroStars",
-      "away": "West Adelaide",
-      "league": "South Australia NPL",
-      "engine": "Ultra",
-      "market": "Double Chance 1X",
       "score": "1-3",
       "causes": [
         "FAVORITE_PATTERN_BREAK",

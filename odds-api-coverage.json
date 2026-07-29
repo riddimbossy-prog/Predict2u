@@ -1,6 +1,6 @@
 {
   "version": "v251",
-  "generatedAt": "2026-07-29T20:32:24.523Z",
+  "generatedAt": "2026-07-29T20:32:24.672Z",
   "provider": "The Odds API v4",
   "keyPresent": true,
   "regions": "uk",
@@ -21,7 +21,7 @@
       "sportKey": "soccer_uefa_champs_league_qualification",
       "sportTitle": "UEFA Champions League Qualification",
       "score": 0.695,
-      "matches": 7
+      "matches": 9
     },
     {
       "league": "Catarinense U20",
@@ -70,6 +70,14 @@
       "sportTitle": "Copa Sudamericana",
       "score": 0.4,
       "matches": 6
+    },
+    {
+      "league": "Goiano - 2",
+      "country": "Brazil",
+      "sportKey": "soccer_brazil_campeonato",
+      "sportTitle": "Brazil Série A",
+      "score": 0.305,
+      "matches": 10
     },
     {
       "league": "USL Championship",
@@ -728,6 +736,14 @@
       "matches": 15
     },
     {
+      "league": "Copa Paulista",
+      "country": "Brazil",
+      "sportKey": "soccer_brazil_campeonato",
+      "sportTitle": "Brazil Série A",
+      "score": 0.305,
+      "matches": 8
+    },
+    {
       "league": "Major League Soccer",
       "country": "USA",
       "sportKey": "soccer_usa_mls",
@@ -1120,22 +1136,6 @@
       "matches": 9
     },
     {
-      "league": "Catarinense U20",
-      "country": "Brazil",
-      "sportKey": "soccer_brazil_campeonato",
-      "sportTitle": "Brazil Série A",
-      "score": 0.305,
-      "matches": 5
-    },
-    {
-      "league": "Copa Paulista",
-      "country": "Brazil",
-      "sportKey": "soccer_brazil_campeonato",
-      "sportTitle": "Brazil Série A",
-      "score": 0.305,
-      "matches": 8
-    },
-    {
       "league": "Capixaba B",
       "country": "Brazil",
       "sportKey": "soccer_brazil_serie_b",
@@ -1272,6 +1272,14 @@
       "matches": 1
     },
     {
+      "league": "Torneo Federal A",
+      "country": "Argentina",
+      "sportKey": "soccer_argentina_primera_division",
+      "sportTitle": "Primera División - Argentina",
+      "score": 0.305,
+      "matches": 17
+    },
+    {
       "league": "UEFA Champions League Women",
       "country": "World",
       "sportKey": "soccer_uefa_champs_league_qualification",
@@ -1288,7 +1296,7 @@
       "matches": 2
     }
   ],
-  "matchesConsidered": 2196,
+  "matchesConsidered": 2204,
   "matchesMatched": 0,
   "matchesUpdated": 0,
   "fieldsFilled": 0,
@@ -1410,6 +1418,18 @@
       "country": "World",
       "reason": "No matching soccer sport key",
       "bestScore": 0.125
+    },
+    {
+      "league": "CAC Games",
+      "country": "World",
+      "reason": "No matching soccer sport key",
+      "bestScore": 0
+    },
+    {
+      "league": "COTIF Tournament",
+      "country": "World",
+      "reason": "No matching soccer sport key",
+      "bestScore": 0
     },
     {
       "league": "Primera A",
@@ -1698,6 +1718,12 @@
       "country": "Romania",
       "reason": "No matching soccer sport key",
       "bestScore": 0.143
+    },
+    {
+      "league": "Calcutta Premier Division",
+      "country": "India",
+      "reason": "No matching soccer sport key",
+      "bestScore": 0.222
     },
     {
       "league": "1. Deild",
@@ -2313,6 +2339,18 @@
     },
     {
       "league": "UEFA Champions League",
+      "home": "Lech Poznan",
+      "away": "Aarhus",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "UEFA Champions League",
+      "home": "Hapoel Beer Sheva",
+      "away": "Vikingur Reykjavik",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "UEFA Champions League",
       "home": "Gornik Zabrze",
       "away": "Fenerbahçe",
       "reason": "No event/team match"
@@ -2766,18 +2804,6 @@
       "home": "Grêmio Prudente",
       "away": "Linense",
       "reason": "No event/team match"
-    },
-    {
-      "league": "Carioca A2",
-      "home": "Americano Campos",
-      "away": "Resende",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Baiano U20",
-      "home": "Bahia U20",
-      "away": "Fluminense de Feira U20",
-      "reason": "No event/team match"
     }
   ],
   "unsupportedMarkets": [
@@ -2810,23 +2836,23 @@
       "market": "btts"
     },
     {
-      "sportKey": "soccer_spl",
+      "sportKey": "soccer_brazil_campeonato",
       "market": "draw_no_bet"
     },
     {
-      "sportKey": "soccer_spl",
+      "sportKey": "soccer_brazil_campeonato",
       "market": "double_chance"
     },
     {
-      "sportKey": "soccer_argentina_primera_division",
+      "sportKey": "soccer_uefa_nations_league",
       "market": "btts"
     },
     {
-      "sportKey": "soccer_argentina_primera_division",
+      "sportKey": "soccer_uefa_nations_league",
       "market": "draw_no_bet"
     },
     {
-      "sportKey": "soccer_argentina_primera_division",
+      "sportKey": "soccer_uefa_nations_league",
       "market": "double_chance"
     },
     {
@@ -4024,5 +4050,5 @@
   },
   "skipped": false,
   "skipReason": null,
-  "completedAt": "2026-07-29T20:32:31.859Z"
+  "completedAt": "2026-07-29T20:32:37.554Z"
 }
