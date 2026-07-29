@@ -1,6 +1,6 @@
 {
   "version": "v251",
-  "generatedAt": "2026-07-29T16:30:36.804Z",
+  "generatedAt": "2026-07-29T16:45:08.177Z",
   "provider": "The Odds API v4",
   "keyPresent": true,
   "regions": "uk",
@@ -13,15 +13,7 @@
       "sportKey": "soccer_norway_eliteserien",
       "sportTitle": "Eliteserien - Norway",
       "score": 0.305,
-      "matches": 6
-    },
-    {
-      "league": "Cup",
-      "country": "Russia",
-      "sportKey": "soccer_england_efl_cup",
-      "sportTitle": "EFL Cup",
-      "score": 0.487,
-      "matches": 12
+      "matches": 5
     },
     {
       "league": "UEFA Europa Conference League",
@@ -30,6 +22,14 @@
       "sportTitle": "UEFA Nations League",
       "score": 0.333,
       "matches": 45
+    },
+    {
+      "league": "Cup",
+      "country": "Russia",
+      "sportKey": "soccer_england_efl_cup",
+      "sportTitle": "EFL Cup",
+      "score": 0.487,
+      "matches": 11
     },
     {
       "league": "Super League",
@@ -1296,7 +1296,7 @@
       "matches": 2
     }
   ],
-  "matchesConsidered": 2290,
+  "matchesConsidered": 2240,
   "matchesMatched": 0,
   "matchesUpdated": 0,
   "fieldsFilled": 0,
@@ -1312,8 +1312,8 @@
       "bestScore": 0
     },
     {
-      "league": "Piala Presiden",
-      "country": "Indonesia",
+      "league": "Cupa României",
+      "country": "Romania",
       "reason": "No matching soccer sport key",
       "bestScore": 0
     },
@@ -1322,12 +1322,6 @@
       "country": "World",
       "reason": "No matching soccer sport key",
       "bestScore": 0.125
-    },
-    {
-      "league": "Cupa României",
-      "country": "Romania",
-      "reason": "No matching soccer sport key",
-      "bestScore": 0
     },
     {
       "league": "Africa Cup of Nations - Women",
@@ -1436,6 +1430,12 @@
       "country": "Ukraine",
       "reason": "No matching soccer sport key",
       "bestScore": 0.143
+    },
+    {
+      "league": "Piala Presiden",
+      "country": "Indonesia",
+      "reason": "No matching soccer sport key",
+      "bestScore": 0
     },
     {
       "league": "Victoria NPL",
@@ -1837,12 +1837,6 @@
       "league": "Nasjonal U19 Champions League",
       "home": "Åsane U19",
       "away": "Sandefjord U19",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Nasjonal U19 Champions League",
-      "home": "Fredrikstad FK U19",
-      "away": "Stabæk U19",
       "reason": "No event/team match"
     },
     {
@@ -2332,9 +2326,273 @@
       "reason": "No event/team match"
     },
     {
-      "league": "Cup",
-      "home": "Ilpar",
-      "away": "Metallurg Asha",
+      "league": "UEFA Europa Conference League",
+      "home": "Dukagjini",
+      "away": "FC Lugano",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "UEFA Europa Conference League",
+      "home": "FC Copenhagen",
+      "away": "Polessya",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "UEFA Europa Conference League",
+      "home": "Rapid Vienna",
+      "away": "FC Santa Coloma",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "UEFA Europa Conference League",
+      "home": "FK Tobol Kostanay",
+      "away": "Panevėžys",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "UEFA Europa Conference League",
+      "home": "Atlètic Club d'Escaldes",
+      "away": "FC Vaduz",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "UEFA Europa Conference League",
+      "home": "Auda",
+      "away": "FCSB",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "UEFA Europa Conference League",
+      "home": "FK Jablonec",
+      "away": "NK Varazdin",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "UEFA Europa Conference League",
+      "home": "FC Noah",
+      "away": "Zimbru",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "UEFA Europa Conference League",
+      "home": "Ilves",
+      "away": "Stjarnan",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "UEFA Europa Conference League",
+      "home": "Inter Turku",
+      "away": "Başakşehir",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "UEFA Europa Conference League",
+      "home": "Kalju Nomme",
+      "away": "Shelbourne",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "UEFA Europa Conference League",
+      "home": "Pyunik Yerevan",
+      "away": "Debreceni VSC",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "UEFA Europa Conference League",
+      "home": "Zira",
+      "away": "Paide",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "UEFA Europa Conference League",
+      "home": "FC Levadia Tallinn",
+      "away": "IFK Goteborg",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "UEFA Europa Conference League",
+      "home": "HB Torshavn",
+      "away": "Motherwell",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "UEFA Europa Conference League",
+      "home": "FC Nordsjaelland",
+      "away": "Gais",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "UEFA Europa Conference League",
+      "home": "Gyori ETO FC",
+      "away": "Atert Bissen",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "UEFA Europa Conference League",
+      "home": "Petrocub",
+      "away": "Borac Banja Luka",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "UEFA Europa Conference League",
+      "home": "Brann",
+      "away": "Universitatea Cluj",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "UEFA Europa Conference League",
+      "home": "Velež",
+      "away": "Dunajska Streda",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "UEFA Europa Conference League",
+      "home": "FK Zalgiris Vilnius",
+      "away": "Dinamo Tbilisi",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "UEFA Europa Conference League",
+      "home": "Dinamo Minsk",
+      "away": "Neftchi Baku",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "UEFA Europa Conference League",
+      "home": "Beitar Jerusalem",
+      "away": "AEK Larnaca",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "UEFA Europa Conference League",
+      "home": "Valletta FC",
+      "away": "Raków Częstochowa",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "UEFA Europa Conference League",
+      "home": "The New Saints",
+      "away": "Flora Tallinn",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "UEFA Europa Conference League",
+      "home": "Derry City",
+      "away": "HNK Rijeka",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "UEFA Europa Conference League",
+      "home": "Ludogorets",
+      "away": "Hapoel Tel Aviv",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "UEFA Europa Conference League",
+      "home": "Ajax",
+      "away": "Vojvodina",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "UEFA Europa Conference League",
+      "home": "Ballkani",
+      "away": "Bohemians",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "UEFA Europa Conference League",
+      "home": "Shkendija",
+      "away": "Bravo",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "UEFA Europa Conference League",
+      "home": "Vestri",
+      "away": "Rīgas FS",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "UEFA Europa Conference League",
+      "home": "UNA Strassen",
+      "away": "FK Partizan",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "UEFA Europa Conference League",
+      "home": "FC Sion",
+      "away": "Bate Borisov",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "UEFA Europa Conference League",
+      "home": "Gent",
+      "away": "LNZ Cherkasy",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "UEFA Europa Conference League",
+      "home": "Panathinaikos",
+      "away": "Paks",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "UEFA Europa Conference League",
+      "home": "Zrinjski",
+      "away": "Valur Reykjavik",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "UEFA Europa Conference League",
+      "home": "Austria Vienna",
+      "away": "FK Liepaja",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "UEFA Europa Conference League",
+      "home": "CFR 1907 Cluj",
+      "away": "Alashkert",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "UEFA Europa Conference League",
+      "home": "GKS Katowice",
+      "away": "Žilina",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "UEFA Europa Conference League",
+      "home": "Coleraine FC",
+      "away": "HJK Helsinki",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "UEFA Europa Conference League",
+      "home": "Koper",
+      "away": "NSI Runavik",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "UEFA Europa Conference League",
+      "home": "SC Braga",
+      "away": "Železničar Pančevo",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "UEFA Europa Conference League",
+      "home": "Hibernian",
+      "away": "Malisheva",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "UEFA Europa Conference League",
+      "home": "Sutjeska",
+      "away": "ML Vitebsk",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "UEFA Europa Conference League",
+      "home": "Dinamo Tirana",
+      "away": "Aluminij",
       "reason": "No event/team match"
     },
     {
@@ -2546,246 +2804,6 @@
       "home": "Sl. Ceske Budejovice",
       "away": "Slavoj Český Krumlov",
       "reason": "No event/team match"
-    },
-    {
-      "league": "Cup",
-      "home": "Spartak Pribram",
-      "away": "Povltava FA",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Cup",
-      "home": "Štětí",
-      "away": "Varnsdorf",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Cup",
-      "home": "Tempo Praha",
-      "away": "Loko Vltavín",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Cup",
-      "home": "Slovan Velvary",
-      "away": "Brandýs nad Labem",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Cup",
-      "home": "Vykan",
-      "away": "Čáslav",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Cup",
-      "home": "Dvůr Králové",
-      "away": "Spartak Police n/Metují",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Cup",
-      "home": "Karlovy Vary",
-      "away": "Chomutov",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Cup",
-      "home": "Vysoké Mýto",
-      "away": "Letohrad",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Cup",
-      "home": "Flora III",
-      "away": "Põhja-Tallinna JK Volta",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "League Cup",
-      "home": "Tranmere",
-      "away": "Rochdale",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "League Cup",
-      "home": "York",
-      "away": "Crawley Town",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "UEFA Europa Conference League",
-      "home": "Dukagjini",
-      "away": "FC Lugano",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "UEFA Europa Conference League",
-      "home": "FC Copenhagen",
-      "away": "Polessya",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "UEFA Europa Conference League",
-      "home": "Rapid Vienna",
-      "away": "FC Santa Coloma",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "UEFA Europa Conference League",
-      "home": "FK Tobol Kostanay",
-      "away": "Panevėžys",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "UEFA Europa Conference League",
-      "home": "Atlètic Club d'Escaldes",
-      "away": "FC Vaduz",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "UEFA Europa Conference League",
-      "home": "Auda",
-      "away": "FCSB",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "UEFA Europa Conference League",
-      "home": "FK Jablonec",
-      "away": "NK Varazdin",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "UEFA Europa Conference League",
-      "home": "FC Noah",
-      "away": "Zimbru",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "UEFA Europa Conference League",
-      "home": "Ilves",
-      "away": "Stjarnan",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "UEFA Europa Conference League",
-      "home": "Inter Turku",
-      "away": "Başakşehir",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "UEFA Europa Conference League",
-      "home": "Kalju Nomme",
-      "away": "Shelbourne",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "UEFA Europa Conference League",
-      "home": "Pyunik Yerevan",
-      "away": "Debreceni VSC",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "UEFA Europa Conference League",
-      "home": "Zira",
-      "away": "Paide",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "UEFA Europa Conference League",
-      "home": "FC Levadia Tallinn",
-      "away": "IFK Goteborg",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "UEFA Europa Conference League",
-      "home": "HB Torshavn",
-      "away": "Motherwell",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "UEFA Europa Conference League",
-      "home": "FC Nordsjaelland",
-      "away": "Gais",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "UEFA Europa Conference League",
-      "home": "Gyori ETO FC",
-      "away": "Atert Bissen",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "UEFA Europa Conference League",
-      "home": "Petrocub",
-      "away": "Borac Banja Luka",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "UEFA Europa Conference League",
-      "home": "Brann",
-      "away": "Universitatea Cluj",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "UEFA Europa Conference League",
-      "home": "Velež",
-      "away": "Dunajska Streda",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "UEFA Europa Conference League",
-      "home": "FK Zalgiris Vilnius",
-      "away": "Dinamo Tbilisi",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "UEFA Europa Conference League",
-      "home": "Dinamo Minsk",
-      "away": "Neftchi Baku",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "UEFA Europa Conference League",
-      "home": "Beitar Jerusalem",
-      "away": "AEK Larnaca",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "UEFA Europa Conference League",
-      "home": "Valletta FC",
-      "away": "Raków Częstochowa",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "UEFA Europa Conference League",
-      "home": "The New Saints",
-      "away": "Flora Tallinn",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "UEFA Europa Conference League",
-      "home": "Derry City",
-      "away": "HNK Rijeka",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "UEFA Europa Conference League",
-      "home": "Ludogorets",
-      "away": "Hapoel Tel Aviv",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "UEFA Europa Conference League",
-      "home": "Ajax",
-      "away": "Vojvodina",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "UEFA Europa Conference League",
-      "home": "Ballkani",
-      "away": "Bohemians",
-      "reason": "No event/team match"
     }
   ],
   "unsupportedMarkets": [
@@ -2802,27 +2820,27 @@
       "market": "double_chance"
     },
     {
-      "sportKey": "soccer_england_efl_cup",
+      "sportKey": "soccer_uefa_nations_league",
       "market": "btts"
     },
     {
-      "sportKey": "soccer_england_efl_cup",
+      "sportKey": "soccer_uefa_nations_league",
       "market": "draw_no_bet"
     },
     {
-      "sportKey": "soccer_england_efl_cup",
+      "sportKey": "soccer_uefa_nations_league",
       "market": "double_chance"
     },
     {
-      "sportKey": "soccer_uefa_nations_league",
+      "sportKey": "soccer_england_efl_cup",
       "market": "btts"
     },
     {
-      "sportKey": "soccer_uefa_nations_league",
+      "sportKey": "soccer_england_efl_cup",
       "market": "draw_no_bet"
     },
     {
-      "sportKey": "soccer_uefa_nations_league",
+      "sportKey": "soccer_england_efl_cup",
       "market": "double_chance"
     },
     {
@@ -3213,31 +3231,6 @@
       "statusCode": 422
     },
     {
-      "label": "soccer_england_efl_cup:base-combined",
-      "error": "Markets not supported by this endpoint: btts, double_chance, draw_no_bet",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_england_efl_cup:base-core",
-      "error": "Invalid commenceTimeFrom parameter. The format must be YYYY-MM-DDTHH:MM:SSZ, for example 2020-11-24T16:05:00Z",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_england_efl_cup:btts",
-      "error": "Markets not supported by this endpoint: btts",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_england_efl_cup:draw_no_bet",
-      "error": "Markets not supported by this endpoint: draw_no_bet",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_england_efl_cup:double_chance",
-      "error": "Markets not supported by this endpoint: double_chance",
-      "statusCode": 422
-    },
-    {
       "label": "soccer_uefa_nations_league:base-combined",
       "error": "Markets not supported by this endpoint: btts, double_chance, draw_no_bet",
       "statusCode": 422
@@ -3259,6 +3252,31 @@
     },
     {
       "label": "soccer_uefa_nations_league:double_chance",
+      "error": "Markets not supported by this endpoint: double_chance",
+      "statusCode": 422
+    },
+    {
+      "label": "soccer_england_efl_cup:base-combined",
+      "error": "Markets not supported by this endpoint: btts, double_chance, draw_no_bet",
+      "statusCode": 422
+    },
+    {
+      "label": "soccer_england_efl_cup:base-core",
+      "error": "Invalid commenceTimeFrom parameter. The format must be YYYY-MM-DDTHH:MM:SSZ, for example 2020-11-24T16:05:00Z",
+      "statusCode": 422
+    },
+    {
+      "label": "soccer_england_efl_cup:btts",
+      "error": "Markets not supported by this endpoint: btts",
+      "statusCode": 422
+    },
+    {
+      "label": "soccer_england_efl_cup:draw_no_bet",
+      "error": "Markets not supported by this endpoint: draw_no_bet",
+      "statusCode": 422
+    },
+    {
+      "label": "soccer_england_efl_cup:double_chance",
       "error": "Markets not supported by this endpoint: double_chance",
       "statusCode": 422
     },
@@ -4020,5 +4038,5 @@
   },
   "skipped": false,
   "skipReason": null,
-  "completedAt": "2026-07-29T16:30:56.660Z"
+  "completedAt": "2026-07-29T16:45:16.588Z"
 }
