@@ -1,6 +1,6 @@
 {
   "version": "v251",
-  "generatedAt": "2026-07-30T00:12:26.266Z",
+  "generatedAt": "2026-07-30T00:26:51.874Z",
   "provider": "The Odds API v4",
   "keyPresent": true,
   "regions": "uk",
@@ -22,14 +22,6 @@
       "sportTitle": "Brazil Série A",
       "score": 0.929,
       "matches": 10
-    },
-    {
-      "league": "CONMEBOL Sudamericana",
-      "country": "World",
-      "sportKey": "soccer_conmebol_copa_sudamericana",
-      "sportTitle": "Copa Sudamericana",
-      "score": 0.4,
-      "matches": 6
     },
     {
       "league": "Liga Profesional Argentina",
@@ -94,6 +86,14 @@
       "sportTitle": "MLS",
       "score": 1,
       "matches": 1
+    },
+    {
+      "league": "CONMEBOL Sudamericana",
+      "country": "World",
+      "sportKey": "soccer_conmebol_copa_sudamericana",
+      "sportTitle": "Copa Sudamericana",
+      "score": 0.4,
+      "matches": 5
     },
     {
       "league": "Northern Super League",
@@ -1296,7 +1296,7 @@
       "matches": 2
     }
   ],
-  "matchesConsidered": 2147,
+  "matchesConsidered": 2103,
   "matchesMatched": 0,
   "matchesUpdated": 0,
   "fieldsFilled": 0,
@@ -1316,12 +1316,6 @@
       "country": "World",
       "reason": "No matching soccer sport key",
       "bestScore": 0.111
-    },
-    {
-      "league": "Division Profesional - Clausura",
-      "country": "Paraguay",
-      "reason": "No matching soccer sport key",
-      "bestScore": 0.125
     },
     {
       "league": "Copa Colombia",
@@ -1390,16 +1384,10 @@
       "bestScore": 0.125
     },
     {
-      "league": "CAC Games",
-      "country": "World",
+      "league": "Division Profesional - Clausura",
+      "country": "Paraguay",
       "reason": "No matching soccer sport key",
-      "bestScore": 0
-    },
-    {
-      "league": "COTIF Tournament",
-      "country": "World",
-      "reason": "No matching soccer sport key",
-      "bestScore": 0
+      "bestScore": 0.125
     },
     {
       "league": "Primera A",
@@ -2650,42 +2638,6 @@
       "reason": "No event/team match"
     },
     {
-      "league": "CONMEBOL Sudamericana",
-      "home": "Vasco DA Gama",
-      "away": "Independiente Medellin",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "CONMEBOL Sudamericana",
-      "home": "RB Bragantino",
-      "away": "Sporting Cristal",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "CONMEBOL Sudamericana",
-      "home": "Cienciano",
-      "away": "Lanus",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "CONMEBOL Sudamericana",
-      "home": "Gremio",
-      "away": "Bolívar",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "CONMEBOL Sudamericana",
-      "home": "Caracas FC",
-      "away": "Santa Fe",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "CONMEBOL Sudamericana",
-      "home": "O'Higgins",
-      "away": "Boca Juniors",
-      "reason": "No event/team match"
-    },
-    {
       "league": "Liga Profesional Argentina",
       "home": "Gimnasia L.P.",
       "away": "River Plate",
@@ -2804,6 +2756,120 @@
       "home": "Central Cordoba de Santiago",
       "away": "San Lorenzo",
       "reason": "No event/team match"
+    },
+    {
+      "league": "Liga Profesional Argentina",
+      "home": "Huracan",
+      "away": "Atletico Tucuman",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Reserve League",
+      "home": "Barracas Central Res.",
+      "away": "Racing Club Res.",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Reserve League",
+      "home": "Atlético Tucumán Res.",
+      "away": "Sarmiento Res.",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Reserve League",
+      "home": "Banfield Res.",
+      "away": "Tigre Res.",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Reserve League",
+      "home": "Gimnasia La Plata Res.",
+      "away": "Aldosivi Res.",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Reserve League",
+      "home": "Godoy Cruz Res.",
+      "away": "Racing Club Res.",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Reserve League",
+      "home": "Gimnasia Mendoza 2",
+      "away": "River Plate Res.",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Reserve League",
+      "home": "Boca Juniors Res.",
+      "away": "Independiente Riva. Res.",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Primera C",
+      "home": "Central Ballester",
+      "away": "Sportivo Barracas",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Primera C",
+      "home": "Central Cordoba",
+      "away": "General Lamadrid",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Primera C",
+      "home": "Claypole",
+      "away": "Lujan",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Primera C",
+      "home": "Centro Español",
+      "away": "Victoriano Arenas",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Primera C",
+      "home": "Defensores de Cambaceres",
+      "away": "Lugano",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Primera C",
+      "home": "Deportivo Muñiz",
+      "away": "Atletico Atlas",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Primera C",
+      "home": "Deportivo Paraguayo",
+      "away": "Argentino Rosario",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Primera C",
+      "home": "JJ Urquiza",
+      "away": "Berazategui",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Primera C",
+      "home": "Leandro N. Alem",
+      "away": "Juventud Unida",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Primera C",
+      "home": "Mercedes",
+      "away": "Estrella Del Sur",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Primera C",
+      "home": "Deportivo Español",
+      "away": "Leones de Rosario",
+      "reason": "No event/team match"
     }
   ],
   "unsupportedMarkets": [
@@ -2832,18 +2898,6 @@
       "market": "double_chance"
     },
     {
-      "sportKey": "soccer_conmebol_copa_sudamericana",
-      "market": "btts"
-    },
-    {
-      "sportKey": "soccer_conmebol_copa_sudamericana",
-      "market": "draw_no_bet"
-    },
-    {
-      "sportKey": "soccer_conmebol_copa_sudamericana",
-      "market": "double_chance"
-    },
-    {
       "sportKey": "soccer_argentina_primera_division",
       "market": "btts"
     },
@@ -2889,6 +2943,18 @@
     },
     {
       "sportKey": "soccer_epl",
+      "market": "double_chance"
+    },
+    {
+      "sportKey": "soccer_conmebol_copa_sudamericana",
+      "market": "btts"
+    },
+    {
+      "sportKey": "soccer_conmebol_copa_sudamericana",
+      "market": "draw_no_bet"
+    },
+    {
+      "sportKey": "soccer_conmebol_copa_sudamericana",
       "market": "double_chance"
     },
     {
@@ -3244,31 +3310,6 @@
       "statusCode": 422
     },
     {
-      "label": "soccer_conmebol_copa_sudamericana:base-combined",
-      "error": "Markets not supported by this endpoint: btts, double_chance, draw_no_bet",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_conmebol_copa_sudamericana:base-core",
-      "error": "Invalid commenceTimeFrom parameter. The format must be YYYY-MM-DDTHH:MM:SSZ, for example 2020-11-24T16:05:00Z",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_conmebol_copa_sudamericana:btts",
-      "error": "Markets not supported by this endpoint: btts",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_conmebol_copa_sudamericana:draw_no_bet",
-      "error": "Markets not supported by this endpoint: draw_no_bet",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_conmebol_copa_sudamericana:double_chance",
-      "error": "Markets not supported by this endpoint: double_chance",
-      "statusCode": 422
-    },
-    {
       "label": "soccer_argentina_primera_division:base-combined",
       "error": "Markets not supported by this endpoint: btts, double_chance, draw_no_bet",
       "statusCode": 422
@@ -3365,6 +3406,31 @@
     },
     {
       "label": "soccer_epl:double_chance",
+      "error": "Markets not supported by this endpoint: double_chance",
+      "statusCode": 422
+    },
+    {
+      "label": "soccer_conmebol_copa_sudamericana:base-combined",
+      "error": "Markets not supported by this endpoint: btts, double_chance, draw_no_bet",
+      "statusCode": 422
+    },
+    {
+      "label": "soccer_conmebol_copa_sudamericana:base-core",
+      "error": "Invalid commenceTimeFrom parameter. The format must be YYYY-MM-DDTHH:MM:SSZ, for example 2020-11-24T16:05:00Z",
+      "statusCode": 422
+    },
+    {
+      "label": "soccer_conmebol_copa_sudamericana:btts",
+      "error": "Markets not supported by this endpoint: btts",
+      "statusCode": 422
+    },
+    {
+      "label": "soccer_conmebol_copa_sudamericana:draw_no_bet",
+      "error": "Markets not supported by this endpoint: draw_no_bet",
+      "statusCode": 422
+    },
+    {
+      "label": "soccer_conmebol_copa_sudamericana:double_chance",
       "error": "Markets not supported by this endpoint: double_chance",
       "statusCode": 422
     },
@@ -4001,5 +4067,5 @@
   },
   "skipped": false,
   "skipReason": null,
-  "completedAt": "2026-07-30T00:12:33.769Z"
+  "completedAt": "2026-07-30T00:26:59.755Z"
 }
