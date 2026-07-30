@@ -1,11 +1,11 @@
 {
   "version": "v251",
-  "generatedAt": "2026-07-30T20:33:16.694Z",
+  "generatedAt": "2026-07-30T20:49:18.278Z",
   "provider": "The Odds API v4",
   "keyPresent": true,
   "regions": "uk",
-  "sportsAvailable": 71,
-  "soccerSportsAvailable": 40,
+  "sportsAvailable": 75,
+  "soccerSportsAvailable": 41,
   "sportMappings": [
     {
       "league": "Cup",
@@ -21,23 +21,7 @@
       "sportKey": "soccer_uefa_nations_league",
       "sportTitle": "UEFA Nations League",
       "score": 0.333,
-      "matches": 21
-    },
-    {
-      "league": "Paulista - U20",
-      "country": "Brazil",
-      "sportKey": "soccer_brazil_campeonato",
-      "sportTitle": "Brazil Série A",
-      "score": 0.305,
-      "matches": 21
-    },
-    {
-      "league": "Reserve League",
-      "country": "Argentina",
-      "sportKey": "soccer_argentina_primera_division",
-      "sportTitle": "Primera División - Argentina",
-      "score": 0.323,
-      "matches": 7
+      "matches": 12
     },
     {
       "league": "Brasileiro U20 A",
@@ -54,6 +38,14 @@
       "sportTitle": "Primera División - Argentina",
       "score": 0.78,
       "matches": 19
+    },
+    {
+      "league": "Paulista - U20",
+      "country": "Brazil",
+      "sportKey": "soccer_brazil_campeonato",
+      "sportTitle": "Brazil Série A",
+      "score": 0.305,
+      "matches": 20
     },
     {
       "league": "CONMEBOL Sudamericana",
@@ -565,7 +557,7 @@
       "sportKey": "soccer_argentina_primera_division",
       "sportTitle": "Primera División - Argentina",
       "score": 0.513,
-      "matches": 20
+      "matches": 19
     },
     {
       "league": "Primera B Metropolitana",
@@ -1242,18 +1234,26 @@
     {
       "league": "UEFA Champions League Women",
       "country": "World",
-      "sportKey": "soccer_uefa_nations_league",
-      "sportTitle": "UEFA Nations League",
-      "score": 0.333,
+      "sportKey": "soccer_uefa_champs_league_qualification",
+      "sportTitle": "UEFA Champions League Qualification",
+      "score": 0.375,
       "matches": 2
     },
     {
       "league": "UEFA Champions League",
       "country": "World",
-      "sportKey": "soccer_uefa_nations_league",
-      "sportTitle": "UEFA Nations League",
-      "score": 0.333,
+      "sportKey": "soccer_uefa_champs_league_qualification",
+      "sportTitle": "UEFA Champions League Qualification",
+      "score": 0.695,
       "matches": 4
+    },
+    {
+      "league": "Reserve League",
+      "country": "Argentina",
+      "sportKey": "soccer_argentina_primera_division",
+      "sportTitle": "Primera División - Argentina",
+      "score": 0.323,
+      "matches": 6
     },
     {
       "league": "Copa Chile",
@@ -1264,7 +1264,7 @@
       "matches": 2
     }
   ],
-  "matchesConsidered": 1995,
+  "matchesConsidered": 1983,
   "matchesMatched": 0,
   "matchesUpdated": 0,
   "fieldsFilled": 0,
@@ -1995,56 +1995,8 @@
     },
     {
       "league": "UEFA Europa Conference League",
-      "home": "Beitar Jerusalem",
-      "away": "AEK Larnaca",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "UEFA Europa Conference League",
-      "home": "The New Saints",
-      "away": "Flora Tallinn",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "UEFA Europa Conference League",
-      "home": "Ludogorets",
-      "away": "Hapoel Tel Aviv",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "UEFA Europa Conference League",
-      "home": "Ajax",
-      "away": "Vojvodina",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "UEFA Europa Conference League",
       "home": "Ballkani",
       "away": "Bohemians",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "UEFA Europa Conference League",
-      "home": "Shkendija",
-      "away": "Bravo",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "UEFA Europa Conference League",
-      "home": "Vestri",
-      "away": "Rīgas FS",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "UEFA Europa Conference League",
-      "home": "UNA Strassen",
-      "away": "FK Partizan",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "UEFA Europa Conference League",
-      "home": "FC Sion",
-      "away": "Bate Borisov",
       "reason": "No event/team match"
     },
     {
@@ -2069,12 +2021,6 @@
       "league": "UEFA Europa Conference League",
       "home": "Austria Vienna",
       "away": "FK Liepaja",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "UEFA Europa Conference League",
-      "home": "CFR 1907 Cluj",
-      "away": "Alashkert",
       "reason": "No event/team match"
     },
     {
@@ -2120,45 +2066,15 @@
       "reason": "No event/team match"
     },
     {
-      "league": "UEFA Champions League Women",
-      "home": "Dinamo-BGU W",
-      "away": "Servette Chênois W",
+      "league": "Brasileiro U20 A",
+      "home": "Palmeiras U20",
+      "away": "RB Bragantino U20",
       "reason": "No event/team match"
     },
     {
-      "league": "UEFA Champions League Women",
-      "home": "Breidablik W",
-      "away": "Aktobe W",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "UEFA Champions League",
-      "home": "Olympiakos Piraeus",
-      "away": "NEC Nijmegen",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "UEFA Champions League",
-      "home": "Sparta Praha",
-      "away": "Lyon",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "UEFA Champions League",
-      "home": "Ararat-Armenia",
-      "away": "Celje",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "UEFA Champions League",
-      "home": "Union St. Gilloise",
-      "away": "Bodo/Glimt",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Paulista - U20",
-      "home": "América-SP U20",
-      "away": "Mirassol U20",
+      "league": "Brasileiro U20 A",
+      "home": "Vasco da Gama U20",
+      "away": "Santos U20",
       "reason": "No event/team match"
     },
     {
@@ -2279,18 +2195,6 @@
       "league": "Paulista - U20",
       "home": "RB Bragantino U20",
       "away": "Tanabi SP U20",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Brasileiro U20 A",
-      "home": "Palmeiras U20",
-      "away": "RB Bragantino U20",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Brasileiro U20 A",
-      "home": "Vasco da Gama U20",
-      "away": "Santos U20",
       "reason": "No event/team match"
     },
     {
@@ -2582,48 +2486,6 @@
       "reason": "No event/team match"
     },
     {
-      "league": "Reserve League",
-      "home": "Barracas Central Res.",
-      "away": "Racing Club Res.",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Reserve League",
-      "home": "Atlético Tucumán Res.",
-      "away": "Sarmiento Res.",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Reserve League",
-      "home": "Banfield Res.",
-      "away": "Tigre Res.",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Reserve League",
-      "home": "Gimnasia La Plata Res.",
-      "away": "Aldosivi Res.",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Reserve League",
-      "home": "Godoy Cruz Res.",
-      "away": "Racing Club Res.",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Reserve League",
-      "home": "Gimnasia Mendoza 2",
-      "away": "River Plate Res.",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Reserve League",
-      "home": "Boca Juniors Res.",
-      "away": "Independiente Riva. Res.",
-      "reason": "No event/team match"
-    },
-    {
       "league": "Liga Profesional Argentina",
       "home": "Independ. Rivadavia",
       "away": "Huracan",
@@ -2769,8 +2631,146 @@
     },
     {
       "league": "Primera C",
-      "home": "Deportivo Muñiz",
-      "away": "Atletico Atlas",
+      "home": "Deportivo Paraguayo",
+      "away": "Argentino Rosario",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Primera C",
+      "home": "JJ Urquiza",
+      "away": "Berazategui",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Primera C",
+      "home": "Leandro N. Alem",
+      "away": "Juventud Unida",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Primera C",
+      "home": "Mercedes",
+      "away": "Estrella Del Sur",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Primera C",
+      "home": "Deportivo Español",
+      "away": "Leones de Rosario",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Primera C",
+      "home": "El Porvenir",
+      "away": "Fénix",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Primera C",
+      "home": "Yupanqui",
+      "away": "Canuelas",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Primera C",
+      "home": "Puerto Nuevo",
+      "away": "Sacachispas",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Primera C",
+      "home": "Atletico Atlas",
+      "away": "Sacachispas",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Primera C",
+      "home": "Berazategui",
+      "away": "Central Cordoba",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Primera C",
+      "home": "Deportivo Paraguayo",
+      "away": "Central Ballester",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Primera C",
+      "home": "Estrella Del Sur",
+      "away": "Lujan",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Primera C",
+      "home": "Centro Español",
+      "away": "Leones de Rosario",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Primera C",
+      "home": "Claypole",
+      "away": "Juventud Unida",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Primera B Metropolitana",
+      "home": "Arsenal Sarandi",
+      "away": "Brown DE Adrogue",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Primera B Metropolitana",
+      "home": "Excursionistas",
+      "away": "Deportivo Armenio",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Primera B Metropolitana",
+      "home": "Argentino de Merlo",
+      "away": "Deportivo Laferrere",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Primera B Metropolitana",
+      "home": "Liniers",
+      "away": "Comunicaciones",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Primera B Metropolitana",
+      "home": "Real Pilar",
+      "away": "Defensores Unidos",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Primera B Metropolitana",
+      "home": "Sportivo Italiano",
+      "away": "Deportivo Camioneros",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Primera B Metropolitana",
+      "home": "Talleres Remedios",
+      "away": "Ituzaingó",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Primera B Metropolitana",
+      "home": "Villa Dalmine",
+      "away": "Flandria",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Primera B Metropolitana",
+      "home": "San Martín Burzaco",
+      "away": "Deportivo Merlo",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Primera B Metropolitana",
+      "home": "UAI Urquiza",
+      "away": "Argentino Quilmes",
       "reason": "No event/team match"
     }
   ],
@@ -3157,6 +3157,18 @@
     },
     {
       "sportKey": "soccer_netherlands_eredivisie",
+      "market": "double_chance"
+    },
+    {
+      "sportKey": "soccer_uefa_champs_league_qualification",
+      "market": "btts"
+    },
+    {
+      "sportKey": "soccer_uefa_champs_league_qualification",
+      "market": "draw_no_bet"
+    },
+    {
+      "sportKey": "soccer_uefa_champs_league_qualification",
       "market": "double_chance"
     }
   ],
@@ -3960,6 +3972,31 @@
       "label": "soccer_netherlands_eredivisie:double_chance",
       "error": "Markets not supported by this endpoint: double_chance",
       "statusCode": 422
+    },
+    {
+      "label": "soccer_uefa_champs_league_qualification:base-combined",
+      "error": "Markets not supported by this endpoint: btts, double_chance, draw_no_bet",
+      "statusCode": 422
+    },
+    {
+      "label": "soccer_uefa_champs_league_qualification:base-core",
+      "error": "Invalid commenceTimeFrom parameter. The format must be YYYY-MM-DDTHH:MM:SSZ, for example 2020-11-24T16:05:00Z",
+      "statusCode": 422
+    },
+    {
+      "label": "soccer_uefa_champs_league_qualification:btts",
+      "error": "Markets not supported by this endpoint: btts",
+      "statusCode": 422
+    },
+    {
+      "label": "soccer_uefa_champs_league_qualification:draw_no_bet",
+      "error": "Markets not supported by this endpoint: draw_no_bet",
+      "statusCode": 422
+    },
+    {
+      "label": "soccer_uefa_champs_league_qualification:double_chance",
+      "error": "Markets not supported by this endpoint: double_chance",
+      "statusCode": 422
     }
   ],
   "quota": {
@@ -3969,5 +4006,5 @@
   },
   "skipped": false,
   "skipReason": null,
-  "completedAt": "2026-07-30T20:33:29.368Z"
+  "completedAt": "2026-07-30T20:49:25.574Z"
 }
