@@ -1,20 +1,12 @@
 {
   "version": "v251",
-  "generatedAt": "2026-07-30T21:33:52.984Z",
+  "generatedAt": "2026-07-30T21:48:52.553Z",
   "provider": "The Odds API v4",
   "keyPresent": true,
   "regions": "uk",
   "sportsAvailable": 75,
   "soccerSportsAvailable": 41,
   "sportMappings": [
-    {
-      "league": "UEFA Europa Conference League",
-      "country": "World",
-      "sportKey": "soccer_uefa_nations_league",
-      "sportTitle": "UEFA Nations League",
-      "score": 0.333,
-      "matches": 1
-    },
     {
       "league": "Brasileiro U20 A",
       "country": "Brazil",
@@ -1264,7 +1256,7 @@
       "matches": 2
     }
   ],
-  "matchesConsidered": 1965,
+  "matchesConsidered": 1964,
   "matchesMatched": 0,
   "matchesUpdated": 0,
   "fieldsFilled": 0,
@@ -1770,12 +1762,6 @@
       "country": "World",
       "reason": "No matching soccer sport key",
       "bestScore": 0.143
-    },
-    {
-      "league": "UEFA Europa Conference League",
-      "home": "Koper",
-      "away": "NSI Runavik",
-      "reason": "No event/team match"
     },
     {
       "league": "Brasileiro U20 A",
@@ -2772,21 +2758,15 @@
       "home": "SAT Moreno",
       "away": "Nautico Hacoaj",
       "reason": "No event/team match"
+    },
+    {
+      "league": "Primera División",
+      "home": "Puntarenas FC",
+      "away": "Sporting San Jose",
+      "reason": "No event/team match"
     }
   ],
   "unsupportedMarkets": [
-    {
-      "sportKey": "soccer_uefa_nations_league",
-      "market": "btts"
-    },
-    {
-      "sportKey": "soccer_uefa_nations_league",
-      "market": "draw_no_bet"
-    },
-    {
-      "sportKey": "soccer_uefa_nations_league",
-      "market": "double_chance"
-    },
     {
       "sportKey": "soccer_brazil_campeonato",
       "market": "btts"
@@ -3173,31 +3153,6 @@
     }
   ],
   "requestErrors": [
-    {
-      "label": "soccer_uefa_nations_league:base-combined",
-      "error": "Markets not supported by this endpoint: btts, double_chance, draw_no_bet",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_uefa_nations_league:base-core",
-      "error": "Invalid commenceTimeFrom parameter. The format must be YYYY-MM-DDTHH:MM:SSZ, for example 2020-11-24T16:05:00Z",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_uefa_nations_league:btts",
-      "error": "Markets not supported by this endpoint: btts",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_uefa_nations_league:draw_no_bet",
-      "error": "Markets not supported by this endpoint: draw_no_bet",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_uefa_nations_league:double_chance",
-      "error": "Markets not supported by this endpoint: double_chance",
-      "statusCode": 422
-    },
     {
       "label": "soccer_brazil_campeonato:base-combined",
       "error": "Markets not supported by this endpoint: btts, double_chance, draw_no_bet",
@@ -4006,5 +3961,5 @@
   },
   "skipped": false,
   "skipReason": null,
-  "completedAt": "2026-07-30T21:34:05.823Z"
+  "completedAt": "2026-07-30T21:49:02.770Z"
 }
