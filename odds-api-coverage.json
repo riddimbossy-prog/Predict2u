@@ -1,6 +1,6 @@
 {
   "version": "v251",
-  "generatedAt": "2026-07-30T02:25:59.089Z",
+  "generatedAt": "2026-07-30T02:40:28.889Z",
   "provider": "The Odds API v4",
   "keyPresent": true,
   "regions": "uk",
@@ -22,22 +22,6 @@
       "sportTitle": "Brazil Série A",
       "score": 0.929,
       "matches": 8
-    },
-    {
-      "league": "USL League One",
-      "country": "USA",
-      "sportKey": "soccer_usa_mls",
-      "sportTitle": "MLS",
-      "score": 0.466,
-      "matches": 10
-    },
-    {
-      "league": "NWSL Women",
-      "country": "USA",
-      "sportKey": "soccer_usa_mls",
-      "sportTitle": "MLS",
-      "score": 0.323,
-      "matches": 11
     },
     {
       "league": "MLS All-Star",
@@ -62,6 +46,14 @@
       "sportTitle": "Copa Sudamericana",
       "score": 0.4,
       "matches": 5
+    },
+    {
+      "league": "NWSL Women",
+      "country": "USA",
+      "sportKey": "soccer_usa_mls",
+      "sportTitle": "MLS",
+      "score": 0.323,
+      "matches": 10
     },
     {
       "league": "Primera Division",
@@ -1168,6 +1160,14 @@
       "matches": 1
     },
     {
+      "league": "USL League One",
+      "country": "USA",
+      "sportKey": "soccer_usa_mls",
+      "sportTitle": "MLS",
+      "score": 0.466,
+      "matches": 9
+    },
+    {
       "league": "Mineiro - 2",
       "country": "Brazil",
       "sportKey": "soccer_brazil_campeonato",
@@ -1280,7 +1280,7 @@
       "matches": 2
     }
   ],
-  "matchesConsidered": 2089,
+  "matchesConsidered": 2084,
   "matchesMatched": 0,
   "matchesUpdated": 0,
   "fieldsFilled": 0,
@@ -1302,24 +1302,6 @@
       "bestScore": 0.111
     },
     {
-      "league": "Liga Pro Serie B",
-      "country": "Ecuador",
-      "reason": "No matching soccer sport key",
-      "bestScore": 0.25
-    },
-    {
-      "league": "CONCACAF Central American Cup",
-      "country": "World",
-      "reason": "No matching soccer sport key",
-      "bestScore": 0.111
-    },
-    {
-      "league": "Copa Ecuador",
-      "country": "Ecuador",
-      "reason": "No matching soccer sport key",
-      "bestScore": 0.2
-    },
-    {
       "league": "CONCACAF U20",
       "country": "World",
       "reason": "No matching soccer sport key",
@@ -1330,6 +1312,12 @@
       "country": "Colombia",
       "reason": "No matching soccer sport key",
       "bestScore": 0.2
+    },
+    {
+      "league": "CONCACAF Central American Cup",
+      "country": "World",
+      "reason": "No matching soccer sport key",
+      "bestScore": 0.111
     },
     {
       "league": "Australia Cup",
@@ -1372,6 +1360,18 @@
       "country": "Paraguay",
       "reason": "No matching soccer sport key",
       "bestScore": 0.125
+    },
+    {
+      "league": "Copa Ecuador",
+      "country": "Ecuador",
+      "reason": "No matching soccer sport key",
+      "bestScore": 0.2
+    },
+    {
+      "league": "Liga Pro Serie B",
+      "country": "Ecuador",
+      "reason": "No matching soccer sport key",
+      "bestScore": 0.25
     },
     {
       "league": "Primera A",
@@ -2514,69 +2514,9 @@
       "reason": "No event/team match"
     },
     {
-      "league": "USL League One",
-      "home": "Forward Madison",
-      "away": "Chattanooga Red Wolves",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "USL League One",
-      "home": "Tormenta",
-      "away": "NY Cosmos",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "USL League One",
-      "home": "Charlotte Independence",
-      "away": "One Knoxville",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "USL League One",
-      "home": "Chattanooga Red Wolves",
-      "away": "Spokane Velocity",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "USL League One",
-      "home": "Greenville Triumph",
-      "away": "Portland Hearts of Pine",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "USL League One",
-      "home": "Richmond Kickers",
-      "away": "Alta",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "USL League One",
-      "home": "Fort Wayne",
-      "away": "Union Omaha",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "USL League One",
-      "home": "Sarasota Paradise",
-      "away": "Naples",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "USL League One",
-      "home": "Forward Madison",
-      "away": "Westchester SC",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "USL League One",
-      "home": "Boise",
-      "away": "Corpus Christi",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "NWSL Women",
-      "home": "Kansas City W",
-      "away": "Racing Louisville W",
+      "league": "MLS All-Star",
+      "home": "MLS All-Stars",
+      "away": "Liga MX All-Stars",
       "reason": "No event/team match"
     },
     {
@@ -2637,12 +2577,6 @@
       "league": "NWSL Women",
       "home": "Denver Summit W",
       "away": "Boston Legacy W",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "MLS All-Star",
-      "home": "MLS All-Stars",
-      "away": "Liga MX All-Stars",
       "reason": "No event/team match"
     },
     {
@@ -2787,6 +2721,72 @@
       "league": "Major League Soccer",
       "home": "Chicago Fire",
       "away": "Charlotte",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Major League Soccer",
+      "home": "Minnesota United FC",
+      "away": "San Diego",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Major League Soccer",
+      "home": "Sporting Kansas City",
+      "away": "Houston Dynamo",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Major League Soccer",
+      "home": "St. Louis City",
+      "away": "Real Salt Lake",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Major League Soccer",
+      "home": "Colorado Rapids",
+      "away": "Austin",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Major League Soccer",
+      "home": "Los Angeles Galaxy",
+      "away": "FC Dallas",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Major League Soccer",
+      "home": "Portland Timbers",
+      "away": "Seattle Sounders",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "USL Championship",
+      "home": "San Antonio",
+      "away": "Indy Eleven",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "USL Championship",
+      "home": "Lexington",
+      "away": "Monterey Bay",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "USL Championship",
+      "home": "Loudoun United",
+      "away": "Hartford Athletic",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "USL Championship",
+      "home": "Miami FC",
+      "away": "Detroit City",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "USL Championship",
+      "home": "Charleston Battery",
+      "away": "Brooklyn",
       "reason": "No event/team match"
     }
   ],
@@ -3985,5 +3985,5 @@
   },
   "skipped": false,
   "skipReason": null,
-  "completedAt": "2026-07-30T02:26:10.241Z"
+  "completedAt": "2026-07-30T02:40:36.505Z"
 }
