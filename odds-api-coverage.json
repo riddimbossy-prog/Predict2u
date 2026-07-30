@@ -1,6 +1,6 @@
 {
   "version": "v251",
-  "generatedAt": "2026-07-30T00:12:40.032Z",
+  "generatedAt": "2026-07-30T00:12:26.266Z",
   "provider": "The Odds API v4",
   "keyPresent": true,
   "regions": "uk",
@@ -38,6 +38,14 @@
       "sportTitle": "Primera División - Argentina",
       "score": 0.78,
       "matches": 21
+    },
+    {
+      "league": "Goiano - 2",
+      "country": "Brazil",
+      "sportKey": "soccer_brazil_campeonato",
+      "sportTitle": "Brazil Série A",
+      "score": 0.305,
+      "matches": 10
     },
     {
       "league": "USL Championship",
@@ -712,6 +720,14 @@
       "matches": 15
     },
     {
+      "league": "Copa Paulista",
+      "country": "Brazil",
+      "sportKey": "soccer_brazil_campeonato",
+      "sportTitle": "Brazil Série A",
+      "score": 0.305,
+      "matches": 8
+    },
+    {
       "league": "Major League Soccer",
       "country": "USA",
       "sportKey": "soccer_usa_mls",
@@ -1112,14 +1128,6 @@
       "matches": 4
     },
     {
-      "league": "Copa Paulista",
-      "country": "Brazil",
-      "sportKey": "soccer_brazil_campeonato",
-      "sportTitle": "Brazil Série A",
-      "score": 0.305,
-      "matches": 8
-    },
-    {
       "league": "Capixaba B",
       "country": "Brazil",
       "sportKey": "soccer_brazil_serie_b",
@@ -1256,6 +1264,14 @@
       "matches": 1
     },
     {
+      "league": "Torneo Federal A",
+      "country": "Argentina",
+      "sportKey": "soccer_argentina_primera_division",
+      "sportTitle": "Primera División - Argentina",
+      "score": 0.305,
+      "matches": 17
+    },
+    {
       "league": "UEFA Champions League Women",
       "country": "World",
       "sportKey": "soccer_uefa_nations_league",
@@ -1280,7 +1296,7 @@
       "matches": 2
     }
   ],
-  "matchesConsidered": 2105,
+  "matchesConsidered": 2147,
   "matchesMatched": 0,
   "matchesUpdated": 0,
   "fieldsFilled": 0,
@@ -1300,6 +1316,12 @@
       "country": "World",
       "reason": "No matching soccer sport key",
       "bestScore": 0.111
+    },
+    {
+      "league": "Division Profesional - Clausura",
+      "country": "Paraguay",
+      "reason": "No matching soccer sport key",
+      "bestScore": 0.125
     },
     {
       "league": "Copa Colombia",
@@ -1368,10 +1390,16 @@
       "bestScore": 0.125
     },
     {
-      "league": "Division Profesional - Clausura",
-      "country": "Paraguay",
+      "league": "CAC Games",
+      "country": "World",
       "reason": "No matching soccer sport key",
-      "bestScore": 0.125
+      "bestScore": 0
+    },
+    {
+      "league": "COTIF Tournament",
+      "country": "World",
+      "reason": "No matching soccer sport key",
+      "bestScore": 0
     },
     {
       "league": "Primera A",
@@ -1660,6 +1688,12 @@
       "country": "Romania",
       "reason": "No matching soccer sport key",
       "bestScore": 0.143
+    },
+    {
+      "league": "Calcutta Premier Division",
+      "country": "India",
+      "reason": "No matching soccer sport key",
+      "bestScore": 0.222
     },
     {
       "league": "1. Deild",
@@ -2142,6 +2176,66 @@
       "reason": "No event/team match"
     },
     {
+      "league": "Goiano - 2",
+      "home": "Goiânia",
+      "away": "Grêmio Anápolis",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Goiano - 2",
+      "home": "Rio Verde",
+      "away": "Tupy FC",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Goiano - 2",
+      "home": "Trindade",
+      "away": "Mineiros",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Goiano - 2",
+      "home": "Goianésia",
+      "away": "Crixás EC",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Goiano - 2",
+      "home": "Morrinhos",
+      "away": "Bom Jesus EC",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Goiano - 2",
+      "home": "Goiânia",
+      "away": "Crixás EC",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Goiano - 2",
+      "home": "Trindade",
+      "away": "Bom Jesus EC",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Goiano - 2",
+      "home": "Goianésia",
+      "away": "Tupy FC",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Goiano - 2",
+      "home": "Morrinhos",
+      "away": "Mineiros",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Goiano - 2",
+      "home": "Rio Verde",
+      "away": "Grêmio Anápolis",
+      "reason": "No event/team match"
+    },
+    {
       "league": "Paulista - U20",
       "home": "América-SP U20",
       "away": "Mirassol U20",
@@ -2311,14 +2405,14 @@
     },
     {
       "league": "Mineiro U20",
-      "home": "Villa Real U20",
-      "away": "Sao Joao del Rei U20",
+      "home": "Cruzeiro U20",
+      "away": "América Mineiro U20",
       "reason": "No event/team match"
     },
     {
       "league": "Mineiro U20",
-      "home": "Cruzeiro U20",
-      "away": "América Mineiro U20",
+      "home": "Villa Real U20",
+      "away": "Sao Joao del Rei U20",
       "reason": "No event/team match"
     },
     {
@@ -2346,33 +2440,9 @@
       "reason": "No event/team match"
     },
     {
-      "league": "Carioca A2",
-      "home": "Americano Campos",
-      "away": "Resende",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Catarinense U20",
-      "home": "Criciuma U20",
-      "away": "Brusque U20",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Catarinense U20",
-      "home": "Figueirense U20",
-      "away": "Avaí U20",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Catarinense U20",
-      "home": "Nação U20",
-      "away": "Barra SC U20",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Catarinense U20",
-      "home": "Joinville U20",
-      "away": "Carlos Renaux U20",
+      "league": "Copa Paulista",
+      "home": "Comercial",
+      "away": "União São João",
       "reason": "No event/team match"
     },
     {
@@ -2385,12 +2455,6 @@
       "league": "Copa Paulista",
       "home": "Paulista",
       "away": "Oeste",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Copa Paulista",
-      "home": "Comercial",
-      "away": "União São João",
       "reason": "No event/team match"
     },
     {
@@ -2421,6 +2485,36 @@
       "league": "Copa Paulista",
       "home": "Grêmio Prudente",
       "away": "Linense",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Carioca A2",
+      "home": "Americano Campos",
+      "away": "Resende",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Catarinense U20",
+      "home": "Criciuma U20",
+      "away": "Brusque U20",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Catarinense U20",
+      "home": "Figueirense U20",
+      "away": "Avaí U20",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Catarinense U20",
+      "home": "Nação U20",
+      "away": "Barra SC U20",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Catarinense U20",
+      "home": "Joinville U20",
+      "away": "Carlos Renaux U20",
       "reason": "No event/team match"
     },
     {
@@ -2709,84 +2803,6 @@
       "league": "Liga Profesional Argentina",
       "home": "Central Cordoba de Santiago",
       "away": "San Lorenzo",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Liga Profesional Argentina",
-      "home": "Huracan",
-      "away": "Atletico Tucuman",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Reserve League",
-      "home": "Barracas Central Res.",
-      "away": "Racing Club Res.",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Reserve League",
-      "home": "Atlético Tucumán Res.",
-      "away": "Sarmiento Res.",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Reserve League",
-      "home": "Banfield Res.",
-      "away": "Tigre Res.",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Reserve League",
-      "home": "Gimnasia La Plata Res.",
-      "away": "Aldosivi Res.",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Reserve League",
-      "home": "Godoy Cruz Res.",
-      "away": "Racing Club Res.",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Reserve League",
-      "home": "Gimnasia Mendoza 2",
-      "away": "River Plate Res.",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Reserve League",
-      "home": "Boca Juniors Res.",
-      "away": "Independiente Riva. Res.",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Primera C",
-      "home": "Central Ballester",
-      "away": "Sportivo Barracas",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Primera C",
-      "home": "Central Cordoba",
-      "away": "General Lamadrid",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Primera C",
-      "home": "Claypole",
-      "away": "Lujan",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Primera C",
-      "home": "Centro Español",
-      "away": "Victoriano Arenas",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Primera C",
-      "home": "Defensores de Cambaceres",
-      "away": "Lugano",
       "reason": "No event/team match"
     }
   ],
@@ -3985,5 +4001,5 @@
   },
   "skipped": false,
   "skipReason": null,
-  "completedAt": "2026-07-30T00:12:47.044Z"
+  "completedAt": "2026-07-30T00:12:33.769Z"
 }
