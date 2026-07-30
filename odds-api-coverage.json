@@ -1,6 +1,6 @@
 {
   "version": "v251",
-  "generatedAt": "2026-07-30T01:26:27.476Z",
+  "generatedAt": "2026-07-30T01:41:27.159Z",
   "provider": "The Odds API v4",
   "keyPresent": true,
   "regions": "uk",
@@ -29,23 +29,7 @@
       "sportKey": "soccer_usa_mls",
       "sportTitle": "MLS",
       "score": 0.323,
-      "matches": 14
-    },
-    {
-      "league": "USL League One",
-      "country": "USA",
-      "sportKey": "soccer_usa_mls",
-      "sportTitle": "MLS",
-      "score": 0.466,
-      "matches": 11
-    },
-    {
-      "league": "Primera Division",
-      "country": "El-Salvador",
-      "sportKey": "soccer_spain_la_liga",
-      "sportTitle": "La Liga - Spain",
-      "score": 0.429,
-      "matches": 9
+      "matches": 13
     },
     {
       "league": "Premier League - Summer Series",
@@ -54,6 +38,14 @@
       "sportTitle": "EPL",
       "score": 0.667,
       "matches": 4
+    },
+    {
+      "league": "USL League One",
+      "country": "USA",
+      "sportKey": "soccer_usa_mls",
+      "sportTitle": "MLS",
+      "score": 0.466,
+      "matches": 10
     },
     {
       "league": "NWSL Women",
@@ -86,6 +78,14 @@
       "sportTitle": "Copa Sudamericana",
       "score": 0.4,
       "matches": 5
+    },
+    {
+      "league": "Primera Division",
+      "country": "El-Salvador",
+      "sportKey": "soccer_spain_la_liga",
+      "sportTitle": "La Liga - Spain",
+      "score": 0.429,
+      "matches": 8
     },
     {
       "league": "Northern Super League",
@@ -1280,7 +1280,7 @@
       "matches": 2
     }
   ],
-  "matchesConsidered": 2094,
+  "matchesConsidered": 2091,
   "matchesMatched": 0,
   "matchesUpdated": 0,
   "fieldsFilled": 0,
@@ -2515,12 +2515,6 @@
     },
     {
       "league": "USL Championship",
-      "home": "Pittsburgh Riverhounds",
-      "away": "FC Tulsa",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "USL Championship",
       "home": "Louisville City",
       "away": "Birmingham Legion",
       "reason": "No event/team match"
@@ -2595,12 +2589,6 @@
       "league": "USL Championship",
       "home": "Sacramento Republic",
       "away": "Sporting JAX",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "USL League One",
-      "home": "Greenville Triumph",
-      "away": "Boise",
       "reason": "No event/team match"
     },
     {
@@ -2788,6 +2776,18 @@
       "home": "New York City II",
       "away": "Philadelphia Union II",
       "reason": "No event/team match"
+    },
+    {
+      "league": "MLS Next Pro",
+      "home": "Huntsville City",
+      "away": "Crown Legacy",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "MLS Next Pro",
+      "home": "Tacoma Defiance",
+      "away": "Vancouver Whitecaps II",
+      "reason": "No event/team match"
     }
   ],
   "unsupportedMarkets": [
@@ -2828,18 +2828,6 @@
       "market": "double_chance"
     },
     {
-      "sportKey": "soccer_spain_la_liga",
-      "market": "btts"
-    },
-    {
-      "sportKey": "soccer_spain_la_liga",
-      "market": "draw_no_bet"
-    },
-    {
-      "sportKey": "soccer_spain_la_liga",
-      "market": "double_chance"
-    },
-    {
       "sportKey": "soccer_epl",
       "market": "btts"
     },
@@ -2873,6 +2861,18 @@
     },
     {
       "sportKey": "soccer_conmebol_copa_sudamericana",
+      "market": "double_chance"
+    },
+    {
+      "sportKey": "soccer_spain_la_liga",
+      "market": "btts"
+    },
+    {
+      "sportKey": "soccer_spain_la_liga",
+      "market": "draw_no_bet"
+    },
+    {
+      "sportKey": "soccer_spain_la_liga",
       "market": "double_chance"
     },
     {
@@ -3253,31 +3253,6 @@
       "statusCode": 422
     },
     {
-      "label": "soccer_spain_la_liga:base-combined",
-      "error": "Markets not supported by this endpoint: btts, double_chance, draw_no_bet",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_spain_la_liga:base-core",
-      "error": "Invalid commenceTimeFrom parameter. The format must be YYYY-MM-DDTHH:MM:SSZ, for example 2020-11-24T16:05:00Z",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_spain_la_liga:btts",
-      "error": "Markets not supported by this endpoint: btts",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_spain_la_liga:draw_no_bet",
-      "error": "Markets not supported by this endpoint: draw_no_bet",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_spain_la_liga:double_chance",
-      "error": "Markets not supported by this endpoint: double_chance",
-      "statusCode": 422
-    },
-    {
       "label": "soccer_epl:base-combined",
       "error": "Markets not supported by this endpoint: btts, double_chance, draw_no_bet",
       "statusCode": 422
@@ -3349,6 +3324,31 @@
     },
     {
       "label": "soccer_conmebol_copa_sudamericana:double_chance",
+      "error": "Markets not supported by this endpoint: double_chance",
+      "statusCode": 422
+    },
+    {
+      "label": "soccer_spain_la_liga:base-combined",
+      "error": "Markets not supported by this endpoint: btts, double_chance, draw_no_bet",
+      "statusCode": 422
+    },
+    {
+      "label": "soccer_spain_la_liga:base-core",
+      "error": "Invalid commenceTimeFrom parameter. The format must be YYYY-MM-DDTHH:MM:SSZ, for example 2020-11-24T16:05:00Z",
+      "statusCode": 422
+    },
+    {
+      "label": "soccer_spain_la_liga:btts",
+      "error": "Markets not supported by this endpoint: btts",
+      "statusCode": 422
+    },
+    {
+      "label": "soccer_spain_la_liga:draw_no_bet",
+      "error": "Markets not supported by this endpoint: draw_no_bet",
+      "statusCode": 422
+    },
+    {
+      "label": "soccer_spain_la_liga:double_chance",
       "error": "Markets not supported by this endpoint: double_chance",
       "statusCode": 422
     },
@@ -3985,5 +3985,5 @@
   },
   "skipped": false,
   "skipReason": null,
-  "completedAt": "2026-07-30T01:26:34.741Z"
+  "completedAt": "2026-07-30T01:41:38.312Z"
 }
