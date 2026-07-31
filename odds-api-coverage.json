@@ -1,6 +1,6 @@
 {
   "version": "v251",
-  "generatedAt": "2026-07-31T12:49:33.570Z",
+  "generatedAt": "2026-07-31T13:08:03.727Z",
   "provider": "The Odds API v4",
   "keyPresent": true,
   "regions": "uk",
@@ -13,15 +13,7 @@
       "sportKey": "soccer_epl",
       "sportTitle": "EPL",
       "score": 0.667,
-      "matches": 6
-    },
-    {
-      "league": "Victoria Premier League 2",
-      "country": "Australia",
-      "sportKey": "soccer_epl",
-      "sportTitle": "EPL",
-      "score": 0.667,
-      "matches": 4
+      "matches": 5
     },
     {
       "league": "Super League",
@@ -632,6 +624,14 @@
       "matches": 4
     },
     {
+      "league": "Victoria Premier League 2",
+      "country": "Australia",
+      "sportKey": "soccer_epl",
+      "sportTitle": "EPL",
+      "score": 0.667,
+      "matches": 3
+    },
+    {
       "league": "League Two",
       "country": "China",
       "sportKey": "soccer_china_superleague",
@@ -1232,7 +1232,7 @@
       "matches": 2
     }
   ],
-  "matchesConsidered": 1910,
+  "matchesConsidered": 1905,
   "matchesMatched": 0,
   "matchesUpdated": 0,
   "fieldsFilled": 0,
@@ -1258,18 +1258,6 @@
       "country": "Australia",
       "reason": "No matching soccer sport key",
       "bestScore": 0.167
-    },
-    {
-      "league": "Victoria NPL",
-      "country": "Australia",
-      "reason": "No matching soccer sport key",
-      "bestScore": 0
-    },
-    {
-      "league": "Victoria NPL 2",
-      "country": "Australia",
-      "reason": "No matching soccer sport key",
-      "bestScore": 0.111
     },
     {
       "league": "1. Division",
@@ -1494,6 +1482,12 @@
       "bestScore": 0
     },
     {
+      "league": "Victoria NPL",
+      "country": "Australia",
+      "reason": "No matching soccer sport key",
+      "bestScore": 0
+    },
+    {
       "league": "Tasmania NPL",
       "country": "Australia",
       "reason": "No matching soccer sport key",
@@ -1510,6 +1504,12 @@
       "country": "Australia",
       "reason": "No matching soccer sport key",
       "bestScore": 0
+    },
+    {
+      "league": "Victoria NPL 2",
+      "country": "Australia",
+      "reason": "No matching soccer sport key",
+      "bestScore": 0.111
     },
     {
       "league": "Queensland NPL",
@@ -1729,12 +1729,6 @@
     },
     {
       "league": "Queensland Premier League",
-      "home": "North Star",
-      "away": "Capalaba",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Queensland Premier League",
       "home": "Holland Park Hawks",
       "away": "Robina City",
       "reason": "No event/team match"
@@ -1755,30 +1749,6 @@
       "league": "Queensland Premier League",
       "home": "St George Willawong",
       "away": "Brisbane Strikers",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Victoria Premier League 2",
-      "home": "Whittlesea United",
-      "away": "Eastern Lions",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Victoria Premier League 2",
-      "home": "Werribee City",
-      "away": "Nunawading",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Victoria Premier League 2",
-      "home": "Bayside Argonauts",
-      "away": "Moreland City",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Victoria Premier League 2",
-      "home": "Malvern",
-      "away": "Goulburn Valley Suns",
       "reason": "No event/team match"
     },
     {
@@ -2103,6 +2073,24 @@
       "league": "Canadian Premier League",
       "home": "HFX Wanderers FC",
       "away": "Forge",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Victoria Premier League 2",
+      "home": "Werribee City",
+      "away": "Nunawading",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Victoria Premier League 2",
+      "home": "Bayside Argonauts",
+      "away": "Moreland City",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Victoria Premier League 2",
+      "home": "Malvern",
+      "away": "Goulburn Valley Suns",
       "reason": "No event/team match"
     },
     {
@@ -2739,6 +2727,18 @@
       "league": "Cearense U20",
       "home": "Fortaleza U20",
       "away": "Ferroviario U20",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Cearense U20",
+      "home": "Ceará U20",
+      "away": "Vila Real FC U20",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Mineiro U20",
+      "home": "Itabirito U20",
+      "away": "Athletic Club MG U20",
       "reason": "No event/team match"
     }
   ],
@@ -3900,5 +3900,5 @@
   },
   "skipped": false,
   "skipReason": null,
-  "completedAt": "2026-07-31T12:49:49.015Z"
+  "completedAt": "2026-07-31T13:08:32.191Z"
 }
