@@ -1,11 +1,11 @@
 {
   "version": "v251",
-  "generatedAt": "2026-07-31T20:49:09.739Z",
+  "generatedAt": "2026-07-31T21:05:18.141Z",
   "provider": "The Odds API v4",
   "keyPresent": true,
   "regions": "uk",
   "sportsAvailable": 75,
-  "soccerSportsAvailable": 41,
+  "soccerSportsAvailable": 42,
   "sportMappings": [
     {
       "league": "Ekstraliga Women",
@@ -61,7 +61,7 @@
       "sportKey": "soccer_argentina_primera_division",
       "sportTitle": "Primera División - Argentina",
       "score": 0.513,
-      "matches": 15
+      "matches": 13
     },
     {
       "league": "Ekstraklasa",
@@ -72,28 +72,12 @@
       "matches": 8
     },
     {
-      "league": "I Liga",
-      "country": "Poland",
-      "sportKey": "soccer_poland_ekstraklasa",
-      "sportTitle": "Ekstraklasa - Poland",
-      "score": 0.347,
-      "matches": 8
-    },
-    {
       "league": "II Liga - East",
       "country": "Poland",
       "sportKey": "soccer_poland_ekstraklasa",
       "sportTitle": "Ekstraklasa - Poland",
       "score": 0.323,
       "matches": 8
-    },
-    {
-      "league": "2. Liga",
-      "country": "Austria",
-      "sportKey": "soccer_austria_bundesliga",
-      "sportTitle": "Austrian Football Bundesliga",
-      "score": 0.323,
-      "matches": 3
     },
     {
       "league": "Super Cup",
@@ -744,6 +728,14 @@
       "matches": 7
     },
     {
+      "league": "I Liga",
+      "country": "Poland",
+      "sportKey": "soccer_poland_ekstraklasa",
+      "sportTitle": "Ekstraklasa - Poland",
+      "score": 0.347,
+      "matches": 7
+    },
+    {
       "league": "Ykkönen",
       "country": "Finland",
       "sportKey": "soccer_finland_veikkausliiga",
@@ -934,6 +926,14 @@
       "sportTitle": "Super League - Greece",
       "score": 0.653,
       "matches": 6
+    },
+    {
+      "league": "2. Liga",
+      "country": "Austria",
+      "sportKey": "soccer_austria_bundesliga",
+      "sportTitle": "Austrian Football Bundesliga",
+      "score": 0.323,
+      "matches": 2
     },
     {
       "league": "Super Liga",
@@ -1216,7 +1216,7 @@
       "matches": 2
     }
   ],
-  "matchesConsidered": 1702,
+  "matchesConsidered": 1692,
   "matchesMatched": 0,
   "matchesUpdated": 0,
   "fieldsFilled": 0,
@@ -1250,16 +1250,16 @@
       "bestScore": 0.143
     },
     {
-      "league": "FAW Championship",
-      "country": "Wales",
-      "reason": "No matching soccer sport key",
-      "bestScore": 0.167
-    },
-    {
       "league": "Premiership Women",
       "country": "Northern-Ireland",
       "reason": "No matching soccer sport key",
       "bestScore": 0.125
+    },
+    {
+      "league": "FAW Championship",
+      "country": "Wales",
+      "reason": "No matching soccer sport key",
+      "bestScore": 0.167
     },
     {
       "league": "Segunda División",
@@ -1784,54 +1784,6 @@
       "reason": "No event/team match"
     },
     {
-      "league": "I Liga",
-      "home": "Lechia Gdansk",
-      "away": "Warta Poznań",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "I Liga",
-      "home": "Arka Gdynia",
-      "away": "Stal Rzeszów",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "I Liga",
-      "home": "Pogoń Siedlce",
-      "away": "Nieciecza",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "I Liga",
-      "home": "Polonia Warszawa",
-      "away": "Unia Skierniewice",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "I Liga",
-      "home": "Ruch Chorzów",
-      "away": "Miedz Legnica",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "I Liga",
-      "home": "Stal Mielec",
-      "away": "Podbeskidzie",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "I Liga",
-      "home": "Pogoń Grod. Mazowiecki",
-      "away": "Puszcza Niepołomice",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "I Liga",
-      "home": "Chrobry Głogów",
-      "away": "Odra Opole",
-      "reason": "No event/team match"
-    },
-    {
       "league": "II Liga - East",
       "home": "Stal Stalowa Wola",
       "away": "Tychy 71",
@@ -2021,6 +1973,48 @@
       "league": "III Liga - Group 2",
       "home": "Flota Świnoujście",
       "away": "Kalisz",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "I Liga",
+      "home": "Arka Gdynia",
+      "away": "Stal Rzeszów",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "I Liga",
+      "home": "Pogoń Siedlce",
+      "away": "Nieciecza",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "I Liga",
+      "home": "Polonia Warszawa",
+      "away": "Unia Skierniewice",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "I Liga",
+      "home": "Ruch Chorzów",
+      "away": "Miedz Legnica",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "I Liga",
+      "home": "Stal Mielec",
+      "away": "Podbeskidzie",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "I Liga",
+      "home": "Pogoń Grod. Mazowiecki",
+      "away": "Puszcza Niepołomice",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "I Liga",
+      "home": "Chrobry Głogów",
+      "away": "Odra Opole",
       "reason": "No event/team match"
     },
     {
@@ -2724,6 +2718,12 @@
       "home": "Lokomotive Leipzig",
       "away": "Magdeburg II",
       "reason": "No event/team match"
+    },
+    {
+      "league": "Regionalliga - Nordost",
+      "home": "SV Babelsberg 03",
+      "away": "Altglienicke",
+      "reason": "No event/team match"
     }
   ],
   "unsupportedMarkets": [
@@ -2788,18 +2788,6 @@
       "market": "double_chance"
     },
     {
-      "sportKey": "soccer_austria_bundesliga",
-      "market": "btts"
-    },
-    {
-      "sportKey": "soccer_austria_bundesliga",
-      "market": "draw_no_bet"
-    },
-    {
-      "sportKey": "soccer_austria_bundesliga",
-      "market": "double_chance"
-    },
-    {
       "sportKey": "soccer_belgium_first_div",
       "market": "btts"
     },
@@ -3001,6 +2989,18 @@
     },
     {
       "sportKey": "soccer_denmark_superliga",
+      "market": "double_chance"
+    },
+    {
+      "sportKey": "soccer_austria_bundesliga",
+      "market": "btts"
+    },
+    {
+      "sportKey": "soccer_austria_bundesliga",
+      "market": "draw_no_bet"
+    },
+    {
+      "sportKey": "soccer_austria_bundesliga",
       "market": "double_chance"
     },
     {
@@ -3223,56 +3223,6 @@
     },
     {
       "label": "soccer_argentina_primera_division:double_chance",
-      "error": "Markets not supported by this endpoint: double_chance",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_austria_bundesliga:base-combined",
-      "error": "Markets not supported by this endpoint: btts, double_chance, draw_no_bet",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_austria_bundesliga:base-core",
-      "error": "Invalid commenceTimeFrom parameter. The format must be YYYY-MM-DDTHH:MM:SSZ, for example 2020-11-24T16:05:00Z",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_austria_bundesliga:btts",
-      "error": "Markets not supported by this endpoint: btts",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_austria_bundesliga:draw_no_bet",
-      "error": "Markets not supported by this endpoint: draw_no_bet",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_austria_bundesliga:double_chance",
-      "error": "Markets not supported by this endpoint: double_chance",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_austria_bundesliga:base-combined",
-      "error": "Markets not supported by this endpoint: btts, double_chance, draw_no_bet",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_austria_bundesliga:base-core",
-      "error": "Invalid commenceTimeFrom parameter. The format must be YYYY-MM-DDTHH:MM:SSZ, for example 2020-11-24T16:05:00Z",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_austria_bundesliga:btts",
-      "error": "Markets not supported by this endpoint: btts",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_austria_bundesliga:draw_no_bet",
-      "error": "Markets not supported by this endpoint: draw_no_bet",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_austria_bundesliga:double_chance",
       "error": "Markets not supported by this endpoint: double_chance",
       "statusCode": 422
     },
@@ -3702,6 +3652,31 @@
       "statusCode": 422
     },
     {
+      "label": "soccer_austria_bundesliga:base-combined",
+      "error": "Markets not supported by this endpoint: btts, double_chance, draw_no_bet",
+      "statusCode": 422
+    },
+    {
+      "label": "soccer_austria_bundesliga:base-core",
+      "error": "Invalid commenceTimeFrom parameter. The format must be YYYY-MM-DDTHH:MM:SSZ, for example 2020-11-24T16:05:00Z",
+      "statusCode": 422
+    },
+    {
+      "label": "soccer_austria_bundesliga:btts",
+      "error": "Markets not supported by this endpoint: btts",
+      "statusCode": 422
+    },
+    {
+      "label": "soccer_austria_bundesliga:draw_no_bet",
+      "error": "Markets not supported by this endpoint: draw_no_bet",
+      "statusCode": 422
+    },
+    {
+      "label": "soccer_austria_bundesliga:double_chance",
+      "error": "Markets not supported by this endpoint: double_chance",
+      "statusCode": 422
+    },
+    {
       "label": "soccer_efl_champ:base-combined",
       "error": "Markets not supported by this endpoint: btts, double_chance, draw_no_bet",
       "statusCode": 422
@@ -3909,5 +3884,5 @@
   },
   "skipped": false,
   "skipReason": null,
-  "completedAt": "2026-07-31T20:49:28.511Z"
+  "completedAt": "2026-07-31T21:05:33.862Z"
 }
