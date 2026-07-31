@@ -1,6 +1,6 @@
 {
   "version": "v251",
-  "generatedAt": "2026-07-31T20:14:23.591Z",
+  "generatedAt": "2026-07-31T20:32:35.970Z",
   "provider": "The Odds API v4",
   "keyPresent": true,
   "regions": "uk",
@@ -24,14 +24,6 @@
       "matches": 3
     },
     {
-      "league": "Oberliga - Bayern Nord",
-      "country": "Germany",
-      "sportKey": "soccer_germany_bundesliga",
-      "sportTitle": "Bundesliga - Germany",
-      "score": 0.323,
-      "matches": 4
-    },
-    {
       "league": "Oberliga - Hamburg",
       "country": "Germany",
       "sportKey": "soccer_germany_bundesliga",
@@ -46,14 +38,6 @@
       "sportTitle": "Bundesliga - Germany",
       "score": 0.323,
       "matches": 6
-    },
-    {
-      "league": "Regionalliga - West",
-      "country": "Austria",
-      "sportKey": "soccer_austria_bundesliga",
-      "sportTitle": "Austrian Football Bundesliga",
-      "score": 0.323,
-      "matches": 7
     },
     {
       "league": "Oberliga - Hessen",
@@ -88,20 +72,12 @@
       "matches": 9
     },
     {
-      "league": "Division 2 - Södra Svealand",
-      "country": "Sweden",
-      "sportKey": "soccer_sweden_allsvenskan",
-      "sportTitle": "Allsvenskan - Sweden",
-      "score": 0.305,
-      "matches": 7
-    },
-    {
       "league": "Paulista - U20",
       "country": "Brazil",
       "sportKey": "soccer_brazil_campeonato",
       "sportTitle": "Brazil Série A",
       "score": 0.305,
-      "matches": 19
+      "matches": 10
     },
     {
       "league": "Primera C",
@@ -109,15 +85,7 @@
       "sportKey": "soccer_argentina_primera_division",
       "sportTitle": "Primera División - Argentina",
       "score": 0.513,
-      "matches": 19
-    },
-    {
-      "league": "Primera B Metropolitana",
-      "country": "Argentina",
-      "sportKey": "soccer_argentina_primera_division",
-      "sportTitle": "Primera División - Argentina",
-      "score": 0.466,
-      "matches": 11
+      "matches": 18
     },
     {
       "league": "Challenge League",
@@ -240,6 +208,14 @@
       "matches": 15
     },
     {
+      "league": "Primera B Metropolitana",
+      "country": "Argentina",
+      "sportKey": "soccer_argentina_primera_division",
+      "sportTitle": "Primera División - Argentina",
+      "score": 0.466,
+      "matches": 10
+    },
+    {
       "league": "Major League Soccer",
       "country": "USA",
       "sportKey": "soccer_usa_mls",
@@ -350,6 +326,14 @@
       "sportTitle": "EFL Cup",
       "score": 0.463,
       "matches": 26
+    },
+    {
+      "league": "Division 2 - Södra Svealand",
+      "country": "Sweden",
+      "sportKey": "soccer_sweden_allsvenskan",
+      "sportTitle": "Allsvenskan - Sweden",
+      "score": 0.305,
+      "matches": 6
     },
     {
       "league": "League One",
@@ -624,6 +608,14 @@
       "matches": 7
     },
     {
+      "league": "Oberliga - Bayern Nord",
+      "country": "Germany",
+      "sportKey": "soccer_germany_bundesliga",
+      "sportTitle": "Bundesliga - Germany",
+      "score": 0.323,
+      "matches": 3
+    },
+    {
       "league": "Frauenliga",
       "country": "Austria",
       "sportKey": "soccer_austria_bundesliga",
@@ -877,6 +869,14 @@
       "sportKey": "soccer_austria_bundesliga",
       "sportTitle": "Austrian Football Bundesliga",
       "score": 0.833,
+      "matches": 5
+    },
+    {
+      "league": "Regionalliga - West",
+      "country": "Austria",
+      "sportKey": "soccer_austria_bundesliga",
+      "sportTitle": "Austrian Football Bundesliga",
+      "score": 0.323,
       "matches": 5
     },
     {
@@ -1216,7 +1216,7 @@
       "matches": 2
     }
   ],
-  "matchesConsidered": 1743,
+  "matchesConsidered": 1722,
   "matchesMatched": 0,
   "matchesUpdated": 0,
   "fieldsFilled": 0,
@@ -1242,24 +1242,6 @@
       "country": "World",
       "reason": "No matching soccer sport key",
       "bestScore": 0.111
-    },
-    {
-      "league": "HNL",
-      "country": "Croatia",
-      "reason": "No matching soccer sport key",
-      "bestScore": 0
-    },
-    {
-      "league": "NB I",
-      "country": "Hungary",
-      "reason": "No matching soccer sport key",
-      "bestScore": 0
-    },
-    {
-      "league": "Prva Liga",
-      "country": "Serbia",
-      "reason": "No matching soccer sport key",
-      "bestScore": 0.143
     },
     {
       "league": "First League",
@@ -1574,6 +1556,12 @@
       "bestScore": 0.143
     },
     {
+      "league": "Prva Liga",
+      "country": "Serbia",
+      "reason": "No matching soccer sport key",
+      "bestScore": 0.143
+    },
+    {
       "league": "NB II",
       "country": "Hungary",
       "reason": "No matching soccer sport key",
@@ -1604,6 +1592,12 @@
       "bestScore": 0.143
     },
     {
+      "league": "HNL",
+      "country": "Croatia",
+      "reason": "No matching soccer sport key",
+      "bestScore": 0
+    },
+    {
       "league": "CECAFA Club Cup",
       "country": "World",
       "reason": "No matching soccer sport key",
@@ -1614,6 +1608,12 @@
       "country": "Israel",
       "reason": "No matching soccer sport key",
       "bestScore": 0.111
+    },
+    {
+      "league": "NB I",
+      "country": "Hungary",
+      "reason": "No matching soccer sport key",
+      "bestScore": 0
     },
     {
       "league": "Liga Women",
@@ -2360,30 +2360,6 @@
       "reason": "No event/team match"
     },
     {
-      "league": "Oberliga - Bayern Nord",
-      "home": "ASV Neumarkt",
-      "away": "Kornburg",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Oberliga - Bayern Nord",
-      "home": "Eintracht Bamberg",
-      "away": "Stadeln",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Oberliga - Bayern Nord",
-      "home": "Ingolstadt II",
-      "away": "Jahn Regensburg II",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Oberliga - Bayern Nord",
-      "home": "Nordlingen",
-      "away": "Viktoria Aschaffenburg",
-      "reason": "No event/team match"
-    },
-    {
       "league": "Oberliga - Hamburg",
       "home": "Concordia",
       "away": "HEBC",
@@ -2576,6 +2552,24 @@
       "reason": "No event/team match"
     },
     {
+      "league": "Oberliga - Bayern Nord",
+      "home": "Eintracht Bamberg",
+      "away": "Stadeln",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Oberliga - Bayern Nord",
+      "home": "Ingolstadt II",
+      "away": "Jahn Regensburg II",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Oberliga - Bayern Nord",
+      "home": "Nordlingen",
+      "away": "Viktoria Aschaffenburg",
+      "reason": "No event/team match"
+    },
+    {
       "league": "Oberliga - Schleswig-Holstein",
       "home": "SV Eichede",
       "away": "Holstein Kiel II",
@@ -2724,6 +2718,12 @@
       "home": "RSV Eintracht",
       "away": "Luckenwalde",
       "reason": "No event/team match"
+    },
+    {
+      "league": "Regionalliga - Nordost",
+      "home": "FSV Zwickau",
+      "away": "Greifswalder FC",
+      "reason": "No event/team match"
     }
   ],
   "unsupportedMarkets": [
@@ -2764,27 +2764,15 @@
       "market": "double_chance"
     },
     {
-      "sportKey": "soccer_austria_bundesliga",
-      "market": "btts"
-    },
-    {
-      "sportKey": "soccer_austria_bundesliga",
-      "market": "draw_no_bet"
-    },
-    {
-      "sportKey": "soccer_austria_bundesliga",
-      "market": "double_chance"
-    },
-    {
       "sportKey": "soccer_germany_dfb_pokal",
       "market": "btts"
     },
     {
-      "sportKey": "soccer_sweden_allsvenskan",
+      "sportKey": "soccer_germany_dfb_pokal",
       "market": "draw_no_bet"
     },
     {
-      "sportKey": "soccer_sweden_allsvenskan",
+      "sportKey": "soccer_germany_dfb_pokal",
       "market": "double_chance"
     },
     {
@@ -2833,6 +2821,18 @@
     },
     {
       "sportKey": "soccer_switzerland_superleague",
+      "market": "double_chance"
+    },
+    {
+      "sportKey": "soccer_austria_bundesliga",
+      "market": "btts"
+    },
+    {
+      "sportKey": "soccer_austria_bundesliga",
+      "market": "draw_no_bet"
+    },
+    {
+      "sportKey": "soccer_austria_bundesliga",
       "market": "double_chance"
     },
     {
@@ -3177,31 +3177,6 @@
       "statusCode": 422
     },
     {
-      "label": "soccer_austria_bundesliga:base-combined",
-      "error": "Markets not supported by this endpoint: btts, double_chance, draw_no_bet",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_austria_bundesliga:base-core",
-      "error": "Invalid commenceTimeFrom parameter. The format must be YYYY-MM-DDTHH:MM:SSZ, for example 2020-11-24T16:05:00Z",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_austria_bundesliga:btts",
-      "error": "Markets not supported by this endpoint: btts",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_austria_bundesliga:draw_no_bet",
-      "error": "Markets not supported by this endpoint: draw_no_bet",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_austria_bundesliga:double_chance",
-      "error": "Markets not supported by this endpoint: double_chance",
-      "statusCode": 422
-    },
-    {
       "label": "soccer_germany_dfb_pokal:base-combined",
       "error": "Markets not supported by this endpoint: btts, double_chance, draw_no_bet",
       "statusCode": 422
@@ -3323,6 +3298,31 @@
     },
     {
       "label": "soccer_switzerland_superleague:double_chance",
+      "error": "Markets not supported by this endpoint: double_chance",
+      "statusCode": 422
+    },
+    {
+      "label": "soccer_austria_bundesliga:base-combined",
+      "error": "Markets not supported by this endpoint: btts, double_chance, draw_no_bet",
+      "statusCode": 422
+    },
+    {
+      "label": "soccer_austria_bundesliga:base-core",
+      "error": "Invalid commenceTimeFrom parameter. The format must be YYYY-MM-DDTHH:MM:SSZ, for example 2020-11-24T16:05:00Z",
+      "statusCode": 422
+    },
+    {
+      "label": "soccer_austria_bundesliga:btts",
+      "error": "Markets not supported by this endpoint: btts",
+      "statusCode": 422
+    },
+    {
+      "label": "soccer_austria_bundesliga:draw_no_bet",
+      "error": "Markets not supported by this endpoint: draw_no_bet",
+      "statusCode": 422
+    },
+    {
+      "label": "soccer_austria_bundesliga:double_chance",
       "error": "Markets not supported by this endpoint: double_chance",
       "statusCode": 422
     },
@@ -3884,5 +3884,5 @@
   },
   "skipped": false,
   "skipReason": null,
-  "completedAt": "2026-07-31T20:14:39.807Z"
+  "completedAt": "2026-07-31T20:32:47.638Z"
 }
