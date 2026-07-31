@@ -1,6 +1,6 @@
 {
   "version": "v251",
-  "generatedAt": "2026-07-31T11:32:15.389Z",
+  "generatedAt": "2026-07-31T11:47:51.911Z",
   "provider": "The Odds API v4",
   "keyPresent": true,
   "regions": "uk",
@@ -13,14 +13,6 @@
       "sportKey": "soccer_epl",
       "sportTitle": "EPL",
       "score": 0.667,
-      "matches": 7
-    },
-    {
-      "league": "Youth Championship",
-      "country": "Russia",
-      "sportKey": "soccer_russia_premier_league",
-      "sportTitle": "Premier League - Russia",
-      "score": 0.323,
       "matches": 7
     },
     {
@@ -38,6 +30,14 @@
       "sportTitle": "Super League - China",
       "score": 1,
       "matches": 8
+    },
+    {
+      "league": "Youth Championship",
+      "country": "Russia",
+      "sportKey": "soccer_russia_premier_league",
+      "sportTitle": "Premier League - Russia",
+      "score": 0.323,
+      "matches": 6
     },
     {
       "league": "Premier League",
@@ -1232,7 +1232,7 @@
       "matches": 2
     }
   ],
-  "matchesConsidered": 1928,
+  "matchesConsidered": 1924,
   "matchesMatched": 0,
   "matchesUpdated": 0,
   "fieldsFilled": 0,
@@ -2238,9 +2238,171 @@
       "reason": "No event/team match"
     },
     {
-      "league": "Youth Championship",
-      "home": "Almaz Antey U19",
-      "away": "Akademiya Konoplev U20",
+      "league": "Super League",
+      "home": "Henan Jianye",
+      "away": "Dalian Zhixing",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Super League",
+      "home": "Tianjin Teda",
+      "away": "Yunnan Yukun",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Super League",
+      "home": "Beijing Guoan",
+      "away": "Hangzhou Greentown",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Super League",
+      "home": "SHANGHAI SIPG",
+      "away": "Shandong Luneng",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Super League",
+      "home": "Chengdu Better City",
+      "away": "Wuhan Three Towns",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Super League",
+      "home": "Qingdao Youth Island",
+      "away": "Qingdao Jonoon",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Super League",
+      "home": "Shenyang Urban",
+      "away": "Shanghai Shenhua",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Super League",
+      "home": "Sichuan Jiuniu",
+      "away": "Chongqing Tongliang Long",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "League Two",
+      "home": "Xi'an Ronghai",
+      "away": "BIT",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "League Two",
+      "home": "Qingdao Red Lions",
+      "away": "Rizhao Yuqi",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "League Two",
+      "home": "Dalian Yingbo B",
+      "away": "Shanghai Port II",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "League Two",
+      "home": "Shangyu Pterosaur",
+      "away": "Langfang Glory City",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "League Two",
+      "home": "Guizhou Zhucheng",
+      "away": "Shenzhen 2028",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "League Two",
+      "home": "Hubei Chufeng Heli",
+      "away": "Guangdong Mingtu",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "League Two",
+      "home": "Shanghai Second",
+      "away": "Changchun Xidu",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "League Two",
+      "home": "Guangzhou Dandelion",
+      "away": "Wuhan Three Towns II",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "League Two",
+      "home": "Shandong Taishan II",
+      "away": "Dalian Kewei",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "League Two",
+      "home": "Nantong Haimen Codion",
+      "away": "Tai'an Tiankuang",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "League Two",
+      "home": "Yichun Grand Tiger",
+      "away": "Jiangxi Liansheng",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "League Two",
+      "home": "Chengdu Rongcheng II",
+      "away": "Xiamen Feilu",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "League One",
+      "home": "Yanbian Longding",
+      "away": "Nanjing City",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "League One",
+      "home": "Dalian Huayi",
+      "away": "Shaanxi Union",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "League One",
+      "home": "Ningbo Professional",
+      "away": "Guangxi Hengchen",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "League One",
+      "home": "Guangzhou E-Power",
+      "away": "Dongguan United",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "League One",
+      "home": "Nantong Zhiyun",
+      "away": "Heilongjiang Lava Spring",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "League One",
+      "home": "Changchun Yatai",
+      "away": "Hebei Kungfu",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "League One",
+      "home": "Shenzhen Juniors",
+      "away": "Wuxi Wugou",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "League One",
+      "home": "Suzhou Dongwu",
+      "away": "Meizhou Kejia",
       "reason": "No event/team match"
     },
     {
@@ -2578,168 +2740,6 @@
       "home": "Mashuk-KMV",
       "away": "FK Sokol Saratov",
       "reason": "No event/team match"
-    },
-    {
-      "league": "Super League",
-      "home": "Henan Jianye",
-      "away": "Dalian Zhixing",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Super League",
-      "home": "Tianjin Teda",
-      "away": "Yunnan Yukun",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Super League",
-      "home": "Beijing Guoan",
-      "away": "Hangzhou Greentown",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Super League",
-      "home": "SHANGHAI SIPG",
-      "away": "Shandong Luneng",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Super League",
-      "home": "Chengdu Better City",
-      "away": "Wuhan Three Towns",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Super League",
-      "home": "Qingdao Youth Island",
-      "away": "Qingdao Jonoon",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Super League",
-      "home": "Shenyang Urban",
-      "away": "Shanghai Shenhua",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Super League",
-      "home": "Sichuan Jiuniu",
-      "away": "Chongqing Tongliang Long",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "League Two",
-      "home": "Xi'an Ronghai",
-      "away": "BIT",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "League Two",
-      "home": "Qingdao Red Lions",
-      "away": "Rizhao Yuqi",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "League Two",
-      "home": "Dalian Yingbo B",
-      "away": "Shanghai Port II",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "League Two",
-      "home": "Shangyu Pterosaur",
-      "away": "Langfang Glory City",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "League Two",
-      "home": "Guizhou Zhucheng",
-      "away": "Shenzhen 2028",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "League Two",
-      "home": "Hubei Chufeng Heli",
-      "away": "Guangdong Mingtu",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "League Two",
-      "home": "Shanghai Second",
-      "away": "Changchun Xidu",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "League Two",
-      "home": "Guangzhou Dandelion",
-      "away": "Wuhan Three Towns II",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "League Two",
-      "home": "Shandong Taishan II",
-      "away": "Dalian Kewei",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "League Two",
-      "home": "Nantong Haimen Codion",
-      "away": "Tai'an Tiankuang",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "League Two",
-      "home": "Yichun Grand Tiger",
-      "away": "Jiangxi Liansheng",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "League Two",
-      "home": "Chengdu Rongcheng II",
-      "away": "Xiamen Feilu",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "League One",
-      "home": "Yanbian Longding",
-      "away": "Nanjing City",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "League One",
-      "home": "Dalian Huayi",
-      "away": "Shaanxi Union",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "League One",
-      "home": "Ningbo Professional",
-      "away": "Guangxi Hengchen",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "League One",
-      "home": "Guangzhou E-Power",
-      "away": "Dongguan United",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "League One",
-      "home": "Nantong Zhiyun",
-      "away": "Heilongjiang Lava Spring",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "League One",
-      "home": "Changchun Yatai",
-      "away": "Hebei Kungfu",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "League One",
-      "home": "Shenzhen Juniors",
-      "away": "Wuxi Wugou",
-      "reason": "No event/team match"
     }
   ],
   "unsupportedMarkets": [
@@ -2756,27 +2756,27 @@
       "market": "double_chance"
     },
     {
-      "sportKey": "soccer_russia_premier_league",
+      "sportKey": "soccer_china_superleague",
       "market": "btts"
     },
     {
-      "sportKey": "soccer_russia_premier_league",
+      "sportKey": "soccer_china_superleague",
       "market": "draw_no_bet"
     },
     {
-      "sportKey": "soccer_russia_premier_league",
+      "sportKey": "soccer_china_superleague",
       "market": "double_chance"
     },
     {
-      "sportKey": "soccer_china_superleague",
+      "sportKey": "soccer_russia_premier_league",
       "market": "btts"
     },
     {
-      "sportKey": "soccer_china_superleague",
+      "sportKey": "soccer_russia_premier_league",
       "market": "draw_no_bet"
     },
     {
-      "sportKey": "soccer_china_superleague",
+      "sportKey": "soccer_russia_premier_league",
       "market": "double_chance"
     },
     {
@@ -3143,31 +3143,6 @@
       "statusCode": 422
     },
     {
-      "label": "soccer_russia_premier_league:base-combined",
-      "error": "Markets not supported by this endpoint: btts, double_chance, draw_no_bet",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_russia_premier_league:base-core",
-      "error": "Invalid commenceTimeFrom parameter. The format must be YYYY-MM-DDTHH:MM:SSZ, for example 2020-11-24T16:05:00Z",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_russia_premier_league:btts",
-      "error": "Markets not supported by this endpoint: btts",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_russia_premier_league:draw_no_bet",
-      "error": "Markets not supported by this endpoint: draw_no_bet",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_russia_premier_league:double_chance",
-      "error": "Markets not supported by this endpoint: double_chance",
-      "statusCode": 422
-    },
-    {
       "label": "soccer_china_superleague:base-combined",
       "error": "Markets not supported by this endpoint: btts, double_chance, draw_no_bet",
       "statusCode": 422
@@ -3189,6 +3164,31 @@
     },
     {
       "label": "soccer_china_superleague:double_chance",
+      "error": "Markets not supported by this endpoint: double_chance",
+      "statusCode": 422
+    },
+    {
+      "label": "soccer_russia_premier_league:base-combined",
+      "error": "Markets not supported by this endpoint: btts, double_chance, draw_no_bet",
+      "statusCode": 422
+    },
+    {
+      "label": "soccer_russia_premier_league:base-core",
+      "error": "Invalid commenceTimeFrom parameter. The format must be YYYY-MM-DDTHH:MM:SSZ, for example 2020-11-24T16:05:00Z",
+      "statusCode": 422
+    },
+    {
+      "label": "soccer_russia_premier_league:btts",
+      "error": "Markets not supported by this endpoint: btts",
+      "statusCode": 422
+    },
+    {
+      "label": "soccer_russia_premier_league:draw_no_bet",
+      "error": "Markets not supported by this endpoint: draw_no_bet",
+      "statusCode": 422
+    },
+    {
+      "label": "soccer_russia_premier_league:double_chance",
       "error": "Markets not supported by this endpoint: double_chance",
       "statusCode": 422
     },
@@ -3900,5 +3900,5 @@
   },
   "skipped": false,
   "skipReason": null,
-  "completedAt": "2026-07-31T11:32:36.562Z"
+  "completedAt": "2026-07-31T11:48:04.307Z"
 }
