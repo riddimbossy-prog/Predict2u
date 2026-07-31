@@ -1,20 +1,12 @@
 {
   "version": "v251",
-  "generatedAt": "2026-07-31T04:54:07.690Z",
+  "generatedAt": "2026-07-31T05:10:01.538Z",
   "provider": "The Odds API v4",
   "keyPresent": true,
   "regions": "uk",
   "sportsAvailable": 75,
   "soccerSportsAvailable": 41,
   "sportMappings": [
-    {
-      "league": "Primera Division",
-      "country": "El-Salvador",
-      "sportKey": "soccer_spain_la_liga",
-      "sportTitle": "La Liga - Spain",
-      "score": 0.429,
-      "matches": 6
-    },
     {
       "league": "Youth Championship",
       "country": "Russia",
@@ -1120,6 +1112,14 @@
       "matches": 1
     },
     {
+      "league": "Primera Division",
+      "country": "El-Salvador",
+      "sportKey": "soccer_spain_la_liga",
+      "sportTitle": "La Liga - Spain",
+      "score": 0.429,
+      "matches": 5
+    },
+    {
       "league": "Primera División",
       "country": "Costa-Rica",
       "sportKey": "soccer_argentina_primera_division",
@@ -1232,7 +1232,7 @@
       "matches": 2
     }
   ],
-  "matchesConsidered": 1939,
+  "matchesConsidered": 1936,
   "matchesMatched": 0,
   "matchesUpdated": 0,
   "fieldsFilled": 0,
@@ -1241,12 +1241,6 @@
   "derivedHtftMatches": 0,
   "bookmakerRows": 0,
   "unmatched": [
-    {
-      "league": "Friendlies Clubs",
-      "country": "World",
-      "reason": "No matching soccer sport key",
-      "bestScore": 0
-    },
     {
       "league": "Africa Cup of Nations - Women",
       "country": "World",
@@ -1268,6 +1262,12 @@
     {
       "league": "Piala Presiden",
       "country": "Indonesia",
+      "reason": "No matching soccer sport key",
+      "bestScore": 0
+    },
+    {
+      "league": "Friendlies Clubs",
+      "country": "World",
       "reason": "No matching soccer sport key",
       "bestScore": 0
     },
@@ -1726,66 +1726,6 @@
       "country": "World",
       "reason": "No matching soccer sport key",
       "bestScore": 0.143
-    },
-    {
-      "league": "Primera Division",
-      "home": "Inter",
-      "away": "Águila",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Primera Division",
-      "home": "Fuerte San Francisco",
-      "away": "Inter",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Primera Division",
-      "home": "Municipal Limeño",
-      "away": "Platense",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Primera Division",
-      "home": "Águila",
-      "away": "Cacahuatique",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Primera Division",
-      "home": "Atletico Balboa",
-      "away": "Isidro Metapán",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Primera Division",
-      "home": "Inca Aruba",
-      "away": "FAS",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Primera Division",
-      "home": "Diriangén",
-      "away": "UNAN Managua",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Primera Division",
-      "home": "Rancho Santana",
-      "away": "H&H Export",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Primera Division",
-      "home": "San Marcos",
-      "away": "Managua",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Primera Division",
-      "home": "Walter Ferretti",
-      "away": "Matagalpa",
-      "reason": "No event/team match"
     },
     {
       "league": "Youth Championship",
@@ -2740,22 +2680,70 @@
       "home": "Shanghai Second",
       "away": "Changchun Xidu",
       "reason": "No event/team match"
+    },
+    {
+      "league": "League Two",
+      "home": "Guangzhou Dandelion",
+      "away": "Wuhan Three Towns II",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "League Two",
+      "home": "Shandong Taishan II",
+      "away": "Dalian Kewei",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "League Two",
+      "home": "Nantong Haimen Codion",
+      "away": "Tai'an Tiankuang",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "League Two",
+      "home": "Yichun Grand Tiger",
+      "away": "Jiangxi Liansheng",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "League Two",
+      "home": "Chengdu Rongcheng II",
+      "away": "Xiamen Feilu",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "League One",
+      "home": "Yanbian Longding",
+      "away": "Nanjing City",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "League One",
+      "home": "Dalian Huayi",
+      "away": "Shaanxi Union",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "League One",
+      "home": "Ningbo Professional",
+      "away": "Guangxi Hengchen",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "League One",
+      "home": "Guangzhou E-Power",
+      "away": "Dongguan United",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "League One",
+      "home": "Nantong Zhiyun",
+      "away": "Heilongjiang Lava Spring",
+      "reason": "No event/team match"
     }
   ],
   "unsupportedMarkets": [
     {
-      "sportKey": "soccer_spain_la_liga",
-      "market": "btts"
-    },
-    {
-      "sportKey": "soccer_spain_la_liga",
-      "market": "draw_no_bet"
-    },
-    {
-      "sportKey": "soccer_spain_la_liga",
-      "market": "double_chance"
-    },
-    {
       "sportKey": "soccer_russia_premier_league",
       "market": "btts"
     },
@@ -3017,6 +3005,18 @@
     },
     {
       "sportKey": "soccer_usa_mls",
+      "market": "double_chance"
+    },
+    {
+      "sportKey": "soccer_spain_la_liga",
+      "market": "btts"
+    },
+    {
+      "sportKey": "soccer_spain_la_liga",
+      "market": "draw_no_bet"
+    },
+    {
+      "sportKey": "soccer_spain_la_liga",
       "market": "double_chance"
     },
     {
@@ -3117,31 +3117,6 @@
     }
   ],
   "requestErrors": [
-    {
-      "label": "soccer_spain_la_liga:base-combined",
-      "error": "Markets not supported by this endpoint: btts, double_chance, draw_no_bet",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_spain_la_liga:base-core",
-      "error": "Invalid commenceTimeFrom parameter. The format must be YYYY-MM-DDTHH:MM:SSZ, for example 2020-11-24T16:05:00Z",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_spain_la_liga:btts",
-      "error": "Markets not supported by this endpoint: btts",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_spain_la_liga:draw_no_bet",
-      "error": "Markets not supported by this endpoint: draw_no_bet",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_spain_la_liga:double_chance",
-      "error": "Markets not supported by this endpoint: double_chance",
-      "statusCode": 422
-    },
     {
       "label": "soccer_russia_premier_league:base-combined",
       "error": "Markets not supported by this endpoint: btts, double_chance, draw_no_bet",
@@ -3693,6 +3668,31 @@
       "statusCode": 422
     },
     {
+      "label": "soccer_spain_la_liga:base-combined",
+      "error": "Markets not supported by this endpoint: btts, double_chance, draw_no_bet",
+      "statusCode": 422
+    },
+    {
+      "label": "soccer_spain_la_liga:base-core",
+      "error": "Invalid commenceTimeFrom parameter. The format must be YYYY-MM-DDTHH:MM:SSZ, for example 2020-11-24T16:05:00Z",
+      "statusCode": 422
+    },
+    {
+      "label": "soccer_spain_la_liga:btts",
+      "error": "Markets not supported by this endpoint: btts",
+      "statusCode": 422
+    },
+    {
+      "label": "soccer_spain_la_liga:draw_no_bet",
+      "error": "Markets not supported by this endpoint: draw_no_bet",
+      "statusCode": 422
+    },
+    {
+      "label": "soccer_spain_la_liga:double_chance",
+      "error": "Markets not supported by this endpoint: double_chance",
+      "statusCode": 422
+    },
+    {
       "label": "soccer_korea_kleague1:base-combined",
       "error": "Markets not supported by this endpoint: btts, double_chance, draw_no_bet",
       "statusCode": 422
@@ -3900,5 +3900,5 @@
   },
   "skipped": false,
   "skipReason": null,
-  "completedAt": "2026-07-31T04:54:14.363Z"
+  "completedAt": "2026-07-31T05:10:25.961Z"
 }
