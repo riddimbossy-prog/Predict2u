@@ -1,28 +1,12 @@
 {
   "version": "v251",
-  "generatedAt": "2026-07-31T14:27:46.797Z",
+  "generatedAt": "2026-07-31T14:48:48.994Z",
   "provider": "The Odds API v4",
   "keyPresent": true,
   "regions": "uk",
   "sportsAvailable": 75,
   "soccerSportsAvailable": 41,
   "sportMappings": [
-    {
-      "league": "Premier League",
-      "country": "Armenia",
-      "sportKey": "soccer_epl",
-      "sportTitle": "EPL",
-      "score": 0.987,
-      "matches": 6
-    },
-    {
-      "league": "Premier League",
-      "country": "Bhutan",
-      "sportKey": "soccer_epl",
-      "sportTitle": "EPL",
-      "score": 0.987,
-      "matches": 3
-    },
     {
       "league": "Cearense U20",
       "country": "Brazil",
@@ -904,6 +888,14 @@
       "matches": 16
     },
     {
+      "league": "Premier League",
+      "country": "Armenia",
+      "sportKey": "soccer_epl",
+      "sportTitle": "EPL",
+      "score": 0.987,
+      "matches": 5
+    },
+    {
       "league": "Super League",
       "country": "Uzbekistan",
       "sportKey": "soccer_greece_super_league",
@@ -1152,6 +1144,14 @@
       "matches": 5
     },
     {
+      "league": "Premier League",
+      "country": "Bhutan",
+      "sportKey": "soccer_epl",
+      "sportTitle": "EPL",
+      "score": 0.987,
+      "matches": 2
+    },
+    {
       "league": "Paulista Série B",
       "country": "Brazil",
       "sportKey": "soccer_brazil_serie_b",
@@ -1232,7 +1232,7 @@
       "matches": 2
     }
   ],
-  "matchesConsidered": 1895,
+  "matchesConsidered": 1893,
   "matchesMatched": 0,
   "matchesUpdated": 0,
   "fieldsFilled": 0,
@@ -1722,57 +1722,393 @@
       "bestScore": 0.143
     },
     {
-      "league": "Premier League",
-      "home": "Van",
-      "away": "Sardarapat",
+      "league": "Cearense U20",
+      "home": "Tirol U20",
+      "away": "Anjos do Céu U20",
       "reason": "No event/team match"
     },
     {
-      "league": "Premier League",
-      "home": "BKMA",
-      "away": "Shirak",
+      "league": "Cearense U20",
+      "home": "Floresta CE U20",
+      "away": "Quixadá U20",
       "reason": "No event/team match"
     },
     {
-      "league": "Premier League",
-      "home": "Gandzasar",
-      "away": "Ararat-Armenia",
+      "league": "Cearense U20",
+      "home": "Fortaleza U20",
+      "away": "Ferroviario U20",
       "reason": "No event/team match"
     },
     {
-      "league": "Premier League",
-      "home": "FC Noah",
-      "away": "Syunik",
+      "league": "Cearense U20",
+      "home": "Ceará U20",
+      "away": "Vila Real FC U20",
       "reason": "No event/team match"
     },
     {
-      "league": "Premier League",
-      "home": "FC Urartu",
-      "away": "Pyunik Yerevan",
+      "league": "Mineiro U20",
+      "home": "Itabirito U20",
+      "away": "Athletic Club MG U20",
       "reason": "No event/team match"
     },
     {
-      "league": "Premier League",
-      "home": "Alashkert",
-      "away": "Ararat",
+      "league": "Mineiro U20",
+      "home": "Villa Real U20",
+      "away": "Sao Joao del Rei U20",
       "reason": "No event/team match"
     },
     {
-      "league": "Premier League",
-      "home": "Drukpa",
-      "away": "Bhutan U19",
+      "league": "Mineiro U20",
+      "home": "Cruzeiro U20",
+      "away": "América Mineiro U20",
       "reason": "No event/team match"
     },
     {
-      "league": "Premier League",
-      "home": "Transport United",
-      "away": "Tensung",
+      "league": "Mineiro U20",
+      "home": "Uberabinha U20",
+      "away": "Minas Boca U20",
       "reason": "No event/team match"
     },
     {
-      "league": "Premier League",
-      "home": "Drukpa",
-      "away": "Paro",
+      "league": "Mineiro U20",
+      "home": "Atlético Mineiro U20",
+      "away": "Coimbra U20",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Mineiro U20",
+      "home": "Nacional de Muriae U20",
+      "away": "Boston City U20",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Mineiro U20",
+      "home": "Social U20",
+      "away": "Betim U20",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Paulista - U20",
+      "home": "Água Santa U20",
+      "away": "Sfera U20",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Paulista - U20",
+      "home": "Bandeirante U20",
+      "away": "Ibrachina U20",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Paulista - U20",
+      "home": "Capivariano U20",
+      "away": "Porto Football U20",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Paulista - U20",
+      "home": "Desportivo Brasil U20",
+      "away": "Aguai U20",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Paulista - U20",
+      "home": "EC São Bernardo U20",
+      "away": "Novorizontino U20",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Paulista - U20",
+      "home": "Ferroviária U20",
+      "away": "Portuguesa Santista U20",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Paulista - U20",
+      "home": "Flamengo SP U20",
+      "away": "Gremio Prudente U20",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Paulista - U20",
+      "home": "Itapirense U20",
+      "away": "São Bento U20",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Paulista - U20",
+      "home": "Jabaquara U20",
+      "away": "Sertãozinho U20",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Paulista - U20",
+      "home": "Portuguesa U20",
+      "away": "Ponte Preta U20",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Paulista - U20",
+      "home": "Referencia U20",
+      "away": "Guarani U20",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Paulista - U20",
+      "home": "Santo André U20",
+      "away": "União São João U20",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Paulista - U20",
+      "home": "XV de Jaú U20",
+      "away": "Ituano U20",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Paulista - U20",
+      "home": "São Paulo U20",
+      "away": "Botafogo SP U20",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Paulista - U20",
+      "home": "Velo Clube U20",
+      "away": "SC Paulinense SP U20",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Paulista - U20",
+      "home": "União Suzano U20",
+      "away": "Corinthians U20",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Paulista - U20",
+      "home": "Juventus U20",
+      "away": "Santos U20",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Paulista - U20",
+      "home": "Mauá U20",
+      "away": "Palmeiras U20",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Paulista - U20",
+      "home": "RB Bragantino U20",
+      "away": "Tanabi SP U20",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Carioca A2",
+      "home": "Americano Campos",
+      "away": "Resende",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Catarinense U20",
+      "home": "Criciuma U20",
+      "away": "Brusque U20",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Catarinense U20",
+      "home": "Figueirense U20",
+      "away": "Avaí U20",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Catarinense U20",
+      "home": "Nação U20",
+      "away": "Barra SC U20",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Catarinense U20",
+      "home": "Joinville U20",
+      "away": "Carlos Renaux U20",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Copa Paulista",
+      "home": "São Caetano",
+      "away": "EC São Bernardo",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Copa Paulista",
+      "home": "Paulista",
+      "away": "Oeste",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Copa Paulista",
+      "home": "Comercial",
+      "away": "União São João",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Copa Paulista",
+      "home": "XV de Piracicaba",
+      "away": "Noroeste",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Copa Paulista",
+      "home": "Bandeirante SP",
+      "away": "Marília",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Copa Paulista",
+      "home": "Santo André",
+      "away": "São José EC",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Copa Paulista",
+      "home": "Juventus",
+      "away": "Primavera SP",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Copa Paulista",
+      "home": "Grêmio Prudente",
+      "away": "Linense",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Baiano U20",
+      "home": "Bahia U20",
+      "away": "Fluminense de Feira U20",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Brasiliense U20",
+      "home": "Planaltina DF U20",
+      "away": "Capital TO U20",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Brasiliense U20",
+      "home": "Samambaia U20",
+      "away": "Real Brasília U20",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Brasiliense U20",
+      "home": "Santa Maria U20",
+      "away": "Brasiliense U20",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Brasiliense U20",
+      "home": "Sobradinho U20",
+      "away": "Canaã U20",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Paranaense - 3",
+      "home": "AA Iguaçu",
+      "away": "Hope Internacional",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Paranaense - 3",
+      "home": "City London",
+      "away": "Portuguesa Londrinense",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Paranaense - 3",
+      "home": "Iraty",
+      "away": "Samas",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Paranaense - 3",
+      "home": "União PR",
+      "away": "Oeste Brasil",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Paranaense - 3",
+      "home": "PSTC Procopense",
+      "away": "Cambé",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Mineiro - 2",
+      "home": "Mamoré",
+      "away": "Democrata SL",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Mineiro - 2",
+      "home": "Villa Nova",
+      "away": "Aymorés",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Copa Do Brasil",
+      "home": "Vasco DA Gama",
+      "away": "Fluminense",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Copa Do Brasil",
+      "home": "Atletico-MG",
+      "away": "Juventude",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Copa Do Brasil",
+      "home": "Santos",
+      "away": "Remo",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Copa Do Brasil",
+      "home": "Palmeiras",
+      "away": "Fortaleza EC",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Copa Do Brasil",
+      "home": "Mirassol",
+      "away": "Gremio",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Copa Do Brasil",
+      "home": "Chapecoense-sc",
+      "away": "Cruzeiro",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Copa Do Brasil",
+      "home": "Internacional",
+      "away": "Corinthians",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Copa Do Brasil",
+      "home": "Atletico Paranaense",
+      "away": "Vitoria",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Copa Do Brasil",
+      "home": "Juventude",
+      "away": "Atletico-MG",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Baiano - 2",
+      "home": "Fluminense De Feira",
+      "away": "SSA",
       "reason": "No event/team match"
     },
     {
@@ -2179,6 +2515,36 @@
     },
     {
       "league": "Premier League",
+      "home": "BKMA",
+      "away": "Shirak",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Premier League",
+      "home": "Gandzasar",
+      "away": "Ararat-Armenia",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Premier League",
+      "home": "FC Noah",
+      "away": "Syunik",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Premier League",
+      "home": "FC Urartu",
+      "away": "Pyunik Yerevan",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Premier League",
+      "home": "Alashkert",
+      "away": "Ararat",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Premier League",
       "home": "Al Ahed",
       "away": "Jwaaya FC",
       "reason": "No event/team match"
@@ -2187,6 +2553,18 @@
       "league": "Premier League",
       "home": "Al Nejmeh",
       "away": "Al Ansar",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Premier League",
+      "home": "Transport United",
+      "away": "Tensung",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Premier League",
+      "home": "Drukpa",
+      "away": "Paro",
       "reason": "No event/team match"
     },
     {
@@ -2202,39 +2580,165 @@
       "reason": "No event/team match"
     },
     {
-      "league": "Cearense U20",
-      "home": "Tirol U20",
-      "away": "Anjos do Céu U20",
+      "league": "Youth Championship",
+      "home": "CSKA Moskva U19",
+      "away": "Rubin Kazan U20",
       "reason": "No event/team match"
     },
     {
-      "league": "Cearense U20",
-      "home": "Floresta CE U20",
-      "away": "Quixadá U20",
+      "league": "Youth Championship",
+      "home": "Fakel U19",
+      "away": "Dynamo Makhachkala U19",
       "reason": "No event/team match"
     },
     {
-      "league": "Cearense U20",
-      "home": "Fortaleza U20",
-      "away": "Ferroviario U20",
+      "league": "Youth Championship",
+      "home": "Spartak Moskva U19",
+      "away": "Dinamo Moskva U19",
       "reason": "No event/team match"
     },
     {
-      "league": "Cearense U20",
-      "home": "Ceará U20",
-      "away": "Vila Real FC U20",
+      "league": "Youth Championship",
+      "home": "Zenit U19",
+      "away": "Rodina Moscow U19",
       "reason": "No event/team match"
     },
     {
-      "league": "Mineiro U20",
-      "home": "Itabirito U20",
-      "away": "Athletic Club MG U20",
+      "league": "Youth Championship",
+      "home": "Krasnodar U19",
+      "away": "Rostov U19",
       "reason": "No event/team match"
     },
     {
-      "league": "Mineiro U20",
-      "home": "Villa Real U20",
-      "away": "Sao Joao del Rei U20",
+      "league": "Second League A - Division A Silver",
+      "home": "Tyumen",
+      "away": "Amkar",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Second League A - Division A Silver",
+      "home": "Irtysh Omsk",
+      "away": "Torpedo Miass",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Second League A - Division A Silver",
+      "home": "Zenit 2",
+      "away": "Dinamo Moskva II",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Supreme Division Women",
+      "home": "Rostov W",
+      "away": "Ryazan W",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Supreme Division Women",
+      "home": "CSKA Moskva W",
+      "away": "Krylya Sovetov W",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Supreme Division Women",
+      "home": "Zenit W",
+      "away": "Krasnodar W",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Supreme Division Women",
+      "home": "Rubin Kazan W",
+      "away": "Zvezda Perm W",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Supreme Division Women",
+      "home": "Spartak Moskva W",
+      "away": "Dinamo Moskva W",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Supreme Division Women",
+      "home": "Chertanovo W",
+      "away": "Yenisey W",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Second League - Group 3",
+      "home": "Avangard Kursk",
+      "away": "Strogino",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Second League - Group 3",
+      "home": "Kvant",
+      "away": "Rodina Moskva III",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Second League - Group 3",
+      "home": "Saturn Ramenskoye",
+      "away": "Shumbrat",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Second League - Group 3",
+      "home": "Volna Nizhegorodskaya",
+      "away": "Arsenal Tula II",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Second League - Group 3",
+      "home": "Salyut-Belgorod",
+      "away": "Orel",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Second League - Group 3",
+      "home": "FK Spartak Tambov",
+      "away": "SKA Khabarovsk II",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Second League - Group 3",
+      "home": "Rotor-2",
+      "away": "Metallurg Lipetsk",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Second League - Group 2",
+      "home": "Iskra Smolensk",
+      "away": "Dinamo St. Petersburg",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Second League - Group 2",
+      "home": "Zvezda St. Petersburg",
+      "away": "Yenisey II",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Second League - Group 2",
+      "home": "Irkutsk",
+      "away": "Dinamo Vologda",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Second League - Group 2",
+      "home": "Luki-Energiya",
+      "away": "Chertanovo Moscow",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Second League - Group 2",
+      "home": "Murom",
+      "away": "Kosmos Dolgoprudny",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Second League - Group 2",
+      "home": "Tver",
+      "away": "Cherepovets",
       "reason": "No event/team match"
     },
     {
@@ -2744,6 +3248,18 @@
   ],
   "unsupportedMarkets": [
     {
+      "sportKey": "soccer_brazil_campeonato",
+      "market": "btts"
+    },
+    {
+      "sportKey": "soccer_brazil_campeonato",
+      "market": "draw_no_bet"
+    },
+    {
+      "sportKey": "soccer_brazil_campeonato",
+      "market": "double_chance"
+    },
+    {
       "sportKey": "soccer_epl",
       "market": "btts"
     },
@@ -2756,15 +3272,15 @@
       "market": "double_chance"
     },
     {
-      "sportKey": "soccer_brazil_campeonato",
+      "sportKey": "soccer_russia_premier_league",
       "market": "btts"
     },
     {
-      "sportKey": "soccer_brazil_campeonato",
+      "sportKey": "soccer_russia_premier_league",
       "market": "draw_no_bet"
     },
     {
-      "sportKey": "soccer_brazil_campeonato",
+      "sportKey": "soccer_russia_premier_league",
       "market": "double_chance"
     },
     {
@@ -3118,6 +3634,31 @@
   ],
   "requestErrors": [
     {
+      "label": "soccer_brazil_campeonato:base-combined",
+      "error": "Markets not supported by this endpoint: btts, double_chance, draw_no_bet",
+      "statusCode": 422
+    },
+    {
+      "label": "soccer_brazil_campeonato:base-core",
+      "error": "Invalid commenceTimeFrom parameter. The format must be YYYY-MM-DDTHH:MM:SSZ, for example 2020-11-24T16:05:00Z",
+      "statusCode": 422
+    },
+    {
+      "label": "soccer_brazil_campeonato:btts",
+      "error": "Markets not supported by this endpoint: btts",
+      "statusCode": 422
+    },
+    {
+      "label": "soccer_brazil_campeonato:draw_no_bet",
+      "error": "Markets not supported by this endpoint: draw_no_bet",
+      "statusCode": 422
+    },
+    {
+      "label": "soccer_brazil_campeonato:double_chance",
+      "error": "Markets not supported by this endpoint: double_chance",
+      "statusCode": 422
+    },
+    {
       "label": "soccer_epl:base-combined",
       "error": "Markets not supported by this endpoint: btts, double_chance, draw_no_bet",
       "statusCode": 422
@@ -3143,27 +3684,27 @@
       "statusCode": 422
     },
     {
-      "label": "soccer_brazil_campeonato:base-combined",
+      "label": "soccer_russia_premier_league:base-combined",
       "error": "Markets not supported by this endpoint: btts, double_chance, draw_no_bet",
       "statusCode": 422
     },
     {
-      "label": "soccer_brazil_campeonato:base-core",
+      "label": "soccer_russia_premier_league:base-core",
       "error": "Invalid commenceTimeFrom parameter. The format must be YYYY-MM-DDTHH:MM:SSZ, for example 2020-11-24T16:05:00Z",
       "statusCode": 422
     },
     {
-      "label": "soccer_brazil_campeonato:btts",
+      "label": "soccer_russia_premier_league:btts",
       "error": "Markets not supported by this endpoint: btts",
       "statusCode": 422
     },
     {
-      "label": "soccer_brazil_campeonato:draw_no_bet",
+      "label": "soccer_russia_premier_league:draw_no_bet",
       "error": "Markets not supported by this endpoint: draw_no_bet",
       "statusCode": 422
     },
     {
-      "label": "soccer_brazil_campeonato:double_chance",
+      "label": "soccer_russia_premier_league:double_chance",
       "error": "Markets not supported by this endpoint: double_chance",
       "statusCode": 422
     },
@@ -3894,11 +4435,11 @@
     }
   ],
   "quota": {
-    "remaining": 88900,
-    "used": 11100,
+    "remaining": 88824,
+    "used": 11176,
     "last": 0
   },
   "skipped": false,
   "skipReason": null,
-  "completedAt": "2026-07-31T14:27:57.484Z"
+  "completedAt": "2026-07-31T14:49:08.324Z"
 }
