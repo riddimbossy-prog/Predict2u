@@ -1,6 +1,6 @@
 {
   "version": "v251",
-  "generatedAt": "2026-07-31T17:52:55.105Z",
+  "generatedAt": "2026-07-31T18:12:08.518Z",
   "provider": "The Odds API v4",
   "keyPresent": true,
   "regions": "uk",
@@ -24,36 +24,20 @@
       "matches": 3
     },
     {
-      "league": "Ykkösliiga",
-      "country": "Finland",
-      "sportKey": "soccer_finland_veikkausliiga",
-      "sportTitle": "Veikkausliiga - Finland",
-      "score": 0.38,
-      "matches": 3
-    },
-    {
-      "league": "Ykkönen",
-      "country": "Finland",
-      "sportKey": "soccer_finland_veikkausliiga",
-      "sportTitle": "Veikkausliiga - Finland",
-      "score": 0.38,
-      "matches": 4
-    },
-    {
-      "league": "Kakkonen - Lohko B",
-      "country": "Finland",
-      "sportKey": "soccer_finland_veikkausliiga",
-      "sportTitle": "Veikkausliiga - Finland",
-      "score": 0.323,
-      "matches": 4
-    },
-    {
       "league": "Damallsvenskan",
       "country": "Sweden",
       "sportKey": "soccer_sweden_allsvenskan",
       "sportTitle": "Allsvenskan - Sweden",
       "score": 0.38,
       "matches": 7
+    },
+    {
+      "league": "Ykkösliiga",
+      "country": "Finland",
+      "sportKey": "soccer_finland_veikkausliiga",
+      "sportTitle": "Veikkausliiga - Finland",
+      "score": 0.38,
+      "matches": 1
     },
     {
       "league": "Kakkonen - Lohko A",
@@ -816,6 +800,22 @@
       "matches": 7
     },
     {
+      "league": "Ykkönen",
+      "country": "Finland",
+      "sportKey": "soccer_finland_veikkausliiga",
+      "sportTitle": "Veikkausliiga - Finland",
+      "score": 0.38,
+      "matches": 2
+    },
+    {
+      "league": "Kakkonen - Lohko B",
+      "country": "Finland",
+      "sportKey": "soccer_finland_veikkausliiga",
+      "sportTitle": "Veikkausliiga - Finland",
+      "score": 0.323,
+      "matches": 3
+    },
+    {
       "league": "Football League - Highland League",
       "country": "Scotland",
       "sportKey": "soccer_spl",
@@ -1224,7 +1224,7 @@
       "matches": 2
     }
   ],
-  "matchesConsidered": 1857,
+  "matchesConsidered": 1847,
   "matchesMatched": 0,
   "matchesUpdated": 0,
   "fieldsFilled": 0,
@@ -1258,24 +1258,6 @@
       "bestScore": 0.143
     },
     {
-      "league": "1 Lyga",
-      "country": "Lithuania",
-      "reason": "No matching soccer sport key",
-      "bestScore": 0.125
-    },
-    {
-      "league": "Liga I",
-      "country": "Romania",
-      "reason": "No matching soccer sport key",
-      "bestScore": 0.143
-    },
-    {
-      "league": "3. liga - MSFL",
-      "country": "Czech-Republic",
-      "reason": "No matching soccer sport key",
-      "bestScore": 0.222
-    },
-    {
       "league": "Meistriliiga",
       "country": "Estonia",
       "reason": "No matching soccer sport key",
@@ -1294,10 +1276,22 @@
       "bestScore": 0.167
     },
     {
+      "league": "1 Lyga",
+      "country": "Lithuania",
+      "reason": "No matching soccer sport key",
+      "bestScore": 0.125
+    },
+    {
       "league": "FNL",
       "country": "Czech-Republic",
       "reason": "No matching soccer sport key",
       "bestScore": 0
+    },
+    {
+      "league": "3. liga - MSFL",
+      "country": "Czech-Republic",
+      "reason": "No matching soccer sport key",
+      "bestScore": 0.222
     },
     {
       "league": "Czech Liga",
@@ -1344,6 +1338,12 @@
     {
       "league": "Prva Liga",
       "country": "Serbia",
+      "reason": "No matching soccer sport key",
+      "bestScore": 0.143
+    },
+    {
+      "league": "Liga I",
+      "country": "Romania",
       "reason": "No matching soccer sport key",
       "bestScore": 0.143
     },
@@ -2416,117 +2416,321 @@
       "reason": "No event/team match"
     },
     {
-      "league": "Ykkösliiga",
-      "home": "EIF",
-      "away": "Klubi-04",
+      "league": "Damallsvenskan",
+      "home": "Malmö FF W",
+      "away": "Piteå W",
       "reason": "No event/team match"
     },
     {
-      "league": "Ykkösliiga",
-      "home": "Kooteepee",
-      "away": "SJK Akatemia",
+      "league": "Damallsvenskan",
+      "home": "Hammarby W",
+      "away": "Växjö W",
       "reason": "No event/team match"
     },
     {
-      "league": "Ykkösliiga",
-      "home": "PK-35",
-      "away": "Haka",
+      "league": "Damallsvenskan",
+      "home": "Brommapojkarna W",
+      "away": "Djurgården W",
       "reason": "No event/team match"
     },
     {
-      "league": "Ykkönen",
-      "home": "Inter Turku II",
-      "away": "VJS",
+      "league": "Damallsvenskan",
+      "home": "Kristianstad W",
+      "away": "AIK W",
       "reason": "No event/team match"
     },
     {
-      "league": "Ykkönen",
-      "home": "PKKU",
-      "away": "Tampere United",
+      "league": "Damallsvenskan",
+      "home": "Uppsala W",
+      "away": "Norrköping W",
       "reason": "No event/team match"
     },
     {
-      "league": "Ykkönen",
-      "home": "KPV-j",
-      "away": "SalPa",
+      "league": "Damallsvenskan",
+      "home": "Häcken W",
+      "away": "Eskilstuna United W",
       "reason": "No event/team match"
     },
     {
-      "league": "Ykkönen",
-      "home": "TPV",
-      "away": "Rops",
+      "league": "Damallsvenskan",
+      "home": "Vittsjö W",
+      "away": "Rosengård W",
       "reason": "No event/team match"
     },
     {
-      "league": "Kakkonen - Lohko B",
-      "home": "GrIFK",
-      "away": "EBK",
+      "league": "Division 2 - Norra Götaland",
+      "home": "Tord",
+      "away": "Kumla",
       "reason": "No event/team match"
     },
     {
-      "league": "Kakkonen - Lohko B",
-      "home": "EPS",
-      "away": "Honka",
+      "league": "Division 2 - Norra Götaland",
+      "home": "Vänersborgs FK",
+      "away": "Herrestads",
       "reason": "No event/team match"
     },
     {
-      "league": "Kakkonen - Lohko B",
-      "home": "NJS",
-      "away": "P-Iirot",
+      "league": "Division 2 - Norra Götaland",
+      "home": "IF Karlstad II",
+      "away": "Grebbestad",
       "reason": "No event/team match"
     },
     {
-      "league": "Kakkonen - Lohko B",
-      "home": "Ilves II",
-      "away": "Musa",
+      "league": "Division 2 - Norra Götaland",
+      "home": "IFK Skövde",
+      "away": "Ahlafors",
       "reason": "No event/team match"
     },
     {
-      "league": "Kakkonen - Lohko A",
-      "home": "Union Plaani",
-      "away": "PEPO",
+      "league": "Division 2 - Norra Götaland",
+      "home": "Stenungsund",
+      "away": "Skara",
       "reason": "No event/team match"
     },
     {
-      "league": "Kakkonen - Lohko A",
-      "home": "HPS",
-      "away": "HIFK Helsinki",
+      "league": "Division 2 - Norra Götaland",
+      "home": "Vänersborgs IF",
+      "away": "Motala",
       "reason": "No event/team match"
     },
     {
-      "league": "Kakkonen - Lohko A",
-      "home": "MyPa",
-      "away": "Kiffen",
+      "league": "Division 2 - Södra Götaland",
+      "home": "Karlshamn",
+      "away": "Räppe",
       "reason": "No event/team match"
     },
     {
-      "league": "Kakkonen - Lohko A",
-      "home": "PuiU Helsinki",
-      "away": "Atlantis",
+      "league": "Division 2 - Södra Götaland",
+      "home": "Linero",
+      "away": "Österlen",
       "reason": "No event/team match"
     },
     {
-      "league": "Kakkonen - Lohko A",
-      "home": "Reipas",
-      "away": "PPJ",
+      "league": "Division 2 - Södra Götaland",
+      "home": "Berga",
+      "away": "IFK Trelleborg",
       "reason": "No event/team match"
     },
     {
-      "league": "Kakkonen - Lohko C",
-      "home": "SJK-juniorit",
-      "away": "GBK",
+      "league": "Division 2 - Södra Götaland",
+      "home": "Lilla Torg",
+      "away": "Oskarshamns AIK",
       "reason": "No event/team match"
     },
     {
-      "league": "Kakkonen - Lohko C",
-      "home": "Huima / Urho",
-      "away": "TP-47",
+      "league": "Division 2 - Södra Götaland",
+      "home": "Torns",
+      "away": "Staffanstorp United",
       "reason": "No event/team match"
     },
     {
-      "league": "Kakkonen - Lohko C",
-      "home": "Kraft",
-      "away": "JS Hercules",
+      "league": "Division 2 - Västra Götaland",
+      "home": "Böljan",
+      "away": "Västra Frölunda",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Division 2 - Västra Götaland",
+      "home": "Lindome",
+      "away": "Jonsered",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Division 2 - Västra Götaland",
+      "home": "Kongahälla",
+      "away": "Onsala",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Division 2 - Västra Götaland",
+      "home": "Torslanda",
+      "away": "Galtabacks",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Division 2 - Västra Götaland",
+      "home": "Hestrafor",
+      "away": "Åstorp",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Division 2 - Västra Götaland",
+      "home": "Qviding FIF",
+      "away": "Astrio",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Division 2 - Västra Götaland",
+      "home": "Landvetter IS",
+      "away": "Dalstorps",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Elitettan",
+      "home": "Linköping W",
+      "away": "Örebro SK W",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Elitettan",
+      "home": "KIF Örebro W",
+      "away": "Husqvarna W",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Elitettan",
+      "home": "Umeå W",
+      "away": "Göteborg W",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Elitettan",
+      "home": "Elfsborg W",
+      "away": "Trelleborg W",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Elitettan",
+      "home": "Alingsås W",
+      "away": "Enskede W",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Elitettan",
+      "home": "Gamla Upsala W",
+      "away": "Jitex W",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Elitettan",
+      "home": "Häcken II W",
+      "away": "Sandviken W",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Division 2 - Södra Svealand",
+      "home": "Farsta",
+      "away": "Rågsved",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Division 2 - Södra Svealand",
+      "home": "Nacka Iliria",
+      "away": "Lindo FF",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Division 2 - Södra Svealand",
+      "home": "Smedby",
+      "away": "Örebro Syrianska",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Division 2 - Södra Svealand",
+      "home": "Syrianska FC",
+      "away": "Eker Örebro",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Division 2 - Södra Svealand",
+      "home": "Fittja",
+      "away": "Haninge",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Division 2 - Södra Svealand",
+      "home": "Forward",
+      "away": "Nyköping",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Division 2 - Södra Svealand",
+      "home": "Sleipner",
+      "away": "Karlslund",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Division 2 - Norrland",
+      "home": "Kubikenborg",
+      "away": "Skellefteå",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Division 2 - Norrland",
+      "home": "IFK Luleå",
+      "away": "IFK Östersund",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Division 2 - Norrland",
+      "home": "Täfteå",
+      "away": "Gottne",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Division 2 - Norrland",
+      "home": "Lucksta",
+      "away": "Boden",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Ettan - Södra",
+      "home": "Angelholms FF",
+      "away": "AFC Malmo",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Ettan - Södra",
+      "home": "Tvååker",
+      "away": "Utsikten",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Ettan - Södra",
+      "home": "Hässleholms IF",
+      "away": "Atvidabergs FF",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Ettan - Södra",
+      "home": "Laholm",
+      "away": "Trollhättan",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Ettan - Södra",
+      "home": "Olympic",
+      "away": "Skövde AIK",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Ettan - Södra",
+      "home": "Rosengård",
+      "away": "Jonkopings Sodra",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Ettan - Södra",
+      "home": "Trelleborg",
+      "away": "Lund",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Division 2 - Norra Svealand",
+      "home": "Lidingö",
+      "away": "Angby",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Division 2 - Norra Svealand",
+      "home": "Korsnäs",
+      "away": "Helges",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Division 2 - Norra Svealand",
+      "home": "Skiljebo",
+      "away": "Falu BS",
       "reason": "No event/team match"
     },
     {
@@ -2760,27 +2964,27 @@
       "market": "double_chance"
     },
     {
-      "sportKey": "soccer_finland_veikkausliiga",
+      "sportKey": "soccer_sweden_allsvenskan",
       "market": "btts"
     },
     {
-      "sportKey": "soccer_finland_veikkausliiga",
+      "sportKey": "soccer_sweden_allsvenskan",
       "market": "draw_no_bet"
     },
     {
-      "sportKey": "soccer_finland_veikkausliiga",
+      "sportKey": "soccer_sweden_allsvenskan",
       "market": "double_chance"
     },
     {
-      "sportKey": "soccer_sweden_allsvenskan",
+      "sportKey": "soccer_finland_veikkausliiga",
       "market": "btts"
     },
     {
-      "sportKey": "soccer_sweden_allsvenskan",
+      "sportKey": "soccer_finland_veikkausliiga",
       "market": "draw_no_bet"
     },
     {
-      "sportKey": "soccer_sweden_allsvenskan",
+      "sportKey": "soccer_finland_veikkausliiga",
       "market": "double_chance"
     },
     {
@@ -3160,31 +3364,6 @@
       "statusCode": 422
     },
     {
-      "label": "soccer_finland_veikkausliiga:base-combined",
-      "error": "Markets not supported by this endpoint: btts, double_chance, draw_no_bet",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_finland_veikkausliiga:base-core",
-      "error": "Invalid commenceTimeFrom parameter. The format must be YYYY-MM-DDTHH:MM:SSZ, for example 2020-11-24T16:05:00Z",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_finland_veikkausliiga:btts",
-      "error": "Markets not supported by this endpoint: btts",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_finland_veikkausliiga:draw_no_bet",
-      "error": "Markets not supported by this endpoint: draw_no_bet",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_finland_veikkausliiga:double_chance",
-      "error": "Markets not supported by this endpoint: double_chance",
-      "statusCode": 422
-    },
-    {
       "label": "soccer_sweden_allsvenskan:base-combined",
       "error": "Markets not supported by this endpoint: btts, double_chance, draw_no_bet",
       "statusCode": 422
@@ -3206,6 +3385,31 @@
     },
     {
       "label": "soccer_sweden_allsvenskan:double_chance",
+      "error": "Markets not supported by this endpoint: double_chance",
+      "statusCode": 422
+    },
+    {
+      "label": "soccer_finland_veikkausliiga:base-combined",
+      "error": "Markets not supported by this endpoint: btts, double_chance, draw_no_bet",
+      "statusCode": 422
+    },
+    {
+      "label": "soccer_finland_veikkausliiga:base-core",
+      "error": "Invalid commenceTimeFrom parameter. The format must be YYYY-MM-DDTHH:MM:SSZ, for example 2020-11-24T16:05:00Z",
+      "statusCode": 422
+    },
+    {
+      "label": "soccer_finland_veikkausliiga:btts",
+      "error": "Markets not supported by this endpoint: btts",
+      "statusCode": 422
+    },
+    {
+      "label": "soccer_finland_veikkausliiga:draw_no_bet",
+      "error": "Markets not supported by this endpoint: draw_no_bet",
+      "statusCode": 422
+    },
+    {
+      "label": "soccer_finland_veikkausliiga:double_chance",
       "error": "Markets not supported by this endpoint: double_chance",
       "statusCode": 422
     },
@@ -3892,5 +4096,5 @@
   },
   "skipped": false,
   "skipReason": null,
-  "completedAt": "2026-07-31T17:53:07.832Z"
+  "completedAt": "2026-07-31T18:12:21.314Z"
 }
