@@ -176292,9 +176292,13 @@
         "dataFields": 0
       },
       "recordedAt": "2026-07-26T05:17:16.905Z",
-      "status": "pending",
-      "result": null,
-      "score": null
+      "status": "settled",
+      "result": "Won",
+      "score": "2-2",
+      "finalHomeGoals": 2,
+      "finalAwayGoals": 2,
+      "actualResult": "draw",
+      "settledAt": "2026-07-31T19:36:06.291Z"
     },
     {
       "matchDate": "2026-07-31",
@@ -240245,10 +240249,53 @@
       "status": "pending",
       "result": null,
       "score": null
+    },
+    {
+      "matchDate": "2026-08-04",
+      "home": "Godoy Cruz Res.",
+      "away": "Racing Club Res.",
+      "league": "Reserve League",
+      "engine": "Trend",
+      "engineKey": "trend",
+      "engineFamily": "Specialist",
+      "engineVersion": "1.0",
+      "market": "Home Team Over 0.5 Goals",
+      "confidence": 84.9,
+      "suiteVersion": "2026.07-new-family",
+      "leagueClass": "Balanced",
+      "oddsAtPick": null,
+      "fairMarketProbabilityAtPick": null,
+      "snapshot": {
+        "fixtureId": 1576856,
+        "leagueId": 906,
+        "round": "Clausura - 3",
+        "competitionType": "league",
+        "homeOdds": null,
+        "drawOdds": null,
+        "awayOdds": null,
+        "favoriteSide": null,
+        "favoriteOdds": null,
+        "favoriteGap": null,
+        "homeOverallPPG": null,
+        "awayOverallPPG": null,
+        "homeVenuePPG": null,
+        "awayVenuePPG": null,
+        "homeRecent5PPG": null,
+        "awayRecent5PPG": null,
+        "homeForm": "LW",
+        "awayForm": "L",
+        "leagueGoalsPerGame": 2.47,
+        "leagueDrawRate": 0.25,
+        "dataFields": 0
+      },
+      "recordedAt": "2026-07-31T19:36:08.767Z",
+      "status": "pending",
+      "result": null,
+      "score": null
     }
   ],
   "meta": {
     "created": "2026-06-30T22:00:54.285Z",
-    "updated": "2026-07-31T19:26:12.471Z"
+    "updated": "2026-07-31T19:36:08.796Z"
   }
 }
