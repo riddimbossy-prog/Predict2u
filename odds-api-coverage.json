@@ -1,6 +1,6 @@
 {
   "version": "v251",
-  "generatedAt": "2026-07-31T19:00:15.884Z",
+  "generatedAt": "2026-07-31T19:24:56.451Z",
   "provider": "The Odds API v4",
   "keyPresent": true,
   "regions": "uk",
@@ -29,30 +29,6 @@
       "sportKey": "soccer_germany_bundesliga",
       "sportTitle": "Bundesliga - Germany",
       "score": 0.323,
-      "matches": 8
-    },
-    {
-      "league": "Oberliga - Bayern Süd",
-      "country": "Germany",
-      "sportKey": "soccer_germany_bundesliga",
-      "sportTitle": "Bundesliga - Germany",
-      "score": 0.323,
-      "matches": 9
-    },
-    {
-      "league": "2. Liga",
-      "country": "Austria",
-      "sportKey": "soccer_austria_bundesliga",
-      "sportTitle": "Austrian Football Bundesliga",
-      "score": 0.323,
-      "matches": 7
-    },
-    {
-      "league": "Regionalliga - Bayern",
-      "country": "Germany",
-      "sportKey": "soccer_germany_bundesliga",
-      "sportTitle": "Bundesliga - Germany",
-      "score": 0.347,
       "matches": 8
     },
     {
@@ -152,6 +128,14 @@
       "matches": 8
     },
     {
+      "league": "Oberliga - Bayern Süd",
+      "country": "Germany",
+      "sportKey": "soccer_germany_bundesliga",
+      "sportTitle": "Bundesliga - Germany",
+      "score": 0.323,
+      "matches": 8
+    },
+    {
       "league": "III Liga - Group 1",
       "country": "Poland",
       "sportKey": "soccer_poland_ekstraklasa",
@@ -214,6 +198,14 @@
       "sportTitle": "EFL Cup",
       "score": 0.463,
       "matches": 27
+    },
+    {
+      "league": "Regionalliga - Bayern",
+      "country": "Germany",
+      "sportKey": "soccer_germany_bundesliga",
+      "sportTitle": "Bundesliga - Germany",
+      "score": 0.347,
+      "matches": 7
     },
     {
       "league": "Regionalliga - Nord",
@@ -342,6 +334,14 @@
       "sportTitle": "Ekstraklasa - Poland",
       "score": 0.323,
       "matches": 8
+    },
+    {
+      "league": "2. Liga",
+      "country": "Austria",
+      "sportKey": "soccer_austria_bundesliga",
+      "sportTitle": "Austrian Football Bundesliga",
+      "score": 0.323,
+      "matches": 3
     },
     {
       "league": "Super Cup",
@@ -1216,7 +1216,7 @@
       "matches": 2
     }
   ],
-  "matchesConsidered": 1817,
+  "matchesConsidered": 1809,
   "matchesMatched": 0,
   "matchesUpdated": 0,
   "fieldsFilled": 0,
@@ -1236,12 +1236,6 @@
       "country": "World",
       "reason": "No matching soccer sport key",
       "bestScore": 0
-    },
-    {
-      "league": "Liga 1",
-      "country": "Moldova",
-      "reason": "No matching soccer sport key",
-      "bestScore": 0.143
     },
     {
       "league": "FNL",
@@ -1572,6 +1566,12 @@
       "country": "Bulgaria",
       "reason": "No matching soccer sport key",
       "bestScore": 0.167
+    },
+    {
+      "league": "Liga 1",
+      "country": "Moldova",
+      "reason": "No matching soccer sport key",
+      "bestScore": 0.143
     },
     {
       "league": "3. liga - MSFL",
@@ -2414,9 +2414,51 @@
       "reason": "No event/team match"
     },
     {
-      "league": "Oberliga - Bayern Süd",
-      "home": "Ismaning",
-      "away": "Landshut",
+      "league": "Oberliga - Hamburg",
+      "home": "Concordia",
+      "away": "HEBC",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Oberliga - Hamburg",
+      "home": "ETSV Hamburg",
+      "away": "Teutonia Ottensen",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Oberliga - Hamburg",
+      "home": "Harksheide",
+      "away": "Süderelbe",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Oberliga - Hamburg",
+      "home": "Norderstedt II",
+      "away": "Pinneberg",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Oberliga - Hamburg",
+      "home": "Altona 93",
+      "away": "Sasel",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Oberliga - Hamburg",
+      "home": "Paloma",
+      "away": "Vorwärts-Wacker 04",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Oberliga - Hamburg",
+      "home": "Niendorfer TSV",
+      "away": "HT16",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Oberliga - Hamburg",
+      "home": "Buchholz",
+      "away": "Tus Dassendorf",
       "reason": "No event/team match"
     },
     {
@@ -2465,102 +2507,6 @@
       "league": "Oberliga - Bayern Süd",
       "home": "Kirchanschöring",
       "away": "1880 Wasserburg",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Regionalliga - Bayern",
-      "home": "Augsburg II",
-      "away": "Landsberg",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Regionalliga - Bayern",
-      "home": "Buchbach",
-      "away": "Eichstätt",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Regionalliga - Bayern",
-      "home": "Wacker Burghausen",
-      "away": "Bayern München II",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Regionalliga - Bayern",
-      "home": "Eltersdorf",
-      "away": "Vilzing",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Regionalliga - Bayern",
-      "home": "Illertissen",
-      "away": "Schwaben Augsburg",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Regionalliga - Bayern",
-      "home": "Memmingen",
-      "away": "Ansbach",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Regionalliga - Bayern",
-      "home": "FC Schweinfurt 05",
-      "away": "TSV 1860 München",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Regionalliga - Bayern",
-      "home": "Greuther Fürth II",
-      "away": "Bayreuth",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Oberliga - Hamburg",
-      "home": "Concordia",
-      "away": "HEBC",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Oberliga - Hamburg",
-      "home": "ETSV Hamburg",
-      "away": "Teutonia Ottensen",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Oberliga - Hamburg",
-      "home": "Harksheide",
-      "away": "Süderelbe",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Oberliga - Hamburg",
-      "home": "Norderstedt II",
-      "away": "Pinneberg",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Oberliga - Hamburg",
-      "home": "Altona 93",
-      "away": "Sasel",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Oberliga - Hamburg",
-      "home": "Paloma",
-      "away": "Vorwärts-Wacker 04",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Oberliga - Hamburg",
-      "home": "Niendorfer TSV",
-      "away": "HT16",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Oberliga - Hamburg",
-      "home": "Buchholz",
-      "away": "Tus Dassendorf",
       "reason": "No event/team match"
     },
     {
@@ -2708,6 +2654,48 @@
       "reason": "No event/team match"
     },
     {
+      "league": "Regionalliga - Bayern",
+      "home": "Buchbach",
+      "away": "Eichstätt",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Regionalliga - Bayern",
+      "home": "Wacker Burghausen",
+      "away": "Bayern München II",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Regionalliga - Bayern",
+      "home": "Eltersdorf",
+      "away": "Vilzing",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Regionalliga - Bayern",
+      "home": "Illertissen",
+      "away": "Schwaben Augsburg",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Regionalliga - Bayern",
+      "home": "Memmingen",
+      "away": "Ansbach",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Regionalliga - Bayern",
+      "home": "FC Schweinfurt 05",
+      "away": "TSV 1860 München",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Regionalliga - Bayern",
+      "home": "Greuther Fürth II",
+      "away": "Bayreuth",
+      "reason": "No event/team match"
+    },
+    {
       "league": "Regionalliga - Nord",
       "home": "Werder Bremen II",
       "away": "VfB Oldenburg",
@@ -2723,6 +2711,18 @@
       "league": "Regionalliga - Nord",
       "home": "HSC Hannover",
       "away": "Kickers Emden",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Regionalliga - Nord",
+      "home": "VfB Lübeck",
+      "away": "Weiche Flensburg",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Regionalliga - Nord",
+      "home": "SSV Jeddeloh",
+      "away": "Schöningen",
       "reason": "No event/team match"
     }
   ],
@@ -2764,18 +2764,6 @@
       "market": "double_chance"
     },
     {
-      "sportKey": "soccer_austria_bundesliga",
-      "market": "btts"
-    },
-    {
-      "sportKey": "soccer_austria_bundesliga",
-      "market": "draw_no_bet"
-    },
-    {
-      "sportKey": "soccer_austria_bundesliga",
-      "market": "double_chance"
-    },
-    {
       "sportKey": "soccer_norway_eliteserien",
       "market": "btts"
     },
@@ -2833,6 +2821,18 @@
     },
     {
       "sportKey": "soccer_epl",
+      "market": "double_chance"
+    },
+    {
+      "sportKey": "soccer_austria_bundesliga",
+      "market": "btts"
+    },
+    {
+      "sportKey": "soccer_austria_bundesliga",
+      "market": "draw_no_bet"
+    },
+    {
+      "sportKey": "soccer_austria_bundesliga",
       "market": "double_chance"
     },
     {
@@ -3177,31 +3177,6 @@
       "statusCode": 422
     },
     {
-      "label": "soccer_austria_bundesliga:base-combined",
-      "error": "Markets not supported by this endpoint: btts, double_chance, draw_no_bet",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_austria_bundesliga:base-core",
-      "error": "Invalid commenceTimeFrom parameter. The format must be YYYY-MM-DDTHH:MM:SSZ, for example 2020-11-24T16:05:00Z",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_austria_bundesliga:btts",
-      "error": "Markets not supported by this endpoint: btts",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_austria_bundesliga:draw_no_bet",
-      "error": "Markets not supported by this endpoint: draw_no_bet",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_austria_bundesliga:double_chance",
-      "error": "Markets not supported by this endpoint: double_chance",
-      "statusCode": 422
-    },
-    {
       "label": "soccer_norway_eliteserien:base-combined",
       "error": "Markets not supported by this endpoint: btts, double_chance, draw_no_bet",
       "statusCode": 422
@@ -3323,6 +3298,31 @@
     },
     {
       "label": "soccer_epl:double_chance",
+      "error": "Markets not supported by this endpoint: double_chance",
+      "statusCode": 422
+    },
+    {
+      "label": "soccer_austria_bundesliga:base-combined",
+      "error": "Markets not supported by this endpoint: btts, double_chance, draw_no_bet",
+      "statusCode": 422
+    },
+    {
+      "label": "soccer_austria_bundesliga:base-core",
+      "error": "Invalid commenceTimeFrom parameter. The format must be YYYY-MM-DDTHH:MM:SSZ, for example 2020-11-24T16:05:00Z",
+      "statusCode": 422
+    },
+    {
+      "label": "soccer_austria_bundesliga:btts",
+      "error": "Markets not supported by this endpoint: btts",
+      "statusCode": 422
+    },
+    {
+      "label": "soccer_austria_bundesliga:draw_no_bet",
+      "error": "Markets not supported by this endpoint: draw_no_bet",
+      "statusCode": 422
+    },
+    {
+      "label": "soccer_austria_bundesliga:double_chance",
       "error": "Markets not supported by this endpoint: double_chance",
       "statusCode": 422
     },
@@ -3884,5 +3884,5 @@
   },
   "skipped": false,
   "skipReason": null,
-  "completedAt": "2026-07-31T19:00:34.769Z"
+  "completedAt": "2026-07-31T19:25:04.071Z"
 }
