@@ -1,6 +1,6 @@
 {
   "version": "v251",
-  "generatedAt": "2026-08-01T12:50:01.832Z",
+  "generatedAt": "2026-08-01T13:07:13.817Z",
   "provider": "The Odds API v4",
   "keyPresent": true,
   "regions": "uk",
@@ -29,7 +29,7 @@
       "sportKey": "soccer_germany_dfb_pokal",
       "sportTitle": "DFB-Pokal",
       "score": 0.68,
-      "matches": 28
+      "matches": 27
     },
     {
       "league": "Division 2 - Norrland",
@@ -40,20 +40,12 @@
       "matches": 4
     },
     {
-      "league": "3. Division - Girone 1",
-      "country": "Norway",
-      "sportKey": "soccer_norway_eliteserien",
-      "sportTitle": "Eliteserien - Norway",
-      "score": 0.305,
-      "matches": 6
-    },
-    {
       "league": "K League 1",
       "country": "South-Korea",
       "sportKey": "soccer_korea_kleague1",
       "sportTitle": "K League 1",
       "score": 0.695,
-      "matches": 6
+      "matches": 4
     },
     {
       "league": "K League 2",
@@ -61,15 +53,7 @@
       "sportKey": "soccer_korea_kleague1",
       "sportTitle": "K League 1",
       "score": 0.333,
-      "matches": 8
-    },
-    {
-      "league": "League Two",
-      "country": "China",
-      "sportKey": "soccer_china_superleague",
-      "sportTitle": "Super League - China",
-      "score": 0.43,
-      "matches": 11
+      "matches": 5
     },
     {
       "league": "2. Division - Group 1",
@@ -86,6 +70,14 @@
       "sportTitle": "Eliteserien - Norway",
       "score": 0.323,
       "matches": 7
+    },
+    {
+      "league": "3. Division - Girone 1",
+      "country": "Norway",
+      "sportKey": "soccer_norway_eliteserien",
+      "sportTitle": "Eliteserien - Norway",
+      "score": 0.305,
+      "matches": 5
     },
     {
       "league": "3. Division - Girone 4",
@@ -190,6 +182,14 @@
       "sportTitle": "Premier League - Russia",
       "score": 0.305,
       "matches": 4
+    },
+    {
+      "league": "League Two",
+      "country": "China",
+      "sportKey": "soccer_china_superleague",
+      "sportTitle": "Super League - China",
+      "score": 0.43,
+      "matches": 10
     },
     {
       "league": "1. Division Women",
@@ -1208,7 +1208,7 @@
       "matches": 2
     }
   ],
-  "matchesConsidered": 1477,
+  "matchesConsidered": 1463,
   "matchesMatched": 0,
   "matchesUpdated": 0,
   "fieldsFilled": 0,
@@ -1254,12 +1254,6 @@
       "bestScore": 0.143
     },
     {
-      "league": "Persha Liga",
-      "country": "Ukraine",
-      "reason": "No matching soccer sport key",
-      "bestScore": 0.143
-    },
-    {
       "league": "1. Liga",
       "country": "Latvia",
       "reason": "No matching soccer sport key",
@@ -1286,6 +1280,12 @@
     {
       "league": "Vysshaya Liga",
       "country": "Tajikistan",
+      "reason": "No matching soccer sport key",
+      "bestScore": 0.143
+    },
+    {
+      "league": "Persha Liga",
+      "country": "Ukraine",
       "reason": "No matching soccer sport key",
       "bestScore": 0.143
     },
@@ -2185,12 +2185,6 @@
     },
     {
       "league": "DFB Junioren Pokal",
-      "home": "JFV Bremen U19",
-      "away": "Heidenheim U19",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "DFB Junioren Pokal",
       "home": "Lübeck U19",
       "away": "Hoffenheim U19",
       "reason": "No event/team match"
@@ -2694,27 +2688,33 @@
       "reason": "No event/team match"
     },
     {
-      "league": "3. Division - Girone 1",
-      "home": "Frigg",
-      "away": "Ullern",
+      "league": "K League 1",
+      "home": "Jeonbuk Motors",
+      "away": "FC Seoul",
       "reason": "No event/team match"
     },
     {
-      "league": "3. Division - Girone 1",
-      "home": "Konnerud",
-      "away": "Nordstrand",
+      "league": "K League 1",
+      "home": "Daejeon Citizen",
+      "away": "Gwangju FC",
       "reason": "No event/team match"
     },
     {
-      "league": "3. Division - Girone 1",
-      "home": "Heming",
-      "away": "Bærum",
+      "league": "K League 1",
+      "home": "Jeju United FC",
+      "away": "Incheon United",
       "reason": "No event/team match"
     },
     {
-      "league": "3. Division - Girone 1",
-      "home": "Vålerenga II",
-      "away": "Lokomotiv Oslo",
+      "league": "K League 1",
+      "home": "Ulsan Hyundai FC",
+      "away": "FC Anyang",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "K League 2",
+      "home": "Cheonan City",
+      "away": "Yongin City",
       "reason": "No event/team match"
     }
   ],
@@ -2768,18 +2768,6 @@
       "market": "double_chance"
     },
     {
-      "sportKey": "soccer_norway_eliteserien",
-      "market": "btts"
-    },
-    {
-      "sportKey": "soccer_norway_eliteserien",
-      "market": "draw_no_bet"
-    },
-    {
-      "sportKey": "soccer_norway_eliteserien",
-      "market": "double_chance"
-    },
-    {
       "sportKey": "soccer_korea_kleague1",
       "market": "btts"
     },
@@ -2792,15 +2780,15 @@
       "market": "double_chance"
     },
     {
-      "sportKey": "soccer_china_superleague",
+      "sportKey": "soccer_norway_eliteserien",
       "market": "btts"
     },
     {
-      "sportKey": "soccer_china_superleague",
+      "sportKey": "soccer_norway_eliteserien",
       "market": "draw_no_bet"
     },
     {
-      "sportKey": "soccer_china_superleague",
+      "sportKey": "soccer_norway_eliteserien",
       "market": "double_chance"
     },
     {
@@ -2813,6 +2801,18 @@
     },
     {
       "sportKey": "soccer_sweden_superettan",
+      "market": "double_chance"
+    },
+    {
+      "sportKey": "soccer_china_superleague",
+      "market": "btts"
+    },
+    {
+      "sportKey": "soccer_china_superleague",
+      "market": "draw_no_bet"
+    },
+    {
+      "sportKey": "soccer_china_superleague",
       "market": "double_chance"
     },
     {
@@ -3194,31 +3194,6 @@
       "statusCode": 422
     },
     {
-      "label": "soccer_norway_eliteserien:base-combined",
-      "error": "Markets not supported by this endpoint: btts, double_chance, draw_no_bet",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_norway_eliteserien:base-core",
-      "error": "Invalid commenceTimeFrom parameter. The format must be YYYY-MM-DDTHH:MM:SSZ, for example 2020-11-24T16:05:00Z",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_norway_eliteserien:btts",
-      "error": "Markets not supported by this endpoint: btts",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_norway_eliteserien:draw_no_bet",
-      "error": "Markets not supported by this endpoint: draw_no_bet",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_norway_eliteserien:double_chance",
-      "error": "Markets not supported by this endpoint: double_chance",
-      "statusCode": 422
-    },
-    {
       "label": "soccer_korea_kleague1:base-combined",
       "error": "Markets not supported by this endpoint: btts, double_chance, draw_no_bet",
       "statusCode": 422
@@ -3244,27 +3219,27 @@
       "statusCode": 422
     },
     {
-      "label": "soccer_china_superleague:base-combined",
+      "label": "soccer_norway_eliteserien:base-combined",
       "error": "Markets not supported by this endpoint: btts, double_chance, draw_no_bet",
       "statusCode": 422
     },
     {
-      "label": "soccer_china_superleague:base-core",
+      "label": "soccer_norway_eliteserien:base-core",
       "error": "Invalid commenceTimeFrom parameter. The format must be YYYY-MM-DDTHH:MM:SSZ, for example 2020-11-24T16:05:00Z",
       "statusCode": 422
     },
     {
-      "label": "soccer_china_superleague:btts",
+      "label": "soccer_norway_eliteserien:btts",
       "error": "Markets not supported by this endpoint: btts",
       "statusCode": 422
     },
     {
-      "label": "soccer_china_superleague:draw_no_bet",
+      "label": "soccer_norway_eliteserien:draw_no_bet",
       "error": "Markets not supported by this endpoint: draw_no_bet",
       "statusCode": 422
     },
     {
-      "label": "soccer_china_superleague:double_chance",
+      "label": "soccer_norway_eliteserien:double_chance",
       "error": "Markets not supported by this endpoint: double_chance",
       "statusCode": 422
     },
@@ -3290,6 +3265,31 @@
     },
     {
       "label": "soccer_sweden_superettan:double_chance",
+      "error": "Markets not supported by this endpoint: double_chance",
+      "statusCode": 422
+    },
+    {
+      "label": "soccer_china_superleague:base-combined",
+      "error": "Markets not supported by this endpoint: btts, double_chance, draw_no_bet",
+      "statusCode": 422
+    },
+    {
+      "label": "soccer_china_superleague:base-core",
+      "error": "Invalid commenceTimeFrom parameter. The format must be YYYY-MM-DDTHH:MM:SSZ, for example 2020-11-24T16:05:00Z",
+      "statusCode": 422
+    },
+    {
+      "label": "soccer_china_superleague:btts",
+      "error": "Markets not supported by this endpoint: btts",
+      "statusCode": 422
+    },
+    {
+      "label": "soccer_china_superleague:draw_no_bet",
+      "error": "Markets not supported by this endpoint: draw_no_bet",
+      "statusCode": 422
+    },
+    {
+      "label": "soccer_china_superleague:double_chance",
       "error": "Markets not supported by this endpoint: double_chance",
       "statusCode": 422
     },
@@ -3876,5 +3876,5 @@
   },
   "skipped": false,
   "skipReason": null,
-  "completedAt": "2026-08-01T12:50:18.115Z"
+  "completedAt": "2026-08-01T13:07:39.698Z"
 }
