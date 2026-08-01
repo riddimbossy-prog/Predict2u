@@ -1,6 +1,6 @@
 {
   "version": "v251",
-  "generatedAt": "2026-08-01T04:21:17.336Z",
+  "generatedAt": "2026-08-01T04:38:35.893Z",
   "provider": "The Odds API v4",
   "keyPresent": true,
   "regions": "uk",
@@ -29,7 +29,7 @@
       "sportKey": "soccer_usa_mls",
       "sportTitle": "MLS",
       "score": 1,
-      "matches": 11
+      "matches": 9
     },
     {
       "league": "Canadian Premier League",
@@ -1208,7 +1208,7 @@
       "matches": 2
     }
   ],
-  "matchesConsidered": 1604,
+  "matchesConsidered": 1601,
   "matchesMatched": 0,
   "matchesUpdated": 0,
   "fieldsFilled": 0,
@@ -1225,12 +1225,6 @@
     },
     {
       "league": "Friendlies Clubs",
-      "country": "World",
-      "reason": "No matching soccer sport key",
-      "bestScore": 0
-    },
-    {
-      "league": "CONCACAF U20",
       "country": "World",
       "reason": "No matching soccer sport key",
       "bestScore": 0
@@ -1582,6 +1576,12 @@
       "country": "Colombia",
       "reason": "No matching soccer sport key",
       "bestScore": 0.143
+    },
+    {
+      "league": "CONCACAF U20",
+      "country": "World",
+      "reason": "No matching soccer sport key",
+      "bestScore": 0
     },
     {
       "league": "Primera B",
@@ -2509,18 +2509,6 @@
     },
     {
       "league": "MLS Next Pro",
-      "home": "Ventura County",
-      "away": "North Texas",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "MLS Next Pro",
-      "home": "Los Angeles FC II",
-      "away": "Colorado Rapids II",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "MLS Next Pro",
       "home": "Connecticut FC",
       "away": "Orlando City II",
       "reason": "No event/team match"
@@ -2715,6 +2703,18 @@
       "league": "USL Championship",
       "home": "Orange County SC",
       "away": "El Paso Locomotive",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "USL Championship",
+      "home": "Las Vegas Lights",
+      "away": "Phoenix Rising",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "USL Championship",
+      "home": "Sacramento Republic",
+      "away": "Sporting JAX",
       "reason": "No event/team match"
     }
   ],
@@ -3876,5 +3876,5 @@
   },
   "skipped": false,
   "skipReason": null,
-  "completedAt": "2026-08-01T04:21:43.159Z"
+  "completedAt": "2026-08-01T04:38:56.326Z"
 }
