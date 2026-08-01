@@ -1,6 +1,6 @@
 {
   "version": "v251",
-  "generatedAt": "2026-08-01T14:19:16.393Z",
+  "generatedAt": "2026-08-01T14:36:12.070Z",
   "provider": "The Odds API v4",
   "keyPresent": true,
   "regions": "uk",
@@ -40,12 +40,20 @@
       "matches": 23
     },
     {
+      "league": "DBU Pokalen",
+      "country": "Denmark",
+      "sportKey": "soccer_denmark_superliga",
+      "sportTitle": "Denmark Superliga",
+      "score": 0.347,
+      "matches": 28
+    },
+    {
       "league": "Super League",
       "country": "China",
       "sportKey": "soccer_china_superleague",
       "sportTitle": "Super League - China",
       "score": 1,
-      "matches": 5
+      "matches": 6
     },
     {
       "league": "Damallsvenskan",
@@ -3336,6 +3344,56 @@
       "statusCode": 422
     },
     {
+      "label": "soccer_germany_bundesliga:base-combined",
+      "error": "Markets not supported by this endpoint: btts, double_chance, draw_no_bet",
+      "statusCode": 422
+    },
+    {
+      "label": "soccer_germany_bundesliga:base-core",
+      "error": "Invalid commenceTimeFrom parameter. The format must be YYYY-MM-DDTHH:MM:SSZ, for example 2020-11-24T16:05:00Z",
+      "statusCode": 422
+    },
+    {
+      "label": "soccer_germany_bundesliga:btts",
+      "error": "Markets not supported by this endpoint: btts",
+      "statusCode": 422
+    },
+    {
+      "label": "soccer_germany_bundesliga:draw_no_bet",
+      "error": "Markets not supported by this endpoint: draw_no_bet",
+      "statusCode": 422
+    },
+    {
+      "label": "soccer_germany_bundesliga:double_chance",
+      "error": "Markets not supported by this endpoint: double_chance",
+      "statusCode": 422
+    },
+    {
+      "label": "soccer_poland_ekstraklasa:base-combined",
+      "error": "Markets not supported by this endpoint: btts, double_chance, draw_no_bet",
+      "statusCode": 422
+    },
+    {
+      "label": "soccer_poland_ekstraklasa:base-core",
+      "error": "Invalid commenceTimeFrom parameter. The format must be YYYY-MM-DDTHH:MM:SSZ, for example 2020-11-24T16:05:00Z",
+      "statusCode": 422
+    },
+    {
+      "label": "soccer_poland_ekstraklasa:btts",
+      "error": "Markets not supported by this endpoint: btts",
+      "statusCode": 422
+    },
+    {
+      "label": "soccer_poland_ekstraklasa:draw_no_bet",
+      "error": "Markets not supported by this endpoint: draw_no_bet",
+      "statusCode": 422
+    },
+    {
+      "label": "soccer_poland_ekstraklasa:double_chance",
+      "error": "Markets not supported by this endpoint: double_chance",
+      "statusCode": 422
+    },
+    {
       "label": "soccer_austria_bundesliga:base-combined",
       "error": "Markets not supported by this endpoint: btts, double_chance, draw_no_bet",
       "statusCode": 422
@@ -3868,5 +3926,5 @@
   },
   "skipped": false,
   "skipReason": null,
-  "completedAt": "2026-08-01T14:19:23.442Z"
+  "completedAt": "2026-08-01T14:36:19.171Z"
 }
