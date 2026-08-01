@@ -1,6 +1,6 @@
 {
   "version": "v251",
-  "generatedAt": "2026-08-01T17:41:46.525Z",
+  "generatedAt": "2026-08-01T17:58:20.514Z",
   "provider": "The Odds API v4",
   "keyPresent": true,
   "regions": "uk",
@@ -21,7 +21,7 @@
       "sportKey": "soccer_england_efl_cup",
       "sportTitle": "EFL Cup",
       "score": 0.463,
-      "matches": 8
+      "matches": 4
     },
     {
       "league": "Division 2 - Norrland",
@@ -56,36 +56,12 @@
       "matches": 8
     },
     {
-      "league": "Mineiro U20",
-      "country": "Brazil",
-      "sportKey": "soccer_brazil_campeonato",
-      "sportTitle": "Brazil Série A",
-      "score": 0.305,
-      "matches": 5
-    },
-    {
       "league": "Premier League",
       "country": "Belarus",
       "sportKey": "soccer_epl",
       "sportTitle": "EPL",
       "score": 0.987,
-      "matches": 6
-    },
-    {
-      "league": "Premier League",
-      "country": "Kazakhstan",
-      "sportKey": "soccer_epl",
-      "sportTitle": "EPL",
-      "score": 0.987,
       "matches": 5
-    },
-    {
-      "league": "II Liga - East",
-      "country": "Poland",
-      "sportKey": "soccer_poland_ekstraklasa",
-      "sportTitle": "Ekstraklasa - Poland",
-      "score": 0.323,
-      "matches": 6
     },
     {
       "league": "Liga MX U21",
@@ -246,6 +222,14 @@
       "sportTitle": "Super League - Greece",
       "score": 0.653,
       "matches": 6
+    },
+    {
+      "league": "II Liga - East",
+      "country": "Poland",
+      "sportKey": "soccer_poland_ekstraklasa",
+      "sportTitle": "Ekstraklasa - Poland",
+      "score": 0.323,
+      "matches": 5
     },
     {
       "league": "III Liga - Group 2",
@@ -414,6 +398,14 @@
       "sportTitle": "Primera División - Argentina",
       "score": 0.653,
       "matches": 8
+    },
+    {
+      "league": "Mineiro U20",
+      "country": "Brazil",
+      "sportKey": "soccer_brazil_campeonato",
+      "sportTitle": "Brazil Série A",
+      "score": 0.305,
+      "matches": 4
     },
     {
       "league": "Cearense U20",
@@ -824,6 +816,14 @@
       "matches": 3
     },
     {
+      "league": "Premier League",
+      "country": "Kazakhstan",
+      "sportKey": "soccer_epl",
+      "sportTitle": "EPL",
+      "score": 0.987,
+      "matches": 4
+    },
+    {
       "league": "1. Division Women",
       "country": "Norway",
       "sportKey": "soccer_norway_eliteserien",
@@ -1120,7 +1120,7 @@
       "matches": 2
     }
   ],
-  "matchesConsidered": 1029,
+  "matchesConsidered": 1016,
   "matchesMatched": 0,
   "matchesUpdated": 0,
   "fieldsFilled": 0,
@@ -1170,12 +1170,6 @@
       "country": "Moldova",
       "reason": "No matching soccer sport key",
       "bestScore": 0.143
-    },
-    {
-      "league": "3. liga - MSFL",
-      "country": "Czech-Republic",
-      "reason": "No matching soccer sport key",
-      "bestScore": 0.222
     },
     {
       "league": "Third League - Southwest",
@@ -1436,6 +1430,12 @@
       "bestScore": 0.143
     },
     {
+      "league": "3. liga - MSFL",
+      "country": "Czech-Republic",
+      "reason": "No matching soccer sport key",
+      "bestScore": 0.222
+    },
+    {
       "league": "Virsliga",
       "country": "Latvia",
       "reason": "No matching soccer sport key",
@@ -1575,12 +1575,6 @@
     },
     {
       "league": "Premier League",
-      "home": "FC Gomel",
-      "away": "FC Vitebsk",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Premier League",
       "home": "Arsenal",
       "away": "FC Minsk",
       "reason": "No event/team match"
@@ -1589,36 +1583,6 @@
       "league": "Premier League",
       "home": "Dinamo Brest",
       "away": "Belshina",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Premier League",
-      "home": "Atyrau",
-      "away": "Zhetysu",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Premier League",
-      "home": "Okzhetpes",
-      "away": "Altay",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Premier League",
-      "home": "Ulytau",
-      "away": "FC Astana",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Premier League",
-      "home": "Zhenys",
-      "away": "Yelimay Semey",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Premier League",
-      "home": "Ordabasy",
-      "away": "FK Tobol Kostanay",
       "reason": "No event/team match"
     },
     {
@@ -1767,6 +1731,30 @@
     },
     {
       "league": "Premier League",
+      "home": "Okzhetpes",
+      "away": "Altay",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Premier League",
+      "home": "Ulytau",
+      "away": "FC Astana",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Premier League",
+      "home": "Zhenys",
+      "away": "Yelimay Semey",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Premier League",
+      "home": "Ordabasy",
+      "away": "FK Tobol Kostanay",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Premier League",
       "home": "Transport United",
       "away": "Tensung",
       "reason": "No event/team match"
@@ -1811,30 +1799,6 @@
       "league": "Cup",
       "home": "Slavia Vejprnice",
       "away": "Doubravka",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Cup",
-      "home": "Hermanuv Mestec",
-      "away": "Hlinsko",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Cup",
-      "home": "Rapid Psáry",
-      "away": "Motorlet Praha",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Cup",
-      "home": "Spartak Pribram",
-      "away": "Povltava FA",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Cup",
-      "home": "Vykan",
-      "away": "Čáslav",
       "reason": "No event/team match"
     },
     {
@@ -2444,87 +2408,225 @@
       "reason": "No event/team match"
     },
     {
-      "league": "Mineiro U20",
-      "home": "Villa Real U20",
-      "away": "Sao Joao del Rei U20",
+      "league": "Liga MX U21",
+      "home": "Atlas U21",
+      "away": "Monterrey U21",
       "reason": "No event/team match"
     },
     {
-      "league": "Mineiro U20",
-      "home": "Uberabinha U20",
-      "away": "Minas Boca U20",
+      "league": "Liga MX U21",
+      "home": "Club Leon U21",
+      "away": "Pachuca U21",
       "reason": "No event/team match"
     },
     {
-      "league": "Mineiro U20",
-      "home": "Atlético Mineiro U20",
-      "away": "Coimbra U20",
+      "league": "Liga MX U21",
+      "home": "Cruz Azul U21",
+      "away": "Atlante U21",
       "reason": "No event/team match"
     },
     {
-      "league": "Mineiro U20",
-      "home": "Nacional de Muriae U20",
-      "away": "Boston City U20",
+      "league": "Liga MX U21",
+      "home": "Club America U21",
+      "away": "Santos Laguna U21",
       "reason": "No event/team match"
     },
     {
-      "league": "Mineiro U20",
-      "home": "Social U20",
-      "away": "Betim U20",
+      "league": "Liga MX U21",
+      "home": "Toluca U21",
+      "away": "Necaxa U21",
       "reason": "No event/team match"
     },
     {
-      "league": "Carioca A2",
-      "home": "Americano Campos",
-      "away": "Resende",
+      "league": "Liga de Expansión MX",
+      "home": "Cruz Azul Hidalgo",
+      "away": "Venados FC",
       "reason": "No event/team match"
     },
     {
-      "league": "Catarinense U20",
-      "home": "Criciuma U20",
-      "away": "Brusque U20",
+      "league": "Liga de Expansión MX",
+      "home": "Tapatío",
+      "away": "CDS Tampico Madero",
       "reason": "No event/team match"
     },
     {
-      "league": "Catarinense U20",
-      "home": "Figueirense U20",
-      "away": "Avaí U20",
+      "league": "Liga de Expansión MX",
+      "home": "Cancún",
+      "away": "Leones Negros UDG",
       "reason": "No event/team match"
     },
     {
-      "league": "Catarinense U20",
-      "home": "Nação U20",
-      "away": "Barra SC U20",
+      "league": "Liga de Expansión MX",
+      "home": "Piratas",
+      "away": "Monarcas",
       "reason": "No event/team match"
     },
     {
-      "league": "Catarinense U20",
-      "home": "Joinville U20",
-      "away": "Carlos Renaux U20",
+      "league": "Liga MX",
+      "home": "Club Queretaro",
+      "away": "Tigres UANL",
       "reason": "No event/team match"
     },
     {
-      "league": "Copa Paulista",
-      "home": "São Caetano",
-      "away": "EC São Bernardo",
+      "league": "Liga MX",
+      "home": "Atlas",
+      "away": "Monterrey",
       "reason": "No event/team match"
     },
     {
-      "league": "Copa Paulista",
-      "home": "Paulista",
-      "away": "Oeste",
+      "league": "Liga MX",
+      "home": "Leon",
+      "away": "CF Pachuca",
       "reason": "No event/team match"
     },
     {
-      "league": "Copa Paulista",
-      "home": "XV de Piracicaba",
-      "away": "Noroeste",
+      "league": "Liga MX",
+      "home": "Cruz Azul",
+      "away": "Atlante FC",
       "reason": "No event/team match"
     },
     {
-      "league": "Copa Paulista",
-      "home": "Bandeirante SP",
-      "away": "Marília",
+      "league": "Liga MX",
+      "home": "Club America",
+      "away": "Santos Laguna",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Liga MX",
+      "home": "Toluca",
+      "away": "Necaxa",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Liga MX Femenil",
+      "home": "Juárez W",
+      "away": "Pachuca W",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Liga MX Femenil",
+      "home": "Tigres UANL W",
+      "away": "Puebla W",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Liga MX Femenil",
+      "home": "Tijuana W",
+      "away": "Monterrey W",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Liga MX Femenil",
+      "home": "Pumas UNAM W",
+      "away": "León W",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Liga MX Femenil",
+      "home": "Atlético San Luis W",
+      "away": "Toluca W",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Liga MX Femenil",
+      "home": "Guadalajara W",
+      "away": "Querétaro W",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Liga MX Femenil",
+      "home": "Atlante W",
+      "away": "Necaxa W",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Liga MX Femenil",
+      "home": "Santos Laguna W",
+      "away": "América W",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "III Liga - Group 3",
+      "home": "Karkonosze Jelenia Góra",
+      "away": "Zaglebie Sosnowiec",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "III Liga - Group 3",
+      "home": "ROW Rybnik",
+      "away": "Warta Gorzów",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "III Liga - Group 3",
+      "home": "Barycz Sułów",
+      "away": "Kluczbork",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "III Liga - Group 3",
+      "home": "Odra Bytom Odrzański",
+      "away": "Polonia Nysa",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Ekstraklasa",
+      "home": "Wieczysta Kraków",
+      "away": "Lech Poznan",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Ekstraklasa",
+      "home": "Korona Kielce",
+      "away": "Gornik Zabrze",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Ekstraklasa",
+      "home": "Legia Warszawa",
+      "away": "Zaglebie Lubin",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Ekstraklasa",
+      "home": "Slask Wroclaw",
+      "away": "Raków Częstochowa",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Ekstraklasa",
+      "home": "GKS Katowice",
+      "away": "Radomiak Radom",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Ekstraklasa",
+      "home": "Cracovia Krakow",
+      "away": "Pogon Szczecin",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "III Liga - Group 4",
+      "home": "Jarosław",
+      "away": "Sokół Kolb.",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "III Liga - Group 4",
+      "home": "Naprzód",
+      "away": "Korona Kielce II",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "III Liga - Group 4",
+      "home": "Czarni Połaniec",
+      "away": "KS Wieczysta Krakow II",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "III Liga - Group 4",
+      "home": "Hetman Zamosc",
+      "away": "Siarka Tarnobrzeg",
       "reason": "No event/team match"
     },
     {
@@ -2692,15 +2794,15 @@
       "market": "double_chance"
     },
     {
-      "sportKey": "soccer_brazil_campeonato",
+      "sportKey": "soccer_mexico_ligamx",
       "market": "btts"
     },
     {
-      "sportKey": "soccer_brazil_campeonato",
+      "sportKey": "soccer_mexico_ligamx",
       "market": "draw_no_bet"
     },
     {
-      "sportKey": "soccer_brazil_campeonato",
+      "sportKey": "soccer_mexico_ligamx",
       "market": "double_chance"
     },
     {
@@ -2713,18 +2815,6 @@
     },
     {
       "sportKey": "soccer_poland_ekstraklasa",
-      "market": "double_chance"
-    },
-    {
-      "sportKey": "soccer_mexico_ligamx",
-      "market": "btts"
-    },
-    {
-      "sportKey": "soccer_mexico_ligamx",
-      "market": "draw_no_bet"
-    },
-    {
-      "sportKey": "soccer_mexico_ligamx",
       "market": "double_chance"
     },
     {
@@ -2812,6 +2902,30 @@
       "market": "double_chance"
     },
     {
+      "sportKey": "soccer_switzerland_superleague",
+      "market": "btts"
+    },
+    {
+      "sportKey": "soccer_switzerland_superleague",
+      "market": "draw_no_bet"
+    },
+    {
+      "sportKey": "soccer_switzerland_superleague",
+      "market": "double_chance"
+    },
+    {
+      "sportKey": "soccer_austria_bundesliga",
+      "market": "btts"
+    },
+    {
+      "sportKey": "soccer_austria_bundesliga",
+      "market": "draw_no_bet"
+    },
+    {
+      "sportKey": "soccer_austria_bundesliga",
+      "market": "double_chance"
+    },
+    {
       "sportKey": "soccer_chile_campeonato",
       "market": "btts"
     },
@@ -2833,6 +2947,18 @@
     },
     {
       "sportKey": "soccer_spl",
+      "market": "double_chance"
+    },
+    {
+      "sportKey": "soccer_brazil_campeonato",
+      "market": "btts"
+    },
+    {
+      "sportKey": "soccer_brazil_campeonato",
+      "market": "draw_no_bet"
+    },
+    {
+      "sportKey": "soccer_brazil_campeonato",
       "market": "double_chance"
     },
     {
@@ -3119,27 +3245,27 @@
       "statusCode": 422
     },
     {
-      "label": "soccer_brazil_campeonato:base-combined",
+      "label": "soccer_mexico_ligamx:base-combined",
       "error": "Markets not supported by this endpoint: btts, double_chance, draw_no_bet",
       "statusCode": 422
     },
     {
-      "label": "soccer_brazil_campeonato:base-core",
+      "label": "soccer_mexico_ligamx:base-core",
       "error": "Invalid commenceTimeFrom parameter. The format must be YYYY-MM-DDTHH:MM:SSZ, for example 2020-11-24T16:05:00Z",
       "statusCode": 422
     },
     {
-      "label": "soccer_brazil_campeonato:btts",
+      "label": "soccer_mexico_ligamx:btts",
       "error": "Markets not supported by this endpoint: btts",
       "statusCode": 422
     },
     {
-      "label": "soccer_brazil_campeonato:draw_no_bet",
+      "label": "soccer_mexico_ligamx:draw_no_bet",
       "error": "Markets not supported by this endpoint: draw_no_bet",
       "statusCode": 422
     },
     {
-      "label": "soccer_brazil_campeonato:double_chance",
+      "label": "soccer_mexico_ligamx:double_chance",
       "error": "Markets not supported by this endpoint: double_chance",
       "statusCode": 422
     },
@@ -3165,31 +3291,6 @@
     },
     {
       "label": "soccer_poland_ekstraklasa:double_chance",
-      "error": "Markets not supported by this endpoint: double_chance",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_mexico_ligamx:base-combined",
-      "error": "Markets not supported by this endpoint: btts, double_chance, draw_no_bet",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_mexico_ligamx:base-core",
-      "error": "Invalid commenceTimeFrom parameter. The format must be YYYY-MM-DDTHH:MM:SSZ, for example 2020-11-24T16:05:00Z",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_mexico_ligamx:btts",
-      "error": "Markets not supported by this endpoint: btts",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_mexico_ligamx:draw_no_bet",
-      "error": "Markets not supported by this endpoint: draw_no_bet",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_mexico_ligamx:double_chance",
       "error": "Markets not supported by this endpoint: double_chance",
       "statusCode": 422
     },
@@ -3369,6 +3470,56 @@
       "statusCode": 422
     },
     {
+      "label": "soccer_switzerland_superleague:base-combined",
+      "error": "Markets not supported by this endpoint: btts, double_chance, draw_no_bet",
+      "statusCode": 422
+    },
+    {
+      "label": "soccer_switzerland_superleague:base-core",
+      "error": "Invalid commenceTimeFrom parameter. The format must be YYYY-MM-DDTHH:MM:SSZ, for example 2020-11-24T16:05:00Z",
+      "statusCode": 422
+    },
+    {
+      "label": "soccer_switzerland_superleague:btts",
+      "error": "Markets not supported by this endpoint: btts",
+      "statusCode": 422
+    },
+    {
+      "label": "soccer_switzerland_superleague:draw_no_bet",
+      "error": "Markets not supported by this endpoint: draw_no_bet",
+      "statusCode": 422
+    },
+    {
+      "label": "soccer_switzerland_superleague:double_chance",
+      "error": "Markets not supported by this endpoint: double_chance",
+      "statusCode": 422
+    },
+    {
+      "label": "soccer_austria_bundesliga:base-combined",
+      "error": "Markets not supported by this endpoint: btts, double_chance, draw_no_bet",
+      "statusCode": 422
+    },
+    {
+      "label": "soccer_austria_bundesliga:base-core",
+      "error": "Invalid commenceTimeFrom parameter. The format must be YYYY-MM-DDTHH:MM:SSZ, for example 2020-11-24T16:05:00Z",
+      "statusCode": 422
+    },
+    {
+      "label": "soccer_austria_bundesliga:btts",
+      "error": "Markets not supported by this endpoint: btts",
+      "statusCode": 422
+    },
+    {
+      "label": "soccer_austria_bundesliga:draw_no_bet",
+      "error": "Markets not supported by this endpoint: draw_no_bet",
+      "statusCode": 422
+    },
+    {
+      "label": "soccer_austria_bundesliga:double_chance",
+      "error": "Markets not supported by this endpoint: double_chance",
+      "statusCode": 422
+    },
+    {
       "label": "soccer_chile_campeonato:base-combined",
       "error": "Markets not supported by this endpoint: btts, double_chance, draw_no_bet",
       "statusCode": 422
@@ -3415,6 +3566,31 @@
     },
     {
       "label": "soccer_spl:double_chance",
+      "error": "Markets not supported by this endpoint: double_chance",
+      "statusCode": 422
+    },
+    {
+      "label": "soccer_brazil_campeonato:base-combined",
+      "error": "Markets not supported by this endpoint: btts, double_chance, draw_no_bet",
+      "statusCode": 422
+    },
+    {
+      "label": "soccer_brazil_campeonato:base-core",
+      "error": "Invalid commenceTimeFrom parameter. The format must be YYYY-MM-DDTHH:MM:SSZ, for example 2020-11-24T16:05:00Z",
+      "statusCode": 422
+    },
+    {
+      "label": "soccer_brazil_campeonato:btts",
+      "error": "Markets not supported by this endpoint: btts",
+      "statusCode": 422
+    },
+    {
+      "label": "soccer_brazil_campeonato:draw_no_bet",
+      "error": "Markets not supported by this endpoint: draw_no_bet",
+      "statusCode": 422
+    },
+    {
+      "label": "soccer_brazil_campeonato:double_chance",
       "error": "Markets not supported by this endpoint: double_chance",
       "statusCode": 422
     },
@@ -3751,5 +3927,5 @@
   },
   "skipped": false,
   "skipReason": null,
-  "completedAt": "2026-08-01T17:41:53.969Z"
+  "completedAt": "2026-08-01T17:58:27.364Z"
 }
