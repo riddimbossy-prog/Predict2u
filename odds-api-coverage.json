@@ -1,6 +1,6 @@
 {
   "version": "v251",
-  "generatedAt": "2026-08-01T19:23:31.453Z",
+  "generatedAt": "2026-08-01T19:40:46.685Z",
   "provider": "The Odds API v4",
   "keyPresent": true,
   "regions": "uk",
@@ -53,7 +53,7 @@
       "sportKey": "soccer_epl",
       "sportTitle": "EPL",
       "score": 0.987,
-      "matches": 5
+      "matches": 4
     },
     {
       "league": "Liga MX U21",
@@ -109,14 +109,6 @@
       "sportKey": "soccer_epl",
       "sportTitle": "EPL",
       "score": 0.429,
-      "matches": 4
-    },
-    {
-      "league": "Super Liga",
-      "country": "Moldova",
-      "sportKey": "soccer_turkey_super_league",
-      "sportTitle": "Turkey Super League",
-      "score": 0.286,
       "matches": 4
     },
     {
@@ -952,6 +944,14 @@
       "matches": 1
     },
     {
+      "league": "Super Liga",
+      "country": "Moldova",
+      "sportKey": "soccer_turkey_super_league",
+      "sportTitle": "Turkey Super League",
+      "score": 0.286,
+      "matches": 3
+    },
+    {
       "league": "Brasileiro U17",
       "country": "Brazil",
       "sportKey": "soccer_brazil_serie_b",
@@ -1072,7 +1072,7 @@
       "matches": 2
     }
   ],
-  "matchesConsidered": 930,
+  "matchesConsidered": 918,
   "matchesMatched": 0,
   "matchesUpdated": 0,
   "fieldsFilled": 0,
@@ -1136,40 +1136,16 @@
       "bestScore": 0.143
     },
     {
-      "league": "2. liga",
-      "country": "Slovakia",
-      "reason": "No matching soccer sport key",
-      "bestScore": 0.143
-    },
-    {
-      "league": "Second League",
-      "country": "Bulgaria",
-      "reason": "No matching soccer sport key",
-      "bestScore": 0.167
-    },
-    {
       "league": "NB II",
       "country": "Hungary",
       "reason": "No matching soccer sport key",
       "bestScore": 0
     },
     {
-      "league": "National Division",
-      "country": "Luxembourg",
-      "reason": "No matching soccer sport key",
-      "bestScore": 0.143
-    },
-    {
       "league": "Africa Cup of Nations - Women",
       "country": "World",
       "reason": "No matching soccer sport key",
       "bestScore": 0.111
-    },
-    {
-      "league": "CECAFA Club Cup",
-      "country": "World",
-      "reason": "No matching soccer sport key",
-      "bestScore": 0.125
     },
     {
       "league": "Toto Cup Ligat Al",
@@ -1346,6 +1322,12 @@
       "bestScore": 0.222
     },
     {
+      "league": "2. liga",
+      "country": "Slovakia",
+      "reason": "No matching soccer sport key",
+      "bestScore": 0.143
+    },
+    {
       "league": "1. Liga",
       "country": "Latvia",
       "reason": "No matching soccer sport key",
@@ -1406,6 +1388,12 @@
       "bestScore": 0.125
     },
     {
+      "league": "National Division",
+      "country": "Luxembourg",
+      "reason": "No matching soccer sport key",
+      "bestScore": 0.143
+    },
+    {
       "league": "FNL",
       "country": "Czech-Republic",
       "reason": "No matching soccer sport key",
@@ -1416,6 +1404,12 @@
       "country": "Lithuania",
       "reason": "No matching soccer sport key",
       "bestScore": 0.143
+    },
+    {
+      "league": "Second League",
+      "country": "Bulgaria",
+      "reason": "No matching soccer sport key",
+      "bestScore": 0.167
     },
     {
       "league": "Division 1",
@@ -2121,12 +2115,6 @@
     },
     {
       "league": "Premier League",
-      "home": "Arsenal",
-      "away": "FC Minsk",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Premier League",
       "home": "Dinamo Brest",
       "away": "Belshina",
       "reason": "No event/team match"
@@ -2579,6 +2567,18 @@
       "league": "III Liga - Group 4",
       "home": "Hetman Zamosc",
       "away": "Siarka Tarnobrzeg",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "III Liga - Group 4",
+      "home": "Moravia Morawica",
+      "away": "Wiślanie Jaśkowice",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "III Liga - Group 4",
+      "home": "Busko-Zdroj",
+      "away": "Wisłoka Dębica",
       "reason": "No event/team match"
     }
   ],
@@ -3703,5 +3703,5 @@
   },
   "skipped": false,
   "skipReason": null,
-  "completedAt": "2026-08-01T19:23:38.764Z"
+  "completedAt": "2026-08-01T19:41:05.399Z"
 }
