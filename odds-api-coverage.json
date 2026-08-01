@@ -1,6 +1,6 @@
 {
   "version": "v251",
-  "generatedAt": "2026-08-01T19:40:46.685Z",
+  "generatedAt": "2026-08-01T19:58:24.666Z",
   "provider": "The Odds API v4",
   "keyPresent": true,
   "regions": "uk",
@@ -109,14 +109,6 @@
       "sportKey": "soccer_epl",
       "sportTitle": "EPL",
       "score": 0.429,
-      "matches": 4
-    },
-    {
-      "league": "Bundesliga",
-      "country": "Austria",
-      "sportKey": "soccer_austria_bundesliga",
-      "sportTitle": "Austrian Football Bundesliga",
-      "score": 0.833,
       "matches": 4
     },
     {
@@ -920,6 +912,14 @@
       "matches": 1
     },
     {
+      "league": "Bundesliga",
+      "country": "Austria",
+      "sportKey": "soccer_austria_bundesliga",
+      "sportTitle": "Austrian Football Bundesliga",
+      "score": 0.833,
+      "matches": 3
+    },
+    {
       "league": "III Liga - Group 4",
       "country": "Poland",
       "sportKey": "soccer_poland_ekstraklasa",
@@ -1072,7 +1072,7 @@
       "matches": 2
     }
   ],
-  "matchesConsidered": 918,
+  "matchesConsidered": 912,
   "matchesMatched": 0,
   "matchesUpdated": 0,
   "fieldsFilled": 0,
@@ -2680,18 +2680,6 @@
       "market": "double_chance"
     },
     {
-      "sportKey": "soccer_austria_bundesliga",
-      "market": "btts"
-    },
-    {
-      "sportKey": "soccer_austria_bundesliga",
-      "market": "draw_no_bet"
-    },
-    {
-      "sportKey": "soccer_austria_bundesliga",
-      "market": "double_chance"
-    },
-    {
       "sportKey": "soccer_brazil_campeonato",
       "market": "btts"
     },
@@ -2809,6 +2797,18 @@
     },
     {
       "sportKey": "soccer_russia_premier_league",
+      "market": "double_chance"
+    },
+    {
+      "sportKey": "soccer_austria_bundesliga",
+      "market": "btts"
+    },
+    {
+      "sportKey": "soccer_austria_bundesliga",
+      "market": "draw_no_bet"
+    },
+    {
+      "sportKey": "soccer_austria_bundesliga",
       "market": "double_chance"
     },
     {
@@ -3146,31 +3146,6 @@
       "statusCode": 422
     },
     {
-      "label": "soccer_austria_bundesliga:base-combined",
-      "error": "Markets not supported by this endpoint: btts, double_chance, draw_no_bet",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_austria_bundesliga:base-core",
-      "error": "Invalid commenceTimeFrom parameter. The format must be YYYY-MM-DDTHH:MM:SSZ, for example 2020-11-24T16:05:00Z",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_austria_bundesliga:btts",
-      "error": "Markets not supported by this endpoint: btts",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_austria_bundesliga:draw_no_bet",
-      "error": "Markets not supported by this endpoint: draw_no_bet",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_austria_bundesliga:double_chance",
-      "error": "Markets not supported by this endpoint: double_chance",
-      "statusCode": 422
-    },
-    {
       "label": "soccer_brazil_campeonato:base-combined",
       "error": "Markets not supported by this endpoint: btts, double_chance, draw_no_bet",
       "statusCode": 422
@@ -3417,6 +3392,31 @@
     },
     {
       "label": "soccer_russia_premier_league:double_chance",
+      "error": "Markets not supported by this endpoint: double_chance",
+      "statusCode": 422
+    },
+    {
+      "label": "soccer_austria_bundesliga:base-combined",
+      "error": "Markets not supported by this endpoint: btts, double_chance, draw_no_bet",
+      "statusCode": 422
+    },
+    {
+      "label": "soccer_austria_bundesliga:base-core",
+      "error": "Invalid commenceTimeFrom parameter. The format must be YYYY-MM-DDTHH:MM:SSZ, for example 2020-11-24T16:05:00Z",
+      "statusCode": 422
+    },
+    {
+      "label": "soccer_austria_bundesliga:btts",
+      "error": "Markets not supported by this endpoint: btts",
+      "statusCode": 422
+    },
+    {
+      "label": "soccer_austria_bundesliga:draw_no_bet",
+      "error": "Markets not supported by this endpoint: draw_no_bet",
+      "statusCode": 422
+    },
+    {
+      "label": "soccer_austria_bundesliga:double_chance",
       "error": "Markets not supported by this endpoint: double_chance",
       "statusCode": 422
     },
@@ -3703,5 +3703,5 @@
   },
   "skipped": false,
   "skipReason": null,
-  "completedAt": "2026-08-01T19:41:05.399Z"
+  "completedAt": "2026-08-01T19:58:45.353Z"
 }
