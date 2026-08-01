@@ -1,6 +1,6 @@
 {
   "version": "v251",
-  "generatedAt": "2026-08-01T03:14:53.344Z",
+  "generatedAt": "2026-08-01T03:31:59.678Z",
   "provider": "The Odds API v4",
   "keyPresent": true,
   "regions": "uk",
@@ -30,14 +30,6 @@
       "sportTitle": "MLS",
       "score": 1,
       "matches": 11
-    },
-    {
-      "league": "Primera B",
-      "country": "Chile",
-      "sportKey": "soccer_chile_campeonato",
-      "sportTitle": "Primera División - Chile",
-      "score": 0.466,
-      "matches": 7
     },
     {
       "league": "USL Championship",
@@ -984,6 +976,14 @@
       "matches": 5
     },
     {
+      "league": "Primera B",
+      "country": "Chile",
+      "sportKey": "soccer_chile_campeonato",
+      "sportTitle": "Primera División - Chile",
+      "score": 0.466,
+      "matches": 6
+    },
+    {
       "league": "Primera División",
       "country": "Bolivia",
       "sportKey": "soccer_argentina_primera_division",
@@ -1208,7 +1208,7 @@
       "matches": 2
     }
   ],
-  "matchesConsidered": 1615,
+  "matchesConsidered": 1612,
   "matchesMatched": 0,
   "matchesUpdated": 0,
   "fieldsFilled": 0,
@@ -1218,16 +1218,16 @@
   "bookmakerRows": 0,
   "unmatched": [
     {
-      "league": "Friendlies Clubs",
-      "country": "World",
-      "reason": "No matching soccer sport key",
-      "bestScore": 0
-    },
-    {
       "league": "Africa Cup of Nations - Women",
       "country": "World",
       "reason": "No matching soccer sport key",
       "bestScore": 0.111
+    },
+    {
+      "league": "Friendlies Clubs",
+      "country": "World",
+      "reason": "No matching soccer sport key",
+      "bestScore": 0
     },
     {
       "league": "Primera A",
@@ -2568,54 +2568,6 @@
       "reason": "No event/team match"
     },
     {
-      "league": "NWSL Women",
-      "home": "North Carolina Courage W",
-      "away": "Orlando Pride W",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "NWSL Women",
-      "home": "Racing Louisville W",
-      "away": "Chicago Red Stars W",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "NWSL Women",
-      "home": "Kansas City W",
-      "away": "Angel City W",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "NWSL Women",
-      "home": "Houston Dash W",
-      "away": "NJ/NY Gotham FC W",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "NWSL Women",
-      "home": "Bay FC W",
-      "away": "Seattle Reign FC W",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "NWSL Women",
-      "home": "Washington Spirit W",
-      "away": "San Diego Wave W",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "NWSL Women",
-      "home": "Utah Royals W",
-      "away": "Portland Thorns W",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "NWSL Women",
-      "home": "Denver Summit W",
-      "away": "Boston Legacy W",
-      "reason": "No event/team match"
-    },
-    {
       "league": "USL Championship",
       "home": "San Antonio",
       "away": "Indy Eleven",
@@ -2716,6 +2668,54 @@
       "home": "Richmond Kickers",
       "away": "Alta",
       "reason": "No event/team match"
+    },
+    {
+      "league": "USL League One",
+      "home": "Fort Wayne",
+      "away": "Union Omaha",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "USL League One",
+      "home": "Sarasota Paradise",
+      "away": "Naples",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "USL League One",
+      "home": "Forward Madison",
+      "away": "Westchester SC",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "USL League One",
+      "home": "Boise",
+      "away": "Corpus Christi",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "NWSL Women",
+      "home": "Racing Louisville W",
+      "away": "Chicago Red Stars W",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "NWSL Women",
+      "home": "Kansas City W",
+      "away": "Angel City W",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "NWSL Women",
+      "home": "Houston Dash W",
+      "away": "NJ/NY Gotham FC W",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "NWSL Women",
+      "home": "Bay FC W",
+      "away": "Seattle Reign FC W",
+      "reason": "No event/team match"
     }
   ],
   "unsupportedMarkets": [
@@ -2756,18 +2756,6 @@
       "market": "double_chance"
     },
     {
-      "sportKey": "soccer_chile_campeonato",
-      "market": "btts"
-    },
-    {
-      "sportKey": "soccer_chile_campeonato",
-      "market": "draw_no_bet"
-    },
-    {
-      "sportKey": "soccer_chile_campeonato",
-      "market": "double_chance"
-    },
-    {
       "sportKey": "soccer_mexico_ligamx",
       "market": "btts"
     },
@@ -3005,6 +2993,18 @@
     },
     {
       "sportKey": "soccer_turkey_super_league",
+      "market": "double_chance"
+    },
+    {
+      "sportKey": "soccer_chile_campeonato",
+      "market": "btts"
+    },
+    {
+      "sportKey": "soccer_chile_campeonato",
+      "market": "draw_no_bet"
+    },
+    {
+      "sportKey": "soccer_chile_campeonato",
       "market": "double_chance"
     },
     {
@@ -3165,31 +3165,6 @@
     },
     {
       "label": "soccer_usa_mls:double_chance",
-      "error": "Markets not supported by this endpoint: double_chance",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_chile_campeonato:base-combined",
-      "error": "Markets not supported by this endpoint: btts, double_chance, draw_no_bet",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_chile_campeonato:base-core",
-      "error": "Invalid commenceTimeFrom parameter. The format must be YYYY-MM-DDTHH:MM:SSZ, for example 2020-11-24T16:05:00Z",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_chile_campeonato:btts",
-      "error": "Markets not supported by this endpoint: btts",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_chile_campeonato:draw_no_bet",
-      "error": "Markets not supported by this endpoint: draw_no_bet",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_chile_campeonato:double_chance",
       "error": "Markets not supported by this endpoint: double_chance",
       "statusCode": 422
     },
@@ -3694,6 +3669,31 @@
       "statusCode": 422
     },
     {
+      "label": "soccer_chile_campeonato:base-combined",
+      "error": "Markets not supported by this endpoint: btts, double_chance, draw_no_bet",
+      "statusCode": 422
+    },
+    {
+      "label": "soccer_chile_campeonato:base-core",
+      "error": "Invalid commenceTimeFrom parameter. The format must be YYYY-MM-DDTHH:MM:SSZ, for example 2020-11-24T16:05:00Z",
+      "statusCode": 422
+    },
+    {
+      "label": "soccer_chile_campeonato:btts",
+      "error": "Markets not supported by this endpoint: btts",
+      "statusCode": 422
+    },
+    {
+      "label": "soccer_chile_campeonato:draw_no_bet",
+      "error": "Markets not supported by this endpoint: draw_no_bet",
+      "statusCode": 422
+    },
+    {
+      "label": "soccer_chile_campeonato:double_chance",
+      "error": "Markets not supported by this endpoint: double_chance",
+      "statusCode": 422
+    },
+    {
       "label": "soccer_brazil_serie_b:base-combined",
       "error": "Markets not supported by this endpoint: btts, double_chance, draw_no_bet",
       "statusCode": 422
@@ -3876,5 +3876,5 @@
   },
   "skipped": false,
   "skipReason": null,
-  "completedAt": "2026-08-01T03:15:12.152Z"
+  "completedAt": "2026-08-01T03:32:19.477Z"
 }
