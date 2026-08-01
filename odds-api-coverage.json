@@ -1,6 +1,6 @@
 {
   "version": "v251",
-  "generatedAt": "2026-08-01T16:00:43.279Z",
+  "generatedAt": "2026-08-01T16:17:59.944Z",
   "provider": "The Odds API v4",
   "keyPresent": true,
   "regions": "uk",
@@ -64,68 +64,12 @@
       "matches": 5
     },
     {
-      "league": "Oberliga - Hessen",
-      "country": "Germany",
-      "sportKey": "soccer_germany_bundesliga",
-      "sportTitle": "Bundesliga - Germany",
-      "score": 0.347,
-      "matches": 5
-    },
-    {
-      "league": "Ekstraliga Women",
-      "country": "Poland",
-      "sportKey": "soccer_poland_ekstraklasa",
-      "sportTitle": "Ekstraklasa - Poland",
-      "score": 0.347,
-      "matches": 4
-    },
-    {
-      "league": "DFB Junioren Pokal",
-      "country": "Germany",
-      "sportKey": "soccer_germany_dfb_pokal",
-      "sportTitle": "DFB-Pokal",
-      "score": 0.68,
-      "matches": 20
-    },
-    {
-      "league": "Premier Soccer League",
-      "country": "Zimbabwe",
-      "sportKey": "soccer_epl",
-      "sportTitle": "EPL",
-      "score": 0.5,
-      "matches": 3
-    },
-    {
-      "league": "I Liga",
-      "country": "Poland",
-      "sportKey": "soccer_poland_ekstraklasa",
-      "sportTitle": "Ekstraklasa - Poland",
-      "score": 0.347,
-      "matches": 7
-    },
-    {
       "league": "Oberliga - Hamburg",
       "country": "Germany",
       "sportKey": "soccer_germany_bundesliga",
       "sportTitle": "Bundesliga - Germany",
       "score": 0.347,
       "matches": 4
-    },
-    {
-      "league": "Premier League",
-      "country": "Wales",
-      "sportKey": "soccer_epl",
-      "sportTitle": "EPL",
-      "score": 0.987,
-      "matches": 4
-    },
-    {
-      "league": "Regionalliga - Nord",
-      "country": "Germany",
-      "sportKey": "soccer_germany_bundesliga",
-      "sportTitle": "Bundesliga - Germany",
-      "score": 0.347,
-      "matches": 3
     },
     {
       "league": "Oberliga - Rheinland-Pfalz / Saar",
@@ -368,6 +312,14 @@
       "matches": 5
     },
     {
+      "league": "DFB Junioren Pokal",
+      "country": "Germany",
+      "sportKey": "soccer_germany_dfb_pokal",
+      "sportTitle": "DFB-Pokal",
+      "score": 0.68,
+      "matches": 19
+    },
+    {
       "league": "Regionalliga - Bayern",
       "country": "Germany",
       "sportKey": "soccer_germany_bundesliga",
@@ -534,6 +486,14 @@
       "sportTitle": "Ekstraklasa - Poland",
       "score": 0.305,
       "matches": 6
+    },
+    {
+      "league": "Ekstraliga Women",
+      "country": "Poland",
+      "sportKey": "soccer_poland_ekstraklasa",
+      "sportTitle": "Ekstraklasa - Poland",
+      "score": 0.347,
+      "matches": 3
     },
     {
       "league": "Premier Soccer League",
@@ -1040,12 +1000,28 @@
       "matches": 4
     },
     {
+      "league": "Regionalliga - Nord",
+      "country": "Germany",
+      "sportKey": "soccer_germany_bundesliga",
+      "sportTitle": "Bundesliga - Germany",
+      "score": 0.347,
+      "matches": 2
+    },
+    {
       "league": "Premier League",
       "country": "Bhutan",
       "sportKey": "soccer_epl",
       "sportTitle": "EPL",
       "score": 0.987,
       "matches": 2
+    },
+    {
+      "league": "I Liga",
+      "country": "Poland",
+      "sportKey": "soccer_poland_ekstraklasa",
+      "sportTitle": "Ekstraklasa - Poland",
+      "score": 0.347,
+      "matches": 4
     },
     {
       "league": "Division 2 - Södra Götaland",
@@ -1056,11 +1032,35 @@
       "matches": 3
     },
     {
+      "league": "Oberliga - Hessen",
+      "country": "Germany",
+      "sportKey": "soccer_germany_bundesliga",
+      "sportTitle": "Bundesliga - Germany",
+      "score": 0.347,
+      "matches": 4
+    },
+    {
       "league": "Paulista Série B",
       "country": "Brazil",
       "sportKey": "soccer_brazil_serie_b",
       "sportTitle": "Brazil Série B",
       "score": 0.609,
+      "matches": 2
+    },
+    {
+      "league": "Premier Soccer League",
+      "country": "Zimbabwe",
+      "sportKey": "soccer_epl",
+      "sportTitle": "EPL",
+      "score": 0.5,
+      "matches": 1
+    },
+    {
+      "league": "Premier League",
+      "country": "Wales",
+      "sportKey": "soccer_epl",
+      "sportTitle": "EPL",
+      "score": 0.987,
       "matches": 2
     },
     {
@@ -1192,7 +1192,7 @@
       "matches": 2
     }
   ],
-  "matchesConsidered": 1259,
+  "matchesConsidered": 1235,
   "matchesMatched": 0,
   "matchesUpdated": 0,
   "fieldsFilled": 0,
@@ -1244,12 +1244,6 @@
       "bestScore": 0.143
     },
     {
-      "league": "1. Division",
-      "country": "Belarus",
-      "reason": "No matching soccer sport key",
-      "bestScore": 0.143
-    },
-    {
       "league": "FAW Championship",
       "country": "Wales",
       "reason": "No matching soccer sport key",
@@ -1270,6 +1264,12 @@
     {
       "league": "Esiliiga B",
       "country": "Estonia",
+      "reason": "No matching soccer sport key",
+      "bestScore": 0.143
+    },
+    {
+      "league": "1. Division",
+      "country": "Belarus",
       "reason": "No matching soccer sport key",
       "bestScore": 0.143
     },
@@ -1640,48 +1640,6 @@
       "reason": "No event/team match"
     },
     {
-      "league": "Premier Soccer League",
-      "home": "Triangle United",
-      "away": "Hunters",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Premier Soccer League",
-      "home": "Platinum",
-      "away": "Simba Bhora",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Premier Soccer League",
-      "home": "CAPS United",
-      "away": "Highlanders",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Premier League",
-      "home": "Cardiff MET",
-      "away": "Holywell",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Premier League",
-      "home": "Haverfordwest County AFC",
-      "away": "Airbus UK",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Premier League",
-      "home": "GAP Connah S Quay FC",
-      "away": "Caernarfon Town",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Premier League",
-      "home": "Penybont",
-      "away": "The New Saints",
-      "reason": "No event/team match"
-    },
-    {
       "league": "Premier League",
       "home": "Kyzyl-Zhar",
       "away": "Aktobe",
@@ -1919,6 +1877,24 @@
       "league": "Premier League",
       "home": "Drukpa",
       "away": "Paro",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Premier Soccer League",
+      "home": "CAPS United",
+      "away": "Highlanders",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Premier League",
+      "home": "GAP Connah S Quay FC",
+      "away": "Caernarfon Town",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Premier League",
+      "home": "Penybont",
+      "away": "The New Saints",
       "reason": "No event/team match"
     },
     {
@@ -2654,27 +2630,75 @@
       "reason": "No event/team match"
     },
     {
-      "league": "Oberliga - Hessen",
-      "home": "Hummetroth",
-      "away": "Friedberg",
+      "league": "Oberliga - Hamburg",
+      "home": "Altona 93",
+      "away": "Sasel",
       "reason": "No event/team match"
     },
     {
-      "league": "Oberliga - Hessen",
-      "home": "Kassel",
-      "away": "Darmstadt 98 II",
+      "league": "Oberliga - Hamburg",
+      "home": "Paloma",
+      "away": "Vorwärts-Wacker 04",
       "reason": "No event/team match"
     },
     {
-      "league": "Oberliga - Hessen",
-      "home": "Eddersheim",
-      "away": "TuBa Pohlheim",
+      "league": "Oberliga - Hamburg",
+      "home": "Niendorfer TSV",
+      "away": "HT16",
       "reason": "No event/team match"
     },
     {
-      "league": "Oberliga - Hessen",
-      "home": "1960 Hanau",
-      "away": "Hünfelder SV",
+      "league": "Oberliga - Hamburg",
+      "home": "Buchholz",
+      "away": "Tus Dassendorf",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Oberliga - Rheinland-Pfalz / Saar",
+      "home": "FV Engers 07",
+      "away": "Diefflen",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Oberliga - Rheinland-Pfalz / Saar",
+      "home": "Ahrweiler",
+      "away": "Schott Mainz",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Oberliga - Rheinland-Pfalz / Saar",
+      "home": "Gonsenheim",
+      "away": "RW Wittlich",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Oberliga - Bayern Süd",
+      "home": "Pipinsried",
+      "away": "Schwabmünchen",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Oberliga - Bayern Süd",
+      "home": "Kirchanschöring",
+      "away": "1880 Wasserburg",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Regionalliga - Bayern",
+      "home": "Greuther Fürth II",
+      "away": "Bayreuth",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Regionalliga - West",
+      "home": "Hilden",
+      "away": "FC Bocholt",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Oberliga - Bayern Nord",
+      "home": "Nordlingen",
+      "away": "Viktoria Aschaffenburg",
       "reason": "No event/team match"
     },
     {
@@ -2776,30 +2800,6 @@
       "market": "double_chance"
     },
     {
-      "sportKey": "soccer_poland_ekstraklasa",
-      "market": "btts"
-    },
-    {
-      "sportKey": "soccer_poland_ekstraklasa",
-      "market": "draw_no_bet"
-    },
-    {
-      "sportKey": "soccer_poland_ekstraklasa",
-      "market": "double_chance"
-    },
-    {
-      "sportKey": "soccer_germany_dfb_pokal",
-      "market": "btts"
-    },
-    {
-      "sportKey": "soccer_germany_dfb_pokal",
-      "market": "draw_no_bet"
-    },
-    {
-      "sportKey": "soccer_germany_dfb_pokal",
-      "market": "double_chance"
-    },
-    {
       "sportKey": "soccer_russia_premier_league",
       "market": "btts"
     },
@@ -2836,18 +2836,6 @@
       "market": "double_chance"
     },
     {
-      "sportKey": "soccer_russia_premier_league",
-      "market": "btts"
-    },
-    {
-      "sportKey": "soccer_russia_premier_league",
-      "market": "draw_no_bet"
-    },
-    {
-      "sportKey": "soccer_russia_premier_league",
-      "market": "double_chance"
-    },
-    {
       "sportKey": "soccer_spl",
       "market": "btts"
     },
@@ -2872,6 +2860,18 @@
       "market": "double_chance"
     },
     {
+      "sportKey": "soccer_poland_ekstraklasa",
+      "market": "btts"
+    },
+    {
+      "sportKey": "soccer_poland_ekstraklasa",
+      "market": "draw_no_bet"
+    },
+    {
+      "sportKey": "soccer_poland_ekstraklasa",
+      "market": "double_chance"
+    },
+    {
       "sportKey": "soccer_switzerland_superleague",
       "market": "btts"
     },
@@ -2881,6 +2881,18 @@
     },
     {
       "sportKey": "soccer_switzerland_superleague",
+      "market": "double_chance"
+    },
+    {
+      "sportKey": "soccer_germany_dfb_pokal",
+      "market": "btts"
+    },
+    {
+      "sportKey": "soccer_germany_dfb_pokal",
+      "market": "draw_no_bet"
+    },
+    {
+      "sportKey": "soccer_germany_dfb_pokal",
       "market": "double_chance"
     },
     {
@@ -3240,56 +3252,6 @@
       "statusCode": 422
     },
     {
-      "label": "soccer_poland_ekstraklasa:base-combined",
-      "error": "Markets not supported by this endpoint: btts, double_chance, draw_no_bet",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_poland_ekstraklasa:base-core",
-      "error": "Invalid commenceTimeFrom parameter. The format must be YYYY-MM-DDTHH:MM:SSZ, for example 2020-11-24T16:05:00Z",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_poland_ekstraklasa:btts",
-      "error": "Markets not supported by this endpoint: btts",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_poland_ekstraklasa:draw_no_bet",
-      "error": "Markets not supported by this endpoint: draw_no_bet",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_poland_ekstraklasa:double_chance",
-      "error": "Markets not supported by this endpoint: double_chance",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_germany_dfb_pokal:base-combined",
-      "error": "Markets not supported by this endpoint: btts, double_chance, draw_no_bet",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_germany_dfb_pokal:base-core",
-      "error": "Invalid commenceTimeFrom parameter. The format must be YYYY-MM-DDTHH:MM:SSZ, for example 2020-11-24T16:05:00Z",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_germany_dfb_pokal:btts",
-      "error": "Markets not supported by this endpoint: btts",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_germany_dfb_pokal:draw_no_bet",
-      "error": "Markets not supported by this endpoint: draw_no_bet",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_germany_dfb_pokal:double_chance",
-      "error": "Markets not supported by this endpoint: double_chance",
-      "statusCode": 422
-    },
-    {
       "label": "soccer_russia_premier_league:base-combined",
       "error": "Markets not supported by this endpoint: btts, double_chance, draw_no_bet",
       "statusCode": 422
@@ -3415,6 +3377,31 @@
       "statusCode": 422
     },
     {
+      "label": "soccer_poland_ekstraklasa:base-combined",
+      "error": "Markets not supported by this endpoint: btts, double_chance, draw_no_bet",
+      "statusCode": 422
+    },
+    {
+      "label": "soccer_poland_ekstraklasa:base-core",
+      "error": "Invalid commenceTimeFrom parameter. The format must be YYYY-MM-DDTHH:MM:SSZ, for example 2020-11-24T16:05:00Z",
+      "statusCode": 422
+    },
+    {
+      "label": "soccer_poland_ekstraklasa:btts",
+      "error": "Markets not supported by this endpoint: btts",
+      "statusCode": 422
+    },
+    {
+      "label": "soccer_poland_ekstraklasa:draw_no_bet",
+      "error": "Markets not supported by this endpoint: draw_no_bet",
+      "statusCode": 422
+    },
+    {
+      "label": "soccer_poland_ekstraklasa:double_chance",
+      "error": "Markets not supported by this endpoint: double_chance",
+      "statusCode": 422
+    },
+    {
       "label": "soccer_switzerland_superleague:base-combined",
       "error": "Markets not supported by this endpoint: btts, double_chance, draw_no_bet",
       "statusCode": 422
@@ -3436,6 +3423,31 @@
     },
     {
       "label": "soccer_switzerland_superleague:double_chance",
+      "error": "Markets not supported by this endpoint: double_chance",
+      "statusCode": 422
+    },
+    {
+      "label": "soccer_germany_dfb_pokal:base-combined",
+      "error": "Markets not supported by this endpoint: btts, double_chance, draw_no_bet",
+      "statusCode": 422
+    },
+    {
+      "label": "soccer_germany_dfb_pokal:base-core",
+      "error": "Invalid commenceTimeFrom parameter. The format must be YYYY-MM-DDTHH:MM:SSZ, for example 2020-11-24T16:05:00Z",
+      "statusCode": 422
+    },
+    {
+      "label": "soccer_germany_dfb_pokal:btts",
+      "error": "Markets not supported by this endpoint: btts",
+      "statusCode": 422
+    },
+    {
+      "label": "soccer_germany_dfb_pokal:draw_no_bet",
+      "error": "Markets not supported by this endpoint: draw_no_bet",
+      "statusCode": 422
+    },
+    {
+      "label": "soccer_germany_dfb_pokal:double_chance",
       "error": "Markets not supported by this endpoint: double_chance",
       "statusCode": 422
     },
@@ -3872,5 +3884,5 @@
   },
   "skipped": false,
   "skipReason": null,
-  "completedAt": "2026-08-01T16:00:54.580Z"
+  "completedAt": "2026-08-01T16:18:19.194Z"
 }
