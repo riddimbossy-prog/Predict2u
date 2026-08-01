@@ -1,20 +1,12 @@
 {
   "version": "v251",
-  "generatedAt": "2026-08-01T10:54:22.480Z",
+  "generatedAt": "2026-08-01T11:09:22.488Z",
   "provider": "The Odds API v4",
   "keyPresent": true,
   "regions": "uk",
   "sportsAvailable": 75,
   "soccerSportsAvailable": 42,
   "sportMappings": [
-    {
-      "league": "MLS Next Pro",
-      "country": "USA",
-      "sportKey": "soccer_usa_mls",
-      "sportTitle": "MLS",
-      "score": 1,
-      "matches": 9
-    },
     {
       "league": "Victoria Premier League 2",
       "country": "Australia",
@@ -29,7 +21,7 @@
       "sportKey": "soccer_england_efl_cup",
       "sportTitle": "EFL Cup",
       "score": 0.463,
-      "matches": 26
+      "matches": 19
     },
     {
       "league": "DFB Junioren Pokal",
@@ -1032,6 +1024,14 @@
       "matches": 11
     },
     {
+      "league": "MLS Next Pro",
+      "country": "USA",
+      "sportKey": "soccer_usa_mls",
+      "sportTitle": "MLS",
+      "score": 1,
+      "matches": 8
+    },
+    {
       "league": "Liga MX",
       "country": "Mexico",
       "sportKey": "soccer_mexico_ligamx",
@@ -1208,7 +1208,7 @@
       "matches": 2
     }
   ],
-  "matchesConsidered": 1542,
+  "matchesConsidered": 1508,
   "matchesMatched": 0,
   "matchesUpdated": 0,
   "fieldsFilled": 0,
@@ -1236,30 +1236,6 @@
       "bestScore": 0.25
     },
     {
-      "league": "Western Australia State League 1",
-      "country": "Australia",
-      "reason": "No matching soccer sport key",
-      "bestScore": 0.222
-    },
-    {
-      "league": "South Australia NPL",
-      "country": "Australia",
-      "reason": "No matching soccer sport key",
-      "bestScore": 0
-    },
-    {
-      "league": "South Australia State League 1",
-      "country": "Australia",
-      "reason": "No matching soccer sport key",
-      "bestScore": 0.222
-    },
-    {
-      "league": "Capital Territory NPL",
-      "country": "Australia",
-      "reason": "No matching soccer sport key",
-      "bestScore": 0
-    },
-    {
       "league": "New South Wales NPL 2",
       "country": "Australia",
       "reason": "No matching soccer sport key",
@@ -1282,24 +1258,6 @@
       "country": "Romania",
       "reason": "No matching soccer sport key",
       "bestScore": 0.143
-    },
-    {
-      "league": "Npl Nsw U20",
-      "country": "Australia",
-      "reason": "No matching soccer sport key",
-      "bestScore": 0
-    },
-    {
-      "league": "New South Wales NPL",
-      "country": "Australia",
-      "reason": "No matching soccer sport key",
-      "bestScore": 0
-    },
-    {
-      "league": "Piala Presiden",
-      "country": "Indonesia",
-      "reason": "No matching soccer sport key",
-      "bestScore": 0
     },
     {
       "league": "Victoria NPL",
@@ -1348,6 +1306,12 @@
       "country": "Tajikistan",
       "reason": "No matching soccer sport key",
       "bestScore": 0.143
+    },
+    {
+      "league": "Piala Presiden",
+      "country": "Indonesia",
+      "reason": "No matching soccer sport key",
+      "bestScore": 0
     },
     {
       "league": "Segunda División",
@@ -1590,6 +1554,18 @@
       "bestScore": 0
     },
     {
+      "league": "Npl Nsw U20",
+      "country": "Australia",
+      "reason": "No matching soccer sport key",
+      "bestScore": 0
+    },
+    {
+      "league": "New South Wales NPL",
+      "country": "Australia",
+      "reason": "No matching soccer sport key",
+      "bestScore": 0
+    },
+    {
       "league": "Queensland NPL",
       "country": "Australia",
       "reason": "No matching soccer sport key",
@@ -1597,6 +1573,12 @@
     },
     {
       "league": "Tasmania NPL",
+      "country": "Australia",
+      "reason": "No matching soccer sport key",
+      "bestScore": 0
+    },
+    {
+      "league": "Capital Territory NPL",
       "country": "Australia",
       "reason": "No matching soccer sport key",
       "bestScore": 0
@@ -1678,312 +1660,6 @@
       "country": "World",
       "reason": "No matching soccer sport key",
       "bestScore": 0.143
-    },
-    {
-      "league": "MLS Next Pro",
-      "home": "Toronto II",
-      "away": "Columbus Crew II",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "MLS Next Pro",
-      "home": "Connecticut FC",
-      "away": "Orlando City II",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "MLS Next Pro",
-      "home": "New York City II",
-      "away": "Philadelphia Union II",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "MLS Next Pro",
-      "home": "Huntsville City",
-      "away": "Crown Legacy",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "MLS Next Pro",
-      "home": "Tacoma Defiance",
-      "away": "Vancouver Whitecaps II",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "MLS Next Pro",
-      "home": "The Town",
-      "away": "Austin II",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "MLS Next Pro",
-      "home": "Chicago Fire II",
-      "away": "FC Cincinnati II",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "MLS Next Pro",
-      "home": "New York RB II",
-      "away": "New England II",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "MLS Next Pro",
-      "home": "St. Louis City II",
-      "away": "Real Monarchs",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "USL League One",
-      "home": "Tormenta",
-      "away": "NY Cosmos",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "USL League One",
-      "home": "Charlotte Independence",
-      "away": "One Knoxville",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "USL League One",
-      "home": "Chattanooga Red Wolves",
-      "away": "Spokane Velocity",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "USL League One",
-      "home": "Greenville Triumph",
-      "away": "Portland Hearts of Pine",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "USL League One",
-      "home": "Richmond Kickers",
-      "away": "Alta",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "USL League One",
-      "home": "Fort Wayne",
-      "away": "Union Omaha",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "USL League One",
-      "home": "Sarasota Paradise",
-      "away": "Naples",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "USL League One",
-      "home": "Forward Madison",
-      "away": "Westchester SC",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "USL League One",
-      "home": "Boise",
-      "away": "Corpus Christi",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "NWSL Women",
-      "home": "Racing Louisville W",
-      "away": "Chicago Red Stars W",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "NWSL Women",
-      "home": "Kansas City W",
-      "away": "Angel City W",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "NWSL Women",
-      "home": "Houston Dash W",
-      "away": "NJ/NY Gotham FC W",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "NWSL Women",
-      "home": "Bay FC W",
-      "away": "Seattle Reign FC W",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "NWSL Women",
-      "home": "Washington Spirit W",
-      "away": "San Diego Wave W",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "NWSL Women",
-      "home": "Utah Royals W",
-      "away": "Portland Thorns W",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "NWSL Women",
-      "home": "Denver Summit W",
-      "away": "Boston Legacy W",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "USL Championship",
-      "home": "Lexington",
-      "away": "Monterey Bay",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "USL Championship",
-      "home": "Loudoun United",
-      "away": "Hartford Athletic",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "USL Championship",
-      "home": "Miami FC",
-      "away": "Detroit City",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "USL Championship",
-      "home": "Charleston Battery",
-      "away": "Brooklyn",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "USL Championship",
-      "home": "Birmingham Legion",
-      "away": "Rhode Island",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "USL Championship",
-      "home": "Tampa Bay Rowdies",
-      "away": "Louisville City",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "USL Championship",
-      "home": "New Mexico United",
-      "away": "Colorado Springs",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "USL Championship",
-      "home": "Oakland Roots",
-      "away": "Pittsburgh Riverhounds",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "USL Championship",
-      "home": "Orange County SC",
-      "away": "El Paso Locomotive",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "USL Championship",
-      "home": "Las Vegas Lights",
-      "away": "Phoenix Rising",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "USL Championship",
-      "home": "Sacramento Republic",
-      "away": "Sporting JAX",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Major League Soccer",
-      "home": "Inter Miami",
-      "away": "Columbus Crew",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Major League Soccer",
-      "home": "Vancouver Whitecaps",
-      "away": "Los Angeles FC",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Major League Soccer",
-      "home": "Philadelphia Union",
-      "away": "Atlanta United FC",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Major League Soccer",
-      "home": "New York Red Bulls",
-      "away": "Orlando City SC",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Major League Soccer",
-      "home": "FC Cincinnati",
-      "away": "San Jose Earthquakes",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Major League Soccer",
-      "home": "DC United",
-      "away": "Nashville SC",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Major League Soccer",
-      "home": "CF Montreal",
-      "away": "New England Revolution",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Major League Soccer",
-      "home": "Chicago Fire",
-      "away": "Charlotte",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Major League Soccer",
-      "home": "Minnesota United FC",
-      "away": "San Diego",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Major League Soccer",
-      "home": "Sporting Kansas City",
-      "away": "Houston Dynamo",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Major League Soccer",
-      "home": "St. Louis City",
-      "away": "Real Salt Lake",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Major League Soccer",
-      "home": "Colorado Rapids",
-      "away": "Austin",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Major League Soccer",
-      "home": "Los Angeles Galaxy",
-      "away": "FC Dallas",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Major League Soccer",
-      "home": "Portland Timbers",
-      "away": "Seattle Sounders",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "USL League Two",
-      "home": "Flint City Bucks",
-      "away": "Vermont Green",
-      "reason": "No event/team match"
     },
     {
       "league": "Victoria Premier League 2",
@@ -2371,50 +2047,8 @@
     },
     {
       "league": "Cup",
-      "home": "Branik",
-      "away": "Meteor Praha",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Cup",
-      "home": "Petřín Plzeň",
-      "away": "Komárov",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Cup",
-      "home": "Slavia Hradec Králové",
-      "away": "Trutnov",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Cup",
       "home": "Slavia Vejprnice",
       "away": "Doubravka",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Cup",
-      "home": "Klasterec n. Oh.",
-      "away": "Ostrov",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Cup",
-      "home": "Nyrsko",
-      "away": "Křimice",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Cup",
-      "home": "Přepeře",
-      "away": "Velké Hamry",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Cup",
-      "home": "Ústí nad Orlicí",
-      "away": "Svitavy",
       "reason": "No event/team match"
     },
     {
@@ -2704,22 +2338,376 @@
       "home": "Altona U19",
       "away": "Paderborn U19",
       "reason": "No event/team match"
+    },
+    {
+      "league": "DFB Junioren Pokal",
+      "home": "Dynamo Dresden U19",
+      "away": "Hannover 96 U19",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "DFB Junioren Pokal",
+      "home": "Hildesheim U19",
+      "away": "Bayer Leverkusen U19",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "DFB Junioren Pokal",
+      "home": "Nürnberg U19",
+      "away": "Hamburger SV U19",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "DFB Junioren Pokal",
+      "home": "Koblenz U19",
+      "away": "Werder Bremen U19",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "DFB Junioren Pokal",
+      "home": "Bonner SC U19",
+      "away": "St. Pauli U19",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "DFB Junioren Pokal",
+      "home": "Warnemunde U19",
+      "away": "Fortuna Düsseldorf U19",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "DFB Junioren Pokal",
+      "home": "Arminia Magdeburg U19",
+      "away": "Carl Zeiss Jena U19",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Division 2 - Södra Svealand",
+      "home": "Nacka Iliria",
+      "away": "Lindo FF",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Division 2 - Södra Svealand",
+      "home": "Smedby",
+      "away": "Örebro Syrianska",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Division 2 - Södra Svealand",
+      "home": "Syrianska FC",
+      "away": "Eker Örebro",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Division 2 - Södra Svealand",
+      "home": "Fittja",
+      "away": "Haninge",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Division 2 - Södra Svealand",
+      "home": "Forward",
+      "away": "Nyköping",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Division 2 - Södra Svealand",
+      "home": "Sleipner",
+      "away": "Karlslund",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Division 2 - Norrland",
+      "home": "Kubikenborg",
+      "away": "Skellefteå",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Division 2 - Norrland",
+      "home": "IFK Luleå",
+      "away": "IFK Östersund",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Division 2 - Norrland",
+      "home": "Täfteå",
+      "away": "Gottne",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Division 2 - Norrland",
+      "home": "Lucksta",
+      "away": "Boden",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Elitettan",
+      "home": "KIF Örebro W",
+      "away": "Husqvarna W",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Elitettan",
+      "home": "Umeå W",
+      "away": "Göteborg W",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Elitettan",
+      "home": "Elfsborg W",
+      "away": "Trelleborg W",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Elitettan",
+      "home": "Alingsås W",
+      "away": "Enskede W",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Elitettan",
+      "home": "Gamla Upsala W",
+      "away": "Jitex W",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Elitettan",
+      "home": "Häcken II W",
+      "away": "Sandviken W",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Ettan - Södra",
+      "home": "Angelholms FF",
+      "away": "AFC Malmo",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Ettan - Södra",
+      "home": "Tvååker",
+      "away": "Utsikten",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Ettan - Södra",
+      "home": "Hässleholms IF",
+      "away": "Atvidabergs FF",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Ettan - Södra",
+      "home": "Laholm",
+      "away": "Trollhättan",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Ettan - Södra",
+      "home": "Olympic",
+      "away": "Skövde AIK",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Ettan - Södra",
+      "home": "Rosengård",
+      "away": "Jonkopings Sodra",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Ettan - Södra",
+      "home": "Trelleborg",
+      "away": "Lund",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Division 2 - Norra Götaland",
+      "home": "Vänersborgs IF",
+      "away": "Motala",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Division 2 - Norra Svealand",
+      "home": "Lidingö",
+      "away": "Angby",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Division 2 - Norra Svealand",
+      "home": "Korsnäs",
+      "away": "Helges",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Division 2 - Norra Svealand",
+      "home": "Skiljebo",
+      "away": "Falu BS",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Division 2 - Norra Svealand",
+      "home": "Gute",
+      "away": "Kungsängen",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Division 2 - Norra Svealand",
+      "home": "Enskede",
+      "away": "Täby",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Division 2 - Norra Svealand",
+      "home": "Bollstanäs",
+      "away": "Franke",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Division 2 - Norra Svealand",
+      "home": "Sunnersta",
+      "away": "Viggbyholms IK",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Division 2 - Södra Götaland",
+      "home": "Linero",
+      "away": "Österlen",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Division 2 - Södra Götaland",
+      "home": "Berga",
+      "away": "IFK Trelleborg",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Division 2 - Södra Götaland",
+      "home": "Lilla Torg",
+      "away": "Oskarshamns AIK",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Division 2 - Södra Götaland",
+      "home": "Torns",
+      "away": "Staffanstorp United",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Division 2 - Västra Götaland",
+      "home": "Torslanda",
+      "away": "Galtabacks",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Division 2 - Västra Götaland",
+      "home": "Hestrafor",
+      "away": "Åstorp",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Division 2 - Västra Götaland",
+      "home": "Qviding FIF",
+      "away": "Astrio",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Division 2 - Västra Götaland",
+      "home": "Landvetter IS",
+      "away": "Dalstorps",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Damallsvenskan",
+      "home": "Brommapojkarna W",
+      "away": "Djurgården W",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Damallsvenskan",
+      "home": "Kristianstad W",
+      "away": "AIK W",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Damallsvenskan",
+      "home": "Uppsala W",
+      "away": "Norrköping W",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Damallsvenskan",
+      "home": "Häcken W",
+      "away": "Eskilstuna United W",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Damallsvenskan",
+      "home": "Vittsjö W",
+      "away": "Rosengård W",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Ettan - Norra",
+      "home": "Piteå",
+      "away": "Gefle IF",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Ettan - Norra",
+      "home": "FBK Karlstad",
+      "away": "Assyriska FF",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Ettan - Norra",
+      "home": "Järfälla",
+      "away": "Stockholm Internazionale",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Ettan - Norra",
+      "home": "Stocksund",
+      "away": "Karlberg",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Ettan - Norra",
+      "home": "AFC Eskilstuna",
+      "away": "Umeå FC",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Ettan - Norra",
+      "home": "IF Karlstad",
+      "away": "Enköping",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Ettan - Norra",
+      "home": "Vasalund",
+      "away": "Sollentuna",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Ettan - Norra",
+      "home": "Hammarby Talang",
+      "away": "Arlanda",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Allsvenskan",
+      "home": "BK Hacken",
+      "away": "Kalmar FF",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Allsvenskan",
+      "home": "IF Brommapojkarna",
+      "away": "Malmo FF",
+      "reason": "No event/team match"
     }
   ],
   "unsupportedMarkets": [
     {
-      "sportKey": "soccer_usa_mls",
-      "market": "btts"
-    },
-    {
-      "sportKey": "soccer_usa_mls",
-      "market": "draw_no_bet"
-    },
-    {
-      "sportKey": "soccer_usa_mls",
-      "market": "double_chance"
-    },
-    {
       "sportKey": "soccer_epl",
       "market": "btts"
     },
@@ -3017,6 +3005,18 @@
     },
     {
       "sportKey": "soccer_portugal_primeira_liga",
+      "market": "double_chance"
+    },
+    {
+      "sportKey": "soccer_usa_mls",
+      "market": "btts"
+    },
+    {
+      "sportKey": "soccer_usa_mls",
+      "market": "draw_no_bet"
+    },
+    {
+      "sportKey": "soccer_usa_mls",
       "market": "double_chance"
     },
     {
@@ -3081,31 +3081,6 @@
     }
   ],
   "requestErrors": [
-    {
-      "label": "soccer_usa_mls:base-combined",
-      "error": "Markets not supported by this endpoint: btts, double_chance, draw_no_bet",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_usa_mls:base-core",
-      "error": "Invalid commenceTimeFrom parameter. The format must be YYYY-MM-DDTHH:MM:SSZ, for example 2020-11-24T16:05:00Z",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_usa_mls:btts",
-      "error": "Markets not supported by this endpoint: btts",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_usa_mls:draw_no_bet",
-      "error": "Markets not supported by this endpoint: draw_no_bet",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_usa_mls:double_chance",
-      "error": "Markets not supported by this endpoint: double_chance",
-      "statusCode": 422
-    },
     {
       "label": "soccer_epl:base-combined",
       "error": "Markets not supported by this endpoint: btts, double_chance, draw_no_bet",
@@ -3732,6 +3707,31 @@
       "statusCode": 422
     },
     {
+      "label": "soccer_usa_mls:base-combined",
+      "error": "Markets not supported by this endpoint: btts, double_chance, draw_no_bet",
+      "statusCode": 422
+    },
+    {
+      "label": "soccer_usa_mls:base-core",
+      "error": "Invalid commenceTimeFrom parameter. The format must be YYYY-MM-DDTHH:MM:SSZ, for example 2020-11-24T16:05:00Z",
+      "statusCode": 422
+    },
+    {
+      "label": "soccer_usa_mls:btts",
+      "error": "Markets not supported by this endpoint: btts",
+      "statusCode": 422
+    },
+    {
+      "label": "soccer_usa_mls:draw_no_bet",
+      "error": "Markets not supported by this endpoint: draw_no_bet",
+      "statusCode": 422
+    },
+    {
+      "label": "soccer_usa_mls:double_chance",
+      "error": "Markets not supported by this endpoint: double_chance",
+      "statusCode": 422
+    },
+    {
       "label": "soccer_spain_la_liga:base-combined",
       "error": "Markets not supported by this endpoint: btts, double_chance, draw_no_bet",
       "statusCode": 422
@@ -3864,5 +3864,5 @@
   },
   "skipped": false,
   "skipReason": null,
-  "completedAt": "2026-08-01T10:54:33.468Z"
+  "completedAt": "2026-08-01T11:09:41.587Z"
 }
