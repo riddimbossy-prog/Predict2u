@@ -1,6 +1,6 @@
 {
   "version": "v251",
-  "generatedAt": "2026-08-01T08:30:08.634Z",
+  "generatedAt": "2026-08-01T08:46:15.819Z",
   "provider": "The Odds API v4",
   "keyPresent": true,
   "regions": "uk",
@@ -16,20 +16,20 @@
       "matches": 9
     },
     {
-      "league": "Queensland Premier League",
-      "country": "Australia",
-      "sportKey": "soccer_epl",
-      "sportTitle": "EPL",
-      "score": 0.667,
-      "matches": 4
-    },
-    {
       "league": "Victoria Premier League 2",
       "country": "Australia",
       "sportKey": "soccer_epl",
       "sportTitle": "EPL",
       "score": 0.667,
       "matches": 1
+    },
+    {
+      "league": "Queensland Premier League",
+      "country": "Australia",
+      "sportKey": "soccer_epl",
+      "sportTitle": "EPL",
+      "score": 0.667,
+      "matches": 3
     },
     {
       "league": "League Two",
@@ -1208,7 +1208,7 @@
       "matches": 2
     }
   ],
-  "matchesConsidered": 1564,
+  "matchesConsidered": 1561,
   "matchesMatched": 0,
   "matchesUpdated": 0,
   "fieldsFilled": 0,
@@ -1234,12 +1234,6 @@
       "country": "Australia",
       "reason": "No matching soccer sport key",
       "bestScore": 0.25
-    },
-    {
-      "league": "New South Wales NPL",
-      "country": "Australia",
-      "reason": "No matching soccer sport key",
-      "bestScore": 0
     },
     {
       "league": "Npl Nsw U20",
@@ -1318,6 +1312,12 @@
       "country": "Romania",
       "reason": "No matching soccer sport key",
       "bestScore": 0.143
+    },
+    {
+      "league": "New South Wales NPL",
+      "country": "Australia",
+      "reason": "No matching soccer sport key",
+      "bestScore": 0
     },
     {
       "league": "Piala Presiden",
@@ -1992,9 +1992,9 @@
       "reason": "No event/team match"
     },
     {
-      "league": "Queensland Premier League",
-      "home": "Holland Park Hawks",
-      "away": "Robina City",
+      "league": "Victoria Premier League 2",
+      "home": "Malvern",
+      "away": "Goulburn Valley Suns",
       "reason": "No event/team match"
     },
     {
@@ -2013,12 +2013,6 @@
       "league": "Queensland Premier League",
       "home": "St George Willawong",
       "away": "Brisbane Strikers",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Victoria Premier League 2",
-      "home": "Malvern",
-      "away": "Goulburn Valley Suns",
       "reason": "No event/team match"
     },
     {
@@ -2715,6 +2709,12 @@
       "league": "Second League - Group 1",
       "home": "Shahter Taganrog",
       "away": "Astrakhan",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Second League - Group 1",
+      "home": "FK Chayka 2",
+      "away": "Pobeda",
       "reason": "No event/team match"
     }
   ],
@@ -3870,11 +3870,11 @@
     }
   ],
   "quota": {
-    "remaining": 99848,
-    "used": 152,
+    "remaining": 99772,
+    "used": 228,
     "last": 0
   },
   "skipped": false,
   "skipReason": null,
-  "completedAt": "2026-08-01T08:30:15.542Z"
+  "completedAt": "2026-08-01T08:46:28.288Z"
 }
