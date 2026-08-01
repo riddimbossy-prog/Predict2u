@@ -1,6 +1,6 @@
 {
   "version": "v251",
-  "generatedAt": "2026-08-01T20:17:05.067Z",
+  "generatedAt": "2026-08-01T20:34:23.632Z",
   "provider": "The Odds API v4",
   "keyPresent": true,
   "regions": "uk",
@@ -85,7 +85,7 @@
       "sportKey": "soccer_turkey_super_league",
       "sportTitle": "Turkey Super League",
       "score": 0.286,
-      "matches": 7
+      "matches": 6
     },
     {
       "league": "III Liga - Group 2",
@@ -104,28 +104,12 @@
       "matches": 4
     },
     {
-      "league": "Premier League",
-      "country": "Russia",
-      "sportKey": "soccer_epl",
-      "sportTitle": "EPL",
-      "score": 0.987,
-      "matches": 4
-    },
-    {
       "league": "Carioca A2",
       "country": "Brazil",
       "sportKey": "soccer_brazil_campeonato",
       "sportTitle": "Brazil Série A",
       "score": 0.305,
       "matches": 1
-    },
-    {
-      "league": "Primera División - Apertura",
-      "country": "Uruguay",
-      "sportKey": "soccer_argentina_primera_division",
-      "sportTitle": "Primera División - Argentina",
-      "score": 0.286,
-      "matches": 6
     },
     {
       "league": "Primera Nacional",
@@ -157,7 +141,7 @@
       "sportKey": "soccer_brazil_campeonato",
       "sportTitle": "Brazil Série A",
       "score": 0.305,
-      "matches": 4
+      "matches": 2
     },
     {
       "league": "Copa Paulista",
@@ -381,6 +365,14 @@
       "sportKey": "soccer_spain_la_liga",
       "sportTitle": "La Liga - Spain",
       "score": 0.429,
+      "matches": 5
+    },
+    {
+      "league": "Primera División - Apertura",
+      "country": "Uruguay",
+      "sportKey": "soccer_argentina_primera_division",
+      "sportTitle": "Primera División - Argentina",
+      "score": 0.286,
       "matches": 5
     },
     {
@@ -792,6 +784,14 @@
       "matches": 3
     },
     {
+      "league": "Premier League",
+      "country": "Russia",
+      "sportKey": "soccer_epl",
+      "sportTitle": "EPL",
+      "score": 0.987,
+      "matches": 3
+    },
+    {
       "league": "Frauenliga",
       "country": "Austria",
       "sportKey": "soccer_austria_bundesliga",
@@ -1072,7 +1072,7 @@
       "matches": 2
     }
   ],
-  "matchesConsidered": 900,
+  "matchesConsidered": 887,
   "matchesMatched": 0,
   "matchesUpdated": 0,
   "fieldsFilled": 0,
@@ -2085,30 +2085,6 @@
     },
     {
       "league": "Premier League",
-      "home": "Baltika",
-      "away": "Dynamo",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Premier League",
-      "home": "FC Orenburg",
-      "away": "Zenit",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Premier League",
-      "home": "FC Krasnodar",
-      "away": "Fakel",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Premier League",
-      "home": "Akhmat",
-      "away": "Spartak Moscow",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Premier League",
       "home": "Al Nejmeh",
       "away": "Al Ansar",
       "reason": "No event/team match"
@@ -2201,6 +2177,24 @@
       "league": "Premier League",
       "home": "Drukpa",
       "away": "Paro",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Premier League",
+      "home": "FC Orenburg",
+      "away": "Zenit",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Premier League",
+      "home": "FC Krasnodar",
+      "away": "Fakel",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Premier League",
+      "home": "Akhmat",
+      "away": "Spartak Moscow",
       "reason": "No event/team match"
     },
     {
@@ -2547,12 +2541,6 @@
     },
     {
       "league": "Super Liga",
-      "home": "Novi Pazar",
-      "away": "OFK Beograd",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Super Liga",
       "home": "Cukaricki",
       "away": "Radnicki 1923",
       "reason": "No event/team match"
@@ -2579,6 +2567,18 @@
       "league": "Super Liga",
       "home": "Dunajska Streda",
       "away": "Dukla Banská Bystrica",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Super Liga",
+      "home": "Zemplín Michalovce",
+      "away": "Žilina",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Super Liga",
+      "home": "Komárno",
+      "away": "Spartak Trnava",
       "reason": "No event/team match"
     }
   ],
@@ -3703,5 +3703,5 @@
   },
   "skipped": false,
   "skipReason": null,
-  "completedAt": "2026-08-01T20:17:15.955Z"
+  "completedAt": "2026-08-01T20:34:34.322Z"
 }
