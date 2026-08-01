@@ -1,6 +1,6 @@
 {
   "version": "v251",
-  "generatedAt": "2026-08-01T07:09:47.874Z",
+  "generatedAt": "2026-08-01T07:26:45.061Z",
   "provider": "The Odds API v4",
   "keyPresent": true,
   "regions": "uk",
@@ -16,20 +16,20 @@
       "matches": 9
     },
     {
-      "league": "Victoria Premier League 2",
-      "country": "Australia",
-      "sportKey": "soccer_epl",
-      "sportTitle": "EPL",
-      "score": 0.667,
-      "matches": 3
-    },
-    {
       "league": "Queensland Premier League",
       "country": "Australia",
       "sportKey": "soccer_epl",
       "sportTitle": "EPL",
       "score": 0.667,
       "matches": 4
+    },
+    {
+      "league": "Victoria Premier League 2",
+      "country": "Australia",
+      "sportKey": "soccer_epl",
+      "sportTitle": "EPL",
+      "score": 0.667,
+      "matches": 1
     },
     {
       "league": "League Two",
@@ -1208,7 +1208,7 @@
       "matches": 2
     }
   ],
-  "matchesConsidered": 1583,
+  "matchesConsidered": 1576,
   "matchesMatched": 0,
   "matchesUpdated": 0,
   "fieldsFilled": 0,
@@ -1237,6 +1237,18 @@
     },
     {
       "league": "New South Wales NPL",
+      "country": "Australia",
+      "reason": "No matching soccer sport key",
+      "bestScore": 0
+    },
+    {
+      "league": "NNSW League 1",
+      "country": "Australia",
+      "reason": "No matching soccer sport key",
+      "bestScore": 0.25
+    },
+    {
+      "league": "Victoria NPL",
       "country": "Australia",
       "reason": "No matching soccer sport key",
       "bestScore": 0
@@ -1312,6 +1324,12 @@
       "country": "Australia",
       "reason": "No matching soccer sport key",
       "bestScore": 0.222
+    },
+    {
+      "league": "Capital Territory NPL",
+      "country": "Australia",
+      "reason": "No matching soccer sport key",
+      "bestScore": 0
     },
     {
       "league": "Persha Liga",
@@ -1992,24 +2010,6 @@
       "reason": "No event/team match"
     },
     {
-      "league": "Victoria Premier League 2",
-      "home": "Werribee City",
-      "away": "Nunawading",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Victoria Premier League 2",
-      "home": "Bayside Argonauts",
-      "away": "Moreland City",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Victoria Premier League 2",
-      "home": "Malvern",
-      "away": "Goulburn Valley Suns",
-      "reason": "No event/team match"
-    },
-    {
       "league": "Queensland Premier League",
       "home": "Holland Park Hawks",
       "away": "Robina City",
@@ -2031,6 +2031,12 @@
       "league": "Queensland Premier League",
       "home": "St George Willawong",
       "away": "Brisbane Strikers",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Victoria Premier League 2",
+      "home": "Malvern",
+      "away": "Goulburn Valley Suns",
       "reason": "No event/team match"
     },
     {
@@ -2715,6 +2721,18 @@
       "league": "Second League - Group 1",
       "home": "Sevastopol",
       "away": "Nart Cherkessk",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Second League - Group 1",
+      "home": "Kyzyltash",
+      "away": "Spartak Nalchik",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Second League - Group 1",
+      "home": "Shahter Taganrog",
+      "away": "Astrakhan",
       "reason": "No event/team match"
     }
   ],
@@ -3876,5 +3894,5 @@
   },
   "skipped": false,
   "skipReason": null,
-  "completedAt": "2026-08-01T07:09:54.681Z"
+  "completedAt": "2026-08-01T07:27:04.852Z"
 }
