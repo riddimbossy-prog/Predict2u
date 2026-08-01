@@ -1,6 +1,6 @@
 {
   "version": "v251",
-  "generatedAt": "2026-08-01T13:07:13.817Z",
+  "generatedAt": "2026-08-01T13:27:37.808Z",
   "provider": "The Odds API v4",
   "keyPresent": true,
   "regions": "uk",
@@ -38,22 +38,6 @@
       "sportTitle": "Allsvenskan - Sweden",
       "score": 0.323,
       "matches": 4
-    },
-    {
-      "league": "K League 1",
-      "country": "South-Korea",
-      "sportKey": "soccer_korea_kleague1",
-      "sportTitle": "K League 1",
-      "score": 0.695,
-      "matches": 4
-    },
-    {
-      "league": "K League 2",
-      "country": "South-Korea",
-      "sportKey": "soccer_korea_kleague1",
-      "sportTitle": "K League 1",
-      "score": 0.333,
-      "matches": 5
     },
     {
       "league": "2. Division - Group 1",
@@ -1104,6 +1088,22 @@
       "matches": 5
     },
     {
+      "league": "K League 1",
+      "country": "South-Korea",
+      "sportKey": "soccer_korea_kleague1",
+      "sportTitle": "K League 1",
+      "score": 0.695,
+      "matches": 3
+    },
+    {
+      "league": "K League 2",
+      "country": "South-Korea",
+      "sportKey": "soccer_korea_kleague1",
+      "sportTitle": "K League 1",
+      "score": 0.333,
+      "matches": 4
+    },
+    {
       "league": "Premier League",
       "country": "Bhutan",
       "sportKey": "soccer_epl",
@@ -1208,7 +1208,7 @@
       "matches": 2
     }
   ],
-  "matchesConsidered": 1463,
+  "matchesConsidered": 1459,
   "matchesMatched": 0,
   "matchesUpdated": 0,
   "fieldsFilled": 0,
@@ -1224,16 +1224,16 @@
       "bestScore": 0.167
     },
     {
-      "league": "Tasmania Northern Championship",
-      "country": "Australia",
-      "reason": "No matching soccer sport key",
-      "bestScore": 0.167
-    },
-    {
       "league": "NNSW League 1",
       "country": "Australia",
       "reason": "No matching soccer sport key",
       "bestScore": 0.25
+    },
+    {
+      "league": "Tasmania Northern Championship",
+      "country": "Australia",
+      "reason": "No matching soccer sport key",
+      "bestScore": 0.167
     },
     {
       "league": "New South Wales NPL 2",
@@ -2688,33 +2688,33 @@
       "reason": "No event/team match"
     },
     {
-      "league": "K League 1",
-      "home": "Jeonbuk Motors",
-      "away": "FC Seoul",
+      "league": "2. Division - Group 1",
+      "home": "Pors Grenland",
+      "away": "Brattvåg",
       "reason": "No event/team match"
     },
     {
-      "league": "K League 1",
-      "home": "Daejeon Citizen",
-      "away": "Gwangju FC",
+      "league": "2. Division - Group 1",
+      "home": "Sandviken",
+      "away": "Kvik Halden",
       "reason": "No event/team match"
     },
     {
-      "league": "K League 1",
-      "home": "Jeju United FC",
-      "away": "Incheon United",
+      "league": "2. Division - Group 1",
+      "home": "Mjondalen",
+      "away": "Notodden",
       "reason": "No event/team match"
     },
     {
-      "league": "K League 1",
-      "home": "Ulsan Hyundai FC",
-      "away": "FC Anyang",
+      "league": "2. Division - Group 1",
+      "home": "Lysekloster",
+      "away": "Bjarg",
       "reason": "No event/team match"
     },
     {
-      "league": "K League 2",
-      "home": "Cheonan City",
-      "away": "Yongin City",
+      "league": "2. Division - Group 1",
+      "home": "Træff",
+      "away": "jerv",
       "reason": "No event/team match"
     }
   ],
@@ -2768,18 +2768,6 @@
       "market": "double_chance"
     },
     {
-      "sportKey": "soccer_korea_kleague1",
-      "market": "btts"
-    },
-    {
-      "sportKey": "soccer_korea_kleague1",
-      "market": "draw_no_bet"
-    },
-    {
-      "sportKey": "soccer_korea_kleague1",
-      "market": "double_chance"
-    },
-    {
       "sportKey": "soccer_norway_eliteserien",
       "market": "btts"
     },
@@ -2804,15 +2792,15 @@
       "market": "double_chance"
     },
     {
-      "sportKey": "soccer_china_superleague",
+      "sportKey": "soccer_norway_eliteserien",
       "market": "btts"
     },
     {
-      "sportKey": "soccer_china_superleague",
+      "sportKey": "soccer_norway_eliteserien",
       "market": "draw_no_bet"
     },
     {
-      "sportKey": "soccer_china_superleague",
+      "sportKey": "soccer_norway_eliteserien",
       "market": "double_chance"
     },
     {
@@ -3041,6 +3029,18 @@
     },
     {
       "sportKey": "soccer_spain_la_liga",
+      "market": "double_chance"
+    },
+    {
+      "sportKey": "soccer_korea_kleague1",
+      "market": "btts"
+    },
+    {
+      "sportKey": "soccer_korea_kleague1",
+      "market": "draw_no_bet"
+    },
+    {
+      "sportKey": "soccer_korea_kleague1",
       "market": "double_chance"
     },
     {
@@ -3194,31 +3194,6 @@
       "statusCode": 422
     },
     {
-      "label": "soccer_korea_kleague1:base-combined",
-      "error": "Markets not supported by this endpoint: btts, double_chance, draw_no_bet",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_korea_kleague1:base-core",
-      "error": "Invalid commenceTimeFrom parameter. The format must be YYYY-MM-DDTHH:MM:SSZ, for example 2020-11-24T16:05:00Z",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_korea_kleague1:btts",
-      "error": "Markets not supported by this endpoint: btts",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_korea_kleague1:draw_no_bet",
-      "error": "Markets not supported by this endpoint: draw_no_bet",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_korea_kleague1:double_chance",
-      "error": "Markets not supported by this endpoint: double_chance",
-      "statusCode": 422
-    },
-    {
       "label": "soccer_norway_eliteserien:base-combined",
       "error": "Markets not supported by this endpoint: btts, double_chance, draw_no_bet",
       "statusCode": 422
@@ -3269,27 +3244,27 @@
       "statusCode": 422
     },
     {
-      "label": "soccer_china_superleague:base-combined",
+      "label": "soccer_norway_eliteserien:base-combined",
       "error": "Markets not supported by this endpoint: btts, double_chance, draw_no_bet",
       "statusCode": 422
     },
     {
-      "label": "soccer_china_superleague:base-core",
+      "label": "soccer_norway_eliteserien:base-core",
       "error": "Invalid commenceTimeFrom parameter. The format must be YYYY-MM-DDTHH:MM:SSZ, for example 2020-11-24T16:05:00Z",
       "statusCode": 422
     },
     {
-      "label": "soccer_china_superleague:btts",
+      "label": "soccer_norway_eliteserien:btts",
       "error": "Markets not supported by this endpoint: btts",
       "statusCode": 422
     },
     {
-      "label": "soccer_china_superleague:draw_no_bet",
+      "label": "soccer_norway_eliteserien:draw_no_bet",
       "error": "Markets not supported by this endpoint: draw_no_bet",
       "statusCode": 422
     },
     {
-      "label": "soccer_china_superleague:double_chance",
+      "label": "soccer_norway_eliteserien:double_chance",
       "error": "Markets not supported by this endpoint: double_chance",
       "statusCode": 422
     },
@@ -3769,6 +3744,31 @@
       "statusCode": 422
     },
     {
+      "label": "soccer_korea_kleague1:base-combined",
+      "error": "Markets not supported by this endpoint: btts, double_chance, draw_no_bet",
+      "statusCode": 422
+    },
+    {
+      "label": "soccer_korea_kleague1:base-core",
+      "error": "Invalid commenceTimeFrom parameter. The format must be YYYY-MM-DDTHH:MM:SSZ, for example 2020-11-24T16:05:00Z",
+      "statusCode": 422
+    },
+    {
+      "label": "soccer_korea_kleague1:btts",
+      "error": "Markets not supported by this endpoint: btts",
+      "statusCode": 422
+    },
+    {
+      "label": "soccer_korea_kleague1:draw_no_bet",
+      "error": "Markets not supported by this endpoint: draw_no_bet",
+      "statusCode": 422
+    },
+    {
+      "label": "soccer_korea_kleague1:double_chance",
+      "error": "Markets not supported by this endpoint: double_chance",
+      "statusCode": 422
+    },
+    {
       "label": "soccer_league_of_ireland:base-combined",
       "error": "Markets not supported by this endpoint: btts, double_chance, draw_no_bet",
       "statusCode": 422
@@ -3876,5 +3876,5 @@
   },
   "skipped": false,
   "skipReason": null,
-  "completedAt": "2026-08-01T13:07:39.698Z"
+  "completedAt": "2026-08-01T13:27:57.680Z"
 }
