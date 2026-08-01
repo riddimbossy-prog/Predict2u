@@ -1,6 +1,6 @@
 {
   "version": "v251",
-  "generatedAt": "2026-08-01T15:09:33.986Z",
+  "generatedAt": "2026-08-01T15:27:02.966Z",
   "provider": "The Odds API v4",
   "keyPresent": true,
   "regions": "uk",
@@ -56,30 +56,6 @@
       "matches": 9
     },
     {
-      "league": "Premier League",
-      "country": "Ukraine",
-      "sportKey": "soccer_epl",
-      "sportTitle": "EPL",
-      "score": 0.987,
-      "matches": 6
-    },
-    {
-      "league": "Oberliga - Rheinland-Pfalz / Saar",
-      "country": "Germany",
-      "sportKey": "soccer_germany_bundesliga",
-      "sportTitle": "Bundesliga - Germany",
-      "score": 0.305,
-      "matches": 4
-    },
-    {
-      "league": "Ekstraklasa",
-      "country": "Poland",
-      "sportKey": "soccer_poland_ekstraklasa",
-      "sportTitle": "Ekstraklasa - Poland",
-      "score": 1,
-      "matches": 7
-    },
-    {
       "league": "Allsvenskan",
       "country": "Sweden",
       "sportKey": "soccer_sweden_allsvenskan",
@@ -125,7 +101,7 @@
       "sportKey": "soccer_norway_eliteserien",
       "sportTitle": "Eliteserien - Norway",
       "score": 0.305,
-      "matches": 7
+      "matches": 6
     },
     {
       "league": "Superettan",
@@ -133,7 +109,7 @@
       "sportKey": "soccer_sweden_superettan",
       "sportTitle": "Superettan - Sweden",
       "score": 1,
-      "matches": 6
+      "matches": 5
     },
     {
       "league": "Elitettan",
@@ -173,7 +149,7 @@
       "sportKey": "soccer_poland_ekstraklasa",
       "sportTitle": "Ekstraklasa - Poland",
       "score": 0.305,
-      "matches": 6
+      "matches": 5
     },
     {
       "league": "Mineiro U20",
@@ -184,12 +160,12 @@
       "matches": 5
     },
     {
-      "league": "First League",
-      "country": "Russia",
-      "sportKey": "soccer_russia_premier_league",
-      "sportTitle": "Premier League - Russia",
-      "score": 0.513,
-      "matches": 9
+      "league": "Oberliga - Hessen",
+      "country": "Germany",
+      "sportKey": "soccer_germany_bundesliga",
+      "sportTitle": "Bundesliga - Germany",
+      "score": 0.347,
+      "matches": 5
     },
     {
       "league": "Oberliga - Hessen",
@@ -229,7 +205,7 @@
       "sportKey": "soccer_epl",
       "sportTitle": "EPL",
       "score": 0.5,
-      "matches": 8
+      "matches": 7
     },
     {
       "league": "Premier Soccer League",
@@ -278,6 +254,14 @@
       "sportTitle": "EPL",
       "score": 0.987,
       "matches": 4
+    },
+    {
+      "league": "Oberliga - Rheinland-Pfalz / Saar",
+      "country": "Germany",
+      "sportKey": "soccer_germany_bundesliga",
+      "sportTitle": "Bundesliga - Germany",
+      "score": 0.305,
+      "matches": 3
     },
     {
       "league": "Supreme Division Women",
@@ -576,11 +560,27 @@
       "matches": 2
     },
     {
+      "league": "First League",
+      "country": "Russia",
+      "sportKey": "soccer_russia_premier_league",
+      "sportTitle": "Premier League - Russia",
+      "score": 0.513,
+      "matches": 8
+    },
+    {
       "league": "Liga MX U21",
       "country": "Mexico",
       "sportKey": "soccer_mexico_ligamx",
       "sportTitle": "Liga MX",
       "score": 0.68,
+      "matches": 6
+    },
+    {
+      "league": "Ekstraklasa",
+      "country": "Poland",
+      "sportKey": "soccer_poland_ekstraklasa",
+      "sportTitle": "Ekstraklasa - Poland",
+      "score": 1,
       "matches": 6
     },
     {
@@ -992,6 +992,14 @@
       "matches": 3
     },
     {
+      "league": "Premier League",
+      "country": "Ukraine",
+      "sportKey": "soccer_epl",
+      "sportTitle": "EPL",
+      "score": 0.987,
+      "matches": 5
+    },
+    {
       "league": "K League 1",
       "country": "South-Korea",
       "sportKey": "soccer_korea_kleague1",
@@ -1192,7 +1200,7 @@
       "matches": 2
     }
   ],
-  "matchesConsidered": 1317,
+  "matchesConsidered": 1302,
   "matchesMatched": 0,
   "matchesUpdated": 0,
   "fieldsFilled": 0,
@@ -1250,34 +1258,16 @@
       "bestScore": 0.143
     },
     {
-      "league": "Vysshaya Liga",
-      "country": "Tajikistan",
-      "reason": "No matching soccer sport key",
-      "bestScore": 0.143
-    },
-    {
       "league": "Segunda División",
       "country": "Uruguay",
       "reason": "No matching soccer sport key",
       "bestScore": 0.143
     },
     {
-      "league": "1. Deild",
-      "country": "Faroe-Islands",
-      "reason": "No matching soccer sport key",
-      "bestScore": 0.111
-    },
-    {
       "league": "Virsliga",
       "country": "Latvia",
       "reason": "No matching soccer sport key",
       "bestScore": 0
-    },
-    {
-      "league": "Esiliiga B",
-      "country": "Estonia",
-      "reason": "No matching soccer sport key",
-      "bestScore": 0.143
     },
     {
       "league": "1. Division",
@@ -1304,10 +1294,22 @@
       "bestScore": 0.167
     },
     {
+      "league": "1. Deild",
+      "country": "Faroe-Islands",
+      "reason": "No matching soccer sport key",
+      "bestScore": 0.111
+    },
+    {
       "league": "Úrvalsdeild",
       "country": "Iceland",
       "reason": "No matching soccer sport key",
       "bestScore": 0
+    },
+    {
+      "league": "Esiliiga B",
+      "country": "Estonia",
+      "reason": "No matching soccer sport key",
+      "bestScore": 0.143
     },
     {
       "league": "David Kipiani Cup",
@@ -1568,6 +1570,12 @@
       "bestScore": 0
     },
     {
+      "league": "Vysshaya Liga",
+      "country": "Tajikistan",
+      "reason": "No matching soccer sport key",
+      "bestScore": 0.143
+    },
+    {
       "league": "A Lyga",
       "country": "Lithuania",
       "reason": "No matching soccer sport key",
@@ -1640,42 +1648,6 @@
       "reason": "No event/team match"
     },
     {
-      "league": "Premier League",
-      "home": "Metalist 1925 Kharkiv",
-      "away": "Veres Rivne",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Premier League",
-      "home": "Chornomorets",
-      "away": "Polessya",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Premier League",
-      "home": "Epitsentr Dunayivtsi",
-      "away": "Obolon'-Brovar",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Premier League",
-      "home": "Dynamo Kyiv",
-      "away": "Livyi Bereh",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Premier League",
-      "home": "Bukovyna",
-      "away": "LNZ Cherkasy",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Premier League",
-      "home": "Shakhtar Donetsk",
-      "away": "Kudrivka",
-      "reason": "No event/team match"
-    },
-    {
       "league": "Premier Soccer League",
       "home": "Triangle United",
       "away": "Hunters",
@@ -1691,12 +1663,6 @@
       "league": "Premier Soccer League",
       "home": "Agama",
       "away": "Ngezi Platinum",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Premier Soccer League",
-      "home": "Chicken Inn",
-      "away": "Bulawayo Chiefs",
       "reason": "No event/team match"
     },
     {
@@ -1973,6 +1939,36 @@
       "league": "Queensland Premier League",
       "home": "St George Willawong",
       "away": "Brisbane Strikers",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Premier League",
+      "home": "Chornomorets",
+      "away": "Polessya",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Premier League",
+      "home": "Epitsentr Dunayivtsi",
+      "away": "Obolon'-Brovar",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Premier League",
+      "home": "Dynamo Kyiv",
+      "away": "Livyi Bereh",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Premier League",
+      "home": "Bukovyna",
+      "away": "LNZ Cherkasy",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Premier League",
+      "home": "Shakhtar Donetsk",
+      "away": "Kudrivka",
       "reason": "No event/team match"
     },
     {
@@ -2700,6 +2696,18 @@
       "home": "Altglienicke",
       "away": "Hertha BSC II",
       "reason": "No event/team match"
+    },
+    {
+      "league": "Regionalliga - Nordost",
+      "home": "BFC Dynamo",
+      "away": "BSG Chemie Leipzig",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Regionalliga - Nordost",
+      "home": "Hallescher FC",
+      "away": "FC Rot-Weiß Erfurt",
+      "reason": "No event/team match"
     }
   ],
   "unsupportedMarkets": [
@@ -2764,18 +2772,6 @@
       "market": "double_chance"
     },
     {
-      "sportKey": "soccer_poland_ekstraklasa",
-      "market": "btts"
-    },
-    {
-      "sportKey": "soccer_poland_ekstraklasa",
-      "market": "draw_no_bet"
-    },
-    {
-      "sportKey": "soccer_poland_ekstraklasa",
-      "market": "double_chance"
-    },
-    {
       "sportKey": "soccer_norway_eliteserien",
       "market": "btts"
     },
@@ -2785,42 +2781,6 @@
     },
     {
       "sportKey": "soccer_norway_eliteserien",
-      "market": "double_chance"
-    },
-    {
-      "sportKey": "soccer_norway_eliteserien",
-      "market": "btts"
-    },
-    {
-      "sportKey": "soccer_norway_eliteserien",
-      "market": "draw_no_bet"
-    },
-    {
-      "sportKey": "soccer_norway_eliteserien",
-      "market": "double_chance"
-    },
-    {
-      "sportKey": "soccer_austria_bundesliga",
-      "market": "btts"
-    },
-    {
-      "sportKey": "soccer_austria_bundesliga",
-      "market": "draw_no_bet"
-    },
-    {
-      "sportKey": "soccer_austria_bundesliga",
-      "market": "double_chance"
-    },
-    {
-      "sportKey": "soccer_poland_ekstraklasa",
-      "market": "btts"
-    },
-    {
-      "sportKey": "soccer_poland_ekstraklasa",
-      "market": "draw_no_bet"
-    },
-    {
-      "sportKey": "soccer_poland_ekstraklasa",
       "market": "double_chance"
     },
     {
@@ -2857,6 +2817,18 @@
     },
     {
       "sportKey": "soccer_finland_veikkausliiga",
+      "market": "double_chance"
+    },
+    {
+      "sportKey": "soccer_poland_ekstraklasa",
+      "market": "btts"
+    },
+    {
+      "sportKey": "soccer_poland_ekstraklasa",
+      "market": "draw_no_bet"
+    },
+    {
+      "sportKey": "soccer_poland_ekstraklasa",
       "market": "double_chance"
     },
     {
@@ -3239,31 +3211,6 @@
       "statusCode": 422
     },
     {
-      "label": "soccer_poland_ekstraklasa:base-combined",
-      "error": "Markets not supported by this endpoint: btts, double_chance, draw_no_bet",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_poland_ekstraklasa:base-core",
-      "error": "Invalid commenceTimeFrom parameter. The format must be YYYY-MM-DDTHH:MM:SSZ, for example 2020-11-24T16:05:00Z",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_poland_ekstraklasa:btts",
-      "error": "Markets not supported by this endpoint: btts",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_poland_ekstraklasa:draw_no_bet",
-      "error": "Markets not supported by this endpoint: draw_no_bet",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_poland_ekstraklasa:double_chance",
-      "error": "Markets not supported by this endpoint: double_chance",
-      "statusCode": 422
-    },
-    {
       "label": "soccer_norway_eliteserien:base-combined",
       "error": "Markets not supported by this endpoint: btts, double_chance, draw_no_bet",
       "statusCode": 422
@@ -3360,6 +3307,31 @@
     },
     {
       "label": "soccer_finland_veikkausliiga:double_chance",
+      "error": "Markets not supported by this endpoint: double_chance",
+      "statusCode": 422
+    },
+    {
+      "label": "soccer_poland_ekstraklasa:base-combined",
+      "error": "Markets not supported by this endpoint: btts, double_chance, draw_no_bet",
+      "statusCode": 422
+    },
+    {
+      "label": "soccer_poland_ekstraklasa:base-core",
+      "error": "Invalid commenceTimeFrom parameter. The format must be YYYY-MM-DDTHH:MM:SSZ, for example 2020-11-24T16:05:00Z",
+      "statusCode": 422
+    },
+    {
+      "label": "soccer_poland_ekstraklasa:btts",
+      "error": "Markets not supported by this endpoint: btts",
+      "statusCode": 422
+    },
+    {
+      "label": "soccer_poland_ekstraklasa:draw_no_bet",
+      "error": "Markets not supported by this endpoint: draw_no_bet",
+      "statusCode": 422
+    },
+    {
+      "label": "soccer_poland_ekstraklasa:double_chance",
       "error": "Markets not supported by this endpoint: double_chance",
       "statusCode": 422
     },
@@ -3896,5 +3868,5 @@
   },
   "skipped": false,
   "skipReason": null,
-  "completedAt": "2026-08-01T15:09:59.505Z"
+  "completedAt": "2026-08-01T15:27:24.740Z"
 }
