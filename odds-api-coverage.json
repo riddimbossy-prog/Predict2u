@@ -1,6 +1,6 @@
 {
   "version": "v251",
-  "generatedAt": "2026-08-02T18:52:51.469Z",
+  "generatedAt": "2026-08-02T19:19:17.280Z",
   "provider": "The Odds API v4",
   "keyPresent": true,
   "regions": "uk",
@@ -45,7 +45,7 @@
       "sportKey": "soccer_germany_bundesliga",
       "sportTitle": "Bundesliga - Germany",
       "score": 0.347,
-      "matches": 3
+      "matches": 2
     },
     {
       "league": "Brasileiro Women",
@@ -85,22 +85,6 @@
       "sportKey": "soccer_usa_mls",
       "sportTitle": "MLS",
       "score": 1,
-      "matches": 4
-    },
-    {
-      "league": "Primera División",
-      "country": "Chile",
-      "sportKey": "soccer_chile_campeonato",
-      "sportTitle": "Primera División - Chile",
-      "score": 1,
-      "matches": 3
-    },
-    {
-      "league": "Primera B",
-      "country": "Chile",
-      "sportKey": "soccer_chile_campeonato",
-      "sportTitle": "Primera División - Chile",
-      "score": 0.466,
       "matches": 4
     },
     {
@@ -256,14 +240,6 @@
       "matches": 5
     },
     {
-      "league": "Ekstraklasa",
-      "country": "Poland",
-      "sportKey": "soccer_poland_ekstraklasa",
-      "sportTitle": "Ekstraklasa - Poland",
-      "score": 1,
-      "matches": 2
-    },
-    {
       "league": "Primera División",
       "country": "Peru",
       "sportKey": "soccer_argentina_primera_division",
@@ -278,6 +254,22 @@
       "sportTitle": "Ekstraklasa - Poland",
       "score": 1,
       "matches": 2
+    },
+    {
+      "league": "Primera División",
+      "country": "Chile",
+      "sportKey": "soccer_chile_campeonato",
+      "sportTitle": "Primera División - Chile",
+      "score": 1,
+      "matches": 2
+    },
+    {
+      "league": "Primera B",
+      "country": "Chile",
+      "sportKey": "soccer_chile_campeonato",
+      "sportTitle": "Primera División - Chile",
+      "score": 0.466,
+      "matches": 3
     },
     {
       "league": "Primera División",
@@ -624,7 +616,7 @@
       "matches": 2
     }
   ],
-  "matchesConsidered": 370,
+  "matchesConsidered": 363,
   "matchesMatched": 0,
   "matchesUpdated": 0,
   "fieldsFilled": 0,
@@ -633,12 +625,6 @@
   "derivedHtftMatches": 0,
   "bookmakerRows": 0,
   "unmatched": [
-    {
-      "league": "Npl Nsw U20",
-      "country": "Australia",
-      "reason": "No matching soccer sport key",
-      "bestScore": 0
-    },
     {
       "league": "Friendlies Clubs",
       "country": "World",
@@ -672,12 +658,6 @@
     {
       "league": "Meistaradeildin",
       "country": "Faroe-Islands",
-      "reason": "No matching soccer sport key",
-      "bestScore": 0
-    },
-    {
-      "league": "HNL",
-      "country": "Croatia",
       "reason": "No matching soccer sport key",
       "bestScore": 0
     },
@@ -758,6 +738,12 @@
       "country": "Romania",
       "reason": "No matching soccer sport key",
       "bestScore": 0.143
+    },
+    {
+      "league": "HNL",
+      "country": "Croatia",
+      "reason": "No matching soccer sport key",
+      "bestScore": 0
     },
     {
       "league": "Division Profesional - Clausura",
@@ -919,12 +905,6 @@
       "league": "Oberliga - Hessen",
       "home": "Kassel",
       "away": "Darmstadt 98 II",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Oberliga - Hessen",
-      "home": "1960 Hanau",
-      "away": "Hünfelder SV",
       "reason": "No event/team match"
     },
     {
@@ -1303,60 +1283,6 @@
       "league": "NWSL Women",
       "home": "Denver Summit W",
       "away": "Boston Legacy W",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Primera División",
-      "home": "Concepción",
-      "away": "U. Catolica",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Primera División",
-      "home": "D. La Serena",
-      "away": "O'Higgins",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Primera División",
-      "home": "Universidad de Chile",
-      "away": "Huachipato",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Primera B",
-      "home": "Magallanes",
-      "away": "Union Espanola",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Primera B",
-      "home": "Recoleta",
-      "away": "D. Puerto Montt",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Primera B",
-      "home": "Deportes Santa Cruz",
-      "away": "Santiago Wanderers",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Primera B",
-      "home": "Deportes Temuco",
-      "away": "Deportes Copiapo",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Copa Chile",
-      "home": "Nublense",
-      "away": "Rangers de Talca",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Copa Chile",
-      "home": "Universidad de Concepcion",
-      "away": "Curico Unido",
       "reason": "No event/team match"
     },
     {
@@ -1930,6 +1856,48 @@
       "reason": "No event/team match"
     },
     {
+      "league": "Primera División",
+      "home": "D. La Serena",
+      "away": "O'Higgins",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Primera División",
+      "home": "Universidad de Chile",
+      "away": "Huachipato",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Primera B",
+      "home": "Recoleta",
+      "away": "D. Puerto Montt",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Primera B",
+      "home": "Deportes Santa Cruz",
+      "away": "Santiago Wanderers",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Primera B",
+      "home": "Deportes Temuco",
+      "away": "Deportes Copiapo",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Copa Chile",
+      "home": "Nublense",
+      "away": "Rangers de Talca",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Copa Chile",
+      "home": "Universidad de Concepcion",
+      "away": "Curico Unido",
+      "reason": "No event/team match"
+    },
+    {
       "league": "Primera Division",
       "home": "Águila",
       "away": "Cacahuatique",
@@ -2002,51 +1970,81 @@
       "reason": "No event/team match"
     },
     {
-      "league": "Copa Do Brasil",
-      "home": "Mirassol",
-      "away": "Gremio",
+      "league": "3. Division - Girone 2",
+      "home": "Nardo",
+      "away": "Molde II",
       "reason": "No event/team match"
     },
     {
-      "league": "Copa Do Brasil",
-      "home": "Chapecoense-sc",
-      "away": "Cruzeiro",
+      "league": "3. Division - Girone 2",
+      "home": "Strindheim",
+      "away": "Aalesund II",
       "reason": "No event/team match"
     },
     {
-      "league": "Copa Do Brasil",
-      "home": "Internacional",
-      "away": "Corinthians",
+      "league": "3. Division - Girone 2",
+      "home": "Kvik Trondheim",
+      "away": "Melhus",
       "reason": "No event/team match"
     },
     {
-      "league": "Copa Do Brasil",
-      "home": "Atletico Paranaense",
-      "away": "Vitoria",
+      "league": "3. Division - Girone 2",
+      "home": "Orkla",
+      "away": "Rosenborg II",
       "reason": "No event/team match"
     },
     {
-      "league": "Copa Do Brasil",
-      "home": "Juventude",
-      "away": "Atletico-MG",
+      "league": "3. Division - Girone 3",
+      "home": "Djerv",
+      "away": "Åsane II",
       "reason": "No event/team match"
     },
     {
-      "league": "Liga MX Femenil",
-      "home": "Pumas UNAM W",
-      "away": "León W",
+      "league": "3. Division - Girone 3",
+      "home": "Sogndal II",
+      "away": "Førde",
       "reason": "No event/team match"
     },
     {
-      "league": "Liga MX Femenil",
-      "home": "Atlético San Luis W",
-      "away": "Toluca W",
+      "league": "3. Division - Girone 3",
+      "home": "Brann II",
+      "away": "Stord",
       "reason": "No event/team match"
     },
     {
-      "league": "Liga MX Femenil",
-      "home": "Guadalajara W",
-      "away": "Querétaro W",
+      "league": "3. Division - Girone 4",
+      "home": "Brodd",
+      "away": "Stabæk II",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "3. Division - Girone 4",
+      "home": "Vindbjart",
+      "away": "Odd II",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "3. Division - Girone 6",
+      "home": "Brumunddal",
+      "away": "Lyn II",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "3. Division - Girone 6",
+      "home": "Oppsal",
+      "away": "Sarpsborg 08 II",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "1. Division",
+      "home": "Ranheim",
+      "away": "Haugesund",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "3. Division - Girone 1",
+      "home": "KFUM II",
+      "away": "SF Grei",
       "reason": "No event/team match"
     },
     {
@@ -2101,6 +2099,30 @@
       "league": "DBU Pokalen",
       "home": "Brønshøj",
       "away": "HB Koge",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "DBU Pokalen",
+      "home": "Holstebro",
+      "away": "Aalborg",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "DBU Pokalen",
+      "home": "Kolding B",
+      "away": "Næsby",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "DBU Pokalen",
+      "home": "FA 2000",
+      "away": "Fremad Amager",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "DBU Pokalen",
+      "home": "Lyseng",
+      "away": "Vejgaard B",
       "reason": "No event/team match"
     }
   ],
@@ -2190,15 +2212,15 @@
       "market": "double_chance"
     },
     {
-      "sportKey": "soccer_chile_campeonato",
+      "sportKey": "soccer_sweden_allsvenskan",
       "market": "btts"
     },
     {
-      "sportKey": "soccer_chile_campeonato",
+      "sportKey": "soccer_sweden_allsvenskan",
       "market": "draw_no_bet"
     },
     {
-      "sportKey": "soccer_chile_campeonato",
+      "sportKey": "soccer_sweden_allsvenskan",
       "market": "double_chance"
     },
     {
@@ -2295,6 +2317,18 @@
     },
     {
       "sportKey": "soccer_mexico_ligamx",
+      "market": "double_chance"
+    },
+    {
+      "sportKey": "soccer_chile_campeonato",
+      "market": "btts"
+    },
+    {
+      "sportKey": "soccer_chile_campeonato",
+      "market": "draw_no_bet"
+    },
+    {
+      "sportKey": "soccer_chile_campeonato",
       "market": "double_chance"
     },
     {
@@ -2571,27 +2605,27 @@
       "statusCode": 422
     },
     {
-      "label": "soccer_chile_campeonato:base-combined",
+      "label": "soccer_sweden_allsvenskan:base-combined",
       "error": "Markets not supported by this endpoint: btts, double_chance, draw_no_bet",
       "statusCode": 422
     },
     {
-      "label": "soccer_chile_campeonato:base-core",
+      "label": "soccer_sweden_allsvenskan:base-core",
       "error": "Invalid commenceTimeFrom parameter. The format must be YYYY-MM-DDTHH:MM:SSZ, for example 2020-11-24T16:05:00Z",
       "statusCode": 422
     },
     {
-      "label": "soccer_chile_campeonato:btts",
+      "label": "soccer_sweden_allsvenskan:btts",
       "error": "Markets not supported by this endpoint: btts",
       "statusCode": 422
     },
     {
-      "label": "soccer_chile_campeonato:draw_no_bet",
+      "label": "soccer_sweden_allsvenskan:draw_no_bet",
       "error": "Markets not supported by this endpoint: draw_no_bet",
       "statusCode": 422
     },
     {
-      "label": "soccer_chile_campeonato:double_chance",
+      "label": "soccer_sweden_allsvenskan:double_chance",
       "error": "Markets not supported by this endpoint: double_chance",
       "statusCode": 422
     },
@@ -2792,6 +2826,31 @@
     },
     {
       "label": "soccer_mexico_ligamx:double_chance",
+      "error": "Markets not supported by this endpoint: double_chance",
+      "statusCode": 422
+    },
+    {
+      "label": "soccer_chile_campeonato:base-combined",
+      "error": "Markets not supported by this endpoint: btts, double_chance, draw_no_bet",
+      "statusCode": 422
+    },
+    {
+      "label": "soccer_chile_campeonato:base-core",
+      "error": "Invalid commenceTimeFrom parameter. The format must be YYYY-MM-DDTHH:MM:SSZ, for example 2020-11-24T16:05:00Z",
+      "statusCode": 422
+    },
+    {
+      "label": "soccer_chile_campeonato:btts",
+      "error": "Markets not supported by this endpoint: btts",
+      "statusCode": 422
+    },
+    {
+      "label": "soccer_chile_campeonato:draw_no_bet",
+      "error": "Markets not supported by this endpoint: draw_no_bet",
+      "statusCode": 422
+    },
+    {
+      "label": "soccer_chile_campeonato:double_chance",
       "error": "Markets not supported by this endpoint: double_chance",
       "statusCode": 422
     },
@@ -3003,5 +3062,5 @@
   },
   "skipped": false,
   "skipReason": null,
-  "completedAt": "2026-08-02T18:53:09.762Z"
+  "completedAt": "2026-08-02T19:19:23.216Z"
 }
