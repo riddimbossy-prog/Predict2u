@@ -1,6 +1,6 @@
 {
   "version": "v251",
-  "generatedAt": "2026-08-02T13:31:51.200Z",
+  "generatedAt": "2026-08-02T13:54:53.033Z",
   "provider": "The Odds API v4",
   "keyPresent": true,
   "regions": "uk",
@@ -24,28 +24,12 @@
       "matches": 6
     },
     {
-      "league": "Division 2 - Norra Svealand",
-      "country": "Sweden",
-      "sportKey": "soccer_sweden_allsvenskan",
-      "sportTitle": "Allsvenskan - Sweden",
-      "score": 0.305,
-      "matches": 3
-    },
-    {
-      "league": "Second League - Group 4",
-      "country": "Russia",
-      "sportKey": "soccer_russia_premier_league",
-      "sportTitle": "Premier League - Russia",
+      "league": "League Two",
+      "country": "China",
+      "sportKey": "soccer_china_superleague",
+      "sportTitle": "Super League - China",
       "score": 0.43,
-      "matches": 4
-    },
-    {
-      "league": "Second League A - Division A Gold",
-      "country": "Russia",
-      "sportKey": "soccer_russia_premier_league",
-      "sportTitle": "Premier League - Russia",
-      "score": 0.402,
-      "matches": 3
+      "matches": 2
     },
     {
       "league": "League Two",
@@ -110,6 +94,14 @@
       "sportTitle": "Eliteserien - Norway",
       "score": 0.305,
       "matches": 3
+    },
+    {
+      "league": "Division 2 - Norra Svealand",
+      "country": "Sweden",
+      "sportKey": "soccer_sweden_allsvenskan",
+      "sportTitle": "Allsvenskan - Sweden",
+      "score": 0.305,
+      "matches": 2
     },
     {
       "league": "Division 2 - Södra Svealand",
@@ -296,6 +288,14 @@
       "matches": 5
     },
     {
+      "league": "Second League - Group 4",
+      "country": "Russia",
+      "sportKey": "soccer_russia_premier_league",
+      "sportTitle": "Premier League - Russia",
+      "score": 0.43,
+      "matches": 3
+    },
+    {
       "league": "Copa Paulista",
       "country": "Brazil",
       "sportKey": "soccer_brazil_campeonato",
@@ -334,6 +334,14 @@
       "sportTitle": "Bundesliga - Germany",
       "score": 0.347,
       "matches": 4
+    },
+    {
+      "league": "Second League A - Division A Gold",
+      "country": "Russia",
+      "sportKey": "soccer_russia_premier_league",
+      "sportTitle": "Premier League - Russia",
+      "score": 0.402,
+      "matches": 2
     },
     {
       "league": "Paulista Série B",
@@ -864,7 +872,7 @@
       "matches": 2
     }
   ],
-  "matchesConsidered": 569,
+  "matchesConsidered": 566,
   "matchesMatched": 0,
   "matchesUpdated": 0,
   "fieldsFilled": 0,
@@ -1384,21 +1392,27 @@
       "reason": "No event/team match"
     },
     {
-      "league": "Division 2 - Norra Svealand",
-      "home": "Enskede",
-      "away": "Täby",
+      "league": "League Two",
+      "home": "Nantong Haimen Codion",
+      "away": "Tai'an Tiankuang",
       "reason": "No event/team match"
     },
     {
-      "league": "Division 2 - Norra Svealand",
-      "home": "Bollstanäs",
-      "away": "Franke",
+      "league": "League Two",
+      "home": "Chengdu Rongcheng II",
+      "away": "Xiamen Feilu",
       "reason": "No event/team match"
     },
     {
-      "league": "Division 2 - Norra Svealand",
-      "home": "Sunnersta",
-      "away": "Viggbyholms IK",
+      "league": "Super League",
+      "home": "Shenyang Urban",
+      "away": "Shanghai Shenhua",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Super League",
+      "home": "Sichuan Jiuniu",
+      "away": "Chongqing Tongliang Long",
       "reason": "No event/team match"
     },
     {
@@ -1429,6 +1443,18 @@
       "league": "Allsvenskan",
       "home": "Halmstad",
       "away": "Sirius",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Division 2 - Norra Svealand",
+      "home": "Bollstanäs",
+      "away": "Franke",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Division 2 - Norra Svealand",
+      "home": "Sunnersta",
+      "away": "Viggbyholms IK",
       "reason": "No event/team match"
     },
     {
@@ -1525,138 +1551,6 @@
       "league": "Division 2 - Västra Götaland",
       "home": "Landvetter IS",
       "away": "Dalstorps",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Second League - Group 4",
-      "home": "KDV",
-      "away": "Orenburg II",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Second League - Group 4",
-      "home": "Izhevsk",
-      "away": "Rubin Kazan 2",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Second League - Group 4",
-      "home": "Khimik Dzerzhinsk",
-      "away": "Nosta",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Second League - Group 4",
-      "home": "Chelyabinsk II",
-      "away": "Dinamo Barnaul",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Second League A - Division A Gold",
-      "home": "Dinamo Kirov",
-      "away": "Kaluga",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Second League A - Division A Gold",
-      "home": "Alaniya Vladikavkaz",
-      "away": "Volgar Astrakhan",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Second League A - Division A Gold",
-      "home": "Mashuk-KMV",
-      "away": "FK Sokol Saratov",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "First League",
-      "home": "Arsenal Tula",
-      "away": "Torpedo Moskva",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "First League",
-      "home": "Volga Ulyanovsk",
-      "away": "Chelyabinsk",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "First League",
-      "home": "Nizhny Novgorod",
-      "away": "Shinnik Yaroslavl",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "First League",
-      "home": "FC UFA",
-      "away": "KAMAZ",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "First League",
-      "home": "Veles",
-      "away": "Rotor Volgograd",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Second League - Group 2",
-      "home": "Irkutsk",
-      "away": "Dinamo Vologda",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Second League - Group 2",
-      "home": "Luki-Energiya",
-      "away": "Chertanovo Moscow",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Second League - Group 2",
-      "home": "Murom",
-      "away": "Kosmos Dolgoprudny",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Second League - Group 2",
-      "home": "Tver",
-      "away": "Cherepovets",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Second League - Group 2",
-      "home": "Torpedo Vladimir",
-      "away": "Baltika II",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Second League A - Division A Silver",
-      "home": "Zenit 2",
-      "away": "Dinamo Moskva II",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "League Two",
-      "home": "Nantong Haimen Codion",
-      "away": "Tai'an Tiankuang",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "League Two",
-      "home": "Chengdu Rongcheng II",
-      "away": "Xiamen Feilu",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Super League",
-      "home": "Shenyang Urban",
-      "away": "Shanghai Shenhua",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Super League",
-      "home": "Sichuan Jiuniu",
-      "away": "Chongqing Tongliang Long",
       "reason": "No event/team match"
     },
     {
@@ -2350,6 +2244,102 @@
       "reason": "No event/team match"
     },
     {
+      "league": "First League",
+      "home": "Arsenal Tula",
+      "away": "Torpedo Moskva",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "First League",
+      "home": "Volga Ulyanovsk",
+      "away": "Chelyabinsk",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "First League",
+      "home": "Nizhny Novgorod",
+      "away": "Shinnik Yaroslavl",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "First League",
+      "home": "FC UFA",
+      "away": "KAMAZ",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "First League",
+      "home": "Veles",
+      "away": "Rotor Volgograd",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Second League - Group 2",
+      "home": "Irkutsk",
+      "away": "Dinamo Vologda",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Second League - Group 2",
+      "home": "Luki-Energiya",
+      "away": "Chertanovo Moscow",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Second League - Group 2",
+      "home": "Murom",
+      "away": "Kosmos Dolgoprudny",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Second League - Group 2",
+      "home": "Tver",
+      "away": "Cherepovets",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Second League - Group 2",
+      "home": "Torpedo Vladimir",
+      "away": "Baltika II",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Second League - Group 4",
+      "home": "Izhevsk",
+      "away": "Rubin Kazan 2",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Second League - Group 4",
+      "home": "Khimik Dzerzhinsk",
+      "away": "Nosta",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Second League - Group 4",
+      "home": "Chelyabinsk II",
+      "away": "Dinamo Barnaul",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Second League A - Division A Gold",
+      "home": "Alaniya Vladikavkaz",
+      "away": "Volgar Astrakhan",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Second League A - Division A Gold",
+      "home": "Mashuk-KMV",
+      "away": "FK Sokol Saratov",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Second League A - Division A Silver",
+      "home": "Zenit 2",
+      "away": "Dinamo Moskva II",
+      "reason": "No event/team match"
+    },
+    {
       "league": "Mineiro U20",
       "home": "Social U20",
       "away": "Betim U20",
@@ -2371,6 +2361,24 @@
       "league": "Copa Paulista",
       "home": "Grêmio Prudente",
       "away": "Linense",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Paulista - U20",
+      "home": "Juventus U20",
+      "away": "Santos U20",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Paulista - U20",
+      "home": "Mauá U20",
+      "away": "Palmeiras U20",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Paulista - U20",
+      "home": "RB Bragantino U20",
+      "away": "Tanabi SP U20",
       "reason": "No event/team match"
     }
   ],
@@ -2400,39 +2408,27 @@
       "market": "double_chance"
     },
     {
-      "sportKey": "soccer_sweden_allsvenskan",
+      "sportKey": "soccer_china_superleague",
       "market": "btts"
     },
     {
-      "sportKey": "soccer_sweden_allsvenskan",
+      "sportKey": "soccer_china_superleague",
       "market": "draw_no_bet"
     },
     {
-      "sportKey": "soccer_sweden_allsvenskan",
+      "sportKey": "soccer_china_superleague",
       "market": "double_chance"
     },
     {
-      "sportKey": "soccer_russia_premier_league",
+      "sportKey": "soccer_sweden_allsvenskan",
       "market": "btts"
     },
     {
-      "sportKey": "soccer_russia_premier_league",
+      "sportKey": "soccer_sweden_allsvenskan",
       "market": "draw_no_bet"
     },
     {
-      "sportKey": "soccer_russia_premier_league",
-      "market": "double_chance"
-    },
-    {
-      "sportKey": "soccer_china_superleague",
-      "market": "btts"
-    },
-    {
-      "sportKey": "soccer_china_superleague",
-      "market": "draw_no_bet"
-    },
-    {
-      "sportKey": "soccer_china_superleague",
+      "sportKey": "soccer_sweden_allsvenskan",
       "market": "double_chance"
     },
     {
@@ -2472,18 +2468,6 @@
       "market": "double_chance"
     },
     {
-      "sportKey": "soccer_epl",
-      "market": "btts"
-    },
-    {
-      "sportKey": "soccer_epl",
-      "market": "draw_no_bet"
-    },
-    {
-      "sportKey": "soccer_epl",
-      "market": "double_chance"
-    },
-    {
       "sportKey": "soccer_denmark_superliga",
       "market": "btts"
     },
@@ -2505,6 +2489,18 @@
     },
     {
       "sportKey": "soccer_greece_super_league",
+      "market": "double_chance"
+    },
+    {
+      "sportKey": "soccer_russia_premier_league",
+      "market": "btts"
+    },
+    {
+      "sportKey": "soccer_russia_premier_league",
+      "market": "draw_no_bet"
+    },
+    {
+      "sportKey": "soccer_russia_premier_league",
       "market": "double_chance"
     },
     {
@@ -2776,56 +2772,6 @@
       "statusCode": 422
     },
     {
-      "label": "soccer_sweden_allsvenskan:base-combined",
-      "error": "Markets not supported by this endpoint: btts, double_chance, draw_no_bet",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_sweden_allsvenskan:base-core",
-      "error": "Invalid commenceTimeFrom parameter. The format must be YYYY-MM-DDTHH:MM:SSZ, for example 2020-11-24T16:05:00Z",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_sweden_allsvenskan:btts",
-      "error": "Markets not supported by this endpoint: btts",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_sweden_allsvenskan:draw_no_bet",
-      "error": "Markets not supported by this endpoint: draw_no_bet",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_sweden_allsvenskan:double_chance",
-      "error": "Markets not supported by this endpoint: double_chance",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_russia_premier_league:base-combined",
-      "error": "Markets not supported by this endpoint: btts, double_chance, draw_no_bet",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_russia_premier_league:base-core",
-      "error": "Invalid commenceTimeFrom parameter. The format must be YYYY-MM-DDTHH:MM:SSZ, for example 2020-11-24T16:05:00Z",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_russia_premier_league:btts",
-      "error": "Markets not supported by this endpoint: btts",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_russia_premier_league:draw_no_bet",
-      "error": "Markets not supported by this endpoint: draw_no_bet",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_russia_premier_league:double_chance",
-      "error": "Markets not supported by this endpoint: double_chance",
-      "statusCode": 422
-    },
-    {
       "label": "soccer_china_superleague:base-combined",
       "error": "Markets not supported by this endpoint: btts, double_chance, draw_no_bet",
       "statusCode": 422
@@ -2847,6 +2793,31 @@
     },
     {
       "label": "soccer_china_superleague:double_chance",
+      "error": "Markets not supported by this endpoint: double_chance",
+      "statusCode": 422
+    },
+    {
+      "label": "soccer_sweden_allsvenskan:base-combined",
+      "error": "Markets not supported by this endpoint: btts, double_chance, draw_no_bet",
+      "statusCode": 422
+    },
+    {
+      "label": "soccer_sweden_allsvenskan:base-core",
+      "error": "Invalid commenceTimeFrom parameter. The format must be YYYY-MM-DDTHH:MM:SSZ, for example 2020-11-24T16:05:00Z",
+      "statusCode": 422
+    },
+    {
+      "label": "soccer_sweden_allsvenskan:btts",
+      "error": "Markets not supported by this endpoint: btts",
+      "statusCode": 422
+    },
+    {
+      "label": "soccer_sweden_allsvenskan:draw_no_bet",
+      "error": "Markets not supported by this endpoint: draw_no_bet",
+      "statusCode": 422
+    },
+    {
+      "label": "soccer_sweden_allsvenskan:double_chance",
       "error": "Markets not supported by this endpoint: double_chance",
       "statusCode": 422
     },
@@ -2972,6 +2943,31 @@
     },
     {
       "label": "soccer_greece_super_league:double_chance",
+      "error": "Markets not supported by this endpoint: double_chance",
+      "statusCode": 422
+    },
+    {
+      "label": "soccer_russia_premier_league:base-combined",
+      "error": "Markets not supported by this endpoint: btts, double_chance, draw_no_bet",
+      "statusCode": 422
+    },
+    {
+      "label": "soccer_russia_premier_league:base-core",
+      "error": "Invalid commenceTimeFrom parameter. The format must be YYYY-MM-DDTHH:MM:SSZ, for example 2020-11-24T16:05:00Z",
+      "statusCode": 422
+    },
+    {
+      "label": "soccer_russia_premier_league:btts",
+      "error": "Markets not supported by this endpoint: btts",
+      "statusCode": 422
+    },
+    {
+      "label": "soccer_russia_premier_league:draw_no_bet",
+      "error": "Markets not supported by this endpoint: draw_no_bet",
+      "statusCode": 422
+    },
+    {
+      "label": "soccer_russia_premier_league:double_chance",
       "error": "Markets not supported by this endpoint: double_chance",
       "statusCode": 422
     },
@@ -3433,5 +3429,5 @@
   },
   "skipped": false,
   "skipReason": null,
-  "completedAt": "2026-08-02T13:32:02.751Z"
+  "completedAt": "2026-08-02T13:54:59.526Z"
 }
