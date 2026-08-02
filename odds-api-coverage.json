@@ -1,6 +1,6 @@
 {
   "version": "v251",
-  "generatedAt": "2026-08-02T02:06:35.023Z",
+  "generatedAt": "2026-08-02T02:24:14.198Z",
   "provider": "The Odds API v4",
   "keyPresent": true,
   "regions": "uk",
@@ -101,7 +101,7 @@
       "sportKey": "soccer_usa_mls",
       "sportTitle": "MLS",
       "score": 0.466,
-      "matches": 6
+      "matches": 4
     },
     {
       "league": "Primera B Metropolitana",
@@ -128,36 +128,20 @@
       "matches": 2
     },
     {
-      "league": "USL Championship",
-      "country": "USA",
-      "sportKey": "soccer_usa_mls",
-      "sportTitle": "MLS",
-      "score": 0.323,
-      "matches": 10
-    },
-    {
       "league": "Major League Soccer",
       "country": "USA",
       "sportKey": "soccer_usa_mls",
       "sportTitle": "MLS",
       "score": 1,
-      "matches": 14
+      "matches": 9
     },
     {
-      "league": "Liga Profesional Argentina",
-      "country": "Argentina",
-      "sportKey": "soccer_argentina_primera_division",
-      "sportTitle": "Primera División - Argentina",
-      "score": 0.78,
-      "matches": 11
-    },
-    {
-      "league": "USL League Two",
+      "league": "USL Championship",
       "country": "USA",
       "sportKey": "soccer_usa_mls",
       "sportTitle": "MLS",
-      "score": 0.466,
-      "matches": 1
+      "score": 0.323,
+      "matches": 7
     },
     {
       "league": "Primera División",
@@ -824,6 +808,14 @@
       "matches": 3
     },
     {
+      "league": "Liga Profesional Argentina",
+      "country": "Argentina",
+      "sportKey": "soccer_argentina_primera_division",
+      "sportTitle": "Primera División - Argentina",
+      "score": 0.78,
+      "matches": 10
+    },
+    {
       "league": "Brasileiro U17",
       "country": "Brazil",
       "sportKey": "soccer_brazil_serie_b",
@@ -1000,7 +992,7 @@
       "matches": 2
     }
   ],
-  "matchesConsidered": 735,
+  "matchesConsidered": 722,
   "matchesMatched": 0,
   "matchesUpdated": 0,
   "fieldsFilled": 0,
@@ -1814,72 +1806,6 @@
       "reason": "No event/team match"
     },
     {
-      "league": "Liga Profesional Argentina",
-      "home": "Racing Club",
-      "away": "Tigre",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Liga Profesional Argentina",
-      "home": "Aldosivi",
-      "away": "Gimnasia L.P.",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Liga Profesional Argentina",
-      "home": "Deportivo Riestra",
-      "away": "Barracas Central",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Liga Profesional Argentina",
-      "home": "Newells Old Boys",
-      "away": "Boca Juniors",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Liga Profesional Argentina",
-      "home": "River Plate",
-      "away": "Rosario Central",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Liga Profesional Argentina",
-      "home": "Lanus",
-      "away": "Instituto Cordoba",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Liga Profesional Argentina",
-      "home": "Sarmiento Junin",
-      "away": "Independ. Rivadavia",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Liga Profesional Argentina",
-      "home": "Platense",
-      "away": "Talleres Cordoba",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Liga Profesional Argentina",
-      "home": "Velez Sarsfield",
-      "away": "Independiente",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Liga Profesional Argentina",
-      "home": "Central Cordoba de Santiago",
-      "away": "San Lorenzo",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Liga Profesional Argentina",
-      "home": "Huracan",
-      "away": "Atletico Tucuman",
-      "reason": "No event/team match"
-    },
-    {
       "league": "Primera División",
       "home": "Alianza Lima",
       "away": "Alianza Atletico",
@@ -1955,6 +1881,66 @@
       "league": "Primera División - Apertura",
       "home": "Defensor Sporting",
       "away": "Cerro",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Liga Profesional Argentina",
+      "home": "Aldosivi",
+      "away": "Gimnasia L.P.",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Liga Profesional Argentina",
+      "home": "Deportivo Riestra",
+      "away": "Barracas Central",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Liga Profesional Argentina",
+      "home": "Newells Old Boys",
+      "away": "Boca Juniors",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Liga Profesional Argentina",
+      "home": "River Plate",
+      "away": "Rosario Central",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Liga Profesional Argentina",
+      "home": "Lanus",
+      "away": "Instituto Cordoba",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Liga Profesional Argentina",
+      "home": "Sarmiento Junin",
+      "away": "Independ. Rivadavia",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Liga Profesional Argentina",
+      "home": "Platense",
+      "away": "Talleres Cordoba",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Liga Profesional Argentina",
+      "home": "Velez Sarsfield",
+      "away": "Independiente",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Liga Profesional Argentina",
+      "home": "Central Cordoba de Santiago",
+      "away": "San Lorenzo",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Liga Profesional Argentina",
+      "home": "Huracan",
+      "away": "Atletico Tucuman",
       "reason": "No event/team match"
     },
     {
@@ -2295,18 +2281,6 @@
     },
     {
       "league": "USL League One",
-      "home": "Chattanooga Red Wolves",
-      "away": "Spokane Velocity",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "USL League One",
-      "home": "Fort Wayne",
-      "away": "Union Omaha",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "USL League One",
       "home": "Sarasota Paradise",
       "away": "Naples",
       "reason": "No event/team match"
@@ -2324,21 +2298,57 @@
       "reason": "No event/team match"
     },
     {
-      "league": "USL Championship",
-      "home": "Lexington",
-      "away": "Monterey Bay",
+      "league": "Major League Soccer",
+      "home": "Inter Miami",
+      "away": "Columbus Crew",
       "reason": "No event/team match"
     },
     {
-      "league": "USL Championship",
-      "home": "Miami FC",
-      "away": "Detroit City",
+      "league": "Major League Soccer",
+      "home": "FC Cincinnati",
+      "away": "San Jose Earthquakes",
       "reason": "No event/team match"
     },
     {
-      "league": "USL Championship",
-      "home": "Charleston Battery",
-      "away": "Brooklyn",
+      "league": "Major League Soccer",
+      "home": "Chicago Fire",
+      "away": "Charlotte",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Major League Soccer",
+      "home": "Minnesota United FC",
+      "away": "San Diego",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Major League Soccer",
+      "home": "Sporting Kansas City",
+      "away": "Houston Dynamo",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Major League Soccer",
+      "home": "St. Louis City",
+      "away": "Real Salt Lake",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Major League Soccer",
+      "home": "Colorado Rapids",
+      "away": "Austin",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Major League Soccer",
+      "home": "Los Angeles Galaxy",
+      "away": "FC Dallas",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Major League Soccer",
+      "home": "Portland Timbers",
+      "away": "Seattle Sounders",
       "reason": "No event/team match"
     },
     {
@@ -2384,87 +2394,111 @@
       "reason": "No event/team match"
     },
     {
-      "league": "Major League Soccer",
-      "home": "Inter Miami",
-      "away": "Columbus Crew",
+      "league": "NWSL Women",
+      "home": "Houston Dash W",
+      "away": "NJ/NY Gotham FC W",
       "reason": "No event/team match"
     },
     {
-      "league": "Major League Soccer",
-      "home": "Vancouver Whitecaps",
-      "away": "Los Angeles FC",
+      "league": "NWSL Women",
+      "home": "Bay FC W",
+      "away": "Seattle Reign FC W",
       "reason": "No event/team match"
     },
     {
-      "league": "Major League Soccer",
-      "home": "Philadelphia Union",
-      "away": "Atlanta United FC",
+      "league": "NWSL Women",
+      "home": "Washington Spirit W",
+      "away": "San Diego Wave W",
       "reason": "No event/team match"
     },
     {
-      "league": "Major League Soccer",
-      "home": "New York Red Bulls",
-      "away": "Orlando City SC",
+      "league": "NWSL Women",
+      "home": "Utah Royals W",
+      "away": "Portland Thorns W",
       "reason": "No event/team match"
     },
     {
-      "league": "Major League Soccer",
-      "home": "FC Cincinnati",
-      "away": "San Jose Earthquakes",
+      "league": "NWSL Women",
+      "home": "Denver Summit W",
+      "away": "Boston Legacy W",
       "reason": "No event/team match"
     },
     {
-      "league": "Major League Soccer",
-      "home": "DC United",
-      "away": "Nashville SC",
+      "league": "MLS Next Pro",
+      "home": "Huntsville City",
+      "away": "Crown Legacy",
       "reason": "No event/team match"
     },
     {
-      "league": "Major League Soccer",
-      "home": "CF Montreal",
-      "away": "New England Revolution",
+      "league": "MLS Next Pro",
+      "home": "Tacoma Defiance",
+      "away": "Vancouver Whitecaps II",
       "reason": "No event/team match"
     },
     {
-      "league": "Major League Soccer",
-      "home": "Chicago Fire",
-      "away": "Charlotte",
+      "league": "MLS Next Pro",
+      "home": "The Town",
+      "away": "Austin II",
       "reason": "No event/team match"
     },
     {
-      "league": "Major League Soccer",
-      "home": "Minnesota United FC",
-      "away": "San Diego",
+      "league": "MLS Next Pro",
+      "home": "Chicago Fire II",
+      "away": "FC Cincinnati II",
       "reason": "No event/team match"
     },
     {
-      "league": "Major League Soccer",
-      "home": "Sporting Kansas City",
-      "away": "Houston Dynamo",
+      "league": "MLS Next Pro",
+      "home": "New York RB II",
+      "away": "New England II",
       "reason": "No event/team match"
     },
     {
-      "league": "Major League Soccer",
-      "home": "St. Louis City",
-      "away": "Real Salt Lake",
+      "league": "MLS Next Pro",
+      "home": "St. Louis City II",
+      "away": "Real Monarchs",
       "reason": "No event/team match"
     },
     {
-      "league": "Major League Soccer",
-      "home": "Colorado Rapids",
-      "away": "Austin",
+      "league": "Northern Super League",
+      "home": "Calgary Wild W",
+      "away": "AFC Toronto W",
       "reason": "No event/team match"
     },
     {
-      "league": "Major League Soccer",
-      "home": "Los Angeles Galaxy",
-      "away": "FC Dallas",
+      "league": "Northern Super League",
+      "home": "Halifax Tides W",
+      "away": "Ottawa Rapid W",
       "reason": "No event/team match"
     },
     {
-      "league": "Major League Soccer",
-      "home": "Portland Timbers",
-      "away": "Seattle Sounders",
+      "league": "Super League",
+      "home": "FC Vaduz",
+      "away": "FC ST. Gallen",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Super League",
+      "home": "Grasshoppers",
+      "away": "FC Lugano",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Super League",
+      "home": "FC Sion",
+      "away": "FC Luzern",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Super League",
+      "home": "Navbahor",
+      "away": "Xorazm",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Super League",
+      "home": "Mash'al",
+      "away": "Sogdiana",
       "reason": "No event/team match"
     },
     {
@@ -3594,5 +3628,5 @@
   },
   "skipped": false,
   "skipReason": null,
-  "completedAt": "2026-08-02T02:06:55.063Z"
+  "completedAt": "2026-08-02T02:24:26.139Z"
 }
