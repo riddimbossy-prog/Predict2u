@@ -1,6 +1,6 @@
 {
   "version": "v251",
-  "generatedAt": "2026-08-02T00:38:12.355Z",
+  "generatedAt": "2026-08-02T00:55:30.143Z",
   "provider": "The Odds API v4",
   "keyPresent": true,
   "regions": "uk",
@@ -174,14 +174,6 @@
       "sportTitle": "EPL",
       "score": 0.667,
       "matches": 3
-    },
-    {
-      "league": "Copa Paulista",
-      "country": "Brazil",
-      "sportKey": "soccer_brazil_campeonato",
-      "sportTitle": "Brazil Série A",
-      "score": 0.305,
-      "matches": 4
     },
     {
       "league": "NWSL Women",
@@ -656,6 +648,14 @@
       "matches": 3
     },
     {
+      "league": "Copa Paulista",
+      "country": "Brazil",
+      "sportKey": "soccer_brazil_campeonato",
+      "sportTitle": "Brazil Série A",
+      "score": 0.305,
+      "matches": 3
+    },
+    {
       "league": "Premiership",
       "country": "Scotland",
       "sportKey": "soccer_spl",
@@ -1016,7 +1016,7 @@
       "matches": 2
     }
   ],
-  "matchesConsidered": 774,
+  "matchesConsidered": 773,
   "matchesMatched": 0,
   "matchesUpdated": 0,
   "fieldsFilled": 0,
@@ -2520,9 +2520,9 @@
       "reason": "No event/team match"
     },
     {
-      "league": "Copa Paulista",
-      "home": "Bandeirante SP",
-      "away": "Marília",
+      "league": "Copa Do Brasil",
+      "home": "Atletico-MG",
+      "away": "Juventude",
       "reason": "No event/team match"
     }
   ],
@@ -3610,5 +3610,5 @@
   },
   "skipped": false,
   "skipReason": null,
-  "completedAt": "2026-08-02T00:38:19.356Z"
+  "completedAt": "2026-08-02T00:55:48.323Z"
 }
