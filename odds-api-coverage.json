@@ -1,6 +1,6 @@
 {
   "version": "v251",
-  "generatedAt": "2026-08-02T22:23:43.715Z",
+  "generatedAt": "2026-08-02T22:50:46.191Z",
   "provider": "The Odds API v4",
   "keyPresent": true,
   "regions": "uk",
@@ -1862,42 +1862,6 @@
       "reason": "No event/team match"
     },
     {
-      "league": "Allsvenskan",
-      "home": "Djurgardens IF",
-      "away": "Vasteras SK FK",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Allsvenskan",
-      "home": "Halmstad",
-      "away": "Sirius",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Damallsvenskan",
-      "home": "Vittsjö W",
-      "away": "Rosengård W",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Ettan - Norra",
-      "home": "Vasalund",
-      "away": "Sollentuna",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Ettan - Norra",
-      "home": "Hammarby Talang",
-      "away": "Arlanda",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Division 2 - Södra Götaland",
-      "home": "Torns",
-      "away": "Staffanstorp United",
-      "reason": "No event/team match"
-    },
-    {
       "league": "Superliga",
       "home": "Odense",
       "away": "Sonderjyske",
@@ -2058,48 +2022,6 @@
       "home": "Nykobing FC",
       "away": "B 93",
       "reason": "No event/team match"
-    },
-    {
-      "league": "DBU Pokalen",
-      "home": "Ringkøbing",
-      "away": "Aarhus Fremad",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Kvindeliga",
-      "home": "Fortuna Hjørring W",
-      "away": "Midtjylland W",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Superettan",
-      "home": "Orebro SK",
-      "away": "IFK Varnamo",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "League Cup",
-      "home": "York",
-      "away": "Crawley Town",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Premiership",
-      "home": "Celtic",
-      "away": "Dundee",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "UEFA Champions League Women",
-      "home": "Dinamo-BGU W",
-      "away": "Servette Chênois W",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "UEFA Champions League Women",
-      "home": "Breidablik W",
-      "away": "Aktobe W",
-      "reason": "No event/team match"
     }
   ],
   "unsupportedMarkets": [
@@ -2185,6 +2107,18 @@
     },
     {
       "sportKey": "soccer_usa_mls",
+      "market": "double_chance"
+    },
+    {
+      "sportKey": "soccer_sweden_allsvenskan",
+      "market": "btts"
+    },
+    {
+      "sportKey": "soccer_sweden_allsvenskan",
+      "market": "draw_no_bet"
+    },
+    {
+      "sportKey": "soccer_sweden_allsvenskan",
       "market": "double_chance"
     },
     {
@@ -2565,6 +2499,31 @@
     },
     {
       "label": "soccer_usa_mls:double_chance",
+      "error": "Markets not supported by this endpoint: double_chance",
+      "statusCode": 422
+    },
+    {
+      "label": "soccer_sweden_allsvenskan:base-combined",
+      "error": "Markets not supported by this endpoint: btts, double_chance, draw_no_bet",
+      "statusCode": 422
+    },
+    {
+      "label": "soccer_sweden_allsvenskan:base-core",
+      "error": "Invalid commenceTimeFrom parameter. The format must be YYYY-MM-DDTHH:MM:SSZ, for example 2020-11-24T16:05:00Z",
+      "statusCode": 422
+    },
+    {
+      "label": "soccer_sweden_allsvenskan:btts",
+      "error": "Markets not supported by this endpoint: btts",
+      "statusCode": 422
+    },
+    {
+      "label": "soccer_sweden_allsvenskan:draw_no_bet",
+      "error": "Markets not supported by this endpoint: draw_no_bet",
+      "statusCode": 422
+    },
+    {
+      "label": "soccer_sweden_allsvenskan:double_chance",
       "error": "Markets not supported by this endpoint: double_chance",
       "statusCode": 422
     },
@@ -3001,5 +2960,5 @@
   },
   "skipped": false,
   "skipReason": null,
-  "completedAt": "2026-08-02T22:23:49.439Z"
+  "completedAt": "2026-08-02T22:50:56.408Z"
 }
