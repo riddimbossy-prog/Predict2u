@@ -1,6 +1,6 @@
 {
   "version": "v251",
-  "generatedAt": "2026-08-02T12:56:03.668Z",
+  "generatedAt": "2026-08-02T13:14:05.426Z",
   "provider": "The Odds API v4",
   "keyPresent": true,
   "regions": "uk",
@@ -21,23 +21,7 @@
       "sportKey": "soccer_germany_dfb_pokal",
       "sportTitle": "DFB-Pokal",
       "score": 0.68,
-      "matches": 7
-    },
-    {
-      "league": "K League 1",
-      "country": "South-Korea",
-      "sportKey": "soccer_korea_kleague1",
-      "sportTitle": "K League 1",
-      "score": 0.695,
-      "matches": 3
-    },
-    {
-      "league": "K League 2",
-      "country": "South-Korea",
-      "sportKey": "soccer_korea_kleague1",
-      "sportTitle": "K League 1",
-      "score": 0.333,
-      "matches": 4
+      "matches": 6
     },
     {
       "league": "3. Division - Girone 5",
@@ -888,7 +872,7 @@
       "matches": 2
     }
   ],
-  "matchesConsidered": 588,
+  "matchesConsidered": 579,
   "matchesMatched": 0,
   "matchesUpdated": 0,
   "fieldsFilled": 0,
@@ -897,12 +881,6 @@
   "derivedHtftMatches": 0,
   "bookmakerRows": 0,
   "unmatched": [
-    {
-      "league": "Liga Nacional",
-      "country": "Honduras",
-      "reason": "No matching soccer sport key",
-      "bestScore": 0.143
-    },
     {
       "league": "Npl Nsw U20",
       "country": "Australia",
@@ -1145,6 +1123,12 @@
     },
     {
       "league": "Liga Nacional",
+      "country": "Honduras",
+      "reason": "No matching soccer sport key",
+      "bestScore": 0.143
+    },
+    {
+      "league": "Liga Nacional",
       "country": "Guatemala",
       "reason": "No matching soccer sport key",
       "bestScore": 0.143
@@ -1373,12 +1357,6 @@
     },
     {
       "league": "DFB Junioren Pokal",
-      "home": "Mainz 05 U19",
-      "away": "Augsburg U19",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "DFB Junioren Pokal",
       "home": "Dynamo Dresden U19",
       "away": "Hannover 96 U19",
       "reason": "No event/team match"
@@ -1411,48 +1389,6 @@
       "league": "DFB Junioren Pokal",
       "home": "Arminia Magdeburg U19",
       "away": "Carl Zeiss Jena U19",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "K League 1",
-      "home": "Daejeon Citizen",
-      "away": "Gwangju FC",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "K League 1",
-      "home": "Jeju United FC",
-      "away": "Incheon United",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "K League 1",
-      "home": "Ulsan Hyundai FC",
-      "away": "FC Anyang",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "K League 2",
-      "home": "Ansan Greeners",
-      "away": "Gimhae City",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "K League 2",
-      "home": "Busan I Park",
-      "away": "Seoul E-Land FC",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "K League 2",
-      "home": "Gimpo Citizen",
-      "away": "Gyeongnam FC",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "K League 2",
-      "home": "Jeonnam Dragons",
-      "away": "Paju Citizen",
       "reason": "No event/team match"
     },
     {
@@ -2396,6 +2332,54 @@
       "home": "Nykobing FC",
       "away": "B 93",
       "reason": "No event/team match"
+    },
+    {
+      "league": "DBU Pokalen",
+      "home": "Ringkøbing",
+      "away": "Aarhus Fremad",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Kvindeliga",
+      "home": "Fortuna Hjørring W",
+      "away": "Midtjylland W",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Super League",
+      "home": "FC Vaduz",
+      "away": "FC ST. Gallen",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Super League",
+      "home": "Grasshoppers",
+      "away": "FC Lugano",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Super League",
+      "home": "FC Sion",
+      "away": "FC Luzern",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Super League",
+      "home": "Navbahor",
+      "away": "Xorazm",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Super League",
+      "home": "Mash'al",
+      "away": "Sogdiana",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Super League",
+      "home": "Qizilqum",
+      "away": "Bunyodkor",
+      "reason": "No event/team match"
     }
   ],
   "unsupportedMarkets": [
@@ -2424,18 +2408,6 @@
       "market": "double_chance"
     },
     {
-      "sportKey": "soccer_korea_kleague1",
-      "market": "btts"
-    },
-    {
-      "sportKey": "soccer_korea_kleague1",
-      "market": "draw_no_bet"
-    },
-    {
-      "sportKey": "soccer_korea_kleague1",
-      "market": "double_chance"
-    },
-    {
       "sportKey": "soccer_norway_eliteserien",
       "market": "btts"
     },
@@ -2493,6 +2465,18 @@
     },
     {
       "sportKey": "soccer_finland_veikkausliiga",
+      "market": "double_chance"
+    },
+    {
+      "sportKey": "soccer_epl",
+      "market": "btts"
+    },
+    {
+      "sportKey": "soccer_epl",
+      "market": "draw_no_bet"
+    },
+    {
+      "sportKey": "soccer_epl",
       "market": "double_chance"
     },
     {
@@ -2796,31 +2780,6 @@
     },
     {
       "label": "soccer_germany_dfb_pokal:double_chance",
-      "error": "Markets not supported by this endpoint: double_chance",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_korea_kleague1:base-combined",
-      "error": "Markets not supported by this endpoint: btts, double_chance, draw_no_bet",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_korea_kleague1:base-core",
-      "error": "Invalid commenceTimeFrom parameter. The format must be YYYY-MM-DDTHH:MM:SSZ, for example 2020-11-24T16:05:00Z",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_korea_kleague1:btts",
-      "error": "Markets not supported by this endpoint: btts",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_korea_kleague1:draw_no_bet",
-      "error": "Markets not supported by this endpoint: draw_no_bet",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_korea_kleague1:double_chance",
       "error": "Markets not supported by this endpoint: double_chance",
       "statusCode": 422
     },
@@ -3482,5 +3441,5 @@
   },
   "skipped": false,
   "skipReason": null,
-  "completedAt": "2026-08-02T12:56:15.820Z"
+  "completedAt": "2026-08-02T13:14:26.487Z"
 }
