@@ -1,6 +1,6 @@
 {
   "version": "v251",
-  "generatedAt": "2026-08-02T11:08:38.071Z",
+  "generatedAt": "2026-08-02T11:29:54.337Z",
   "provider": "The Odds API v4",
   "keyPresent": true,
   "regions": "uk",
@@ -22,14 +22,6 @@
       "sportTitle": "Primera División - Chile",
       "score": 1,
       "matches": 4
-    },
-    {
-      "league": "2. Liga",
-      "country": "Austria",
-      "sportKey": "soccer_austria_bundesliga",
-      "sportTitle": "Austrian Football Bundesliga",
-      "score": 0.323,
-      "matches": 1
     },
     {
       "league": "Oberliga - Hamburg",
@@ -904,7 +896,7 @@
       "matches": 2
     }
   ],
-  "matchesConsidered": 613,
+  "matchesConsidered": 610,
   "matchesMatched": 0,
   "matchesUpdated": 0,
   "fieldsFilled": 0,
@@ -926,18 +918,6 @@
       "bestScore": 0
     },
     {
-      "league": "Persha Liga",
-      "country": "Ukraine",
-      "reason": "No matching soccer sport key",
-      "bestScore": 0.143
-    },
-    {
-      "league": "2. liga",
-      "country": "Slovakia",
-      "reason": "No matching soccer sport key",
-      "bestScore": 0.143
-    },
-    {
       "league": "Friendlies Clubs",
       "country": "World",
       "reason": "No matching soccer sport key",
@@ -945,6 +925,12 @@
     },
     {
       "league": "Druha Liga",
+      "country": "Ukraine",
+      "reason": "No matching soccer sport key",
+      "bestScore": 0.143
+    },
+    {
+      "league": "Persha Liga",
       "country": "Ukraine",
       "reason": "No matching soccer sport key",
       "bestScore": 0.143
@@ -1196,6 +1182,12 @@
       "bestScore": 0.125
     },
     {
+      "league": "2. liga",
+      "country": "Slovakia",
+      "reason": "No matching soccer sport key",
+      "bestScore": 0.143
+    },
+    {
       "league": "Esiliiga A",
       "country": "Estonia",
       "reason": "No matching soccer sport key",
@@ -1343,54 +1335,6 @@
       "league": "Copa Chile",
       "home": "Universidad de Concepcion",
       "away": "Curico Unido",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "2. Liga",
-      "home": "WSPG Wels",
-      "away": "Austria Salzburg",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Regionalliga - West",
-      "home": "Swarovski Tirol II",
-      "away": "Dornbirn",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Regionalliga - West",
-      "home": "Röthis",
-      "away": "Lauterach",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Regionalliga - West",
-      "home": "Wolfurt",
-      "away": "Rheindorf Altach II",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Frauenliga",
-      "home": "First Vienna W",
-      "away": "SK Rapid W",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Bundesliga",
-      "home": "Austria Lustenau",
-      "away": "Ried",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Bundesliga",
-      "home": "Wolfsberger AC",
-      "away": "Austria Vienna",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Bundesliga",
-      "home": "Rapid Vienna",
-      "away": "SCR Altach",
       "reason": "No event/team match"
     },
     {
@@ -2412,6 +2356,54 @@
       "home": "Rekord Bielsko-Biała",
       "away": "Zawisza Bydgoszcz",
       "reason": "No event/team match"
+    },
+    {
+      "league": "II Liga - East",
+      "home": "Sandecja Nowy Sącz",
+      "away": "Chojniczanka Chojnice",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Ekstraklasa",
+      "home": "Legia Warszawa",
+      "away": "Zaglebie Lubin",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Ekstraklasa",
+      "home": "Slask Wroclaw",
+      "away": "Raków Częstochowa",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Ekstraklasa",
+      "home": "GKS Katowice",
+      "away": "Radomiak Radom",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Ekstraklasa",
+      "home": "Cracovia Krakow",
+      "away": "Pogon Szczecin",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "III Liga - Group 4",
+      "home": "Czarni Połaniec",
+      "away": "KS Wieczysta Krakow II",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "III Liga - Group 4",
+      "home": "Hetman Zamosc",
+      "away": "Siarka Tarnobrzeg",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "III Liga - Group 4",
+      "home": "Moravia Morawica",
+      "away": "Wiślanie Jaśkowice",
+      "reason": "No event/team match"
     }
   ],
   "unsupportedMarkets": [
@@ -2440,18 +2432,6 @@
       "market": "double_chance"
     },
     {
-      "sportKey": "soccer_austria_bundesliga",
-      "market": "btts"
-    },
-    {
-      "sportKey": "soccer_austria_bundesliga",
-      "market": "draw_no_bet"
-    },
-    {
-      "sportKey": "soccer_austria_bundesliga",
-      "market": "double_chance"
-    },
-    {
       "sportKey": "soccer_germany_bundesliga",
       "market": "btts"
     },
@@ -2605,6 +2585,18 @@
     },
     {
       "sportKey": "soccer_brazil_campeonato",
+      "market": "double_chance"
+    },
+    {
+      "sportKey": "soccer_austria_bundesliga",
+      "market": "btts"
+    },
+    {
+      "sportKey": "soccer_austria_bundesliga",
+      "market": "draw_no_bet"
+    },
+    {
+      "sportKey": "soccer_austria_bundesliga",
       "market": "double_chance"
     },
     {
@@ -2812,31 +2804,6 @@
     },
     {
       "label": "soccer_chile_campeonato:double_chance",
-      "error": "Markets not supported by this endpoint: double_chance",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_austria_bundesliga:base-combined",
-      "error": "Markets not supported by this endpoint: btts, double_chance, draw_no_bet",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_austria_bundesliga:base-core",
-      "error": "Invalid commenceTimeFrom parameter. The format must be YYYY-MM-DDTHH:MM:SSZ, for example 2020-11-24T16:05:00Z",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_austria_bundesliga:btts",
-      "error": "Markets not supported by this endpoint: btts",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_austria_bundesliga:draw_no_bet",
-      "error": "Markets not supported by this endpoint: draw_no_bet",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_austria_bundesliga:double_chance",
       "error": "Markets not supported by this endpoint: double_chance",
       "statusCode": 422
     },
@@ -3162,6 +3129,31 @@
     },
     {
       "label": "soccer_brazil_campeonato:double_chance",
+      "error": "Markets not supported by this endpoint: double_chance",
+      "statusCode": 422
+    },
+    {
+      "label": "soccer_austria_bundesliga:base-combined",
+      "error": "Markets not supported by this endpoint: btts, double_chance, draw_no_bet",
+      "statusCode": 422
+    },
+    {
+      "label": "soccer_austria_bundesliga:base-core",
+      "error": "Invalid commenceTimeFrom parameter. The format must be YYYY-MM-DDTHH:MM:SSZ, for example 2020-11-24T16:05:00Z",
+      "statusCode": 422
+    },
+    {
+      "label": "soccer_austria_bundesliga:btts",
+      "error": "Markets not supported by this endpoint: btts",
+      "statusCode": 422
+    },
+    {
+      "label": "soccer_austria_bundesliga:draw_no_bet",
+      "error": "Markets not supported by this endpoint: draw_no_bet",
+      "statusCode": 422
+    },
+    {
+      "label": "soccer_austria_bundesliga:double_chance",
       "error": "Markets not supported by this endpoint: double_chance",
       "statusCode": 422
     },
@@ -3498,5 +3490,5 @@
   },
   "skipped": false,
   "skipReason": null,
-  "completedAt": "2026-08-02T11:08:53.333Z"
+  "completedAt": "2026-08-02T11:30:00.909Z"
 }
