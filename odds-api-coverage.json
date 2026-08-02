@@ -1,6 +1,6 @@
 {
   "version": "v251",
-  "generatedAt": "2026-08-02T03:36:50.045Z",
+  "generatedAt": "2026-08-02T03:54:20.842Z",
   "provider": "The Odds API v4",
   "keyPresent": true,
   "regions": "uk",
@@ -136,38 +136,6 @@
       "matches": 4
     },
     {
-      "league": "Canadian Premier League",
-      "country": "Canada",
-      "sportKey": "soccer_epl",
-      "sportTitle": "EPL",
-      "score": 0.667,
-      "matches": 2
-    },
-    {
-      "league": "Liga MX",
-      "country": "Mexico",
-      "sportKey": "soccer_mexico_ligamx",
-      "sportTitle": "Liga MX",
-      "score": 1,
-      "matches": 5
-    },
-    {
-      "league": "Liga de Expansión MX",
-      "country": "Mexico",
-      "sportKey": "soccer_mexico_ligamx",
-      "sportTitle": "Liga MX",
-      "score": 0.555,
-      "matches": 2
-    },
-    {
-      "league": "Liga MX Femenil",
-      "country": "Mexico",
-      "sportKey": "soccer_mexico_ligamx",
-      "sportTitle": "Liga MX",
-      "score": 0.68,
-      "matches": 7
-    },
-    {
       "league": "Major League Soccer",
       "country": "USA",
       "sportKey": "soccer_usa_mls",
@@ -198,6 +166,22 @@
       "sportTitle": "Primera División - Argentina",
       "score": 0.606,
       "matches": 4
+    },
+    {
+      "league": "Liga MX",
+      "country": "Mexico",
+      "sportKey": "soccer_mexico_ligamx",
+      "sportTitle": "Liga MX",
+      "score": 1,
+      "matches": 3
+    },
+    {
+      "league": "Liga MX Femenil",
+      "country": "Mexico",
+      "sportKey": "soccer_mexico_ligamx",
+      "sportTitle": "Liga MX",
+      "score": 0.68,
+      "matches": 6
     },
     {
       "league": "Queensland Premier League",
@@ -872,6 +856,14 @@
       "matches": 3
     },
     {
+      "league": "Canadian Premier League",
+      "country": "Canada",
+      "sportKey": "soccer_epl",
+      "sportTitle": "EPL",
+      "score": 0.667,
+      "matches": 1
+    },
+    {
       "league": "Premier League - Summer Series",
       "country": "England",
       "sportKey": "soccer_epl",
@@ -992,7 +984,7 @@
       "matches": 2
     }
   ],
-  "matchesConsidered": 698,
+  "matchesConsidered": 691,
   "matchesMatched": 0,
   "matchesUpdated": 0,
   "fieldsFilled": 0,
@@ -1034,12 +1026,6 @@
     {
       "league": "Liga Nacional",
       "country": "Honduras",
-      "reason": "No matching soccer sport key",
-      "bestScore": 0.143
-    },
-    {
-      "league": "Primera A",
-      "country": "Colombia",
       "reason": "No matching soccer sport key",
       "bestScore": 0.143
     },
@@ -1314,6 +1300,12 @@
       "bestScore": 0.111
     },
     {
+      "league": "Primera A",
+      "country": "Colombia",
+      "reason": "No matching soccer sport key",
+      "bestScore": 0.143
+    },
+    {
       "league": "Victoria NPL 2",
       "country": "Australia",
       "reason": "No matching soccer sport key",
@@ -1470,18 +1462,6 @@
       "reason": "No event/team match"
     },
     {
-      "league": "Canadian Premier League",
-      "home": "Cavalry FC",
-      "away": "York United",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Canadian Premier League",
-      "home": "HFX Wanderers FC",
-      "away": "Forge",
-      "reason": "No event/team match"
-    },
-    {
       "league": "Queensland Premier League",
       "home": "St George Willawong",
       "away": "Brisbane Strikers",
@@ -1611,6 +1591,12 @@
       "league": "Premier League",
       "home": "Alashkert",
       "away": "Ararat",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Canadian Premier League",
+      "home": "HFX Wanderers FC",
+      "away": "Forge",
       "reason": "No event/team match"
     },
     {
@@ -2479,18 +2465,6 @@
     },
     {
       "league": "Liga MX",
-      "home": "Atlas",
-      "away": "Monterrey",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Liga MX",
-      "home": "Leon",
-      "away": "CF Pachuca",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Liga MX",
       "home": "Cruz Azul",
       "away": "Atlante FC",
       "reason": "No event/team match"
@@ -2499,6 +2473,24 @@
       "league": "Liga MX",
       "home": "Club America",
       "away": "Santos Laguna",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Liga MX",
+      "home": "Toluca",
+      "away": "Necaxa",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Liga MX Femenil",
+      "home": "Tijuana W",
+      "away": "Monterrey W",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Liga MX Femenil",
+      "home": "Pumas UNAM W",
+      "away": "León W",
       "reason": "No event/team match"
     }
   ],
@@ -3586,5 +3578,5 @@
   },
   "skipped": false,
   "skipReason": null,
-  "completedAt": "2026-08-02T03:37:02.444Z"
+  "completedAt": "2026-08-02T03:54:31.765Z"
 }
