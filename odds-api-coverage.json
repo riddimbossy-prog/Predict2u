@@ -1,6 +1,6 @@
 {
   "version": "v251",
-  "generatedAt": "2026-08-02T04:28:59.651Z",
+  "generatedAt": "2026-08-02T04:46:26.174Z",
   "provider": "The Odds API v4",
   "keyPresent": true,
   "regions": "uk",
@@ -109,7 +109,7 @@
       "sportKey": "soccer_usa_mls",
       "sportTitle": "MLS",
       "score": 0.323,
-      "matches": 5
+      "matches": 4
     },
     {
       "league": "Primera División",
@@ -117,22 +117,6 @@
       "sportKey": "soccer_chile_campeonato",
       "sportTitle": "Primera División - Chile",
       "score": 1,
-      "matches": 4
-    },
-    {
-      "league": "MLS Next Pro",
-      "country": "USA",
-      "sportKey": "soccer_usa_mls",
-      "sportTitle": "MLS",
-      "score": 1,
-      "matches": 5
-    },
-    {
-      "league": "Primera División",
-      "country": "Costa-Rica",
-      "sportKey": "soccer_argentina_primera_division",
-      "sportTitle": "Primera División - Argentina",
-      "score": 0.606,
       "matches": 4
     },
     {
@@ -736,6 +720,14 @@
       "matches": 2
     },
     {
+      "league": "MLS Next Pro",
+      "country": "USA",
+      "sportKey": "soccer_usa_mls",
+      "sportTitle": "MLS",
+      "score": 1,
+      "matches": 4
+    },
+    {
       "league": "Primera División",
       "country": "Peru",
       "sportKey": "soccer_argentina_primera_division",
@@ -864,6 +856,14 @@
       "matches": 1
     },
     {
+      "league": "Primera División",
+      "country": "Costa-Rica",
+      "sportKey": "soccer_argentina_primera_division",
+      "sportTitle": "Primera División - Argentina",
+      "score": 0.606,
+      "matches": 3
+    },
+    {
       "league": "Premier League - Summer Series",
       "country": "England",
       "sportKey": "soccer_epl",
@@ -984,7 +984,7 @@
       "matches": 2
     }
   ],
-  "matchesConsidered": 681,
+  "matchesConsidered": 677,
   "matchesMatched": 0,
   "matchesUpdated": 0,
   "fieldsFilled": 0,
@@ -1020,12 +1020,6 @@
     {
       "league": "Liga Nacional",
       "country": "Honduras",
-      "reason": "No matching soccer sport key",
-      "bestScore": 0.143
-    },
-    {
-      "league": "Liga Nacional",
-      "country": "Guatemala",
       "reason": "No matching soccer sport key",
       "bestScore": 0.143
     },
@@ -1300,6 +1294,12 @@
       "bestScore": 0.111
     },
     {
+      "league": "Liga Nacional",
+      "country": "Guatemala",
+      "reason": "No matching soccer sport key",
+      "bestScore": 0.143
+    },
+    {
       "league": "Victoria NPL 2",
       "country": "Australia",
       "reason": "No matching soccer sport key",
@@ -1510,30 +1510,6 @@
       "reason": "No event/team match"
     },
     {
-      "league": "Primera División",
-      "home": "LD Alajuelense",
-      "away": "Escorpiones Belén",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Primera División",
-      "home": "Deportivo Saprissa",
-      "away": "San Carlos",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Primera División",
-      "home": "Inter San Carlos",
-      "away": "CS Herediano",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Primera División",
-      "home": "Perez Zeledon",
-      "away": "CS Cartagines",
-      "reason": "No event/team match"
-    },
-    {
       "league": "Primera División - Apertura",
       "home": "Racing Montevideo",
       "away": "Boston River",
@@ -1669,6 +1645,24 @@
       "league": "Primera División",
       "home": "Independiente Petrolero",
       "away": "Aurora",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Primera División",
+      "home": "Deportivo Saprissa",
+      "away": "San Carlos",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Primera División",
+      "home": "Inter San Carlos",
+      "away": "CS Herediano",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Primera División",
+      "home": "Perez Zeledon",
+      "away": "CS Cartagines",
       "reason": "No event/team match"
     },
     {
@@ -2159,12 +2153,6 @@
     },
     {
       "league": "USL Championship",
-      "home": "Orange County SC",
-      "away": "El Paso Locomotive",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "USL Championship",
       "home": "Las Vegas Lights",
       "away": "Phoenix Rising",
       "reason": "No event/team match"
@@ -2176,9 +2164,15 @@
       "reason": "No event/team match"
     },
     {
-      "league": "MLS Next Pro",
-      "home": "Tacoma Defiance",
-      "away": "Vancouver Whitecaps II",
+      "league": "Major League Soccer",
+      "home": "Los Angeles Galaxy",
+      "away": "FC Dallas",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Major League Soccer",
+      "home": "Portland Timbers",
+      "away": "Seattle Sounders",
       "reason": "No event/team match"
     },
     {
@@ -2203,18 +2197,6 @@
       "league": "MLS Next Pro",
       "home": "St. Louis City II",
       "away": "Real Monarchs",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Major League Soccer",
-      "home": "Los Angeles Galaxy",
-      "away": "FC Dallas",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Major League Soccer",
-      "home": "Portland Timbers",
-      "away": "Seattle Sounders",
       "reason": "No event/team match"
     },
     {
@@ -2491,6 +2473,24 @@
       "league": "League One",
       "home": "Suzhou Dongwu",
       "away": "Meizhou Kejia",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Second League - Group 4",
+      "home": "Ural II",
+      "away": "Akron II",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Second League - Group 4",
+      "home": "Krylya Sovetov II",
+      "away": "Pobeda Nizhniy Novgorod",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Second League - Group 4",
+      "home": "KDV",
+      "away": "Orenburg II",
       "reason": "No event/team match"
     }
   ],
@@ -3578,5 +3578,5 @@
   },
   "skipped": false,
   "skipReason": null,
-  "completedAt": "2026-08-02T04:29:07.168Z"
+  "completedAt": "2026-08-02T04:46:36.952Z"
 }
