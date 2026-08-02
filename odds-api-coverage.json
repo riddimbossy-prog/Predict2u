@@ -1,6 +1,6 @@
 {
   "version": "v251",
-  "generatedAt": "2026-08-02T01:47:48.320Z",
+  "generatedAt": "2026-08-02T02:06:35.023Z",
   "provider": "The Odds API v4",
   "keyPresent": true,
   "regions": "uk",
@@ -136,14 +136,6 @@
       "matches": 10
     },
     {
-      "league": "MLS Next Pro",
-      "country": "USA",
-      "sportKey": "soccer_usa_mls",
-      "sportTitle": "MLS",
-      "score": 1,
-      "matches": 7
-    },
-    {
       "league": "Major League Soccer",
       "country": "USA",
       "sportKey": "soccer_usa_mls",
@@ -182,6 +174,14 @@
       "sportTitle": "MLS",
       "score": 0.323,
       "matches": 5
+    },
+    {
+      "league": "MLS Next Pro",
+      "country": "USA",
+      "sportKey": "soccer_usa_mls",
+      "sportTitle": "MLS",
+      "score": 1,
+      "matches": 6
     },
     {
       "league": "Brasileiro Women",
@@ -1000,7 +1000,7 @@
       "matches": 2
     }
   ],
-  "matchesConsidered": 737,
+  "matchesConsidered": 735,
   "matchesMatched": 0,
   "matchesUpdated": 0,
   "fieldsFilled": 0,
@@ -1009,12 +1009,6 @@
   "derivedHtftMatches": 0,
   "bookmakerRows": 0,
   "unmatched": [
-    {
-      "league": "Friendlies Clubs",
-      "country": "World",
-      "reason": "No matching soccer sport key",
-      "bestScore": 0
-    },
     {
       "league": "David Kipiani Cup",
       "country": "Georgia",
@@ -1026,6 +1020,12 @@
       "country": "Moldova",
       "reason": "No matching soccer sport key",
       "bestScore": 0.143
+    },
+    {
+      "league": "Friendlies Clubs",
+      "country": "World",
+      "reason": "No matching soccer sport key",
+      "bestScore": 0
     },
     {
       "league": "Third League - Southwest",
@@ -2384,48 +2384,6 @@
       "reason": "No event/team match"
     },
     {
-      "league": "MLS Next Pro",
-      "home": "New York City II",
-      "away": "Philadelphia Union II",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "MLS Next Pro",
-      "home": "Huntsville City",
-      "away": "Crown Legacy",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "MLS Next Pro",
-      "home": "Tacoma Defiance",
-      "away": "Vancouver Whitecaps II",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "MLS Next Pro",
-      "home": "The Town",
-      "away": "Austin II",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "MLS Next Pro",
-      "home": "Chicago Fire II",
-      "away": "FC Cincinnati II",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "MLS Next Pro",
-      "home": "New York RB II",
-      "away": "New England II",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "MLS Next Pro",
-      "home": "St. Louis City II",
-      "away": "Real Monarchs",
-      "reason": "No event/team match"
-    },
-    {
       "league": "Major League Soccer",
       "home": "Inter Miami",
       "away": "Columbus Crew",
@@ -2507,6 +2465,48 @@
       "league": "Major League Soccer",
       "home": "Portland Timbers",
       "away": "Seattle Sounders",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "USL League Two",
+      "home": "Flint City Bucks",
+      "away": "Vermont Green",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "NWSL Women",
+      "home": "Houston Dash W",
+      "away": "NJ/NY Gotham FC W",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "NWSL Women",
+      "home": "Bay FC W",
+      "away": "Seattle Reign FC W",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "NWSL Women",
+      "home": "Washington Spirit W",
+      "away": "San Diego Wave W",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "NWSL Women",
+      "home": "Utah Royals W",
+      "away": "Portland Thorns W",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "NWSL Women",
+      "home": "Denver Summit W",
+      "away": "Boston Legacy W",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "MLS Next Pro",
+      "home": "Huntsville City",
+      "away": "Crown Legacy",
       "reason": "No event/team match"
     }
   ],
@@ -2600,11 +2600,11 @@
       "market": "btts"
     },
     {
-      "sportKey": "soccer_chile_campeonato",
+      "sportKey": "soccer_mexico_ligamx",
       "market": "draw_no_bet"
     },
     {
-      "sportKey": "soccer_chile_campeonato",
+      "sportKey": "soccer_mexico_ligamx",
       "market": "double_chance"
     },
     {
@@ -2629,18 +2629,6 @@
     },
     {
       "sportKey": "soccer_mexico_ligamx",
-      "market": "double_chance"
-    },
-    {
-      "sportKey": "soccer_brazil_serie_b",
-      "market": "btts"
-    },
-    {
-      "sportKey": "soccer_brazil_serie_b",
-      "market": "draw_no_bet"
-    },
-    {
-      "sportKey": "soccer_brazil_serie_b",
       "market": "double_chance"
     },
     {
@@ -3606,5 +3594,5 @@
   },
   "skipped": false,
   "skipReason": null,
-  "completedAt": "2026-08-02T01:48:06.843Z"
+  "completedAt": "2026-08-02T02:06:55.063Z"
 }
