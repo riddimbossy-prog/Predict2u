@@ -1,6 +1,6 @@
 {
   "version": "v251",
-  "generatedAt": "2026-08-02T15:06:02.808Z",
+  "generatedAt": "2026-08-02T15:30:14.250Z",
   "provider": "The Odds API v4",
   "keyPresent": true,
   "regions": "uk",
@@ -46,14 +46,6 @@
       "sportTitle": "Bundesliga - Germany",
       "score": 0.305,
       "matches": 2
-    },
-    {
-      "league": "Ekstraklasa",
-      "country": "Poland",
-      "sportKey": "soccer_poland_ekstraklasa",
-      "sportTitle": "Ekstraklasa - Poland",
-      "score": 1,
-      "matches": 4
     },
     {
       "league": "Damallsvenskan",
@@ -448,6 +440,14 @@
       "matches": 2
     },
     {
+      "league": "Ekstraklasa",
+      "country": "Poland",
+      "sportKey": "soccer_poland_ekstraklasa",
+      "sportTitle": "Ekstraklasa - Poland",
+      "score": 1,
+      "matches": 3
+    },
+    {
       "league": "Division 2 - Västra Götaland",
       "country": "Sweden",
       "sportKey": "soccer_sweden_allsvenskan",
@@ -824,7 +824,7 @@
       "matches": 2
     }
   ],
-  "matchesConsidered": 517,
+  "matchesConsidered": 515,
   "matchesMatched": 0,
   "matchesUpdated": 0,
   "fieldsFilled": 0,
@@ -844,12 +844,6 @@
       "country": "World",
       "reason": "No matching soccer sport key",
       "bestScore": 0
-    },
-    {
-      "league": "David Kipiani Cup",
-      "country": "Georgia",
-      "reason": "No matching soccer sport key",
-      "bestScore": 0.125
     },
     {
       "league": "Virsliga",
@@ -968,6 +962,12 @@
     {
       "league": "1. SNL",
       "country": "Slovenia",
+      "reason": "No matching soccer sport key",
+      "bestScore": 0.125
+    },
+    {
+      "league": "David Kipiani Cup",
+      "country": "Georgia",
       "reason": "No matching soccer sport key",
       "bestScore": 0.125
     },
@@ -1302,30 +1302,6 @@
       "reason": "No event/team match"
     },
     {
-      "league": "Ekstraklasa",
-      "home": "Legia Warszawa",
-      "away": "Zaglebie Lubin",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Ekstraklasa",
-      "home": "Slask Wroclaw",
-      "away": "Raków Częstochowa",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Ekstraklasa",
-      "home": "GKS Katowice",
-      "away": "Radomiak Radom",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Ekstraklasa",
-      "home": "Cracovia Krakow",
-      "away": "Pogon Szczecin",
-      "reason": "No event/team match"
-    },
-    {
       "league": "I Liga",
       "home": "Stal Mielec",
       "away": "Podbeskidzie",
@@ -1371,6 +1347,24 @@
       "league": "III Liga - Group 4",
       "home": "KSZO 1929",
       "away": "Podlasie Biała Podlaska",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Ekstraklasa",
+      "home": "Slask Wroclaw",
+      "away": "Raków Częstochowa",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Ekstraklasa",
+      "home": "GKS Katowice",
+      "away": "Radomiak Radom",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Ekstraklasa",
+      "home": "Cracovia Krakow",
+      "away": "Pogon Szczecin",
       "reason": "No event/team match"
     },
     {
@@ -2331,6 +2325,12 @@
       "league": "DBU Pokalen",
       "home": "tst Fodbold",
       "away": "VSK Århus",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "DBU Pokalen",
+      "home": "Vallensbæk",
+      "away": "FC Helsingor",
       "reason": "No event/team match"
     }
   ],
@@ -3344,5 +3344,5 @@
   },
   "skipped": false,
   "skipReason": null,
-  "completedAt": "2026-08-02T15:06:09.143Z"
+  "completedAt": "2026-08-02T15:30:30.330Z"
 }
