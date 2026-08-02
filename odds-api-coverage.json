@@ -1,6 +1,6 @@
 {
   "version": "v251",
-  "generatedAt": "2026-08-02T02:24:14.198Z",
+  "generatedAt": "2026-08-02T02:41:49.756Z",
   "provider": "The Odds API v4",
   "keyPresent": true,
   "regions": "uk",
@@ -101,7 +101,7 @@
       "sportKey": "soccer_usa_mls",
       "sportTitle": "MLS",
       "score": 0.466,
-      "matches": 4
+      "matches": 3
     },
     {
       "league": "Primera B Metropolitana",
@@ -126,14 +126,6 @@
       "sportTitle": "Brazil Série A",
       "score": 0.305,
       "matches": 2
-    },
-    {
-      "league": "Major League Soccer",
-      "country": "USA",
-      "sportKey": "soccer_usa_mls",
-      "sportTitle": "MLS",
-      "score": 1,
-      "matches": 9
     },
     {
       "league": "USL Championship",
@@ -176,11 +168,11 @@
       "matches": 5
     },
     {
-      "league": "Copa Do Brasil",
-      "country": "Brazil",
-      "sportKey": "soccer_brazil_campeonato",
-      "sportTitle": "Brazil Série A",
-      "score": 0.291,
+      "league": "Major League Soccer",
+      "country": "USA",
+      "sportKey": "soccer_usa_mls",
+      "sportTitle": "MLS",
+      "score": 1,
       "matches": 7
     },
     {
@@ -856,6 +848,14 @@
       "matches": 5
     },
     {
+      "league": "Copa Do Brasil",
+      "country": "Brazil",
+      "sportKey": "soccer_brazil_campeonato",
+      "sportTitle": "Brazil Série A",
+      "score": 0.291,
+      "matches": 6
+    },
+    {
       "league": "Capixaba B",
       "country": "Brazil",
       "sportKey": "soccer_brazil_serie_b",
@@ -992,7 +992,7 @@
       "matches": 2
     }
   ],
-  "matchesConsidered": 722,
+  "matchesConsidered": 715,
   "matchesMatched": 0,
   "matchesUpdated": 0,
   "fieldsFilled": 0,
@@ -1001,12 +1001,6 @@
   "derivedHtftMatches": 0,
   "bookmakerRows": 0,
   "unmatched": [
-    {
-      "league": "David Kipiani Cup",
-      "country": "Georgia",
-      "reason": "No matching soccer sport key",
-      "bestScore": 0.125
-    },
     {
       "league": "Liga 1",
       "country": "Moldova",
@@ -1056,18 +1050,6 @@
       "bestScore": 0.143
     },
     {
-      "league": "Liga Pro",
-      "country": "Ecuador",
-      "reason": "No matching soccer sport key",
-      "bestScore": 0.143
-    },
-    {
-      "league": "Liga Nacional",
-      "country": "Guatemala",
-      "reason": "No matching soccer sport key",
-      "bestScore": 0.143
-    },
-    {
       "league": "CONCACAF U20",
       "country": "World",
       "reason": "No matching soccer sport key",
@@ -1090,6 +1072,12 @@
       "country": "Panama",
       "reason": "No matching soccer sport key",
       "bestScore": 0.111
+    },
+    {
+      "league": "Liga Nacional",
+      "country": "Guatemala",
+      "reason": "No matching soccer sport key",
+      "bestScore": 0.143
     },
     {
       "league": "Northern NSW NPL",
@@ -1180,6 +1168,12 @@
       "country": "Belarus",
       "reason": "No matching soccer sport key",
       "bestScore": 0.143
+    },
+    {
+      "league": "David Kipiani Cup",
+      "country": "Georgia",
+      "reason": "No matching soccer sport key",
+      "bestScore": 0.125
     },
     {
       "league": "Virsliga",
@@ -1292,6 +1286,12 @@
     {
       "league": "Division 1",
       "country": "Kuwait",
+      "reason": "No matching soccer sport key",
+      "bestScore": 0.143
+    },
+    {
+      "league": "Liga Pro",
+      "country": "Ecuador",
       "reason": "No matching soccer sport key",
       "bestScore": 0.143
     },
@@ -2058,48 +2058,6 @@
       "reason": "No event/team match"
     },
     {
-      "league": "Copa Do Brasil",
-      "home": "Santos",
-      "away": "Remo",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Copa Do Brasil",
-      "home": "Palmeiras",
-      "away": "Fortaleza EC",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Copa Do Brasil",
-      "home": "Mirassol",
-      "away": "Gremio",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Copa Do Brasil",
-      "home": "Chapecoense-sc",
-      "away": "Cruzeiro",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Copa Do Brasil",
-      "home": "Internacional",
-      "away": "Corinthians",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Copa Do Brasil",
-      "home": "Atletico Paranaense",
-      "away": "Vitoria",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Copa Do Brasil",
-      "home": "Juventude",
-      "away": "Atletico-MG",
-      "reason": "No event/team match"
-    },
-    {
       "league": "Mineiro U20",
       "home": "Social U20",
       "away": "Betim U20",
@@ -2151,6 +2109,42 @@
       "league": "Baiano - 2",
       "home": "Fluminense De Feira",
       "away": "SSA",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Copa Do Brasil",
+      "home": "Palmeiras",
+      "away": "Fortaleza EC",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Copa Do Brasil",
+      "home": "Mirassol",
+      "away": "Gremio",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Copa Do Brasil",
+      "home": "Chapecoense-sc",
+      "away": "Cruzeiro",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Copa Do Brasil",
+      "home": "Internacional",
+      "away": "Corinthians",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Copa Do Brasil",
+      "home": "Atletico Paranaense",
+      "away": "Vitoria",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Copa Do Brasil",
+      "home": "Juventude",
+      "away": "Atletico-MG",
       "reason": "No event/team match"
     },
     {
@@ -2287,68 +2281,8 @@
     },
     {
       "league": "USL League One",
-      "home": "Forward Madison",
-      "away": "Westchester SC",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "USL League One",
       "home": "Boise",
       "away": "Corpus Christi",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Major League Soccer",
-      "home": "Inter Miami",
-      "away": "Columbus Crew",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Major League Soccer",
-      "home": "FC Cincinnati",
-      "away": "San Jose Earthquakes",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Major League Soccer",
-      "home": "Chicago Fire",
-      "away": "Charlotte",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Major League Soccer",
-      "home": "Minnesota United FC",
-      "away": "San Diego",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Major League Soccer",
-      "home": "Sporting Kansas City",
-      "away": "Houston Dynamo",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Major League Soccer",
-      "home": "St. Louis City",
-      "away": "Real Salt Lake",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Major League Soccer",
-      "home": "Colorado Rapids",
-      "away": "Austin",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Major League Soccer",
-      "home": "Los Angeles Galaxy",
-      "away": "FC Dallas",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Major League Soccer",
-      "home": "Portland Timbers",
-      "away": "Seattle Sounders",
       "reason": "No event/team match"
     },
     {
@@ -2460,6 +2394,30 @@
       "reason": "No event/team match"
     },
     {
+      "league": "MLS Next Pro",
+      "home": "The Town",
+      "away": "Austin II",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "MLS Next Pro",
+      "home": "Chicago Fire II",
+      "away": "FC Cincinnati II",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "MLS Next Pro",
+      "home": "New York RB II",
+      "away": "New England II",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "MLS Next Pro",
+      "home": "St. Louis City II",
+      "away": "Real Monarchs",
+      "reason": "No event/team match"
+    },
+    {
       "league": "Northern Super League",
       "home": "Calgary Wild W",
       "away": "AFC Toronto W",
@@ -2502,45 +2460,69 @@
       "reason": "No event/team match"
     },
     {
-      "league": "USL League Two",
-      "home": "Flint City Bucks",
-      "away": "Vermont Green",
+      "league": "Northern Super League",
+      "home": "Calgary Wild W",
+      "away": "AFC Toronto W",
       "reason": "No event/team match"
     },
     {
-      "league": "NWSL Women",
-      "home": "Houston Dash W",
-      "away": "NJ/NY Gotham FC W",
+      "league": "Northern Super League",
+      "home": "Halifax Tides W",
+      "away": "Ottawa Rapid W",
       "reason": "No event/team match"
     },
     {
-      "league": "NWSL Women",
-      "home": "Bay FC W",
-      "away": "Seattle Reign FC W",
+      "league": "Super League",
+      "home": "FC Vaduz",
+      "away": "FC ST. Gallen",
       "reason": "No event/team match"
     },
     {
-      "league": "NWSL Women",
-      "home": "Washington Spirit W",
-      "away": "San Diego Wave W",
+      "league": "Super League",
+      "home": "Grasshoppers",
+      "away": "FC Lugano",
       "reason": "No event/team match"
     },
     {
-      "league": "NWSL Women",
-      "home": "Utah Royals W",
-      "away": "Portland Thorns W",
+      "league": "Super League",
+      "home": "FC Sion",
+      "away": "FC Luzern",
       "reason": "No event/team match"
     },
     {
-      "league": "NWSL Women",
-      "home": "Denver Summit W",
-      "away": "Boston Legacy W",
+      "league": "Super League",
+      "home": "Navbahor",
+      "away": "Xorazm",
       "reason": "No event/team match"
     },
     {
-      "league": "MLS Next Pro",
-      "home": "Huntsville City",
-      "away": "Crown Legacy",
+      "league": "Super League",
+      "home": "Mash'al",
+      "away": "Sogdiana",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Super League",
+      "home": "Qizilqum",
+      "away": "Bunyodkor",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Super League",
+      "home": "Kokand-1912",
+      "away": "Surkhon",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Super League",
+      "home": "Olmaliq",
+      "away": "Nasaf",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Super League",
+      "home": "Dinamo Samarqand",
+      "away": "Neftchi",
       "reason": "No event/team match"
     }
   ],
@@ -2634,11 +2616,11 @@
       "market": "btts"
     },
     {
-      "sportKey": "soccer_mexico_ligamx",
+      "sportKey": "soccer_chile_campeonato",
       "market": "draw_no_bet"
     },
     {
-      "sportKey": "soccer_mexico_ligamx",
+      "sportKey": "soccer_chile_campeonato",
       "market": "double_chance"
     },
     {
@@ -3628,5 +3610,5 @@
   },
   "skipped": false,
   "skipReason": null,
-  "completedAt": "2026-08-02T02:24:26.139Z"
+  "completedAt": "2026-08-02T02:41:56.544Z"
 }
