@@ -1,20 +1,12 @@
 {
   "version": "v251",
-  "generatedAt": "2026-08-02T06:11:52.582Z",
+  "generatedAt": "2026-08-02T06:27:34.589Z",
   "provider": "The Odds API v4",
   "keyPresent": true,
   "regions": "uk",
   "sportsAvailable": 78,
   "soccerSportsAvailable": 43,
   "sportMappings": [
-    {
-      "league": "Ekstraklasa",
-      "country": "Poland",
-      "sportKey": "soccer_poland_ekstraklasa",
-      "sportTitle": "Ekstraklasa - Poland",
-      "score": 1,
-      "matches": 5
-    },
     {
       "league": "Torneo Promocional Amateur",
       "country": "Argentina",
@@ -414,6 +406,14 @@
       "sportTitle": "Bundesliga - Germany",
       "score": 0.305,
       "matches": 2
+    },
+    {
+      "league": "Ekstraklasa",
+      "country": "Poland",
+      "sportKey": "soccer_poland_ekstraklasa",
+      "sportTitle": "Ekstraklasa - Poland",
+      "score": 1,
+      "matches": 4
     },
     {
       "league": "Damallsvenskan",
@@ -952,7 +952,7 @@
       "matches": 2
     }
   ],
-  "matchesConsidered": 656,
+  "matchesConsidered": 655,
   "matchesMatched": 0,
   "matchesUpdated": 0,
   "fieldsFilled": 0,
@@ -1326,126 +1326,6 @@
       "country": "World",
       "reason": "No matching soccer sport key",
       "bestScore": 0.143
-    },
-    {
-      "league": "Ekstraklasa",
-      "home": "Korona Kielce",
-      "away": "Gornik Zabrze",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Ekstraklasa",
-      "home": "Legia Warszawa",
-      "away": "Zaglebie Lubin",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Ekstraklasa",
-      "home": "Slask Wroclaw",
-      "away": "Raków Częstochowa",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Ekstraklasa",
-      "home": "GKS Katowice",
-      "away": "Radomiak Radom",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Ekstraklasa",
-      "home": "Cracovia Krakow",
-      "away": "Pogon Szczecin",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "III Liga - Group 1",
-      "home": "Widzew II",
-      "away": "Troszyn",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "III Liga - Group 1",
-      "home": "Wigry Suwałki",
-      "away": "ŁKS Łódź II",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Ekstraliga Women",
-      "home": "Górnik Łęczna W",
-      "away": "Akademia Piłkarska LG W",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Ekstraliga Women",
-      "home": "UJ Krakow W",
-      "away": "Slask Wroclaw W",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "I Liga",
-      "home": "Ruch Chorzów",
-      "away": "Miedz Legnica",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "I Liga",
-      "home": "Stal Mielec",
-      "away": "Podbeskidzie",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "I Liga",
-      "home": "Pogoń Grod. Mazowiecki",
-      "away": "Puszcza Niepołomice",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "I Liga",
-      "home": "Chrobry Głogów",
-      "away": "Odra Opole",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "II Liga - East",
-      "home": "Rekord Bielsko-Biała",
-      "away": "Zawisza Bydgoszcz",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "II Liga - East",
-      "home": "Sandecja Nowy Sącz",
-      "away": "Chojniczanka Chojnice",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "III Liga - Group 4",
-      "home": "Czarni Połaniec",
-      "away": "KS Wieczysta Krakow II",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "III Liga - Group 4",
-      "home": "Hetman Zamosc",
-      "away": "Siarka Tarnobrzeg",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "III Liga - Group 4",
-      "home": "Moravia Morawica",
-      "away": "Wiślanie Jaśkowice",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "III Liga - Group 4",
-      "home": "Busko-Zdroj",
-      "away": "Wisłoka Dębica",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "III Liga - Group 4",
-      "home": "KSZO 1929",
-      "away": "Podlasie Biała Podlaska",
-      "reason": "No event/team match"
     },
     {
       "league": "Torneo Promocional Amateur",
@@ -2460,6 +2340,126 @@
       "home": "Swarovski Tirol II",
       "away": "Dornbirn",
       "reason": "No event/team match"
+    },
+    {
+      "league": "Regionalliga - West",
+      "home": "Röthis",
+      "away": "Lauterach",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Regionalliga - West",
+      "home": "Wolfurt",
+      "away": "Rheindorf Altach II",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Frauenliga",
+      "home": "First Vienna W",
+      "away": "SK Rapid W",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Bundesliga",
+      "home": "Austria Lustenau",
+      "away": "Ried",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Bundesliga",
+      "home": "Wolfsberger AC",
+      "away": "Austria Vienna",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Bundesliga",
+      "home": "Rapid Vienna",
+      "away": "SCR Altach",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Oberliga - Hamburg",
+      "home": "Paloma",
+      "away": "Vorwärts-Wacker 04",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Oberliga - Hamburg",
+      "home": "Niendorfer TSV",
+      "away": "HT16",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Oberliga - Hamburg",
+      "home": "Buchholz",
+      "away": "Tus Dassendorf",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Regionalliga - Nord",
+      "home": "Eintracht Norderstedt",
+      "away": "Atlas Delmenhorst",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Regionalliga - Nord",
+      "home": "Todesfelde",
+      "away": "St. Pauli II",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Regionalliga - Nordost",
+      "home": "Hallescher FC",
+      "away": "FC Rot-Weiß Erfurt",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Regionalliga - Nordost",
+      "home": "Lokomotive Leipzig",
+      "away": "Magdeburg II",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Regionalliga - Nordost",
+      "home": "SV Babelsberg 03",
+      "away": "Altglienicke",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Regionalliga - Nordost",
+      "home": "Chemnitzer FC",
+      "away": "FSV Zwickau",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Regionalliga - Nordost",
+      "home": "Hertha BSC II",
+      "away": "Greifswalder FC",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Regionalliga - Nordost",
+      "home": "FC Carl Zeiss Jena",
+      "away": "RSV Eintracht",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Regionalliga - Nordost",
+      "home": "Magdeburg II",
+      "away": "Luckenwalde",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Oberliga - Rheinland-Pfalz / Saar",
+      "home": "Ahrweiler",
+      "away": "Schott Mainz",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Oberliga - Rheinland-Pfalz / Saar",
+      "home": "Gonsenheim",
+      "away": "RW Wittlich",
+      "reason": "No event/team match"
     }
   ],
   "unsupportedMarkets": [
@@ -2629,6 +2629,18 @@
     },
     {
       "sportKey": "soccer_sweden_allsvenskan",
+      "market": "double_chance"
+    },
+    {
+      "sportKey": "soccer_poland_ekstraklasa",
+      "market": "btts"
+    },
+    {
+      "sportKey": "soccer_poland_ekstraklasa",
+      "market": "draw_no_bet"
+    },
+    {
+      "sportKey": "soccer_poland_ekstraklasa",
       "market": "double_chance"
     },
     {
@@ -3164,6 +3176,31 @@
       "statusCode": 422
     },
     {
+      "label": "soccer_poland_ekstraklasa:base-combined",
+      "error": "Markets not supported by this endpoint: btts, double_chance, draw_no_bet",
+      "statusCode": 422
+    },
+    {
+      "label": "soccer_poland_ekstraklasa:base-core",
+      "error": "Invalid commenceTimeFrom parameter. The format must be YYYY-MM-DDTHH:MM:SSZ, for example 2020-11-24T16:05:00Z",
+      "statusCode": 422
+    },
+    {
+      "label": "soccer_poland_ekstraklasa:btts",
+      "error": "Markets not supported by this endpoint: btts",
+      "statusCode": 422
+    },
+    {
+      "label": "soccer_poland_ekstraklasa:draw_no_bet",
+      "error": "Markets not supported by this endpoint: draw_no_bet",
+      "statusCode": 422
+    },
+    {
+      "label": "soccer_poland_ekstraklasa:double_chance",
+      "error": "Markets not supported by this endpoint: double_chance",
+      "statusCode": 422
+    },
+    {
       "label": "soccer_korea_kleague1:base-combined",
       "error": "Markets not supported by this endpoint: btts, double_chance, draw_no_bet",
       "statusCode": 422
@@ -3546,5 +3583,5 @@
   },
   "skipped": false,
   "skipReason": null,
-  "completedAt": "2026-08-02T06:12:12.006Z"
+  "completedAt": "2026-08-02T06:27:46.636Z"
 }
