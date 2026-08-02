@@ -1,6 +1,6 @@
 {
   "version": "v251",
-  "generatedAt": "2026-08-02T05:18:28.116Z",
+  "generatedAt": "2026-08-02T05:36:20.281Z",
   "provider": "The Odds API v4",
   "keyPresent": true,
   "regions": "uk",
@@ -126,14 +126,6 @@
       "sportTitle": "MLS",
       "score": 0.323,
       "matches": 1
-    },
-    {
-      "league": "USL Championship",
-      "country": "USA",
-      "sportKey": "soccer_usa_mls",
-      "sportTitle": "MLS",
-      "score": 0.323,
-      "matches": 2
     },
     {
       "league": "Liga MX",
@@ -992,7 +984,7 @@
       "matches": 2
     }
   ],
-  "matchesConsidered": 669,
+  "matchesConsidered": 665,
   "matchesMatched": 0,
   "matchesUpdated": 0,
   "fieldsFilled": 0,
@@ -1024,18 +1016,6 @@
       "country": "Honduras",
       "reason": "No matching soccer sport key",
       "bestScore": 0.143
-    },
-    {
-      "league": "Northern NSW NPL",
-      "country": "Australia",
-      "reason": "No matching soccer sport key",
-      "bestScore": 0
-    },
-    {
-      "league": "Npl Nsw U20",
-      "country": "Australia",
-      "reason": "No matching soccer sport key",
-      "bestScore": 0
     },
     {
       "league": "NNSW League 1",
@@ -1075,6 +1055,12 @@
     },
     {
       "league": "Victoria NPL",
+      "country": "Australia",
+      "reason": "No matching soccer sport key",
+      "bestScore": 0
+    },
+    {
+      "league": "Npl Nsw U20",
       "country": "Australia",
       "reason": "No matching soccer sport key",
       "bestScore": 0
@@ -2500,6 +2486,12 @@
       "home": "Ska-khabarovsk",
       "away": "Ural",
       "reason": "No event/team match"
+    },
+    {
+      "league": "First League",
+      "home": "Arsenal Tula",
+      "away": "Torpedo Moskva",
+      "reason": "No event/team match"
     }
   ],
   "unsupportedMarkets": [
@@ -3586,5 +3578,5 @@
   },
   "skipped": false,
   "skipReason": null,
-  "completedAt": "2026-08-02T05:18:48.104Z"
+  "completedAt": "2026-08-02T05:36:39.419Z"
 }
