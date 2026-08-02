@@ -1,6 +1,6 @@
 {
   "version": "v251",
-  "generatedAt": "2026-08-02T04:59:27.517Z",
+  "generatedAt": "2026-08-02T05:18:28.116Z",
   "provider": "The Odds API v4",
   "keyPresent": true,
   "regions": "uk",
@@ -117,7 +117,15 @@
       "sportKey": "soccer_usa_mls",
       "sportTitle": "MLS",
       "score": 1,
-      "matches": 2
+      "matches": 1
+    },
+    {
+      "league": "USL Championship",
+      "country": "USA",
+      "sportKey": "soccer_usa_mls",
+      "sportTitle": "MLS",
+      "score": 0.323,
+      "matches": 1
     },
     {
       "league": "USL Championship",
@@ -984,7 +992,7 @@
       "matches": 2
     }
   ],
-  "matchesConsidered": 675,
+  "matchesConsidered": 669,
   "matchesMatched": 0,
   "matchesUpdated": 0,
   "fieldsFilled": 0,
@@ -993,18 +1001,6 @@
   "derivedHtftMatches": 0,
   "bookmakerRows": 0,
   "unmatched": [
-    {
-      "league": "NB II",
-      "country": "Hungary",
-      "reason": "No matching soccer sport key",
-      "bestScore": 0
-    },
-    {
-      "league": "Africa Cup of Nations - Women",
-      "country": "World",
-      "reason": "No matching soccer sport key",
-      "bestScore": 0.111
-    },
     {
       "league": "Segunda División",
       "country": "Uruguay",
@@ -1016,6 +1012,12 @@
       "country": "Colombia",
       "reason": "No matching soccer sport key",
       "bestScore": 0.143
+    },
+    {
+      "league": "Africa Cup of Nations - Women",
+      "country": "World",
+      "reason": "No matching soccer sport key",
+      "bestScore": 0.111
     },
     {
       "league": "Liga Nacional",
@@ -1196,6 +1198,12 @@
       "country": "Romania",
       "reason": "No matching soccer sport key",
       "bestScore": 0.143
+    },
+    {
+      "league": "NB II",
+      "country": "Hungary",
+      "reason": "No matching soccer sport key",
+      "bestScore": 0
     },
     {
       "league": "A Lyga",
@@ -2141,20 +2149,8 @@
     },
     {
       "league": "Major League Soccer",
-      "home": "Los Angeles Galaxy",
-      "away": "FC Dallas",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Major League Soccer",
       "home": "Portland Timbers",
       "away": "Seattle Sounders",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "USL Championship",
-      "home": "Las Vegas Lights",
-      "away": "Phoenix Rising",
       "reason": "No event/team match"
     },
     {
@@ -2491,6 +2487,18 @@
       "league": "Second League - Group 4",
       "home": "Khimik Dzerzhinsk",
       "away": "Nosta",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Second League - Group 4",
+      "home": "Chelyabinsk II",
+      "away": "Dinamo Barnaul",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "First League",
+      "home": "Ska-khabarovsk",
+      "away": "Ural",
       "reason": "No event/team match"
     }
   ],
@@ -3578,5 +3586,5 @@
   },
   "skipped": false,
   "skipReason": null,
-  "completedAt": "2026-08-02T04:59:39.903Z"
+  "completedAt": "2026-08-02T05:18:48.104Z"
 }
