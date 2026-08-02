@@ -1,6 +1,6 @@
 {
   "version": "v251",
-  "generatedAt": "2026-08-02T21:56:12.489Z",
+  "generatedAt": "2026-08-02T22:23:43.715Z",
   "provider": "The Odds API v4",
   "keyPresent": true,
   "regions": "uk",
@@ -38,14 +38,6 @@
       "sportTitle": "Premier League - Russia",
       "score": 0.43,
       "matches": 1
-    },
-    {
-      "league": "Oberliga - Hessen",
-      "country": "Germany",
-      "sportKey": "soccer_germany_bundesliga",
-      "sportTitle": "Bundesliga - Germany",
-      "score": 0.347,
-      "matches": 2
     },
     {
       "league": "Brasileiro Women",
@@ -88,27 +80,11 @@
       "matches": 4
     },
     {
-      "league": "Division 2 - Norra Svealand",
-      "country": "Sweden",
-      "sportKey": "soccer_sweden_allsvenskan",
-      "sportTitle": "Allsvenskan - Sweden",
-      "score": 0.305,
-      "matches": 1
-    },
-    {
       "league": "Super Liga",
       "country": "Slovakia",
       "sportKey": "soccer_turkey_super_league",
       "sportTitle": "Turkey Super League",
       "score": 0.286,
-      "matches": 1
-    },
-    {
-      "league": "Bundesliga",
-      "country": "Austria",
-      "sportKey": "soccer_austria_bundesliga",
-      "sportTitle": "Austrian Football Bundesliga",
-      "score": 0.833,
       "matches": 1
     },
     {
@@ -118,14 +94,6 @@
       "sportTitle": "EPL",
       "score": 0.987,
       "matches": 2
-    },
-    {
-      "league": "Super Liga",
-      "country": "Moldova",
-      "sportKey": "soccer_turkey_super_league",
-      "sportTitle": "Turkey Super League",
-      "score": 0.286,
-      "matches": 3
     },
     {
       "league": "Eliteserien",
@@ -624,7 +592,7 @@
       "matches": 2
     }
   ],
-  "matchesConsidered": 363,
+  "matchesConsidered": 351,
   "matchesMatched": 0,
   "matchesUpdated": 0,
   "fieldsFilled": 0,
@@ -633,12 +601,6 @@
   "derivedHtftMatches": 0,
   "bookmakerRows": 0,
   "unmatched": [
-    {
-      "league": "Friendlies Clubs",
-      "country": "World",
-      "reason": "No matching soccer sport key",
-      "bestScore": 0
-    },
     {
       "league": "Vysshaya Liga",
       "country": "Tajikistan",
@@ -682,12 +644,6 @@
       "bestScore": 0
     },
     {
-      "league": "Second League",
-      "country": "Bulgaria",
-      "reason": "No matching soccer sport key",
-      "bestScore": 0.167
-    },
-    {
       "league": "Africa Cup of Nations - Women",
       "country": "World",
       "reason": "No matching soccer sport key",
@@ -728,6 +684,12 @@
       "country": "Peru",
       "reason": "No matching soccer sport key",
       "bestScore": 0.143
+    },
+    {
+      "league": "Friendlies Clubs",
+      "country": "World",
+      "reason": "No matching soccer sport key",
+      "bestScore": 0
     },
     {
       "league": "First League",
@@ -850,6 +812,12 @@
       "bestScore": 0.143
     },
     {
+      "league": "Second League",
+      "country": "Bulgaria",
+      "reason": "No matching soccer sport key",
+      "bestScore": 0.167
+    },
+    {
       "league": "Esiliiga A",
       "country": "Estonia",
       "reason": "No matching soccer sport key",
@@ -901,18 +869,6 @@
       "league": "Oberliga - Hamburg",
       "home": "Niendorfer TSV",
       "away": "HT16",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Oberliga - Hessen",
-      "home": "Kassel",
-      "away": "Darmstadt 98 II",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Oberliga - Hessen",
-      "home": "Rot-Weiß Walldorf",
-      "away": "Unter-Flockenbach",
       "reason": "No event/team match"
     },
     {
@@ -1288,69 +1244,9 @@
       "reason": "No event/team match"
     },
     {
-      "league": "Division 2 - Norra Svealand",
-      "home": "Sunnersta",
-      "away": "Viggbyholms IK",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Allsvenskan",
-      "home": "Djurgardens IF",
-      "away": "Vasteras SK FK",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Allsvenskan",
-      "home": "Halmstad",
-      "away": "Sirius",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Damallsvenskan",
-      "home": "Vittsjö W",
-      "away": "Rosengård W",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Ettan - Norra",
-      "home": "Vasalund",
-      "away": "Sollentuna",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Ettan - Norra",
-      "home": "Hammarby Talang",
-      "away": "Arlanda",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Division 2 - Södra Götaland",
-      "home": "Torns",
-      "away": "Staffanstorp United",
-      "reason": "No event/team match"
-    },
-    {
       "league": "Super Liga",
       "home": "Komárno",
       "away": "Spartak Trnava",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Super Liga",
-      "home": "CSF Bălți",
-      "away": "Sheriff Tiraspol",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Super Liga",
-      "home": "Dacia-Buiucani",
-      "away": "Zimbru",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Super Liga",
-      "home": "Petrocub",
-      "away": "Politehnica UTM",
       "reason": "No event/team match"
     },
     {
@@ -1363,12 +1259,6 @@
       "league": "Super Liga",
       "home": "Zemun",
       "away": "Radnicki NIS",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Bundesliga",
-      "home": "Rapid Vienna",
-      "away": "SCR Altach",
       "reason": "No event/team match"
     },
     {
@@ -2310,18 +2200,6 @@
       "market": "double_chance"
     },
     {
-      "sportKey": "soccer_austria_bundesliga",
-      "market": "btts"
-    },
-    {
-      "sportKey": "soccer_austria_bundesliga",
-      "market": "draw_no_bet"
-    },
-    {
-      "sportKey": "soccer_austria_bundesliga",
-      "market": "double_chance"
-    },
-    {
       "sportKey": "soccer_norway_eliteserien",
       "market": "btts"
     },
@@ -2427,6 +2305,18 @@
     },
     {
       "sportKey": "soccer_belgium_first_div",
+      "market": "double_chance"
+    },
+    {
+      "sportKey": "soccer_sweden_allsvenskan",
+      "market": "btts"
+    },
+    {
+      "sportKey": "soccer_sweden_allsvenskan",
+      "market": "draw_no_bet"
+    },
+    {
+      "sportKey": "soccer_sweden_allsvenskan",
       "market": "double_chance"
     },
     {
@@ -2704,31 +2594,6 @@
       "statusCode": 422
     },
     {
-      "label": "soccer_austria_bundesliga:base-combined",
-      "error": "Markets not supported by this endpoint: btts, double_chance, draw_no_bet",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_austria_bundesliga:base-core",
-      "error": "Invalid commenceTimeFrom parameter. The format must be YYYY-MM-DDTHH:MM:SSZ, for example 2020-11-24T16:05:00Z",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_austria_bundesliga:btts",
-      "error": "Markets not supported by this endpoint: btts",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_austria_bundesliga:draw_no_bet",
-      "error": "Markets not supported by this endpoint: draw_no_bet",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_austria_bundesliga:double_chance",
-      "error": "Markets not supported by this endpoint: double_chance",
-      "statusCode": 422
-    },
-    {
       "label": "soccer_norway_eliteserien:base-combined",
       "error": "Markets not supported by this endpoint: btts, double_chance, draw_no_bet",
       "statusCode": 422
@@ -2954,6 +2819,31 @@
       "statusCode": 422
     },
     {
+      "label": "soccer_sweden_allsvenskan:base-combined",
+      "error": "Markets not supported by this endpoint: btts, double_chance, draw_no_bet",
+      "statusCode": 422
+    },
+    {
+      "label": "soccer_sweden_allsvenskan:base-core",
+      "error": "Invalid commenceTimeFrom parameter. The format must be YYYY-MM-DDTHH:MM:SSZ, for example 2020-11-24T16:05:00Z",
+      "statusCode": 422
+    },
+    {
+      "label": "soccer_sweden_allsvenskan:btts",
+      "error": "Markets not supported by this endpoint: btts",
+      "statusCode": 422
+    },
+    {
+      "label": "soccer_sweden_allsvenskan:draw_no_bet",
+      "error": "Markets not supported by this endpoint: draw_no_bet",
+      "statusCode": 422
+    },
+    {
+      "label": "soccer_sweden_allsvenskan:double_chance",
+      "error": "Markets not supported by this endpoint: double_chance",
+      "statusCode": 422
+    },
+    {
       "label": "soccer_denmark_superliga:base-combined",
       "error": "Markets not supported by this endpoint: btts, double_chance, draw_no_bet",
       "statusCode": 422
@@ -3111,5 +3001,5 @@
   },
   "skipped": false,
   "skipReason": null,
-  "completedAt": "2026-08-02T21:56:23.956Z"
+  "completedAt": "2026-08-02T22:23:49.439Z"
 }
