@@ -1,6 +1,6 @@
 {
   "version": "v251",
-  "generatedAt": "2026-08-03T03:31:38.969Z",
+  "generatedAt": "2026-08-03T04:01:45.439Z",
   "provider": "The Odds API v4",
   "keyPresent": true,
   "regions": "uk",
@@ -22,22 +22,6 @@
       "sportTitle": "Liga MX",
       "score": 0.68,
       "matches": 3
-    },
-    {
-      "league": "NWSL Women",
-      "country": "USA",
-      "sportKey": "soccer_usa_mls",
-      "sportTitle": "MLS",
-      "score": 0.323,
-      "matches": 1
-    },
-    {
-      "league": "Liga MX",
-      "country": "Mexico",
-      "sportKey": "soccer_mexico_ligamx",
-      "sportTitle": "Liga MX",
-      "score": 1,
-      "matches": 1
     },
     {
       "league": "Second League - Group 4",
@@ -424,7 +408,7 @@
       "matches": 2
     }
   ],
-  "matchesConsidered": 230,
+  "matchesConsidered": 225,
   "matchesMatched": 0,
   "matchesUpdated": 0,
   "fieldsFilled": 0,
@@ -433,12 +417,6 @@
   "derivedHtftMatches": 0,
   "bookmakerRows": 0,
   "unmatched": [
-    {
-      "league": "A Lyga",
-      "country": "Lithuania",
-      "reason": "No matching soccer sport key",
-      "bestScore": 0.143
-    },
     {
       "league": "Meistaradeildin",
       "country": "Faroe-Islands",
@@ -489,12 +467,6 @@
     },
     {
       "league": "Liga Femenina",
-      "country": "Colombia",
-      "reason": "No matching soccer sport key",
-      "bestScore": 0.143
-    },
-    {
-      "league": "Primera A",
       "country": "Colombia",
       "reason": "No matching soccer sport key",
       "bestScore": 0.143
@@ -560,6 +532,12 @@
       "bestScore": 0.143
     },
     {
+      "league": "A Lyga",
+      "country": "Lithuania",
+      "reason": "No matching soccer sport key",
+      "bestScore": 0.143
+    },
+    {
       "league": "Second League",
       "country": "Bulgaria",
       "reason": "No matching soccer sport key",
@@ -610,6 +588,12 @@
     {
       "league": "Liga Pro",
       "country": "Ecuador",
+      "reason": "No matching soccer sport key",
+      "bestScore": 0.143
+    },
+    {
+      "league": "Primera A",
+      "country": "Colombia",
       "reason": "No matching soccer sport key",
       "bestScore": 0.143
     },
@@ -803,18 +787,6 @@
       "league": "Liga MX Femenil",
       "home": "Santos Laguna W",
       "away": "América W",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Liga MX",
-      "home": "Toluca",
-      "away": "Necaxa",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "NWSL Women",
-      "home": "Denver Summit W",
-      "away": "Boston Legacy W",
       "reason": "No event/team match"
     },
     {
@@ -1513,18 +1485,6 @@
     },
     {
       "sportKey": "soccer_usa_mls",
-      "market": "double_chance"
-    },
-    {
-      "sportKey": "soccer_epl",
-      "market": "btts"
-    },
-    {
-      "sportKey": "soccer_epl",
-      "market": "draw_no_bet"
-    },
-    {
-      "sportKey": "soccer_epl",
       "market": "double_chance"
     },
     {
@@ -2266,5 +2226,5 @@
   },
   "skipped": false,
   "skipReason": null,
-  "completedAt": "2026-08-03T03:31:44.285Z"
+  "completedAt": "2026-08-03T04:01:50.609Z"
 }
