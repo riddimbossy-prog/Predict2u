@@ -1,6 +1,6 @@
 {
   "version": "v251",
-  "generatedAt": "2026-08-03T04:32:05.810Z",
+  "generatedAt": "2026-08-03T05:02:22.008Z",
   "provider": "The Odds API v4",
   "keyPresent": true,
   "regions": "uk",
@@ -408,7 +408,7 @@
       "matches": 2
     }
   ],
-  "matchesConsidered": 224,
+  "matchesConsidered": 222,
   "matchesMatched": 0,
   "matchesUpdated": 0,
   "fieldsFilled": 0,
@@ -417,18 +417,6 @@
   "derivedHtftMatches": 0,
   "bookmakerRows": 0,
   "unmatched": [
-    {
-      "league": "Virsliga",
-      "country": "Latvia",
-      "reason": "No matching soccer sport key",
-      "bestScore": 0
-    },
-    {
-      "league": "Africa Cup of Nations - Women",
-      "country": "World",
-      "reason": "No matching soccer sport key",
-      "bestScore": 0.111
-    },
     {
       "league": "Division 1",
       "country": "Kuwait",
@@ -440,6 +428,12 @@
       "country": "Montenegro",
       "reason": "No matching soccer sport key",
       "bestScore": 0.167
+    },
+    {
+      "league": "Africa Cup of Nations - Women",
+      "country": "World",
+      "reason": "No matching soccer sport key",
+      "bestScore": 0.111
     },
     {
       "league": "Liga de Ascenso",
@@ -500,6 +494,12 @@
       "country": "Iceland",
       "reason": "No matching soccer sport key",
       "bestScore": 0.125
+    },
+    {
+      "league": "Virsliga",
+      "country": "Latvia",
+      "reason": "No matching soccer sport key",
+      "bestScore": 0
     },
     {
       "league": "1 Lyga",
@@ -1482,6 +1482,18 @@
       "market": "double_chance"
     },
     {
+      "sportKey": "soccer_epl",
+      "market": "btts"
+    },
+    {
+      "sportKey": "soccer_epl",
+      "market": "draw_no_bet"
+    },
+    {
+      "sportKey": "soccer_epl",
+      "market": "double_chance"
+    },
+    {
       "sportKey": "soccer_greece_super_league",
       "market": "btts"
     },
@@ -2183,5 +2195,5 @@
   },
   "skipped": false,
   "skipReason": null,
-  "completedAt": "2026-08-03T04:32:15.757Z"
+  "completedAt": "2026-08-03T05:02:43.370Z"
 }
