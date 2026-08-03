@@ -1,28 +1,12 @@
 {
   "version": "v251",
-  "generatedAt": "2026-08-03T03:01:57.085Z",
+  "generatedAt": "2026-08-03T03:31:38.969Z",
   "provider": "The Odds API v4",
   "keyPresent": true,
   "regions": "uk",
   "sportsAvailable": 76,
   "soccerSportsAvailable": 44,
   "sportMappings": [
-    {
-      "league": "Super League",
-      "country": "Uzbekistan",
-      "sportKey": "soccer_greece_super_league",
-      "sportTitle": "Super League - Greece",
-      "score": 0.653,
-      "matches": 4
-    },
-    {
-      "league": "MLS Next Pro",
-      "country": "USA",
-      "sportKey": "soccer_usa_mls",
-      "sportTitle": "MLS",
-      "score": 1,
-      "matches": 1
-    },
     {
       "league": "Primera Nacional",
       "country": "Argentina",
@@ -38,22 +22,6 @@
       "sportTitle": "Liga MX",
       "score": 0.68,
       "matches": 3
-    },
-    {
-      "league": "Primera División",
-      "country": "Costa-Rica",
-      "sportKey": "soccer_argentina_primera_division",
-      "sportTitle": "Primera División - Argentina",
-      "score": 0.606,
-      "matches": 2
-    },
-    {
-      "league": "Liga Profesional Argentina",
-      "country": "Argentina",
-      "sportKey": "soccer_argentina_primera_division",
-      "sportTitle": "Primera División - Argentina",
-      "score": 0.78,
-      "matches": 6
     },
     {
       "league": "NWSL Women",
@@ -110,6 +78,14 @@
       "sportTitle": "Premier League - Russia",
       "score": 0.513,
       "matches": 2
+    },
+    {
+      "league": "Super League",
+      "country": "Uzbekistan",
+      "sportKey": "soccer_greece_super_league",
+      "sportTitle": "Super League - Greece",
+      "score": 0.653,
+      "matches": 3
     },
     {
       "league": "Kakkonen - Lohko C",
@@ -280,6 +256,14 @@
       "matches": 1
     },
     {
+      "league": "Liga Profesional Argentina",
+      "country": "Argentina",
+      "sportKey": "soccer_argentina_primera_division",
+      "sportTitle": "Primera División - Argentina",
+      "score": 0.78,
+      "matches": 5
+    },
+    {
       "league": "Brasileiro Women",
       "country": "Brazil",
       "sportKey": "soccer_brazil_serie_b",
@@ -318,6 +302,14 @@
       "sportTitle": "Brazil Série A",
       "score": 0.291,
       "matches": 2
+    },
+    {
+      "league": "Primera División",
+      "country": "Costa-Rica",
+      "sportKey": "soccer_argentina_primera_division",
+      "sportTitle": "Primera División - Argentina",
+      "score": 0.606,
+      "matches": 1
     },
     {
       "league": "UEFA Champions League Women",
@@ -432,7 +424,7 @@
       "matches": 2
     }
   ],
-  "matchesConsidered": 234,
+  "matchesConsidered": 230,
   "matchesMatched": 0,
   "matchesUpdated": 0,
   "fieldsFilled": 0,
@@ -664,69 +656,9 @@
       "bestScore": 0.167
     },
     {
-      "league": "Super League",
-      "home": "Qizilqum",
-      "away": "Bunyodkor",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Super League",
-      "home": "Kokand-1912",
-      "away": "Surkhon",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Super League",
-      "home": "Olmaliq",
-      "away": "Nasaf",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Super League",
-      "home": "Dinamo Samarqand",
-      "away": "Neftchi",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Northern Super League",
-      "home": "Halifax Tides W",
-      "away": "Ottawa Rapid W",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "MLS Next Pro",
-      "home": "The Town",
-      "away": "Austin II",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "NWSL Women",
-      "home": "Denver Summit W",
-      "away": "Boston Legacy W",
-      "reason": "No event/team match"
-    },
-    {
       "league": "Primera Nacional",
       "home": "Club Atlético Güemes",
       "away": "Tristan Suarez",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Primera División",
-      "home": "Inter San Carlos",
-      "away": "CS Herediano",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Primera División",
-      "home": "Perez Zeledon",
-      "away": "CS Cartagines",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Liga Profesional Argentina",
-      "home": "Lanus",
-      "away": "Instituto Cordoba",
       "reason": "No event/team match"
     },
     {
@@ -763,6 +695,12 @@
       "league": "Primera División - Apertura",
       "home": "Defensor Sporting",
       "away": "Cerro",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Primera División",
+      "home": "Perez Zeledon",
+      "away": "CS Cartagines",
       "reason": "No event/team match"
     },
     {
@@ -874,6 +812,12 @@
       "reason": "No event/team match"
     },
     {
+      "league": "NWSL Women",
+      "home": "Denver Summit W",
+      "away": "Boston Legacy W",
+      "reason": "No event/team match"
+    },
+    {
       "league": "Second League - Group 4",
       "home": "Chelyabinsk II",
       "away": "Dinamo Barnaul",
@@ -913,6 +857,30 @@
       "league": "Premier League",
       "home": "Shakhtar Donetsk",
       "away": "Kudrivka",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Super League",
+      "home": "Kokand-1912",
+      "away": "Surkhon",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Super League",
+      "home": "Olmaliq",
+      "away": "Nasaf",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Super League",
+      "home": "Dinamo Samarqand",
+      "away": "Neftchi",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Northern Super League",
+      "home": "Halifax Tides W",
+      "away": "Ottawa Rapid W",
       "reason": "No event/team match"
     },
     {
@@ -1512,30 +1480,6 @@
   ],
   "unsupportedMarkets": [
     {
-      "sportKey": "soccer_greece_super_league",
-      "market": "btts"
-    },
-    {
-      "sportKey": "soccer_greece_super_league",
-      "market": "draw_no_bet"
-    },
-    {
-      "sportKey": "soccer_greece_super_league",
-      "market": "double_chance"
-    },
-    {
-      "sportKey": "soccer_usa_mls",
-      "market": "btts"
-    },
-    {
-      "sportKey": "soccer_usa_mls",
-      "market": "draw_no_bet"
-    },
-    {
-      "sportKey": "soccer_usa_mls",
-      "market": "double_chance"
-    },
-    {
       "sportKey": "soccer_argentina_primera_division",
       "market": "btts"
     },
@@ -1560,15 +1504,15 @@
       "market": "double_chance"
     },
     {
-      "sportKey": "soccer_russia_premier_league",
+      "sportKey": "soccer_usa_mls",
       "market": "btts"
     },
     {
-      "sportKey": "soccer_russia_premier_league",
+      "sportKey": "soccer_usa_mls",
       "market": "draw_no_bet"
     },
     {
-      "sportKey": "soccer_russia_premier_league",
+      "sportKey": "soccer_usa_mls",
       "market": "double_chance"
     },
     {
@@ -1581,6 +1525,30 @@
     },
     {
       "sportKey": "soccer_epl",
+      "market": "double_chance"
+    },
+    {
+      "sportKey": "soccer_epl",
+      "market": "btts"
+    },
+    {
+      "sportKey": "soccer_epl",
+      "market": "draw_no_bet"
+    },
+    {
+      "sportKey": "soccer_epl",
+      "market": "double_chance"
+    },
+    {
+      "sportKey": "soccer_greece_super_league",
+      "market": "btts"
+    },
+    {
+      "sportKey": "soccer_greece_super_league",
+      "market": "draw_no_bet"
+    },
+    {
+      "sportKey": "soccer_greece_super_league",
       "market": "double_chance"
     },
     {
@@ -1766,56 +1734,6 @@
   ],
   "requestErrors": [
     {
-      "label": "soccer_greece_super_league:base-combined",
-      "error": "Markets not supported by this endpoint: btts, double_chance, draw_no_bet",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_greece_super_league:base-core",
-      "error": "Invalid commenceTimeFrom parameter. The format must be YYYY-MM-DDTHH:MM:SSZ, for example 2020-11-24T16:05:00Z",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_greece_super_league:btts",
-      "error": "Markets not supported by this endpoint: btts",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_greece_super_league:draw_no_bet",
-      "error": "Markets not supported by this endpoint: draw_no_bet",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_greece_super_league:double_chance",
-      "error": "Markets not supported by this endpoint: double_chance",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_usa_mls:base-combined",
-      "error": "Markets not supported by this endpoint: btts, double_chance, draw_no_bet",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_usa_mls:base-core",
-      "error": "Invalid commenceTimeFrom parameter. The format must be YYYY-MM-DDTHH:MM:SSZ, for example 2020-11-24T16:05:00Z",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_usa_mls:btts",
-      "error": "Markets not supported by this endpoint: btts",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_usa_mls:draw_no_bet",
-      "error": "Markets not supported by this endpoint: draw_no_bet",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_usa_mls:double_chance",
-      "error": "Markets not supported by this endpoint: double_chance",
-      "statusCode": 422
-    },
-    {
       "label": "soccer_argentina_primera_division:base-combined",
       "error": "Markets not supported by this endpoint: btts, double_chance, draw_no_bet",
       "statusCode": 422
@@ -1866,6 +1784,31 @@
       "statusCode": 422
     },
     {
+      "label": "soccer_usa_mls:base-combined",
+      "error": "Markets not supported by this endpoint: btts, double_chance, draw_no_bet",
+      "statusCode": 422
+    },
+    {
+      "label": "soccer_usa_mls:base-core",
+      "error": "Invalid commenceTimeFrom parameter. The format must be YYYY-MM-DDTHH:MM:SSZ, for example 2020-11-24T16:05:00Z",
+      "statusCode": 422
+    },
+    {
+      "label": "soccer_usa_mls:btts",
+      "error": "Markets not supported by this endpoint: btts",
+      "statusCode": 422
+    },
+    {
+      "label": "soccer_usa_mls:draw_no_bet",
+      "error": "Markets not supported by this endpoint: draw_no_bet",
+      "statusCode": 422
+    },
+    {
+      "label": "soccer_usa_mls:double_chance",
+      "error": "Markets not supported by this endpoint: double_chance",
+      "statusCode": 422
+    },
+    {
       "label": "soccer_russia_premier_league:base-combined",
       "error": "Markets not supported by this endpoint: btts, double_chance, draw_no_bet",
       "statusCode": 422
@@ -1912,6 +1855,31 @@
     },
     {
       "label": "soccer_epl:double_chance",
+      "error": "Markets not supported by this endpoint: double_chance",
+      "statusCode": 422
+    },
+    {
+      "label": "soccer_greece_super_league:base-combined",
+      "error": "Markets not supported by this endpoint: btts, double_chance, draw_no_bet",
+      "statusCode": 422
+    },
+    {
+      "label": "soccer_greece_super_league:base-core",
+      "error": "Invalid commenceTimeFrom parameter. The format must be YYYY-MM-DDTHH:MM:SSZ, for example 2020-11-24T16:05:00Z",
+      "statusCode": 422
+    },
+    {
+      "label": "soccer_greece_super_league:btts",
+      "error": "Markets not supported by this endpoint: btts",
+      "statusCode": 422
+    },
+    {
+      "label": "soccer_greece_super_league:draw_no_bet",
+      "error": "Markets not supported by this endpoint: draw_no_bet",
+      "statusCode": 422
+    },
+    {
+      "label": "soccer_greece_super_league:double_chance",
       "error": "Markets not supported by this endpoint: double_chance",
       "statusCode": 422
     },
@@ -2298,5 +2266,5 @@
   },
   "skipped": false,
   "skipReason": null,
-  "completedAt": "2026-08-03T03:02:14.103Z"
+  "completedAt": "2026-08-03T03:31:44.285Z"
 }
