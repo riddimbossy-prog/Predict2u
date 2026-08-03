@@ -1,28 +1,12 @@
 {
   "version": "v251",
-  "generatedAt": "2026-08-03T17:53:21.275Z",
+  "generatedAt": "2026-08-03T18:32:37.609Z",
   "provider": "The Odds API v4",
   "keyPresent": true,
   "regions": "uk",
   "sportsAvailable": 76,
   "soccerSportsAvailable": 44,
   "sportMappings": [
-    {
-      "league": "Premier League",
-      "country": "Ukraine",
-      "sportKey": "soccer_epl",
-      "sportTitle": "EPL",
-      "score": 0.987,
-      "matches": 1
-    },
-    {
-      "league": "Super League",
-      "country": "Uzbekistan",
-      "sportKey": "soccer_greece_super_league",
-      "sportTitle": "Super League - Greece",
-      "score": 0.653,
-      "matches": 1
-    },
     {
       "league": "First Division",
       "country": "Ireland",
@@ -360,7 +344,7 @@
       "matches": 2
     }
   ],
-  "matchesConsidered": 194,
+  "matchesConsidered": 189,
   "matchesMatched": 0,
   "matchesUpdated": 0,
   "fieldsFilled": 0,
@@ -388,18 +372,6 @@
       "bestScore": 0
     },
     {
-      "league": "1. Liga",
-      "country": "Latvia",
-      "reason": "No matching soccer sport key",
-      "bestScore": 0.143
-    },
-    {
-      "league": "Liga I",
-      "country": "Romania",
-      "reason": "No matching soccer sport key",
-      "bestScore": 0.143
-    },
-    {
       "league": "A Lyga",
       "country": "Lithuania",
       "reason": "No matching soccer sport key",
@@ -424,16 +396,16 @@
       "bestScore": 0.143
     },
     {
-      "league": "NB I",
-      "country": "Hungary",
-      "reason": "No matching soccer sport key",
-      "bestScore": 0
-    },
-    {
       "league": "First League",
       "country": "Bulgaria",
       "reason": "No matching soccer sport key",
       "bestScore": 0.167
+    },
+    {
+      "league": "Liga I",
+      "country": "Romania",
+      "reason": "No matching soccer sport key",
+      "bestScore": 0.143
     },
     {
       "league": "Premiership Women",
@@ -524,24 +496,6 @@
       "country": "World",
       "reason": "No matching soccer sport key",
       "bestScore": 0.167
-    },
-    {
-      "league": "Premier League",
-      "home": "Shakhtar Donetsk",
-      "away": "Kudrivka",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Super League",
-      "home": "Dinamo Samarqand",
-      "away": "Neftchi",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Northern Super League",
-      "home": "Halifax Tides W",
-      "away": "Ottawa Rapid W",
-      "reason": "No event/team match"
     },
     {
       "league": "First Division",
@@ -895,6 +849,12 @@
       "league": "Superettan",
       "home": "Orebro SK",
       "away": "IFK Varnamo",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Northern Super League",
+      "home": "Halifax Tides W",
+      "away": "Ottawa Rapid W",
       "reason": "No event/team match"
     },
     {
@@ -1272,30 +1232,6 @@
   ],
   "unsupportedMarkets": [
     {
-      "sportKey": "soccer_epl",
-      "market": "btts"
-    },
-    {
-      "sportKey": "soccer_epl",
-      "market": "draw_no_bet"
-    },
-    {
-      "sportKey": "soccer_epl",
-      "market": "double_chance"
-    },
-    {
-      "sportKey": "soccer_greece_super_league",
-      "market": "btts"
-    },
-    {
-      "sportKey": "soccer_greece_super_league",
-      "market": "draw_no_bet"
-    },
-    {
-      "sportKey": "soccer_greece_super_league",
-      "market": "double_chance"
-    },
-    {
       "sportKey": "soccer_belgium_first_div",
       "market": "btts"
     },
@@ -1389,6 +1325,18 @@
     },
     {
       "sportKey": "soccer_sweden_superettan",
+      "market": "double_chance"
+    },
+    {
+      "sportKey": "soccer_greece_super_league",
+      "market": "btts"
+    },
+    {
+      "sportKey": "soccer_greece_super_league",
+      "market": "draw_no_bet"
+    },
+    {
+      "sportKey": "soccer_greece_super_league",
       "market": "double_chance"
     },
     {
@@ -1513,56 +1461,6 @@
     }
   ],
   "requestErrors": [
-    {
-      "label": "soccer_epl:base-combined",
-      "error": "Markets not supported by this endpoint: btts, double_chance, draw_no_bet",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_epl:base-core",
-      "error": "Invalid commenceTimeFrom parameter. The format must be YYYY-MM-DDTHH:MM:SSZ, for example 2020-11-24T16:05:00Z",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_epl:btts",
-      "error": "Markets not supported by this endpoint: btts",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_epl:draw_no_bet",
-      "error": "Markets not supported by this endpoint: draw_no_bet",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_epl:double_chance",
-      "error": "Markets not supported by this endpoint: double_chance",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_greece_super_league:base-combined",
-      "error": "Markets not supported by this endpoint: btts, double_chance, draw_no_bet",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_greece_super_league:base-core",
-      "error": "Invalid commenceTimeFrom parameter. The format must be YYYY-MM-DDTHH:MM:SSZ, for example 2020-11-24T16:05:00Z",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_greece_super_league:btts",
-      "error": "Markets not supported by this endpoint: btts",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_greece_super_league:draw_no_bet",
-      "error": "Markets not supported by this endpoint: draw_no_bet",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_greece_super_league:double_chance",
-      "error": "Markets not supported by this endpoint: double_chance",
-      "statusCode": 422
-    },
     {
       "label": "soccer_belgium_first_div:base-combined",
       "error": "Markets not supported by this endpoint: btts, double_chance, draw_no_bet",
@@ -1760,6 +1658,31 @@
     },
     {
       "label": "soccer_sweden_superettan:double_chance",
+      "error": "Markets not supported by this endpoint: double_chance",
+      "statusCode": 422
+    },
+    {
+      "label": "soccer_greece_super_league:base-combined",
+      "error": "Markets not supported by this endpoint: btts, double_chance, draw_no_bet",
+      "statusCode": 422
+    },
+    {
+      "label": "soccer_greece_super_league:base-core",
+      "error": "Invalid commenceTimeFrom parameter. The format must be YYYY-MM-DDTHH:MM:SSZ, for example 2020-11-24T16:05:00Z",
+      "statusCode": 422
+    },
+    {
+      "label": "soccer_greece_super_league:btts",
+      "error": "Markets not supported by this endpoint: btts",
+      "statusCode": 422
+    },
+    {
+      "label": "soccer_greece_super_league:draw_no_bet",
+      "error": "Markets not supported by this endpoint: draw_no_bet",
+      "statusCode": 422
+    },
+    {
+      "label": "soccer_greece_super_league:double_chance",
       "error": "Markets not supported by this endpoint: double_chance",
       "statusCode": 422
     },
@@ -2021,5 +1944,5 @@
   },
   "skipped": false,
   "skipReason": null,
-  "completedAt": "2026-08-03T17:53:30.972Z"
+  "completedAt": "2026-08-03T18:32:43.047Z"
 }
