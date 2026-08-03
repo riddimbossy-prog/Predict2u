@@ -1,20 +1,12 @@
 {
   "version": "v251",
-  "generatedAt": "2026-08-03T02:32:57.074Z",
+  "generatedAt": "2026-08-03T03:01:57.085Z",
   "provider": "The Odds API v4",
   "keyPresent": true,
   "regions": "uk",
   "sportsAvailable": 76,
   "soccerSportsAvailable": 44,
   "sportMappings": [
-    {
-      "league": "Premier League",
-      "country": "Ukraine",
-      "sportKey": "soccer_epl",
-      "sportTitle": "EPL",
-      "score": 0.987,
-      "matches": 3
-    },
     {
       "league": "Super League",
       "country": "Uzbekistan",
@@ -54,14 +46,6 @@
       "sportTitle": "Primera División - Argentina",
       "score": 0.606,
       "matches": 2
-    },
-    {
-      "league": "Primera Division",
-      "country": "Nicaragua",
-      "sportKey": "soccer_spain_la_liga",
-      "sportTitle": "La Liga - Spain",
-      "score": 0.5,
-      "matches": 1
     },
     {
       "league": "Liga Profesional Argentina",
@@ -110,6 +94,14 @@
       "sportTitle": "EPL",
       "score": 0.987,
       "matches": 1
+    },
+    {
+      "league": "Premier League",
+      "country": "Ukraine",
+      "sportKey": "soccer_epl",
+      "sportTitle": "EPL",
+      "score": 0.987,
+      "matches": 2
     },
     {
       "league": "First League",
@@ -440,7 +432,7 @@
       "matches": 2
     }
   ],
-  "matchesConsidered": 238,
+  "matchesConsidered": 234,
   "matchesMatched": 0,
   "matchesUpdated": 0,
   "fieldsFilled": 0,
@@ -449,12 +441,6 @@
   "derivedHtftMatches": 0,
   "bookmakerRows": 0,
   "unmatched": [
-    {
-      "league": "Segunda División",
-      "country": "Uruguay",
-      "reason": "No matching soccer sport key",
-      "bestScore": 0.143
-    },
     {
       "league": "A Lyga",
       "country": "Lithuania",
@@ -512,12 +498,6 @@
     {
       "league": "Liga Femenina",
       "country": "Colombia",
-      "reason": "No matching soccer sport key",
-      "bestScore": 0.143
-    },
-    {
-      "league": "Liga Nacional",
-      "country": "Guatemala",
       "reason": "No matching soccer sport key",
       "bestScore": 0.143
     },
@@ -654,6 +634,12 @@
       "bestScore": 0.143
     },
     {
+      "league": "Liga Nacional",
+      "country": "Guatemala",
+      "reason": "No matching soccer sport key",
+      "bestScore": 0.143
+    },
+    {
       "league": "Pro League A",
       "country": "Uzbekistan",
       "reason": "No matching soccer sport key",
@@ -676,36 +662,6 @@
       "country": "World",
       "reason": "No matching soccer sport key",
       "bestScore": 0.167
-    },
-    {
-      "league": "Premier League",
-      "home": "Dynamo Kyiv",
-      "away": "Livyi Bereh",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Premier League",
-      "home": "Bukovyna",
-      "away": "LNZ Cherkasy",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Premier League",
-      "home": "Shakhtar Donetsk",
-      "away": "Kudrivka",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Premier League",
-      "home": "Alashkert",
-      "away": "Ararat",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Premier League",
-      "home": "Drukpa",
-      "away": "Paro",
-      "reason": "No event/team match"
     },
     {
       "league": "Super League",
@@ -918,12 +874,6 @@
       "reason": "No event/team match"
     },
     {
-      "league": "Primera Division",
-      "home": "Walter Ferretti",
-      "away": "Matagalpa",
-      "reason": "No event/team match"
-    },
-    {
       "league": "Second League - Group 4",
       "home": "Chelyabinsk II",
       "away": "Dinamo Barnaul",
@@ -939,6 +889,30 @@
       "league": "First League",
       "home": "Veles",
       "away": "Rotor Volgograd",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Premier League",
+      "home": "Alashkert",
+      "away": "Ararat",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Premier League",
+      "home": "Drukpa",
+      "away": "Paro",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Premier League",
+      "home": "Bukovyna",
+      "away": "LNZ Cherkasy",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Premier League",
+      "home": "Shakhtar Donetsk",
+      "away": "Kudrivka",
       "reason": "No event/team match"
     },
     {
@@ -1538,18 +1512,6 @@
   ],
   "unsupportedMarkets": [
     {
-      "sportKey": "soccer_epl",
-      "market": "btts"
-    },
-    {
-      "sportKey": "soccer_epl",
-      "market": "draw_no_bet"
-    },
-    {
-      "sportKey": "soccer_epl",
-      "market": "double_chance"
-    },
-    {
       "sportKey": "soccer_greece_super_league",
       "market": "btts"
     },
@@ -1598,27 +1560,27 @@
       "market": "double_chance"
     },
     {
-      "sportKey": "soccer_spain_la_liga",
+      "sportKey": "soccer_russia_premier_league",
       "market": "btts"
     },
     {
-      "sportKey": "soccer_spain_la_liga",
+      "sportKey": "soccer_russia_premier_league",
       "market": "draw_no_bet"
     },
     {
-      "sportKey": "soccer_spain_la_liga",
+      "sportKey": "soccer_russia_premier_league",
       "market": "double_chance"
     },
     {
-      "sportKey": "soccer_russia_premier_league",
+      "sportKey": "soccer_epl",
       "market": "btts"
     },
     {
-      "sportKey": "soccer_russia_premier_league",
+      "sportKey": "soccer_epl",
       "market": "draw_no_bet"
     },
     {
-      "sportKey": "soccer_russia_premier_league",
+      "sportKey": "soccer_epl",
       "market": "double_chance"
     },
     {
@@ -1804,31 +1766,6 @@
   ],
   "requestErrors": [
     {
-      "label": "soccer_epl:base-combined",
-      "error": "Markets not supported by this endpoint: btts, double_chance, draw_no_bet",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_epl:base-core",
-      "error": "Invalid commenceTimeFrom parameter. The format must be YYYY-MM-DDTHH:MM:SSZ, for example 2020-11-24T16:05:00Z",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_epl:btts",
-      "error": "Markets not supported by this endpoint: btts",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_epl:draw_no_bet",
-      "error": "Markets not supported by this endpoint: draw_no_bet",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_epl:double_chance",
-      "error": "Markets not supported by this endpoint: double_chance",
-      "statusCode": 422
-    },
-    {
       "label": "soccer_greece_super_league:base-combined",
       "error": "Markets not supported by this endpoint: btts, double_chance, draw_no_bet",
       "statusCode": 422
@@ -1929,31 +1866,6 @@
       "statusCode": 422
     },
     {
-      "label": "soccer_spain_la_liga:base-combined",
-      "error": "Markets not supported by this endpoint: btts, double_chance, draw_no_bet",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_spain_la_liga:base-core",
-      "error": "Invalid commenceTimeFrom parameter. The format must be YYYY-MM-DDTHH:MM:SSZ, for example 2020-11-24T16:05:00Z",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_spain_la_liga:btts",
-      "error": "Markets not supported by this endpoint: btts",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_spain_la_liga:draw_no_bet",
-      "error": "Markets not supported by this endpoint: draw_no_bet",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_spain_la_liga:double_chance",
-      "error": "Markets not supported by this endpoint: double_chance",
-      "statusCode": 422
-    },
-    {
       "label": "soccer_russia_premier_league:base-combined",
       "error": "Markets not supported by this endpoint: btts, double_chance, draw_no_bet",
       "statusCode": 422
@@ -1975,6 +1887,31 @@
     },
     {
       "label": "soccer_russia_premier_league:double_chance",
+      "error": "Markets not supported by this endpoint: double_chance",
+      "statusCode": 422
+    },
+    {
+      "label": "soccer_epl:base-combined",
+      "error": "Markets not supported by this endpoint: btts, double_chance, draw_no_bet",
+      "statusCode": 422
+    },
+    {
+      "label": "soccer_epl:base-core",
+      "error": "Invalid commenceTimeFrom parameter. The format must be YYYY-MM-DDTHH:MM:SSZ, for example 2020-11-24T16:05:00Z",
+      "statusCode": 422
+    },
+    {
+      "label": "soccer_epl:btts",
+      "error": "Markets not supported by this endpoint: btts",
+      "statusCode": 422
+    },
+    {
+      "label": "soccer_epl:draw_no_bet",
+      "error": "Markets not supported by this endpoint: draw_no_bet",
+      "statusCode": 422
+    },
+    {
+      "label": "soccer_epl:double_chance",
       "error": "Markets not supported by this endpoint: double_chance",
       "statusCode": 422
     },
@@ -2361,5 +2298,5 @@
   },
   "skipped": false,
   "skipReason": null,
-  "completedAt": "2026-08-03T02:33:20.744Z"
+  "completedAt": "2026-08-03T03:02:14.103Z"
 }
