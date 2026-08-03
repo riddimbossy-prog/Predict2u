@@ -1,6 +1,6 @@
 {
   "version": "v251",
-  "generatedAt": "2026-08-03T01:35:25.941Z",
+  "generatedAt": "2026-08-03T02:32:57.074Z",
   "provider": "The Odds API v4",
   "keyPresent": true,
   "regions": "uk",
@@ -29,7 +29,7 @@
       "sportKey": "soccer_usa_mls",
       "sportTitle": "MLS",
       "score": 1,
-      "matches": 2
+      "matches": 1
     },
     {
       "league": "Primera Nacional",
@@ -40,52 +40,12 @@
       "matches": 1
     },
     {
-      "league": "NWSL Women",
-      "country": "USA",
-      "sportKey": "soccer_usa_mls",
-      "sportTitle": "MLS",
-      "score": 0.323,
-      "matches": 2
-    },
-    {
-      "league": "Liga MX",
-      "country": "Mexico",
-      "sportKey": "soccer_mexico_ligamx",
-      "sportTitle": "Liga MX",
-      "score": 1,
-      "matches": 2
-    },
-    {
       "league": "Liga MX Femenil",
       "country": "Mexico",
       "sportKey": "soccer_mexico_ligamx",
       "sportTitle": "Liga MX",
       "score": 0.68,
-      "matches": 4
-    },
-    {
-      "league": "Primera División",
-      "country": "Bolivia",
-      "sportKey": "soccer_argentina_primera_division",
-      "sportTitle": "Primera División - Argentina",
-      "score": 0.653,
       "matches": 3
-    },
-    {
-      "league": "Primera División",
-      "country": "Peru",
-      "sportKey": "soccer_argentina_primera_division",
-      "sportTitle": "Primera División - Argentina",
-      "score": 0.653,
-      "matches": 1
-    },
-    {
-      "league": "Primera Division",
-      "country": "El-Salvador",
-      "sportKey": "soccer_spain_la_liga",
-      "sportTitle": "La Liga - Spain",
-      "score": 0.429,
-      "matches": 1
     },
     {
       "league": "Primera División",
@@ -110,6 +70,22 @@
       "sportTitle": "Primera División - Argentina",
       "score": 0.78,
       "matches": 6
+    },
+    {
+      "league": "NWSL Women",
+      "country": "USA",
+      "sportKey": "soccer_usa_mls",
+      "sportTitle": "MLS",
+      "score": 0.323,
+      "matches": 1
+    },
+    {
+      "league": "Liga MX",
+      "country": "Mexico",
+      "sportKey": "soccer_mexico_ligamx",
+      "sportTitle": "Liga MX",
+      "score": 1,
+      "matches": 1
     },
     {
       "league": "Second League - Group 4",
@@ -440,6 +416,14 @@
       "matches": 6
     },
     {
+      "league": "Primera División",
+      "country": "Bolivia",
+      "sportKey": "soccer_argentina_primera_division",
+      "sportTitle": "Primera División - Argentina",
+      "score": 0.653,
+      "matches": 2
+    },
+    {
       "league": "Copa Chile",
       "country": "Chile",
       "sportKey": "soccer_chile_campeonato",
@@ -456,7 +440,7 @@
       "matches": 2
     }
   ],
-  "matchesConsidered": 251,
+  "matchesConsidered": 238,
   "matchesMatched": 0,
   "matchesUpdated": 0,
   "fieldsFilled": 0,
@@ -465,18 +449,6 @@
   "derivedHtftMatches": 0,
   "bookmakerRows": 0,
   "unmatched": [
-    {
-      "league": "Vysshaya Liga",
-      "country": "Tajikistan",
-      "reason": "No matching soccer sport key",
-      "bestScore": 0.143
-    },
-    {
-      "league": "National Division",
-      "country": "Luxembourg",
-      "reason": "No matching soccer sport key",
-      "bestScore": 0.143
-    },
     {
       "league": "Segunda División",
       "country": "Uruguay",
@@ -540,24 +512,6 @@
     {
       "league": "Liga Femenina",
       "country": "Colombia",
-      "reason": "No matching soccer sport key",
-      "bestScore": 0.143
-    },
-    {
-      "league": "Liga Pro",
-      "country": "Ecuador",
-      "reason": "No matching soccer sport key",
-      "bestScore": 0.143
-    },
-    {
-      "league": "Liga Panameña de Fútbol",
-      "country": "Panama",
-      "reason": "No matching soccer sport key",
-      "bestScore": 0.111
-    },
-    {
-      "league": "Liga Nacional",
-      "country": "Honduras",
       "reason": "No matching soccer sport key",
       "bestScore": 0.143
     },
@@ -682,6 +636,24 @@
       "bestScore": 0.143
     },
     {
+      "league": "Liga Pro",
+      "country": "Ecuador",
+      "reason": "No matching soccer sport key",
+      "bestScore": 0.143
+    },
+    {
+      "league": "Liga Panameña de Fútbol",
+      "country": "Panama",
+      "reason": "No matching soccer sport key",
+      "bestScore": 0.111
+    },
+    {
+      "league": "Liga Nacional",
+      "country": "Honduras",
+      "reason": "No matching soccer sport key",
+      "bestScore": 0.143
+    },
+    {
       "league": "Pro League A",
       "country": "Uzbekistan",
       "reason": "No matching soccer sport key",
@@ -772,18 +744,6 @@
       "reason": "No event/team match"
     },
     {
-      "league": "MLS Next Pro",
-      "home": "St. Louis City II",
-      "away": "Real Monarchs",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "NWSL Women",
-      "home": "Utah Royals W",
-      "away": "Portland Thorns W",
-      "reason": "No event/team match"
-    },
-    {
       "league": "NWSL Women",
       "home": "Denver Summit W",
       "away": "Boston Legacy W",
@@ -793,30 +753,6 @@
       "league": "Primera Nacional",
       "home": "Club Atlético Güemes",
       "away": "Tristan Suarez",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Primera División",
-      "home": "Oriente Petrolero",
-      "away": "Nacional Potosí",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Primera División",
-      "home": "ABB",
-      "away": "Real Oruro",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Primera División",
-      "home": "Independiente Petrolero",
-      "away": "Aurora",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Primera División",
-      "home": "Cienciano",
-      "away": "Universitario",
       "reason": "No event/team match"
     },
     {
@@ -946,27 +882,21 @@
       "reason": "No event/team match"
     },
     {
-      "league": "Liga MX",
-      "home": "Club America",
-      "away": "Santos Laguna",
+      "league": "Primera División",
+      "home": "ABB",
+      "away": "Real Oruro",
       "reason": "No event/team match"
     },
     {
-      "league": "Liga MX",
-      "home": "Toluca",
-      "away": "Necaxa",
+      "league": "Primera División",
+      "home": "Independiente Petrolero",
+      "away": "Aurora",
       "reason": "No event/team match"
     },
     {
       "league": "Liga MX Femenil",
       "home": "Atlético San Luis W",
       "away": "Toluca W",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Liga MX Femenil",
-      "home": "Guadalajara W",
-      "away": "Querétaro W",
       "reason": "No event/team match"
     },
     {
@@ -982,9 +912,9 @@
       "reason": "No event/team match"
     },
     {
-      "league": "Primera Division",
-      "home": "Inca Aruba",
-      "away": "FAS",
+      "league": "Liga MX",
+      "home": "Toluca",
+      "away": "Necaxa",
       "reason": "No event/team match"
     },
     {
@@ -1677,18 +1607,6 @@
     },
     {
       "sportKey": "soccer_spain_la_liga",
-      "market": "double_chance"
-    },
-    {
-      "sportKey": "soccer_russia_premier_league",
-      "market": "btts"
-    },
-    {
-      "sportKey": "soccer_russia_premier_league",
-      "market": "draw_no_bet"
-    },
-    {
-      "sportKey": "soccer_russia_premier_league",
       "market": "double_chance"
     },
     {
@@ -2443,5 +2361,5 @@
   },
   "skipped": false,
   "skipReason": null,
-  "completedAt": "2026-08-03T01:35:32.075Z"
+  "completedAt": "2026-08-03T02:33:20.744Z"
 }
