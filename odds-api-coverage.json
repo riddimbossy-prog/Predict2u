@@ -1,6 +1,6 @@
 {
   "version": "v251",
-  "generatedAt": "2026-08-03T21:15:27.294Z",
+  "generatedAt": "2026-08-03T21:57:14.462Z",
   "provider": "The Odds API v4",
   "keyPresent": true,
   "regions": "uk",
@@ -13,22 +13,6 @@
       "sportKey": "soccer_greece_super_league",
       "sportTitle": "Super League - Greece",
       "score": 0.286,
-      "matches": 1
-    },
-    {
-      "league": "League Cup",
-      "country": "England",
-      "sportKey": "soccer_england_efl_cup",
-      "sportTitle": "EFL Cup",
-      "score": 1,
-      "matches": 1
-    },
-    {
-      "league": "Premiership",
-      "country": "Scotland",
-      "sportKey": "soccer_spl",
-      "sportTitle": "Premiership - Scotland",
-      "score": 0.9,
       "matches": 1
     },
     {
@@ -208,7 +192,7 @@
       "matches": 2
     }
   ],
-  "matchesConsidered": 148,
+  "matchesConsidered": 144,
   "matchesMatched": 0,
   "matchesUpdated": 0,
   "fieldsFilled": 0,
@@ -236,20 +220,8 @@
       "bestScore": 0
     },
     {
-      "league": "Liga I",
-      "country": "Romania",
-      "reason": "No matching soccer sport key",
-      "bestScore": 0.143
-    },
-    {
       "league": "Premiership Women",
       "country": "Northern-Ireland",
-      "reason": "No matching soccer sport key",
-      "bestScore": 0.125
-    },
-    {
-      "league": "Division Profesional - Clausura",
-      "country": "Paraguay",
       "reason": "No matching soccer sport key",
       "bestScore": 0.125
     },
@@ -270,6 +242,12 @@
       "country": "Colombia",
       "reason": "No matching soccer sport key",
       "bestScore": 0.143
+    },
+    {
+      "league": "Division Profesional - Clausura",
+      "country": "Paraguay",
+      "reason": "No matching soccer sport key",
+      "bestScore": 0.125
     },
     {
       "league": "Liga Pro",
@@ -341,18 +319,6 @@
       "league": "Northern Super League",
       "home": "Halifax Tides W",
       "away": "Ottawa Rapid W",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "League Cup",
-      "home": "York",
-      "away": "Crawley Town",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Premiership",
-      "home": "Celtic",
-      "away": "Dundee",
       "reason": "No event/team match"
     },
     {
@@ -904,30 +870,6 @@
       "market": "double_chance"
     },
     {
-      "sportKey": "soccer_england_efl_cup",
-      "market": "btts"
-    },
-    {
-      "sportKey": "soccer_england_efl_cup",
-      "market": "draw_no_bet"
-    },
-    {
-      "sportKey": "soccer_england_efl_cup",
-      "market": "double_chance"
-    },
-    {
-      "sportKey": "soccer_spl",
-      "market": "btts"
-    },
-    {
-      "sportKey": "soccer_spl",
-      "market": "draw_no_bet"
-    },
-    {
-      "sportKey": "soccer_spl",
-      "market": "double_chance"
-    },
-    {
       "sportKey": "soccer_argentina_primera_division",
       "market": "btts"
     },
@@ -1071,56 +1013,6 @@
     },
     {
       "label": "soccer_greece_super_league:double_chance",
-      "error": "Markets not supported by this endpoint: double_chance",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_england_efl_cup:base-combined",
-      "error": "Markets not supported by this endpoint: btts, double_chance, draw_no_bet",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_england_efl_cup:base-core",
-      "error": "Invalid commenceTimeFrom parameter. The format must be YYYY-MM-DDTHH:MM:SSZ, for example 2020-11-24T16:05:00Z",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_england_efl_cup:btts",
-      "error": "Markets not supported by this endpoint: btts",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_england_efl_cup:draw_no_bet",
-      "error": "Markets not supported by this endpoint: draw_no_bet",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_england_efl_cup:double_chance",
-      "error": "Markets not supported by this endpoint: double_chance",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_spl:base-combined",
-      "error": "Markets not supported by this endpoint: btts, double_chance, draw_no_bet",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_spl:base-core",
-      "error": "Invalid commenceTimeFrom parameter. The format must be YYYY-MM-DDTHH:MM:SSZ, for example 2020-11-24T16:05:00Z",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_spl:btts",
-      "error": "Markets not supported by this endpoint: btts",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_spl:draw_no_bet",
-      "error": "Markets not supported by this endpoint: draw_no_bet",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_spl:double_chance",
       "error": "Markets not supported by this endpoint: double_chance",
       "statusCode": 422
     },
@@ -1382,5 +1274,5 @@
   },
   "skipped": false,
   "skipReason": null,
-  "completedAt": "2026-08-03T21:15:33.787Z"
+  "completedAt": "2026-08-03T21:57:24.772Z"
 }
