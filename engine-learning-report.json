@@ -1,13 +1,13 @@
 {
   "version": "v193",
-  "updated": "2026-08-04T17:32:08.312Z",
+  "updated": "2026-08-04T18:44:21.628Z",
   "summary": {
-    "settledFixtures": 598,
-    "settledDecisions": 1028,
+    "settledFixtures": 616,
+    "settledDecisions": 1056,
     "reviewedLosses": 150,
-    "teamProfiles": 365,
-    "leagueProfiles": 78,
-    "matchupProfiles": 191,
+    "teamProfiles": 380,
+    "leagueProfiles": 80,
+    "matchupProfiles": 199,
     "activePatternBreakers": 0,
     "upsetResistantTeams": 0
   },
@@ -19,11 +19,11 @@
   "commonMissCauses": [
     {
       "cause": "INPUT_COVERAGE_GAP",
-      "count": 204
+      "count": 212
     },
     {
       "cause": "RESULT_DIRECTION_MISS",
-      "count": 41
+      "count": 48
     },
     {
       "cause": "DRAW_TRAP",
@@ -35,7 +35,7 @@
     },
     {
       "cause": "GOAL_SPIKE",
-      "count": 29
+      "count": 30
     },
     {
       "cause": "TEMPO_COLLAPSE",
@@ -55,6 +55,19 @@
     }
   ],
   "recentLossReviews": [
+    {
+      "matchDate": "2026-08-04",
+      "home": "Xelajú",
+      "away": "Aurora",
+      "league": "Liga Nacional",
+      "engine": "League Bias",
+      "market": "Under 3.5 Goals",
+      "score": "3-1",
+      "causes": [
+        "GOAL_SPIKE",
+        "INPUT_COVERAGE_GAP"
+      ]
+    },
     {
       "matchDate": "2026-08-02",
       "home": "Sydney Olympic U20",
@@ -141,6 +154,97 @@
       "market": "Second Half Over 0.5",
       "score": "0-0",
       "causes": [
+        "INPUT_COVERAGE_GAP"
+      ]
+    },
+    {
+      "matchDate": "2026-08-02",
+      "home": "Al Jazira",
+      "away": "Sporty",
+      "league": "Division 1",
+      "engine": "Ultra",
+      "market": "Double Chance 1X",
+      "score": "0-3",
+      "causes": [
+        "RESULT_DIRECTION_MISS",
+        "INPUT_COVERAGE_GAP"
+      ]
+    },
+    {
+      "matchDate": "2026-08-02",
+      "home": "Shamiya",
+      "away": "Yarmouk",
+      "league": "Division 1",
+      "engine": "Normal",
+      "market": "Away Win",
+      "score": "3-0",
+      "causes": [
+        "RESULT_DIRECTION_MISS",
+        "INPUT_COVERAGE_GAP"
+      ]
+    },
+    {
+      "matchDate": "2026-08-02",
+      "home": "Shamiya",
+      "away": "Yarmouk",
+      "league": "Division 1",
+      "engine": "Strict",
+      "market": "Away Win",
+      "score": "3-0",
+      "causes": [
+        "RESULT_DIRECTION_MISS",
+        "INPUT_COVERAGE_GAP"
+      ]
+    },
+    {
+      "matchDate": "2026-08-02",
+      "home": "Shamiya",
+      "away": "Yarmouk",
+      "league": "Division 1",
+      "engine": "Ultra",
+      "market": "Double Chance X2",
+      "score": "3-0",
+      "causes": [
+        "RESULT_DIRECTION_MISS",
+        "INPUT_COVERAGE_GAP"
+      ]
+    },
+    {
+      "matchDate": "2026-08-02",
+      "home": "Shamiya",
+      "away": "Yarmouk",
+      "league": "Division 1",
+      "engine": "Elite",
+      "market": "Away DNB",
+      "score": "3-0",
+      "causes": [
+        "RESULT_DIRECTION_MISS",
+        "INPUT_COVERAGE_GAP"
+      ]
+    },
+    {
+      "matchDate": "2026-08-02",
+      "home": "Shamiya",
+      "away": "Yarmouk",
+      "league": "Division 1",
+      "engine": "Apex",
+      "market": "Away DNB",
+      "score": "3-0",
+      "causes": [
+        "RESULT_DIRECTION_MISS",
+        "INPUT_COVERAGE_GAP"
+      ]
+    },
+    {
+      "matchDate": "2026-08-02",
+      "home": "Shamiya",
+      "away": "Yarmouk",
+      "league": "Division 1",
+      "engine": "Trend",
+      "market": "Double Chance X2",
+      "score": "3-0",
+      "causes": [
+        "RESULT_DIRECTION_MISS",
         "INPUT_COVERAGE_GAP"
       ]
     },
@@ -333,107 +437,6 @@
       "score": "0-0",
       "causes": [
         "DRAW_TRAP",
-        "INPUT_COVERAGE_GAP"
-      ]
-    },
-    {
-      "matchDate": "2026-08-01",
-      "home": "Vrchovina",
-      "away": "Blansko",
-      "league": "3. liga - MSFL",
-      "engine": "Normal",
-      "market": "Home Win",
-      "score": "2-2",
-      "causes": [
-        "DRAW_TRAP",
-        "INPUT_COVERAGE_GAP"
-      ]
-    },
-    {
-      "matchDate": "2026-08-01",
-      "home": "Al Nejmeh",
-      "away": "Al Ansar",
-      "league": "Premier League",
-      "engine": "Halves",
-      "market": "Second Half Over 0.5",
-      "score": "0-0",
-      "causes": [
-        "INPUT_COVERAGE_GAP"
-      ]
-    },
-    {
-      "matchDate": "2026-08-01",
-      "home": "Yupanqui",
-      "away": "Canuelas",
-      "league": "Primera C",
-      "engine": "Normal",
-      "market": "Away DNB",
-      "score": "1-0",
-      "causes": [
-        "RESULT_DIRECTION_MISS",
-        "INPUT_COVERAGE_GAP"
-      ]
-    },
-    {
-      "matchDate": "2026-08-01",
-      "home": "Yupanqui",
-      "away": "Canuelas",
-      "league": "Primera C",
-      "engine": "Strict",
-      "market": "Double Chance X2",
-      "score": "1-0",
-      "causes": [
-        "RESULT_DIRECTION_MISS",
-        "INPUT_COVERAGE_GAP"
-      ]
-    },
-    {
-      "matchDate": "2026-08-01",
-      "home": "Yupanqui",
-      "away": "Canuelas",
-      "league": "Primera C",
-      "engine": "Ultra",
-      "market": "Double Chance X2",
-      "score": "1-0",
-      "causes": [
-        "RESULT_DIRECTION_MISS",
-        "INPUT_COVERAGE_GAP"
-      ]
-    },
-    {
-      "matchDate": "2026-08-01",
-      "home": "Mixto W",
-      "away": "Atlético Mineiro W",
-      "league": "Brasileiro Women",
-      "engine": "Halves",
-      "market": "Second Half Over 0.5",
-      "score": "0-0",
-      "causes": [
-        "INPUT_COVERAGE_GAP"
-      ]
-    },
-    {
-      "matchDate": "2026-08-01",
-      "home": "FC Cincinnati",
-      "away": "San Jose Earthquakes",
-      "league": "Major League Soccer",
-      "engine": "Trend",
-      "market": "Home Team Over 0.5 Goals",
-      "score": "0-0",
-      "causes": [
-        "DRAW_TRAP",
-        "INPUT_COVERAGE_GAP"
-      ]
-    },
-    {
-      "matchDate": "2026-08-01",
-      "home": "FC Cincinnati",
-      "away": "San Jose Earthquakes",
-      "league": "Major League Soccer",
-      "engine": "Halves",
-      "market": "Second Half Over 0.5",
-      "score": "0-0",
-      "causes": [
         "INPUT_COVERAGE_GAP"
       ]
     }

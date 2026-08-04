@@ -1,7 +1,7 @@
 {
   "version": "v193",
   "schemaVersion": 1,
-  "updated": "2026-08-04T17:32:08.312Z",
+  "updated": "2026-08-04T18:44:21.628Z",
   "minimumSamples": {
     "teamFavorite": 5,
     "teamUnderdog": 5,
@@ -12,10 +12,10 @@
   },
   "decayHalfLifeDays": 120,
   "summary": {
-    "settledFixtures": 598,
-    "settledDecisions": 1028,
+    "settledFixtures": 616,
+    "settledDecisions": 1056,
     "reviewedLosses": 150,
-    "attachedUpcoming": 2995,
+    "attachedUpcoming": 2970,
     "highRiskUpcoming": 0,
     "stableUpcoming": 0
   },
@@ -4646,25 +4646,25 @@
         "decayedWeight": 0.93
       },
       "underdog": {
-        "sample": 0,
+        "sample": 1,
         "wins": 0,
         "draws": 0,
-        "losses": 0,
-        "winRate": null,
-        "drawRate": null,
+        "losses": 1,
+        "winRate": 0,
+        "drawRate": 0,
         "nonLossRate": 0,
-        "upsetRate": null,
+        "upsetRate": 1,
         "nonLossWilson": {
-          "lower": null,
-          "mid": null,
-          "upper": null
+          "lower": 0,
+          "mid": 0,
+          "upper": 0.7935
         },
         "winWilson": {
-          "lower": null,
-          "mid": null,
-          "upper": null
+          "lower": 0,
+          "mid": 0,
+          "upper": 0.7935
         },
-        "decayedWeight": 0
+        "decayedWeight": 0.99
       },
       "favoriteBands": {
         "1.61-1.85": {
@@ -22945,6 +22945,80 @@
       "patternStability": 100,
       "favoriteReliability": 0
     },
+    "74|corinthians w": {
+      "name": "Corinthians W",
+      "league": "Brasileiro Women",
+      "leagueId": 74,
+      "favorite": {
+        "sample": 1,
+        "wins": 1,
+        "draws": 0,
+        "losses": 0,
+        "winRate": 1,
+        "drawRate": 0,
+        "nonLossRate": 1,
+        "upsetRate": 0,
+        "nonLossWilson": {
+          "lower": 0.2065,
+          "mid": 1,
+          "upper": 1
+        },
+        "winWilson": {
+          "lower": 0.2065,
+          "mid": 1,
+          "upper": 1
+        },
+        "decayedWeight": 0.99
+      },
+      "underdog": {
+        "sample": 0,
+        "wins": 0,
+        "draws": 0,
+        "losses": 0,
+        "winRate": null,
+        "drawRate": null,
+        "nonLossRate": 0,
+        "upsetRate": null,
+        "nonLossWilson": {
+          "lower": null,
+          "mid": null,
+          "upper": null
+        },
+        "winWilson": {
+          "lower": null,
+          "mid": null,
+          "upper": null
+        },
+        "decayedWeight": 0
+      },
+      "favoriteBands": {
+        "1.86-2.25": {
+          "sample": 1,
+          "wins": 1,
+          "draws": 0,
+          "losses": 0,
+          "winRate": 1,
+          "drawRate": 0,
+          "nonLossRate": 1,
+          "upsetRate": 0,
+          "nonLossWilson": {
+            "lower": 0.2065,
+            "mid": 1,
+            "upper": 1
+          },
+          "winWilson": {
+            "lower": 0.2065,
+            "mid": 1,
+            "upper": 1
+          },
+          "decayedWeight": 0.99
+        }
+      },
+      "underdogUpsets": 0,
+      "flags": [],
+      "patternStability": 100,
+      "favoriteReliability": 100
+    },
     "240|barranquilla": {
       "name": "Barranquilla",
       "league": "Primera B",
@@ -23064,6 +23138,888 @@
           "upper": 0.7935
         },
         "decayedWeight": 0.98
+      },
+      "favoriteBands": {},
+      "underdogUpsets": 0,
+      "flags": [],
+      "patternStability": 100,
+      "favoriteReliability": 0
+    },
+    "266|deportes temuco": {
+      "name": "Deportes Temuco",
+      "league": "Primera B",
+      "leagueId": 266,
+      "favorite": {
+        "sample": 1,
+        "wins": 0,
+        "draws": 0,
+        "losses": 1,
+        "winRate": 0,
+        "drawRate": 0,
+        "nonLossRate": 0,
+        "upsetRate": 1,
+        "nonLossWilson": {
+          "lower": 0,
+          "mid": 0,
+          "upper": 0.7935
+        },
+        "winWilson": {
+          "lower": 0,
+          "mid": 0,
+          "upper": 0.7935
+        },
+        "decayedWeight": 1
+      },
+      "underdog": {
+        "sample": 0,
+        "wins": 0,
+        "draws": 0,
+        "losses": 0,
+        "winRate": null,
+        "drawRate": null,
+        "nonLossRate": 0,
+        "upsetRate": null,
+        "nonLossWilson": {
+          "lower": null,
+          "mid": null,
+          "upper": null
+        },
+        "winWilson": {
+          "lower": null,
+          "mid": null,
+          "upper": null
+        },
+        "decayedWeight": 0
+      },
+      "favoriteBands": {
+        "1.86-2.25": {
+          "sample": 1,
+          "wins": 0,
+          "draws": 0,
+          "losses": 1,
+          "winRate": 0,
+          "drawRate": 0,
+          "nonLossRate": 0,
+          "upsetRate": 1,
+          "nonLossWilson": {
+            "lower": 0,
+            "mid": 0,
+            "upper": 0.7935
+          },
+          "winWilson": {
+            "lower": 0,
+            "mid": 0,
+            "upper": 0.7935
+          },
+          "decayedWeight": 1
+        }
+      },
+      "underdogUpsets": 0,
+      "flags": [],
+      "patternStability": 30,
+      "favoriteReliability": 0
+    },
+    "266|deportes copiapo": {
+      "name": "Deportes Copiapo",
+      "league": "Primera B",
+      "leagueId": 266,
+      "favorite": {
+        "sample": 0,
+        "wins": 0,
+        "draws": 0,
+        "losses": 0,
+        "winRate": null,
+        "drawRate": null,
+        "nonLossRate": 0,
+        "upsetRate": null,
+        "nonLossWilson": {
+          "lower": null,
+          "mid": null,
+          "upper": null
+        },
+        "winWilson": {
+          "lower": null,
+          "mid": null,
+          "upper": null
+        },
+        "decayedWeight": 0
+      },
+      "underdog": {
+        "sample": 1,
+        "wins": 1,
+        "draws": 0,
+        "losses": 0,
+        "winRate": 1,
+        "drawRate": 0,
+        "nonLossRate": 1,
+        "upsetRate": 0,
+        "nonLossWilson": {
+          "lower": 0.2065,
+          "mid": 1,
+          "upper": 1
+        },
+        "winWilson": {
+          "lower": 0.2065,
+          "mid": 1,
+          "upper": 1
+        },
+        "decayedWeight": 1
+      },
+      "favoriteBands": {},
+      "underdogUpsets": 1,
+      "flags": [],
+      "patternStability": 100,
+      "favoriteReliability": 0
+    },
+    "242|ldu de quito": {
+      "name": "LDU de Quito",
+      "league": "Liga Pro",
+      "leagueId": 242,
+      "favorite": {
+        "sample": 1,
+        "wins": 1,
+        "draws": 0,
+        "losses": 0,
+        "winRate": 1,
+        "drawRate": 0,
+        "nonLossRate": 1,
+        "upsetRate": 0,
+        "nonLossWilson": {
+          "lower": 0.2065,
+          "mid": 1,
+          "upper": 1
+        },
+        "winWilson": {
+          "lower": 0.2065,
+          "mid": 1,
+          "upper": 1
+        },
+        "decayedWeight": 1
+      },
+      "underdog": {
+        "sample": 0,
+        "wins": 0,
+        "draws": 0,
+        "losses": 0,
+        "winRate": null,
+        "drawRate": null,
+        "nonLossRate": 0,
+        "upsetRate": null,
+        "nonLossWilson": {
+          "lower": null,
+          "mid": null,
+          "upper": null
+        },
+        "winWilson": {
+          "lower": null,
+          "mid": null,
+          "upper": null
+        },
+        "decayedWeight": 0
+      },
+      "favoriteBands": {
+        "1.01-1.35": {
+          "sample": 1,
+          "wins": 1,
+          "draws": 0,
+          "losses": 0,
+          "winRate": 1,
+          "drawRate": 0,
+          "nonLossRate": 1,
+          "upsetRate": 0,
+          "nonLossWilson": {
+            "lower": 0.2065,
+            "mid": 1,
+            "upper": 1
+          },
+          "winWilson": {
+            "lower": 0.2065,
+            "mid": 1,
+            "upper": 1
+          },
+          "decayedWeight": 1
+        }
+      },
+      "underdogUpsets": 0,
+      "flags": [],
+      "patternStability": 100,
+      "favoriteReliability": 100
+    },
+    "242|delfin sc": {
+      "name": "Delfin SC",
+      "league": "Liga Pro",
+      "leagueId": 242,
+      "favorite": {
+        "sample": 0,
+        "wins": 0,
+        "draws": 0,
+        "losses": 0,
+        "winRate": null,
+        "drawRate": null,
+        "nonLossRate": 0,
+        "upsetRate": null,
+        "nonLossWilson": {
+          "lower": null,
+          "mid": null,
+          "upper": null
+        },
+        "winWilson": {
+          "lower": null,
+          "mid": null,
+          "upper": null
+        },
+        "decayedWeight": 0
+      },
+      "underdog": {
+        "sample": 1,
+        "wins": 0,
+        "draws": 0,
+        "losses": 1,
+        "winRate": 0,
+        "drawRate": 0,
+        "nonLossRate": 0,
+        "upsetRate": 1,
+        "nonLossWilson": {
+          "lower": 0,
+          "mid": 0,
+          "upper": 0.7935
+        },
+        "winWilson": {
+          "lower": 0,
+          "mid": 0,
+          "upper": 0.7935
+        },
+        "decayedWeight": 1
+      },
+      "favoriteBands": {},
+      "underdogUpsets": 0,
+      "flags": [],
+      "patternStability": 100,
+      "favoriteReliability": 0
+    },
+    "73|atletico paranaense": {
+      "name": "Atletico Paranaense",
+      "league": "Copa Do Brasil",
+      "leagueId": 73,
+      "favorite": {
+        "sample": 1,
+        "wins": 1,
+        "draws": 0,
+        "losses": 0,
+        "winRate": 1,
+        "drawRate": 0,
+        "nonLossRate": 1,
+        "upsetRate": 0,
+        "nonLossWilson": {
+          "lower": 0.2065,
+          "mid": 1,
+          "upper": 1
+        },
+        "winWilson": {
+          "lower": 0.2065,
+          "mid": 1,
+          "upper": 1
+        },
+        "decayedWeight": 1
+      },
+      "underdog": {
+        "sample": 0,
+        "wins": 0,
+        "draws": 0,
+        "losses": 0,
+        "winRate": null,
+        "drawRate": null,
+        "nonLossRate": 0,
+        "upsetRate": null,
+        "nonLossWilson": {
+          "lower": null,
+          "mid": null,
+          "upper": null
+        },
+        "winWilson": {
+          "lower": null,
+          "mid": null,
+          "upper": null
+        },
+        "decayedWeight": 0
+      },
+      "favoriteBands": {
+        "1.36-1.60": {
+          "sample": 1,
+          "wins": 1,
+          "draws": 0,
+          "losses": 0,
+          "winRate": 1,
+          "drawRate": 0,
+          "nonLossRate": 1,
+          "upsetRate": 0,
+          "nonLossWilson": {
+            "lower": 0.2065,
+            "mid": 1,
+            "upper": 1
+          },
+          "winWilson": {
+            "lower": 0.2065,
+            "mid": 1,
+            "upper": 1
+          },
+          "decayedWeight": 1
+        }
+      },
+      "underdogUpsets": 0,
+      "flags": [],
+      "patternStability": 100,
+      "favoriteReliability": 100
+    },
+    "73|vitoria": {
+      "name": "Vitoria",
+      "league": "Copa Do Brasil",
+      "leagueId": 73,
+      "favorite": {
+        "sample": 0,
+        "wins": 0,
+        "draws": 0,
+        "losses": 0,
+        "winRate": null,
+        "drawRate": null,
+        "nonLossRate": 0,
+        "upsetRate": null,
+        "nonLossWilson": {
+          "lower": null,
+          "mid": null,
+          "upper": null
+        },
+        "winWilson": {
+          "lower": null,
+          "mid": null,
+          "upper": null
+        },
+        "decayedWeight": 0
+      },
+      "underdog": {
+        "sample": 1,
+        "wins": 0,
+        "draws": 0,
+        "losses": 1,
+        "winRate": 0,
+        "drawRate": 0,
+        "nonLossRate": 0,
+        "upsetRate": 1,
+        "nonLossWilson": {
+          "lower": 0,
+          "mid": 0,
+          "upper": 0.7935
+        },
+        "winWilson": {
+          "lower": 0,
+          "mid": 0,
+          "upper": 0.7935
+        },
+        "decayedWeight": 1
+      },
+      "favoriteBands": {},
+      "underdogUpsets": 0,
+      "flags": [],
+      "patternStability": 100,
+      "favoriteReliability": 0
+    },
+    "128|huracan": {
+      "name": "Huracan",
+      "league": "Liga Profesional Argentina",
+      "leagueId": 128,
+      "favorite": {
+        "sample": 1,
+        "wins": 0,
+        "draws": 1,
+        "losses": 0,
+        "winRate": 0,
+        "drawRate": 1,
+        "nonLossRate": 1,
+        "upsetRate": 0,
+        "nonLossWilson": {
+          "lower": 0.2065,
+          "mid": 1,
+          "upper": 1
+        },
+        "winWilson": {
+          "lower": 0,
+          "mid": 0,
+          "upper": 0.7935
+        },
+        "decayedWeight": 1
+      },
+      "underdog": {
+        "sample": 0,
+        "wins": 0,
+        "draws": 0,
+        "losses": 0,
+        "winRate": null,
+        "drawRate": null,
+        "nonLossRate": 0,
+        "upsetRate": null,
+        "nonLossWilson": {
+          "lower": null,
+          "mid": null,
+          "upper": null
+        },
+        "winWilson": {
+          "lower": null,
+          "mid": null,
+          "upper": null
+        },
+        "decayedWeight": 0
+      },
+      "favoriteBands": {
+        "1.86-2.25": {
+          "sample": 1,
+          "wins": 0,
+          "draws": 1,
+          "losses": 0,
+          "winRate": 0,
+          "drawRate": 1,
+          "nonLossRate": 1,
+          "upsetRate": 0,
+          "nonLossWilson": {
+            "lower": 0.2065,
+            "mid": 1,
+            "upper": 1
+          },
+          "winWilson": {
+            "lower": 0,
+            "mid": 0,
+            "upper": 0.7935
+          },
+          "decayedWeight": 1
+        }
+      },
+      "underdogUpsets": 0,
+      "flags": [],
+      "patternStability": 70,
+      "favoriteReliability": 100
+    },
+    "128|atletico tucuman": {
+      "name": "Atletico Tucuman",
+      "league": "Liga Profesional Argentina",
+      "leagueId": 128,
+      "favorite": {
+        "sample": 0,
+        "wins": 0,
+        "draws": 0,
+        "losses": 0,
+        "winRate": null,
+        "drawRate": null,
+        "nonLossRate": 0,
+        "upsetRate": null,
+        "nonLossWilson": {
+          "lower": null,
+          "mid": null,
+          "upper": null
+        },
+        "winWilson": {
+          "lower": null,
+          "mid": null,
+          "upper": null
+        },
+        "decayedWeight": 0
+      },
+      "underdog": {
+        "sample": 1,
+        "wins": 0,
+        "draws": 1,
+        "losses": 0,
+        "winRate": 0,
+        "drawRate": 1,
+        "nonLossRate": 1,
+        "upsetRate": 0,
+        "nonLossWilson": {
+          "lower": 0.2065,
+          "mid": 1,
+          "upper": 1
+        },
+        "winWilson": {
+          "lower": 0,
+          "mid": 0,
+          "upper": 0.7935
+        },
+        "decayedWeight": 1
+      },
+      "favoriteBands": {},
+      "underdogUpsets": 0,
+      "flags": [],
+      "patternStability": 100,
+      "favoriteReliability": 0
+    },
+    "239|bucaramanga": {
+      "name": "Bucaramanga",
+      "league": "Primera A",
+      "leagueId": 239,
+      "favorite": {
+        "sample": 1,
+        "wins": 0,
+        "draws": 1,
+        "losses": 0,
+        "winRate": 0,
+        "drawRate": 1,
+        "nonLossRate": 1,
+        "upsetRate": 0,
+        "nonLossWilson": {
+          "lower": 0.2065,
+          "mid": 1,
+          "upper": 1
+        },
+        "winWilson": {
+          "lower": 0,
+          "mid": 0,
+          "upper": 0.7935
+        },
+        "decayedWeight": 1
+      },
+      "underdog": {
+        "sample": 0,
+        "wins": 0,
+        "draws": 0,
+        "losses": 0,
+        "winRate": null,
+        "drawRate": null,
+        "nonLossRate": 0,
+        "upsetRate": null,
+        "nonLossWilson": {
+          "lower": null,
+          "mid": null,
+          "upper": null
+        },
+        "winWilson": {
+          "lower": null,
+          "mid": null,
+          "upper": null
+        },
+        "decayedWeight": 0
+      },
+      "favoriteBands": {
+        "1.36-1.60": {
+          "sample": 1,
+          "wins": 0,
+          "draws": 1,
+          "losses": 0,
+          "winRate": 0,
+          "drawRate": 1,
+          "nonLossRate": 1,
+          "upsetRate": 0,
+          "nonLossWilson": {
+            "lower": 0.2065,
+            "mid": 1,
+            "upper": 1
+          },
+          "winWilson": {
+            "lower": 0,
+            "mid": 0,
+            "upper": 0.7935
+          },
+          "decayedWeight": 1
+        }
+      },
+      "underdogUpsets": 0,
+      "flags": [],
+      "patternStability": 70,
+      "favoriteReliability": 100
+    },
+    "239|cucuta": {
+      "name": "Cucuta",
+      "league": "Primera A",
+      "leagueId": 239,
+      "favorite": {
+        "sample": 0,
+        "wins": 0,
+        "draws": 0,
+        "losses": 0,
+        "winRate": null,
+        "drawRate": null,
+        "nonLossRate": 0,
+        "upsetRate": null,
+        "nonLossWilson": {
+          "lower": null,
+          "mid": null,
+          "upper": null
+        },
+        "winWilson": {
+          "lower": null,
+          "mid": null,
+          "upper": null
+        },
+        "decayedWeight": 0
+      },
+      "underdog": {
+        "sample": 1,
+        "wins": 0,
+        "draws": 1,
+        "losses": 0,
+        "winRate": 0,
+        "drawRate": 1,
+        "nonLossRate": 1,
+        "upsetRate": 0,
+        "nonLossWilson": {
+          "lower": 0.2065,
+          "mid": 1,
+          "upper": 1
+        },
+        "winWilson": {
+          "lower": 0,
+          "mid": 0,
+          "upper": 0.7935
+        },
+        "decayedWeight": 1
+      },
+      "favoriteBands": {},
+      "underdogUpsets": 0,
+      "flags": [],
+      "patternStability": 100,
+      "favoriteReliability": 0
+    },
+    "339|xelaj": {
+      "name": "Xelajú",
+      "league": "Liga Nacional",
+      "leagueId": 339,
+      "favorite": {
+        "sample": 1,
+        "wins": 1,
+        "draws": 0,
+        "losses": 0,
+        "winRate": 1,
+        "drawRate": 0,
+        "nonLossRate": 1,
+        "upsetRate": 0,
+        "nonLossWilson": {
+          "lower": 0.2065,
+          "mid": 1,
+          "upper": 1
+        },
+        "winWilson": {
+          "lower": 0.2065,
+          "mid": 1,
+          "upper": 1
+        },
+        "decayedWeight": 1
+      },
+      "underdog": {
+        "sample": 0,
+        "wins": 0,
+        "draws": 0,
+        "losses": 0,
+        "winRate": null,
+        "drawRate": null,
+        "nonLossRate": 0,
+        "upsetRate": null,
+        "nonLossWilson": {
+          "lower": null,
+          "mid": null,
+          "upper": null
+        },
+        "winWilson": {
+          "lower": null,
+          "mid": null,
+          "upper": null
+        },
+        "decayedWeight": 0
+      },
+      "favoriteBands": {
+        "1.01-1.35": {
+          "sample": 1,
+          "wins": 1,
+          "draws": 0,
+          "losses": 0,
+          "winRate": 1,
+          "drawRate": 0,
+          "nonLossRate": 1,
+          "upsetRate": 0,
+          "nonLossWilson": {
+            "lower": 0.2065,
+            "mid": 1,
+            "upper": 1
+          },
+          "winWilson": {
+            "lower": 0.2065,
+            "mid": 1,
+            "upper": 1
+          },
+          "decayedWeight": 1
+        }
+      },
+      "underdogUpsets": 0,
+      "flags": [],
+      "patternStability": 100,
+      "favoriteReliability": 100
+    },
+    "339|aurora": {
+      "name": "Aurora",
+      "league": "Liga Nacional",
+      "leagueId": 339,
+      "favorite": {
+        "sample": 0,
+        "wins": 0,
+        "draws": 0,
+        "losses": 0,
+        "winRate": null,
+        "drawRate": null,
+        "nonLossRate": 0,
+        "upsetRate": null,
+        "nonLossWilson": {
+          "lower": null,
+          "mid": null,
+          "upper": null
+        },
+        "winWilson": {
+          "lower": null,
+          "mid": null,
+          "upper": null
+        },
+        "decayedWeight": 0
+      },
+      "underdog": {
+        "sample": 1,
+        "wins": 0,
+        "draws": 0,
+        "losses": 1,
+        "winRate": 0,
+        "drawRate": 0,
+        "nonLossRate": 0,
+        "upsetRate": 1,
+        "nonLossWilson": {
+          "lower": 0,
+          "mid": 0,
+          "upper": 0.7935
+        },
+        "winWilson": {
+          "lower": 0,
+          "mid": 0,
+          "upper": 0.7935
+        },
+        "decayedWeight": 1
+      },
+      "favoriteBands": {},
+      "underdogUpsets": 0,
+      "flags": [],
+      "patternStability": 100,
+      "favoriteReliability": 0
+    },
+    "667|bournemouth": {
+      "name": "Bournemouth",
+      "league": "Friendlies Clubs",
+      "leagueId": 667,
+      "favorite": {
+        "sample": 1,
+        "wins": 1,
+        "draws": 0,
+        "losses": 0,
+        "winRate": 1,
+        "drawRate": 0,
+        "nonLossRate": 1,
+        "upsetRate": 0,
+        "nonLossWilson": {
+          "lower": 0.2065,
+          "mid": 1,
+          "upper": 1
+        },
+        "winWilson": {
+          "lower": 0.2065,
+          "mid": 1,
+          "upper": 1
+        },
+        "decayedWeight": 1
+      },
+      "underdog": {
+        "sample": 0,
+        "wins": 0,
+        "draws": 0,
+        "losses": 0,
+        "winRate": null,
+        "drawRate": null,
+        "nonLossRate": 0,
+        "upsetRate": null,
+        "nonLossWilson": {
+          "lower": null,
+          "mid": null,
+          "upper": null
+        },
+        "winWilson": {
+          "lower": null,
+          "mid": null,
+          "upper": null
+        },
+        "decayedWeight": 0
+      },
+      "favoriteBands": {
+        "1.36-1.60": {
+          "sample": 1,
+          "wins": 1,
+          "draws": 0,
+          "losses": 0,
+          "winRate": 1,
+          "drawRate": 0,
+          "nonLossRate": 1,
+          "upsetRate": 0,
+          "nonLossWilson": {
+            "lower": 0.2065,
+            "mid": 1,
+            "upper": 1
+          },
+          "winWilson": {
+            "lower": 0.2065,
+            "mid": 1,
+            "upper": 1
+          },
+          "decayedWeight": 1
+        }
+      },
+      "underdogUpsets": 0,
+      "flags": [],
+      "patternStability": 100,
+      "favoriteReliability": 100
+    },
+    "667|genoa": {
+      "name": "Genoa",
+      "league": "Friendlies Clubs",
+      "leagueId": 667,
+      "favorite": {
+        "sample": 0,
+        "wins": 0,
+        "draws": 0,
+        "losses": 0,
+        "winRate": null,
+        "drawRate": null,
+        "nonLossRate": 0,
+        "upsetRate": null,
+        "nonLossWilson": {
+          "lower": null,
+          "mid": null,
+          "upper": null
+        },
+        "winWilson": {
+          "lower": null,
+          "mid": null,
+          "upper": null
+        },
+        "decayedWeight": 0
+      },
+      "underdog": {
+        "sample": 1,
+        "wins": 0,
+        "draws": 0,
+        "losses": 1,
+        "winRate": 0,
+        "drawRate": 0,
+        "nonLossRate": 0,
+        "upsetRate": 1,
+        "nonLossWilson": {
+          "lower": 0,
+          "mid": 0,
+          "upper": 0.7935
+        },
+        "winWilson": {
+          "lower": 0,
+          "mid": 0,
+          "upper": 0.7935
+        },
+        "decayedWeight": 1
       },
       "favoriteBands": {},
       "underdogUpsets": 0,
@@ -23358,25 +24314,25 @@
       "league": "Copa Do Brasil",
       "leagueId": 73,
       "favorite": {
-        "sample": 2,
-        "wins": 0,
+        "sample": 3,
+        "wins": 1,
         "draws": 2,
         "losses": 0,
-        "winRate": 0,
-        "drawRate": 1,
+        "winRate": 0.3359,
+        "drawRate": 0.6641,
         "nonLossRate": 1,
         "upsetRate": 0,
         "nonLossWilson": {
-          "lower": 0.3424,
+          "lower": 0.4385,
           "mid": 1,
           "upper": 1
         },
         "winWilson": {
-          "lower": 0,
-          "mid": 0,
-          "upper": 0.6576
+          "lower": 0.0615,
+          "mid": 0.3333,
+          "upper": 0.7923
         },
-        "decayedWeight": 1.97
+        "decayedWeight": 2.96
       },
       "bands": {
         "1.86-2.25": {
@@ -23399,6 +24355,27 @@
             "upper": 0.6576
           },
           "decayedWeight": 1.97
+        },
+        "1.36-1.60": {
+          "sample": 1,
+          "wins": 1,
+          "draws": 0,
+          "losses": 0,
+          "winRate": 1,
+          "drawRate": 0,
+          "nonLossRate": 1,
+          "upsetRate": 0,
+          "nonLossWilson": {
+            "lower": 0.2065,
+            "mid": 1,
+            "upper": 1
+          },
+          "winWilson": {
+            "lower": 0.2065,
+            "mid": 1,
+            "upper": 1
+          },
+          "decayedWeight": 1
         }
       },
       "homeFavorites": {
@@ -23406,8 +24383,8 @@
         "wins": 0,
         "draws": 1,
         "losses": 0,
-        "winRate": 0,
-        "drawRate": 1,
+        "winRate": 0.5029,
+        "drawRate": 0.4971,
         "nonLossRate": 1,
         "upsetRate": 0,
         "nonLossWilson": {
@@ -23420,7 +24397,7 @@
           "mid": 0,
           "upper": 0.7935
         },
-        "decayedWeight": 0.98
+        "decayedWeight": 1.98
       },
       "awayFavorites": {
         "sample": 1,
@@ -23444,31 +24421,31 @@
         "decayedWeight": 0.98
       },
       "flags": [],
-      "stabilityScore": 75
+      "stabilityScore": 83.4
     },
     "74": {
       "league": "Brasileiro Women",
       "leagueId": 74,
       "favorite": {
-        "sample": 3,
-        "wins": 2,
+        "sample": 4,
+        "wins": 3,
         "draws": 1,
         "losses": 0,
-        "winRate": 0.6731,
-        "drawRate": 0.3269,
+        "winRate": 0.7572,
+        "drawRate": 0.2428,
         "nonLossRate": 1,
         "upsetRate": 0,
         "nonLossWilson": {
-          "lower": 0.4385,
+          "lower": 0.5101,
           "mid": 1,
           "upper": 1
         },
         "winWilson": {
-          "lower": 0.2077,
-          "mid": 0.6667,
-          "upper": 0.9385
+          "lower": 0.3006,
+          "mid": 0.75,
+          "upper": 0.9544
         },
-        "decayedWeight": 2.86
+        "decayedWeight": 3.85
       },
       "bands": {
         "1.61-1.85": {
@@ -23491,6 +24468,27 @@
             "upper": 0.9385
           },
           "decayedWeight": 2.86
+        },
+        "1.86-2.25": {
+          "sample": 1,
+          "wins": 1,
+          "draws": 0,
+          "losses": 0,
+          "winRate": 1,
+          "drawRate": 0,
+          "nonLossRate": 1,
+          "upsetRate": 0,
+          "nonLossWilson": {
+            "lower": 0.2065,
+            "mid": 1,
+            "upper": 1
+          },
+          "winWilson": {
+            "lower": 0.2065,
+            "mid": 1,
+            "upper": 1
+          },
+          "decayedWeight": 0.99
         }
       },
       "homeFavorites": {
@@ -23515,28 +24513,28 @@
         "decayedWeight": 2.86
       },
       "awayFavorites": {
-        "sample": 0,
-        "wins": 0,
+        "sample": 1,
+        "wins": 1,
         "draws": 0,
         "losses": 0,
-        "winRate": null,
-        "drawRate": null,
-        "nonLossRate": 0,
-        "upsetRate": null,
+        "winRate": 1,
+        "drawRate": 0,
+        "nonLossRate": 1,
+        "upsetRate": 0,
         "nonLossWilson": {
-          "lower": null,
-          "mid": null,
-          "upper": null
+          "lower": 0.2065,
+          "mid": 1,
+          "upper": 1
         },
         "winWilson": {
-          "lower": null,
-          "mid": null,
-          "upper": null
+          "lower": 0.2065,
+          "mid": 1,
+          "upper": 1
         },
-        "decayedWeight": 0
+        "decayedWeight": 0.99
       },
       "flags": [],
-      "stabilityScore": 91.8
+      "stabilityScore": 93.9
     },
     "103": {
       "league": "Eliteserien",
@@ -23818,14 +24816,58 @@
       "league": "Liga Profesional Argentina",
       "leagueId": 128,
       "favorite": {
+        "sample": 3,
+        "wins": 0,
+        "draws": 2,
+        "losses": 1,
+        "winRate": 0,
+        "drawRate": 0.668,
+        "nonLossRate": 0.668,
+        "upsetRate": 0.332,
+        "nonLossWilson": {
+          "lower": 0.2077,
+          "mid": 0.6667,
+          "upper": 0.9385
+        },
+        "winWilson": {
+          "lower": 0,
+          "mid": 0,
+          "upper": 0.5615
+        },
+        "decayedWeight": 2.96
+      },
+      "bands": {
+        "1.86-2.25": {
+          "sample": 3,
+          "wins": 0,
+          "draws": 2,
+          "losses": 1,
+          "winRate": 0,
+          "drawRate": 0.668,
+          "nonLossRate": 0.668,
+          "upsetRate": 0.332,
+          "nonLossWilson": {
+            "lower": 0.2077,
+            "mid": 0.6667,
+            "upper": 0.9385
+          },
+          "winWilson": {
+            "lower": 0,
+            "mid": 0,
+            "upper": 0.5615
+          },
+          "decayedWeight": 2.96
+        }
+      },
+      "homeFavorites": {
         "sample": 2,
         "wins": 0,
         "draws": 1,
         "losses": 1,
         "winRate": 0,
-        "drawRate": 0.5,
-        "nonLossRate": 0.5,
-        "upsetRate": 0.5,
+        "drawRate": 0.5029,
+        "nonLossRate": 0.5029,
+        "upsetRate": 0.4971,
         "nonLossWilson": {
           "lower": 0.0945,
           "mid": 0.5,
@@ -23836,51 +24878,7 @@
           "mid": 0,
           "upper": 0.6576
         },
-        "decayedWeight": 1.97
-      },
-      "bands": {
-        "1.86-2.25": {
-          "sample": 2,
-          "wins": 0,
-          "draws": 1,
-          "losses": 1,
-          "winRate": 0,
-          "drawRate": 0.5,
-          "nonLossRate": 0.5,
-          "upsetRate": 0.5,
-          "nonLossWilson": {
-            "lower": 0.0945,
-            "mid": 0.5,
-            "upper": 0.9055
-          },
-          "winWilson": {
-            "lower": 0,
-            "mid": 0,
-            "upper": 0.6576
-          },
-          "decayedWeight": 1.97
-        }
-      },
-      "homeFavorites": {
-        "sample": 1,
-        "wins": 0,
-        "draws": 0,
-        "losses": 1,
-        "winRate": 0,
-        "drawRate": 0,
-        "nonLossRate": 0,
-        "upsetRate": 1,
-        "nonLossWilson": {
-          "lower": 0,
-          "mid": 0,
-          "upper": 0.7935
-        },
-        "winWilson": {
-          "lower": 0,
-          "mid": 0,
-          "upper": 0.7935
-        },
-        "decayedWeight": 0.98
+        "decayedWeight": 1.98
       },
       "awayFavorites": {
         "sample": 1,
@@ -23904,7 +24902,7 @@
         "decayedWeight": 0.98
       },
       "flags": [],
-      "stabilityScore": 50
+      "stabilityScore": 58.4
     },
     "129": {
       "league": "Primera Nacional",
@@ -24106,7 +25104,7 @@
           "mid": 0.5,
           "upper": 0.85
         },
-        "decayedWeight": 3.59
+        "decayedWeight": 3.58
       },
       "flags": [],
       "stabilityScore": 78.5
@@ -25220,6 +26218,98 @@
       "flags": [],
       "stabilityScore": 100
     },
+    "239": {
+      "league": "Primera A",
+      "leagueId": 239,
+      "favorite": {
+        "sample": 1,
+        "wins": 0,
+        "draws": 1,
+        "losses": 0,
+        "winRate": 0,
+        "drawRate": 1,
+        "nonLossRate": 1,
+        "upsetRate": 0,
+        "nonLossWilson": {
+          "lower": 0.2065,
+          "mid": 1,
+          "upper": 1
+        },
+        "winWilson": {
+          "lower": 0,
+          "mid": 0,
+          "upper": 0.7935
+        },
+        "decayedWeight": 1
+      },
+      "bands": {
+        "1.36-1.60": {
+          "sample": 1,
+          "wins": 0,
+          "draws": 1,
+          "losses": 0,
+          "winRate": 0,
+          "drawRate": 1,
+          "nonLossRate": 1,
+          "upsetRate": 0,
+          "nonLossWilson": {
+            "lower": 0.2065,
+            "mid": 1,
+            "upper": 1
+          },
+          "winWilson": {
+            "lower": 0,
+            "mid": 0,
+            "upper": 0.7935
+          },
+          "decayedWeight": 1
+        }
+      },
+      "homeFavorites": {
+        "sample": 1,
+        "wins": 0,
+        "draws": 1,
+        "losses": 0,
+        "winRate": 0,
+        "drawRate": 1,
+        "nonLossRate": 1,
+        "upsetRate": 0,
+        "nonLossWilson": {
+          "lower": 0.2065,
+          "mid": 1,
+          "upper": 1
+        },
+        "winWilson": {
+          "lower": 0,
+          "mid": 0,
+          "upper": 0.7935
+        },
+        "decayedWeight": 1
+      },
+      "awayFavorites": {
+        "sample": 0,
+        "wins": 0,
+        "draws": 0,
+        "losses": 0,
+        "winRate": null,
+        "drawRate": null,
+        "nonLossRate": 0,
+        "upsetRate": null,
+        "nonLossWilson": {
+          "lower": null,
+          "mid": null,
+          "upper": null
+        },
+        "winWilson": {
+          "lower": null,
+          "mid": null,
+          "upper": null
+        },
+        "decayedWeight": 0
+      },
+      "flags": [],
+      "stabilityScore": 75
+    },
     "240": {
       "league": "Primera B",
       "leagueId": 240,
@@ -25337,8 +26427,8 @@
       "league": "Liga Pro",
       "leagueId": 242,
       "favorite": {
-        "sample": 3,
-        "wins": 3,
+        "sample": 4,
+        "wins": 4,
         "draws": 0,
         "losses": 0,
         "winRate": 1,
@@ -25346,16 +26436,16 @@
         "nonLossRate": 1,
         "upsetRate": 0,
         "nonLossWilson": {
-          "lower": 0.4385,
+          "lower": 0.5101,
           "mid": 1,
           "upper": 1
         },
         "winWilson": {
-          "lower": 0.4385,
+          "lower": 0.5101,
           "mid": 1,
           "upper": 1
         },
-        "decayedWeight": 2.78
+        "decayedWeight": 3.77
       },
       "bands": {
         "1.86-2.25": {
@@ -25380,8 +26470,8 @@
           "decayedWeight": 0.88
         },
         "1.01-1.35": {
-          "sample": 1,
-          "wins": 1,
+          "sample": 2,
+          "wins": 2,
           "draws": 0,
           "losses": 0,
           "winRate": 1,
@@ -25389,16 +26479,16 @@
           "nonLossRate": 1,
           "upsetRate": 0,
           "nonLossWilson": {
-            "lower": 0.2065,
+            "lower": 0.3424,
             "mid": 1,
             "upper": 1
           },
           "winWilson": {
-            "lower": 0.2065,
+            "lower": 0.3424,
             "mid": 1,
             "upper": 1
           },
-          "decayedWeight": 0.91
+          "decayedWeight": 1.91
         },
         "1.36-1.60": {
           "sample": 1,
@@ -25423,8 +26513,8 @@
         }
       },
       "homeFavorites": {
-        "sample": 3,
-        "wins": 3,
+        "sample": 4,
+        "wins": 4,
         "draws": 0,
         "losses": 0,
         "winRate": 1,
@@ -25432,16 +26522,16 @@
         "nonLossRate": 1,
         "upsetRate": 0,
         "nonLossWilson": {
-          "lower": 0.4385,
+          "lower": 0.5101,
           "mid": 1,
           "upper": 1
         },
         "winWilson": {
-          "lower": 0.4385,
+          "lower": 0.5101,
           "mid": 1,
           "upper": 1
         },
-        "decayedWeight": 2.78
+        "decayedWeight": 3.77
       },
       "awayFavorites": {
         "sample": 0,
@@ -26701,69 +27791,69 @@
       "league": "Primera B",
       "leagueId": 266,
       "favorite": {
-        "sample": 1,
+        "sample": 2,
         "wins": 1,
         "draws": 0,
-        "losses": 0,
-        "winRate": 1,
+        "losses": 1,
+        "winRate": 0.4971,
         "drawRate": 0,
-        "nonLossRate": 1,
-        "upsetRate": 0,
+        "nonLossRate": 0.4971,
+        "upsetRate": 0.5029,
         "nonLossWilson": {
-          "lower": 0.2065,
-          "mid": 1,
-          "upper": 1
+          "lower": 0.0945,
+          "mid": 0.5,
+          "upper": 0.9055
         },
         "winWilson": {
-          "lower": 0.2065,
-          "mid": 1,
-          "upper": 1
+          "lower": 0.0945,
+          "mid": 0.5,
+          "upper": 0.9055
         },
-        "decayedWeight": 0.98
+        "decayedWeight": 1.98
       },
       "bands": {
         "1.86-2.25": {
-          "sample": 1,
+          "sample": 2,
           "wins": 1,
           "draws": 0,
-          "losses": 0,
-          "winRate": 1,
+          "losses": 1,
+          "winRate": 0.4971,
           "drawRate": 0,
-          "nonLossRate": 1,
-          "upsetRate": 0,
+          "nonLossRate": 0.4971,
+          "upsetRate": 0.5029,
           "nonLossWilson": {
-            "lower": 0.2065,
-            "mid": 1,
-            "upper": 1
+            "lower": 0.0945,
+            "mid": 0.5,
+            "upper": 0.9055
           },
           "winWilson": {
-            "lower": 0.2065,
-            "mid": 1,
-            "upper": 1
+            "lower": 0.0945,
+            "mid": 0.5,
+            "upper": 0.9055
           },
-          "decayedWeight": 0.98
+          "decayedWeight": 1.98
         }
       },
       "homeFavorites": {
-        "sample": 0,
+        "sample": 1,
         "wins": 0,
         "draws": 0,
-        "losses": 0,
-        "winRate": null,
-        "drawRate": null,
+        "losses": 1,
+        "winRate": 0,
+        "drawRate": 0,
         "nonLossRate": 0,
-        "upsetRate": null,
+        "upsetRate": 1,
         "nonLossWilson": {
-          "lower": null,
-          "mid": null,
-          "upper": null
+          "lower": 0,
+          "mid": 0,
+          "upper": 0.7935
         },
         "winWilson": {
-          "lower": null,
-          "mid": null,
-          "upper": null
+          "lower": 0,
+          "mid": 0,
+          "upper": 0.7935
         },
-        "decayedWeight": 0
+        "decayedWeight": 1
       },
       "awayFavorites": {
         "sample": 1,
@@ -26787,7 +27877,7 @@
         "decayedWeight": 0.98
       },
       "flags": [],
-      "stabilityScore": 100
+      "stabilityScore": 62.3
     },
     "268": {
       "league": "Primera División - Apertura",
@@ -27629,6 +28719,98 @@
       },
       "flags": [],
       "stabilityScore": 71.3
+    },
+    "339": {
+      "league": "Liga Nacional",
+      "leagueId": 339,
+      "favorite": {
+        "sample": 1,
+        "wins": 1,
+        "draws": 0,
+        "losses": 0,
+        "winRate": 1,
+        "drawRate": 0,
+        "nonLossRate": 1,
+        "upsetRate": 0,
+        "nonLossWilson": {
+          "lower": 0.2065,
+          "mid": 1,
+          "upper": 1
+        },
+        "winWilson": {
+          "lower": 0.2065,
+          "mid": 1,
+          "upper": 1
+        },
+        "decayedWeight": 1
+      },
+      "bands": {
+        "1.01-1.35": {
+          "sample": 1,
+          "wins": 1,
+          "draws": 1,
+          "losses": 0,
+          "winRate": 0.4726,
+          "drawRate": 0.5274,
+          "nonLossRate": 1,
+          "upsetRate": 0,
+          "nonLossWilson": {
+            "lower": 0.3424,
+            "mid": 1,
+            "upper": 1
+          },
+          "winWilson": {
+            "lower": 0.0945,
+            "mid": 0.5,
+            "upper": 0.9055
+          },
+          "decayedWeight": 1
+        }
+      },
+      "homeFavorites": {
+        "sample": 1,
+        "wins": 1,
+        "draws": 0,
+        "losses": 0,
+        "winRate": 1,
+        "drawRate": 0,
+        "nonLossRate": 1,
+        "upsetRate": 0,
+        "nonLossWilson": {
+          "lower": 0.2065,
+          "mid": 1,
+          "upper": 1
+        },
+        "winWilson": {
+          "lower": 0.2065,
+          "mid": 1,
+          "upper": 1
+        },
+        "decayedWeight": 1
+      },
+      "awayFavorites": {
+        "sample": 0,
+        "wins": 0,
+        "draws": 0,
+        "losses": 0,
+        "winRate": null,
+        "drawRate": null,
+        "nonLossRate": 0,
+        "upsetRate": null,
+        "nonLossWilson": {
+          "lower": null,
+          "mid": null,
+          "upper": null
+        },
+        "winWilson": {
+          "lower": null,
+          "mid": null,
+          "upper": null
+        },
+        "decayedWeight": 0
+      },
+      "flags": [],
+      "stabilityScore": 100
     },
     "344": {
       "league": "Primera División",
@@ -29132,30 +30314,30 @@
       "league": "Friendlies Clubs",
       "leagueId": 667,
       "favorite": {
-        "sample": 3,
-        "wins": 2,
+        "sample": 4,
+        "wins": 3,
         "draws": 0,
         "losses": 1,
-        "winRate": 0.6628,
+        "winRate": 0.7516,
         "drawRate": 0,
-        "nonLossRate": 0.6628,
-        "upsetRate": 0.3372,
+        "nonLossRate": 0.7516,
+        "upsetRate": 0.2484,
         "nonLossWilson": {
-          "lower": 0.2077,
-          "mid": 0.6667,
-          "upper": 0.9385
+          "lower": 0.3006,
+          "mid": 0.75,
+          "upper": 0.9544
         },
         "winWilson": {
-          "lower": 0.2077,
-          "mid": 0.6667,
-          "upper": 0.9385
+          "lower": 0.3006,
+          "mid": 0.75,
+          "upper": 0.9544
         },
-        "decayedWeight": 2.79
+        "decayedWeight": 3.78
       },
       "bands": {
         "1.36-1.60": {
-          "sample": 1,
-          "wins": 1,
+          "sample": 2,
+          "wins": 2,
           "draws": 0,
           "losses": 0,
           "winRate": 1,
@@ -29163,16 +30345,16 @@
           "nonLossRate": 1,
           "upsetRate": 0,
           "nonLossWilson": {
-            "lower": 0.2065,
+            "lower": 0.3424,
             "mid": 1,
             "upper": 1
           },
           "winWilson": {
-            "lower": 0.2065,
+            "lower": 0.3424,
             "mid": 1,
             "upper": 1
           },
-          "decayedWeight": 0.91
+          "decayedWeight": 1.9
         },
         "1.61-1.85": {
           "sample": 1,
@@ -29218,25 +30400,25 @@
         }
       },
       "homeFavorites": {
-        "sample": 2,
-        "wins": 1,
+        "sample": 3,
+        "wins": 2,
         "draws": 0,
         "losses": 1,
-        "winRate": 0.4913,
+        "winRate": 0.6695,
         "drawRate": 0,
-        "nonLossRate": 0.4913,
-        "upsetRate": 0.5087,
+        "nonLossRate": 0.6695,
+        "upsetRate": 0.3305,
         "nonLossWilson": {
-          "lower": 0.0945,
-          "mid": 0.5,
-          "upper": 0.9055
+          "lower": 0.2077,
+          "mid": 0.6667,
+          "upper": 0.9385
         },
         "winWilson": {
-          "lower": 0.0945,
-          "mid": 0.5,
-          "upper": 0.9055
+          "lower": 0.2077,
+          "mid": 0.6667,
+          "upper": 0.9385
         },
-        "decayedWeight": 1.85
+        "decayedWeight": 2.84
       },
       "awayFavorites": {
         "sample": 1,
@@ -29260,7 +30442,120 @@
         "decayedWeight": 0.94
       },
       "flags": [],
-      "stabilityScore": 74.7
+      "stabilityScore": 81.4
+    },
+    "712": {
+      "league": "Liga Femenina",
+      "leagueId": 712,
+      "favorite": {
+        "sample": 2,
+        "wins": 0,
+        "draws": 2,
+        "losses": 0,
+        "winRate": 0,
+        "drawRate": 1,
+        "nonLossRate": 1,
+        "upsetRate": 0,
+        "nonLossWilson": {
+          "lower": 0.3424,
+          "mid": 1,
+          "upper": 1
+        },
+        "winWilson": {
+          "lower": 0,
+          "mid": 0,
+          "upper": 0.6576
+        },
+        "decayedWeight": 1.97
+      },
+      "bands": {
+        "1.61-1.85": {
+          "sample": 1,
+          "wins": 0,
+          "draws": 1,
+          "losses": 0,
+          "winRate": 0,
+          "drawRate": 1,
+          "nonLossRate": 1,
+          "upsetRate": 0,
+          "nonLossWilson": {
+            "lower": 0.2065,
+            "mid": 1,
+            "upper": 1
+          },
+          "winWilson": {
+            "lower": 0,
+            "mid": 0,
+            "upper": 0.7935
+          },
+          "decayedWeight": 0.98
+        },
+        "1.86-2.25": {
+          "sample": 1,
+          "wins": 0,
+          "draws": 1,
+          "losses": 0,
+          "winRate": 0,
+          "drawRate": 1,
+          "nonLossRate": 1,
+          "upsetRate": 0,
+          "nonLossWilson": {
+            "lower": 0.2065,
+            "mid": 1,
+            "upper": 1
+          },
+          "winWilson": {
+            "lower": 0,
+            "mid": 0,
+            "upper": 0.7935
+          },
+          "decayedWeight": 0.98
+        }
+      },
+      "homeFavorites": {
+        "sample": 0,
+        "wins": 0,
+        "draws": 0,
+        "losses": 0,
+        "winRate": null,
+        "drawRate": null,
+        "nonLossRate": 0,
+        "upsetRate": null,
+        "nonLossWilson": {
+          "lower": null,
+          "mid": null,
+          "upper": null
+        },
+        "winWilson": {
+          "lower": null,
+          "mid": null,
+          "upper": null
+        },
+        "decayedWeight": 0
+      },
+      "awayFavorites": {
+        "sample": 2,
+        "wins": 0,
+        "draws": 2,
+        "losses": 0,
+        "winRate": 0,
+        "drawRate": 1,
+        "nonLossRate": 1,
+        "upsetRate": 0,
+        "nonLossWilson": {
+          "lower": 0.3424,
+          "mid": 1,
+          "upper": 1
+        },
+        "winWilson": {
+          "lower": 0,
+          "mid": 0,
+          "upper": 0.6576
+        },
+        "decayedWeight": 1.97
+      },
+      "flags": [],
+      "stabilityScore": 75
     },
     "712": {
       "league": "Liga Femenina",
@@ -36887,6 +38182,34 @@
       },
       "flags": []
     },
+    "74|flamengo w|corinthians w": {
+      "home": "Flamengo W",
+      "away": "Corinthians W",
+      "league": "Brasileiro Women",
+      "leagueId": 74,
+      "favorite": {
+        "sample": 1,
+        "wins": 1,
+        "draws": 0,
+        "losses": 0,
+        "winRate": 1,
+        "drawRate": 0,
+        "nonLossRate": 1,
+        "upsetRate": 0,
+        "nonLossWilson": {
+          "lower": 0.2065,
+          "mid": 1,
+          "upper": 1
+        },
+        "winWilson": {
+          "lower": 0.2065,
+          "mid": 1,
+          "upper": 1
+        },
+        "decayedWeight": 0.99
+      },
+      "flags": []
+    },
     "240|barranquilla|depor fc": {
       "home": "Barranquilla",
       "away": "Depor FC",
@@ -36912,6 +38235,202 @@
           "upper": 0.7935
         },
         "decayedWeight": 0.98
+      },
+      "flags": []
+    },
+    "266|deportes temuco|deportes copiapo": {
+      "home": "Deportes Temuco",
+      "away": "Deportes Copiapo",
+      "league": "Primera B",
+      "leagueId": 266,
+      "favorite": {
+        "sample": 1,
+        "wins": 0,
+        "draws": 0,
+        "losses": 1,
+        "winRate": 0,
+        "drawRate": 0,
+        "nonLossRate": 0,
+        "upsetRate": 1,
+        "nonLossWilson": {
+          "lower": 0,
+          "mid": 0,
+          "upper": 0.7935
+        },
+        "winWilson": {
+          "lower": 0,
+          "mid": 0,
+          "upper": 0.7935
+        },
+        "decayedWeight": 1
+      },
+      "flags": []
+    },
+    "242|ldu de quito|delfin sc": {
+      "home": "LDU de Quito",
+      "away": "Delfin SC",
+      "league": "Liga Pro",
+      "leagueId": 242,
+      "favorite": {
+        "sample": 1,
+        "wins": 1,
+        "draws": 0,
+        "losses": 0,
+        "winRate": 1,
+        "drawRate": 0,
+        "nonLossRate": 1,
+        "upsetRate": 0,
+        "nonLossWilson": {
+          "lower": 0.2065,
+          "mid": 1,
+          "upper": 1
+        },
+        "winWilson": {
+          "lower": 0.2065,
+          "mid": 1,
+          "upper": 1
+        },
+        "decayedWeight": 1
+      },
+      "flags": []
+    },
+    "73|atletico paranaense|vitoria": {
+      "home": "Atletico Paranaense",
+      "away": "Vitoria",
+      "league": "Copa Do Brasil",
+      "leagueId": 73,
+      "favorite": {
+        "sample": 1,
+        "wins": 1,
+        "draws": 0,
+        "losses": 0,
+        "winRate": 1,
+        "drawRate": 0,
+        "nonLossRate": 1,
+        "upsetRate": 0,
+        "nonLossWilson": {
+          "lower": 0.2065,
+          "mid": 1,
+          "upper": 1
+        },
+        "winWilson": {
+          "lower": 0.2065,
+          "mid": 1,
+          "upper": 1
+        },
+        "decayedWeight": 1
+      },
+      "flags": []
+    },
+    "128|huracan|atletico tucuman": {
+      "home": "Huracan",
+      "away": "Atletico Tucuman",
+      "league": "Liga Profesional Argentina",
+      "leagueId": 128,
+      "favorite": {
+        "sample": 1,
+        "wins": 0,
+        "draws": 1,
+        "losses": 0,
+        "winRate": 0,
+        "drawRate": 1,
+        "nonLossRate": 1,
+        "upsetRate": 0,
+        "nonLossWilson": {
+          "lower": 0.2065,
+          "mid": 1,
+          "upper": 1
+        },
+        "winWilson": {
+          "lower": 0,
+          "mid": 0,
+          "upper": 0.7935
+        },
+        "decayedWeight": 1
+      },
+      "flags": []
+    },
+    "239|bucaramanga|cucuta": {
+      "home": "Bucaramanga",
+      "away": "Cucuta",
+      "league": "Primera A",
+      "leagueId": 239,
+      "favorite": {
+        "sample": 1,
+        "wins": 0,
+        "draws": 1,
+        "losses": 0,
+        "winRate": 0,
+        "drawRate": 1,
+        "nonLossRate": 1,
+        "upsetRate": 0,
+        "nonLossWilson": {
+          "lower": 0.2065,
+          "mid": 1,
+          "upper": 1
+        },
+        "winWilson": {
+          "lower": 0,
+          "mid": 0,
+          "upper": 0.7935
+        },
+        "decayedWeight": 1
+      },
+      "flags": []
+    },
+    "339|xelaj|aurora": {
+      "home": "Xelajú",
+      "away": "Aurora",
+      "league": "Liga Nacional",
+      "leagueId": 339,
+      "favorite": {
+        "sample": 1,
+        "wins": 1,
+        "draws": 0,
+        "losses": 0,
+        "winRate": 1,
+        "drawRate": 0,
+        "nonLossRate": 1,
+        "upsetRate": 0,
+        "nonLossWilson": {
+          "lower": 0.2065,
+          "mid": 1,
+          "upper": 1
+        },
+        "winWilson": {
+          "lower": 0.2065,
+          "mid": 1,
+          "upper": 1
+        },
+        "decayedWeight": 1
+      },
+      "flags": []
+    },
+    "667|bournemouth|genoa": {
+      "home": "Bournemouth",
+      "away": "Genoa",
+      "league": "Friendlies Clubs",
+      "leagueId": 667,
+      "favorite": {
+        "sample": 1,
+        "wins": 1,
+        "draws": 0,
+        "losses": 0,
+        "winRate": 1,
+        "drawRate": 0,
+        "nonLossRate": 1,
+        "upsetRate": 0,
+        "nonLossWilson": {
+          "lower": 0.2065,
+          "mid": 1,
+          "upper": 1
+        },
+        "winWilson": {
+          "lower": 0.2065,
+          "mid": 1,
+          "upper": 1
+        },
+        "decayedWeight": 1
       },
       "flags": []
     },
@@ -36946,67 +38465,67 @@
   },
   "oddsBands": {
     "1.86-2.25": {
-      "sample": 71,
-      "wins": 28,
-      "draws": 23,
-      "losses": 20,
-      "winRate": 0.3926,
-      "drawRate": 0.3267,
-      "nonLossRate": 0.7193,
-      "upsetRate": 0.2806,
+      "sample": 74,
+      "wins": 29,
+      "draws": 24,
+      "losses": 21,
+      "winRate": 0.39,
+      "drawRate": 0.327,
+      "nonLossRate": 0.717,
+      "upsetRate": 0.2829,
       "nonLossWilson": {
-        "lower": 0.6046,
-        "mid": 0.7183,
-        "upper": 0.8096
+        "lower": 0.6048,
+        "mid": 0.7162,
+        "upper": 0.8063
       },
       "winWilson": {
-        "lower": 0.2889,
-        "mid": 0.3944,
-        "upper": 0.5106
+        "lower": 0.2886,
+        "mid": 0.3919,
+        "upper": 0.5058
       },
-      "decayedWeight": 66.47
+      "decayedWeight": 69.44
     },
     "1.01-1.35": {
-      "sample": 28,
-      "wins": 23,
+      "sample": 30,
+      "wins": 25,
       "draws": 1,
       "losses": 4,
-      "winRate": 0.8185,
-      "drawRate": 0.0363,
-      "nonLossRate": 0.8548,
-      "upsetRate": 0.1452,
+      "winRate": 0.8315,
+      "drawRate": 0.0337,
+      "nonLossRate": 0.8652,
+      "upsetRate": 0.1348,
       "nonLossWilson": {
-        "lower": 0.6851,
-        "mid": 0.8571,
-        "upper": 0.943
+        "lower": 0.7032,
+        "mid": 0.8667,
+        "upper": 0.9469
       },
       "winWilson": {
-        "lower": 0.6441,
-        "mid": 0.8214,
-        "upper": 0.9212
+        "lower": 0.6644,
+        "mid": 0.8333,
+        "upper": 0.9266
       },
-      "decayedWeight": 25.9
+      "decayedWeight": 27.88
     },
     "1.36-1.60": {
-      "sample": 43,
-      "wins": 25,
-      "draws": 13,
+      "sample": 46,
+      "wins": 27,
+      "draws": 14,
       "losses": 5,
-      "winRate": 0.5817,
-      "drawRate": 0.3019,
-      "nonLossRate": 0.8836,
-      "upsetRate": 0.1164,
+      "winRate": 0.5875,
+      "drawRate": 0.3041,
+      "nonLossRate": 0.8916,
+      "upsetRate": 0.1084,
       "nonLossWilson": {
-        "lower": 0.7552,
-        "mid": 0.8837,
-        "upper": 0.9493
+        "lower": 0.7696,
+        "mid": 0.8913,
+        "upper": 0.9527
       },
       "winWilson": {
-        "lower": 0.4333,
-        "mid": 0.5814,
-        "upper": 0.7162
+        "lower": 0.4434,
+        "mid": 0.587,
+        "upper": 0.7171
       },
-      "decayedWeight": 40.37
+      "decayedWeight": 43.34
     },
     "1.61-1.85": {
       "sample": 49,
@@ -37027,7 +38546,7 @@
         "mid": 0.5306,
         "upper": 0.663
       },
-      "decayedWeight": 45.84
+      "decayedWeight": 45.83
     }
   },
   "contexts": {
@@ -37746,15 +39265,15 @@
       "hardVeto": false
     },
     "*|Normal|Away Win|unknown|other": {
-      "sample": 2,
+      "sample": 3,
       "wins": 0,
-      "losses": 2,
+      "losses": 3,
       "winRate": 0,
       "lossRate": 1,
       "wilson": {
         "lower": 0,
         "mid": 0,
-        "upper": 0.6576
+        "upper": 0.5615
       },
       "adjustment": 0,
       "hardVeto": false
@@ -38684,15 +40203,15 @@
       "hardVeto": false
     },
     "*|Trend|Away Team Over 0.5 Goals|unknown|other": {
-      "sample": 23,
-      "wins": 16,
+      "sample": 24,
+      "wins": 17,
       "losses": 7,
-      "winRate": 0.6957,
-      "lossRate": 0.3043,
+      "winRate": 0.7083,
+      "lossRate": 0.2917,
       "wilson": {
-        "lower": 0.4913,
-        "mid": 0.6957,
-        "upper": 0.844
+        "lower": 0.5083,
+        "mid": 0.7083,
+        "upper": 0.8509
       },
       "adjustment": 0,
       "hardVeto": false
@@ -38712,15 +40231,15 @@
       "hardVeto": false
     },
     "*|Halves|Second Half Over 0.5|unknown|other": {
-      "sample": 127,
-      "wins": 104,
+      "sample": 132,
+      "wins": 109,
       "losses": 23,
-      "winRate": 0.8189,
-      "lossRate": 0.1811,
+      "winRate": 0.8258,
+      "lossRate": 0.1742,
       "wilson": {
-        "lower": 0.7429,
-        "mid": 0.8189,
-        "upper": 0.8762
+        "lower": 0.7521,
+        "mid": 0.8258,
+        "upper": 0.881
       },
       "adjustment": 2,
       "hardVeto": false
@@ -38824,17 +40343,17 @@
       "hardVeto": false
     },
     "*|Trend|Under 3.5 Goals|unknown|other": {
-      "sample": 18,
-      "wins": 15,
+      "sample": 19,
+      "wins": 16,
       "losses": 3,
-      "winRate": 0.8333,
-      "lossRate": 0.1667,
+      "winRate": 0.8421,
+      "lossRate": 0.1579,
       "wilson": {
-        "lower": 0.6078,
-        "mid": 0.8333,
-        "upper": 0.9416
+        "lower": 0.6243,
+        "mid": 0.8421,
+        "upper": 0.9448
       },
-      "adjustment": 0,
+      "adjustment": 2,
       "hardVeto": false
     },
     "1 division|Halves|Second Half Over 0.5|unknown|other": {
@@ -38950,15 +40469,15 @@
       "hardVeto": false
     },
     "*|League Bias|Home Team Over 0.5 Goals|unknown|other": {
-      "sample": 119,
-      "wins": 98,
+      "sample": 120,
+      "wins": 99,
       "losses": 21,
-      "winRate": 0.8235,
-      "lossRate": 0.1765,
+      "winRate": 0.825,
+      "lossRate": 0.175,
       "wilson": {
-        "lower": 0.7452,
-        "mid": 0.8235,
-        "upper": 0.8816
+        "lower": 0.7472,
+        "mid": 0.825,
+        "upper": 0.8826
       },
       "adjustment": 2,
       "hardVeto": false
@@ -39104,15 +40623,15 @@
       "hardVeto": false
     },
     "*|Ultra|Double Chance X2|unknown|other": {
-      "sample": 6,
+      "sample": 7,
       "wins": 5,
-      "losses": 1,
-      "winRate": 0.8333,
-      "lossRate": 0.1667,
+      "losses": 2,
+      "winRate": 0.7143,
+      "lossRate": 0.2857,
       "wilson": {
-        "lower": 0.4365,
-        "mid": 0.8333,
-        "upper": 0.9699
+        "lower": 0.3589,
+        "mid": 0.7143,
+        "upper": 0.9178
       },
       "adjustment": 0,
       "hardVeto": false
@@ -39314,15 +40833,15 @@
       "hardVeto": false
     },
     "*|League Bias|Under 3.5 Goals|1.86-2.25|other": {
-      "sample": 19,
-      "wins": 16,
+      "sample": 20,
+      "wins": 17,
       "losses": 3,
-      "winRate": 0.8421,
-      "lossRate": 0.1579,
+      "winRate": 0.85,
+      "lossRate": 0.15,
       "wilson": {
-        "lower": 0.6243,
-        "mid": 0.8421,
-        "upper": 0.9448
+        "lower": 0.6396,
+        "mid": 0.85,
+        "upper": 0.9476
       },
       "adjustment": 2,
       "hardVeto": false
@@ -39342,15 +40861,15 @@
       "hardVeto": false
     },
     "*|League Bias|Under 3.5 Goals|2.26+|other": {
-      "sample": 18,
-      "wins": 16,
+      "sample": 19,
+      "wins": 17,
       "losses": 2,
-      "winRate": 0.8889,
-      "lossRate": 0.1111,
+      "winRate": 0.8947,
+      "lossRate": 0.1053,
       "wilson": {
-        "lower": 0.672,
-        "mid": 0.8889,
-        "upper": 0.969
+        "lower": 0.6861,
+        "mid": 0.8947,
+        "upper": 0.9706
       },
       "adjustment": 2,
       "hardVeto": false
@@ -39552,17 +41071,17 @@
       "hardVeto": false
     },
     "*|Halves|Second Half Over 0.5|1.86-2.25|other": {
-      "sample": 42,
-      "wins": 32,
+      "sample": 43,
+      "wins": 33,
       "losses": 10,
-      "winRate": 0.7619,
-      "lossRate": 0.2381,
+      "winRate": 0.7674,
+      "lossRate": 0.2326,
       "wilson": {
-        "lower": 0.6147,
-        "mid": 0.7619,
-        "upper": 0.8652
+        "lower": 0.6226,
+        "mid": 0.7674,
+        "upper": 0.8685
       },
-      "adjustment": 0,
+      "adjustment": 2,
       "hardVeto": false
     },
     "uefa champions league|League Bias|Home Team Over 0.5 Goals|1.86-2.25|other": {
@@ -39692,15 +41211,15 @@
       "hardVeto": false
     },
     "*|League Bias|Under 3.5 Goals|1.01-1.35|other": {
-      "sample": 2,
-      "wins": 1,
-      "losses": 1,
+      "sample": 4,
+      "wins": 2,
+      "losses": 2,
       "winRate": 0.5,
       "lossRate": 0.5,
       "wilson": {
-        "lower": 0.0945,
+        "lower": 0.15,
         "mid": 0.5,
-        "upper": 0.9055
+        "upper": 0.85
       },
       "adjustment": 0,
       "hardVeto": false
@@ -39762,15 +41281,15 @@
       "hardVeto": false
     },
     "friendlies clubs|League Bias|Home Team Over 0.5 Goals|unknown|other": {
-      "sample": 85,
-      "wins": 68,
+      "sample": 86,
+      "wins": 69,
       "losses": 17,
-      "winRate": 0.8,
-      "lossRate": 0.2,
+      "winRate": 0.8023,
+      "lossRate": 0.1977,
       "wilson": {
-        "lower": 0.7028,
-        "mid": 0.8,
-        "upper": 0.8712
+        "lower": 0.706,
+        "mid": 0.8023,
+        "upper": 0.8728
       },
       "adjustment": 2,
       "hardVeto": false
@@ -39874,15 +41393,15 @@
       "hardVeto": false
     },
     "liga pro|League Bias|Under 3.5 Goals|1.01-1.35|other": {
-      "sample": 1,
-      "wins": 0,
+      "sample": 2,
+      "wins": 1,
       "losses": 1,
-      "winRate": 0,
-      "lossRate": 1,
+      "winRate": 0.5,
+      "lossRate": 0.5,
       "wilson": {
-        "lower": 0,
-        "mid": 0,
-        "upper": 0.7935
+        "lower": 0.0945,
+        "mid": 0.5,
+        "upper": 0.9055
       },
       "adjustment": 0,
       "hardVeto": false
@@ -40056,15 +41575,15 @@
       "hardVeto": false
     },
     "*|Trend|Double Chance 1X|unknown|other": {
-      "sample": 18,
-      "wins": 17,
+      "sample": 19,
+      "wins": 18,
       "losses": 1,
-      "winRate": 0.9444,
-      "lossRate": 0.0556,
+      "winRate": 0.9474,
+      "lossRate": 0.0526,
       "wilson": {
-        "lower": 0.7424,
-        "mid": 0.9444,
-        "upper": 0.9901
+        "lower": 0.7536,
+        "mid": 0.9474,
+        "upper": 0.9906
       },
       "adjustment": 2,
       "hardVeto": false
@@ -40266,15 +41785,15 @@
       "hardVeto": false
     },
     "*|Halves|Second Half Over 0.5|2.26+|other": {
-      "sample": 12,
-      "wins": 11,
+      "sample": 13,
+      "wins": 12,
       "losses": 1,
-      "winRate": 0.9167,
-      "lossRate": 0.0833,
+      "winRate": 0.9231,
+      "lossRate": 0.0769,
       "wilson": {
-        "lower": 0.6461,
-        "mid": 0.9167,
-        "upper": 0.9851
+        "lower": 0.6669,
+        "mid": 0.9231,
+        "upper": 0.9863
       },
       "adjustment": 2,
       "hardVeto": false
@@ -40434,13 +41953,13 @@
       "hardVeto": false
     },
     "*|Trend|Away Team Over 0.5 Goals|1.86-2.25|fav-aligned": {
-      "sample": 6,
-      "wins": 6,
+      "sample": 7,
+      "wins": 7,
       "losses": 0,
       "winRate": 1,
       "lossRate": 0,
       "wilson": {
-        "lower": 0.6097,
+        "lower": 0.6457,
         "mid": 1,
         "upper": 1
       },
@@ -41512,15 +43031,15 @@
       "hardVeto": false
     },
     "*|Ultra|Double Chance 1X|unknown|other": {
-      "sample": 3,
+      "sample": 4,
       "wins": 3,
-      "losses": 0,
-      "winRate": 1,
-      "lossRate": 0,
+      "losses": 1,
+      "winRate": 0.75,
+      "lossRate": 0.25,
       "wilson": {
-        "lower": 0.4385,
-        "mid": 1,
-        "upper": 1
+        "lower": 0.3006,
+        "mid": 0.75,
+        "upper": 0.9544
       },
       "adjustment": 0,
       "hardVeto": false
@@ -42730,15 +44249,15 @@
       "hardVeto": false
     },
     "*|League Bias|Under 3.5 Goals|1.36-1.60|other": {
-      "sample": 5,
-      "wins": 4,
+      "sample": 7,
+      "wins": 6,
       "losses": 1,
-      "winRate": 0.8,
-      "lossRate": 0.2,
+      "winRate": 0.8571,
+      "lossRate": 0.1429,
       "wilson": {
-        "lower": 0.3755,
-        "mid": 0.8,
-        "upper": 0.9638
+        "lower": 0.4869,
+        "mid": 0.8571,
+        "upper": 0.9743
       },
       "adjustment": 0,
       "hardVeto": false
@@ -43318,13 +44837,13 @@
       "hardVeto": false
     },
     "pro league a|Halves|Second Half Over 0.5|unknown|other": {
-      "sample": 2,
-      "wins": 2,
+      "sample": 4,
+      "wins": 4,
       "losses": 0,
       "winRate": 1,
       "lossRate": 0,
       "wilson": {
-        "lower": 0.3424,
+        "lower": 0.5101,
         "mid": 1,
         "upper": 1
       },
@@ -44550,13 +46069,13 @@
       "hardVeto": false
     },
     "division 1|Halves|Second Half Over 0.5|unknown|other": {
-      "sample": 1,
-      "wins": 1,
+      "sample": 3,
+      "wins": 3,
       "losses": 0,
       "winRate": 1,
       "lossRate": 0,
       "wilson": {
-        "lower": 0.2065,
+        "lower": 0.4385,
         "mid": 1,
         "upper": 1
       },
@@ -44788,15 +46307,15 @@
       "hardVeto": false
     },
     "*|Trend|Double Chance X2|unknown|other": {
-      "sample": 8,
+      "sample": 9,
       "wins": 8,
-      "losses": 0,
-      "winRate": 1,
-      "lossRate": 0,
+      "losses": 1,
+      "winRate": 0.8889,
+      "lossRate": 0.1111,
       "wilson": {
-        "lower": 0.6756,
-        "mid": 1,
-        "upper": 1
+        "lower": 0.565,
+        "mid": 0.8889,
+        "upper": 0.9801
       },
       "adjustment": 0,
       "hardVeto": false
@@ -45376,15 +46895,15 @@
       "hardVeto": false
     },
     "premier league|Halves|Second Half Over 0.5|unknown|other": {
-      "sample": 4,
-      "wins": 1,
+      "sample": 5,
+      "wins": 2,
       "losses": 3,
-      "winRate": 0.25,
-      "lossRate": 0.75,
+      "winRate": 0.4,
+      "lossRate": 0.6,
       "wilson": {
-        "lower": 0.0456,
-        "mid": 0.25,
-        "upper": 0.6994
+        "lower": 0.1176,
+        "mid": 0.4,
+        "upper": 0.7693
       },
       "adjustment": 0,
       "hardVeto": false
@@ -45572,15 +47091,15 @@
       "hardVeto": false
     },
     "division 1|Trend|Double Chance X2|unknown|other": {
-      "sample": 1,
+      "sample": 2,
       "wins": 1,
-      "losses": 0,
-      "winRate": 1,
-      "lossRate": 0,
+      "losses": 1,
+      "winRate": 0.5,
+      "lossRate": 0.5,
       "wilson": {
-        "lower": 0.2065,
-        "mid": 1,
-        "upper": 1
+        "lower": 0.0945,
+        "mid": 0.5,
+        "upper": 0.9055
       },
       "adjustment": 0,
       "hardVeto": false
@@ -46901,6 +48420,132 @@
       "adjustment": 0,
       "hardVeto": false
     },
+    "division 1|Ultra|Double Chance 1X|unknown|other": {
+      "sample": 1,
+      "wins": 0,
+      "losses": 1,
+      "winRate": 0,
+      "lossRate": 1,
+      "wilson": {
+        "lower": 0,
+        "mid": 0,
+        "upper": 0.7935
+      },
+      "adjustment": 0,
+      "hardVeto": false
+    },
+    "division 1|Normal|Away Win|unknown|other": {
+      "sample": 1,
+      "wins": 0,
+      "losses": 1,
+      "winRate": 0,
+      "lossRate": 1,
+      "wilson": {
+        "lower": 0,
+        "mid": 0,
+        "upper": 0.7935
+      },
+      "adjustment": 0,
+      "hardVeto": false
+    },
+    "division 1|Strict|Away Win|unknown|other": {
+      "sample": 1,
+      "wins": 0,
+      "losses": 1,
+      "winRate": 0,
+      "lossRate": 1,
+      "wilson": {
+        "lower": 0,
+        "mid": 0,
+        "upper": 0.7935
+      },
+      "adjustment": 0,
+      "hardVeto": false
+    },
+    "*|Strict|Away Win|unknown|other": {
+      "sample": 1,
+      "wins": 0,
+      "losses": 1,
+      "winRate": 0,
+      "lossRate": 1,
+      "wilson": {
+        "lower": 0,
+        "mid": 0,
+        "upper": 0.7935
+      },
+      "adjustment": 0,
+      "hardVeto": false
+    },
+    "division 1|Ultra|Double Chance X2|unknown|other": {
+      "sample": 1,
+      "wins": 0,
+      "losses": 1,
+      "winRate": 0,
+      "lossRate": 1,
+      "wilson": {
+        "lower": 0,
+        "mid": 0,
+        "upper": 0.7935
+      },
+      "adjustment": 0,
+      "hardVeto": false
+    },
+    "division 1|Elite|Away DNB|unknown|other": {
+      "sample": 1,
+      "wins": 0,
+      "losses": 1,
+      "winRate": 0,
+      "lossRate": 1,
+      "wilson": {
+        "lower": 0,
+        "mid": 0,
+        "upper": 0.7935
+      },
+      "adjustment": 0,
+      "hardVeto": false
+    },
+    "*|Elite|Away DNB|unknown|other": {
+      "sample": 1,
+      "wins": 0,
+      "losses": 1,
+      "winRate": 0,
+      "lossRate": 1,
+      "wilson": {
+        "lower": 0,
+        "mid": 0,
+        "upper": 0.7935
+      },
+      "adjustment": 0,
+      "hardVeto": false
+    },
+    "division 1|Apex|Away DNB|unknown|other": {
+      "sample": 1,
+      "wins": 0,
+      "losses": 1,
+      "winRate": 0,
+      "lossRate": 1,
+      "wilson": {
+        "lower": 0,
+        "mid": 0,
+        "upper": 0.7935
+      },
+      "adjustment": 0,
+      "hardVeto": false
+    },
+    "*|Apex|Away DNB|unknown|other": {
+      "sample": 1,
+      "wins": 0,
+      "losses": 1,
+      "winRate": 0,
+      "lossRate": 1,
+      "wilson": {
+        "lower": 0,
+        "mid": 0,
+        "upper": 0.7935
+      },
+      "adjustment": 0,
+      "hardVeto": false
+    },
     "division 1|Normal|Away Win|1.86-2.25|fav-aligned": {
       "sample": 1,
       "wins": 1,
@@ -47364,13 +49009,13 @@
       "hardVeto": false
     },
     "primera b|Halves|Second Half Over 0.5|1.86-2.25|other": {
-      "sample": 1,
-      "wins": 1,
+      "sample": 2,
+      "wins": 2,
       "losses": 0,
       "winRate": 1,
       "lossRate": 0,
       "wilson": {
-        "lower": 0.2065,
+        "lower": 0.3424,
         "mid": 1,
         "upper": 1
       },
@@ -47420,15 +49065,15 @@
       "hardVeto": false
     },
     "liga profesional argentina|League Bias|Under 3.5 Goals|1.86-2.25|other": {
-      "sample": 2,
-      "wins": 1,
+      "sample": 3,
+      "wins": 2,
       "losses": 1,
-      "winRate": 0.5,
-      "lossRate": 0.5,
+      "winRate": 0.6667,
+      "lossRate": 0.3333,
       "wilson": {
-        "lower": 0.0945,
-        "mid": 0.5,
-        "upper": 0.9055
+        "lower": 0.2077,
+        "mid": 0.6667,
+        "upper": 0.9385
       },
       "adjustment": 0,
       "hardVeto": false
@@ -47629,6 +49274,20 @@
       "adjustment": 0,
       "hardVeto": false
     },
+    "brasileiro women|Trend|Away Team Over 0.5 Goals|1.86-2.25|fav-aligned": {
+      "sample": 1,
+      "wins": 1,
+      "losses": 0,
+      "winRate": 1,
+      "lossRate": 0,
+      "wilson": {
+        "lower": 0.2065,
+        "mid": 1,
+        "upper": 1
+      },
+      "adjustment": 0,
+      "hardVeto": false
+    },
     "primera divisi n|League Bias|Home Team Over 0.5 Goals|1.61-1.85|fav-aligned": {
       "sample": 1,
       "wins": 0,
@@ -47685,6 +49344,202 @@
       "adjustment": 0,
       "hardVeto": false
     },
+    "northern super league|Trend|Away Team Over 0.5 Goals|unknown|other": {
+      "sample": 1,
+      "wins": 1,
+      "losses": 0,
+      "winRate": 1,
+      "lossRate": 0,
+      "wilson": {
+        "lower": 0.2065,
+        "mid": 1,
+        "upper": 1
+      },
+      "adjustment": 0,
+      "hardVeto": false
+    },
+    "liga pro|Trend|Under 3.5 Goals|1.01-1.35|other": {
+      "sample": 1,
+      "wins": 1,
+      "losses": 0,
+      "winRate": 1,
+      "lossRate": 0,
+      "wilson": {
+        "lower": 0.2065,
+        "mid": 1,
+        "upper": 1
+      },
+      "adjustment": 0,
+      "hardVeto": false
+    },
+    "*|Trend|Under 3.5 Goals|1.01-1.35|other": {
+      "sample": 1,
+      "wins": 1,
+      "losses": 0,
+      "winRate": 1,
+      "lossRate": 0,
+      "wilson": {
+        "lower": 0.2065,
+        "mid": 1,
+        "upper": 1
+      },
+      "adjustment": 0,
+      "hardVeto": false
+    },
+    "liga pro|Halves|First Half Under 1.5|1.01-1.35|other": {
+      "sample": 1,
+      "wins": 1,
+      "losses": 0,
+      "winRate": 1,
+      "lossRate": 0,
+      "wilson": {
+        "lower": 0.2065,
+        "mid": 1,
+        "upper": 1
+      },
+      "adjustment": 0,
+      "hardVeto": false
+    },
+    "*|Halves|First Half Under 1.5|1.01-1.35|other": {
+      "sample": 1,
+      "wins": 1,
+      "losses": 0,
+      "winRate": 1,
+      "lossRate": 0,
+      "wilson": {
+        "lower": 0.2065,
+        "mid": 1,
+        "upper": 1
+      },
+      "adjustment": 0,
+      "hardVeto": false
+    },
+    "copa do brasil|League Bias|Under 3.5 Goals|1.36-1.60|other": {
+      "sample": 1,
+      "wins": 1,
+      "losses": 0,
+      "winRate": 1,
+      "lossRate": 0,
+      "wilson": {
+        "lower": 0.2065,
+        "mid": 1,
+        "upper": 1
+      },
+      "adjustment": 0,
+      "hardVeto": false
+    },
+    "liga profesional argentina|League Bias|Under 3.5 Goals|2.26+|other": {
+      "sample": 1,
+      "wins": 1,
+      "losses": 0,
+      "winRate": 1,
+      "lossRate": 0,
+      "wilson": {
+        "lower": 0.2065,
+        "mid": 1,
+        "upper": 1
+      },
+      "adjustment": 0,
+      "hardVeto": false
+    },
+    "primera a|League Bias|Under 3.5 Goals|1.36-1.60|other": {
+      "sample": 1,
+      "wins": 1,
+      "losses": 0,
+      "winRate": 1,
+      "lossRate": 0,
+      "wilson": {
+        "lower": 0.2065,
+        "mid": 1,
+        "upper": 1
+      },
+      "adjustment": 0,
+      "hardVeto": false
+    },
+    "liga paname a de f tbol|Trend|Double Chance 1X|unknown|other": {
+      "sample": 1,
+      "wins": 1,
+      "losses": 0,
+      "winRate": 1,
+      "lossRate": 0,
+      "wilson": {
+        "lower": 0.2065,
+        "mid": 1,
+        "upper": 1
+      },
+      "adjustment": 0,
+      "hardVeto": false
+    },
+    "liga nacional|League Bias|Under 3.5 Goals|1.01-1.35|other": {
+      "sample": 1,
+      "wins": 0,
+      "losses": 1,
+      "winRate": 0,
+      "lossRate": 1,
+      "wilson": {
+        "lower": 0,
+        "mid": 0,
+        "upper": 0.7935
+      },
+      "adjustment": 0,
+      "hardVeto": false
+    },
+    "friendlies clubs|League Bias|Over 1.5 Goals|1.36-1.60|other": {
+      "sample": 1,
+      "wins": 1,
+      "losses": 0,
+      "winRate": 1,
+      "lossRate": 0,
+      "wilson": {
+        "lower": 0.2065,
+        "mid": 1,
+        "upper": 1
+      },
+      "adjustment": 0,
+      "hardVeto": false
+    },
+    "*|League Bias|Over 1.5 Goals|1.36-1.60|other": {
+      "sample": 1,
+      "wins": 1,
+      "losses": 0,
+      "winRate": 1,
+      "lossRate": 0,
+      "wilson": {
+        "lower": 0.2065,
+        "mid": 1,
+        "upper": 1
+      },
+      "adjustment": 0,
+      "hardVeto": false
+    },
+    "pro league a|Trend|Under 3.5 Goals|unknown|other": {
+      "sample": 1,
+      "wins": 1,
+      "losses": 0,
+      "winRate": 1,
+      "lossRate": 0,
+      "wilson": {
+        "lower": 0.2065,
+        "mid": 1,
+        "upper": 1
+      },
+      "adjustment": 0,
+      "hardVeto": false
+    },
+    "pro league a|Halves|Second Half Over 0.5|2.26+|other": {
+      "sample": 1,
+      "wins": 1,
+      "losses": 0,
+      "winRate": 1,
+      "lossRate": 0,
+      "wilson": {
+        "lower": 0.2065,
+        "mid": 1,
+        "upper": 1
+      },
+      "adjustment": 0,
+      "hardVeto": false
+    },
     "primera divisi n|League Bias|Home Team Over 0.5 Goals|1.86-2.25|other": {
       "sample": 1,
       "wins": 0,
@@ -47701,6 +49556,19 @@
     }
   },
   "lossReviews": [
+    {
+      "matchDate": "2026-08-04",
+      "home": "Xelajú",
+      "away": "Aurora",
+      "league": "Liga Nacional",
+      "engine": "League Bias",
+      "market": "Under 3.5 Goals",
+      "score": "3-1",
+      "causes": [
+        "GOAL_SPIKE",
+        "INPUT_COVERAGE_GAP"
+      ]
+    },
     {
       "matchDate": "2026-08-02",
       "home": "Sydney Olympic U20",
@@ -47787,6 +49655,97 @@
       "market": "Second Half Over 0.5",
       "score": "0-0",
       "causes": [
+        "INPUT_COVERAGE_GAP"
+      ]
+    },
+    {
+      "matchDate": "2026-08-02",
+      "home": "Al Jazira",
+      "away": "Sporty",
+      "league": "Division 1",
+      "engine": "Ultra",
+      "market": "Double Chance 1X",
+      "score": "0-3",
+      "causes": [
+        "RESULT_DIRECTION_MISS",
+        "INPUT_COVERAGE_GAP"
+      ]
+    },
+    {
+      "matchDate": "2026-08-02",
+      "home": "Shamiya",
+      "away": "Yarmouk",
+      "league": "Division 1",
+      "engine": "Normal",
+      "market": "Away Win",
+      "score": "3-0",
+      "causes": [
+        "RESULT_DIRECTION_MISS",
+        "INPUT_COVERAGE_GAP"
+      ]
+    },
+    {
+      "matchDate": "2026-08-02",
+      "home": "Shamiya",
+      "away": "Yarmouk",
+      "league": "Division 1",
+      "engine": "Strict",
+      "market": "Away Win",
+      "score": "3-0",
+      "causes": [
+        "RESULT_DIRECTION_MISS",
+        "INPUT_COVERAGE_GAP"
+      ]
+    },
+    {
+      "matchDate": "2026-08-02",
+      "home": "Shamiya",
+      "away": "Yarmouk",
+      "league": "Division 1",
+      "engine": "Ultra",
+      "market": "Double Chance X2",
+      "score": "3-0",
+      "causes": [
+        "RESULT_DIRECTION_MISS",
+        "INPUT_COVERAGE_GAP"
+      ]
+    },
+    {
+      "matchDate": "2026-08-02",
+      "home": "Shamiya",
+      "away": "Yarmouk",
+      "league": "Division 1",
+      "engine": "Elite",
+      "market": "Away DNB",
+      "score": "3-0",
+      "causes": [
+        "RESULT_DIRECTION_MISS",
+        "INPUT_COVERAGE_GAP"
+      ]
+    },
+    {
+      "matchDate": "2026-08-02",
+      "home": "Shamiya",
+      "away": "Yarmouk",
+      "league": "Division 1",
+      "engine": "Apex",
+      "market": "Away DNB",
+      "score": "3-0",
+      "causes": [
+        "RESULT_DIRECTION_MISS",
+        "INPUT_COVERAGE_GAP"
+      ]
+    },
+    {
+      "matchDate": "2026-08-02",
+      "home": "Shamiya",
+      "away": "Yarmouk",
+      "league": "Division 1",
+      "engine": "Trend",
+      "market": "Double Chance X2",
+      "score": "3-0",
+      "causes": [
+        "RESULT_DIRECTION_MISS",
         "INPUT_COVERAGE_GAP"
       ]
     },
@@ -49507,115 +51466,14 @@
         "RESULT_DIRECTION_MISS",
         "INPUT_COVERAGE_GAP"
       ]
-    },
-    {
-      "matchDate": "2026-07-24",
-      "home": "Landshut",
-      "away": "Erlbach",
-      "league": "Oberliga - Bayern Süd",
-      "engine": "League Bias",
-      "market": "Over 1.5 Goals",
-      "score": "1-0",
-      "causes": [
-        "TEMPO_COLLAPSE",
-        "INPUT_COVERAGE_GAP"
-      ]
-    },
-    {
-      "matchDate": "2026-07-24",
-      "home": "Flamengo W",
-      "away": "Gremio W",
-      "league": "Brasileiro Women",
-      "engine": "Trend",
-      "market": "Under 3.5 Goals",
-      "score": "2-2",
-      "causes": [
-        "GOAL_SPIKE",
-        "INPUT_COVERAGE_GAP"
-      ]
-    },
-    {
-      "matchDate": "2026-07-24",
-      "home": "Ballard",
-      "away": "Ventura County Fusion",
-      "league": "USL League Two",
-      "engine": "Halves",
-      "market": "Second Half Over 0.5",
-      "score": "1-2",
-      "causes": [
-        "INPUT_COVERAGE_GAP"
-      ]
-    },
-    {
-      "matchDate": "2026-07-24",
-      "home": "Heimstetten",
-      "away": "Sportfreunde Schwaig",
-      "league": "Oberliga - Bayern Süd",
-      "engine": "Normal",
-      "market": "Home Win",
-      "score": "1-2",
-      "causes": [
-        "RESULT_DIRECTION_MISS",
-        "INPUT_COVERAGE_GAP"
-      ]
-    },
-    {
-      "matchDate": "2026-07-23",
-      "home": "Al Nejmeh",
-      "away": "Jwaaya FC",
-      "league": "Premier League",
-      "engine": "Halves",
-      "market": "Second Half Over 0.5",
-      "score": "0-0",
-      "causes": [
-        "INPUT_COVERAGE_GAP"
-      ]
-    },
-    {
-      "matchDate": "2026-07-23",
-      "home": "Al Ahed",
-      "away": "Al Ansar",
-      "league": "Premier League",
-      "engine": "Halves",
-      "market": "Second Half Over 0.5",
-      "score": "0-0",
-      "causes": [
-        "INPUT_COVERAGE_GAP"
-      ]
-    },
-    {
-      "matchDate": "2026-07-22",
-      "home": "Nacional",
-      "away": "Leganes",
-      "league": "Friendlies Clubs",
-      "engine": "League Bias",
-      "market": "Home Team Over 0.5 Goals",
-      "score": "0-0",
-      "causes": [
-        "DRAW_TRAP",
-        "INPUT_COVERAGE_GAP"
-      ]
-    },
-    {
-      "matchDate": "2026-07-22",
-      "home": "Guingamp",
-      "away": "Concarneau",
-      "league": "Friendlies Clubs",
-      "engine": "League Bias",
-      "market": "Home Team Over 0.5 Goals",
-      "score": "0-1",
-      "causes": [
-        "RESULT_DIRECTION_MISS",
-        "INPUT_COVERAGE_GAP"
-      ]
     }
   ],
   "causeCounts": {
     "TEMPO_COLLAPSE": 7,
-    "INPUT_COVERAGE_GAP": 204,
-    "RESULT_DIRECTION_MISS": 41,
+    "INPUT_COVERAGE_GAP": 212,
+    "RESULT_DIRECTION_MISS": 48,
     "BOTH_ATTACKS_BROKE_SUPPRESSION": 5,
-    "GOAL_SPIKE": 29,
+    "GOAL_SPIKE": 30,
     "DRAW_TRAP": 36,
     "UNDERDOG_OVERREACH": 2,
     "FAVORITE_PATTERN_BREAK": 34,
