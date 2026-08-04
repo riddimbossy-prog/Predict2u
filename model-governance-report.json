@@ -1,13 +1,13 @@
 {
   "version": "v194",
-  "updated": "2026-08-04T18:44:22.939Z",
+  "updated": "2026-08-04T19:57:50.620Z",
   "summary": {
-    "settled": 1056,
-    "winRate": 0.7992,
+    "settled": 1088,
+    "winRate": 0.8015,
     "engines": 13,
-    "approved": 1,
+    "approved": 2,
     "shadow": 9,
-    "hold": 2,
+    "hold": 1,
     "rollback": 1,
     "dataQualityFailures": 221,
     "duplicateDecisions": 0,
@@ -25,13 +25,13 @@
         "rate": 0.4773
       },
       "validation": {
-        "sample": 19,
-        "wins": 11,
+        "sample": 20,
+        "wins": 12,
         "losses": 8,
-        "rate": 0.5789
+        "rate": 0.6
       },
-      "validationDelta": 0.1016,
-      "calibrationError": 0.3321,
+      "validationDelta": 0.1227,
+      "calibrationError": 0.3102,
       "shadow": {
         "eligible": 0,
         "avoidedLosses": 0,
@@ -41,11 +41,11 @@
       "drift": {
         "recentSample": 30,
         "priorSample": 30,
-        "confidenceShift": 28.27,
-        "distributionShift": 0.133,
+        "confidenceShift": 25.24,
+        "distributionShift": 0.1,
         "status": "DRIFT"
       },
-      "updated": "2026-08-04T18:44:22.936Z"
+      "updated": "2026-08-04T19:57:50.617Z"
     },
     "Prime": {
       "engine": "Prime",
@@ -78,7 +78,7 @@
         "distributionShift": 0.293,
         "status": "STABLE"
       },
-      "updated": "2026-08-04T18:44:22.937Z"
+      "updated": "2026-08-04T19:57:50.617Z"
     },
     "Value": {
       "engine": "Value",
@@ -111,7 +111,7 @@
         "distributionShift": 0.8,
         "status": "STABLE"
       },
-      "updated": "2026-08-04T18:44:22.937Z"
+      "updated": "2026-08-04T19:57:50.617Z"
     },
     "Pro": {
       "engine": "Pro",
@@ -144,17 +144,17 @@
         "distributionShift": 0.8,
         "status": "STABLE"
       },
-      "updated": "2026-08-04T18:44:22.937Z"
+      "updated": "2026-08-04T19:57:50.618Z"
     },
     "Ultra": {
       "engine": "Ultra",
       "state": "SHADOW",
       "reason": "Needs a larger forward validation sample.",
       "train": {
-        "sample": 27,
+        "sample": 28,
         "wins": 20,
-        "losses": 7,
-        "rate": 0.7407
+        "losses": 8,
+        "rate": 0.7143
       },
       "validation": {
         "sample": 12,
@@ -162,8 +162,8 @@
         "losses": 4,
         "rate": 0.6667
       },
-      "validationDelta": -0.074,
-      "calibrationError": 0.2712,
+      "validationDelta": 0.0357,
+      "calibrationError": 0.2024,
       "shadow": {
         "eligible": 0,
         "avoidedLosses": 0,
@@ -172,12 +172,12 @@
       },
       "drift": {
         "recentSample": 30,
-        "priorSample": 9,
-        "confidenceShift": 64.72,
-        "distributionShift": 0.667,
+        "priorSample": 10,
+        "confidenceShift": 57.99,
+        "distributionShift": 0.6,
         "status": "STABLE"
       },
-      "updated": "2026-08-04T18:44:22.937Z"
+      "updated": "2026-08-04T19:57:50.618Z"
     },
     "Elite": {
       "engine": "Elite",
@@ -210,7 +210,7 @@
         "distributionShift": 0.5,
         "status": "STABLE"
       },
-      "updated": "2026-08-04T18:44:22.937Z"
+      "updated": "2026-08-04T19:57:50.618Z"
     },
     "Apex": {
       "engine": "Apex",
@@ -243,26 +243,26 @@
         "distributionShift": 0.5,
         "status": "STABLE"
       },
-      "updated": "2026-08-04T18:44:22.937Z"
+      "updated": "2026-08-04T19:57:50.618Z"
     },
     "Halves": {
       "engine": "Halves",
       "state": "ROLLBACK",
       "reason": "Validation performance fell materially below training performance.",
       "train": {
-        "sample": 197,
-        "wins": 170,
-        "losses": 27,
-        "rate": 0.8629
+        "sample": 200,
+        "wins": 171,
+        "losses": 29,
+        "rate": 0.855
       },
       "validation": {
-        "sample": 85,
-        "wins": 63,
-        "losses": 22,
-        "rate": 0.7412
+        "sample": 87,
+        "wins": 66,
+        "losses": 21,
+        "rate": 0.7586
       },
-      "validationDelta": -0.1217,
-      "calibrationError": 0.142,
+      "validationDelta": -0.0964,
+      "calibrationError": 0.1227,
       "shadow": {
         "eligible": 0,
         "avoidedLosses": 0,
@@ -272,11 +272,11 @@
       "drift": {
         "recentSample": 30,
         "priorSample": 30,
-        "confidenceShift": -1.78,
+        "confidenceShift": -2.45,
         "distributionShift": 0,
         "status": "STABLE"
       },
-      "updated": "2026-08-04T18:44:22.937Z"
+      "updated": "2026-08-04T19:57:50.618Z"
     },
     "Streaks": {
       "engine": "Streaks",
@@ -309,26 +309,26 @@
         "distributionShift": 0.5,
         "status": "STABLE"
       },
-      "updated": "2026-08-04T18:44:22.937Z"
+      "updated": "2026-08-04T19:57:50.618Z"
     },
     "Trend": {
       "engine": "Trend",
       "state": "APPROVED",
       "reason": "Forward validation, calibration and drift checks passed.",
       "train": {
-        "sample": 142,
-        "wins": 119,
+        "sample": 149,
+        "wins": 126,
         "losses": 23,
-        "rate": 0.838
+        "rate": 0.8456
       },
       "validation": {
-        "sample": 61,
-        "wins": 51,
-        "losses": 10,
-        "rate": 0.8361
+        "sample": 64,
+        "wins": 53,
+        "losses": 11,
+        "rate": 0.8281
       },
-      "validationDelta": -0.0019,
-      "calibrationError": 0.043,
+      "validationDelta": -0.0175,
+      "calibrationError": 0.0607,
       "shadow": {
         "eligible": 0,
         "avoidedLosses": 0,
@@ -338,30 +338,30 @@
       "drift": {
         "recentSample": 30,
         "priorSample": 30,
-        "confidenceShift": 0.13,
-        "distributionShift": 0.3,
+        "confidenceShift": 0.86,
+        "distributionShift": 0.267,
         "status": "STABLE"
       },
-      "updated": "2026-08-04T18:44:22.937Z"
+      "updated": "2026-08-04T19:57:50.618Z"
     },
     "League Bias": {
       "engine": "League Bias",
-      "state": "HOLD",
-      "reason": "Prediction behaviour changed too sharply.",
+      "state": "APPROVED",
+      "reason": "Forward validation, calibration and drift checks passed.",
       "train": {
-        "sample": 200,
-        "wins": 172,
-        "losses": 28,
-        "rate": 0.86
+        "sample": 210,
+        "wins": 180,
+        "losses": 30,
+        "rate": 0.8571
       },
       "validation": {
-        "sample": 86,
-        "wins": 71,
+        "sample": 90,
+        "wins": 75,
         "losses": 15,
-        "rate": 0.8256
+        "rate": 0.8333
       },
-      "validationDelta": -0.0344,
-      "calibrationError": 0.0464,
+      "validationDelta": -0.0238,
+      "calibrationError": 0.0441,
       "shadow": {
         "eligible": 0,
         "avoidedLosses": 0,
@@ -371,21 +371,21 @@
       "drift": {
         "recentSample": 30,
         "priorSample": 30,
-        "confidenceShift": -0.55,
-        "distributionShift": 0.5,
-        "status": "DRIFT"
+        "confidenceShift": 0.06,
+        "distributionShift": 0.133,
+        "status": "STABLE"
       },
-      "updated": "2026-08-04T18:44:22.937Z"
+      "updated": "2026-08-04T19:57:50.618Z"
     },
     "Strict": {
       "engine": "Strict",
       "state": "SHADOW",
       "reason": "Needs a larger forward validation sample.",
       "train": {
-        "sample": 11,
-        "wins": 7,
+        "sample": 12,
+        "wins": 8,
         "losses": 4,
-        "rate": 0.6364
+        "rate": 0.6667
       },
       "validation": {
         "sample": 6,
@@ -393,8 +393,8 @@
         "losses": 2,
         "rate": 0.6667
       },
-      "validationDelta": 0.0303,
-      "calibrationError": 0.2295,
+      "validationDelta": 0,
+      "calibrationError": 0.2283,
       "shadow": {
         "eligible": 0,
         "avoidedLosses": 0,
@@ -402,13 +402,13 @@
         "net": 0
       },
       "drift": {
-        "recentSample": 17,
+        "recentSample": 18,
         "priorSample": 0,
         "confidenceShift": null,
         "distributionShift": 0.5,
         "status": "STABLE"
       },
-      "updated": "2026-08-04T18:44:22.937Z"
+      "updated": "2026-08-04T19:57:50.618Z"
     },
     "Momentum": {
       "engine": "Momentum",
@@ -441,17 +441,17 @@
         "distributionShift": 0.5,
         "status": "STABLE"
       },
-      "updated": "2026-08-04T18:44:22.937Z"
+      "updated": "2026-08-04T19:57:50.618Z"
     }
   },
   "marketScorecards": [
     {
       "marketFamily": "OTHER",
-      "sample": 281,
-      "wins": 232,
-      "losses": 49,
-      "rate": 0.8256,
-      "calibrationError": 0.0634
+      "sample": 286,
+      "wins": 236,
+      "losses": 50,
+      "rate": 0.8252,
+      "calibrationError": 0.0633
     },
     {
       "marketFamily": "HOME_TEAM",
@@ -463,19 +463,19 @@
     },
     {
       "marketFamily": "MATCH_UNDER",
-      "sample": 144,
-      "wins": 114,
-      "losses": 30,
-      "rate": 0.7917,
-      "calibrationError": 0.011
+      "sample": 161,
+      "wins": 129,
+      "losses": 32,
+      "rate": 0.8012,
+      "calibrationError": 0.0125
     },
     {
       "marketFamily": "HOME_RESULT",
-      "sample": 140,
-      "wins": 113,
-      "losses": 27,
-      "rate": 0.8071,
-      "calibrationError": 0.2498
+      "sample": 150,
+      "wins": 122,
+      "losses": 28,
+      "rate": 0.8133,
+      "calibrationError": 0.2317
     },
     {
       "marketFamily": "AWAY_RESULT",
@@ -532,6 +532,13 @@
       "wins": 96,
       "losses": 23,
       "rate": 0.8067
+    },
+    {
+      "league": "Torneo Federal A",
+      "sample": 28,
+      "wins": 24,
+      "losses": 4,
+      "rate": 0.8571
     },
     {
       "league": "Division 1",
@@ -597,13 +604,6 @@
       "rate": 0.6429
     },
     {
-      "league": "Liga Pro",
-      "sample": 14,
-      "wins": 13,
-      "losses": 1,
-      "rate": 0.9286
-    },
-    {
       "league": "Western Australia State League 1",
       "sample": 14,
       "wins": 14,
@@ -646,6 +646,13 @@
       "rate": 0.9286
     },
     {
+      "league": "Primera C",
+      "sample": 14,
+      "wins": 9,
+      "losses": 5,
+      "rate": 0.6429
+    },
+    {
       "league": "Premier Soccer League",
       "sample": 13,
       "wins": 13,
@@ -674,25 +681,11 @@
       "rate": 1
     },
     {
-      "league": "Primera B",
-      "sample": 13,
-      "wins": 12,
-      "losses": 1,
-      "rate": 0.9231
-    },
-    {
       "league": "South Australia NPL",
       "sample": 12,
       "wins": 4,
       "losses": 8,
       "rate": 0.3333
-    },
-    {
-      "league": "Primera C",
-      "sample": 12,
-      "wins": 7,
-      "losses": 5,
-      "rate": 0.5833
     },
     {
       "league": "UEFA Champions League",
@@ -871,13 +864,6 @@
     },
     {
       "league": "Kansallinen Liiga",
-      "sample": 6,
-      "wins": 6,
-      "losses": 0,
-      "rate": 1
-    },
-    {
-      "league": "K League 2",
       "sample": 6,
       "wins": 6,
       "losses": 0,

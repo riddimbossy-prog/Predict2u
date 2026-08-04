@@ -1,13 +1,13 @@
 {
   "version": "v193",
-  "updated": "2026-08-04T18:44:21.628Z",
+  "updated": "2026-08-04T19:57:49.327Z",
   "summary": {
-    "settledFixtures": 616,
-    "settledDecisions": 1056,
+    "settledFixtures": 632,
+    "settledDecisions": 1088,
     "reviewedLosses": 150,
-    "teamProfiles": 380,
-    "leagueProfiles": 80,
-    "matchupProfiles": 199,
+    "teamProfiles": 396,
+    "leagueProfiles": 81,
+    "matchupProfiles": 207,
     "activePatternBreakers": 0,
     "upsetResistantTeams": 0
   },
@@ -19,11 +19,11 @@
   "commonMissCauses": [
     {
       "cause": "INPUT_COVERAGE_GAP",
-      "count": 212
+      "count": 216
     },
     {
       "cause": "RESULT_DIRECTION_MISS",
-      "count": 48
+      "count": 49
     },
     {
       "cause": "DRAW_TRAP",
@@ -35,7 +35,7 @@
     },
     {
       "cause": "GOAL_SPIKE",
-      "count": 30
+      "count": 32
     },
     {
       "cause": "TEMPO_COLLAPSE",
@@ -403,40 +403,39 @@
     },
     {
       "matchDate": "2026-08-02",
-      "home": "UCV Moquegua",
-      "away": "FBC Melgar",
-      "league": "Primera División",
-      "engine": "League Bias",
-      "market": "Home Team Over 0.5 Goals",
-      "score": "0-0",
-      "causes": [
-        "DRAW_TRAP",
-        "INPUT_COVERAGE_GAP"
-      ]
-    },
-    {
-      "matchDate": "2026-08-01",
-      "home": "Havelse",
-      "away": "Barockstadt Fulda-Lehn.",
-      "league": "Friendlies Clubs",
+      "home": "Atenas",
+      "away": "Villa Mitre",
+      "league": "Torneo Federal A",
       "engine": "Trend",
-      "market": "Home Team Over 0.5 Goals",
-      "score": "0-0",
+      "market": "Double Chance 1X",
+      "score": "0-1",
       "causes": [
-        "DRAW_TRAP",
+        "RESULT_DIRECTION_MISS",
         "INPUT_COVERAGE_GAP"
       ]
     },
     {
-      "matchDate": "2026-08-01",
-      "home": "Havelse",
-      "away": "Barockstadt Fulda-Lehn.",
-      "league": "Friendlies Clubs",
-      "engine": "League Bias",
-      "market": "Home Team Over 0.5 Goals",
-      "score": "0-0",
+      "matchDate": "2026-08-02",
+      "home": "Gimnasia Concepción",
+      "away": "Tucuman Central",
+      "league": "Torneo Federal A",
+      "engine": "Halves",
+      "market": "First Half Under 1.5",
+      "score": "4-0",
       "causes": [
-        "DRAW_TRAP",
+        "INPUT_COVERAGE_GAP"
+      ]
+    },
+    {
+      "matchDate": "2026-08-02",
+      "home": "Gimnasia Concepción",
+      "away": "Tucuman Central",
+      "league": "Torneo Federal A",
+      "engine": "League Bias",
+      "market": "Under 3.5 Goals",
+      "score": "4-0",
+      "causes": [
+        "GOAL_SPIKE",
         "INPUT_COVERAGE_GAP"
       ]
     }

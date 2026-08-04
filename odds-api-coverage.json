@@ -1,6 +1,6 @@
 {
   "version": "v251",
-  "generatedAt": "2026-08-04T19:50:25.712Z",
+  "generatedAt": "2026-08-04T19:44:11.484Z",
   "provider": "The Odds API v4",
   "keyPresent": true,
   "regions": "uk",
@@ -13,7 +13,15 @@
       "sportKey": "soccer_denmark_superliga",
       "sportTitle": "Denmark Superliga",
       "score": 0.347,
-      "matches": 16
+      "matches": 20
+    },
+    {
+      "league": "Kvindeliga",
+      "country": "Denmark",
+      "sportKey": "soccer_denmark_superliga",
+      "sportTitle": "Denmark Superliga",
+      "score": 0.38,
+      "matches": 1
     },
     {
       "league": "Oberliga - Schleswig-Holstein",
@@ -1608,7 +1616,7 @@
       "matches": 1
     }
   ],
-  "matchesConsidered": 2526,
+  "matchesConsidered": 2546,
   "matchesMatched": 0,
   "matchesUpdated": 0,
   "fieldsFilled": 0,
@@ -1624,10 +1632,22 @@
       "bestScore": 0.167
     },
     {
+      "league": "CECAFA Club Cup",
+      "country": "World",
+      "reason": "No matching soccer sport key",
+      "bestScore": 0.143
+    },
+    {
       "league": "Friendlies Clubs",
       "country": "World",
       "reason": "No matching soccer sport key",
       "bestScore": 0
+    },
+    {
+      "league": "Toto Cup Ligat Al",
+      "country": "Israel",
+      "reason": "No matching soccer sport key",
+      "bestScore": 0.125
     },
     {
       "league": "Úrvalsdeild",
@@ -2233,6 +2253,30 @@
       "league": "DBU Pokalen",
       "home": "Munkebo",
       "away": "Morud",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "DBU Pokalen",
+      "home": "FA 2000",
+      "away": "Fremad Amager",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "DBU Pokalen",
+      "home": "Lyseng",
+      "away": "Vejgaard B",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "DBU Pokalen",
+      "home": "Nykobing FC",
+      "away": "B 93",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "DBU Pokalen",
+      "home": "Ringkøbing",
+      "away": "Aarhus Fremad",
       "reason": "No event/team match"
     },
     {
@@ -3019,102 +3063,6 @@
       "league": "Oberliga - Bremen",
       "home": "Leher TS",
       "away": "Eiche Horn",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Oberliga - Baden-Württemberg",
-      "home": "Balingen",
-      "away": "FC 08 Villingen",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Oberliga - Baden-Württemberg",
-      "home": "Reutlingen",
-      "away": "FC Nöttingen",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Oberliga - Baden-Württemberg",
-      "home": "Oberachern",
-      "away": "Karlsruhe II",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Oberliga - Baden-Württemberg",
-      "home": "Backnang",
-      "away": "1. FC Muhlhausen",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Oberliga - Baden-Württemberg",
-      "home": "Normannia Gmünd",
-      "away": "Teningen",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Oberliga - Baden-Württemberg",
-      "home": "FC Holzhausen",
-      "away": "CFR Pforzheim",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Oberliga - Baden-Württemberg",
-      "home": "Young Boys Reutlingen",
-      "away": "Essingen",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Oberliga - Baden-Württemberg",
-      "home": "Bahlinger SC",
-      "away": "FV Ravensburg",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Oberliga - Baden-Württemberg",
-      "home": "TSV Singen",
-      "away": "Türkspor Neckarsulm",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Oberliga - Nordost-Süd",
-      "home": "Germania Halberstadt",
-      "away": "Einheit Wernigerode",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Oberliga - Nordost-Süd",
-      "home": "FC Frankfurt",
-      "away": "Weissenfels",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Oberliga - Nordost-Süd",
-      "home": "Budissa Bautzen",
-      "away": "Eilenburg",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Oberliga - Nordost-Süd",
-      "home": "Dresden II",
-      "away": "SC Freital",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Oberliga - Nordost-Süd",
-      "home": "VfL Halle",
-      "away": "Auerbach",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Oberliga - Nordost-Süd",
-      "home": "ZFC Meuselwitz",
-      "away": "Empor Glauchau",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Oberliga - Nordost-Süd",
-      "home": "Plauen",
-      "away": "Einheit Rudolstadt",
       "reason": "No event/team match"
     }
   ],
@@ -4535,5 +4483,5 @@
   },
   "skipped": false,
   "skipReason": null,
-  "completedAt": "2026-08-04T19:50:38.972Z"
+  "completedAt": "2026-08-04T19:44:19.760Z"
 }
