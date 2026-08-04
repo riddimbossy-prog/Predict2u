@@ -1,6 +1,6 @@
 {
   "version": "v251",
-  "generatedAt": "2026-08-04T20:40:23.261Z",
+  "generatedAt": "2026-08-04T20:50:24.532Z",
   "provider": "The Odds API v4",
   "keyPresent": true,
   "regions": "uk",
@@ -21,15 +21,7 @@
       "sportKey": "soccer_brazil_serie_b",
       "sportTitle": "Brazil Série B",
       "score": 0.466,
-      "matches": 7
-    },
-    {
-      "league": "Torneo Promocional Amateur",
-      "country": "Argentina",
-      "sportKey": "soccer_argentina_primera_division",
-      "sportTitle": "Primera División - Argentina",
-      "score": 0.305,
-      "matches": 10
+      "matches": 6
     },
     {
       "league": "Primera División",
@@ -222,6 +214,14 @@
       "sportTitle": "Primera División - Argentina",
       "score": 0.513,
       "matches": 20
+    },
+    {
+      "league": "Torneo Promocional Amateur",
+      "country": "Argentina",
+      "sportKey": "soccer_argentina_primera_division",
+      "sportTitle": "Primera División - Argentina",
+      "score": 0.305,
+      "matches": 9
     },
     {
       "league": "Football League - Highland League",
@@ -1608,7 +1608,7 @@
       "matches": 1
     }
   ],
-  "matchesConsidered": 2494,
+  "matchesConsidered": 2491,
   "matchesMatched": 0,
   "matchesUpdated": 0,
   "fieldsFilled": 0,
@@ -1626,12 +1626,6 @@
     {
       "league": "Friendlies Clubs",
       "country": "World",
-      "reason": "No matching soccer sport key",
-      "bestScore": 0
-    },
-    {
-      "league": "Úrvalsdeild",
-      "country": "Iceland",
       "reason": "No matching soccer sport key",
       "bestScore": 0
     },
@@ -1742,6 +1736,12 @@
       "country": "Israel",
       "reason": "No matching soccer sport key",
       "bestScore": 0.125
+    },
+    {
+      "league": "Úrvalsdeild",
+      "country": "Iceland",
+      "reason": "No matching soccer sport key",
+      "bestScore": 0
     },
     {
       "league": "Copa Ecuador",
@@ -2759,12 +2759,6 @@
     },
     {
       "league": "Brasileiro U17",
-      "home": "Santos U17",
-      "away": "Cruzeiro U17",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Brasileiro U17",
       "home": "Vitoria U17",
       "away": "Internacional U17",
       "reason": "No event/team match"
@@ -2932,66 +2926,6 @@
       "reason": "No event/team match"
     },
     {
-      "league": "Torneo Promocional Amateur",
-      "home": "Ezeiza",
-      "away": "Everton La Plata",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Torneo Promocional Amateur",
-      "home": "Provincial",
-      "away": "Deportivo Metalurgico",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Torneo Promocional Amateur",
-      "home": "Deportivo Metalurgico",
-      "away": "Defensores Glew",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Torneo Promocional Amateur",
-      "home": "Estrella de Berisso",
-      "away": "Provincial",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Torneo Promocional Amateur",
-      "home": "Juventud de Bernal",
-      "away": "Atletico Pilar",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Torneo Promocional Amateur",
-      "home": "SAT Moreno",
-      "away": "Nautico Hacoaj",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Torneo Promocional Amateur",
-      "home": "Atletico Pilar",
-      "away": "Provincial",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Torneo Promocional Amateur",
-      "home": "Defensores Glew",
-      "away": "Estrella de Berisso",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Torneo Promocional Amateur",
-      "home": "Juventud de Bernal",
-      "away": "SAT Moreno",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Torneo Promocional Amateur",
-      "home": "Nautico Hacoaj",
-      "away": "Deportivo Metalurgico",
-      "reason": "No event/team match"
-    },
-    {
       "league": "Primera División",
       "home": "ABB",
       "away": "Real Oruro",
@@ -3115,6 +3049,72 @@
       "league": "Primera División",
       "home": "Rayo Zuliano",
       "away": "Anzoátegui FC",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Primera División",
+      "home": "Estudiantes de Merida FC",
+      "away": "Zamora FC",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Primera División",
+      "home": "Puerto Cabello",
+      "away": "Caracas FC",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Reserve League",
+      "home": "Boca Juniors Res.",
+      "away": "Independiente Riva. Res.",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Reserve League",
+      "home": "Defensa y Justicia Res.",
+      "away": "Newell's Old Boys Res.",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Reserve League",
+      "home": "Estudiantes Rio Cuarto 2",
+      "away": "Lanús Res.",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Reserve League",
+      "home": "Ferro 2",
+      "away": "Deportivo Riestra Res.",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Reserve League",
+      "home": "Independiente Res.",
+      "away": "San Martín San Juan Res.",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Reserve League",
+      "home": "Quilmes 2",
+      "away": "Colón Res.",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Reserve League",
+      "home": "Unión Santa Fe Res.",
+      "away": "Argentinos Juniors Res.",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Reserve League",
+      "home": "Atl. Rafaela 2",
+      "away": "Central Córdoba SdE Res.",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Reserve League",
+      "home": "Barracas Central Res.",
+      "away": "Vélez Sársfield Res.",
       "reason": "No event/team match"
     }
   ],
@@ -4535,5 +4535,5 @@
   },
   "skipped": false,
   "skipReason": null,
-  "completedAt": "2026-08-04T20:40:37.820Z"
+  "completedAt": "2026-08-04T20:50:35.358Z"
 }
