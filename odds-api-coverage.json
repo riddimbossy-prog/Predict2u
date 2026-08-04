@@ -1,6 +1,6 @@
 {
   "version": "v251",
-  "generatedAt": "2026-08-04T18:31:30.993Z",
+  "generatedAt": "2026-08-04T18:50:25.968Z",
   "provider": "The Odds API v4",
   "keyPresent": true,
   "regions": "uk",
@@ -2257,6 +2257,30 @@
     },
     {
       "league": "DBU Pokalen",
+      "home": "Boldklubben FIX",
+      "away": "Frederikssund",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "DBU Pokalen",
+      "home": "Bredballe",
+      "away": "Middelfart",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "DBU Pokalen",
+      "home": "GVI",
+      "away": "Avarta",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "DBU Pokalen",
+      "home": "Glamsbjerg",
+      "away": "Kolding IF",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "DBU Pokalen",
       "home": "Handelsstandens",
       "away": "Roskilde",
       "reason": "No event/team match"
@@ -2275,6 +2299,12 @@
     },
     {
       "league": "DBU Pokalen",
+      "home": "Maribo",
+      "away": "Skjold Sæby",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "DBU Pokalen",
       "home": "Munkebo",
       "away": "Morud",
       "reason": "No event/team match"
@@ -2283,6 +2313,18 @@
       "league": "DBU Pokalen",
       "home": "Ringsted",
       "away": "Frem",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "DBU Pokalen",
+      "home": "Rudersdal",
+      "away": "HIK",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "DBU Pokalen",
+      "home": "SfB-Oure",
+      "away": "FC Fredericia",
       "reason": "No event/team match"
     },
     {
@@ -2299,8 +2341,20 @@
     },
     {
       "league": "DBU Pokalen",
+      "home": "Vallensbæk",
+      "away": "FC Helsingor",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "DBU Pokalen",
       "home": "Viby",
       "away": "ASA Aarhus",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "DBU Pokalen",
+      "home": "Vigerslev",
+      "away": "Skovshoved",
       "reason": "No event/team match"
     },
     {
@@ -2319,6 +2373,12 @@
       "league": "DBU Pokalen",
       "home": "Holstebro",
       "away": "Aalborg",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "DBU Pokalen",
+      "home": "Kolding B",
+      "away": "Næsby",
       "reason": "No event/team match"
     },
     {
@@ -2779,8 +2839,8 @@
     },
     {
       "league": "UEFA Champions League",
-      "home": "Union St. Gilloise",
-      "away": "Bodo/Glimt",
+      "home": "Ararat-Armenia",
+      "away": "Celje",
       "reason": "No event/team match"
     },
     {
@@ -3137,18 +3197,6 @@
     },
     {
       "sportKey": "soccer_sweden_allsvenskan",
-      "market": "double_chance"
-    },
-    {
-      "sportKey": "soccer_concacaf_leagues_cup",
-      "market": "btts"
-    },
-    {
-      "sportKey": "soccer_concacaf_leagues_cup",
-      "market": "draw_no_bet"
-    },
-    {
-      "sportKey": "soccer_concacaf_leagues_cup",
       "market": "double_chance"
     },
     {
@@ -3684,31 +3732,6 @@
     },
     {
       "label": "soccer_sweden_allsvenskan:double_chance",
-      "error": "Markets not supported by this endpoint: double_chance",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_concacaf_leagues_cup:base-combined",
-      "error": "Markets not supported by this endpoint: btts, double_chance, draw_no_bet",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_concacaf_leagues_cup:base-core",
-      "error": "Invalid commenceTimeFrom parameter. The format must be YYYY-MM-DDTHH:MM:SSZ, for example 2020-11-24T16:05:00Z",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_concacaf_leagues_cup:btts",
-      "error": "Markets not supported by this endpoint: btts",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_concacaf_leagues_cup:draw_no_bet",
-      "error": "Markets not supported by this endpoint: draw_no_bet",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_concacaf_leagues_cup:double_chance",
       "error": "Markets not supported by this endpoint: double_chance",
       "statusCode": 422
     },
@@ -4520,5 +4543,5 @@
   },
   "skipped": false,
   "skipReason": null,
-  "completedAt": "2026-08-04T18:31:53.916Z"
+  "completedAt": "2026-08-04T18:50:38.889Z"
 }
