@@ -1,4 +1,4 @@
-/* Predict2U v272 — Expanded Team Intelligence trends + Auto Picks Gatekeeper v2.1. */
+/* Predict2U v273 — Future-date fixture overlay + Auto Picks Gatekeeper v2.1. */
 (function(){
   'use strict';
   const Gate=window.P2UAutoGatekeeperV271;
