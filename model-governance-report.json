@@ -1,9 +1,9 @@
 {
   "version": "v194",
-  "updated": "2026-08-04T21:09:58.008Z",
+  "updated": "2026-08-04T22:21:58.139Z",
   "summary": {
-    "settled": 1088,
-    "winRate": 0.8015,
+    "settled": 1093,
+    "winRate": 0.8024,
     "engines": 13,
     "approved": 2,
     "shadow": 9,
@@ -45,7 +45,7 @@
         "distributionShift": 0.1,
         "status": "DRIFT"
       },
-      "updated": "2026-08-04T21:09:58.005Z"
+      "updated": "2026-08-04T22:21:58.136Z"
     },
     "Prime": {
       "engine": "Prime",
@@ -78,7 +78,7 @@
         "distributionShift": 0.293,
         "status": "STABLE"
       },
-      "updated": "2026-08-04T21:09:58.005Z"
+      "updated": "2026-08-04T22:21:58.137Z"
     },
     "Value": {
       "engine": "Value",
@@ -111,7 +111,7 @@
         "distributionShift": 0.8,
         "status": "STABLE"
       },
-      "updated": "2026-08-04T21:09:58.005Z"
+      "updated": "2026-08-04T22:21:58.137Z"
     },
     "Pro": {
       "engine": "Pro",
@@ -144,7 +144,7 @@
         "distributionShift": 0.8,
         "status": "STABLE"
       },
-      "updated": "2026-08-04T21:09:58.006Z"
+      "updated": "2026-08-04T22:21:58.137Z"
     },
     "Ultra": {
       "engine": "Ultra",
@@ -177,7 +177,7 @@
         "distributionShift": 0.6,
         "status": "STABLE"
       },
-      "updated": "2026-08-04T21:09:58.006Z"
+      "updated": "2026-08-04T22:21:58.137Z"
     },
     "Elite": {
       "engine": "Elite",
@@ -210,7 +210,7 @@
         "distributionShift": 0.5,
         "status": "STABLE"
       },
-      "updated": "2026-08-04T21:09:58.006Z"
+      "updated": "2026-08-04T22:21:58.137Z"
     },
     "Apex": {
       "engine": "Apex",
@@ -243,26 +243,26 @@
         "distributionShift": 0.5,
         "status": "STABLE"
       },
-      "updated": "2026-08-04T21:09:58.006Z"
+      "updated": "2026-08-04T22:21:58.137Z"
     },
     "Halves": {
       "engine": "Halves",
       "state": "ROLLBACK",
       "reason": "Validation performance fell materially below training performance.",
       "train": {
-        "sample": 200,
+        "sample": 201,
         "wins": 171,
-        "losses": 29,
-        "rate": 0.855
+        "losses": 30,
+        "rate": 0.8507
       },
       "validation": {
         "sample": 87,
-        "wins": 66,
-        "losses": 21,
-        "rate": 0.7586
+        "wins": 67,
+        "losses": 20,
+        "rate": 0.7701
       },
-      "validationDelta": -0.0964,
-      "calibrationError": 0.1227,
+      "validationDelta": -0.0806,
+      "calibrationError": 0.1107,
       "shadow": {
         "eligible": 0,
         "avoidedLosses": 0,
@@ -272,11 +272,11 @@
       "drift": {
         "recentSample": 30,
         "priorSample": 30,
-        "confidenceShift": -2.45,
+        "confidenceShift": -2.53,
         "distributionShift": 0,
         "status": "STABLE"
       },
-      "updated": "2026-08-04T21:09:58.006Z"
+      "updated": "2026-08-04T22:21:58.137Z"
     },
     "Streaks": {
       "engine": "Streaks",
@@ -309,7 +309,7 @@
         "distributionShift": 0.5,
         "status": "STABLE"
       },
-      "updated": "2026-08-04T21:09:58.006Z"
+      "updated": "2026-08-04T22:21:58.137Z"
     },
     "Trend": {
       "engine": "Trend",
@@ -322,13 +322,13 @@
         "rate": 0.8456
       },
       "validation": {
-        "sample": 64,
-        "wins": 53,
+        "sample": 65,
+        "wins": 54,
         "losses": 11,
-        "rate": 0.8281
+        "rate": 0.8308
       },
-      "validationDelta": -0.0175,
-      "calibrationError": 0.0607,
+      "validationDelta": -0.0148,
+      "calibrationError": 0.0579,
       "shadow": {
         "eligible": 0,
         "avoidedLosses": 0,
@@ -338,30 +338,30 @@
       "drift": {
         "recentSample": 30,
         "priorSample": 30,
-        "confidenceShift": 0.86,
-        "distributionShift": 0.267,
+        "confidenceShift": 0.73,
+        "distributionShift": 0.233,
         "status": "STABLE"
       },
-      "updated": "2026-08-04T21:09:58.006Z"
+      "updated": "2026-08-04T22:21:58.137Z"
     },
     "League Bias": {
       "engine": "League Bias",
       "state": "APPROVED",
       "reason": "Forward validation, calibration and drift checks passed.",
       "train": {
-        "sample": 210,
-        "wins": 180,
+        "sample": 211,
+        "wins": 181,
         "losses": 30,
-        "rate": 0.8571
+        "rate": 0.8578
       },
       "validation": {
-        "sample": 90,
-        "wins": 75,
+        "sample": 91,
+        "wins": 76,
         "losses": 15,
-        "rate": 0.8333
+        "rate": 0.8352
       },
-      "validationDelta": -0.0238,
-      "calibrationError": 0.0441,
+      "validationDelta": -0.0226,
+      "calibrationError": 0.0427,
       "shadow": {
         "eligible": 0,
         "avoidedLosses": 0,
@@ -371,11 +371,11 @@
       "drift": {
         "recentSample": 30,
         "priorSample": 30,
-        "confidenceShift": 0.06,
-        "distributionShift": 0.133,
+        "confidenceShift": 0.33,
+        "distributionShift": 0.1,
         "status": "STABLE"
       },
-      "updated": "2026-08-04T21:09:58.006Z"
+      "updated": "2026-08-04T22:21:58.137Z"
     },
     "Strict": {
       "engine": "Strict",
@@ -408,7 +408,7 @@
         "distributionShift": 0.5,
         "status": "STABLE"
       },
-      "updated": "2026-08-04T21:09:58.006Z"
+      "updated": "2026-08-04T22:21:58.137Z"
     },
     "Momentum": {
       "engine": "Momentum",
@@ -421,13 +421,13 @@
         "rate": 1
       },
       "validation": {
-        "sample": 0,
-        "wins": 0,
+        "sample": 1,
+        "wins": 1,
         "losses": 0,
-        "rate": null
+        "rate": 1
       },
-      "validationDelta": null,
-      "calibrationError": null,
+      "validationDelta": 0,
+      "calibrationError": 0.129,
       "shadow": {
         "eligible": 0,
         "avoidedLosses": 0,
@@ -435,47 +435,47 @@
         "net": 0
       },
       "drift": {
-        "recentSample": 1,
+        "recentSample": 2,
         "priorSample": 0,
         "confidenceShift": null,
         "distributionShift": 0.5,
         "status": "STABLE"
       },
-      "updated": "2026-08-04T21:09:58.006Z"
+      "updated": "2026-08-04T22:21:58.137Z"
     }
   },
   "marketScorecards": [
     {
       "marketFamily": "OTHER",
-      "sample": 286,
-      "wins": 236,
+      "sample": 287,
+      "wins": 237,
       "losses": 50,
-      "rate": 0.8252,
-      "calibrationError": 0.0633
+      "rate": 0.8258,
+      "calibrationError": 0.0625
     },
     {
       "marketFamily": "HOME_TEAM",
-      "sample": 238,
-      "wins": 197,
+      "sample": 239,
+      "wins": 198,
       "losses": 41,
-      "rate": 0.8277,
-      "calibrationError": 0.0618
+      "rate": 0.8285,
+      "calibrationError": 0.0609
     },
     {
       "marketFamily": "MATCH_UNDER",
-      "sample": 161,
-      "wins": 129,
+      "sample": 162,
+      "wins": 130,
       "losses": 32,
-      "rate": 0.8012,
-      "calibrationError": 0.0125
+      "rate": 0.8025,
+      "calibrationError": 0.0119
     },
     {
       "marketFamily": "HOME_RESULT",
-      "sample": 150,
-      "wins": 122,
+      "sample": 152,
+      "wins": 124,
       "losses": 28,
-      "rate": 0.8133,
-      "calibrationError": 0.2317
+      "rate": 0.8158,
+      "calibrationError": 0.2268
     },
     {
       "marketFamily": "AWAY_RESULT",
@@ -528,10 +528,10 @@
     },
     {
       "league": "Friendlies Clubs",
-      "sample": 119,
-      "wins": 96,
+      "sample": 120,
+      "wins": 97,
       "losses": 23,
-      "rate": 0.8067
+      "rate": 0.8083
     },
     {
       "league": "Torneo Federal A",
@@ -751,6 +751,20 @@
       "rate": 0.8889
     },
     {
+      "league": "Torneo Promocional Amateur",
+      "sample": 9,
+      "wins": 9,
+      "losses": 0,
+      "rate": 1
+    },
+    {
+      "league": "Brasileiro U17",
+      "sample": 9,
+      "wins": 6,
+      "losses": 3,
+      "rate": 0.6667
+    },
+    {
       "league": "Catarinense U20",
       "sample": 9,
       "wins": 6,
@@ -819,20 +833,6 @@
       "wins": 8,
       "losses": 0,
       "rate": 1
-    },
-    {
-      "league": "Torneo Promocional Amateur",
-      "sample": 7,
-      "wins": 7,
-      "losses": 0,
-      "rate": 1
-    },
-    {
-      "league": "Brasileiro U17",
-      "sample": 7,
-      "wins": 4,
-      "losses": 3,
-      "rate": 0.5714
     },
     {
       "league": "Victoria NPL 2",
