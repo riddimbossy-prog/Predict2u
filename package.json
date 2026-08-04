@@ -1,7 +1,7 @@
 {
   "name": "predict2u-site-quality",
   "private": true,
-  "version": "2.7.0",
+  "version": "2.7.6",
   "scripts": {
     "health": "node generate-site-health.js",
     "audit": "node audit-site.js",
@@ -36,11 +36,13 @@
     "audit:odds-engines": "node audit-odds-engines-v251.js",
     "build:public": "node build-public-data.js",
     "release:security": "node release-security-scan.js",
-    "release:gate": "node release-gate-v273.js",
-    "learning:auto": "node auto-picks-learning-worker-v271.js",
-    "test:auto-gatekeeper": "node auto-picks-gatekeeper-v271.test.js",
-    "quality:auto": "npm run test:auto-gatekeeper && npm run release:gate",
-    "test:future-dates": "node future-date-patch-selftest-v273.js"
+    "release:gate": "node release-gate-v276.js",
+    "learning:auto": "node auto-picks-learning-worker-v275.js",
+    "test:auto-gatekeeper": "node auto-picks-gatekeeper-v275.test.js",
+    "quality:auto": "npm run test:auto-gatekeeper && npm run test:auto-worker && npm run release:gate",
+    "test:future-dates": "node future-date-patch-selftest-v273.js",
+    "test:auto-worker": "node auto-picks-learning-worker-v275.test.js",
+    "test:data-hoist": "node generated-data-hoist-selftest-v276.js"
   },
   "devDependencies": {
     "@playwright/test": "^1.53.0",
