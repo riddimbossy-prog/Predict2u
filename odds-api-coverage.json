@@ -1,6 +1,6 @@
 {
   "version": "v251",
-  "generatedAt": "2026-08-05T02:58:33.595Z",
+  "generatedAt": "2026-08-05T03:20:22.748Z",
   "provider": "The Odds API v4",
   "keyPresent": true,
   "regions": "uk",
@@ -222,14 +222,6 @@
       "sportTitle": "Primera División - Chile",
       "score": 0.323,
       "matches": 4
-    },
-    {
-      "league": "Copa Do Brasil",
-      "country": "Brazil",
-      "sportKey": "soccer_brazil_campeonato",
-      "sportTitle": "Brazil Série A",
-      "score": 0.291,
-      "matches": 6
     },
     {
       "league": "Liga Profesional Argentina",
@@ -2260,16 +2252,16 @@
       "bestScore": 0.222
     },
     {
-      "league": "Liga de Ascenso",
-      "country": "Costa-Rica",
-      "reason": "No matching soccer sport key",
-      "bestScore": 0.111
-    },
-    {
       "league": "National Division",
       "country": "Luxembourg",
       "reason": "No matching soccer sport key",
       "bestScore": 0.143
+    },
+    {
+      "league": "Liga de Ascenso",
+      "country": "Costa-Rica",
+      "reason": "No matching soccer sport key",
+      "bestScore": 0.111
     },
     {
       "league": "Liga Femenina",
@@ -2854,27 +2846,9 @@
       "reason": "No event/team match"
     },
     {
-      "league": "CONCACAF Central American Cup",
-      "home": "Alianza",
-      "away": "CS Herediano",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "CONCACAF Central American Cup",
-      "home": "Deportivo Saprissa",
-      "away": "Alianza FC",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "CONCACAF Central American Cup",
-      "home": "Verdes",
-      "away": "Municipal",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "CONCACAF Central American Cup",
-      "home": "CD Motagua",
-      "away": "FAS",
+      "league": "Leagues Cup",
+      "home": "Minnesota United FC",
+      "away": "FC Juarez",
       "reason": "No event/team match"
     },
     {
@@ -3082,9 +3056,45 @@
       "reason": "No event/team match"
     },
     {
-      "league": "Leagues Cup",
-      "home": "Columbus Crew",
-      "away": "U.N.A.M. - Pumas",
+      "league": "CONCACAF Central American Cup",
+      "home": "Antigua GFC",
+      "away": "Real Estelí",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "CONCACAF Central American Cup",
+      "home": "Diriangén",
+      "away": "LD Alajuelense",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "CONCACAF Central American Cup",
+      "home": "UMECIT",
+      "away": "CD Olimpia",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "CONCACAF Central American Cup",
+      "home": "Alianza",
+      "away": "CS Herediano",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "CONCACAF Central American Cup",
+      "home": "Deportivo Saprissa",
+      "away": "Alianza FC",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "CONCACAF Central American Cup",
+      "home": "Verdes",
+      "away": "Municipal",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "CONCACAF Central American Cup",
+      "home": "CD Motagua",
+      "away": "FAS",
       "reason": "No event/team match"
     },
     {
@@ -3279,18 +3289,6 @@
     },
     {
       "sportKey": "soccer_uefa_nations_league",
-      "market": "double_chance"
-    },
-    {
-      "sportKey": "soccer_brazil_campeonato",
-      "market": "btts"
-    },
-    {
-      "sportKey": "soccer_brazil_campeonato",
-      "market": "draw_no_bet"
-    },
-    {
-      "sportKey": "soccer_brazil_campeonato",
       "market": "double_chance"
     },
     {
@@ -3915,31 +3913,6 @@
     },
     {
       "label": "soccer_uefa_nations_league:double_chance",
-      "error": "Markets not supported by this endpoint: double_chance",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_brazil_campeonato:base-combined",
-      "error": "Markets not supported by this endpoint: btts, double_chance, draw_no_bet",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_brazil_campeonato:base-core",
-      "error": "Invalid commenceTimeFrom parameter. The format must be YYYY-MM-DDTHH:MM:SSZ, for example 2020-11-24T16:05:00Z",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_brazil_campeonato:btts",
-      "error": "Markets not supported by this endpoint: btts",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_brazil_campeonato:draw_no_bet",
-      "error": "Markets not supported by this endpoint: draw_no_bet",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_brazil_campeonato:double_chance",
       "error": "Markets not supported by this endpoint: double_chance",
       "statusCode": 422
     },
@@ -4676,5 +4649,5 @@
   },
   "skipped": false,
   "skipReason": null,
-  "completedAt": "2026-08-05T02:58:48.868Z"
+  "completedAt": "2026-08-05T03:20:31.821Z"
 }
