@@ -1,6 +1,6 @@
 {
   "version": "v251",
-  "generatedAt": "2026-08-05T03:10:18.109Z",
+  "generatedAt": "2026-08-05T02:58:33.595Z",
   "provider": "The Odds API v4",
   "keyPresent": true,
   "regions": "uk",
@@ -16,20 +16,28 @@
       "matches": 14
     },
     {
+      "league": "Leagues Cup",
+      "country": "World",
+      "sportKey": "soccer_concacaf_leagues_cup",
+      "sportTitle": "Leagues Cup",
+      "score": 0.72,
+      "matches": 36
+    },
+    {
+      "league": "Copa Do Brasil",
+      "country": "Brazil",
+      "sportKey": "soccer_brazil_campeonato",
+      "sportTitle": "Brazil Série A",
+      "score": 0.291,
+      "matches": 7
+    },
+    {
       "league": "CONCACAF Central American Cup",
       "country": "World",
       "sportKey": "soccer_concacaf_leagues_cup",
       "sportTitle": "Leagues Cup",
       "score": 0.286,
       "matches": 7
-    },
-    {
-      "league": "Leagues Cup",
-      "country": "World",
-      "sportKey": "soccer_concacaf_leagues_cup",
-      "sportTitle": "Leagues Cup",
-      "score": 0.72,
-      "matches": 34
     },
     {
       "league": "UEFA Champions League Women",
@@ -1605,7 +1613,7 @@
       "sportKey": "soccer_portugal_primeira_liga",
       "sportTitle": "Primeira Liga - Portugal",
       "score": 0.466,
-      "matches": 8
+      "matches": 6
     },
     {
       "league": "Cup",
@@ -1648,7 +1656,7 @@
       "matches": 1
     }
   ],
-  "matchesConsidered": 2645,
+  "matchesConsidered": 2648,
   "matchesMatched": 0,
   "matchesUpdated": 0,
   "fieldsFilled": 0,
@@ -1662,6 +1670,18 @@
       "country": "World",
       "reason": "No matching soccer sport key",
       "bestScore": 0.111
+    },
+    {
+      "league": "Central American and Caribbean Games",
+      "country": "World",
+      "reason": "No matching soccer sport key",
+      "bestScore": 0
+    },
+    {
+      "league": "CONCACAF U20",
+      "country": "World",
+      "reason": "No matching soccer sport key",
+      "bestScore": 0.167
     },
     {
       "league": "Primera A",
@@ -1764,12 +1784,6 @@
       "country": "Ecuador",
       "reason": "No matching soccer sport key",
       "bestScore": 0.2
-    },
-    {
-      "league": "CONCACAF U20",
-      "country": "World",
-      "reason": "No matching soccer sport key",
-      "bestScore": 0.167
     },
     {
       "league": "CONCACAF Caribbean Club Championship",
@@ -2834,21 +2848,9 @@
       "reason": "No event/team match"
     },
     {
-      "league": "CONCACAF Central American Cup",
-      "home": "Antigua GFC",
-      "away": "Real Estelí",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "CONCACAF Central American Cup",
-      "home": "Diriangén",
-      "away": "LD Alajuelense",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "CONCACAF Central American Cup",
-      "home": "UMECIT",
-      "away": "CD Olimpia",
+      "league": "Leagues Cup",
+      "home": "Charlotte",
+      "away": "U.N.A.M. - Pumas",
       "reason": "No event/team match"
     },
     {
@@ -3080,6 +3082,12 @@
       "reason": "No event/team match"
     },
     {
+      "league": "Leagues Cup",
+      "home": "Columbus Crew",
+      "away": "U.N.A.M. - Pumas",
+      "reason": "No event/team match"
+    },
+    {
       "league": "Cup",
       "home": "Znicz Pruszków",
       "away": "ŁKS Łódź II",
@@ -3138,24 +3146,6 @@
       "home": "Tychy 71",
       "away": "Zaglebie Sosnowiec",
       "reason": "No event/team match"
-    },
-    {
-      "league": "Cup",
-      "home": "Unia Skierniewice",
-      "away": "Sokół Kleczew",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Cup",
-      "home": "Fakel",
-      "away": "Dynamo",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Cup",
-      "home": "Spartak Moscow",
-      "away": "FC Orenburg",
-      "reason": "No event/team match"
     }
   ],
   "unsupportedMarkets": [
@@ -3181,6 +3171,18 @@
     },
     {
       "sportKey": "soccer_concacaf_leagues_cup",
+      "market": "double_chance"
+    },
+    {
+      "sportKey": "soccer_brazil_campeonato",
+      "market": "btts"
+    },
+    {
+      "sportKey": "soccer_brazil_campeonato",
+      "market": "draw_no_bet"
+    },
+    {
+      "sportKey": "soccer_brazil_campeonato",
       "market": "double_chance"
     },
     {
@@ -3688,6 +3690,31 @@
     },
     {
       "label": "soccer_concacaf_leagues_cup:double_chance",
+      "error": "Markets not supported by this endpoint: double_chance",
+      "statusCode": 422
+    },
+    {
+      "label": "soccer_brazil_campeonato:base-combined",
+      "error": "Markets not supported by this endpoint: btts, double_chance, draw_no_bet",
+      "statusCode": 422
+    },
+    {
+      "label": "soccer_brazil_campeonato:base-core",
+      "error": "Invalid commenceTimeFrom parameter. The format must be YYYY-MM-DDTHH:MM:SSZ, for example 2020-11-24T16:05:00Z",
+      "statusCode": 422
+    },
+    {
+      "label": "soccer_brazil_campeonato:btts",
+      "error": "Markets not supported by this endpoint: btts",
+      "statusCode": 422
+    },
+    {
+      "label": "soccer_brazil_campeonato:draw_no_bet",
+      "error": "Markets not supported by this endpoint: draw_no_bet",
+      "statusCode": 422
+    },
+    {
+      "label": "soccer_brazil_campeonato:double_chance",
       "error": "Markets not supported by this endpoint: double_chance",
       "statusCode": 422
     },
@@ -4649,5 +4676,5 @@
   },
   "skipped": false,
   "skipReason": null,
-  "completedAt": "2026-08-05T03:10:26.452Z"
+  "completedAt": "2026-08-05T02:58:48.868Z"
 }
