@@ -1,6 +1,6 @@
 {
   "version": "v251",
-  "generatedAt": "2026-08-05T16:11:37.324Z",
+  "generatedAt": "2026-08-05T16:30:19.521Z",
   "provider": "The Odds API v4",
   "keyPresent": true,
   "regions": "uk",
@@ -30,14 +30,6 @@
       "sportTitle": "Leagues Cup",
       "score": 0.52,
       "matches": 11
-    },
-    {
-      "league": "UEFA Champions League Women",
-      "country": "World",
-      "sportKey": "soccer_uefa_champs_league_qualification",
-      "sportTitle": "UEFA Champions League Qualification",
-      "score": 0.375,
-      "matches": 13
     },
     {
       "league": "Ykkönen",
@@ -270,14 +262,6 @@
       "sportTitle": "MLS",
       "score": 0.323,
       "matches": 9
-    },
-    {
-      "league": "Nasjonal U19 Champions League",
-      "country": "Norway",
-      "sportKey": "soccer_norway_eliteserien",
-      "sportTitle": "Eliteserien - Norway",
-      "score": 0.305,
-      "matches": 4
     },
     {
       "league": "Liga 3",
@@ -982,14 +966,6 @@
       "sportTitle": "Primera División - Argentina",
       "score": 0.466,
       "matches": 11
-    },
-    {
-      "league": "Primera División - Apertura",
-      "country": "Uruguay",
-      "sportKey": "soccer_argentina_primera_division",
-      "sportTitle": "Primera División - Argentina",
-      "score": 0.286,
-      "matches": 5
     },
     {
       "league": "Serie B",
@@ -3268,18 +3244,6 @@
       "market": "double_chance"
     },
     {
-      "sportKey": "soccer_norway_eliteserien",
-      "market": "btts"
-    },
-    {
-      "sportKey": "soccer_norway_eliteserien",
-      "market": "draw_no_bet"
-    },
-    {
-      "sportKey": "soccer_norway_eliteserien",
-      "market": "double_chance"
-    },
-    {
       "sportKey": "soccer_germany_bundesliga",
       "market": "btts"
     },
@@ -3777,31 +3741,6 @@
       "statusCode": 422
     },
     {
-      "label": "soccer_uefa_champs_league_qualification:base-combined",
-      "error": "Markets not supported by this endpoint: btts, double_chance, draw_no_bet",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_uefa_champs_league_qualification:base-core",
-      "error": "Invalid commenceTimeFrom parameter. The format must be YYYY-MM-DDTHH:MM:SSZ, for example 2020-11-24T16:05:00Z",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_uefa_champs_league_qualification:btts",
-      "error": "Markets not supported by this endpoint: btts",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_uefa_champs_league_qualification:draw_no_bet",
-      "error": "Markets not supported by this endpoint: draw_no_bet",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_uefa_champs_league_qualification:double_chance",
-      "error": "Markets not supported by this endpoint: double_chance",
-      "statusCode": 422
-    },
-    {
       "label": "soccer_finland_veikkausliiga:base-combined",
       "error": "Markets not supported by this endpoint: btts, double_chance, draw_no_bet",
       "statusCode": 422
@@ -3848,31 +3787,6 @@
     },
     {
       "label": "soccer_denmark_superliga:double_chance",
-      "error": "Markets not supported by this endpoint: double_chance",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_norway_eliteserien:base-combined",
-      "error": "Markets not supported by this endpoint: btts, double_chance, draw_no_bet",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_norway_eliteserien:base-core",
-      "error": "Invalid commenceTimeFrom parameter. The format must be YYYY-MM-DDTHH:MM:SSZ, for example 2020-11-24T16:05:00Z",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_norway_eliteserien:btts",
-      "error": "Markets not supported by this endpoint: btts",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_norway_eliteserien:draw_no_bet",
-      "error": "Markets not supported by this endpoint: draw_no_bet",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_norway_eliteserien:double_chance",
       "error": "Markets not supported by this endpoint: double_chance",
       "statusCode": 422
     },
@@ -4759,5 +4673,5 @@
   },
   "skipped": false,
   "skipReason": null,
-  "completedAt": "2026-08-05T16:12:33.736Z"
+  "completedAt": "2026-08-05T16:30:28.359Z"
 }
