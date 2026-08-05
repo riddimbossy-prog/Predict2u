@@ -1,6 +1,6 @@
 {
   "version": "v251",
-  "generatedAt": "2026-08-05T12:48:15.517Z",
+  "generatedAt": "2026-08-05T13:10:19.815Z",
   "provider": "The Odds API v4",
   "keyPresent": true,
   "regions": "uk",
@@ -3176,6 +3176,18 @@
   ],
   "unsupportedMarkets": [
     {
+      "sportKey": "soccer_epl",
+      "market": "btts"
+    },
+    {
+      "sportKey": "soccer_epl",
+      "market": "draw_no_bet"
+    },
+    {
+      "sportKey": "soccer_epl",
+      "market": "double_chance"
+    },
+    {
       "sportKey": "soccer_uefa_champs_league_qualification",
       "market": "btts"
     },
@@ -3401,18 +3413,6 @@
     },
     {
       "sportKey": "soccer_mexico_ligamx",
-      "market": "double_chance"
-    },
-    {
-      "sportKey": "soccer_epl",
-      "market": "btts"
-    },
-    {
-      "sportKey": "soccer_epl",
-      "market": "draw_no_bet"
-    },
-    {
-      "sportKey": "soccer_epl",
       "market": "double_chance"
     },
     {
@@ -3657,6 +3657,31 @@
     }
   ],
   "requestErrors": [
+    {
+      "label": "soccer_epl:base-combined",
+      "error": "Markets not supported by this endpoint: btts, double_chance, draw_no_bet",
+      "statusCode": 422
+    },
+    {
+      "label": "soccer_epl:base-core",
+      "error": "Invalid commenceTimeFrom parameter. The format must be YYYY-MM-DDTHH:MM:SSZ, for example 2020-11-24T16:05:00Z",
+      "statusCode": 422
+    },
+    {
+      "label": "soccer_epl:btts",
+      "error": "Markets not supported by this endpoint: btts",
+      "statusCode": 422
+    },
+    {
+      "label": "soccer_epl:draw_no_bet",
+      "error": "Markets not supported by this endpoint: draw_no_bet",
+      "statusCode": 422
+    },
+    {
+      "label": "soccer_epl:double_chance",
+      "error": "Markets not supported by this endpoint: double_chance",
+      "statusCode": 422
+    },
     {
       "label": "soccer_uefa_champs_league_qualification:base-combined",
       "error": "Markets not supported by this endpoint: btts, double_chance, draw_no_bet",
@@ -4129,31 +4154,6 @@
     },
     {
       "label": "soccer_mexico_ligamx:double_chance",
-      "error": "Markets not supported by this endpoint: double_chance",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_epl:base-combined",
-      "error": "Markets not supported by this endpoint: btts, double_chance, draw_no_bet",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_epl:base-core",
-      "error": "Invalid commenceTimeFrom parameter. The format must be YYYY-MM-DDTHH:MM:SSZ, for example 2020-11-24T16:05:00Z",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_epl:btts",
-      "error": "Markets not supported by this endpoint: btts",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_epl:draw_no_bet",
-      "error": "Markets not supported by this endpoint: draw_no_bet",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_epl:double_chance",
       "error": "Markets not supported by this endpoint: double_chance",
       "statusCode": 422
     },
@@ -4665,5 +4665,5 @@
   },
   "skipped": false,
   "skipReason": null,
-  "completedAt": "2026-08-05T12:48:43.634Z"
+  "completedAt": "2026-08-05T13:10:28.884Z"
 }
