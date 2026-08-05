@@ -1,6 +1,6 @@
 {
   "version": "v251",
-  "generatedAt": "2026-08-05T04:20:22.864Z",
+  "generatedAt": "2026-08-05T04:12:25.285Z",
   "provider": "The Odds API v4",
   "keyPresent": true,
   "regions": "uk",
@@ -13,7 +13,15 @@
       "sportKey": "soccer_sweden_allsvenskan",
       "sportTitle": "Allsvenskan - Sweden",
       "score": 0.323,
-      "matches": 9
+      "matches": 14
+    },
+    {
+      "league": "CONCACAF Central American Cup",
+      "country": "World",
+      "sportKey": "soccer_concacaf_leagues_cup",
+      "sportTitle": "Leagues Cup",
+      "score": 0.286,
+      "matches": 7
     },
     {
       "league": "Leagues Cup",
@@ -21,7 +29,7 @@
       "sportKey": "soccer_concacaf_leagues_cup",
       "sportTitle": "Leagues Cup",
       "score": 0.72,
-      "matches": 32
+      "matches": 34
     },
     {
       "league": "UEFA Champions League Women",
@@ -1605,10 +1613,50 @@
       "sportKey": "soccer_portugal_primeira_liga",
       "sportTitle": "Primeira Liga - Portugal",
       "score": 0.466,
+      "matches": 6
+    },
+    {
+      "league": "Cup",
+      "country": "Greece",
+      "sportKey": "soccer_concacaf_leagues_cup",
+      "sportTitle": "Leagues Cup",
+      "score": 0.52,
+      "matches": 1
+    },
+    {
+      "league": "Premier Soccer League",
+      "country": "South-Africa",
+      "sportKey": "soccer_epl",
+      "sportTitle": "EPL",
+      "score": 0.429,
+      "matches": 4
+    },
+    {
+      "league": "Challenge Cup",
+      "country": "Scotland",
+      "sportKey": "soccer_spl",
+      "sportTitle": "Premiership - Scotland",
+      "score": 0.323,
+      "matches": 19
+    },
+    {
+      "league": "CONMEBOL Libertadores",
+      "country": "World",
+      "sportKey": "soccer_conmebol_copa_libertadores",
+      "sportTitle": "Copa Libertadores",
+      "score": 0.4,
+      "matches": 1
+    },
+    {
+      "league": "CONMEBOL Sudamericana",
+      "country": "World",
+      "sportKey": "soccer_conmebol_copa_sudamericana",
+      "sportTitle": "Copa Sudamericana",
+      "score": 0.4,
       "matches": 1
     }
   ],
-  "matchesConsidered": 2453,
+  "matchesConsidered": 2644,
   "matchesMatched": 0,
   "matchesUpdated": 0,
   "fieldsFilled": 0,
@@ -1622,6 +1670,18 @@
       "country": "World",
       "reason": "No matching soccer sport key",
       "bestScore": 0.111
+    },
+    {
+      "league": "Central American and Caribbean Games",
+      "country": "World",
+      "reason": "No matching soccer sport key",
+      "bestScore": 0
+    },
+    {
+      "league": "Primera A",
+      "country": "Colombia",
+      "reason": "No matching soccer sport key",
+      "bestScore": 0.143
     },
     {
       "league": "Friendlies Clubs",
@@ -1724,12 +1784,6 @@
       "country": "World",
       "reason": "No matching soccer sport key",
       "bestScore": 0.167
-    },
-    {
-      "league": "Primera A",
-      "country": "Colombia",
-      "reason": "No matching soccer sport key",
-      "bestScore": 0.143
     },
     {
       "league": "CONCACAF Caribbean Club Championship",
@@ -2746,6 +2800,48 @@
       "reason": "No event/team match"
     },
     {
+      "league": "CONCACAF Central American Cup",
+      "home": "Antigua GFC",
+      "away": "Real Estelí",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "CONCACAF Central American Cup",
+      "home": "Diriangén",
+      "away": "LD Alajuelense",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "CONCACAF Central American Cup",
+      "home": "UMECIT",
+      "away": "CD Olimpia",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "CONCACAF Central American Cup",
+      "home": "Alianza",
+      "away": "CS Herediano",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "CONCACAF Central American Cup",
+      "home": "Deportivo Saprissa",
+      "away": "Alianza FC",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "CONCACAF Central American Cup",
+      "home": "Verdes",
+      "away": "Municipal",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "CONCACAF Central American Cup",
+      "home": "CD Motagua",
+      "away": "FAS",
+      "reason": "No event/team match"
+    },
+    {
       "league": "Leagues Cup",
       "home": "Tigres UANL",
       "away": "Real Salt Lake",
@@ -2938,6 +3034,18 @@
       "reason": "No event/team match"
     },
     {
+      "league": "Leagues Cup",
+      "home": "Charlotte",
+      "away": "CF Pachuca",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Leagues Cup",
+      "home": "Columbus Crew",
+      "away": "U.N.A.M. - Pumas",
+      "reason": "No event/team match"
+    },
+    {
       "league": "Cup",
       "home": "Znicz Pruszków",
       "away": "ŁKS Łódź II",
@@ -3007,114 +3115,6 @@
       "league": "Cup",
       "home": "Fakel",
       "away": "Dynamo",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Cup",
-      "home": "Spartak Moscow",
-      "away": "FC Orenburg",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Cup",
-      "home": "FC Krasnodar",
-      "away": "Akhmat",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Cup",
-      "home": "Zenit",
-      "away": "Baltika",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Cup",
-      "home": "Saue",
-      "away": "Harju JK Laagri U21",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Cup",
-      "home": "Rumori Calcio",
-      "away": "Tammeka",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "CONCACAF Central American Cup",
-      "home": "UMECIT",
-      "away": "CD Olimpia",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "CONCACAF Central American Cup",
-      "home": "Alianza",
-      "away": "CS Herediano",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "CONCACAF Central American Cup",
-      "home": "Deportivo Saprissa",
-      "away": "Alianza FC",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "CONCACAF Central American Cup",
-      "home": "Verdes",
-      "away": "Municipal",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "CONCACAF Central American Cup",
-      "home": "CD Motagua",
-      "away": "FAS",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Cup",
-      "home": "Triesenberg II",
-      "away": "Ruggell II",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Cup",
-      "home": "Balzers III",
-      "away": "Schaan II",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Cup",
-      "home": "Balzers II",
-      "away": "Eschen / Mauren III",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Cup",
-      "home": "Eschen / Mauren II",
-      "away": "Triesenberg",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "UEFA Champions League Women",
-      "home": "Brann W",
-      "away": "Mitrovica W",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "UEFA Champions League Women",
-      "home": "Austria Wien W",
-      "away": "Hajduk Split W",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "UEFA Champions League Women",
-      "home": "SFK 2000 W",
-      "away": "PSV/Eindhoven W",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "UEFA Champions League Women",
-      "home": "Vålerenga W",
-      "away": "Malmö FF W",
       "reason": "No event/team match"
     }
   ],
@@ -4535,5 +4535,5 @@
   },
   "skipped": false,
   "skipReason": null,
-  "completedAt": "2026-08-05T04:20:36.580Z"
+  "completedAt": "2026-08-05T04:12:38.706Z"
 }
