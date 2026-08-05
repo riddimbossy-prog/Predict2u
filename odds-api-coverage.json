@@ -1,6 +1,6 @@
 {
   "version": "v251",
-  "generatedAt": "2026-08-05T19:52:37.010Z",
+  "generatedAt": "2026-08-05T20:10:16.520Z",
   "provider": "The Odds API v4",
   "keyPresent": true,
   "regions": "uk",
@@ -70,6 +70,14 @@
       "sportTitle": "Brazil Série A",
       "score": 0.305,
       "matches": 4
+    },
+    {
+      "league": "Cup",
+      "country": "Russia",
+      "sportKey": "soccer_concacaf_leagues_cup",
+      "sportTitle": "Leagues Cup",
+      "score": 0.52,
+      "matches": 2
     },
     {
       "league": "Brasileiro U17",
@@ -270,14 +278,6 @@
       "sportTitle": "Eliteserien - Norway",
       "score": 0.305,
       "matches": 7
-    },
-    {
-      "league": "Regionalliga - Nordost",
-      "country": "Germany",
-      "sportKey": "soccer_germany_bundesliga",
-      "sportTitle": "Bundesliga - Germany",
-      "score": 0.347,
-      "matches": 10
     },
     {
       "league": "Cup",
@@ -728,14 +728,6 @@
       "matches": 9
     },
     {
-      "league": "Oberliga - Schleswig-Holstein",
-      "country": "Germany",
-      "sportKey": "soccer_germany_bundesliga",
-      "sportTitle": "Bundesliga - Germany",
-      "score": 0.323,
-      "matches": 8
-    },
-    {
       "league": "Oberliga - Westfalen",
       "country": "Germany",
       "sportKey": "soccer_germany_bundesliga",
@@ -966,14 +958,6 @@
       "sportTitle": "Primera División - Argentina",
       "score": 0.466,
       "matches": 11
-    },
-    {
-      "league": "Primera División - Apertura",
-      "country": "Uruguay",
-      "sportKey": "soccer_argentina_primera_division",
-      "sportTitle": "Primera División - Argentina",
-      "score": 0.286,
-      "matches": 5
     },
     {
       "league": "Serie B",
@@ -1641,14 +1625,6 @@
     },
     {
       "league": "Cup",
-      "country": "Estonia",
-      "sportKey": "soccer_concacaf_leagues_cup",
-      "sportTitle": "Leagues Cup",
-      "score": 0.52,
-      "matches": 5
-    },
-    {
-      "league": "Cup",
       "country": "Greece",
       "sportKey": "soccer_concacaf_leagues_cup",
       "sportTitle": "Leagues Cup",
@@ -1800,16 +1776,16 @@
       "bestScore": 0.222
     },
     {
-      "league": "Piala Presiden",
-      "country": "Indonesia",
-      "reason": "No matching soccer sport key",
-      "bestScore": 0
-    },
-    {
       "league": "1. Division",
       "country": "Kazakhstan",
       "reason": "No matching soccer sport key",
       "bestScore": 0.143
+    },
+    {
+      "league": "Piala Presiden",
+      "country": "Indonesia",
+      "reason": "No matching soccer sport key",
+      "bestScore": 0
     },
     {
       "league": "1. Deild",
@@ -1914,14 +1890,14 @@
       "bestScore": 0.143
     },
     {
-      "league": "Third League - Southeast",
-      "country": "Bulgaria",
+      "league": "Liga II",
+      "country": "Romania",
       "reason": "No matching soccer sport key",
       "bestScore": 0.143
     },
     {
-      "league": "Liga II",
-      "country": "Romania",
+      "league": "Third League - Southeast",
+      "country": "Bulgaria",
       "reason": "No matching soccer sport key",
       "bestScore": 0.143
     },
@@ -2268,12 +2244,6 @@
       "bestScore": 0.143
     },
     {
-      "league": "Toto Cup Ligat Al",
-      "country": "Israel",
-      "reason": "No matching soccer sport key",
-      "bestScore": 0.125
-    },
-    {
       "league": "1. SNL",
       "country": "Slovenia",
       "reason": "No matching soccer sport key",
@@ -2341,6 +2311,12 @@
     },
     {
       "league": "Cup",
+      "home": "Tychy 71",
+      "away": "Zaglebie Sosnowiec",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Cup",
       "home": "Unia Skierniewice",
       "away": "Sokół Kleczew",
       "reason": "No event/team match"
@@ -2385,6 +2361,12 @@
       "league": "Cup",
       "home": "FC Krasnodar",
       "away": "Akhmat",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Cup",
+      "home": "Zenit",
+      "away": "Baltika",
       "reason": "No event/team match"
     },
     {
@@ -2631,36 +2613,6 @@
       "league": "Cup",
       "home": "Eschen / Mauren II",
       "away": "Triesenberg",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Cup",
-      "home": "Laagri",
-      "away": "Tamper",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Cup",
-      "home": "Poseidon",
-      "away": "Kalju Nomme",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Cup",
-      "home": "Trans Narva",
-      "away": "Kompanii Marjamaa",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Cup",
-      "home": "Tallinna Kalev",
-      "away": "Tartu Kalev",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Cup",
-      "home": "Kristiine JK",
-      "away": "Kuressaare",
       "reason": "No event/team match"
     },
     {
@@ -4713,5 +4665,5 @@
   },
   "skipped": false,
   "skipReason": null,
-  "completedAt": "2026-08-05T19:53:16.402Z"
+  "completedAt": "2026-08-05T20:10:25.124Z"
 }
