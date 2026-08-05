@@ -1,9 +1,9 @@
 {
   "version": "v194",
-  "updated": "2026-08-05T20:06:31.393Z",
+  "updated": "2026-08-05T21:19:33.748Z",
   "summary": {
-    "settled": 1097,
-    "winRate": 0.8031,
+    "settled": 1100,
+    "winRate": 0.8027,
     "engines": 13,
     "approved": 2,
     "shadow": 10,
@@ -45,7 +45,7 @@
         "distributionShift": 0.1,
         "status": "DRIFT"
       },
-      "updated": "2026-08-05T20:06:31.390Z"
+      "updated": "2026-08-05T21:19:33.745Z"
     },
     "Prime": {
       "engine": "Prime",
@@ -78,7 +78,7 @@
         "distributionShift": 0.293,
         "status": "STABLE"
       },
-      "updated": "2026-08-05T20:06:31.391Z"
+      "updated": "2026-08-05T21:19:33.745Z"
     },
     "Value": {
       "engine": "Value",
@@ -111,7 +111,7 @@
         "distributionShift": 0.8,
         "status": "STABLE"
       },
-      "updated": "2026-08-05T20:06:31.391Z"
+      "updated": "2026-08-05T21:19:33.745Z"
     },
     "Pro": {
       "engine": "Pro",
@@ -144,7 +144,7 @@
         "distributionShift": 0.8,
         "status": "STABLE"
       },
-      "updated": "2026-08-05T20:06:31.391Z"
+      "updated": "2026-08-05T21:19:33.745Z"
     },
     "Ultra": {
       "engine": "Ultra",
@@ -177,7 +177,7 @@
         "distributionShift": 0.6,
         "status": "STABLE"
       },
-      "updated": "2026-08-05T20:06:31.391Z"
+      "updated": "2026-08-05T21:19:33.745Z"
     },
     "Elite": {
       "engine": "Elite",
@@ -210,7 +210,7 @@
         "distributionShift": 0.5,
         "status": "STABLE"
       },
-      "updated": "2026-08-05T20:06:31.391Z"
+      "updated": "2026-08-05T21:19:33.746Z"
     },
     "Apex": {
       "engine": "Apex",
@@ -243,7 +243,7 @@
         "distributionShift": 0.5,
         "status": "STABLE"
       },
-      "updated": "2026-08-05T20:06:31.391Z"
+      "updated": "2026-08-05T21:19:33.746Z"
     },
     "Halves": {
       "engine": "Halves",
@@ -276,7 +276,7 @@
         "distributionShift": 0,
         "status": "STABLE"
       },
-      "updated": "2026-08-05T20:06:31.391Z"
+      "updated": "2026-08-05T21:19:33.746Z"
     },
     "Streaks": {
       "engine": "Streaks",
@@ -309,17 +309,17 @@
         "distributionShift": 0.5,
         "status": "STABLE"
       },
-      "updated": "2026-08-05T20:06:31.391Z"
+      "updated": "2026-08-05T21:19:33.746Z"
     },
     "Trend": {
       "engine": "Trend",
       "state": "APPROVED",
       "reason": "Forward validation, calibration and drift checks passed.",
       "train": {
-        "sample": 150,
-        "wins": 127,
+        "sample": 151,
+        "wins": 128,
         "losses": 23,
-        "rate": 0.8467
+        "rate": 0.8477
       },
       "validation": {
         "sample": 65,
@@ -327,8 +327,8 @@
         "losses": 11,
         "rate": 0.8308
       },
-      "validationDelta": -0.0159,
-      "calibrationError": 0.0572,
+      "validationDelta": -0.0169,
+      "calibrationError": 0.0569,
       "shadow": {
         "eligible": 0,
         "avoidedLosses": 0,
@@ -338,21 +338,21 @@
       "drift": {
         "recentSample": 30,
         "priorSample": 30,
-        "confidenceShift": 0.69,
-        "distributionShift": 0.267,
+        "confidenceShift": 0.6,
+        "distributionShift": 0.3,
         "status": "STABLE"
       },
-      "updated": "2026-08-05T20:06:31.391Z"
+      "updated": "2026-08-05T21:19:33.746Z"
     },
     "League Bias": {
       "engine": "League Bias",
       "state": "APPROVED",
       "reason": "Forward validation, calibration and drift checks passed.",
       "train": {
-        "sample": 212,
-        "wins": 182,
-        "losses": 30,
-        "rate": 0.8585
+        "sample": 214,
+        "wins": 183,
+        "losses": 31,
+        "rate": 0.8551
       },
       "validation": {
         "sample": 92,
@@ -360,8 +360,8 @@
         "losses": 15,
         "rate": 0.837
       },
-      "validationDelta": -0.0215,
-      "calibrationError": 0.0405,
+      "validationDelta": -0.0181,
+      "calibrationError": 0.0412,
       "shadow": {
         "eligible": 0,
         "avoidedLosses": 0,
@@ -371,11 +371,11 @@
       "drift": {
         "recentSample": 30,
         "priorSample": 30,
-        "confidenceShift": 0.52,
-        "distributionShift": 0.133,
+        "confidenceShift": 0.8,
+        "distributionShift": 0.1,
         "status": "STABLE"
       },
-      "updated": "2026-08-05T20:06:31.391Z"
+      "updated": "2026-08-05T21:19:33.746Z"
     },
     "Strict": {
       "engine": "Strict",
@@ -408,7 +408,7 @@
         "distributionShift": 0.5,
         "status": "STABLE"
       },
-      "updated": "2026-08-05T20:06:31.391Z"
+      "updated": "2026-08-05T21:19:33.746Z"
     },
     "Momentum": {
       "engine": "Momentum",
@@ -441,7 +441,7 @@
         "distributionShift": 0.5,
         "status": "STABLE"
       },
-      "updated": "2026-08-05T20:06:31.391Z"
+      "updated": "2026-08-05T21:19:33.746Z"
     }
   },
   "marketScorecards": [
@@ -455,11 +455,11 @@
     },
     {
       "marketFamily": "HOME_TEAM",
-      "sample": 241,
+      "sample": 242,
       "wins": 200,
-      "losses": 41,
-      "rate": 0.8299,
-      "calibrationError": 0.0592
+      "losses": 42,
+      "rate": 0.8264,
+      "calibrationError": 0.0625
     },
     {
       "marketFamily": "MATCH_UNDER",
@@ -487,11 +487,11 @@
     },
     {
       "marketFamily": "MATCH_OVER",
-      "sample": 86,
-      "wins": 79,
+      "sample": 87,
+      "wins": 80,
       "losses": 7,
-      "rate": 0.9186,
-      "calibrationError": 0.5869
+      "rate": 0.9195,
+      "calibrationError": 0.581
     },
     {
       "marketFamily": "AWAY_TEAM",
@@ -511,11 +511,11 @@
     },
     {
       "marketFamily": "BTTS_YES",
-      "sample": 4,
-      "wins": 3,
+      "sample": 5,
+      "wins": 4,
       "losses": 1,
-      "rate": 0.75,
-      "calibrationError": 0.1007
+      "rate": 0.8,
+      "calibrationError": 0.051
     }
   ],
   "leagueScorecards": [
@@ -528,10 +528,10 @@
     },
     {
       "league": "Friendlies Clubs",
-      "sample": 121,
+      "sample": 122,
       "wins": 98,
-      "losses": 23,
-      "rate": 0.8099
+      "losses": 24,
+      "rate": 0.8033
     },
     {
       "league": "Torneo Federal A",
@@ -688,6 +688,13 @@
       "rate": 0.3333
     },
     {
+      "league": "Oberliga - Hamburg",
+      "sample": 12,
+      "wins": 11,
+      "losses": 1,
+      "rate": 0.9167
+    },
+    {
       "league": "UEFA Champions League",
       "sample": 11,
       "wins": 9,
@@ -735,13 +742,6 @@
       "wins": 5,
       "losses": 5,
       "rate": 0.5
-    },
-    {
-      "league": "Oberliga - Hamburg",
-      "sample": 10,
-      "wins": 9,
-      "losses": 1,
-      "rate": 0.9
     },
     {
       "league": "Tasmania Southern Championship",

@@ -1,6 +1,6 @@
 {
   "version": "v251",
-  "generatedAt": "2026-08-05T21:10:20.287Z",
+  "generatedAt": "2026-08-05T21:05:54.474Z",
   "provider": "The Odds API v4",
   "keyPresent": true,
   "regions": "uk",
@@ -29,7 +29,15 @@
       "sportKey": "soccer_brazil_serie_b",
       "sportTitle": "Brazil Série B",
       "score": 0.466,
-      "matches": 11
+      "matches": 12
+    },
+    {
+      "league": "Torneo Promocional Amateur",
+      "country": "Argentina",
+      "sportKey": "soccer_argentina_primera_division",
+      "sportTitle": "Primera División - Argentina",
+      "score": 0.305,
+      "matches": 9
     },
     {
       "league": "UEFA Champions League Women",
@@ -37,7 +45,15 @@
       "sportKey": "soccer_uefa_champs_league_qualification",
       "sportTitle": "UEFA Champions League Qualification",
       "score": 0.375,
-      "matches": 4
+      "matches": 5
+    },
+    {
+      "league": "UEFA Europa Conference League",
+      "country": "World",
+      "sportKey": "soccer_uefa_nations_league",
+      "sportTitle": "UEFA Nations League",
+      "score": 0.333,
+      "matches": 30
     },
     {
       "league": "Football League - Highland League",
@@ -1648,7 +1664,7 @@
       "matches": 1
     }
   ],
-  "matchesConsidered": 2526,
+  "matchesConsidered": 2533,
   "matchesMatched": 0,
   "matchesUpdated": 0,
   "fieldsFilled": 0,
@@ -2291,6 +2307,12 @@
       "league": "Cup",
       "home": "Pogoń Siedlce",
       "away": "Jastrzębie",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Cup",
+      "home": "Unia Skierniewice",
+      "away": "Sokół Kleczew",
       "reason": "No event/team match"
     },
     {
@@ -3105,6 +3127,12 @@
     },
     {
       "league": "Brasileiro U17",
+      "home": "Corinthians U17",
+      "away": "Bahia U17",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Brasileiro U17",
       "home": "Fortaleza U17",
       "away": "Flamengo RJ U17",
       "reason": "No event/team match"
@@ -3143,18 +3171,6 @@
       "league": "Brasileiro U17",
       "home": "Fluminense U17",
       "away": "Vitoria U17",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Brasileiro U17",
-      "home": "Gremio U17",
-      "away": "Botafogo U17",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Brasileiro U17",
-      "home": "Internacional U17",
-      "away": "Palmeiras U17",
       "reason": "No event/team match"
     }
   ],
@@ -4649,5 +4665,5 @@
   },
   "skipped": false,
   "skipReason": null,
-  "completedAt": "2026-08-05T21:10:28.947Z"
+  "completedAt": "2026-08-05T21:06:17.634Z"
 }
