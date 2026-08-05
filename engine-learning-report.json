@@ -1,13 +1,13 @@
 {
   "version": "v193",
-  "updated": "2026-08-05T21:19:32.342Z",
+  "updated": "2026-08-05T22:31:57.973Z",
   "summary": {
-    "settledFixtures": 640,
-    "settledDecisions": 1100,
+    "settledFixtures": 642,
+    "settledDecisions": 1104,
     "reviewedLosses": 150,
-    "teamProfiles": 398,
+    "teamProfiles": 400,
     "leagueProfiles": 82,
-    "matchupProfiles": 208,
+    "matchupProfiles": 209,
     "activePatternBreakers": 0,
     "upsetResistantTeams": 0
   },
@@ -19,7 +19,7 @@
   "commonMissCauses": [
     {
       "cause": "INPUT_COVERAGE_GAP",
-      "count": 217
+      "count": 218
     },
     {
       "cause": "RESULT_DIRECTION_MISS",
@@ -35,7 +35,7 @@
     },
     {
       "cause": "GOAL_SPIKE",
-      "count": 32
+      "count": 33
     },
     {
       "cause": "TEMPO_COLLAPSE",
@@ -65,6 +65,19 @@
       "score": "0-1",
       "causes": [
         "RESULT_DIRECTION_MISS",
+        "INPUT_COVERAGE_GAP"
+      ]
+    },
+    {
+      "matchDate": "2026-08-05",
+      "home": "Provincial",
+      "away": "Deportivo Metalurgico",
+      "league": "Torneo Promocional Amateur",
+      "engine": "League Bias",
+      "market": "Under 3.5 Goals",
+      "score": "0-5",
+      "causes": [
+        "GOAL_SPIKE",
         "INPUT_COVERAGE_GAP"
       ]
     },
@@ -424,18 +437,6 @@
       "score": "0-1",
       "causes": [
         "RESULT_DIRECTION_MISS",
-        "INPUT_COVERAGE_GAP"
-      ]
-    },
-    {
-      "matchDate": "2026-08-02",
-      "home": "Gimnasia Concepción",
-      "away": "Tucuman Central",
-      "league": "Torneo Federal A",
-      "engine": "Halves",
-      "market": "First Half Under 1.5",
-      "score": "4-0",
-      "causes": [
         "INPUT_COVERAGE_GAP"
       ]
     }
