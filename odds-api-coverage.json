@@ -1,6 +1,6 @@
 {
   "version": "v251",
-  "generatedAt": "2026-08-05T18:39:23.271Z",
+  "generatedAt": "2026-08-05T19:00:21.634Z",
   "provider": "The Odds API v4",
   "keyPresent": true,
   "regions": "uk",
@@ -13,47 +13,15 @@
       "sportKey": "soccer_concacaf_leagues_cup",
       "sportTitle": "Leagues Cup",
       "score": 0.52,
-      "matches": 5
+      "matches": 3
     },
     {
-      "league": "Cup",
-      "country": "Estonia",
-      "sportKey": "soccer_concacaf_leagues_cup",
-      "sportTitle": "Leagues Cup",
-      "score": 0.52,
-      "matches": 7
-    },
-    {
-      "league": "DBU Pokalen",
-      "country": "Denmark",
-      "sportKey": "soccer_denmark_superliga",
-      "sportTitle": "Denmark Superliga",
-      "score": 0.347,
-      "matches": 17
-    },
-    {
-      "league": "UEFA Champions League Women",
+      "league": "UEFA Champions League",
       "country": "World",
       "sportKey": "soccer_uefa_champs_league_qualification",
       "sportTitle": "UEFA Champions League Qualification",
-      "score": 0.375,
-      "matches": 11
-    },
-    {
-      "league": "Ykkönen",
-      "country": "Finland",
-      "sportKey": "soccer_finland_veikkausliiga",
-      "sportTitle": "Veikkausliiga - Finland",
-      "score": 0.38,
-      "matches": 8
-    },
-    {
-      "league": "3. Division - Girone 2",
-      "country": "Norway",
-      "sportKey": "soccer_norway_eliteserien",
-      "sportTitle": "Eliteserien - Norway",
-      "score": 0.305,
-      "matches": 8
+      "score": 0.695,
+      "matches": 12
     },
     {
       "league": "DBU Pokalen",
@@ -112,20 +80,12 @@
       "matches": 31
     },
     {
-      "league": "UEFA Champions League",
-      "country": "World",
-      "sportKey": "soccer_uefa_champs_league_qualification",
-      "sportTitle": "UEFA Champions League Qualification",
-      "score": 0.695,
-      "matches": 12
-    },
-    {
-      "league": "Copa Rio",
-      "country": "Brazil",
-      "sportKey": "soccer_brazil_campeonato",
-      "sportTitle": "Brazil Série A",
-      "score": 0.305,
-      "matches": 4
+      "league": "Cup",
+      "country": "Estonia",
+      "sportKey": "soccer_concacaf_leagues_cup",
+      "sportTitle": "Leagues Cup",
+      "score": 0.52,
+      "matches": 6
     },
     {
       "league": "Cup",
@@ -134,6 +94,14 @@
       "sportTitle": "Leagues Cup",
       "score": 0.52,
       "matches": 2
+    },
+    {
+      "league": "Copa Rio",
+      "country": "Brazil",
+      "sportKey": "soccer_brazil_campeonato",
+      "sportTitle": "Brazil Série A",
+      "score": 0.305,
+      "matches": 4
     },
     {
       "league": "Brasileiro U17",
@@ -229,7 +197,7 @@
       "sportKey": "soccer_argentina_primera_division",
       "sportTitle": "Primera División - Argentina",
       "score": 0.653,
-      "matches": 9
+      "matches": 4
     },
     {
       "league": "USL League One",
@@ -992,6 +960,14 @@
       "matches": 11
     },
     {
+      "league": "Primera División - Apertura",
+      "country": "Uruguay",
+      "sportKey": "soccer_argentina_primera_division",
+      "sportTitle": "Primera División - Argentina",
+      "score": 0.286,
+      "matches": 5
+    },
+    {
       "league": "Serie B",
       "country": "Brazil",
       "sportKey": "soccer_brazil_serie_b",
@@ -1173,6 +1149,14 @@
       "sportKey": "soccer_norway_eliteserien",
       "sportTitle": "Eliteserien - Norway",
       "score": 0.323,
+      "matches": 7
+    },
+    {
+      "league": "3. Division - Girone 2",
+      "country": "Norway",
+      "sportKey": "soccer_norway_eliteserien",
+      "sportTitle": "Eliteserien - Norway",
+      "score": 0.305,
       "matches": 7
     },
     {
@@ -1688,7 +1672,7 @@
       "matches": 1
     }
   ],
-  "matchesConsidered": 2597,
+  "matchesConsidered": 2570,
   "matchesMatched": 0,
   "matchesUpdated": 0,
   "fieldsFilled": 0,
@@ -1800,16 +1784,16 @@
       "bestScore": 0.222
     },
     {
-      "league": "1. Division",
-      "country": "Kazakhstan",
-      "reason": "No matching soccer sport key",
-      "bestScore": 0.143
-    },
-    {
       "league": "Piala Presiden",
       "country": "Indonesia",
       "reason": "No matching soccer sport key",
       "bestScore": 0
+    },
+    {
+      "league": "1. Division",
+      "country": "Kazakhstan",
+      "reason": "No matching soccer sport key",
+      "bestScore": 0.143
     },
     {
       "league": "1. Deild",
@@ -1914,14 +1898,14 @@
       "bestScore": 0.143
     },
     {
-      "league": "Liga II",
-      "country": "Romania",
+      "league": "Third League - Southeast",
+      "country": "Bulgaria",
       "reason": "No matching soccer sport key",
       "bestScore": 0.143
     },
     {
-      "league": "Third League - Southeast",
-      "country": "Bulgaria",
+      "league": "Liga II",
+      "country": "Romania",
       "reason": "No matching soccer sport key",
       "bestScore": 0.143
     },
@@ -2347,12 +2331,6 @@
     },
     {
       "league": "Cup",
-      "home": "Saue",
-      "away": "Harju JK Laagri U21",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Cup",
       "home": "Rumori Calcio",
       "away": "Tammeka",
       "reason": "No event/team match"
@@ -2652,39 +2630,129 @@
       "reason": "No event/team match"
     },
     {
-      "league": "DBU Pokalen",
-      "home": "Hedensted",
-      "away": "Marienlyst",
+      "league": "UEFA Champions League",
+      "home": "Aarhus",
+      "away": "Sabah FA",
       "reason": "No event/team match"
     },
     {
-      "league": "DBU Pokalen",
-      "home": "Hobro",
-      "away": "Vendsyssel FF",
+      "league": "UEFA Champions League",
+      "home": "Fenerbahçe",
+      "away": "Sturm Graz",
       "reason": "No event/team match"
     },
     {
-      "league": "DBU Pokalen",
-      "home": "Odder",
-      "away": "Skive",
+      "league": "UEFA Champions League",
+      "home": "Kairat Almaty",
+      "away": "Levski Sofia",
       "reason": "No event/team match"
     },
     {
-      "league": "DBU Pokalen",
-      "home": "Varde",
-      "away": "OKS",
+      "league": "UEFA Champions League",
+      "home": "Bodo/Glimt",
+      "away": "Union St. Gilloise",
       "reason": "No event/team match"
     },
     {
-      "league": "DBU Pokalen",
-      "home": "Vatanspor",
-      "away": "Nørresundby",
+      "league": "UEFA Champions League",
+      "home": "Sabah FA",
+      "away": "Aarhus",
       "reason": "No event/team match"
     },
     {
-      "league": "DBU Pokalen",
-      "home": "Tarup-Paarup",
-      "away": "Vejle",
+      "league": "UEFA Champions League",
+      "home": "Kauno Žalgiris",
+      "away": "Dinamo Zagreb",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "UEFA Champions League",
+      "home": "NEC Nijmegen",
+      "away": "Olympiakos Piraeus",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "UEFA Champions League",
+      "home": "FK Crvena Zvezda",
+      "away": "Hapoel Beer Sheva",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "UEFA Champions League",
+      "home": "Celje",
+      "away": "Ararat-Armenia",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "UEFA Champions League",
+      "home": "Slovan Bratislava",
+      "away": "Mjallby AIF",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "UEFA Champions League",
+      "home": "Sturm Graz",
+      "away": "Fenerbahçe",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "UEFA Champions League",
+      "home": "Lyon",
+      "away": "Sparta Praha",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "UEFA Champions League Women",
+      "home": "Racing W",
+      "away": "HJK W",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "UEFA Champions League Women",
+      "home": "Eintracht Frankfurt W",
+      "away": "Omonia W",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "UEFA Champions League Women",
+      "home": "Køge W",
+      "away": "Riga W",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "UEFA Champions League Women",
+      "home": "OH Leuven W",
+      "away": "TSC W",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "UEFA Champions League Women",
+      "home": "Slavia Praha W",
+      "away": "Rangers W",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "UEFA Champions League Women",
+      "home": "Vllaznia W",
+      "away": "Spartak Myjava W",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "UEFA Champions League Women",
+      "home": "Juventus W",
+      "away": "Torreense W",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "UEFA Champions League Women",
+      "home": "Breidablik W",
+      "away": "Dinamo-BGU W",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "UEFA Champions League Women",
+      "home": "Servette Chênois W",
+      "away": "Aktobe W",
       "reason": "No event/team match"
     },
     {
@@ -2886,297 +2954,231 @@
       "reason": "No event/team match"
     },
     {
-      "league": "UEFA Champions League Women",
-      "home": "ŽNK Mura W",
-      "away": "Farul Constanţa W",
+      "league": "Oberliga - Hamburg",
+      "home": "Nikola Tesla",
+      "away": "Victoria Hamburg",
       "reason": "No event/team match"
     },
     {
-      "league": "UEFA Champions League Women",
-      "home": "St. Pölten W",
-      "away": "Young Boys W",
+      "league": "Oberliga - Schleswig-Holstein",
+      "home": "Holstein Kiel II",
+      "away": "Heider SV",
       "reason": "No event/team match"
     },
     {
-      "league": "UEFA Champions League Women",
-      "home": "Racing W",
-      "away": "HJK W",
+      "league": "Oberliga - Schleswig-Holstein",
+      "home": "Union Neumünster",
+      "away": "TSB Flensburg",
       "reason": "No event/team match"
     },
     {
-      "league": "UEFA Champions League Women",
-      "home": "Eintracht Frankfurt W",
-      "away": "Omonia W",
+      "league": "Oberliga - Schleswig-Holstein",
+      "home": "Oldenburger SV",
+      "away": "Rotenhof",
       "reason": "No event/team match"
     },
     {
-      "league": "UEFA Champions League Women",
-      "home": "Køge W",
-      "away": "Riga W",
+      "league": "Oberliga - Schleswig-Holstein",
+      "home": "Lübeck II",
+      "away": "Nordmark Satrup",
       "reason": "No event/team match"
     },
     {
-      "league": "UEFA Champions League Women",
-      "home": "OH Leuven W",
-      "away": "TSC W",
+      "league": "Oberliga - Schleswig-Holstein",
+      "home": "SV Eichede",
+      "away": "VfR Neumünster",
       "reason": "No event/team match"
     },
     {
-      "league": "UEFA Champions League Women",
-      "home": "Slavia Praha W",
-      "away": "Rangers W",
+      "league": "Oberliga - Schleswig-Holstein",
+      "home": "Heider SV",
+      "away": "Kaltenkirchen",
       "reason": "No event/team match"
     },
     {
-      "league": "UEFA Champions League Women",
-      "home": "Vllaznia W",
-      "away": "Spartak Myjava W",
+      "league": "Oberliga - Schleswig-Holstein",
+      "home": "Kilia Kiel",
+      "away": "Hohenwestedt",
       "reason": "No event/team match"
     },
     {
-      "league": "UEFA Champions League Women",
-      "home": "Juventus W",
-      "away": "Torreense W",
+      "league": "Oberliga - Schleswig-Holstein",
+      "home": "Eckernförder SV",
+      "away": "VfB Lübeck",
       "reason": "No event/team match"
     },
     {
-      "league": "UEFA Champions League Women",
-      "home": "Breidablik W",
-      "away": "Dinamo-BGU W",
+      "league": "Oberliga - Schleswig-Holstein",
+      "home": "Holstein Kiel II",
+      "away": "Phönix L. II",
       "reason": "No event/team match"
     },
     {
-      "league": "UEFA Champions League Women",
-      "home": "Servette Chênois W",
-      "away": "Aktobe W",
+      "league": "Regionalliga - Nordost",
+      "home": "BFC Preussen",
+      "away": "Lokomotive Leipzig",
       "reason": "No event/team match"
     },
     {
-      "league": "UEFA Champions League",
-      "home": "Aarhus",
-      "away": "Sabah FA",
+      "league": "Regionalliga - Nordost",
+      "home": "BSG Chemie Leipzig",
+      "away": "Hallescher FC",
       "reason": "No event/team match"
     },
     {
-      "league": "UEFA Champions League",
-      "home": "Fenerbahçe",
-      "away": "Sturm Graz",
+      "league": "Regionalliga - Nordost",
+      "home": "FC Rot-Weiß Erfurt",
+      "away": "Tasmania Berlin",
       "reason": "No event/team match"
     },
     {
-      "league": "UEFA Champions League",
-      "home": "Kairat Almaty",
-      "away": "Levski Sofia",
+      "league": "Regionalliga - Nordost",
+      "home": "Erzgebirge Aue",
+      "away": "BFC Dynamo",
       "reason": "No event/team match"
     },
     {
-      "league": "UEFA Champions League",
-      "home": "Bodo/Glimt",
-      "away": "Union St. Gilloise",
+      "league": "Regionalliga - Nordost",
+      "home": "Greifswalder FC",
+      "away": "Altglienicke",
       "reason": "No event/team match"
     },
     {
-      "league": "UEFA Champions League",
-      "home": "Sabah FA",
-      "away": "Aarhus",
+      "league": "Regionalliga - Nordost",
+      "home": "Luckenwalde",
+      "away": "Tasmania Berlin",
       "reason": "No event/team match"
     },
     {
-      "league": "UEFA Champions League",
-      "home": "Kauno Žalgiris",
-      "away": "Dinamo Zagreb",
+      "league": "Regionalliga - Nordost",
+      "home": "RSV Eintracht",
+      "away": "BSG Chemie Leipzig",
       "reason": "No event/team match"
     },
     {
-      "league": "UEFA Champions League",
-      "home": "NEC Nijmegen",
-      "away": "Olympiakos Piraeus",
+      "league": "Regionalliga - Nordost",
+      "home": "Lokomotive Leipzig",
+      "away": "Hertha BSC II",
       "reason": "No event/team match"
     },
     {
-      "league": "UEFA Champions League",
-      "home": "FK Crvena Zvezda",
-      "away": "Hapoel Beer Sheva",
+      "league": "Regionalliga - Nordost",
+      "home": "Erzgebirge Aue",
+      "away": "BFC Preussen",
       "reason": "No event/team match"
     },
     {
-      "league": "UEFA Champions League",
-      "home": "Celje",
-      "away": "Ararat-Armenia",
+      "league": "Regionalliga - Nordost",
+      "home": "BFC Dynamo",
+      "away": "FSV Zwickau",
       "reason": "No event/team match"
     },
     {
-      "league": "UEFA Champions League",
-      "home": "Slovan Bratislava",
-      "away": "Mjallby AIF",
+      "league": "Regionalliga - Nordost",
+      "home": "Hallescher FC",
+      "away": "Chemnitzer FC",
       "reason": "No event/team match"
     },
     {
-      "league": "UEFA Champions League",
-      "home": "Sturm Graz",
-      "away": "Fenerbahçe",
+      "league": "Regionalliga - Nordost",
+      "home": "FC Carl Zeiss Jena",
+      "away": "FC Rot-Weiß Erfurt",
       "reason": "No event/team match"
     },
     {
-      "league": "UEFA Champions League",
-      "home": "Lyon",
-      "away": "Sparta Praha",
+      "league": "Regionalliga - Nordost",
+      "home": "Magdeburg II",
+      "away": "SV Babelsberg 03",
       "reason": "No event/team match"
     },
     {
-      "league": "Ykkönen",
-      "home": "VJS",
-      "away": "PKKU",
+      "league": "U19 Bundesliga",
+      "home": "Dynamo Dresden U19",
+      "away": "Erzgebirge Aue U19",
       "reason": "No event/team match"
     },
     {
-      "league": "Ykkönen",
-      "home": "KuPS Akatemia",
-      "away": "Inter Turku II",
+      "league": "U19 Bundesliga",
+      "home": "Rot-Weiß Erfurt U19",
+      "away": "RB Leipzig U19",
       "reason": "No event/team match"
     },
     {
-      "league": "Ykkönen",
-      "home": "KPV-j",
-      "away": "VJS",
+      "league": "U19 Bundesliga",
+      "home": "Augsburg U19",
+      "away": "Freiburg U19",
       "reason": "No event/team match"
     },
     {
-      "league": "Ykkönen",
-      "home": "FC jazz",
-      "away": "OLS",
+      "league": "U19 Bundesliga",
+      "home": "Nürnberg U19",
+      "away": "Eintracht Frankf U19",
       "reason": "No event/team match"
     },
     {
-      "league": "Ykkönen",
-      "home": "JJK",
-      "away": "Tampere United",
+      "league": "U19 Bundesliga",
+      "home": "Ingolstadt U19",
+      "away": "Jahn Regensburg U19",
       "reason": "No event/team match"
     },
     {
-      "league": "Ykkönen",
-      "home": "PKKU",
-      "away": "Inter Turku II",
+      "league": "U19 Bundesliga",
+      "home": "Hoffenheim U19",
+      "away": "Ulm U19",
       "reason": "No event/team match"
     },
     {
-      "league": "Ykkönen",
-      "home": "Rops",
-      "away": "KuPS Akatemia",
+      "league": "U19 Bundesliga",
+      "home": "Meppen U19",
+      "away": "Wolfsburg U19",
       "reason": "No event/team match"
     },
     {
-      "league": "Ykkönen",
-      "home": "TPV",
-      "away": "SalPa",
+      "league": "U19 Bundesliga",
+      "home": "Sandhausen U19",
+      "away": "Stuttgarter K'rs U19",
       "reason": "No event/team match"
     },
     {
-      "league": "Ykkösliiga",
-      "home": "Haka",
-      "away": "JIPPO",
+      "league": "U19 Bundesliga",
+      "home": "Havelse U19",
+      "away": "Hannover 96 U19",
       "reason": "No event/team match"
     },
     {
-      "league": "Ykkösliiga",
-      "home": "JäPS",
-      "away": "MP",
+      "league": "U19 Bundesliga",
+      "home": "Werder Bremen U19",
+      "away": "Holstein Kiel U19",
       "reason": "No event/team match"
     },
     {
-      "league": "Ykkösliiga",
-      "home": "KäPa",
-      "away": "EIF",
+      "league": "U19 Bundesliga",
+      "home": "Paderborn U19",
+      "away": "Preußen Münster U19",
       "reason": "No event/team match"
     },
     {
-      "league": "Ykkösliiga",
-      "home": "SJK Akatemia",
-      "away": "PK-35",
+      "league": "U19 Bundesliga",
+      "home": "Eintracht Braunsch U19",
+      "away": "Hertha BSC U19",
       "reason": "No event/team match"
     },
     {
-      "league": "Ykkösliiga",
-      "home": "Klubi-04",
-      "away": "Kooteepee",
+      "league": "U19 Bundesliga",
+      "home": "1860 München U19",
+      "away": "Stuttgart U19",
       "reason": "No event/team match"
     },
     {
-      "league": "Kakkonen - Lohko C",
-      "home": "Jaro 2",
-      "away": "JBK",
+      "league": "U19 Bundesliga",
+      "home": "RW Oberhausen U19",
+      "away": "Borussia Dortmund U19",
       "reason": "No event/team match"
     },
     {
-      "league": "Kakkonen - Lohko C",
-      "home": "GBK",
-      "away": "Huima / Urho",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Kakkonen - Lohko C",
-      "home": "TP-47",
-      "away": "Kraft",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Kakkonen - Lohko C",
-      "home": "Vaajakoski",
-      "away": "VPS II",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Kakkonen - Lohko C",
-      "home": "JS Hercules",
-      "away": "SJK-juniorit",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Kakkonen - Lohko A",
-      "home": "Atlantis",
-      "away": "Reipas",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Kakkonen - Lohko A",
-      "home": "Kiffen",
-      "away": "Union Plaani",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Kakkonen - Lohko A",
-      "home": "PEPO",
-      "away": "MyPa",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Kakkonen - Lohko A",
-      "home": "PPJ",
-      "away": "HPS",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Kakkonen - Lohko A",
-      "home": "HIFK Helsinki",
-      "away": "PuiU Helsinki",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Veikkausliiga",
-      "home": "SJK",
-      "away": "Gnistan",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Veikkausliiga",
-      "home": "FF Jaro",
-      "away": "VPS",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Veikkausliiga",
-      "home": "KuPS",
-      "away": "Turku PS",
+      "league": "U19 Bundesliga",
+      "home": "Babelsberg U19",
+      "away": "Energie Cottbus U19",
       "reason": "No event/team match"
     }
   ],
@@ -3194,18 +3196,6 @@
       "market": "double_chance"
     },
     {
-      "sportKey": "soccer_denmark_superliga",
-      "market": "btts"
-    },
-    {
-      "sportKey": "soccer_denmark_superliga",
-      "market": "draw_no_bet"
-    },
-    {
-      "sportKey": "soccer_denmark_superliga",
-      "market": "double_chance"
-    },
-    {
       "sportKey": "soccer_uefa_champs_league_qualification",
       "market": "btts"
     },
@@ -3215,30 +3205,6 @@
     },
     {
       "sportKey": "soccer_uefa_champs_league_qualification",
-      "market": "double_chance"
-    },
-    {
-      "sportKey": "soccer_finland_veikkausliiga",
-      "market": "btts"
-    },
-    {
-      "sportKey": "soccer_finland_veikkausliiga",
-      "market": "draw_no_bet"
-    },
-    {
-      "sportKey": "soccer_finland_veikkausliiga",
-      "market": "double_chance"
-    },
-    {
-      "sportKey": "soccer_norway_eliteserien",
-      "market": "btts"
-    },
-    {
-      "sportKey": "soccer_norway_eliteserien",
-      "market": "draw_no_bet"
-    },
-    {
-      "sportKey": "soccer_norway_eliteserien",
       "market": "double_chance"
     },
     {
@@ -3359,6 +3325,18 @@
     },
     {
       "sportKey": "soccer_usa_mls",
+      "market": "double_chance"
+    },
+    {
+      "sportKey": "soccer_norway_eliteserien",
+      "market": "btts"
+    },
+    {
+      "sportKey": "soccer_norway_eliteserien",
+      "market": "draw_no_bet"
+    },
+    {
+      "sportKey": "soccer_norway_eliteserien",
       "market": "double_chance"
     },
     {
@@ -3713,31 +3691,6 @@
       "statusCode": 422
     },
     {
-      "label": "soccer_denmark_superliga:base-combined",
-      "error": "Markets not supported by this endpoint: btts, double_chance, draw_no_bet",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_denmark_superliga:base-core",
-      "error": "Invalid commenceTimeFrom parameter. The format must be YYYY-MM-DDTHH:MM:SSZ, for example 2020-11-24T16:05:00Z",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_denmark_superliga:btts",
-      "error": "Markets not supported by this endpoint: btts",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_denmark_superliga:draw_no_bet",
-      "error": "Markets not supported by this endpoint: draw_no_bet",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_denmark_superliga:double_chance",
-      "error": "Markets not supported by this endpoint: double_chance",
-      "statusCode": 422
-    },
-    {
       "label": "soccer_uefa_champs_league_qualification:base-combined",
       "error": "Markets not supported by this endpoint: btts, double_chance, draw_no_bet",
       "statusCode": 422
@@ -3759,56 +3712,6 @@
     },
     {
       "label": "soccer_uefa_champs_league_qualification:double_chance",
-      "error": "Markets not supported by this endpoint: double_chance",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_finland_veikkausliiga:base-combined",
-      "error": "Markets not supported by this endpoint: btts, double_chance, draw_no_bet",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_finland_veikkausliiga:base-core",
-      "error": "Invalid commenceTimeFrom parameter. The format must be YYYY-MM-DDTHH:MM:SSZ, for example 2020-11-24T16:05:00Z",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_finland_veikkausliiga:btts",
-      "error": "Markets not supported by this endpoint: btts",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_finland_veikkausliiga:draw_no_bet",
-      "error": "Markets not supported by this endpoint: draw_no_bet",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_finland_veikkausliiga:double_chance",
-      "error": "Markets not supported by this endpoint: double_chance",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_norway_eliteserien:base-combined",
-      "error": "Markets not supported by this endpoint: btts, double_chance, draw_no_bet",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_norway_eliteserien:base-core",
-      "error": "Invalid commenceTimeFrom parameter. The format must be YYYY-MM-DDTHH:MM:SSZ, for example 2020-11-24T16:05:00Z",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_norway_eliteserien:btts",
-      "error": "Markets not supported by this endpoint: btts",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_norway_eliteserien:draw_no_bet",
-      "error": "Markets not supported by this endpoint: draw_no_bet",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_norway_eliteserien:double_chance",
       "error": "Markets not supported by this endpoint: double_chance",
       "statusCode": 422
     },
@@ -4059,6 +3962,31 @@
     },
     {
       "label": "soccer_usa_mls:double_chance",
+      "error": "Markets not supported by this endpoint: double_chance",
+      "statusCode": 422
+    },
+    {
+      "label": "soccer_norway_eliteserien:base-combined",
+      "error": "Markets not supported by this endpoint: btts, double_chance, draw_no_bet",
+      "statusCode": 422
+    },
+    {
+      "label": "soccer_norway_eliteserien:base-core",
+      "error": "Invalid commenceTimeFrom parameter. The format must be YYYY-MM-DDTHH:MM:SSZ, for example 2020-11-24T16:05:00Z",
+      "statusCode": 422
+    },
+    {
+      "label": "soccer_norway_eliteserien:btts",
+      "error": "Markets not supported by this endpoint: btts",
+      "statusCode": 422
+    },
+    {
+      "label": "soccer_norway_eliteserien:draw_no_bet",
+      "error": "Markets not supported by this endpoint: draw_no_bet",
+      "statusCode": 422
+    },
+    {
+      "label": "soccer_norway_eliteserien:double_chance",
       "error": "Markets not supported by this endpoint: double_chance",
       "statusCode": 422
     },
@@ -4745,5 +4673,5 @@
   },
   "skipped": false,
   "skipReason": null,
-  "completedAt": "2026-08-05T18:39:50.693Z"
+  "completedAt": "2026-08-05T19:00:57.916Z"
 }
