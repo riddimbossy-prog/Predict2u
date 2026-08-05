@@ -1,6 +1,6 @@
 {
   "version": "v251",
-  "generatedAt": "2026-08-05T18:10:26.251Z",
+  "generatedAt": "2026-08-05T18:20:28.379Z",
   "provider": "The Odds API v4",
   "keyPresent": true,
   "regions": "uk",
@@ -13,7 +13,7 @@
       "sportKey": "soccer_concacaf_leagues_cup",
       "sportTitle": "Leagues Cup",
       "score": 0.52,
-      "matches": 5
+      "matches": 3
     },
     {
       "league": "Cup",
@@ -29,7 +29,7 @@
       "sportKey": "soccer_denmark_superliga",
       "sportTitle": "Denmark Superliga",
       "score": 0.347,
-      "matches": 16
+      "matches": 14
     },
     {
       "league": "UEFA Champions League Women",
@@ -37,15 +37,7 @@
       "sportKey": "soccer_uefa_champs_league_qualification",
       "sportTitle": "UEFA Champions League Qualification",
       "score": 0.375,
-      "matches": 11
-    },
-    {
-      "league": "Ykkönen",
-      "country": "Finland",
-      "sportKey": "soccer_finland_veikkausliiga",
-      "sportTitle": "Veikkausliiga - Finland",
-      "score": 0.38,
-      "matches": 8
+      "matches": 10
     },
     {
       "league": "UEFA Champions League",
@@ -104,20 +96,20 @@
       "matches": 31
     },
     {
-      "league": "Cup",
-      "country": "Russia",
-      "sportKey": "soccer_concacaf_leagues_cup",
-      "sportTitle": "Leagues Cup",
-      "score": 0.52,
-      "matches": 2
-    },
-    {
       "league": "Copa Rio",
       "country": "Brazil",
       "sportKey": "soccer_brazil_campeonato",
       "sportTitle": "Brazil Série A",
       "score": 0.305,
       "matches": 4
+    },
+    {
+      "league": "Cup",
+      "country": "Russia",
+      "sportKey": "soccer_concacaf_leagues_cup",
+      "sportTitle": "Leagues Cup",
+      "score": 0.52,
+      "matches": 2
     },
     {
       "league": "Brasileiro U17",
@@ -213,7 +205,7 @@
       "sportKey": "soccer_argentina_primera_division",
       "sportTitle": "Primera División - Argentina",
       "score": 0.653,
-      "matches": 4
+      "matches": 5
     },
     {
       "league": "USL League One",
@@ -438,6 +430,14 @@
       "sportTitle": "Veikkausliiga - Finland",
       "score": 0.323,
       "matches": 5
+    },
+    {
+      "league": "Ykkönen",
+      "country": "Finland",
+      "sportKey": "soccer_finland_veikkausliiga",
+      "sportTitle": "Veikkausliiga - Finland",
+      "score": 0.38,
+      "matches": 7
     },
     {
       "league": "Frauenliga",
@@ -968,14 +968,6 @@
       "matches": 11
     },
     {
-      "league": "Primera División - Apertura",
-      "country": "Uruguay",
-      "sportKey": "soccer_argentina_primera_division",
-      "sportTitle": "Primera División - Argentina",
-      "score": 0.286,
-      "matches": 5
-    },
-    {
       "league": "Serie B",
       "country": "Brazil",
       "sportKey": "soccer_brazil_serie_b",
@@ -1440,6 +1432,14 @@
       "matches": 6
     },
     {
+      "league": "Primera División - Apertura",
+      "country": "Uruguay",
+      "sportKey": "soccer_argentina_primera_division",
+      "sportTitle": "Primera División - Argentina",
+      "score": 0.286,
+      "matches": 4
+    },
+    {
       "league": "Júniores U19",
       "country": "Portugal",
       "sportKey": "soccer_portugal_primeira_liga",
@@ -1672,7 +1672,7 @@
       "matches": 1
     }
   ],
-  "matchesConsidered": 2595,
+  "matchesConsidered": 2581,
   "matchesMatched": 0,
   "matchesUpdated": 0,
   "fieldsFilled": 0,
@@ -1796,16 +1796,16 @@
       "bestScore": 0.222
     },
     {
-      "league": "Piala Presiden",
-      "country": "Indonesia",
-      "reason": "No matching soccer sport key",
-      "bestScore": 0
-    },
-    {
       "league": "1. Division",
       "country": "Kazakhstan",
       "reason": "No matching soccer sport key",
       "bestScore": 0.143
+    },
+    {
+      "league": "Piala Presiden",
+      "country": "Indonesia",
+      "reason": "No matching soccer sport key",
+      "bestScore": 0
     },
     {
       "league": "1. Deild",
@@ -1904,14 +1904,14 @@
       "bestScore": 0.143
     },
     {
-      "league": "Third League - Southeast",
-      "country": "Bulgaria",
+      "league": "Liga II",
+      "country": "Romania",
       "reason": "No matching soccer sport key",
       "bestScore": 0.143
     },
     {
-      "league": "Liga II",
-      "country": "Romania",
+      "league": "Third League - Southeast",
+      "country": "Bulgaria",
       "reason": "No matching soccer sport key",
       "bestScore": 0.143
     },
@@ -2325,18 +2325,6 @@
     },
     {
       "league": "Cup",
-      "home": "Górnik Łęczna",
-      "away": "Kalisz",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Cup",
-      "home": "Sandecja Nowy Sącz",
-      "away": "Rekord Bielsko-Biała",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Cup",
       "home": "Tychy 71",
       "away": "Zaglebie Sosnowiec",
       "reason": "No event/team match"
@@ -2655,12 +2643,6 @@
     },
     {
       "league": "DBU Pokalen",
-      "home": "Hobro",
-      "away": "Vendsyssel FF",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "DBU Pokalen",
       "home": "Odder",
       "away": "Skive",
       "reason": "No event/team match"
@@ -2669,12 +2651,6 @@
       "league": "DBU Pokalen",
       "home": "Varde",
       "away": "OKS",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "DBU Pokalen",
-      "home": "Vatanspor",
-      "away": "Nørresundby",
       "reason": "No event/team match"
     },
     {
@@ -2889,12 +2865,6 @@
     },
     {
       "league": "UEFA Champions League Women",
-      "home": "St. Pölten W",
-      "away": "Young Boys W",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "UEFA Champions League Women",
       "home": "Racing W",
       "away": "HJK W",
       "reason": "No event/team match"
@@ -3020,165 +2990,195 @@
       "reason": "No event/team match"
     },
     {
-      "league": "Ykkönen",
-      "home": "VJS",
-      "away": "PKKU",
+      "league": "3. Division - Girone 2",
+      "home": "Ranheim II",
+      "away": "NTNUI",
       "reason": "No event/team match"
     },
     {
-      "league": "Ykkönen",
-      "home": "KuPS Akatemia",
-      "away": "Inter Turku II",
+      "league": "3. Division - Girone 2",
+      "home": "Volda",
+      "away": "Nardo",
       "reason": "No event/team match"
     },
     {
-      "league": "Ykkönen",
-      "home": "KPV-j",
-      "away": "VJS",
+      "league": "3. Division - Girone 2",
+      "home": "Melhus",
+      "away": "Orkla",
       "reason": "No event/team match"
     },
     {
-      "league": "Ykkönen",
-      "home": "FC jazz",
-      "away": "OLS",
+      "league": "3. Division - Girone 2",
+      "home": "Spjelkavik",
+      "away": "Strindheim",
       "reason": "No event/team match"
     },
     {
-      "league": "Ykkönen",
-      "home": "JJK",
-      "away": "Tampere United",
+      "league": "3. Division - Girone 2",
+      "home": "NTNUI",
+      "away": "Byåsen",
       "reason": "No event/team match"
     },
     {
-      "league": "Ykkönen",
-      "home": "PKKU",
-      "away": "Inter Turku II",
+      "league": "3. Division - Girone 2",
+      "home": "Molde II",
+      "away": "Kvik Trondheim",
       "reason": "No event/team match"
     },
     {
-      "league": "Ykkönen",
-      "home": "Rops",
-      "away": "KuPS Akatemia",
+      "league": "3. Division - Girone 2",
+      "home": "Aalesund II",
+      "away": "Herd",
       "reason": "No event/team match"
     },
     {
-      "league": "Ykkönen",
-      "home": "TPV",
-      "away": "SalPa",
+      "league": "3. Division - Girone 2",
+      "home": "Rosenborg II",
+      "away": "Ranheim II",
       "reason": "No event/team match"
     },
     {
-      "league": "Ykkösliiga",
-      "home": "Haka",
-      "away": "JIPPO",
+      "league": "Nasjonal U19 Champions League",
+      "home": "Sandefjord U19",
+      "away": "Åsane U19",
       "reason": "No event/team match"
     },
     {
-      "league": "Ykkösliiga",
-      "home": "JäPS",
-      "away": "MP",
+      "league": "Nasjonal U19 Champions League",
+      "home": "Lillestrøm U19",
+      "away": "Aalesunds U19",
       "reason": "No event/team match"
     },
     {
-      "league": "Ykkösliiga",
-      "home": "KäPa",
-      "away": "EIF",
+      "league": "Nasjonal U19 Champions League",
+      "home": "Stabæk U19",
+      "away": "Fredrikstad FK U19",
       "reason": "No event/team match"
     },
     {
-      "league": "Ykkösliiga",
-      "home": "SJK Akatemia",
-      "away": "PK-35",
+      "league": "Nasjonal U19 Champions League",
+      "home": "Rosenborg U19",
+      "away": "Molde U19",
       "reason": "No event/team match"
     },
     {
-      "league": "Ykkösliiga",
-      "home": "Klubi-04",
-      "away": "Kooteepee",
+      "league": "3. Division - Girone 5",
+      "home": "Fløya",
+      "away": "Ulfstind",
       "reason": "No event/team match"
     },
     {
-      "league": "Kakkonen - Lohko C",
-      "home": "Jaro 2",
-      "away": "JBK",
+      "league": "3. Division - Girone 5",
+      "home": "Skedsmo",
+      "away": "Fauske Sprint",
       "reason": "No event/team match"
     },
     {
-      "league": "Kakkonen - Lohko C",
-      "home": "GBK",
-      "away": "Huima / Urho",
+      "league": "3. Division - Girone 5",
+      "home": "Finnsnes",
+      "away": "Bossekop",
       "reason": "No event/team match"
     },
     {
-      "league": "Kakkonen - Lohko C",
-      "home": "TP-47",
-      "away": "Kraft",
+      "league": "3. Division - Girone 5",
+      "home": "Tromsø II",
+      "away": "Alta",
       "reason": "No event/team match"
     },
     {
-      "league": "Kakkonen - Lohko C",
-      "home": "Vaajakoski",
-      "away": "VPS II",
+      "league": "3. Division - Girone 5",
+      "home": "Harstad",
+      "away": "Skjervøy",
       "reason": "No event/team match"
     },
     {
-      "league": "Kakkonen - Lohko C",
-      "home": "JS Hercules",
-      "away": "SJK-juniorit",
+      "league": "3. Division - Girone 5",
+      "home": "Skjetten",
+      "away": "Lillestrøm II",
       "reason": "No event/team match"
     },
     {
-      "league": "Kakkonen - Lohko A",
-      "home": "Atlantis",
-      "away": "Reipas",
+      "league": "3. Division - Girone 5",
+      "home": "Kongsvinger II",
+      "away": "Strømsgodset II",
       "reason": "No event/team match"
     },
     {
-      "league": "Kakkonen - Lohko A",
-      "home": "Kiffen",
-      "away": "Union Plaani",
+      "league": "3. Division - Girone 4",
+      "home": "Åkra",
+      "away": "Varhaug",
       "reason": "No event/team match"
     },
     {
-      "league": "Kakkonen - Lohko A",
-      "home": "PEPO",
-      "away": "MyPa",
+      "league": "3. Division - Girone 4",
+      "home": "Odd II",
+      "away": "Staal Jørpeland",
       "reason": "No event/team match"
     },
     {
-      "league": "Kakkonen - Lohko A",
-      "home": "PPJ",
-      "away": "HPS",
+      "league": "3. Division - Girone 4",
+      "home": "Hinna",
+      "away": "Flekkerøy",
       "reason": "No event/team match"
     },
     {
-      "league": "Kakkonen - Lohko A",
-      "home": "HIFK Helsinki",
-      "away": "PuiU Helsinki",
+      "league": "3. Division - Girone 4",
+      "home": "Madla",
+      "away": "Vindbjart",
       "reason": "No event/team match"
     },
     {
-      "league": "Veikkausliiga",
-      "home": "SJK",
-      "away": "Gnistan",
+      "league": "3. Division - Girone 4",
+      "home": "Mandalskameratene",
+      "away": "Brodd",
       "reason": "No event/team match"
     },
     {
-      "league": "Veikkausliiga",
-      "home": "FF Jaro",
-      "away": "VPS",
+      "league": "3. Division - Girone 4",
+      "home": "Stabæk II",
+      "away": "Våg",
       "reason": "No event/team match"
     },
     {
-      "league": "Veikkausliiga",
-      "home": "KuPS",
-      "away": "Turku PS",
+      "league": "3. Division - Girone 4",
+      "home": "Haugesund II",
+      "away": "Viking II",
       "reason": "No event/team match"
     },
     {
-      "league": "Veikkausliiga",
-      "home": "Inter Turku",
-      "away": "Lahti",
+      "league": "Eliteserien",
+      "home": "Sandefjord",
+      "away": "KFUM Oslo",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Eliteserien",
+      "home": "Valerenga",
+      "away": "Bodo/Glimt",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Eliteserien",
+      "home": "Viking",
+      "away": "Sarpsborg 08 FF",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Eliteserien",
+      "home": "Start",
+      "away": "Fredrikstad",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Eliteserien",
+      "home": "Lillestrom",
+      "away": "Rosenborg",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Eliteserien",
+      "home": "Ham-Kam",
+      "away": "Aalesund",
       "reason": "No event/team match"
     }
   ],
@@ -3220,18 +3220,6 @@
       "market": "double_chance"
     },
     {
-      "sportKey": "soccer_finland_veikkausliiga",
-      "market": "btts"
-    },
-    {
-      "sportKey": "soccer_finland_veikkausliiga",
-      "market": "draw_no_bet"
-    },
-    {
-      "sportKey": "soccer_finland_veikkausliiga",
-      "market": "double_chance"
-    },
-    {
       "sportKey": "soccer_norway_eliteserien",
       "market": "btts"
     },
@@ -3469,6 +3457,18 @@
     },
     {
       "sportKey": "soccer_poland_ekstraklasa",
+      "market": "double_chance"
+    },
+    {
+      "sportKey": "soccer_finland_veikkausliiga",
+      "market": "btts"
+    },
+    {
+      "sportKey": "soccer_finland_veikkausliiga",
+      "market": "draw_no_bet"
+    },
+    {
+      "sportKey": "soccer_finland_veikkausliiga",
       "market": "double_chance"
     },
     {
@@ -3737,31 +3737,6 @@
     },
     {
       "label": "soccer_uefa_champs_league_qualification:double_chance",
-      "error": "Markets not supported by this endpoint: double_chance",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_finland_veikkausliiga:base-combined",
-      "error": "Markets not supported by this endpoint: btts, double_chance, draw_no_bet",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_finland_veikkausliiga:base-core",
-      "error": "Invalid commenceTimeFrom parameter. The format must be YYYY-MM-DDTHH:MM:SSZ, for example 2020-11-24T16:05:00Z",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_finland_veikkausliiga:btts",
-      "error": "Markets not supported by this endpoint: btts",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_finland_veikkausliiga:draw_no_bet",
-      "error": "Markets not supported by this endpoint: draw_no_bet",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_finland_veikkausliiga:double_chance",
       "error": "Markets not supported by this endpoint: double_chance",
       "statusCode": 422
     },
@@ -4266,6 +4241,31 @@
       "statusCode": 422
     },
     {
+      "label": "soccer_finland_veikkausliiga:base-combined",
+      "error": "Markets not supported by this endpoint: btts, double_chance, draw_no_bet",
+      "statusCode": 422
+    },
+    {
+      "label": "soccer_finland_veikkausliiga:base-core",
+      "error": "Invalid commenceTimeFrom parameter. The format must be YYYY-MM-DDTHH:MM:SSZ, for example 2020-11-24T16:05:00Z",
+      "statusCode": 422
+    },
+    {
+      "label": "soccer_finland_veikkausliiga:btts",
+      "error": "Markets not supported by this endpoint: btts",
+      "statusCode": 422
+    },
+    {
+      "label": "soccer_finland_veikkausliiga:draw_no_bet",
+      "error": "Markets not supported by this endpoint: draw_no_bet",
+      "statusCode": 422
+    },
+    {
+      "label": "soccer_finland_veikkausliiga:double_chance",
+      "error": "Markets not supported by this endpoint: double_chance",
+      "statusCode": 422
+    },
+    {
       "label": "soccer_austria_bundesliga:base-combined",
       "error": "Markets not supported by this endpoint: btts, double_chance, draw_no_bet",
       "statusCode": 422
@@ -4673,5 +4673,5 @@
   },
   "skipped": false,
   "skipReason": null,
-  "completedAt": "2026-08-05T18:10:57.469Z"
+  "completedAt": "2026-08-05T18:20:58.891Z"
 }
