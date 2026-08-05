@@ -1,6 +1,6 @@
 {
   "version": "v251",
-  "generatedAt": "2026-08-05T17:50:19.964Z",
+  "generatedAt": "2026-08-05T18:10:26.251Z",
   "provider": "The Odds API v4",
   "keyPresent": true,
   "regions": "uk",
@@ -29,7 +29,7 @@
       "sportKey": "soccer_denmark_superliga",
       "sportTitle": "Denmark Superliga",
       "score": 0.347,
-      "matches": 17
+      "matches": 16
     },
     {
       "league": "UEFA Champions League Women",
@@ -104,20 +104,20 @@
       "matches": 31
     },
     {
-      "league": "Copa Rio",
-      "country": "Brazil",
-      "sportKey": "soccer_brazil_campeonato",
-      "sportTitle": "Brazil Série A",
-      "score": 0.305,
-      "matches": 4
-    },
-    {
       "league": "Cup",
       "country": "Russia",
       "sportKey": "soccer_concacaf_leagues_cup",
       "sportTitle": "Leagues Cup",
       "score": 0.52,
       "matches": 2
+    },
+    {
+      "league": "Copa Rio",
+      "country": "Brazil",
+      "sportKey": "soccer_brazil_campeonato",
+      "sportTitle": "Brazil Série A",
+      "score": 0.305,
+      "matches": 4
     },
     {
       "league": "Brasileiro U17",
@@ -213,7 +213,7 @@
       "sportKey": "soccer_argentina_primera_division",
       "sportTitle": "Primera División - Argentina",
       "score": 0.653,
-      "matches": 5
+      "matches": 4
     },
     {
       "league": "USL League One",
@@ -968,6 +968,14 @@
       "matches": 11
     },
     {
+      "league": "Primera División - Apertura",
+      "country": "Uruguay",
+      "sportKey": "soccer_argentina_primera_division",
+      "sportTitle": "Primera División - Argentina",
+      "score": 0.286,
+      "matches": 5
+    },
+    {
       "league": "Serie B",
       "country": "Brazil",
       "sportKey": "soccer_brazil_serie_b",
@@ -1432,14 +1440,6 @@
       "matches": 6
     },
     {
-      "league": "Primera División - Apertura",
-      "country": "Uruguay",
-      "sportKey": "soccer_argentina_primera_division",
-      "sportTitle": "Primera División - Argentina",
-      "score": 0.286,
-      "matches": 4
-    },
-    {
       "league": "Júniores U19",
       "country": "Portugal",
       "sportKey": "soccer_portugal_primeira_liga",
@@ -1672,7 +1672,7 @@
       "matches": 1
     }
   ],
-  "matchesConsidered": 2597,
+  "matchesConsidered": 2595,
   "matchesMatched": 0,
   "matchesUpdated": 0,
   "fieldsFilled": 0,
@@ -1796,16 +1796,16 @@
       "bestScore": 0.222
     },
     {
-      "league": "1. Division",
-      "country": "Kazakhstan",
-      "reason": "No matching soccer sport key",
-      "bestScore": 0.143
-    },
-    {
       "league": "Piala Presiden",
       "country": "Indonesia",
       "reason": "No matching soccer sport key",
       "bestScore": 0
+    },
+    {
+      "league": "1. Division",
+      "country": "Kazakhstan",
+      "reason": "No matching soccer sport key",
+      "bestScore": 0.143
     },
     {
       "league": "1. Deild",
@@ -1904,14 +1904,14 @@
       "bestScore": 0.143
     },
     {
-      "league": "Liga II",
-      "country": "Romania",
+      "league": "Third League - Southeast",
+      "country": "Bulgaria",
       "reason": "No matching soccer sport key",
       "bestScore": 0.143
     },
     {
-      "league": "Third League - Southeast",
-      "country": "Bulgaria",
+      "league": "Liga II",
+      "country": "Romania",
       "reason": "No matching soccer sport key",
       "bestScore": 0.143
     },
@@ -2655,12 +2655,6 @@
     },
     {
       "league": "DBU Pokalen",
-      "home": "Hedensted",
-      "away": "Marienlyst",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "DBU Pokalen",
       "home": "Hobro",
       "away": "Vendsyssel FF",
       "reason": "No event/team match"
@@ -3179,6 +3173,12 @@
       "league": "Veikkausliiga",
       "home": "KuPS",
       "away": "Turku PS",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Veikkausliiga",
+      "home": "Inter Turku",
+      "away": "Lahti",
       "reason": "No event/team match"
     }
   ],
@@ -4673,5 +4673,5 @@
   },
   "skipped": false,
   "skipReason": null,
-  "completedAt": "2026-08-05T17:50:29.434Z"
+  "completedAt": "2026-08-05T18:10:57.469Z"
 }
