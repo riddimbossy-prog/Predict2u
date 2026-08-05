@@ -1,14 +1,14 @@
 {
   "version": "v194",
-  "updated": "2026-08-04T23:32:58.393Z",
+  "updated": "2026-08-05T00:45:13.998Z",
   "summary": {
-    "settled": 1093,
-    "winRate": 0.8024,
+    "settled": 1096,
+    "winRate": 0.8029,
     "engines": 13,
     "approved": 2,
-    "shadow": 9,
+    "shadow": 10,
     "hold": 1,
-    "rollback": 1,
+    "rollback": 0,
     "dataQualityFailures": 221,
     "duplicateDecisions": 0,
     "noBetSample": 0
@@ -45,7 +45,7 @@
         "distributionShift": 0.1,
         "status": "DRIFT"
       },
-      "updated": "2026-08-04T23:32:58.390Z"
+      "updated": "2026-08-05T00:45:13.996Z"
     },
     "Prime": {
       "engine": "Prime",
@@ -78,7 +78,7 @@
         "distributionShift": 0.293,
         "status": "STABLE"
       },
-      "updated": "2026-08-04T23:32:58.390Z"
+      "updated": "2026-08-05T00:45:13.996Z"
     },
     "Value": {
       "engine": "Value",
@@ -111,7 +111,7 @@
         "distributionShift": 0.8,
         "status": "STABLE"
       },
-      "updated": "2026-08-04T23:32:58.390Z"
+      "updated": "2026-08-05T00:45:13.996Z"
     },
     "Pro": {
       "engine": "Pro",
@@ -144,7 +144,7 @@
         "distributionShift": 0.8,
         "status": "STABLE"
       },
-      "updated": "2026-08-04T23:32:58.391Z"
+      "updated": "2026-08-05T00:45:13.996Z"
     },
     "Ultra": {
       "engine": "Ultra",
@@ -177,7 +177,7 @@
         "distributionShift": 0.6,
         "status": "STABLE"
       },
-      "updated": "2026-08-04T23:32:58.391Z"
+      "updated": "2026-08-05T00:45:13.996Z"
     },
     "Elite": {
       "engine": "Elite",
@@ -210,7 +210,7 @@
         "distributionShift": 0.5,
         "status": "STABLE"
       },
-      "updated": "2026-08-04T23:32:58.391Z"
+      "updated": "2026-08-05T00:45:13.996Z"
     },
     "Apex": {
       "engine": "Apex",
@@ -243,26 +243,26 @@
         "distributionShift": 0.5,
         "status": "STABLE"
       },
-      "updated": "2026-08-04T23:32:58.391Z"
+      "updated": "2026-08-05T00:45:13.996Z"
     },
     "Halves": {
       "engine": "Halves",
-      "state": "ROLLBACK",
-      "reason": "Validation performance fell materially below training performance.",
+      "state": "SHADOW",
+      "reason": "Needs a larger forward validation sample.",
       "train": {
-        "sample": 201,
+        "sample": 202,
         "wins": 171,
-        "losses": 30,
-        "rate": 0.8507
+        "losses": 31,
+        "rate": 0.8465
       },
       "validation": {
         "sample": 87,
-        "wins": 67,
-        "losses": 20,
-        "rate": 0.7701
+        "wins": 68,
+        "losses": 19,
+        "rate": 0.7816
       },
-      "validationDelta": -0.0806,
-      "calibrationError": 0.1107,
+      "validationDelta": -0.0649,
+      "calibrationError": 0.0992,
       "shadow": {
         "eligible": 0,
         "avoidedLosses": 0,
@@ -272,11 +272,11 @@
       "drift": {
         "recentSample": 30,
         "priorSample": 30,
-        "confidenceShift": -2.53,
+        "confidenceShift": -2.48,
         "distributionShift": 0,
         "status": "STABLE"
       },
-      "updated": "2026-08-04T23:32:58.391Z"
+      "updated": "2026-08-05T00:45:13.996Z"
     },
     "Streaks": {
       "engine": "Streaks",
@@ -309,17 +309,17 @@
         "distributionShift": 0.5,
         "status": "STABLE"
       },
-      "updated": "2026-08-04T23:32:58.391Z"
+      "updated": "2026-08-05T00:45:13.996Z"
     },
     "Trend": {
       "engine": "Trend",
       "state": "APPROVED",
       "reason": "Forward validation, calibration and drift checks passed.",
       "train": {
-        "sample": 149,
-        "wins": 126,
+        "sample": 150,
+        "wins": 127,
         "losses": 23,
-        "rate": 0.8456
+        "rate": 0.8467
       },
       "validation": {
         "sample": 65,
@@ -327,8 +327,8 @@
         "losses": 11,
         "rate": 0.8308
       },
-      "validationDelta": -0.0148,
-      "calibrationError": 0.0579,
+      "validationDelta": -0.0159,
+      "calibrationError": 0.0572,
       "shadow": {
         "eligible": 0,
         "avoidedLosses": 0,
@@ -338,21 +338,21 @@
       "drift": {
         "recentSample": 30,
         "priorSample": 30,
-        "confidenceShift": 0.73,
-        "distributionShift": 0.233,
+        "confidenceShift": 0.69,
+        "distributionShift": 0.267,
         "status": "STABLE"
       },
-      "updated": "2026-08-04T23:32:58.391Z"
+      "updated": "2026-08-05T00:45:13.996Z"
     },
     "League Bias": {
       "engine": "League Bias",
       "state": "APPROVED",
       "reason": "Forward validation, calibration and drift checks passed.",
       "train": {
-        "sample": 211,
-        "wins": 181,
+        "sample": 212,
+        "wins": 182,
         "losses": 30,
-        "rate": 0.8578
+        "rate": 0.8585
       },
       "validation": {
         "sample": 91,
@@ -360,8 +360,8 @@
         "losses": 15,
         "rate": 0.8352
       },
-      "validationDelta": -0.0226,
-      "calibrationError": 0.0427,
+      "validationDelta": -0.0233,
+      "calibrationError": 0.0425,
       "shadow": {
         "eligible": 0,
         "avoidedLosses": 0,
@@ -371,11 +371,11 @@
       "drift": {
         "recentSample": 30,
         "priorSample": 30,
-        "confidenceShift": 0.33,
-        "distributionShift": 0.1,
+        "confidenceShift": 0.44,
+        "distributionShift": 0.167,
         "status": "STABLE"
       },
-      "updated": "2026-08-04T23:32:58.391Z"
+      "updated": "2026-08-05T00:45:13.997Z"
     },
     "Strict": {
       "engine": "Strict",
@@ -408,7 +408,7 @@
         "distributionShift": 0.5,
         "status": "STABLE"
       },
-      "updated": "2026-08-04T23:32:58.391Z"
+      "updated": "2026-08-05T00:45:13.997Z"
     },
     "Momentum": {
       "engine": "Momentum",
@@ -441,33 +441,33 @@
         "distributionShift": 0.5,
         "status": "STABLE"
       },
-      "updated": "2026-08-04T23:32:58.391Z"
+      "updated": "2026-08-05T00:45:13.997Z"
     }
   },
   "marketScorecards": [
     {
       "marketFamily": "OTHER",
-      "sample": 287,
-      "wins": 237,
+      "sample": 288,
+      "wins": 238,
       "losses": 50,
-      "rate": 0.8258,
-      "calibrationError": 0.0625
+      "rate": 0.8264,
+      "calibrationError": 0.062
     },
     {
       "marketFamily": "HOME_TEAM",
-      "sample": 239,
-      "wins": 198,
+      "sample": 240,
+      "wins": 199,
       "losses": 41,
-      "rate": 0.8285,
-      "calibrationError": 0.0609
+      "rate": 0.8292,
+      "calibrationError": 0.0601
     },
     {
       "marketFamily": "MATCH_UNDER",
-      "sample": 162,
-      "wins": 130,
+      "sample": 163,
+      "wins": 131,
       "losses": 32,
-      "rate": 0.8025,
-      "calibrationError": 0.0119
+      "rate": 0.8037,
+      "calibrationError": 0.0113
     },
     {
       "marketFamily": "HOME_RESULT",
@@ -702,6 +702,13 @@
       "rate": 0.7273
     },
     {
+      "league": "Brasileiro U17",
+      "sample": 11,
+      "wins": 8,
+      "losses": 3,
+      "rate": 0.7273
+    },
+    {
       "league": "Second League - Group 3",
       "sample": 11,
       "wins": 5,
@@ -756,13 +763,6 @@
       "wins": 9,
       "losses": 0,
       "rate": 1
-    },
-    {
-      "league": "Brasileiro U17",
-      "sample": 9,
-      "wins": 6,
-      "losses": 3,
-      "rate": 0.6667
     },
     {
       "league": "Catarinense U20",
