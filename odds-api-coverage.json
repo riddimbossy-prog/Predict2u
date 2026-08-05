@@ -1,6 +1,6 @@
 {
   "version": "v251",
-  "generatedAt": "2026-08-05T11:40:16.869Z",
+  "generatedAt": "2026-08-05T11:32:57.456Z",
   "provider": "The Odds API v4",
   "keyPresent": true,
   "regions": "uk",
@@ -8,12 +8,20 @@
   "soccerSportsAvailable": 45,
   "sportMappings": [
     {
+      "league": "UEFA Champions League Women",
+      "country": "World",
+      "sportKey": "soccer_uefa_champs_league_qualification",
+      "sportTitle": "UEFA Champions League Qualification",
+      "score": 0.375,
+      "matches": 21
+    },
+    {
       "league": "Premier League",
       "country": "Bhutan",
       "sportKey": "soccer_epl",
       "sportTitle": "EPL",
       "score": 0.987,
-      "matches": 1
+      "matches": 2
     },
     {
       "league": "UEFA Champions League Women",
@@ -232,6 +240,14 @@
       "matches": 4
     },
     {
+      "league": "Primera División - Apertura",
+      "country": "Uruguay",
+      "sportKey": "soccer_argentina_primera_division",
+      "sportTitle": "Primera División - Argentina",
+      "score": 0.286,
+      "matches": 9
+    },
+    {
       "league": "USL League One",
       "country": "USA",
       "sportKey": "soccer_usa_mls",
@@ -285,6 +301,14 @@
       "sportKey": "soccer_greece_super_league",
       "sportTitle": "Super League - Greece",
       "score": 0.653,
+      "matches": 8
+    },
+    {
+      "league": "Premier League",
+      "country": "Kyrgyzstan",
+      "sportKey": "soccer_epl",
+      "sportTitle": "EPL",
+      "score": 0.987,
       "matches": 8
     },
     {
@@ -1232,6 +1256,14 @@
       "matches": 8
     },
     {
+      "league": "Cearense U20",
+      "country": "Brazil",
+      "sportKey": "soccer_brazil_campeonato",
+      "sportTitle": "Brazil Série A",
+      "score": 0.305,
+      "matches": 2
+    },
+    {
       "league": "Premier League",
       "country": "Russia",
       "sportKey": "soccer_epl",
@@ -1520,14 +1552,6 @@
       "matches": 4
     },
     {
-      "league": "Cearense U20",
-      "country": "Brazil",
-      "sportKey": "soccer_brazil_campeonato",
-      "sportTitle": "Brazil Série A",
-      "score": 0.305,
-      "matches": 1
-    },
-    {
       "league": "Copa Paulista",
       "country": "Brazil",
       "sportKey": "soccer_brazil_campeonato",
@@ -1648,7 +1672,7 @@
       "matches": 1
     }
   ],
-  "matchesConsidered": 2626,
+  "matchesConsidered": 2654,
   "matchesMatched": 0,
   "matchesUpdated": 0,
   "fieldsFilled": 0,
@@ -1748,6 +1772,12 @@
       "bestScore": 0.143
     },
     {
+      "league": "CAC Games",
+      "country": "World",
+      "reason": "No matching soccer sport key",
+      "bestScore": 0
+    },
+    {
       "league": "Africa Cup of Nations - Women",
       "country": "World",
       "reason": "No matching soccer sport key",
@@ -1788,6 +1818,12 @@
       "country": "Australia",
       "reason": "No matching soccer sport key",
       "bestScore": 0.222
+    },
+    {
+      "league": "Piala Presiden",
+      "country": "Indonesia",
+      "reason": "No matching soccer sport key",
+      "bestScore": 0
     },
     {
       "league": "1. Division",
@@ -1832,6 +1868,12 @@
       "bestScore": 0
     },
     {
+      "league": "South Australia NPL",
+      "country": "Australia",
+      "reason": "No matching soccer sport key",
+      "bestScore": 0
+    },
+    {
       "league": "New South Wales NPL 2",
       "country": "Australia",
       "reason": "No matching soccer sport key",
@@ -1856,16 +1898,16 @@
       "bestScore": 0.167
     },
     {
-      "league": "South Australia NPL",
-      "country": "Australia",
-      "reason": "No matching soccer sport key",
-      "bestScore": 0
-    },
-    {
       "league": "ASEAN Championship",
       "country": "World",
       "reason": "No matching soccer sport key",
       "bestScore": 0.167
+    },
+    {
+      "league": "CECAFA Club Cup",
+      "country": "World",
+      "reason": "No matching soccer sport key",
+      "bestScore": 0.143
     },
     {
       "league": "First League",
@@ -2234,16 +2276,16 @@
       "bestScore": 0.125
     },
     {
-      "league": "Liga Nacional",
-      "country": "Honduras",
-      "reason": "No matching soccer sport key",
-      "bestScore": 0.143
-    },
-    {
       "league": "Liga de Ascenso",
       "country": "Costa-Rica",
       "reason": "No matching soccer sport key",
       "bestScore": 0.111
+    },
+    {
+      "league": "Liga Nacional",
+      "country": "Honduras",
+      "reason": "No matching soccer sport key",
+      "bestScore": 0.143
     },
     {
       "league": "OFC Champions League",
@@ -2282,9 +2324,261 @@
       "bestScore": 0.167
     },
     {
+      "league": "UEFA Champions League Women",
+      "home": "Austria Wien W",
+      "away": "Hajduk Split W",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "UEFA Champions League Women",
+      "home": "SFK 2000 W",
+      "away": "PSV/Eindhoven W",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "UEFA Champions League Women",
+      "home": "Vålerenga W",
+      "away": "Malmö FF W",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "UEFA Champions League Women",
+      "home": "Metalist 1925 W",
+      "away": "Fenerbahce W",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "UEFA Champions League Women",
+      "home": "Sporting CP W",
+      "away": "SeaSters Odesa W",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "UEFA Champions League Women",
+      "home": "Ajax W",
+      "away": "Brøndby W",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "UEFA Champions League Women",
+      "home": "Gintra-Universitetas W",
+      "away": "Hearts W",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "UEFA Champions League Women",
+      "home": "Hammarby W",
+      "away": "Apolonia Fier W",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "UEFA Champions League Women",
+      "home": "Apollon Limassol W",
+      "away": "Czarni Sosnowiec W",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "UEFA Champions League Women",
+      "home": "Ferencváros W",
+      "away": "PAOK W",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "UEFA Champions League Women",
+      "home": "ŽNK Mura W",
+      "away": "Farul Constanţa W",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "UEFA Champions League Women",
+      "home": "St. Pölten W",
+      "away": "Young Boys W",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "UEFA Champions League Women",
+      "home": "Racing W",
+      "away": "HJK W",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "UEFA Champions League Women",
+      "home": "Eintracht Frankfurt W",
+      "away": "Omonia W",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "UEFA Champions League Women",
+      "home": "Køge W",
+      "away": "Riga W",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "UEFA Champions League Women",
+      "home": "OH Leuven W",
+      "away": "TSC W",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "UEFA Champions League Women",
+      "home": "Slavia Praha W",
+      "away": "Rangers W",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "UEFA Champions League Women",
+      "home": "Vllaznia W",
+      "away": "Spartak Myjava W",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "UEFA Champions League Women",
+      "home": "Juventus W",
+      "away": "Torreense W",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "UEFA Champions League Women",
+      "home": "Breidablik W",
+      "away": "Dinamo-BGU W",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "UEFA Champions League Women",
+      "home": "Servette Chênois W",
+      "away": "Aktobe W",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "UEFA Champions League",
+      "home": "Aarhus",
+      "away": "Sabah FA",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "UEFA Champions League",
+      "home": "Fenerbahçe",
+      "away": "Sturm Graz",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "UEFA Champions League",
+      "home": "Kairat Almaty",
+      "away": "Levski Sofia",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "UEFA Champions League",
+      "home": "Bodo/Glimt",
+      "away": "Union St. Gilloise",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "UEFA Champions League",
+      "home": "Sabah FA",
+      "away": "Aarhus",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "UEFA Champions League",
+      "home": "Kauno Žalgiris",
+      "away": "Dinamo Zagreb",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "UEFA Champions League",
+      "home": "NEC Nijmegen",
+      "away": "Olympiakos Piraeus",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "UEFA Champions League",
+      "home": "FK Crvena Zvezda",
+      "away": "Hapoel Beer Sheva",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "UEFA Champions League",
+      "home": "Celje",
+      "away": "Ararat-Armenia",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "UEFA Champions League",
+      "home": "Slovan Bratislava",
+      "away": "Mjallby AIF",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "UEFA Champions League",
+      "home": "Sturm Graz",
+      "away": "Fenerbahçe",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "UEFA Champions League",
+      "home": "Lyon",
+      "away": "Sparta Praha",
+      "reason": "No event/team match"
+    },
+    {
       "league": "Premier League",
       "home": "Ugyen Academy",
       "away": "BFF Academy U20",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Premier League",
+      "home": "Tsirang",
+      "away": "Thimphu",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Premier League",
+      "home": "Muras United",
+      "away": "Asia Talas",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Premier League",
+      "home": "Bishkek City",
+      "away": "Asiagoal",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Premier League",
+      "home": "Bars",
+      "away": "Alga",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Premier League",
+      "home": "Toktogul",
+      "away": "Ozgon",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Premier League",
+      "home": "Dordoi Bishkek",
+      "away": "Neftchi",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Premier League",
+      "home": "Talant",
+      "away": "Ilbirs",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Premier League",
+      "home": "Abdish-Ata",
+      "away": "Kara-Balta",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Premier League",
+      "home": "OshMU Aldier",
+      "away": "Alay",
       "reason": "No event/team match"
     },
     {
@@ -3065,96 +3359,6 @@
       "league": "Nasjonal U19 Champions League",
       "home": "Rosenborg U19",
       "away": "Molde U19",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "3. Division - Girone 2",
-      "home": "Ranheim II",
-      "away": "NTNUI",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "3. Division - Girone 2",
-      "home": "Volda",
-      "away": "Nardo",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "3. Division - Girone 2",
-      "home": "Melhus",
-      "away": "Orkla",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "3. Division - Girone 2",
-      "home": "Spjelkavik",
-      "away": "Strindheim",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "3. Division - Girone 2",
-      "home": "NTNUI",
-      "away": "Byåsen",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "3. Division - Girone 2",
-      "home": "Molde II",
-      "away": "Kvik Trondheim",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "3. Division - Girone 2",
-      "home": "Aalesund II",
-      "away": "Herd",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "3. Division - Girone 2",
-      "home": "Rosenborg II",
-      "away": "Ranheim II",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "3. Division - Girone 5",
-      "home": "Fløya",
-      "away": "Ulfstind",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "3. Division - Girone 5",
-      "home": "Skedsmo",
-      "away": "Fauske Sprint",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "3. Division - Girone 5",
-      "home": "Finnsnes",
-      "away": "Bossekop",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "3. Division - Girone 5",
-      "home": "Tromsø II",
-      "away": "Alta",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "3. Division - Girone 5",
-      "home": "Harstad",
-      "away": "Skjervøy",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "3. Division - Girone 5",
-      "home": "Skjetten",
-      "away": "Lillestrøm II",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "3. Division - Girone 5",
-      "home": "Kongsvinger II",
-      "away": "Strømsgodset II",
       "reason": "No event/team match"
     }
   ],
@@ -4649,5 +4853,5 @@
   },
   "skipped": false,
   "skipReason": null,
-  "completedAt": "2026-08-05T11:40:25.078Z"
+  "completedAt": "2026-08-05T11:33:25.339Z"
 }
