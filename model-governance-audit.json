@@ -2,6 +2,76 @@
   "version": "v194",
   "events": [
     {
+      "at": "2026-08-06T02:15:28.525Z",
+      "policies": [
+        {
+          "engine": "Normal",
+          "state": "HOLD",
+          "reason": "Prediction behaviour changed too sharply."
+        },
+        {
+          "engine": "Prime",
+          "state": "SHADOW",
+          "reason": "Needs a larger forward validation sample."
+        },
+        {
+          "engine": "Value",
+          "state": "SHADOW",
+          "reason": "Needs a larger forward validation sample."
+        },
+        {
+          "engine": "Pro",
+          "state": "SHADOW",
+          "reason": "Needs a larger forward validation sample."
+        },
+        {
+          "engine": "Ultra",
+          "state": "SHADOW",
+          "reason": "Needs a larger forward validation sample."
+        },
+        {
+          "engine": "Elite",
+          "state": "SHADOW",
+          "reason": "Needs a larger forward validation sample."
+        },
+        {
+          "engine": "Apex",
+          "state": "SHADOW",
+          "reason": "Needs a larger forward validation sample."
+        },
+        {
+          "engine": "Halves",
+          "state": "SHADOW",
+          "reason": "Needs a larger forward validation sample."
+        },
+        {
+          "engine": "Streaks",
+          "state": "SHADOW",
+          "reason": "Needs a larger forward validation sample."
+        },
+        {
+          "engine": "Trend",
+          "state": "APPROVED",
+          "reason": "Forward validation, calibration and drift checks passed."
+        },
+        {
+          "engine": "League Bias",
+          "state": "HOLD",
+          "reason": "Prediction behaviour changed too sharply."
+        },
+        {
+          "engine": "Strict",
+          "state": "SHADOW",
+          "reason": "Needs a larger forward validation sample."
+        },
+        {
+          "engine": "Momentum",
+          "state": "SHADOW",
+          "reason": "Needs a larger forward validation sample."
+        }
+      ]
+    },
+    {
       "at": "2026-08-05T01:58:43.537Z",
       "policies": [
         {

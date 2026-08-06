@@ -1,7 +1,7 @@
 {
   "version": "v193",
   "schemaVersion": 1,
-  "updated": "2026-08-06T01:00:03.196Z",
+  "updated": "2026-08-06T02:15:27.085Z",
   "minimumSamples": {
     "teamFavorite": 5,
     "teamUnderdog": 5,
@@ -12,10 +12,10 @@
   },
   "decayHalfLifeDays": 120,
   "summary": {
-    "settledFixtures": 642,
-    "settledDecisions": 1104,
+    "settledFixtures": 650,
+    "settledDecisions": 1114,
     "reviewedLosses": 150,
-    "attachedUpcoming": 2940,
+    "attachedUpcoming": 3112,
     "highRiskUpcoming": 0,
     "stableUpcoming": 0
   },
@@ -16869,25 +16869,25 @@
       "league": "Football League - Highland League",
       "leagueId": 730,
       "favorite": {
-        "sample": 1,
+        "sample": 2,
         "wins": 1,
-        "draws": 0,
+        "draws": 1,
         "losses": 0,
-        "winRate": 1,
-        "drawRate": 0,
+        "winRate": 0.4841,
+        "drawRate": 0.5159,
         "nonLossRate": 1,
         "upsetRate": 0,
         "nonLossWilson": {
-          "lower": 0.2065,
+          "lower": 0.3424,
           "mid": 1,
           "upper": 1
         },
         "winWilson": {
-          "lower": 0.2065,
-          "mid": 1,
-          "upper": 1
+          "lower": 0.0945,
+          "mid": 0.5,
+          "upper": 0.9055
         },
-        "decayedWeight": 0.93
+        "decayedWeight": 1.93
       },
       "underdog": {
         "sample": 0,
@@ -16931,11 +16931,32 @@
             "upper": 1
           },
           "decayedWeight": 0.93
+        },
+        "1.61-1.85": {
+          "sample": 1,
+          "wins": 0,
+          "draws": 1,
+          "losses": 0,
+          "winRate": 0,
+          "drawRate": 1,
+          "nonLossRate": 1,
+          "upsetRate": 0,
+          "nonLossWilson": {
+            "lower": 0.2065,
+            "mid": 1,
+            "upper": 1
+          },
+          "winWilson": {
+            "lower": 0,
+            "mid": 0,
+            "upper": 0.7935
+          },
+          "decayedWeight": 0.99
         }
       },
       "underdogUpsets": 0,
       "flags": [],
-      "patternStability": 100,
+      "patternStability": 84.5,
       "favoriteReliability": 100
     },
     "730|wick academy": {
@@ -16964,10 +16985,10 @@
         "decayedWeight": 0
       },
       "underdog": {
-        "sample": 1,
+        "sample": 2,
         "wins": 0,
         "draws": 0,
-        "losses": 1,
+        "losses": 2,
         "winRate": 0,
         "drawRate": 0,
         "nonLossRate": 0,
@@ -16975,14 +16996,14 @@
         "nonLossWilson": {
           "lower": 0,
           "mid": 0,
-          "upper": 0.7935
+          "upper": 0.6576
         },
         "winWilson": {
           "lower": 0,
           "mid": 0,
-          "upper": 0.7935
+          "upper": 0.6576
         },
-        "decayedWeight": 0.93
+        "decayedWeight": 1.93
       },
       "favoriteBands": {},
       "underdogUpsets": 0,
@@ -25412,6 +25433,258 @@
       "flags": [],
       "patternStability": 100,
       "favoriteReliability": 0
+    },
+    "730|inverurie loco works": {
+      "name": "Inverurie Loco Works",
+      "league": "Football League - Highland League",
+      "leagueId": 730,
+      "favorite": {
+        "sample": 0,
+        "wins": 0,
+        "draws": 0,
+        "losses": 0,
+        "winRate": null,
+        "drawRate": null,
+        "nonLossRate": 0,
+        "upsetRate": null,
+        "nonLossWilson": {
+          "lower": null,
+          "mid": null,
+          "upper": null
+        },
+        "winWilson": {
+          "lower": null,
+          "mid": null,
+          "upper": null
+        },
+        "decayedWeight": 0
+      },
+      "underdog": {
+        "sample": 1,
+        "wins": 0,
+        "draws": 1,
+        "losses": 0,
+        "winRate": 0,
+        "drawRate": 1,
+        "nonLossRate": 1,
+        "upsetRate": 0,
+        "nonLossWilson": {
+          "lower": 0.2065,
+          "mid": 1,
+          "upper": 1
+        },
+        "winWilson": {
+          "lower": 0,
+          "mid": 0,
+          "upper": 0.7935
+        },
+        "decayedWeight": 0.99
+      },
+      "favoriteBands": {},
+      "underdogUpsets": 0,
+      "flags": [],
+      "patternStability": 100,
+      "favoriteReliability": 0
+    },
+    "730|brora rangers": {
+      "name": "Brora Rangers",
+      "league": "Football League - Highland League",
+      "leagueId": 730,
+      "favorite": {
+        "sample": 1,
+        "wins": 1,
+        "draws": 0,
+        "losses": 0,
+        "winRate": 1,
+        "drawRate": 0,
+        "nonLossRate": 1,
+        "upsetRate": 0,
+        "nonLossWilson": {
+          "lower": 0.2065,
+          "mid": 1,
+          "upper": 1
+        },
+        "winWilson": {
+          "lower": 0.2065,
+          "mid": 1,
+          "upper": 1
+        },
+        "decayedWeight": 0.99
+      },
+      "underdog": {
+        "sample": 0,
+        "wins": 0,
+        "draws": 0,
+        "losses": 0,
+        "winRate": null,
+        "drawRate": null,
+        "nonLossRate": 0,
+        "upsetRate": null,
+        "nonLossWilson": {
+          "lower": null,
+          "mid": null,
+          "upper": null
+        },
+        "winWilson": {
+          "lower": null,
+          "mid": null,
+          "upper": null
+        },
+        "decayedWeight": 0
+      },
+      "favoriteBands": {
+        "1.01-1.35": {
+          "sample": 1,
+          "wins": 1,
+          "draws": 0,
+          "losses": 0,
+          "winRate": 1,
+          "drawRate": 0,
+          "nonLossRate": 1,
+          "upsetRate": 0,
+          "nonLossWilson": {
+            "lower": 0.2065,
+            "mid": 1,
+            "upper": 1
+          },
+          "winWilson": {
+            "lower": 0.2065,
+            "mid": 1,
+            "upper": 1
+          },
+          "decayedWeight": 0.99
+        }
+      },
+      "underdogUpsets": 0,
+      "flags": [],
+      "patternStability": 100,
+      "favoriteReliability": 100
+    },
+    "730|buckie thistle": {
+      "name": "Buckie Thistle",
+      "league": "Football League - Highland League",
+      "leagueId": 730,
+      "favorite": {
+        "sample": 1,
+        "wins": 1,
+        "draws": 0,
+        "losses": 0,
+        "winRate": 1,
+        "drawRate": 0,
+        "nonLossRate": 1,
+        "upsetRate": 0,
+        "nonLossWilson": {
+          "lower": 0.2065,
+          "mid": 1,
+          "upper": 1
+        },
+        "winWilson": {
+          "lower": 0.2065,
+          "mid": 1,
+          "upper": 1
+        },
+        "decayedWeight": 0.99
+      },
+      "underdog": {
+        "sample": 0,
+        "wins": 0,
+        "draws": 0,
+        "losses": 0,
+        "winRate": null,
+        "drawRate": null,
+        "nonLossRate": 0,
+        "upsetRate": null,
+        "nonLossWilson": {
+          "lower": null,
+          "mid": null,
+          "upper": null
+        },
+        "winWilson": {
+          "lower": null,
+          "mid": null,
+          "upper": null
+        },
+        "decayedWeight": 0
+      },
+      "favoriteBands": {
+        "1.01-1.35": {
+          "sample": 1,
+          "wins": 1,
+          "draws": 0,
+          "losses": 0,
+          "winRate": 1,
+          "drawRate": 0,
+          "nonLossRate": 1,
+          "upsetRate": 0,
+          "nonLossWilson": {
+            "lower": 0.2065,
+            "mid": 1,
+            "upper": 1
+          },
+          "winWilson": {
+            "lower": 0.2065,
+            "mid": 1,
+            "upper": 1
+          },
+          "decayedWeight": 0.99
+        }
+      },
+      "underdogUpsets": 0,
+      "flags": [],
+      "patternStability": 100,
+      "favoriteReliability": 100
+    },
+    "730|strathspey thistle": {
+      "name": "Strathspey Thistle",
+      "league": "Football League - Highland League",
+      "leagueId": 730,
+      "favorite": {
+        "sample": 0,
+        "wins": 0,
+        "draws": 0,
+        "losses": 0,
+        "winRate": null,
+        "drawRate": null,
+        "nonLossRate": 0,
+        "upsetRate": null,
+        "nonLossWilson": {
+          "lower": null,
+          "mid": null,
+          "upper": null
+        },
+        "winWilson": {
+          "lower": null,
+          "mid": null,
+          "upper": null
+        },
+        "decayedWeight": 0
+      },
+      "underdog": {
+        "sample": 1,
+        "wins": 0,
+        "draws": 0,
+        "losses": 1,
+        "winRate": 0,
+        "drawRate": 0,
+        "nonLossRate": 0,
+        "upsetRate": 1,
+        "nonLossWilson": {
+          "lower": 0,
+          "mid": 0,
+          "upper": 0.7935
+        },
+        "winWilson": {
+          "lower": 0,
+          "mid": 0,
+          "upper": 0.7935
+        },
+        "decayedWeight": 0.99
+      },
+      "favoriteBands": {},
+      "underdogUpsets": 0,
+      "flags": [],
+      "patternStability": 100,
+      "favoriteReliability": 0
     }
   },
   "leagues": {
@@ -25657,7 +25930,7 @@
           "mid": 0.5,
           "upper": 0.9055
         },
-        "decayedWeight": 1.97
+        "decayedWeight": 1.96
       },
       "awayFavorites": {
         "sample": 1,
@@ -26138,7 +26411,7 @@
           "mid": 0,
           "upper": 0.6576
         },
-        "decayedWeight": 1.97
+        "decayedWeight": 1.96
       },
       "awayFavorites": {
         "sample": 1,
@@ -26278,7 +26551,7 @@
           "mid": 0.4286,
           "upper": 0.7495
         },
-        "decayedWeight": 6.19
+        "decayedWeight": 6.18
       },
       "bands": {
         "1.86-2.25": {
@@ -26391,7 +26664,7 @@
           "mid": 0.625,
           "upper": 0.8632
         },
-        "decayedWeight": 7.82
+        "decayedWeight": 7.81
       },
       "bands": {
         "1.86-2.25": {
@@ -26477,7 +26750,7 @@
           "mid": 0.625,
           "upper": 0.8632
         },
-        "decayedWeight": 7.82
+        "decayedWeight": 7.81
       },
       "awayFavorites": {
         "sample": 0,
@@ -29203,7 +29476,7 @@
           "mid": 0.5,
           "upper": 0.9055
         },
-        "decayedWeight": 1.97
+        "decayedWeight": 1.96
       },
       "bands": {
         "1.86-2.25": {
@@ -29225,7 +29498,7 @@
             "mid": 0.5,
             "upper": 0.9055
           },
-          "decayedWeight": 1.97
+          "decayedWeight": 1.96
         }
       },
       "homeFavorites": {
@@ -30002,7 +30275,7 @@
           "mid": 0.5,
           "upper": 0.8124
         },
-        "decayedWeight": 5.71
+        "decayedWeight": 5.7
       },
       "bands": {
         "1.86-2.25": {
@@ -31955,34 +32228,55 @@
       "league": "Football League - Highland League",
       "leagueId": 730,
       "favorite": {
-        "sample": 1,
-        "wins": 1,
-        "draws": 0,
+        "sample": 4,
+        "wins": 3,
+        "draws": 1,
         "losses": 0,
-        "winRate": 1,
-        "drawRate": 0,
+        "winRate": 0.7461,
+        "drawRate": 0.2539,
         "nonLossRate": 1,
         "upsetRate": 0,
         "nonLossWilson": {
-          "lower": 0.2065,
+          "lower": 0.5101,
           "mid": 1,
           "upper": 1
         },
         "winWilson": {
-          "lower": 0.2065,
-          "mid": 1,
-          "upper": 1
+          "lower": 0.3006,
+          "mid": 0.75,
+          "upper": 0.9544
         },
-        "decayedWeight": 0.93
+        "decayedWeight": 3.91
       },
       "bands": {
         "1.01-1.35": {
-          "sample": 1,
-          "wins": 1,
+          "sample": 3,
+          "wins": 3,
           "draws": 0,
           "losses": 0,
           "winRate": 1,
           "drawRate": 0,
+          "nonLossRate": 1,
+          "upsetRate": 0,
+          "nonLossWilson": {
+            "lower": 0.4385,
+            "mid": 1,
+            "upper": 1
+          },
+          "winWilson": {
+            "lower": 0.4385,
+            "mid": 1,
+            "upper": 1
+          },
+          "decayedWeight": 2.92
+        },
+        "1.61-1.85": {
+          "sample": 1,
+          "wins": 0,
+          "draws": 1,
+          "losses": 0,
+          "winRate": 0,
+          "drawRate": 1,
           "nonLossRate": 1,
           "upsetRate": 0,
           "nonLossWilson": {
@@ -31991,14 +32285,35 @@
             "upper": 1
           },
           "winWilson": {
-            "lower": 0.2065,
-            "mid": 1,
-            "upper": 1
+            "lower": 0,
+            "mid": 0,
+            "upper": 0.7935
           },
-          "decayedWeight": 0.93
+          "decayedWeight": 0.99
         }
       },
       "homeFavorites": {
+        "sample": 3,
+        "wins": 2,
+        "draws": 1,
+        "losses": 0,
+        "winRate": 0.6597,
+        "drawRate": 0.3403,
+        "nonLossRate": 1,
+        "upsetRate": 0,
+        "nonLossWilson": {
+          "lower": 0.4385,
+          "mid": 1,
+          "upper": 1
+        },
+        "winWilson": {
+          "lower": 0.2077,
+          "mid": 0.6667,
+          "upper": 0.9385
+        },
+        "decayedWeight": 2.92
+      },
+      "awayFavorites": {
         "sample": 1,
         "wins": 1,
         "draws": 0,
@@ -32017,31 +32332,10 @@
           "mid": 1,
           "upper": 1
         },
-        "decayedWeight": 0.93
-      },
-      "awayFavorites": {
-        "sample": 0,
-        "wins": 0,
-        "draws": 0,
-        "losses": 0,
-        "winRate": null,
-        "drawRate": null,
-        "nonLossRate": 0,
-        "upsetRate": null,
-        "nonLossWilson": {
-          "lower": null,
-          "mid": null,
-          "upper": null
-        },
-        "winWilson": {
-          "lower": null,
-          "mid": null,
-          "upper": null
-        },
-        "decayedWeight": 0
+        "decayedWeight": 0.99
       },
       "flags": [],
-      "stabilityScore": 100
+      "stabilityScore": 93.7
     },
     "731": {
       "league": "Football League - Lowland League",
@@ -40135,6 +40429,90 @@
         "decayedWeight": 0.99
       },
       "flags": []
+    },
+    "730|banks o dee|inverurie loco works": {
+      "home": "Banks O' Dee",
+      "away": "Inverurie Loco Works",
+      "league": "Football League - Highland League",
+      "leagueId": 730,
+      "favorite": {
+        "sample": 1,
+        "wins": 0,
+        "draws": 1,
+        "losses": 0,
+        "winRate": 0,
+        "drawRate": 1,
+        "nonLossRate": 1,
+        "upsetRate": 0,
+        "nonLossWilson": {
+          "lower": 0.2065,
+          "mid": 1,
+          "upper": 1
+        },
+        "winWilson": {
+          "lower": 0,
+          "mid": 0,
+          "upper": 0.7935
+        },
+        "decayedWeight": 0.99
+      },
+      "flags": []
+    },
+    "730|brora rangers|wick academy": {
+      "home": "Brora Rangers",
+      "away": "Wick Academy",
+      "league": "Football League - Highland League",
+      "leagueId": 730,
+      "favorite": {
+        "sample": 1,
+        "wins": 1,
+        "draws": 0,
+        "losses": 0,
+        "winRate": 1,
+        "drawRate": 0,
+        "nonLossRate": 1,
+        "upsetRate": 0,
+        "nonLossWilson": {
+          "lower": 0.2065,
+          "mid": 1,
+          "upper": 1
+        },
+        "winWilson": {
+          "lower": 0.2065,
+          "mid": 1,
+          "upper": 1
+        },
+        "decayedWeight": 0.99
+      },
+      "flags": []
+    },
+    "730|strathspey thistle|buckie thistle": {
+      "home": "Strathspey Thistle",
+      "away": "Buckie Thistle",
+      "league": "Football League - Highland League",
+      "leagueId": 730,
+      "favorite": {
+        "sample": 1,
+        "wins": 1,
+        "draws": 0,
+        "losses": 0,
+        "winRate": 1,
+        "drawRate": 0,
+        "nonLossRate": 1,
+        "upsetRate": 0,
+        "nonLossWilson": {
+          "lower": 0.2065,
+          "mid": 1,
+          "upper": 1
+        },
+        "winWilson": {
+          "lower": 0.2065,
+          "mid": 1,
+          "upper": 1
+        },
+        "decayedWeight": 0.99
+      },
+      "flags": []
     }
   },
   "oddsBands": {
@@ -40157,28 +40535,28 @@
         "mid": 0.3924,
         "upper": 0.5027
       },
-      "decayedWeight": 73.82
+      "decayedWeight": 73.79
     },
     "1.01-1.35": {
-      "sample": 31,
-      "wins": 26,
+      "sample": 33,
+      "wins": 28,
       "draws": 1,
       "losses": 4,
-      "winRate": 0.8373,
-      "drawRate": 0.0325,
-      "nonLossRate": 0.8698,
-      "upsetRate": 0.1301,
+      "winRate": 0.8479,
+      "drawRate": 0.0304,
+      "nonLossRate": 0.8783,
+      "upsetRate": 0.1217,
       "nonLossWilson": {
-        "lower": 0.7115,
-        "mid": 0.871,
-        "upper": 0.9487
+        "lower": 0.7267,
+        "mid": 0.8788,
+        "upper": 0.9518
       },
       "winWilson": {
-        "lower": 0.6737,
-        "mid": 0.8387,
-        "upper": 0.9291
+        "lower": 0.6908,
+        "mid": 0.8485,
+        "upper": 0.9335
       },
-      "decayedWeight": 28.67
+      "decayedWeight": 30.65
     },
     "1.36-1.60": {
       "sample": 48,
@@ -40199,28 +40577,28 @@
         "mid": 0.5833,
         "upper": 0.7115
       },
-      "decayedWeight": 44.99
+      "decayedWeight": 44.98
     },
     "1.61-1.85": {
-      "sample": 51,
+      "sample": 52,
       "wins": 28,
-      "draws": 12,
+      "draws": 13,
       "losses": 11,
-      "winRate": 0.5496,
-      "drawRate": 0.2362,
-      "nonLossRate": 0.7858,
-      "upsetRate": 0.2143,
+      "winRate": 0.5383,
+      "drawRate": 0.2518,
+      "nonLossRate": 0.7901,
+      "upsetRate": 0.2099,
       "nonLossWilson": {
-        "lower": 0.6537,
-        "mid": 0.7843,
-        "upper": 0.8751
+        "lower": 0.6597,
+        "mid": 0.7885,
+        "upper": 0.8776
       },
       "winWilson": {
-        "lower": 0.4138,
-        "mid": 0.549,
-        "upper": 0.6773
+        "lower": 0.405,
+        "mid": 0.5385,
+        "upper": 0.6666
       },
-      "decayedWeight": 47.45
+      "decayedWeight": 48.43
     }
   },
   "contexts": {
@@ -41065,15 +41443,15 @@
       "hardVeto": false
     },
     "*|Normal|Home Win|unknown|other": {
-      "sample": 21,
-      "wins": 15,
+      "sample": 22,
+      "wins": 16,
       "losses": 6,
-      "winRate": 0.7143,
-      "lossRate": 0.2857,
+      "winRate": 0.7273,
+      "lossRate": 0.2727,
       "wilson": {
-        "lower": 0.5004,
-        "mid": 0.7143,
-        "upper": 0.8619
+        "lower": 0.5185,
+        "mid": 0.7273,
+        "upper": 0.8685
       },
       "adjustment": 0,
       "hardVeto": false
@@ -41905,15 +42283,15 @@
       "hardVeto": false
     },
     "*|Halves|Second Half Over 0.5|unknown|other": {
-      "sample": 133,
+      "sample": 134,
       "wins": 110,
-      "losses": 23,
-      "winRate": 0.8271,
-      "lossRate": 0.1729,
+      "losses": 24,
+      "winRate": 0.8209,
+      "lossRate": 0.1791,
       "wilson": {
-        "lower": 0.7539,
-        "mid": 0.8271,
-        "upper": 0.8819
+        "lower": 0.7473,
+        "mid": 0.8209,
+        "upper": 0.8766
       },
       "adjustment": 2,
       "hardVeto": false
@@ -42143,15 +42521,15 @@
       "hardVeto": false
     },
     "*|League Bias|Home Team Over 0.5 Goals|unknown|other": {
-      "sample": 124,
-      "wins": 102,
-      "losses": 22,
-      "winRate": 0.8226,
-      "lossRate": 0.1774,
+      "sample": 128,
+      "wins": 105,
+      "losses": 23,
+      "winRate": 0.8203,
+      "lossRate": 0.1797,
       "wilson": {
-        "lower": 0.746,
-        "mid": 0.8226,
-        "upper": 0.8798
+        "lower": 0.7448,
+        "mid": 0.8203,
+        "upper": 0.8772
       },
       "adjustment": 2,
       "hardVeto": false
@@ -42353,15 +42731,15 @@
       "hardVeto": false
     },
     "*|League Bias|Home Team Over 0.5 Goals|1.61-1.85|fav-aligned": {
-      "sample": 8,
-      "wins": 7,
+      "sample": 9,
+      "wins": 8,
       "losses": 1,
-      "winRate": 0.875,
-      "lossRate": 0.125,
+      "winRate": 0.8889,
+      "lossRate": 0.1111,
       "wilson": {
-        "lower": 0.5291,
-        "mid": 0.875,
-        "upper": 0.9776
+        "lower": 0.565,
+        "mid": 0.8889,
+        "upper": 0.9801
       },
       "adjustment": 0,
       "hardVeto": false
@@ -42633,13 +43011,13 @@
       "hardVeto": false
     },
     "*|League Bias|Home Team Over 0.5 Goals|1.01-1.35|fav-aligned": {
-      "sample": 5,
-      "wins": 5,
+      "sample": 6,
+      "wins": 6,
       "losses": 0,
       "winRate": 1,
       "lossRate": 0,
       "wilson": {
-        "lower": 0.5655,
+        "lower": 0.6097,
         "mid": 1,
         "upper": 1
       },
@@ -43193,15 +43571,15 @@
       "hardVeto": false
     },
     "brasileiro u17|League Bias|Home Team Over 0.5 Goals|unknown|other": {
-      "sample": 4,
+      "sample": 5,
       "wins": 3,
-      "losses": 1,
-      "winRate": 0.75,
-      "lossRate": 0.25,
+      "losses": 2,
+      "winRate": 0.6,
+      "lossRate": 0.4,
       "wilson": {
-        "lower": 0.3006,
-        "mid": 0.75,
-        "upper": 0.9544
+        "lower": 0.2307,
+        "mid": 0.6,
+        "upper": 0.8824
       },
       "adjustment": 0,
       "hardVeto": false
@@ -47337,13 +47715,13 @@
       "hardVeto": false
     },
     "football league highland league|Normal|Home Win|unknown|other": {
-      "sample": 1,
-      "wins": 1,
+      "sample": 2,
+      "wins": 2,
       "losses": 0,
       "winRate": 1,
       "lossRate": 0,
       "wilson": {
-        "lower": 0.2065,
+        "lower": 0.3424,
         "mid": 1,
         "upper": 1
       },
@@ -48877,15 +49255,15 @@
       "hardVeto": false
     },
     "liga women|Halves|Second Half Over 0.5|unknown|other": {
-      "sample": 1,
+      "sample": 2,
       "wins": 1,
-      "losses": 0,
-      "winRate": 1,
-      "lossRate": 0,
+      "losses": 1,
+      "winRate": 0.5,
+      "lossRate": 0.5,
       "wilson": {
-        "lower": 0.2065,
-        "mid": 1,
-        "upper": 1
+        "lower": 0.0945,
+        "mid": 0.5,
+        "upper": 0.9055
       },
       "adjustment": 0,
       "hardVeto": false
@@ -49521,13 +49899,13 @@
       "hardVeto": false
     },
     "*|Strict|Home Win|unknown|other": {
-      "sample": 2,
-      "wins": 2,
+      "sample": 3,
+      "wins": 3,
       "losses": 0,
       "winRate": 1,
       "lossRate": 0,
       "wilson": {
-        "lower": 0.3424,
+        "lower": 0.4385,
         "mid": 1,
         "upper": 1
       },
@@ -49885,13 +50263,13 @@
       "hardVeto": false
     },
     "*|Trend|Double Chance X2|1.01-1.35|fav-aligned": {
-      "sample": 2,
-      "wins": 2,
+      "sample": 3,
+      "wins": 3,
       "losses": 0,
       "winRate": 1,
       "lossRate": 0,
       "wilson": {
-        "lower": 0.3424,
+        "lower": 0.4385,
         "mid": 1,
         "upper": 1
       },
@@ -51619,9 +51997,91 @@
       },
       "adjustment": 0,
       "hardVeto": false
+    },
+    "football league highland league|League Bias|Home Team Over 0.5 Goals|1.61-1.85|fav-aligned": {
+      "sample": 1,
+      "wins": 1,
+      "losses": 0,
+      "winRate": 1,
+      "lossRate": 0,
+      "wilson": {
+        "lower": 0.2065,
+        "mid": 1,
+        "upper": 1
+      },
+      "adjustment": 0,
+      "hardVeto": false
+    },
+    "football league highland league|League Bias|Home Team Over 0.5 Goals|1.01-1.35|fav-aligned": {
+      "sample": 1,
+      "wins": 1,
+      "losses": 0,
+      "winRate": 1,
+      "lossRate": 0,
+      "wilson": {
+        "lower": 0.2065,
+        "mid": 1,
+        "upper": 1
+      },
+      "adjustment": 0,
+      "hardVeto": false
+    },
+    "football league highland league|League Bias|Home Team Over 0.5 Goals|unknown|other": {
+      "sample": 3,
+      "wins": 3,
+      "losses": 0,
+      "winRate": 1,
+      "lossRate": 0,
+      "wilson": {
+        "lower": 0.4385,
+        "mid": 1,
+        "upper": 1
+      },
+      "adjustment": 0,
+      "hardVeto": false
+    },
+    "football league highland league|Strict|Home Win|unknown|other": {
+      "sample": 1,
+      "wins": 1,
+      "losses": 0,
+      "winRate": 1,
+      "lossRate": 0,
+      "wilson": {
+        "lower": 0.2065,
+        "mid": 1,
+        "upper": 1
+      },
+      "adjustment": 0,
+      "hardVeto": false
+    },
+    "football league highland league|Trend|Double Chance X2|1.01-1.35|fav-aligned": {
+      "sample": 1,
+      "wins": 1,
+      "losses": 0,
+      "winRate": 1,
+      "lossRate": 0,
+      "wilson": {
+        "lower": 0.2065,
+        "mid": 1,
+        "upper": 1
+      },
+      "adjustment": 0,
+      "hardVeto": false
     }
   },
   "lossReviews": [
+    {
+      "matchDate": "2026-08-05",
+      "home": "Killas W",
+      "away": "Carlos Mannucci W",
+      "league": "Liga Women",
+      "engine": "Halves",
+      "market": "Second Half Over 0.5",
+      "score": "0-3",
+      "causes": [
+        "INPUT_COVERAGE_GAP"
+      ]
+    },
     {
       "matchDate": "2026-08-05",
       "home": "Deportivo La Coruña II",
@@ -51645,6 +52105,19 @@
       "score": "0-5",
       "causes": [
         "GOAL_SPIKE",
+        "INPUT_COVERAGE_GAP"
+      ]
+    },
+    {
+      "matchDate": "2026-08-05",
+      "home": "Fortaleza U17",
+      "away": "Flamengo RJ U17",
+      "league": "Brasileiro U17",
+      "engine": "League Bias",
+      "market": "Home Team Over 0.5 Goals",
+      "score": "0-2",
+      "causes": [
+        "RESULT_DIRECTION_MISS",
         "INPUT_COVERAGE_GAP"
       ]
     },
@@ -53506,38 +53979,12 @@
         "RESULT_DIRECTION_MISS",
         "INPUT_COVERAGE_GAP"
       ]
-    },
-    {
-      "matchDate": "2026-07-25",
-      "home": "Schalding-Heining",
-      "away": "Kottern",
-      "league": "Oberliga - Bayern Süd",
-      "engine": "Normal",
-      "market": "Home Win",
-      "score": "1-2",
-      "causes": [
-        "RESULT_DIRECTION_MISS",
-        "INPUT_COVERAGE_GAP"
-      ]
-    },
-    {
-      "matchDate": "2026-07-25",
-      "home": "Colón",
-      "away": "Paysandu",
-      "league": "Segunda División",
-      "engine": "League Bias",
-      "market": "Under 3.5 Goals",
-      "score": "2-3",
-      "causes": [
-        "GOAL_SPIKE",
-        "INPUT_COVERAGE_GAP"
-      ]
     }
   ],
   "causeCounts": {
     "TEMPO_COLLAPSE": 7,
-    "INPUT_COVERAGE_GAP": 218,
-    "RESULT_DIRECTION_MISS": 50,
+    "INPUT_COVERAGE_GAP": 220,
+    "RESULT_DIRECTION_MISS": 51,
     "BOTH_ATTACKS_BROKE_SUPPRESSION": 5,
     "GOAL_SPIKE": 33,
     "DRAW_TRAP": 36,

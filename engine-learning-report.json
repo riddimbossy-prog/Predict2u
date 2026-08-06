@@ -1,13 +1,13 @@
 {
   "version": "v193",
-  "updated": "2026-08-06T01:00:03.196Z",
+  "updated": "2026-08-06T02:15:27.085Z",
   "summary": {
-    "settledFixtures": 642,
-    "settledDecisions": 1104,
+    "settledFixtures": 650,
+    "settledDecisions": 1114,
     "reviewedLosses": 150,
-    "teamProfiles": 400,
+    "teamProfiles": 404,
     "leagueProfiles": 82,
-    "matchupProfiles": 209,
+    "matchupProfiles": 212,
     "activePatternBreakers": 0,
     "upsetResistantTeams": 0
   },
@@ -19,11 +19,11 @@
   "commonMissCauses": [
     {
       "cause": "INPUT_COVERAGE_GAP",
-      "count": 218
+      "count": 220
     },
     {
       "cause": "RESULT_DIRECTION_MISS",
-      "count": 50
+      "count": 51
     },
     {
       "cause": "DRAW_TRAP",
@@ -57,6 +57,18 @@
   "recentLossReviews": [
     {
       "matchDate": "2026-08-05",
+      "home": "Killas W",
+      "away": "Carlos Mannucci W",
+      "league": "Liga Women",
+      "engine": "Halves",
+      "market": "Second Half Over 0.5",
+      "score": "0-3",
+      "causes": [
+        "INPUT_COVERAGE_GAP"
+      ]
+    },
+    {
+      "matchDate": "2026-08-05",
       "home": "Deportivo La Coruña II",
       "away": "Real Madrid II",
       "league": "Friendlies Clubs",
@@ -78,6 +90,19 @@
       "score": "0-5",
       "causes": [
         "GOAL_SPIKE",
+        "INPUT_COVERAGE_GAP"
+      ]
+    },
+    {
+      "matchDate": "2026-08-05",
+      "home": "Fortaleza U17",
+      "away": "Flamengo RJ U17",
+      "league": "Brasileiro U17",
+      "engine": "League Bias",
+      "market": "Home Team Over 0.5 Goals",
+      "score": "0-2",
+      "causes": [
+        "RESULT_DIRECTION_MISS",
         "INPUT_COVERAGE_GAP"
       ]
     },
@@ -411,32 +436,6 @@
       "score": "0-0",
       "causes": [
         "DRAW_TRAP",
-        "INPUT_COVERAGE_GAP"
-      ]
-    },
-    {
-      "matchDate": "2026-08-02",
-      "home": "Barranquilla",
-      "away": "Depor FC",
-      "league": "Primera B",
-      "engine": "League Bias",
-      "market": "Under 3.5 Goals",
-      "score": "2-2",
-      "causes": [
-        "GOAL_SPIKE",
-        "INPUT_COVERAGE_GAP"
-      ]
-    },
-    {
-      "matchDate": "2026-08-02",
-      "home": "Atenas",
-      "away": "Villa Mitre",
-      "league": "Torneo Federal A",
-      "engine": "Trend",
-      "market": "Double Chance 1X",
-      "score": "0-1",
-      "causes": [
-        "RESULT_DIRECTION_MISS",
         "INPUT_COVERAGE_GAP"
       ]
     }
