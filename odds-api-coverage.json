@@ -1,6 +1,6 @@
 {
   "version": "v251",
-  "generatedAt": "2026-08-06T02:00:26.061Z",
+  "generatedAt": "2026-08-06T02:10:22.137Z",
   "provider": "The Odds API v4",
   "keyPresent": true,
   "regions": "uk",
@@ -30,14 +30,6 @@
       "sportTitle": "Leagues Cup",
       "score": 0.72,
       "matches": 32
-    },
-    {
-      "league": "USL League One",
-      "country": "USA",
-      "sportKey": "soccer_usa_mls",
-      "sportTitle": "MLS",
-      "score": 0.466,
-      "matches": 8
     },
     {
       "league": "CONCACAF Central American Cup",
@@ -1536,6 +1528,14 @@
       "matches": 1
     },
     {
+      "league": "USL League One",
+      "country": "USA",
+      "sportKey": "soccer_usa_mls",
+      "sportTitle": "MLS",
+      "score": 0.466,
+      "matches": 7
+    },
+    {
       "league": "Queensland Premier League",
       "country": "Australia",
       "sportKey": "soccer_epl",
@@ -1640,7 +1640,7 @@
       "matches": 1
     }
   ],
-  "matchesConsidered": 2495,
+  "matchesConsidered": 2494,
   "matchesMatched": 0,
   "matchesUpdated": 0,
   "fieldsFilled": 0,
@@ -3096,57 +3096,57 @@
       "reason": "No event/team match"
     },
     {
-      "league": "USL League One",
-      "home": "Naples",
-      "away": "Alta",
+      "league": "Primera División",
+      "home": "Bolívar",
+      "away": "Oriente Petrolero",
       "reason": "No event/team match"
     },
     {
-      "league": "USL League One",
-      "home": "Charlotte Independence",
-      "away": "Greenville Triumph",
+      "league": "Primera División",
+      "home": "Universitario de Vinto",
+      "away": "Real Potosí",
       "reason": "No event/team match"
     },
     {
-      "league": "USL League One",
-      "home": "Chattanooga Red Wolves",
-      "away": "Union Omaha",
+      "league": "Primera División",
+      "home": "Blooming",
+      "away": "Always Ready",
       "reason": "No event/team match"
     },
     {
-      "league": "USL League One",
-      "home": "NY Cosmos",
-      "away": "Spokane Velocity",
+      "league": "Primera División",
+      "home": "ABB",
+      "away": "Guabirá",
       "reason": "No event/team match"
     },
     {
-      "league": "USL League One",
-      "home": "Portland Hearts of Pine",
-      "away": "Corpus Christi",
+      "league": "Primera División",
+      "home": "Real Tomayapo",
+      "away": "Real Oruro",
       "reason": "No event/team match"
     },
     {
-      "league": "USL League One",
-      "home": "One Knoxville",
-      "away": "Sarasota Paradise",
+      "league": "Primera División",
+      "home": "San Antonio Bulo Bulo",
+      "away": "Nacional Potosí",
       "reason": "No event/team match"
     },
     {
-      "league": "USL League One",
-      "home": "Boise",
-      "away": "Forward Madison",
+      "league": "Primera División",
+      "home": "The Strongest",
+      "away": "Independiente Petrolero",
       "reason": "No event/team match"
     },
     {
-      "league": "USL League One",
-      "home": "Alta",
-      "away": "Fort Wayne",
+      "league": "Primera División",
+      "home": "Aurora",
+      "away": "Bolívar",
       "reason": "No event/team match"
     },
     {
-      "league": "USL Championship",
-      "home": "FC Tulsa",
-      "away": "Sacramento Republic",
+      "league": "Primera División",
+      "home": "Gualberto Villarroel SJ",
+      "away": "Always Ready",
       "reason": "No event/team match"
     }
   ],
@@ -3176,18 +3176,6 @@
       "market": "double_chance"
     },
     {
-      "sportKey": "soccer_usa_mls",
-      "market": "btts"
-    },
-    {
-      "sportKey": "soccer_usa_mls",
-      "market": "draw_no_bet"
-    },
-    {
-      "sportKey": "soccer_usa_mls",
-      "market": "double_chance"
-    },
-    {
       "sportKey": "soccer_argentina_primera_division",
       "market": "btts"
     },
@@ -3221,6 +3209,18 @@
     },
     {
       "sportKey": "soccer_brazil_campeonato",
+      "market": "double_chance"
+    },
+    {
+      "sportKey": "soccer_usa_mls",
+      "market": "btts"
+    },
+    {
+      "sportKey": "soccer_usa_mls",
+      "market": "draw_no_bet"
+    },
+    {
+      "sportKey": "soccer_usa_mls",
       "market": "double_chance"
     },
     {
@@ -3684,31 +3684,6 @@
       "statusCode": 422
     },
     {
-      "label": "soccer_usa_mls:base-combined",
-      "error": "Markets not supported by this endpoint: btts, double_chance, draw_no_bet",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_usa_mls:base-core",
-      "error": "Invalid commenceTimeFrom parameter. The format must be YYYY-MM-DDTHH:MM:SSZ, for example 2020-11-24T16:05:00Z",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_usa_mls:btts",
-      "error": "Markets not supported by this endpoint: btts",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_usa_mls:draw_no_bet",
-      "error": "Markets not supported by this endpoint: draw_no_bet",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_usa_mls:double_chance",
-      "error": "Markets not supported by this endpoint: double_chance",
-      "statusCode": 422
-    },
-    {
       "label": "soccer_argentina_primera_division:base-combined",
       "error": "Markets not supported by this endpoint: btts, double_chance, draw_no_bet",
       "statusCode": 422
@@ -3780,6 +3755,31 @@
     },
     {
       "label": "soccer_brazil_campeonato:double_chance",
+      "error": "Markets not supported by this endpoint: double_chance",
+      "statusCode": 422
+    },
+    {
+      "label": "soccer_usa_mls:base-combined",
+      "error": "Markets not supported by this endpoint: btts, double_chance, draw_no_bet",
+      "statusCode": 422
+    },
+    {
+      "label": "soccer_usa_mls:base-core",
+      "error": "Invalid commenceTimeFrom parameter. The format must be YYYY-MM-DDTHH:MM:SSZ, for example 2020-11-24T16:05:00Z",
+      "statusCode": 422
+    },
+    {
+      "label": "soccer_usa_mls:btts",
+      "error": "Markets not supported by this endpoint: btts",
+      "statusCode": 422
+    },
+    {
+      "label": "soccer_usa_mls:draw_no_bet",
+      "error": "Markets not supported by this endpoint: draw_no_bet",
+      "statusCode": 422
+    },
+    {
+      "label": "soccer_usa_mls:double_chance",
       "error": "Markets not supported by this endpoint: double_chance",
       "statusCode": 422
     },
@@ -4641,5 +4641,5 @@
   },
   "skipped": false,
   "skipReason": null,
-  "completedAt": "2026-08-06T02:00:49.720Z"
+  "completedAt": "2026-08-06T02:10:31.316Z"
 }
