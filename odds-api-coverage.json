@@ -1,6 +1,6 @@
 {
   "version": "v251",
-  "generatedAt": "2026-08-06T00:10:16.121Z",
+  "generatedAt": "2026-08-06T00:20:18.985Z",
   "provider": "The Odds API v4",
   "keyPresent": true,
   "regions": "uk",
@@ -32,14 +32,6 @@
       "matches": 18
     },
     {
-      "league": "Copa Do Brasil",
-      "country": "Brazil",
-      "sportKey": "soccer_brazil_campeonato",
-      "sportTitle": "Brazil Série A",
-      "score": 0.291,
-      "matches": 6
-    },
-    {
       "league": "Copa Rio",
       "country": "Brazil",
       "sportKey": "soccer_brazil_campeonato",
@@ -48,35 +40,19 @@
       "matches": 1
     },
     {
-      "league": "Liga Profesional Argentina",
-      "country": "Argentina",
-      "sportKey": "soccer_argentina_primera_division",
-      "sportTitle": "Primera División - Argentina",
-      "score": 0.78,
-      "matches": 17
-    },
-    {
-      "league": "Primera División",
-      "country": "Bolivia",
-      "sportKey": "soccer_argentina_primera_division",
-      "sportTitle": "Primera División - Argentina",
-      "score": 0.653,
-      "matches": 12
-    },
-    {
-      "league": "Primera Nacional",
-      "country": "Argentina",
-      "sportKey": "soccer_argentina_primera_division",
-      "sportTitle": "Primera División - Argentina",
-      "score": 0.513,
-      "matches": 19
-    },
-    {
       "league": "Capixaba B",
       "country": "Brazil",
       "sportKey": "soccer_brazil_serie_b",
       "sportTitle": "Brazil Série B",
       "score": 0.466,
+      "matches": 5
+    },
+    {
+      "league": "Copa Do Brasil",
+      "country": "Brazil",
+      "sportKey": "soccer_brazil_campeonato",
+      "sportTitle": "Brazil Série A",
+      "score": 0.291,
       "matches": 5
     },
     {
@@ -118,6 +94,22 @@
       "sportTitle": "Leagues Cup",
       "score": 0.286,
       "matches": 5
+    },
+    {
+      "league": "Primera División",
+      "country": "Bolivia",
+      "sportKey": "soccer_argentina_primera_division",
+      "sportTitle": "Primera División - Argentina",
+      "score": 0.653,
+      "matches": 11
+    },
+    {
+      "league": "Liga Profesional Argentina",
+      "country": "Argentina",
+      "sportKey": "soccer_argentina_primera_division",
+      "sportTitle": "Primera División - Argentina",
+      "score": 0.78,
+      "matches": 16
     },
     {
       "league": "Copa Chile",
@@ -944,6 +936,14 @@
       "matches": 3
     },
     {
+      "league": "Primera Nacional",
+      "country": "Argentina",
+      "sportKey": "soccer_argentina_primera_division",
+      "sportTitle": "Primera División - Argentina",
+      "score": 0.513,
+      "matches": 18
+    },
+    {
       "league": "Brasileiro Women",
       "country": "Brazil",
       "sportKey": "soccer_brazil_serie_b",
@@ -1648,7 +1648,7 @@
       "matches": 1
     }
   ],
-  "matchesConsidered": 2518,
+  "matchesConsidered": 2514,
   "matchesMatched": 0,
   "matchesUpdated": 0,
   "fieldsFilled": 0,
@@ -3208,27 +3208,27 @@
       "market": "double_chance"
     },
     {
-      "sportKey": "soccer_argentina_primera_division",
+      "sportKey": "soccer_brazil_serie_b",
       "market": "btts"
     },
     {
-      "sportKey": "soccer_argentina_primera_division",
+      "sportKey": "soccer_brazil_serie_b",
       "market": "draw_no_bet"
     },
     {
-      "sportKey": "soccer_argentina_primera_division",
+      "sportKey": "soccer_brazil_serie_b",
       "market": "double_chance"
     },
     {
-      "sportKey": "soccer_brazil_serie_b",
+      "sportKey": "soccer_argentina_primera_division",
       "market": "btts"
     },
     {
-      "sportKey": "soccer_brazil_serie_b",
+      "sportKey": "soccer_argentina_primera_division",
       "market": "draw_no_bet"
     },
     {
-      "sportKey": "soccer_brazil_serie_b",
+      "sportKey": "soccer_argentina_primera_division",
       "market": "double_chance"
     },
     {
@@ -3742,31 +3742,6 @@
       "statusCode": 422
     },
     {
-      "label": "soccer_argentina_primera_division:base-combined",
-      "error": "Markets not supported by this endpoint: btts, double_chance, draw_no_bet",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_argentina_primera_division:base-core",
-      "error": "Invalid commenceTimeFrom parameter. The format must be YYYY-MM-DDTHH:MM:SSZ, for example 2020-11-24T16:05:00Z",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_argentina_primera_division:btts",
-      "error": "Markets not supported by this endpoint: btts",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_argentina_primera_division:draw_no_bet",
-      "error": "Markets not supported by this endpoint: draw_no_bet",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_argentina_primera_division:double_chance",
-      "error": "Markets not supported by this endpoint: double_chance",
-      "statusCode": 422
-    },
-    {
       "label": "soccer_brazil_serie_b:base-combined",
       "error": "Markets not supported by this endpoint: btts, double_chance, draw_no_bet",
       "statusCode": 422
@@ -3788,6 +3763,31 @@
     },
     {
       "label": "soccer_brazil_serie_b:double_chance",
+      "error": "Markets not supported by this endpoint: double_chance",
+      "statusCode": 422
+    },
+    {
+      "label": "soccer_argentina_primera_division:base-combined",
+      "error": "Markets not supported by this endpoint: btts, double_chance, draw_no_bet",
+      "statusCode": 422
+    },
+    {
+      "label": "soccer_argentina_primera_division:base-core",
+      "error": "Invalid commenceTimeFrom parameter. The format must be YYYY-MM-DDTHH:MM:SSZ, for example 2020-11-24T16:05:00Z",
+      "statusCode": 422
+    },
+    {
+      "label": "soccer_argentina_primera_division:btts",
+      "error": "Markets not supported by this endpoint: btts",
+      "statusCode": 422
+    },
+    {
+      "label": "soccer_argentina_primera_division:draw_no_bet",
+      "error": "Markets not supported by this endpoint: draw_no_bet",
+      "statusCode": 422
+    },
+    {
+      "label": "soccer_argentina_primera_division:double_chance",
       "error": "Markets not supported by this endpoint: double_chance",
       "statusCode": 422
     },
@@ -4649,5 +4649,5 @@
   },
   "skipped": false,
   "skipReason": null,
-  "completedAt": "2026-08-06T00:10:24.442Z"
+  "completedAt": "2026-08-06T00:20:43.125Z"
 }
