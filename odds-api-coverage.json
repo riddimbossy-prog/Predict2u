@@ -1,6 +1,6 @@
 {
   "version": "v251",
-  "generatedAt": "2026-08-06T04:40:19.024Z",
+  "generatedAt": "2026-08-06T04:31:40.543Z",
   "provider": "The Odds API v4",
   "keyPresent": true,
   "regions": "uk",
@@ -16,12 +16,28 @@
       "matches": 11
     },
     {
+      "league": "CONCACAF Central American Cup",
+      "country": "World",
+      "sportKey": "soccer_concacaf_leagues_cup",
+      "sportTitle": "Leagues Cup",
+      "score": 0.286,
+      "matches": 7
+    },
+    {
       "league": "Leagues Cup",
       "country": "World",
       "sportKey": "soccer_concacaf_leagues_cup",
       "sportTitle": "Leagues Cup",
       "score": 0.72,
-      "matches": 33
+      "matches": 34
+    },
+    {
+      "league": "NWSL Women",
+      "country": "USA",
+      "sportKey": "soccer_usa_mls",
+      "sportTitle": "MLS",
+      "score": 0.323,
+      "matches": 9
     },
     {
       "league": "USL Championship",
@@ -1040,14 +1056,6 @@
       "matches": 9
     },
     {
-      "league": "K League 1",
-      "country": "South-Korea",
-      "sportKey": "soccer_korea_kleague1",
-      "sportTitle": "K League 1",
-      "score": 0.695,
-      "matches": 5
-    },
-    {
       "league": "2. Division - Group 2",
       "country": "Norway",
       "sportKey": "soccer_norway_eliteserien",
@@ -1086,6 +1094,14 @@
       "sportTitle": "Ekstraklasa - Poland",
       "score": 0.323,
       "matches": 9
+    },
+    {
+      "league": "K League 1",
+      "country": "South-Korea",
+      "sportKey": "soccer_korea_kleague1",
+      "sportTitle": "K League 1",
+      "score": 0.695,
+      "matches": 5
     },
     {
       "league": "League One",
@@ -1561,6 +1577,14 @@
     },
     {
       "league": "Cup",
+      "country": "Greece",
+      "sportKey": "soccer_concacaf_leagues_cup",
+      "sportTitle": "Leagues Cup",
+      "score": 0.52,
+      "matches": 1
+    },
+    {
+      "league": "Cup",
       "country": "Estonia",
       "sportKey": "soccer_concacaf_leagues_cup",
       "sportTitle": "Leagues Cup",
@@ -1574,14 +1598,6 @@
       "sportTitle": "UEFA Champions League Qualification",
       "score": 0.695,
       "matches": 10
-    },
-    {
-      "league": "Cup",
-      "country": "Greece",
-      "sportKey": "soccer_concacaf_leagues_cup",
-      "sportTitle": "Leagues Cup",
-      "score": 0.52,
-      "matches": 1
     },
     {
       "league": "Premier Soccer League",
@@ -1624,20 +1640,20 @@
       "matches": 4
     },
     {
-      "league": "AFC Champions League Two",
-      "country": "World",
-      "sportKey": "soccer_epl",
-      "sportTitle": "EPL",
-      "score": 0.286,
-      "matches": 2
-    },
-    {
       "league": "Cup",
       "country": "Russia",
       "sportKey": "soccer_concacaf_leagues_cup",
       "sportTitle": "Leagues Cup",
       "score": 0.52,
       "matches": 28
+    },
+    {
+      "league": "AFC Champions League Two",
+      "country": "World",
+      "sportKey": "soccer_epl",
+      "sportTitle": "EPL",
+      "score": 0.286,
+      "matches": 2
     },
     {
       "league": "Cup",
@@ -1672,7 +1688,7 @@
       "matches": 2
     }
   ],
-  "matchesConsidered": 2638,
+  "matchesConsidered": 2642,
   "matchesMatched": 0,
   "matchesUpdated": 0,
   "fieldsFilled": 0,
@@ -1716,6 +1732,12 @@
       "country": "Ecuador",
       "reason": "No matching soccer sport key",
       "bestScore": 0.2
+    },
+    {
+      "league": "CONCACAF U20",
+      "country": "World",
+      "reason": "No matching soccer sport key",
+      "bestScore": 0.167
     },
     {
       "league": "Piala Presiden",
@@ -2643,12 +2665,6 @@
     },
     {
       "league": "Ettan - Södra",
-      "home": "Utsikten",
-      "away": "Hässleholms IF",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Ettan - Södra",
       "home": "Skövde AIK",
       "away": "Lund",
       "reason": "No event/team match"
@@ -2663,6 +2679,12 @@
       "league": "Ettan - Södra",
       "home": "Tvååker",
       "away": "Atvidabergs FF",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Ettan - Södra",
+      "home": "Utsikten",
+      "away": "Hässleholms IF",
       "reason": "No event/team match"
     },
     {
@@ -2873,6 +2895,54 @@
       "league": "Allsvenskan",
       "home": "Vasteras SK FK",
       "away": "Djurgardens IF",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "CONCACAF Central American Cup",
+      "home": "Alianza",
+      "away": "CS Herediano",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "CONCACAF Central American Cup",
+      "home": "Deportivo Saprissa",
+      "away": "Alianza FC",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "CONCACAF Central American Cup",
+      "home": "Verdes",
+      "away": "Municipal",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "CONCACAF Central American Cup",
+      "home": "CD Motagua",
+      "away": "FAS",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "CONCACAF Central American Cup",
+      "home": "Plaza Amador",
+      "away": "Xelajú",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "CONCACAF Central American Cup",
+      "home": "Real Estelí",
+      "away": "Alianza",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "CONCACAF Central American Cup",
+      "home": "Deportivo Saprissa",
+      "away": "Mixco",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Leagues Cup",
+      "home": "Toluca",
+      "away": "Seattle Sounders",
       "reason": "No event/team match"
     },
     {
@@ -3098,33 +3168,9 @@
       "reason": "No event/team match"
     },
     {
-      "league": "CONCACAF Central American Cup",
-      "home": "Verdes",
-      "away": "Municipal",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "CONCACAF Central American Cup",
-      "home": "CD Motagua",
-      "away": "FAS",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "CONCACAF Central American Cup",
-      "home": "Plaza Amador",
-      "away": "Xelajú",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "CONCACAF Central American Cup",
-      "home": "Real Estelí",
-      "away": "Alianza",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "CONCACAF Central American Cup",
-      "home": "Deportivo Saprissa",
-      "away": "Mixco",
+      "league": "Cup",
+      "home": "Trikala",
+      "away": "Larisa",
       "reason": "No event/team match"
     },
     {
@@ -3149,36 +3195,6 @@
       "league": "Cup",
       "home": "Tallinna Kalev",
       "away": "Tartu Kalev",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Cup",
-      "home": "Kristiine JK",
-      "away": "Kuressaare",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Cup",
-      "home": "Elva",
-      "away": "Joker",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Cup",
-      "home": "Flora Tallinn",
-      "away": "Tallinna Kalev II",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Cup",
-      "home": "Phoenix",
-      "away": "Vaprus",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Cup",
-      "home": "Kose",
-      "away": "Tartu Welco",
       "reason": "No event/team match"
     }
   ],
@@ -4673,5 +4689,5 @@
   },
   "skipped": false,
   "skipReason": null,
-  "completedAt": "2026-08-06T04:40:40.214Z"
+  "completedAt": "2026-08-06T04:31:52.347Z"
 }
