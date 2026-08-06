@@ -1,6 +1,6 @@
 {
   "version": "v251",
-  "generatedAt": "2026-08-06T02:30:24.286Z",
+  "generatedAt": "2026-08-06T02:40:24.337Z",
   "provider": "The Odds API v4",
   "keyPresent": true,
   "regions": "uk",
@@ -22,14 +22,6 @@
       "sportTitle": "Allsvenskan - Sweden",
       "score": 0.323,
       "matches": 10
-    },
-    {
-      "league": "Liga Profesional Argentina",
-      "country": "Argentina",
-      "sportKey": "soccer_argentina_primera_division",
-      "sportTitle": "Primera División - Argentina",
-      "score": 0.78,
-      "matches": 16
     },
     {
       "league": "Copa Chile",
@@ -206,6 +198,14 @@
       "sportTitle": "Liga MX",
       "score": 0.555,
       "matches": 8
+    },
+    {
+      "league": "Liga Profesional Argentina",
+      "country": "Argentina",
+      "sportKey": "soccer_argentina_primera_division",
+      "sportTitle": "Primera División - Argentina",
+      "score": 0.78,
+      "matches": 15
     },
     {
       "league": "UEFA Champions League Women",
@@ -1640,7 +1640,7 @@
       "matches": 1
     }
   ],
-  "matchesConsidered": 2486,
+  "matchesConsidered": 2485,
   "matchesMatched": 0,
   "matchesUpdated": 0,
   "fieldsFilled": 0,
@@ -3078,75 +3078,75 @@
       "reason": "No event/team match"
     },
     {
-      "league": "Liga Profesional Argentina",
-      "home": "Tigre",
-      "away": "Belgrano Cordoba",
+      "league": "Copa Chile",
+      "home": "Coquimbo Unido",
+      "away": "San Marcos de Arica",
       "reason": "No event/team match"
     },
     {
-      "league": "Liga Profesional Argentina",
-      "home": "Union Santa Fe",
-      "away": "Lanus",
+      "league": "Copa Chile",
+      "home": "Deportes Iquique",
+      "away": "Deportes Limache",
       "reason": "No event/team match"
     },
     {
-      "league": "Liga Profesional Argentina",
-      "home": "Rosario Central",
-      "away": "Aldosivi",
+      "league": "Primera B",
+      "home": "Union Espanola",
+      "away": "Antofagasta",
       "reason": "No event/team match"
     },
     {
-      "league": "Liga Profesional Argentina",
-      "home": "Independ. Rivadavia",
-      "away": "Estudiantes de Rio Cuarto",
+      "league": "Primera B",
+      "home": "Deportes Santa Cruz",
+      "away": "D. Puerto Montt",
       "reason": "No event/team match"
     },
     {
-      "league": "Liga Profesional Argentina",
-      "home": "Atletico Tucuman",
-      "away": "Sarmiento Junin",
+      "league": "Primera B",
+      "home": "Union San Felipe",
+      "away": "Recoleta",
       "reason": "No event/team match"
     },
     {
-      "league": "Liga Profesional Argentina",
-      "home": "Deportivo Riestra",
-      "away": "Estudiantes L.P.",
+      "league": "Primera B",
+      "home": "Santiago Wanderers",
+      "away": "San Marcos de Arica",
       "reason": "No event/team match"
     },
     {
-      "league": "Liga Profesional Argentina",
-      "home": "Tigre",
-      "away": "River Plate",
+      "league": "Primera B",
+      "home": "Cobreloa",
+      "away": "Deportes Iquique",
       "reason": "No event/team match"
     },
     {
-      "league": "Liga Profesional Argentina",
-      "home": "Boca Juniors",
-      "away": "Velez Sarsfield",
+      "league": "Primera B",
+      "home": "Deportes Temuco",
+      "away": "Magallanes",
       "reason": "No event/team match"
     },
     {
-      "league": "Liga Profesional Argentina",
-      "home": "Independiente",
-      "away": "Platense",
+      "league": "Primera B",
+      "home": "Deportes Copiapo",
+      "away": "San Luis",
       "reason": "No event/team match"
     },
     {
-      "league": "Liga Profesional Argentina",
-      "home": "San Lorenzo",
-      "away": "Huracan",
+      "league": "Primera B",
+      "home": "Rangers de Talca",
+      "away": "Curico Unido",
       "reason": "No event/team match"
     },
     {
-      "league": "Liga Profesional Argentina",
-      "home": "Defensa Y Justicia",
-      "away": "Newells Old Boys",
+      "league": "Primera B",
+      "home": "D. Puerto Montt",
+      "away": "Union Espanola",
       "reason": "No event/team match"
     },
     {
-      "league": "Liga Profesional Argentina",
-      "home": "Gimnasia L.P.",
-      "away": "Barracas Central",
+      "league": "Primera División",
+      "home": "U. Catolica",
+      "away": "Cobresal",
       "reason": "No event/team match"
     }
   ],
@@ -3176,18 +3176,6 @@
       "market": "double_chance"
     },
     {
-      "sportKey": "soccer_argentina_primera_division",
-      "market": "btts"
-    },
-    {
-      "sportKey": "soccer_argentina_primera_division",
-      "market": "draw_no_bet"
-    },
-    {
-      "sportKey": "soccer_argentina_primera_division",
-      "market": "double_chance"
-    },
-    {
       "sportKey": "soccer_chile_campeonato",
       "market": "btts"
     },
@@ -3305,6 +3293,18 @@
     },
     {
       "sportKey": "soccer_germany_bundesliga",
+      "market": "double_chance"
+    },
+    {
+      "sportKey": "soccer_argentina_primera_division",
+      "market": "btts"
+    },
+    {
+      "sportKey": "soccer_argentina_primera_division",
+      "market": "draw_no_bet"
+    },
+    {
+      "sportKey": "soccer_argentina_primera_division",
       "market": "double_chance"
     },
     {
@@ -3684,31 +3684,6 @@
       "statusCode": 422
     },
     {
-      "label": "soccer_argentina_primera_division:base-combined",
-      "error": "Markets not supported by this endpoint: btts, double_chance, draw_no_bet",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_argentina_primera_division:base-core",
-      "error": "Invalid commenceTimeFrom parameter. The format must be YYYY-MM-DDTHH:MM:SSZ, for example 2020-11-24T16:05:00Z",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_argentina_primera_division:btts",
-      "error": "Markets not supported by this endpoint: btts",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_argentina_primera_division:draw_no_bet",
-      "error": "Markets not supported by this endpoint: draw_no_bet",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_argentina_primera_division:double_chance",
-      "error": "Markets not supported by this endpoint: double_chance",
-      "statusCode": 422
-    },
-    {
       "label": "soccer_chile_campeonato:base-combined",
       "error": "Markets not supported by this endpoint: btts, double_chance, draw_no_bet",
       "statusCode": 422
@@ -3955,6 +3930,31 @@
     },
     {
       "label": "soccer_germany_bundesliga:double_chance",
+      "error": "Markets not supported by this endpoint: double_chance",
+      "statusCode": 422
+    },
+    {
+      "label": "soccer_argentina_primera_division:base-combined",
+      "error": "Markets not supported by this endpoint: btts, double_chance, draw_no_bet",
+      "statusCode": 422
+    },
+    {
+      "label": "soccer_argentina_primera_division:base-core",
+      "error": "Invalid commenceTimeFrom parameter. The format must be YYYY-MM-DDTHH:MM:SSZ, for example 2020-11-24T16:05:00Z",
+      "statusCode": 422
+    },
+    {
+      "label": "soccer_argentina_primera_division:btts",
+      "error": "Markets not supported by this endpoint: btts",
+      "statusCode": 422
+    },
+    {
+      "label": "soccer_argentina_primera_division:draw_no_bet",
+      "error": "Markets not supported by this endpoint: draw_no_bet",
+      "statusCode": 422
+    },
+    {
+      "label": "soccer_argentina_primera_division:double_chance",
       "error": "Markets not supported by this endpoint: double_chance",
       "statusCode": 422
     },
@@ -4641,5 +4641,5 @@
   },
   "skipped": false,
   "skipReason": null,
-  "completedAt": "2026-08-06T02:30:48.594Z"
+  "completedAt": "2026-08-06T02:40:47.533Z"
 }
