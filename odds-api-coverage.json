@@ -1,6 +1,6 @@
 {
   "version": "v251",
-  "generatedAt": "2026-08-06T01:00:22.534Z",
+  "generatedAt": "2026-08-06T00:45:51.813Z",
   "provider": "The Odds API v4",
   "keyPresent": true,
   "regions": "uk",
@@ -22,6 +22,62 @@
       "sportTitle": "Allsvenskan - Sweden",
       "score": 0.323,
       "matches": 10
+    },
+    {
+      "league": "Football League - Highland League",
+      "country": "Scotland",
+      "sportKey": "soccer_spl",
+      "sportTitle": "Premiership - Scotland",
+      "score": 0.305,
+      "matches": 18
+    },
+    {
+      "league": "Copa Chile",
+      "country": "Chile",
+      "sportKey": "soccer_chile_campeonato",
+      "sportTitle": "Primera División - Chile",
+      "score": 0.323,
+      "matches": 4
+    },
+    {
+      "league": "Copa Do Brasil",
+      "country": "Brazil",
+      "sportKey": "soccer_brazil_campeonato",
+      "sportTitle": "Brazil Série A",
+      "score": 0.291,
+      "matches": 6
+    },
+    {
+      "league": "Copa Rio",
+      "country": "Brazil",
+      "sportKey": "soccer_brazil_campeonato",
+      "sportTitle": "Brazil Série A",
+      "score": 0.305,
+      "matches": 1
+    },
+    {
+      "league": "Liga Profesional Argentina",
+      "country": "Argentina",
+      "sportKey": "soccer_argentina_primera_division",
+      "sportTitle": "Primera División - Argentina",
+      "score": 0.78,
+      "matches": 17
+    },
+    {
+      "league": "Primera División",
+      "country": "Bolivia",
+      "sportKey": "soccer_argentina_primera_division",
+      "sportTitle": "Primera División - Argentina",
+      "score": 0.653,
+      "matches": 12
+    },
+    {
+      "league": "Primera Nacional",
+      "country": "Argentina",
+      "sportKey": "soccer_argentina_primera_division",
+      "sportTitle": "Primera División - Argentina",
+      "score": 0.513,
+      "matches": 19
     },
     {
       "league": "Capixaba B",
@@ -1640,7 +1696,7 @@
       "matches": 1
     }
   ],
-  "matchesConsidered": 2500,
+  "matchesConsidered": 2520,
   "matchesMatched": 0,
   "matchesUpdated": 0,
   "fieldsFilled": 0,
@@ -3096,57 +3152,57 @@
       "reason": "No event/team match"
     },
     {
-      "league": "Capixaba B",
-      "home": "Linhares",
-      "away": "CTE Colatina",
+      "league": "Football League - Highland League",
+      "home": "Banks O' Dee",
+      "away": "Inverurie Loco Works",
       "reason": "No event/team match"
     },
     {
-      "league": "Capixaba B",
-      "home": "Audax São Mateus",
-      "away": "Linhares",
+      "league": "Football League - Highland League",
+      "home": "Brora Rangers",
+      "away": "Wick Academy",
       "reason": "No event/team match"
     },
     {
-      "league": "Capixaba B",
-      "home": "CTE Colatina",
-      "away": "Doze",
+      "league": "Football League - Highland League",
+      "home": "Clachnacuddin",
+      "away": "Invergordon",
       "reason": "No event/team match"
     },
     {
-      "league": "Capixaba B",
-      "home": "Pinheiros",
-      "away": "Tupy",
+      "league": "Football League - Highland League",
+      "home": "Fraserburgh",
+      "away": "Keith",
       "reason": "No event/team match"
     },
     {
-      "league": "Capixaba B",
-      "home": "Estrela do Norte",
-      "away": "Rive",
+      "league": "Football League - Highland League",
+      "home": "Huntly",
+      "away": "Deveronvale",
       "reason": "No event/team match"
     },
     {
-      "league": "Serie B",
-      "home": "Operario-PR",
-      "away": "São Bernardo",
+      "league": "Football League - Highland League",
+      "home": "Lossiemouth",
+      "away": "Rothes",
       "reason": "No event/team match"
     },
     {
-      "league": "Serie B",
-      "home": "Ceara",
-      "away": "Ponte Preta",
+      "league": "Football League - Highland League",
+      "home": "Nairn County",
+      "away": "Forres Mechanics",
       "reason": "No event/team match"
     },
     {
-      "league": "Serie B",
-      "home": "Vila Nova",
-      "away": "Sport Recife",
+      "league": "Football League - Highland League",
+      "home": "Strathspey Thistle",
+      "away": "Buckie Thistle",
       "reason": "No event/team match"
     },
     {
-      "league": "Serie B",
-      "home": "Botafogo SP",
-      "away": "America Mineiro",
+      "league": "Football League - Highland League",
+      "home": "Turriff United",
+      "away": "Formartine United",
       "reason": "No event/team match"
     }
   ],
@@ -3176,19 +3232,7 @@
       "market": "double_chance"
     },
     {
-      "sportKey": "soccer_brazil_serie_b",
-      "market": "btts"
-    },
-    {
-      "sportKey": "soccer_brazil_serie_b",
-      "market": "draw_no_bet"
-    },
-    {
-      "sportKey": "soccer_brazil_serie_b",
-      "market": "double_chance"
-    },
-    {
-      "sportKey": "soccer_argentina_primera_division",
+      "sportKey": "soccer_spl",
       "market": "btts"
     },
     {
@@ -3233,6 +3277,42 @@
     },
     {
       "sportKey": "soccer_brazil_campeonato",
+      "market": "double_chance"
+    },
+    {
+      "sportKey": "soccer_argentina_primera_division",
+      "market": "btts"
+    },
+    {
+      "sportKey": "soccer_argentina_primera_division",
+      "market": "draw_no_bet"
+    },
+    {
+      "sportKey": "soccer_argentina_primera_division",
+      "market": "double_chance"
+    },
+    {
+      "sportKey": "soccer_brazil_serie_b",
+      "market": "btts"
+    },
+    {
+      "sportKey": "soccer_brazil_serie_b",
+      "market": "draw_no_bet"
+    },
+    {
+      "sportKey": "soccer_brazil_serie_b",
+      "market": "double_chance"
+    },
+    {
+      "sportKey": "soccer_usa_mls",
+      "market": "btts"
+    },
+    {
+      "sportKey": "soccer_usa_mls",
+      "market": "draw_no_bet"
+    },
+    {
+      "sportKey": "soccer_usa_mls",
       "market": "double_chance"
     },
     {
@@ -3684,32 +3764,7 @@
       "statusCode": 422
     },
     {
-      "label": "soccer_brazil_serie_b:base-combined",
-      "error": "Markets not supported by this endpoint: btts, double_chance, draw_no_bet",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_brazil_serie_b:base-core",
-      "error": "Invalid commenceTimeFrom parameter. The format must be YYYY-MM-DDTHH:MM:SSZ, for example 2020-11-24T16:05:00Z",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_brazil_serie_b:btts",
-      "error": "Markets not supported by this endpoint: btts",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_brazil_serie_b:draw_no_bet",
-      "error": "Markets not supported by this endpoint: draw_no_bet",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_brazil_serie_b:double_chance",
-      "error": "Markets not supported by this endpoint: double_chance",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_argentina_primera_division:base-combined",
+      "label": "soccer_spl:base-combined",
       "error": "Markets not supported by this endpoint: btts, double_chance, draw_no_bet",
       "statusCode": 422
     },
@@ -3805,6 +3860,81 @@
     },
     {
       "label": "soccer_brazil_campeonato:double_chance",
+      "error": "Markets not supported by this endpoint: double_chance",
+      "statusCode": 422
+    },
+    {
+      "label": "soccer_argentina_primera_division:base-combined",
+      "error": "Markets not supported by this endpoint: btts, double_chance, draw_no_bet",
+      "statusCode": 422
+    },
+    {
+      "label": "soccer_argentina_primera_division:base-core",
+      "error": "Invalid commenceTimeFrom parameter. The format must be YYYY-MM-DDTHH:MM:SSZ, for example 2020-11-24T16:05:00Z",
+      "statusCode": 422
+    },
+    {
+      "label": "soccer_argentina_primera_division:btts",
+      "error": "Markets not supported by this endpoint: btts",
+      "statusCode": 422
+    },
+    {
+      "label": "soccer_argentina_primera_division:draw_no_bet",
+      "error": "Markets not supported by this endpoint: draw_no_bet",
+      "statusCode": 422
+    },
+    {
+      "label": "soccer_argentina_primera_division:double_chance",
+      "error": "Markets not supported by this endpoint: double_chance",
+      "statusCode": 422
+    },
+    {
+      "label": "soccer_brazil_serie_b:base-combined",
+      "error": "Markets not supported by this endpoint: btts, double_chance, draw_no_bet",
+      "statusCode": 422
+    },
+    {
+      "label": "soccer_brazil_serie_b:base-core",
+      "error": "Invalid commenceTimeFrom parameter. The format must be YYYY-MM-DDTHH:MM:SSZ, for example 2020-11-24T16:05:00Z",
+      "statusCode": 422
+    },
+    {
+      "label": "soccer_brazil_serie_b:btts",
+      "error": "Markets not supported by this endpoint: btts",
+      "statusCode": 422
+    },
+    {
+      "label": "soccer_brazil_serie_b:draw_no_bet",
+      "error": "Markets not supported by this endpoint: draw_no_bet",
+      "statusCode": 422
+    },
+    {
+      "label": "soccer_brazil_serie_b:double_chance",
+      "error": "Markets not supported by this endpoint: double_chance",
+      "statusCode": 422
+    },
+    {
+      "label": "soccer_usa_mls:base-combined",
+      "error": "Markets not supported by this endpoint: btts, double_chance, draw_no_bet",
+      "statusCode": 422
+    },
+    {
+      "label": "soccer_usa_mls:base-core",
+      "error": "Invalid commenceTimeFrom parameter. The format must be YYYY-MM-DDTHH:MM:SSZ, for example 2020-11-24T16:05:00Z",
+      "statusCode": 422
+    },
+    {
+      "label": "soccer_usa_mls:btts",
+      "error": "Markets not supported by this endpoint: btts",
+      "statusCode": 422
+    },
+    {
+      "label": "soccer_usa_mls:draw_no_bet",
+      "error": "Markets not supported by this endpoint: draw_no_bet",
+      "statusCode": 422
+    },
+    {
+      "label": "soccer_usa_mls:double_chance",
       "error": "Markets not supported by this endpoint: double_chance",
       "statusCode": 422
     },
@@ -4641,5 +4771,5 @@
   },
   "skipped": false,
   "skipReason": null,
-  "completedAt": "2026-08-06T01:00:32.007Z"
+  "completedAt": "2026-08-06T00:46:10.164Z"
 }
