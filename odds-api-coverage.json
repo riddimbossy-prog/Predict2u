@@ -1,6 +1,6 @@
 {
   "version": "v251",
-  "generatedAt": "2026-08-06T03:00:15.891Z",
+  "generatedAt": "2026-08-06T03:10:27.724Z",
   "provider": "The Odds API v4",
   "keyPresent": true,
   "regions": "uk",
@@ -24,20 +24,12 @@
       "matches": 10
     },
     {
-      "league": "Leagues Cup",
-      "country": "World",
-      "sportKey": "soccer_concacaf_leagues_cup",
-      "sportTitle": "Leagues Cup",
-      "score": 0.72,
-      "matches": 30
-    },
-    {
       "league": "USL Championship",
       "country": "USA",
       "sportKey": "soccer_usa_mls",
       "sportTitle": "MLS",
       "score": 0.323,
-      "matches": 15
+      "matches": 14
     },
     {
       "league": "CONCACAF Central American Cup",
@@ -46,6 +38,14 @@
       "sportTitle": "Leagues Cup",
       "score": 0.286,
       "matches": 4
+    },
+    {
+      "league": "Leagues Cup",
+      "country": "World",
+      "sportKey": "soccer_concacaf_leagues_cup",
+      "sportTitle": "Leagues Cup",
+      "score": 0.72,
+      "matches": 28
     },
     {
       "league": "NWSL Women",
@@ -1632,7 +1632,7 @@
       "matches": 1
     }
   ],
-  "matchesConsidered": 2480,
+  "matchesConsidered": 2477,
   "matchesMatched": 0,
   "matchesUpdated": 0,
   "fieldsFilled": 0,
@@ -2278,15 +2278,27 @@
       "reason": "No event/team match"
     },
     {
-      "league": "Leagues Cup",
-      "home": "FC Dallas",
-      "away": "Club Queretaro",
+      "league": "CONCACAF Central American Cup",
+      "home": "Alianza",
+      "away": "CS Herediano",
       "reason": "No event/team match"
     },
     {
-      "league": "Leagues Cup",
-      "home": "Nashville SC",
-      "away": "Leon",
+      "league": "CONCACAF Central American Cup",
+      "home": "Deportivo Saprissa",
+      "away": "Alianza FC",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "CONCACAF Central American Cup",
+      "home": "Verdes",
+      "away": "Municipal",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "CONCACAF Central American Cup",
+      "home": "CD Motagua",
+      "away": "FAS",
       "reason": "No event/team match"
     },
     {
@@ -2455,30 +2467,6 @@
       "league": "Leagues Cup",
       "home": "Columbus Crew",
       "away": "U.N.A.M. - Pumas",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "CONCACAF Central American Cup",
-      "home": "Alianza",
-      "away": "CS Herediano",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "CONCACAF Central American Cup",
-      "home": "Deportivo Saprissa",
-      "away": "Alianza FC",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "CONCACAF Central American Cup",
-      "home": "Verdes",
-      "away": "Municipal",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "CONCACAF Central American Cup",
-      "home": "CD Motagua",
-      "away": "FAS",
       "reason": "No event/team match"
     },
     {
@@ -3071,12 +3059,6 @@
     },
     {
       "league": "USL Championship",
-      "home": "FC Tulsa",
-      "away": "Sacramento Republic",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "USL Championship",
       "home": "El Paso Locomotive",
       "away": "Monterey Bay",
       "reason": "No event/team match"
@@ -3139,6 +3121,24 @@
       "league": "USL Championship",
       "home": "El Paso Locomotive",
       "away": "Oakland Roots",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "USL Championship",
+      "home": "Monterey Bay",
+      "away": "New Mexico United",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "USL Championship",
+      "home": "Orange County SC",
+      "away": "Tampa Bay Rowdies",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "USL Championship",
+      "home": "Indy Eleven",
+      "away": "Hartford Athletic",
       "reason": "No event/team match"
     }
   ],
@@ -4633,5 +4633,5 @@
   },
   "skipped": false,
   "skipReason": null,
-  "completedAt": "2026-08-06T03:00:29.687Z"
+  "completedAt": "2026-08-06T03:10:51.049Z"
 }
