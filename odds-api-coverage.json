@@ -1,6 +1,6 @@
 {
   "version": "v251",
-  "generatedAt": "2026-08-06T12:10:18.672Z",
+  "generatedAt": "2026-08-06T12:20:25.491Z",
   "provider": "The Odds API v4",
   "keyPresent": true,
   "regions": "uk",
@@ -704,14 +704,6 @@
       "matches": 14
     },
     {
-      "league": "Torneo Promocional Amateur",
-      "country": "Argentina",
-      "sportKey": "soccer_argentina_primera_division",
-      "sportTitle": "Primera División - Argentina",
-      "score": 0.305,
-      "matches": 16
-    },
-    {
       "league": "1. Lig",
       "country": "Turkey",
       "sportKey": "soccer_turkey_super_league",
@@ -1392,6 +1384,14 @@
       "matches": 1
     },
     {
+      "league": "Torneo Promocional Amateur",
+      "country": "Argentina",
+      "sportKey": "soccer_argentina_primera_division",
+      "sportTitle": "Primera División - Argentina",
+      "score": 0.305,
+      "matches": 8
+    },
+    {
       "league": "Capixaba B",
       "country": "Brazil",
       "sportKey": "soccer_brazil_serie_b",
@@ -1672,7 +1672,7 @@
       "matches": 2
     }
   ],
-  "matchesConsidered": 2670,
+  "matchesConsidered": 2651,
   "matchesMatched": 0,
   "matchesUpdated": 0,
   "fieldsFilled": 0,
@@ -1681,18 +1681,6 @@
   "derivedHtftMatches": 0,
   "bookmakerRows": 0,
   "unmatched": [
-    {
-      "league": "Calcutta Premier Division",
-      "country": "India",
-      "reason": "No matching soccer sport key",
-      "bestScore": 0.222
-    },
-    {
-      "league": "South Australia State League 1",
-      "country": "Australia",
-      "reason": "No matching soccer sport key",
-      "bestScore": 0.222
-    },
     {
       "league": "1. Division",
       "country": "Kazakhstan",
@@ -1796,6 +1784,12 @@
       "bestScore": 0
     },
     {
+      "league": "Calcutta Premier Division",
+      "country": "India",
+      "reason": "No matching soccer sport key",
+      "bestScore": 0.222
+    },
+    {
       "league": "New South Wales NPL 2",
       "country": "Australia",
       "reason": "No matching soccer sport key",
@@ -1806,6 +1800,12 @@
       "country": "Ukraine",
       "reason": "No matching soccer sport key",
       "bestScore": 0.143
+    },
+    {
+      "league": "South Australia State League 1",
+      "country": "Australia",
+      "reason": "No matching soccer sport key",
+      "bestScore": 0.222
     },
     {
       "league": "WK-League",
@@ -1998,12 +1998,6 @@
       "country": "World",
       "reason": "No matching soccer sport key",
       "bestScore": 0
-    },
-    {
-      "league": "Division Intermedia",
-      "country": "Paraguay",
-      "reason": "No matching soccer sport key",
-      "bestScore": 0.143
     },
     {
       "league": "CONCACAF U20",
@@ -3179,6 +3173,12 @@
       "league": "Premier League",
       "home": "FC Isloch Minsk R.",
       "away": "ML Vitebsk",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Premier League",
+      "home": "Baranovichi",
+      "away": "Bate Borisov",
       "reason": "No event/team match"
     }
   ],
@@ -4673,5 +4673,5 @@
   },
   "skipped": false,
   "skipReason": null,
-  "completedAt": "2026-08-06T12:10:33.997Z"
+  "completedAt": "2026-08-06T12:20:49.347Z"
 }
