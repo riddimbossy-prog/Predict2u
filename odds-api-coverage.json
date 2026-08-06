@@ -1,6 +1,6 @@
 {
   "version": "v251",
-  "generatedAt": "2026-08-06T05:00:16.146Z",
+  "generatedAt": "2026-08-06T05:10:17.758Z",
   "provider": "The Odds API v4",
   "keyPresent": true,
   "regions": "uk",
@@ -16,36 +16,12 @@
       "matches": 7
     },
     {
-      "league": "CONCACAF Central American Cup",
-      "country": "World",
-      "sportKey": "soccer_concacaf_leagues_cup",
-      "sportTitle": "Leagues Cup",
-      "score": 0.286,
-      "matches": 7
-    },
-    {
       "league": "Leagues Cup",
       "country": "World",
       "sportKey": "soccer_concacaf_leagues_cup",
       "sportTitle": "Leagues Cup",
       "score": 0.72,
-      "matches": 34
-    },
-    {
-      "league": "NWSL Women",
-      "country": "USA",
-      "sportKey": "soccer_usa_mls",
-      "sportTitle": "MLS",
-      "score": 0.323,
-      "matches": 9
-    },
-    {
-      "league": "USL Championship",
-      "country": "USA",
-      "sportKey": "soccer_usa_mls",
-      "sportTitle": "MLS",
-      "score": 0.323,
-      "matches": 13
+      "matches": 33
     },
     {
       "league": "Nasjonal U19 Champions League",
@@ -190,6 +166,14 @@
       "sportTitle": "Brazil Série A",
       "score": 0.291,
       "matches": 2
+    },
+    {
+      "league": "CONCACAF Central American Cup",
+      "country": "World",
+      "sportKey": "soccer_concacaf_leagues_cup",
+      "sportTitle": "Leagues Cup",
+      "score": 0.286,
+      "matches": 5
     },
     {
       "league": "UEFA Champions League Women",
@@ -888,6 +872,14 @@
       "matches": 3
     },
     {
+      "league": "NWSL Women",
+      "country": "USA",
+      "sportKey": "soccer_usa_mls",
+      "sportTitle": "MLS",
+      "score": 0.323,
+      "matches": 8
+    },
+    {
       "league": "Primera Nacional",
       "country": "Argentina",
       "sportKey": "soccer_argentina_primera_division",
@@ -1040,6 +1032,14 @@
       "matches": 9
     },
     {
+      "league": "K League 1",
+      "country": "South-Korea",
+      "sportKey": "soccer_korea_kleague1",
+      "sportTitle": "K League 1",
+      "score": 0.695,
+      "matches": 5
+    },
+    {
       "league": "2. Division - Group 2",
       "country": "Norway",
       "sportKey": "soccer_norway_eliteserien",
@@ -1078,14 +1078,6 @@
       "sportTitle": "Ekstraklasa - Poland",
       "score": 0.323,
       "matches": 9
-    },
-    {
-      "league": "K League 1",
-      "country": "South-Korea",
-      "sportKey": "soccer_korea_kleague1",
-      "sportTitle": "K League 1",
-      "score": 0.695,
-      "matches": 5
     },
     {
       "league": "League One",
@@ -1512,6 +1504,14 @@
       "matches": 1
     },
     {
+      "league": "USL Championship",
+      "country": "USA",
+      "sportKey": "soccer_usa_mls",
+      "sportTitle": "MLS",
+      "score": 0.323,
+      "matches": 12
+    },
+    {
       "league": "USL League One",
       "country": "USA",
       "sportKey": "soccer_usa_mls",
@@ -1561,14 +1561,6 @@
     },
     {
       "league": "Cup",
-      "country": "Greece",
-      "sportKey": "soccer_concacaf_leagues_cup",
-      "sportTitle": "Leagues Cup",
-      "score": 0.52,
-      "matches": 1
-    },
-    {
-      "league": "Cup",
       "country": "Estonia",
       "sportKey": "soccer_concacaf_leagues_cup",
       "sportTitle": "Leagues Cup",
@@ -1582,6 +1574,14 @@
       "sportTitle": "UEFA Champions League Qualification",
       "score": 0.695,
       "matches": 10
+    },
+    {
+      "league": "Cup",
+      "country": "Greece",
+      "sportKey": "soccer_concacaf_leagues_cup",
+      "sportTitle": "Leagues Cup",
+      "score": 0.52,
+      "matches": 1
     },
     {
       "league": "Premier Soccer League",
@@ -1624,20 +1624,20 @@
       "matches": 4
     },
     {
-      "league": "Cup",
-      "country": "Russia",
-      "sportKey": "soccer_concacaf_leagues_cup",
-      "sportTitle": "Leagues Cup",
-      "score": 0.52,
-      "matches": 28
-    },
-    {
       "league": "AFC Champions League Two",
       "country": "World",
       "sportKey": "soccer_epl",
       "sportTitle": "EPL",
       "score": 0.286,
       "matches": 2
+    },
+    {
+      "league": "Cup",
+      "country": "Russia",
+      "sportKey": "soccer_concacaf_leagues_cup",
+      "sportTitle": "Leagues Cup",
+      "score": 0.52,
+      "matches": 28
     },
     {
       "league": "Cup",
@@ -1672,7 +1672,7 @@
       "matches": 2
     }
   ],
-  "matchesConsidered": 2635,
+  "matchesConsidered": 2630,
   "matchesMatched": 0,
   "matchesUpdated": 0,
   "fieldsFilled": 0,
@@ -1704,12 +1704,6 @@
       "country": "Ecuador",
       "reason": "No matching soccer sport key",
       "bestScore": 0.2
-    },
-    {
-      "league": "CONCACAF U20",
-      "country": "World",
-      "reason": "No matching soccer sport key",
-      "bestScore": 0.167
     },
     {
       "league": "Piala Presiden",
@@ -2625,6 +2619,12 @@
     },
     {
       "league": "Ettan - Södra",
+      "home": "Utsikten",
+      "away": "Hässleholms IF",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Ettan - Södra",
       "home": "Skövde AIK",
       "away": "Lund",
       "reason": "No event/team match"
@@ -2639,12 +2639,6 @@
       "league": "Ettan - Södra",
       "home": "Tvååker",
       "away": "Atvidabergs FF",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Ettan - Södra",
-      "home": "Utsikten",
-      "away": "Hässleholms IF",
       "reason": "No event/team match"
     },
     {
@@ -2855,54 +2849,6 @@
       "league": "Allsvenskan",
       "home": "Vasteras SK FK",
       "away": "Djurgardens IF",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "CONCACAF Central American Cup",
-      "home": "Alianza",
-      "away": "CS Herediano",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "CONCACAF Central American Cup",
-      "home": "Deportivo Saprissa",
-      "away": "Alianza FC",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "CONCACAF Central American Cup",
-      "home": "Verdes",
-      "away": "Municipal",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "CONCACAF Central American Cup",
-      "home": "CD Motagua",
-      "away": "FAS",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "CONCACAF Central American Cup",
-      "home": "Plaza Amador",
-      "away": "Xelajú",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "CONCACAF Central American Cup",
-      "home": "Real Estelí",
-      "away": "Alianza",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "CONCACAF Central American Cup",
-      "home": "Deportivo Saprissa",
-      "away": "Mixco",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Leagues Cup",
-      "home": "Toluca",
-      "away": "Seattle Sounders",
       "reason": "No event/team match"
     },
     {
@@ -3128,9 +3074,33 @@
       "reason": "No event/team match"
     },
     {
-      "league": "Cup",
-      "home": "Trikala",
-      "away": "Larisa",
+      "league": "CONCACAF Central American Cup",
+      "home": "Verdes",
+      "away": "Municipal",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "CONCACAF Central American Cup",
+      "home": "CD Motagua",
+      "away": "FAS",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "CONCACAF Central American Cup",
+      "home": "Plaza Amador",
+      "away": "Xelajú",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "CONCACAF Central American Cup",
+      "home": "Real Estelí",
+      "away": "Alianza",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "CONCACAF Central American Cup",
+      "home": "Deportivo Saprissa",
+      "away": "Mixco",
       "reason": "No event/team match"
     },
     {
@@ -3180,6 +3150,36 @@
       "home": "Phoenix",
       "away": "Vaprus",
       "reason": "No event/team match"
+    },
+    {
+      "league": "Cup",
+      "home": "Kose",
+      "away": "Tartu Welco",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Cup",
+      "home": "FC Levadia Tallinn",
+      "away": "Paide",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Cup",
+      "home": "Helios",
+      "away": "Viimsi",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Cup",
+      "home": "Keila",
+      "away": "Flora III",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Cup",
+      "home": "Trikala",
+      "away": "Larisa",
+      "reason": "No event/team match"
     }
   ],
   "unsupportedMarkets": [
@@ -3208,18 +3208,6 @@
       "market": "double_chance"
     },
     {
-      "sportKey": "soccer_usa_mls",
-      "market": "btts"
-    },
-    {
-      "sportKey": "soccer_usa_mls",
-      "market": "draw_no_bet"
-    },
-    {
-      "sportKey": "soccer_usa_mls",
-      "market": "double_chance"
-    },
-    {
       "sportKey": "soccer_norway_eliteserien",
       "market": "btts"
     },
@@ -3601,6 +3589,18 @@
     },
     {
       "sportKey": "soccer_brazil_serie_b",
+      "market": "double_chance"
+    },
+    {
+      "sportKey": "soccer_usa_mls",
+      "market": "btts"
+    },
+    {
+      "sportKey": "soccer_usa_mls",
+      "market": "draw_no_bet"
+    },
+    {
+      "sportKey": "soccer_usa_mls",
       "market": "double_chance"
     },
     {
@@ -3712,31 +3712,6 @@
     },
     {
       "label": "soccer_concacaf_leagues_cup:double_chance",
-      "error": "Markets not supported by this endpoint: double_chance",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_usa_mls:base-combined",
-      "error": "Markets not supported by this endpoint: btts, double_chance, draw_no_bet",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_usa_mls:base-core",
-      "error": "Invalid commenceTimeFrom parameter. The format must be YYYY-MM-DDTHH:MM:SSZ, for example 2020-11-24T16:05:00Z",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_usa_mls:btts",
-      "error": "Markets not supported by this endpoint: btts",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_usa_mls:draw_no_bet",
-      "error": "Markets not supported by this endpoint: draw_no_bet",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_usa_mls:double_chance",
       "error": "Markets not supported by this endpoint: double_chance",
       "statusCode": 422
     },
@@ -4541,6 +4516,31 @@
       "statusCode": 422
     },
     {
+      "label": "soccer_usa_mls:base-combined",
+      "error": "Markets not supported by this endpoint: btts, double_chance, draw_no_bet",
+      "statusCode": 422
+    },
+    {
+      "label": "soccer_usa_mls:base-core",
+      "error": "Invalid commenceTimeFrom parameter. The format must be YYYY-MM-DDTHH:MM:SSZ, for example 2020-11-24T16:05:00Z",
+      "statusCode": 422
+    },
+    {
+      "label": "soccer_usa_mls:btts",
+      "error": "Markets not supported by this endpoint: btts",
+      "statusCode": 422
+    },
+    {
+      "label": "soccer_usa_mls:draw_no_bet",
+      "error": "Markets not supported by this endpoint: draw_no_bet",
+      "statusCode": 422
+    },
+    {
+      "label": "soccer_usa_mls:double_chance",
+      "error": "Markets not supported by this endpoint: double_chance",
+      "statusCode": 422
+    },
+    {
       "label": "soccer_spain_la_liga:base-combined",
       "error": "Markets not supported by this endpoint: btts, double_chance, draw_no_bet",
       "statusCode": 422
@@ -4673,5 +4673,5 @@
   },
   "skipped": false,
   "skipReason": null,
-  "completedAt": "2026-08-06T05:00:24.868Z"
+  "completedAt": "2026-08-06T05:10:33.176Z"
 }
