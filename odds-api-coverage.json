@@ -1,6 +1,6 @@
 {
   "version": "v251",
-  "generatedAt": "2026-08-07T09:40:18.492Z",
+  "generatedAt": "2026-08-07T09:33:40.344Z",
   "provider": "The Odds API v4",
   "keyPresent": true,
   "regions": "uk",
@@ -1432,6 +1432,14 @@
       "matches": 10
     },
     {
+      "league": "Primera División",
+      "country": "Venezuela",
+      "sportKey": "soccer_argentina_primera_division",
+      "sportTitle": "Primera División - Argentina",
+      "score": 0.653,
+      "matches": 7
+    },
+    {
       "league": "Major League Soccer",
       "country": "USA",
       "sportKey": "soccer_usa_mls",
@@ -1513,14 +1521,6 @@
     },
     {
       "league": "Cup",
-      "country": "Greece",
-      "sportKey": "soccer_concacaf_leagues_cup",
-      "sportTitle": "Leagues Cup",
-      "score": 0.52,
-      "matches": 1
-    },
-    {
-      "league": "Cup",
       "country": "Russia",
       "sportKey": "soccer_concacaf_leagues_cup",
       "sportTitle": "Leagues Cup",
@@ -1529,11 +1529,19 @@
     },
     {
       "league": "Cup",
+      "country": "Greece",
+      "sportKey": "soccer_concacaf_leagues_cup",
+      "sportTitle": "Leagues Cup",
+      "score": 0.52,
+      "matches": 1
+    },
+    {
+      "league": "Cup",
       "country": "Estonia",
       "sportKey": "soccer_concacaf_leagues_cup",
       "sportTitle": "Leagues Cup",
       "score": 0.52,
-      "matches": 12
+      "matches": 13
     },
     {
       "league": "UEFA Champions League",
@@ -1688,7 +1696,7 @@
       "matches": 4
     }
   ],
-  "matchesConsidered": 2678,
+  "matchesConsidered": 2711,
   "matchesMatched": 0,
   "matchesUpdated": 0,
   "fieldsFilled": 0,
@@ -2332,6 +2340,12 @@
       "country": "Ukraine",
       "reason": "No matching soccer sport key",
       "bestScore": 0.167
+    },
+    {
+      "league": "Cupa României",
+      "country": "Romania",
+      "reason": "No matching soccer sport key",
+      "bestScore": 0
     },
     {
       "league": "UEFA Super Cup",
@@ -3189,12 +3203,6 @@
       "league": "Supreme Division Women",
       "home": "Krasnodar W",
       "away": "Spartak Moskva W",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Supreme Division Women",
-      "home": "Lokomotiv Moskva W",
-      "away": "CSKA Moskva W",
       "reason": "No event/team match"
     }
   ],
@@ -4689,5 +4697,5 @@
   },
   "skipped": false,
   "skipReason": null,
-  "completedAt": "2026-08-07T09:40:38.408Z"
+  "completedAt": "2026-08-07T09:34:02.244Z"
 }
