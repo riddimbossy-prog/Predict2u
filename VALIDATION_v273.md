@@ -1,12 +1,10 @@
-# Predict2U v273 Validation
+# Predict2U v273 validation
 
-- Root cause confirmed: `current-data.js` contained fixtures only through 2026-08-04.
-- `fixtures.js` was stale and contained only 2026-07-14 to 2026-07-15.
-- Both future-fixture workflows were manual-only.
-- Team Intelligence did not load the fixture overlay.
-- Added six-hour fixture snapshot schedule.
-- Added daily full discovery/enrichment schedule.
-- Added Team Intelligence fixture overlay in the correct script order.
-- Added `fixtures.js` to the v273 service-worker shell.
-- `node future-date-patch-selftest-v273.js` passes.
-- `npm run release:gate` passes with the v273 gate.
+- Shared Team Snapshot JavaScript syntax: passed
+- Team Intelligence JavaScript syntax: passed
+- Single-engine board JavaScript syntax: passed
+- Service worker syntax/cache version: passed
+- Team Intelligence shared context include: passed
+- Board/Bankers/Full Engine Board/Single Engine include: passed
+- Opponent position + PPG + kickoff UI hooks: passed
+- Last-5 O/U, GG/NG and Fail-to-Score calculations use settled loaded fixtures only

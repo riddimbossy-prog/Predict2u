@@ -182,6 +182,7 @@ a{ color:inherit; text-decoration:none; }
 <link rel="stylesheet" href="ui-polish-v259.css" data-p2u-ui-v259="true"/>
 <link rel="stylesheet" href="data-freshness-v264.css"><link rel="stylesheet" href="stability-v264.css">
 <link rel="stylesheet" href="mobile-responsive-v265.css" data-p2u-responsive-v265="true"/>  <link rel="stylesheet" href="controls-v267.css" data-p2u-controls-v267="true">
+<link rel="stylesheet" href="team-context-v273.css" data-p2u-team-context-v273="true">
 </head>
 <body>
 <script src="unified-shell-v234.js"></script>
@@ -515,7 +516,7 @@ a{ color:inherit; text-decoration:none; }
       const id='m'+i; REG[id]=p;
       const price=priceOf(p.m,p.market);
       const btn=(!p.pending&&p.m.homeGoals==null&&typeof P2USlip!=='undefined')?P2USlip.btn(p.m,p.market):'';
-      return `<div class="glass card-h rounded-3xl p-5 rise p2u-standard-card p2u-fullboard-card" data-analysis-pending="${p.analysisPending?'true':'false'}" style="animation-delay:${Math.min(i*25,250)}ms">
+      return `<div class="glass card-h rounded-3xl p-5 rise p2u-standard-card p2u-fullboard-card" data-p2u-fixture-id="${esc(String(p.m&&p.m.id!=null?p.m.id:''))}" data-p2u-home="${esc(p.m.home||'')}" data-p2u-away="${esc(p.m.away||'')}" data-analysis-pending="${p.analysisPending?'true':'false'}" style="animation-delay:${Math.min(i*25,250)}ms">
         <div class="p2u-fullboard-summary">
           <div class="p2u-fullboard-meta">
             <div class="p2u-fullboard-meta-copy"><span class="p2u-fullboard-time">${ko(p.m)||'TBD'}</span><span>•</span><span class="p2u-fullboard-league">${esc(p.m.league||'')}</span></div>
@@ -685,5 +686,6 @@ if('serviceWorker' in navigator) window.addEventListener('load',()=>navigator.se
 <script src="football-assets.js" defer></script>
 <script src="analytics.js" defer></script>
 <script src="fullboard-compact-v231.js" defer></script>
+<script src="team-context-v273.js" defer></script>
 </body>
 </html>

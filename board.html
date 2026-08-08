@@ -258,6 +258,7 @@ a{ color:inherit; text-decoration:none; }
 <link rel="stylesheet" href="ui-polish-v259.css" data-p2u-ui-v259="true"/>
 <link rel="stylesheet" href="data-freshness-v264.css"><link rel="stylesheet" href="stability-v264.css">
 <link rel="stylesheet" href="mobile-responsive-v265.css" data-p2u-responsive-v265="true"/>  <link rel="stylesheet" href="controls-v267.css" data-p2u-controls-v267="true">
+<link rel="stylesheet" href="team-context-v273.css" data-p2u-team-context-v273="true">
 </head>
 <body>
 <script src="unified-shell-v234.js"></script>
@@ -787,7 +788,7 @@ a{ color:inherit; text-decoration:none; }
       const n=p.engines.length, pct=Math.round(100*n/TOTAL);
       const intel=intelFor(p.m); const conflict=intel&&intel.conflict; const coverage=intel&&intel.coverage;
       const proof=window.P2UIntelligence?P2UIntelligence.proofHref(p.m):`proof.html?match=${encodeURIComponent(keyOf(p.m))}`;
-      return `<article class="card card-h rise p2u-standard-card" style="animation-delay:${Math.min(i*30,240)}ms" data-p2u-match-key="${esc(keyOf(p.m))}" data-p2u-home="${esc(p.m.home)}" data-p2u-away="${esc(p.m.away)}" data-p2u-league="${esc(p.m.league||'')}" data-p2u-market="${esc(p.market)}" data-p2u-engines="${esc(p.engines.join('|'))}" data-p2u-proof="${proof}">
+      return `<article class="card card-h rise p2u-standard-card" style="animation-delay:${Math.min(i*30,240)}ms" data-p2u-match-key="${esc(keyOf(p.m))}" data-p2u-fixture-id="${esc(String(p.m&&p.m.id!=null?p.m.id:''))}" data-p2u-home="${esc(p.m.home)}" data-p2u-away="${esc(p.m.away)}" data-p2u-league="${esc(p.m.league||'')}" data-p2u-market="${esc(p.market)}" data-p2u-engines="${esc(p.engines.join('|'))}" data-p2u-proof="${proof}">
         <div class="p2u-match-meta">
           <div class="p2u-match-league">${crest(p.m.flag,'lflag')}<span>${esc(p.m.league||'League')}</span></div>
           <div class="p2u-match-meta-right"><span class="p2u-card-date">${cardDate(p.m)}</span><span class="p2u-kickoff">${ko(p.m)||'TBD'}</span><span class="p2u-card-status">${statusTag(p.m,p.market)}</span></div>
@@ -1329,5 +1330,6 @@ if('serviceWorker' in navigator) window.addEventListener('load',()=>navigator.se
 <script src="football-assets.js" defer></script>
 <script src="analytics.js" defer></script>
 <script src="mobile-card-compact-v230.js" defer></script>
+<script src="team-context-v273.js" defer></script>
 </body>
 </html>

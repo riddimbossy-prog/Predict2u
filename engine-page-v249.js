@@ -69,7 +69,7 @@
     const bookCount=Number(match&&match.oddsMeta&&match.oddsMeta.bookCount)||0;
     const oddsBadge=bookCount?`<span class="engine-badge">${bookCount} books</span>`:(match&&match.odds?'<span class="engine-badge">Odds loaded</span>':'');
     const htftBadge=match&&match.htftOdds&&match.htftOdds.actual?'<span class="engine-badge">HT/FT priced</span>':(match&&match.htftSignal?'<span class="engine-badge">HT/FT signal</span>':'');
-    return `<article class="engine-pick-card">
+    return `<article class="engine-pick-card" data-p2u-fixture-id="${esc(String(match&&match.id!=null?match.id:''))}" data-p2u-home="${esc(match.home||'')}" data-p2u-away="${esc(match.away||'')}">
       <div class="engine-pick-top"><div class="engine-league">${esc(match.country?match.country+' · ':'')}${esc(match.league||'Competition')}</div><span class="engine-market">${esc(marketShort(pick.market))}</span></div>
       <div class="engine-teams">${esc(match.home)}<br><span style="color:var(--engine-muted);font-weight:600">vs</span> ${esc(match.away)}</div>
       <div class="engine-badges"><span class="engine-badge${pick.banker?' is-banker':''}">${pick.banker?'Banker':'Qualified'}</span><span class="engine-badge">${pick.confidence.toFixed(1)}/10</span><span class="engine-badge">${esc(matchStatus(match))}</span>${pick.odd?`<span class="engine-badge">@ ${pick.odd.toFixed(2)}</span>`:''}${oddsBadge}${htftBadge}</div>
