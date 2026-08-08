@@ -1,6 +1,6 @@
 {
   "version": "v251",
-  "generatedAt": "2026-08-08T19:27:34.009Z",
+  "generatedAt": "2026-08-08T19:50:20.694Z",
   "provider": "The Odds API v4",
   "keyPresent": true,
   "regions": "uk",
@@ -205,14 +205,6 @@
       "sportKey": "soccer_uefa_champs_league_qualification",
       "sportTitle": "UEFA Champions League Qualification",
       "score": 0.375,
-      "matches": 8
-    },
-    {
-      "league": "Eredivisie",
-      "country": "Netherlands",
-      "sportKey": "soccer_netherlands_eredivisie",
-      "sportTitle": "Dutch Eredivisie",
-      "score": 1,
       "matches": 8
     },
     {
@@ -3372,18 +3364,6 @@
       "market": "double_chance"
     },
     {
-      "sportKey": "soccer_netherlands_eredivisie",
-      "market": "btts"
-    },
-    {
-      "sportKey": "soccer_netherlands_eredivisie",
-      "market": "draw_no_bet"
-    },
-    {
-      "sportKey": "soccer_netherlands_eredivisie",
-      "market": "double_chance"
-    },
-    {
       "sportKey": "soccer_argentina_primera_division",
       "market": "btts"
     },
@@ -4049,31 +4029,6 @@
       "statusCode": 422
     },
     {
-      "label": "soccer_netherlands_eredivisie:base-combined",
-      "error": "Markets not supported by this endpoint: btts, double_chance, draw_no_bet",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_netherlands_eredivisie:base-core",
-      "error": "Invalid commenceTimeFrom parameter. The format must be YYYY-MM-DDTHH:MM:SSZ, for example 2020-11-24T16:05:00Z",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_netherlands_eredivisie:btts",
-      "error": "Markets not supported by this endpoint: btts",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_netherlands_eredivisie:draw_no_bet",
-      "error": "Markets not supported by this endpoint: draw_no_bet",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_netherlands_eredivisie:double_chance",
-      "error": "Markets not supported by this endpoint: double_chance",
-      "statusCode": 422
-    },
-    {
       "label": "soccer_argentina_primera_division:base-combined",
       "error": "Markets not supported by this endpoint: btts, double_chance, draw_no_bet",
       "statusCode": 422
@@ -4681,5 +4636,5 @@
   },
   "skipped": false,
   "skipReason": null,
-  "completedAt": "2026-08-08T19:27:45.328Z"
+  "completedAt": "2026-08-08T19:50:29.326Z"
 }
