@@ -1,6 +1,6 @@
 {
   "version": "v251",
-  "generatedAt": "2026-08-08T17:06:08.119Z",
+  "generatedAt": "2026-08-08T17:30:18.404Z",
   "provider": "The Odds API v4",
   "keyPresent": true,
   "regions": "uk",
@@ -112,22 +112,6 @@
       "matches": 6
     },
     {
-      "league": "Oberliga - Baden-Württemberg",
-      "country": "Germany",
-      "sportKey": "soccer_germany_bundesliga",
-      "sportTitle": "Bundesliga - Germany",
-      "score": 0.323,
-      "matches": 4
-    },
-    {
-      "league": "Oberliga - Rheinland-Pfalz / Saar",
-      "country": "Germany",
-      "sportKey": "soccer_germany_bundesliga",
-      "sportTitle": "Bundesliga - Germany",
-      "score": 0.305,
-      "matches": 9
-    },
-    {
       "league": "Regionalliga - West",
       "country": "Austria",
       "sportKey": "soccer_austria_bundesliga",
@@ -208,14 +192,6 @@
       "matches": 7
     },
     {
-      "league": "Oberliga - Bayern Nord",
-      "country": "Germany",
-      "sportKey": "soccer_germany_bundesliga",
-      "sportTitle": "Bundesliga - Germany",
-      "score": 0.323,
-      "matches": 7
-    },
-    {
       "league": "Oberliga - Niedersachsen",
       "country": "Germany",
       "sportKey": "soccer_germany_bundesliga",
@@ -246,14 +222,6 @@
       "sportTitle": "UEFA Champions League Qualification",
       "score": 0.375,
       "matches": 11
-    },
-    {
-      "league": "3. Liga",
-      "country": "Germany",
-      "sportKey": "soccer_germany_liga3",
-      "sportTitle": "3. Liga - Germany",
-      "score": 1,
-      "matches": 5
     },
     {
       "league": "3. Liga",
@@ -366,14 +334,6 @@
       "sportTitle": "Bundesliga - Germany",
       "score": 0.323,
       "matches": 9
-    },
-    {
-      "league": "Premier League",
-      "country": "Russia",
-      "sportKey": "soccer_epl",
-      "sportTitle": "EPL",
-      "score": 0.987,
-      "matches": 8
     },
     {
       "league": "Premier League",
@@ -3396,30 +3356,6 @@
       "market": "double_chance"
     },
     {
-      "sportKey": "soccer_greece_super_league",
-      "market": "btts"
-    },
-    {
-      "sportKey": "soccer_greece_super_league",
-      "market": "draw_no_bet"
-    },
-    {
-      "sportKey": "soccer_greece_super_league",
-      "market": "double_chance"
-    },
-    {
-      "sportKey": "soccer_germany_liga3",
-      "market": "btts"
-    },
-    {
-      "sportKey": "soccer_germany_liga3",
-      "market": "draw_no_bet"
-    },
-    {
-      "sportKey": "soccer_germany_liga3",
-      "market": "double_chance"
-    },
-    {
       "sportKey": "soccer_netherlands_eredivisie",
       "market": "btts"
     },
@@ -4030,56 +3966,6 @@
     },
     {
       "label": "soccer_uefa_champs_league_qualification:double_chance",
-      "error": "Markets not supported by this endpoint: double_chance",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_germany_liga3:base-combined",
-      "error": "Markets not supported by this endpoint: btts, double_chance, draw_no_bet",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_germany_liga3:base-core",
-      "error": "Invalid commenceTimeFrom parameter. The format must be YYYY-MM-DDTHH:MM:SSZ, for example 2020-11-24T16:05:00Z",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_germany_liga3:btts",
-      "error": "Markets not supported by this endpoint: btts",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_germany_liga3:draw_no_bet",
-      "error": "Markets not supported by this endpoint: draw_no_bet",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_germany_liga3:double_chance",
-      "error": "Markets not supported by this endpoint: double_chance",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_greece_super_league:base-combined",
-      "error": "Markets not supported by this endpoint: btts, double_chance, draw_no_bet",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_greece_super_league:base-core",
-      "error": "Invalid commenceTimeFrom parameter. The format must be YYYY-MM-DDTHH:MM:SSZ, for example 2020-11-24T16:05:00Z",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_greece_super_league:btts",
-      "error": "Markets not supported by this endpoint: btts",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_greece_super_league:draw_no_bet",
-      "error": "Markets not supported by this endpoint: draw_no_bet",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_greece_super_league:double_chance",
       "error": "Markets not supported by this endpoint: double_chance",
       "statusCode": 422
     },
@@ -4766,5 +4652,5 @@
   },
   "skipped": false,
   "skipReason": null,
-  "completedAt": "2026-08-08T17:06:16.330Z"
+  "completedAt": "2026-08-08T17:30:37.614Z"
 }
