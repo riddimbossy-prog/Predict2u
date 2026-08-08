@@ -1,6 +1,6 @@
 {
   "version": "v251",
-  "generatedAt": "2026-08-08T20:20:22.851Z",
+  "generatedAt": "2026-08-08T20:30:17.453Z",
   "provider": "The Odds API v4",
   "keyPresent": true,
   "regions": "uk",
@@ -8,19 +8,19 @@
   "soccerSportsAvailable": 45,
   "sportMappings": [
     {
-      "league": "Ekstraliga Women",
-      "country": "Poland",
-      "sportKey": "soccer_poland_ekstraklasa",
-      "sportTitle": "Ekstraklasa - Poland",
-      "score": 0.347,
-      "matches": 6
-    },
-    {
       "league": "J3 League",
       "country": "Japan",
       "sportKey": "soccer_japan_j_league",
       "sportTitle": "J League",
       "score": 0.58,
+      "matches": 5
+    },
+    {
+      "league": "Ekstraliga Women",
+      "country": "Poland",
+      "sportKey": "soccer_poland_ekstraklasa",
+      "sportTitle": "Ekstraklasa - Poland",
+      "score": 0.347,
       "matches": 5
     },
     {
@@ -1672,7 +1672,7 @@
       "matches": 1
     }
   ],
-  "matchesConsidered": 2039,
+  "matchesConsidered": 2038,
   "matchesMatched": 0,
   "matchesUpdated": 0,
   "fieldsFilled": 0,
@@ -2318,9 +2318,63 @@
       "bestScore": 0.125
     },
     {
-      "league": "Ekstraliga Women",
-      "home": "Pogon Szczecin W",
-      "away": "Górnik Łęczna W",
+      "league": "J3 League",
+      "home": "FC Ryukyu",
+      "away": "Kitakyushu",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "J3 League",
+      "home": "Fukushima United",
+      "away": "Kamatamare Sanuki",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "J3 League",
+      "home": "Biwako Shiga",
+      "away": "FC Gifu",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "J3 League",
+      "home": "Ehime FC",
+      "away": "Nara Club",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "J3 League",
+      "home": "Tochigi SC",
+      "away": "Kanazawa",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "J1 League",
+      "home": "Tokyo Verdy",
+      "away": "Kawasaki Frontale",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "J1 League",
+      "home": "V-varen Nagasaki",
+      "away": "Kyoto Sanga",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "J1 League",
+      "home": "Tokyo Verdy",
+      "away": "Kashiwa Reysol",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "J2 League",
+      "home": "Iwaki",
+      "away": "Imabari",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "J2 League",
+      "home": "Montedio Yamagata",
+      "away": "Tochigi City",
       "reason": "No event/team match"
     },
     {
@@ -2627,66 +2681,6 @@
       "league": "Central Youth League",
       "home": "Miedź Legnica U19",
       "away": "Wisła Kraków U19",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "J3 League",
-      "home": "FC Ryukyu",
-      "away": "Kitakyushu",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "J3 League",
-      "home": "Fukushima United",
-      "away": "Kamatamare Sanuki",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "J3 League",
-      "home": "Biwako Shiga",
-      "away": "FC Gifu",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "J3 League",
-      "home": "Ehime FC",
-      "away": "Nara Club",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "J3 League",
-      "home": "Tochigi SC",
-      "away": "Kanazawa",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "J1 League",
-      "home": "Tokyo Verdy",
-      "away": "Kawasaki Frontale",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "J1 League",
-      "home": "V-varen Nagasaki",
-      "away": "Kyoto Sanga",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "J1 League",
-      "home": "Tokyo Verdy",
-      "away": "Kashiwa Reysol",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "J2 League",
-      "home": "Iwaki",
-      "away": "Imabari",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "J2 League",
-      "home": "Montedio Yamagata",
-      "away": "Tochigi City",
       "reason": "No event/team match"
     },
     {
@@ -3180,31 +3174,37 @@
       "home": "TPV",
       "away": "SalPa",
       "reason": "No event/team match"
+    },
+    {
+      "league": "Kakkonen - Lohko C",
+      "home": "JS Hercules",
+      "away": "SJK-juniorit",
+      "reason": "No event/team match"
     }
   ],
   "unsupportedMarkets": [
     {
-      "sportKey": "soccer_poland_ekstraklasa",
+      "sportKey": "soccer_japan_j_league",
       "market": "btts"
     },
     {
-      "sportKey": "soccer_poland_ekstraklasa",
+      "sportKey": "soccer_japan_j_league",
       "market": "draw_no_bet"
     },
     {
-      "sportKey": "soccer_poland_ekstraklasa",
+      "sportKey": "soccer_japan_j_league",
       "market": "double_chance"
     },
     {
-      "sportKey": "soccer_japan_j_league",
+      "sportKey": "soccer_poland_ekstraklasa",
       "market": "btts"
     },
     {
-      "sportKey": "soccer_japan_j_league",
+      "sportKey": "soccer_poland_ekstraklasa",
       "market": "draw_no_bet"
     },
     {
-      "sportKey": "soccer_japan_j_league",
+      "sportKey": "soccer_poland_ekstraklasa",
       "market": "double_chance"
     },
     {
@@ -3654,31 +3654,6 @@
   ],
   "requestErrors": [
     {
-      "label": "soccer_poland_ekstraklasa:base-combined",
-      "error": "Markets not supported by this endpoint: btts, double_chance, draw_no_bet",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_poland_ekstraklasa:base-core",
-      "error": "Invalid commenceTimeFrom parameter. The format must be YYYY-MM-DDTHH:MM:SSZ, for example 2020-11-24T16:05:00Z",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_poland_ekstraklasa:btts",
-      "error": "Markets not supported by this endpoint: btts",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_poland_ekstraklasa:draw_no_bet",
-      "error": "Markets not supported by this endpoint: draw_no_bet",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_poland_ekstraklasa:double_chance",
-      "error": "Markets not supported by this endpoint: double_chance",
-      "statusCode": 422
-    },
-    {
       "label": "soccer_japan_j_league:base-combined",
       "error": "Markets not supported by this endpoint: btts, double_chance, draw_no_bet",
       "statusCode": 422
@@ -3700,6 +3675,31 @@
     },
     {
       "label": "soccer_japan_j_league:double_chance",
+      "error": "Markets not supported by this endpoint: double_chance",
+      "statusCode": 422
+    },
+    {
+      "label": "soccer_poland_ekstraklasa:base-combined",
+      "error": "Markets not supported by this endpoint: btts, double_chance, draw_no_bet",
+      "statusCode": 422
+    },
+    {
+      "label": "soccer_poland_ekstraklasa:base-core",
+      "error": "Invalid commenceTimeFrom parameter. The format must be YYYY-MM-DDTHH:MM:SSZ, for example 2020-11-24T16:05:00Z",
+      "statusCode": 422
+    },
+    {
+      "label": "soccer_poland_ekstraklasa:btts",
+      "error": "Markets not supported by this endpoint: btts",
+      "statusCode": 422
+    },
+    {
+      "label": "soccer_poland_ekstraklasa:draw_no_bet",
+      "error": "Markets not supported by this endpoint: draw_no_bet",
+      "statusCode": 422
+    },
+    {
+      "label": "soccer_poland_ekstraklasa:double_chance",
       "error": "Markets not supported by this endpoint: double_chance",
       "statusCode": 422
     },
@@ -4636,5 +4636,5 @@
   },
   "skipped": false,
   "skipReason": null,
-  "completedAt": "2026-08-08T20:20:46.514Z"
+  "completedAt": "2026-08-08T20:30:40.768Z"
 }
