@@ -1,6 +1,6 @@
 {
   "version": "v251",
-  "generatedAt": "2026-08-09T16:49:45.147Z",
+  "generatedAt": "2026-08-09T17:10:16.971Z",
   "provider": "The Odds API v4",
   "keyPresent": true,
   "regions": "uk",
@@ -229,7 +229,7 @@
       "sportKey": "soccer_brazil_campeonato",
       "sportTitle": "Brazil Série A",
       "score": 0.929,
-      "matches": 9
+      "matches": 8
     },
     {
       "league": "Serie B",
@@ -565,7 +565,7 @@
       "sportKey": "soccer_turkey_super_league",
       "sportTitle": "Turkey Super League",
       "score": 0.286,
-      "matches": 11
+      "matches": 8
     },
     {
       "league": "Torneo Promocional Amateur",
@@ -605,7 +605,7 @@
       "sportKey": "soccer_brazil_campeonato",
       "sportTitle": "Brazil Série A",
       "score": 0.305,
-      "matches": 7
+      "matches": 4
     },
     {
       "league": "Goiano - 2",
@@ -1742,22 +1742,6 @@
       "sportTitle": "Liga MX",
       "score": 0.68,
       "matches": 3
-    },
-    {
-      "league": "Second League A - Division A Gold",
-      "country": "Russia",
-      "sportKey": "soccer_russia_premier_league",
-      "sportTitle": "Premier League - Russia",
-      "score": 0.402,
-      "matches": 5
-    },
-    {
-      "league": "Second League A - Division A Silver",
-      "country": "Russia",
-      "sportKey": "soccer_russia_premier_league",
-      "sportTitle": "Premier League - Russia",
-      "score": 0.402,
-      "matches": 2
     },
     {
       "league": "La Liga",
@@ -3214,39 +3198,39 @@
       "reason": "No event/team match"
     },
     {
-      "league": "Oberliga - Hessen",
-      "home": "Fernwald",
-      "away": "TuBa Pohlheim",
+      "league": "2. Bundesliga",
+      "home": "Eintracht Braunschweig",
+      "away": "VfL Bochum",
       "reason": "No event/team match"
     },
     {
-      "league": "Oberliga - Hessen",
-      "home": "Kassel",
-      "away": "Baunatal",
+      "league": "2. Bundesliga",
+      "home": "Holstein Kiel",
+      "away": "FC St. Pauli",
       "reason": "No event/team match"
     },
     {
-      "league": "Oberliga - Hessen",
-      "home": "1960 Hanau",
-      "away": "Bayern Alzenau",
+      "league": "2. Bundesliga",
+      "home": "SpVgg Greuther Fürth",
+      "away": "1. FC Nürnberg",
       "reason": "No event/team match"
     },
     {
-      "league": "Oberliga - Hessen",
-      "home": "Kassel 2",
-      "away": "Hünfelder SV",
+      "league": "2. Bundesliga",
+      "home": "Hertha BSC",
+      "away": "1. FC Heidenheim",
       "reason": "No event/team match"
     },
     {
-      "league": "Oberliga - Hessen",
-      "home": "Rot-Weiß Walldorf",
-      "away": "Darmstadt 98 II",
+      "league": "2. Bundesliga",
+      "home": "VfL Osnabrück",
+      "away": "1. FC Magdeburg",
       "reason": "No event/team match"
     },
     {
-      "league": "Oberliga - Hessen",
-      "home": "Vfb Marburg",
-      "away": "Eintracht Stadtallendorf",
+      "league": "2. Bundesliga",
+      "home": "1. FC Kaiserslautern",
+      "away": "Karlsruher SC",
       "reason": "No event/team match"
     },
     {
@@ -3396,30 +3380,6 @@
       "market": "double_chance"
     },
     {
-      "sportKey": "soccer_sweden_allsvenskan",
-      "market": "btts"
-    },
-    {
-      "sportKey": "soccer_sweden_allsvenskan",
-      "market": "draw_no_bet"
-    },
-    {
-      "sportKey": "soccer_sweden_allsvenskan",
-      "market": "double_chance"
-    },
-    {
-      "sportKey": "soccer_finland_veikkausliiga",
-      "market": "btts"
-    },
-    {
-      "sportKey": "soccer_finland_veikkausliiga",
-      "market": "draw_no_bet"
-    },
-    {
-      "sportKey": "soccer_finland_veikkausliiga",
-      "market": "double_chance"
-    },
-    {
       "sportKey": "soccer_brazil_serie_b",
       "market": "btts"
     },
@@ -3465,18 +3425,6 @@
     },
     {
       "sportKey": "soccer_russia_premier_league",
-      "market": "double_chance"
-    },
-    {
-      "sportKey": "soccer_belgium_first_div",
-      "market": "btts"
-    },
-    {
-      "sportKey": "soccer_belgium_first_div",
-      "market": "draw_no_bet"
-    },
-    {
-      "sportKey": "soccer_belgium_first_div",
       "market": "double_chance"
     },
     {
@@ -4005,56 +3953,6 @@
       "statusCode": 422
     },
     {
-      "label": "soccer_sweden_allsvenskan:base-combined",
-      "error": "Markets not supported by this endpoint: btts, double_chance, draw_no_bet",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_sweden_allsvenskan:base-core",
-      "error": "Invalid commenceTimeFrom parameter. The format must be YYYY-MM-DDTHH:MM:SSZ, for example 2020-11-24T16:05:00Z",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_sweden_allsvenskan:btts",
-      "error": "Markets not supported by this endpoint: btts",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_sweden_allsvenskan:draw_no_bet",
-      "error": "Markets not supported by this endpoint: draw_no_bet",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_sweden_allsvenskan:double_chance",
-      "error": "Markets not supported by this endpoint: double_chance",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_finland_veikkausliiga:base-combined",
-      "error": "Markets not supported by this endpoint: btts, double_chance, draw_no_bet",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_finland_veikkausliiga:base-core",
-      "error": "Invalid commenceTimeFrom parameter. The format must be YYYY-MM-DDTHH:MM:SSZ, for example 2020-11-24T16:05:00Z",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_finland_veikkausliiga:btts",
-      "error": "Markets not supported by this endpoint: btts",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_finland_veikkausliiga:draw_no_bet",
-      "error": "Markets not supported by this endpoint: draw_no_bet",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_finland_veikkausliiga:double_chance",
-      "error": "Markets not supported by this endpoint: double_chance",
-      "statusCode": 422
-    },
-    {
       "label": "soccer_brazil_serie_b:base-combined",
       "error": "Markets not supported by this endpoint: btts, double_chance, draw_no_bet",
       "statusCode": 422
@@ -4151,31 +4049,6 @@
     },
     {
       "label": "soccer_russia_premier_league:double_chance",
-      "error": "Markets not supported by this endpoint: double_chance",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_belgium_first_div:base-combined",
-      "error": "Markets not supported by this endpoint: btts, double_chance, draw_no_bet",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_belgium_first_div:base-core",
-      "error": "Invalid commenceTimeFrom parameter. The format must be YYYY-MM-DDTHH:MM:SSZ, for example 2020-11-24T16:05:00Z",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_belgium_first_div:btts",
-      "error": "Markets not supported by this endpoint: btts",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_belgium_first_div:draw_no_bet",
-      "error": "Markets not supported by this endpoint: draw_no_bet",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_belgium_first_div:double_chance",
       "error": "Markets not supported by this endpoint: double_chance",
       "statusCode": 422
     },
@@ -4912,5 +4785,5 @@
   },
   "skipped": false,
   "skipReason": null,
-  "completedAt": "2026-08-09T16:49:53.123Z"
+  "completedAt": "2026-08-09T17:10:39.244Z"
 }
