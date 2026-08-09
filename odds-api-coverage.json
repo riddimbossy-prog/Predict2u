@@ -1,6 +1,6 @@
 {
   "version": "v251",
-  "generatedAt": "2026-08-09T04:14:51.204Z",
+  "generatedAt": "2026-08-09T04:40:16.056Z",
   "provider": "The Odds API v4",
   "keyPresent": true,
   "regions": "uk",
@@ -134,14 +134,6 @@
       "sportTitle": "Primera División - Argentina",
       "score": 0.606,
       "matches": 5
-    },
-    {
-      "league": "Liga MX Femenil",
-      "country": "Mexico",
-      "sportKey": "soccer_mexico_ligamx",
-      "sportTitle": "Liga MX",
-      "score": 0.68,
-      "matches": 9
     },
     {
       "league": "First League",
@@ -1013,15 +1005,7 @@
       "sportKey": "soccer_brazil_campeonato",
       "sportTitle": "Brazil Série A",
       "score": 0.305,
-      "matches": 4
-    },
-    {
-      "league": "Primera División",
-      "country": "Bolivia",
-      "sportKey": "soccer_argentina_primera_division",
-      "sportTitle": "Primera División - Argentina",
-      "score": 0.653,
-      "matches": 8
+      "matches": 7
     },
     {
       "league": "Primera División",
@@ -1094,14 +1078,6 @@
       "sportTitle": "Eliteserien - Norway",
       "score": 0.305,
       "matches": 6
-    },
-    {
-      "league": "3. Division - Girone 5",
-      "country": "Norway",
-      "sportKey": "soccer_norway_eliteserien",
-      "sportTitle": "Eliteserien - Norway",
-      "score": 0.305,
-      "matches": 4
     },
     {
       "league": "Mineiro U20",
@@ -1856,7 +1832,7 @@
       "matches": 5
     }
   ],
-  "matchesConsidered": 2865,
+  "matchesConsidered": 2864,
   "matchesMatched": 0,
   "matchesUpdated": 0,
   "fieldsFilled": 0,
@@ -1866,16 +1842,16 @@
   "bookmakerRows": 0,
   "unmatched": [
     {
-      "league": "Friendlies Clubs",
-      "country": "World",
-      "reason": "No matching soccer sport key",
-      "bestScore": 0
-    },
-    {
       "league": "Africa Cup of Nations - Women",
       "country": "World",
       "reason": "No matching soccer sport key",
       "bestScore": 0.111
+    },
+    {
+      "league": "Friendlies Clubs",
+      "country": "World",
+      "reason": "No matching soccer sport key",
+      "bestScore": 0
     },
     {
       "league": "Toto Cup Ligat Al",
@@ -2520,12 +2496,6 @@
       "bestScore": 0.143
     },
     {
-      "league": "I Liga - Women",
-      "country": "Slovakia",
-      "reason": "No matching soccer sport key",
-      "bestScore": 0.125
-    },
-    {
       "league": "Druha Liga",
       "country": "Ukraine",
       "reason": "No matching soccer sport key",
@@ -2536,6 +2506,12 @@
       "country": "Australia",
       "reason": "No matching soccer sport key",
       "bestScore": 0
+    },
+    {
+      "league": "I Liga - Women",
+      "country": "Slovakia",
+      "reason": "No matching soccer sport key",
+      "bestScore": 0.125
     },
     {
       "league": "1. Deild",
@@ -3476,18 +3452,6 @@
       "market": "double_chance"
     },
     {
-      "sportKey": "soccer_spain_la_liga",
-      "market": "btts"
-    },
-    {
-      "sportKey": "soccer_spain_la_liga",
-      "market": "draw_no_bet"
-    },
-    {
-      "sportKey": "soccer_spain_la_liga",
-      "market": "double_chance"
-    },
-    {
       "sportKey": "soccer_russia_premier_league",
       "market": "btts"
     },
@@ -4083,31 +4047,6 @@
     },
     {
       "label": "soccer_concacaf_leagues_cup:double_chance",
-      "error": "Markets not supported by this endpoint: double_chance",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_spain_la_liga:base-combined",
-      "error": "Markets not supported by this endpoint: btts, double_chance, draw_no_bet",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_spain_la_liga:base-core",
-      "error": "Invalid commenceTimeFrom parameter. The format must be YYYY-MM-DDTHH:MM:SSZ, for example 2020-11-24T16:05:00Z",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_spain_la_liga:btts",
-      "error": "Markets not supported by this endpoint: btts",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_spain_la_liga:draw_no_bet",
-      "error": "Markets not supported by this endpoint: draw_no_bet",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_spain_la_liga:double_chance",
       "error": "Markets not supported by this endpoint: double_chance",
       "statusCode": 422
     },
@@ -4894,5 +4833,5 @@
   },
   "skipped": false,
   "skipReason": null,
-  "completedAt": "2026-08-09T04:15:15.753Z"
+  "completedAt": "2026-08-09T04:40:25.124Z"
 }
