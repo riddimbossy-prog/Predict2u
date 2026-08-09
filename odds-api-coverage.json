@@ -1,20 +1,12 @@
 {
   "version": "v251",
-  "generatedAt": "2026-08-09T22:50:17.702Z",
+  "generatedAt": "2026-08-09T23:00:14.300Z",
   "provider": "The Odds API v4",
   "keyPresent": true,
   "regions": "uk",
   "sportsAvailable": 73,
   "soccerSportsAvailable": 42,
   "sportMappings": [
-    {
-      "league": "League One",
-      "country": "China",
-      "sportKey": "soccer_china_superleague",
-      "sportTitle": "Super League - China",
-      "score": 0.43,
-      "matches": 5
-    },
     {
       "league": "League Two",
       "country": "China",
@@ -1408,6 +1400,14 @@
       "matches": 10
     },
     {
+      "league": "League One",
+      "country": "China",
+      "sportKey": "soccer_china_superleague",
+      "sportTitle": "Super League - China",
+      "score": 0.43,
+      "matches": 4
+    },
+    {
       "league": "Second League - Group 3",
       "country": "Russia",
       "sportKey": "soccer_russia_premier_league",
@@ -1656,7 +1656,7 @@
       "matches": 5
     }
   ],
-  "matchesConsidered": 2366,
+  "matchesConsidered": 2365,
   "matchesMatched": 0,
   "matchesUpdated": 0,
   "fieldsFilled": 0,
@@ -2446,36 +2446,6 @@
       "bestScore": 0.167
     },
     {
-      "league": "League One",
-      "home": "Wuxi Wugou",
-      "away": "Ningbo Professional",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "League One",
-      "home": "Yanbian Longding",
-      "away": "Dalian Huayi",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "League One",
-      "home": "Shaanxi Union",
-      "away": "Changchun Yatai",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "League One",
-      "home": "Wuxi Wugou",
-      "away": "Guangzhou E-Power",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "League One",
-      "home": "Guangxi Hengchen",
-      "away": "Meizhou Kejia",
-      "reason": "No event/team match"
-    },
-    {
       "league": "League Two",
       "home": "Langfang Glory City",
       "away": "Guizhou Zhucheng",
@@ -2569,6 +2539,30 @@
       "league": "Super League",
       "home": "Yunnan Yukun",
       "away": "Dalian Zhixing",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "League One",
+      "home": "Yanbian Longding",
+      "away": "Dalian Huayi",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "League One",
+      "home": "Shaanxi Union",
+      "away": "Changchun Yatai",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "League One",
+      "home": "Wuxi Wugou",
+      "away": "Guangzhou E-Power",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "League One",
+      "home": "Guangxi Hengchen",
+      "away": "Meizhou Kejia",
       "reason": "No event/team match"
     },
     {
@@ -3163,6 +3157,12 @@
       "league": "Oberliga - Bremen",
       "home": "Woltmershausen",
       "away": "Brinkumer SV",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Oberliga - Bremen",
+      "home": "Aumund-Vegesack",
+      "away": "BTS Neustadt",
       "reason": "No event/team match"
     }
   ],
@@ -4583,5 +4583,5 @@
   },
   "skipped": false,
   "skipReason": null,
-  "completedAt": "2026-08-09T22:50:36.679Z"
+  "completedAt": "2026-08-09T23:00:22.853Z"
 }
