@@ -1,36 +1,12 @@
 {
   "version": "v251",
-  "generatedAt": "2026-08-09T02:50:15.530Z",
+  "generatedAt": "2026-08-09T03:00:16.047Z",
   "provider": "The Odds API v4",
   "keyPresent": true,
   "regions": "uk",
   "sportsAvailable": 79,
   "soccerSportsAvailable": 45,
   "sportMappings": [
-    {
-      "league": "Ekstraliga Women",
-      "country": "Poland",
-      "sportKey": "soccer_poland_ekstraklasa",
-      "sportTitle": "Ekstraklasa - Poland",
-      "score": 0.347,
-      "matches": 5
-    },
-    {
-      "league": "III Liga - Group 4",
-      "country": "Poland",
-      "sportKey": "soccer_poland_ekstraklasa",
-      "sportTitle": "Ekstraklasa - Poland",
-      "score": 0.305,
-      "matches": 11
-    },
-    {
-      "league": "Super Liga",
-      "country": "Serbia",
-      "sportKey": "soccer_turkey_super_league",
-      "sportTitle": "Turkey Super League",
-      "score": 0.286,
-      "matches": 12
-    },
     {
       "league": "III Liga - Group 2",
       "country": "Poland",
@@ -382,6 +358,14 @@
       "sportTitle": "Bundesliga - Germany",
       "score": 0.68,
       "matches": 40
+    },
+    {
+      "league": "Ekstraliga Women",
+      "country": "Poland",
+      "sportKey": "soccer_poland_ekstraklasa",
+      "sportTitle": "Ekstraklasa - Poland",
+      "score": 0.347,
+      "matches": 4
     },
     {
       "league": "League One",
@@ -1008,6 +992,14 @@
       "matches": 10
     },
     {
+      "league": "III Liga - Group 4",
+      "country": "Poland",
+      "sportKey": "soccer_poland_ekstraklasa",
+      "sportTitle": "Ekstraklasa - Poland",
+      "score": 0.305,
+      "matches": 10
+    },
+    {
       "league": "Primera División",
       "country": "Chile",
       "sportKey": "soccer_chile_campeonato",
@@ -1046,6 +1038,14 @@
       "sportTitle": "Serie A - Italy",
       "score": 0.323,
       "matches": 7
+    },
+    {
+      "league": "Super Liga",
+      "country": "Serbia",
+      "sportKey": "soccer_turkey_super_league",
+      "sportTitle": "Turkey Super League",
+      "score": 0.286,
+      "matches": 11
     },
     {
       "league": "Carioca U20",
@@ -1832,7 +1832,7 @@
       "matches": 5
     }
   ],
-  "matchesConsidered": 2959,
+  "matchesConsidered": 2923,
   "matchesMatched": 0,
   "matchesUpdated": 0,
   "fieldsFilled": 0,
@@ -1842,70 +1842,10 @@
   "bookmakerRows": 0,
   "unmatched": [
     {
-      "league": "3. liga - Center",
-      "country": "Slovakia",
-      "reason": "No matching soccer sport key",
-      "bestScore": 0.25
-    },
-    {
-      "league": "3. liga - East",
-      "country": "Slovakia",
-      "reason": "No matching soccer sport key",
-      "bestScore": 0.25
-    },
-    {
-      "league": "3. liga - West",
-      "country": "Slovakia",
-      "reason": "No matching soccer sport key",
-      "bestScore": 0.25
-    },
-    {
-      "league": "4. liga - Divizie A",
-      "country": "Czech-Republic",
-      "reason": "No matching soccer sport key",
-      "bestScore": 0.1
-    },
-    {
-      "league": "Erovnuli Liga",
-      "country": "Georgia",
-      "reason": "No matching soccer sport key",
-      "bestScore": 0.143
-    },
-    {
       "league": "Friendlies Clubs",
       "country": "World",
       "reason": "No matching soccer sport key",
       "bestScore": 0
-    },
-    {
-      "league": "HNL",
-      "country": "Croatia",
-      "reason": "No matching soccer sport key",
-      "bestScore": 0
-    },
-    {
-      "league": "Liga 1",
-      "country": "Moldova",
-      "reason": "No matching soccer sport key",
-      "bestScore": 0.143
-    },
-    {
-      "league": "NB I",
-      "country": "Hungary",
-      "reason": "No matching soccer sport key",
-      "bestScore": 0
-    },
-    {
-      "league": "Third League - Southeast",
-      "country": "Bulgaria",
-      "reason": "No matching soccer sport key",
-      "bestScore": 0.143
-    },
-    {
-      "league": "Third League - Southwest",
-      "country": "Bulgaria",
-      "reason": "No matching soccer sport key",
-      "bestScore": 0.143
     },
     {
       "league": "NB III - Southwest",
@@ -1918,6 +1858,12 @@
       "country": "Iceland",
       "reason": "No matching soccer sport key",
       "bestScore": 0.125
+    },
+    {
+      "league": "3. liga - East",
+      "country": "Slovakia",
+      "reason": "No matching soccer sport key",
+      "bestScore": 0.25
     },
     {
       "league": "Africa Cup of Nations - Women",
@@ -2058,6 +2004,18 @@
       "bestScore": 0.222
     },
     {
+      "league": "3. liga - Center",
+      "country": "Slovakia",
+      "reason": "No matching soccer sport key",
+      "bestScore": 0.25
+    },
+    {
+      "league": "3. liga - West",
+      "country": "Slovakia",
+      "reason": "No matching soccer sport key",
+      "bestScore": 0.25
+    },
+    {
       "league": "NB III - Northeast",
       "country": "Hungary",
       "reason": "No matching soccer sport key",
@@ -2130,6 +2088,12 @@
       "bestScore": 0.143
     },
     {
+      "league": "Erovnuli Liga",
+      "country": "Georgia",
+      "reason": "No matching soccer sport key",
+      "bestScore": 0.143
+    },
+    {
       "league": "First League",
       "country": "Armenia",
       "reason": "No matching soccer sport key",
@@ -2146,6 +2110,12 @@
       "country": "Wales",
       "reason": "No matching soccer sport key",
       "bestScore": 0.167
+    },
+    {
+      "league": "NB I",
+      "country": "Hungary",
+      "reason": "No matching soccer sport key",
+      "bestScore": 0
     },
     {
       "league": "1. Liga",
@@ -2190,6 +2160,12 @@
       "bestScore": 0.2
     },
     {
+      "league": "4. liga - Divizie A",
+      "country": "Czech-Republic",
+      "reason": "No matching soccer sport key",
+      "bestScore": 0.1
+    },
+    {
       "league": "4. liga - Divizie C",
       "country": "Czech-Republic",
       "reason": "No matching soccer sport key",
@@ -2206,6 +2182,12 @@
       "country": "Bulgaria",
       "reason": "No matching soccer sport key",
       "bestScore": 0.167
+    },
+    {
+      "league": "Third League - Southeast",
+      "country": "Bulgaria",
+      "reason": "No matching soccer sport key",
+      "bestScore": 0.143
     },
     {
       "league": "1. SNL",
@@ -2246,6 +2228,12 @@
     {
       "league": "Meistriliiga",
       "country": "Estonia",
+      "reason": "No matching soccer sport key",
+      "bestScore": 0
+    },
+    {
+      "league": "HNL",
+      "country": "Croatia",
       "reason": "No matching soccer sport key",
       "bestScore": 0
     },
@@ -2454,6 +2442,12 @@
       "bestScore": 0.143
     },
     {
+      "league": "Liga 1",
+      "country": "Moldova",
+      "reason": "No matching soccer sport key",
+      "bestScore": 0.143
+    },
+    {
       "league": "Persian Gulf Pro League",
       "country": "Iran",
       "reason": "No matching soccer sport key",
@@ -2550,6 +2544,12 @@
       "bestScore": 0
     },
     {
+      "league": "Third League - Southwest",
+      "country": "Bulgaria",
+      "reason": "No matching soccer sport key",
+      "bestScore": 0.143
+    },
+    {
       "league": "3. SNL - East",
       "country": "Slovenia",
       "reason": "No matching soccer sport key",
@@ -2566,102 +2566,6 @@
       "country": "Montenegro",
       "reason": "No matching soccer sport key",
       "bestScore": 0.167
-    },
-    {
-      "league": "Ekstraliga Women",
-      "home": "Slask Wroclaw W",
-      "away": "UKS Łódź W",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Ekstraliga Women",
-      "home": "Rekord Bielsko-Biala W",
-      "away": "Legia W",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Ekstraliga Women",
-      "home": "Sleza Wroclaw W",
-      "away": "Czarni Sosnowiec W",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Ekstraliga Women",
-      "home": "UKS Łódź W",
-      "away": "Sleza Wroclaw W",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Ekstraliga Women",
-      "home": "Legia W",
-      "away": "Lech Poznan W",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "III Liga - Group 4",
-      "home": "Wiślanie Jaśkowice",
-      "away": "Naprzód",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "III Liga - Group 4",
-      "home": "Star Starachowice",
-      "away": "KSZO 1929",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "III Liga - Group 4",
-      "home": "Sokół Kolb.",
-      "away": "Wisłoka Dębica",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "III Liga - Group 4",
-      "home": "KSZO 1929",
-      "away": "Korona Kielce II",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "III Liga - Group 4",
-      "home": "Wisła Kraków II",
-      "away": "Wiślanie Jaśkowice",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "III Liga - Group 4",
-      "home": "Czarni Połaniec",
-      "away": "Podlasie Biała Podlaska",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "III Liga - Group 4",
-      "home": "Hetman Zamosc",
-      "away": "Star Starachowice",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "III Liga - Group 4",
-      "home": "Jarosław",
-      "away": "KS Wieczysta Krakow II",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "III Liga - Group 4",
-      "home": "Moravia Morawica",
-      "away": "Chełmianka Chełm",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "III Liga - Group 4",
-      "home": "Naprzód",
-      "away": "Pogoń-Sokół Lubaczów",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "III Liga - Group 4",
-      "home": "Busko-Zdroj",
-      "away": "Siarka Tarnobrzeg",
-      "reason": "No event/team match"
     },
     {
       "league": "III Liga - Group 2",
@@ -2799,6 +2703,30 @@
       "league": "III Liga - Group 3",
       "home": "Odra Bytom Odrzański",
       "away": "Kluczbork",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Ekstraliga Women",
+      "home": "Rekord Bielsko-Biala W",
+      "away": "Legia W",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Ekstraliga Women",
+      "home": "Sleza Wroclaw W",
+      "away": "Czarni Sosnowiec W",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Ekstraliga Women",
+      "home": "UKS Łódź W",
+      "away": "Sleza Wroclaw W",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Ekstraliga Women",
+      "home": "Legia W",
+      "away": "Lech Poznan W",
       "reason": "No event/team match"
     },
     {
@@ -3060,231 +2988,63 @@
       "reason": "No event/team match"
     },
     {
-      "league": "Super Liga",
-      "home": "Radnicki NIS",
-      "away": "FK Partizan",
+      "league": "III Liga - Group 4",
+      "home": "Star Starachowice",
+      "away": "KSZO 1929",
       "reason": "No event/team match"
     },
     {
-      "league": "Super Liga",
-      "home": "Macva",
-      "away": "IMT Novi Beograd",
+      "league": "III Liga - Group 4",
+      "home": "Sokół Kolb.",
+      "away": "Wisłoka Dębica",
       "reason": "No event/team match"
     },
     {
-      "league": "Super Liga",
-      "home": "Vojvodina",
-      "away": "Radnik Surdulica",
+      "league": "III Liga - Group 4",
+      "home": "KSZO 1929",
+      "away": "Korona Kielce II",
       "reason": "No event/team match"
     },
     {
-      "league": "Super Liga",
-      "home": "Mladost Lucani",
-      "away": "Cukaricki",
+      "league": "III Liga - Group 4",
+      "home": "Wisła Kraków II",
+      "away": "Wiślanie Jaśkowice",
       "reason": "No event/team match"
     },
     {
-      "league": "Super Liga",
-      "home": "OFK Beograd",
-      "away": "Železničar Pančevo",
+      "league": "III Liga - Group 4",
+      "home": "Czarni Połaniec",
+      "away": "Podlasie Biała Podlaska",
       "reason": "No event/team match"
     },
     {
-      "league": "Super Liga",
-      "home": "IMT Novi Beograd",
-      "away": "Radnicki NIS",
+      "league": "III Liga - Group 4",
+      "home": "Hetman Zamosc",
+      "away": "Star Starachowice",
       "reason": "No event/team match"
     },
     {
-      "league": "Super Liga",
-      "home": "Novi Pazar",
-      "away": "Vojvodina",
+      "league": "III Liga - Group 4",
+      "home": "Jarosław",
+      "away": "KS Wieczysta Krakow II",
       "reason": "No event/team match"
     },
     {
-      "league": "Super Liga",
-      "home": "FK Partizan",
-      "away": "Radnicki 1923",
+      "league": "III Liga - Group 4",
+      "home": "Moravia Morawica",
+      "away": "Chełmianka Chełm",
       "reason": "No event/team match"
     },
     {
-      "league": "Super Liga",
-      "home": "Zemun",
-      "away": "Mladost Lucani",
+      "league": "III Liga - Group 4",
+      "home": "Naprzód",
+      "away": "Pogoń-Sokół Lubaczów",
       "reason": "No event/team match"
     },
     {
-      "league": "Super Liga",
-      "home": "Radnik Surdulica",
-      "away": "Macva",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Super Liga",
-      "home": "Železničar Pančevo",
-      "away": "FK Crvena Zvezda",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Super Liga",
-      "home": "Cukaricki",
-      "away": "OFK Beograd",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Super Liga",
-      "home": "AS Trencin",
-      "away": "Slovan Bratislava",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Super Liga",
-      "home": "Žilina",
-      "away": "Skalica",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Super Liga",
-      "home": "FK Košice",
-      "away": "Dunajska Streda",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Super Liga",
-      "home": "Dukla Banská Bystrica",
-      "away": "Žilina",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Super Liga",
-      "home": "Skalica",
-      "away": "FK Košice",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Super Liga",
-      "home": "Slovan Bratislava",
-      "away": "Ružomberok",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Super Liga",
-      "home": "Podbrezová",
-      "away": "AS Trencin",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "1. Lig",
-      "home": "Iğdır FK",
-      "away": "Fatih Karagümrük",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "1. Lig",
-      "home": "Sarıyer",
-      "away": "Muğlaspor",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "1. Lig",
-      "home": "Bodrum FK",
-      "away": "Bursaspor",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "1. Lig",
-      "home": "Vanspor FK",
-      "away": "Kayserispor",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "1. Lig",
-      "home": "Pendikspor",
-      "away": "Batman Petrolspor",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "1. Lig",
-      "home": "Esenler Erokspor",
-      "away": "Sarıyer",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "1. Lig",
-      "home": "İstanbulspor",
-      "away": "Bodrum FK",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "1. Lig",
-      "home": "Fatih Karagümrük",
-      "away": "Ümraniyespor",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "1. Lig",
-      "home": "Bursaspor",
-      "away": "Iğdır FK",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "1. Lig",
-      "home": "Manisa F.K.",
-      "away": "Vanspor FK",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Super Liga",
-      "home": "Sheriff Tiraspol",
-      "away": "Dacia-Buiucani",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Super Liga",
-      "home": "Zimbru",
-      "away": "Petrocub",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Super Liga",
-      "home": "Politehnica UTM",
-      "away": "CSF Bălți",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Super Liga",
-      "home": "Dacia-Buiucani",
-      "away": "Petrocub",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Süper Lig",
-      "home": "Galatasaray",
-      "away": "Çorum FK",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Süper Lig",
-      "home": "Kasımpaşa",
-      "away": "Trabzonspor",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Süper Lig",
-      "home": "Konyaspor",
-      "away": "Rizespor",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Süper Lig",
-      "home": "Gaziantep FK",
-      "away": "Alanyaspor",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Süper Lig",
-      "home": "Gençlerbirliği S.K.",
-      "away": "Fenerbahçe",
+      "league": "III Liga - Group 4",
+      "home": "Busko-Zdroj",
+      "away": "Siarka Tarnobrzeg",
       "reason": "No event/team match"
     },
     {
@@ -3340,6 +3100,246 @@
       "home": "Torreense U19",
       "away": "Mafra U19",
       "reason": "No event/team match"
+    },
+    {
+      "league": "Júniores U19",
+      "home": "Vizela U19",
+      "away": "Porto U19",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Júniores U19",
+      "home": "Oriental U19",
+      "away": "Benfica U19",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Liga 3",
+      "home": "AD Marco 09",
+      "away": "Pacos Ferreira",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Liga 3",
+      "home": "Fafe",
+      "away": "Vianense",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Liga 3",
+      "home": "Trofense",
+      "away": "Varzim",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Liga 3",
+      "home": "Leça",
+      "away": "São João Ver",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Liga 3",
+      "home": "União Santarém",
+      "away": "Oliveirense",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Liga 3",
+      "home": "Atlético CP",
+      "away": "Mafra",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Liga 3",
+      "home": "Louletano",
+      "away": "CF Os Belenenses",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Liga 3",
+      "home": "Vianense",
+      "away": "Trofense",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Liga 3",
+      "home": "Guimaraes B",
+      "away": "Leça",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Liga 3",
+      "home": "Pacos Ferreira",
+      "away": "Paredes",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Segunda Liga",
+      "home": "Farense",
+      "away": "Torreense",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Segunda Liga",
+      "home": "Vizela",
+      "away": "União de Leiria",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Segunda Liga",
+      "home": "AVS",
+      "away": "Sporting CP B",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Segunda Liga",
+      "home": "Feirense",
+      "away": "Felgueiras 1932",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Segunda Liga",
+      "home": "Benfica B",
+      "away": "Leixoes",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Segunda Liga",
+      "home": "Lusitânia Lourosa",
+      "away": "FC Porto B",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Segunda Liga",
+      "home": "Academica",
+      "away": "Feirense",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Segunda Liga",
+      "home": "Torreense",
+      "away": "Penafiel",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Segunda Liga",
+      "home": "União de Leiria",
+      "away": "Benfica B",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Segunda Liga",
+      "home": "Sporting CP B",
+      "away": "Chaves",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Primeira Liga",
+      "home": "FC Porto",
+      "away": "Alverca",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Primeira Liga",
+      "home": "Benfica",
+      "away": "Academico Viseu",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Primeira Liga",
+      "home": "GIL Vicente",
+      "away": "Rio Ave",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Primeira Liga",
+      "home": "Moreirense",
+      "away": "SC Braga",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Primeira Liga",
+      "home": "Santa Clara",
+      "away": "Nacional",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Primeira Liga",
+      "home": "Sporting CP",
+      "away": "Guimaraes",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Primeira Liga",
+      "home": "Alverca",
+      "away": "Estrela",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Primeira Liga",
+      "home": "Academico Viseu",
+      "away": "Santa Clara",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Primeira Liga",
+      "home": "Rio Ave",
+      "away": "FC Porto",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Liga Revelação U23",
+      "home": "Academico Viseu U23",
+      "away": "Estrela U23",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Liga Revelação U23",
+      "home": "Sporting Braga U23",
+      "away": "Farense U23",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Liga Revelação U23",
+      "home": "Famalicão U23",
+      "away": "Torreense U23",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Liga Revelação U23",
+      "home": "Portimonense U23",
+      "away": "Penafiel U23",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Liga Revelação U23",
+      "home": "Sporting CP U23",
+      "away": "União Leiria U23",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Liga Revelação U23",
+      "home": "Leixões U23",
+      "away": "Vizela U23",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Liga Revelação U23",
+      "home": "Estoril U23",
+      "away": "Gil Vicente U23",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Toppserien",
+      "home": "Bodø / Glimt W",
+      "away": "Molde W",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Toppserien",
+      "home": "Bodø / Glimt W",
+      "away": "Vålerenga W",
+      "reason": "No event/team match"
     }
   ],
   "unsupportedMarkets": [
@@ -3356,18 +3356,6 @@
       "market": "double_chance"
     },
     {
-      "sportKey": "soccer_turkey_super_league",
-      "market": "btts"
-    },
-    {
-      "sportKey": "soccer_turkey_super_league",
-      "market": "draw_no_bet"
-    },
-    {
-      "sportKey": "soccer_turkey_super_league",
-      "market": "double_chance"
-    },
-    {
       "sportKey": "soccer_portugal_primeira_liga",
       "market": "btts"
     },
@@ -3413,6 +3401,18 @@
     },
     {
       "sportKey": "soccer_argentina_primera_division",
+      "market": "double_chance"
+    },
+    {
+      "sportKey": "soccer_turkey_super_league",
+      "market": "btts"
+    },
+    {
+      "sportKey": "soccer_turkey_super_league",
+      "market": "draw_no_bet"
+    },
+    {
+      "sportKey": "soccer_turkey_super_league",
       "market": "double_chance"
     },
     {
@@ -3851,31 +3851,6 @@
       "statusCode": 422
     },
     {
-      "label": "soccer_turkey_super_league:base-combined",
-      "error": "Markets not supported by this endpoint: btts, double_chance, draw_no_bet",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_turkey_super_league:base-core",
-      "error": "Invalid commenceTimeFrom parameter. The format must be YYYY-MM-DDTHH:MM:SSZ, for example 2020-11-24T16:05:00Z",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_turkey_super_league:btts",
-      "error": "Markets not supported by this endpoint: btts",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_turkey_super_league:draw_no_bet",
-      "error": "Markets not supported by this endpoint: draw_no_bet",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_turkey_super_league:double_chance",
-      "error": "Markets not supported by this endpoint: double_chance",
-      "statusCode": 422
-    },
-    {
       "label": "soccer_portugal_primeira_liga:base-combined",
       "error": "Markets not supported by this endpoint: btts, double_chance, draw_no_bet",
       "statusCode": 422
@@ -3972,6 +3947,31 @@
     },
     {
       "label": "soccer_argentina_primera_division:double_chance",
+      "error": "Markets not supported by this endpoint: double_chance",
+      "statusCode": 422
+    },
+    {
+      "label": "soccer_turkey_super_league:base-combined",
+      "error": "Markets not supported by this endpoint: btts, double_chance, draw_no_bet",
+      "statusCode": 422
+    },
+    {
+      "label": "soccer_turkey_super_league:base-core",
+      "error": "Invalid commenceTimeFrom parameter. The format must be YYYY-MM-DDTHH:MM:SSZ, for example 2020-11-24T16:05:00Z",
+      "statusCode": 422
+    },
+    {
+      "label": "soccer_turkey_super_league:btts",
+      "error": "Markets not supported by this endpoint: btts",
+      "statusCode": 422
+    },
+    {
+      "label": "soccer_turkey_super_league:draw_no_bet",
+      "error": "Markets not supported by this endpoint: draw_no_bet",
+      "statusCode": 422
+    },
+    {
+      "label": "soccer_turkey_super_league:double_chance",
       "error": "Markets not supported by this endpoint: double_chance",
       "statusCode": 422
     },
@@ -4833,5 +4833,5 @@
   },
   "skipped": false,
   "skipReason": null,
-  "completedAt": "2026-08-09T02:50:29.500Z"
+  "completedAt": "2026-08-09T03:00:25.620Z"
 }
