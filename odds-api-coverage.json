@@ -1,6 +1,6 @@
 {
   "version": "v251",
-  "generatedAt": "2026-08-09T07:20:18.556Z",
+  "generatedAt": "2026-08-09T07:03:34.312Z",
   "provider": "The Odds API v4",
   "keyPresent": true,
   "regions": "uk",
@@ -53,15 +53,7 @@
       "sportKey": "soccer_usa_mls",
       "sportTitle": "MLS",
       "score": 0.466,
-      "matches": 8
-    },
-    {
-      "league": "Leagues Cup",
-      "country": "World",
-      "sportKey": "soccer_concacaf_leagues_cup",
-      "sportTitle": "Leagues Cup",
-      "score": 0.72,
-      "matches": 27
+      "matches": 7
     },
     {
       "league": "First League",
@@ -936,6 +928,14 @@
       "matches": 6
     },
     {
+      "league": "Torneo Promocional Amateur",
+      "country": "Argentina",
+      "sportKey": "soccer_argentina_primera_division",
+      "sportTitle": "Primera División - Argentina",
+      "score": 0.305,
+      "matches": 6
+    },
+    {
       "league": "Carioca U20",
       "country": "Brazil",
       "sportKey": "soccer_brazil_campeonato",
@@ -990,6 +990,14 @@
       "sportTitle": "Brazil Série A",
       "score": 0.466,
       "matches": 10
+    },
+    {
+      "league": "Leagues Cup",
+      "country": "World",
+      "sportKey": "soccer_concacaf_leagues_cup",
+      "sportTitle": "Leagues Cup",
+      "score": 0.72,
+      "matches": 26
     },
     {
       "league": "Primera División",
@@ -1776,6 +1784,22 @@
       "matches": 3
     },
     {
+      "league": "Second League A - Division A Gold",
+      "country": "Russia",
+      "sportKey": "soccer_russia_premier_league",
+      "sportTitle": "Premier League - Russia",
+      "score": 0.402,
+      "matches": 5
+    },
+    {
+      "league": "Second League A - Division A Silver",
+      "country": "Russia",
+      "sportKey": "soccer_russia_premier_league",
+      "sportTitle": "Premier League - Russia",
+      "score": 0.402,
+      "matches": 2
+    },
+    {
       "league": "La Liga",
       "country": "Spain",
       "sportKey": "soccer_spain_la_liga",
@@ -1816,7 +1840,7 @@
       "matches": 5
     }
   ],
-  "matchesConsidered": 2815,
+  "matchesConsidered": 2829,
   "matchesMatched": 0,
   "matchesUpdated": 0,
   "fieldsFilled": 0,
@@ -1830,24 +1854,6 @@
       "country": "World",
       "reason": "No matching soccer sport key",
       "bestScore": 0.111
-    },
-    {
-      "league": "Northern NSW NPL",
-      "country": "Australia",
-      "reason": "No matching soccer sport key",
-      "bestScore": 0
-    },
-    {
-      "league": "Npl Nsw U20",
-      "country": "Australia",
-      "reason": "No matching soccer sport key",
-      "bestScore": 0
-    },
-    {
-      "league": "OFC Champions League",
-      "country": "World",
-      "reason": "No matching soccer sport key",
-      "bestScore": 0.222
     },
     {
       "league": "Tasmania Southern Championship",
@@ -1872,6 +1878,12 @@
       "country": "Australia",
       "reason": "No matching soccer sport key",
       "bestScore": 0.25
+    },
+    {
+      "league": "Northern NSW NPL",
+      "country": "Australia",
+      "reason": "No matching soccer sport key",
+      "bestScore": 0
     },
     {
       "league": "Australia Cup",
@@ -2264,6 +2276,12 @@
       "bestScore": 0.167
     },
     {
+      "league": "OFC Champions League",
+      "country": "World",
+      "reason": "No matching soccer sport key",
+      "bestScore": 0.222
+    },
+    {
       "league": "1 Lyga",
       "country": "Lithuania",
       "reason": "No matching soccer sport key",
@@ -2376,6 +2394,12 @@
       "country": "Saudi-Arabia",
       "reason": "No matching soccer sport key",
       "bestScore": 0.143
+    },
+    {
+      "league": "Npl Nsw U20",
+      "country": "Australia",
+      "reason": "No matching soccer sport key",
+      "bestScore": 0
     },
     {
       "league": "Queensland NPL",
@@ -2651,12 +2675,6 @@
       "league": "USL League One",
       "home": "NY Cosmos",
       "away": "Spokane Velocity",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "USL League One",
-      "home": "Alta",
-      "away": "Fort Wayne",
       "reason": "No event/team match"
     },
     {
@@ -2985,6 +3003,12 @@
     },
     {
       "league": "Serie A",
+      "home": "Atletico-MG",
+      "away": "Gremio",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Serie A",
       "home": "Atletico Paranaense",
       "away": "RB Bragantino",
       "reason": "No event/team match"
@@ -3059,6 +3083,24 @@
       "league": "Paranaense - 3",
       "home": "Samas",
       "away": "Iraty",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Paranaense - 3",
+      "home": "Hope Internacional",
+      "away": "AA Iguaçu",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Paranaense - 3",
+      "home": "Portuguesa Londrinense",
+      "away": "City London",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Paranaense - 3",
+      "home": "Sport Club PR",
+      "away": "Oeste Brasil",
       "reason": "No event/team match"
     },
     {
@@ -3306,24 +3348,6 @@
       "home": "Jabaquara U20",
       "away": "Corinthians U20",
       "reason": "No event/team match"
-    },
-    {
-      "league": "Paulista - U20",
-      "home": "Mauá U20",
-      "away": "Osasco Audax U20",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Paulista - U20",
-      "home": "Palmeiras U20",
-      "away": "XV de Jaú U20",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Paulista - U20",
-      "home": "Referencia U20",
-      "away": "Sfera U20",
-      "reason": "No event/team match"
     }
   ],
   "unsupportedMarkets": [
@@ -3376,18 +3400,6 @@
       "market": "double_chance"
     },
     {
-      "sportKey": "soccer_concacaf_leagues_cup",
-      "market": "btts"
-    },
-    {
-      "sportKey": "soccer_concacaf_leagues_cup",
-      "market": "draw_no_bet"
-    },
-    {
-      "sportKey": "soccer_concacaf_leagues_cup",
-      "market": "double_chance"
-    },
-    {
       "sportKey": "soccer_russia_premier_league",
       "market": "btts"
     },
@@ -3565,6 +3577,18 @@
     },
     {
       "sportKey": "soccer_switzerland_superleague",
+      "market": "double_chance"
+    },
+    {
+      "sportKey": "soccer_concacaf_leagues_cup",
+      "market": "btts"
+    },
+    {
+      "sportKey": "soccer_concacaf_leagues_cup",
+      "market": "draw_no_bet"
+    },
+    {
+      "sportKey": "soccer_concacaf_leagues_cup",
       "market": "double_chance"
     },
     {
@@ -3906,31 +3930,6 @@
     },
     {
       "label": "soccer_greece_super_league:double_chance",
-      "error": "Markets not supported by this endpoint: double_chance",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_concacaf_leagues_cup:base-combined",
-      "error": "Markets not supported by this endpoint: btts, double_chance, draw_no_bet",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_concacaf_leagues_cup:base-core",
-      "error": "Invalid commenceTimeFrom parameter. The format must be YYYY-MM-DDTHH:MM:SSZ, for example 2020-11-24T16:05:00Z",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_concacaf_leagues_cup:btts",
-      "error": "Markets not supported by this endpoint: btts",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_concacaf_leagues_cup:draw_no_bet",
-      "error": "Markets not supported by this endpoint: draw_no_bet",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_concacaf_leagues_cup:double_chance",
       "error": "Markets not supported by this endpoint: double_chance",
       "statusCode": 422
     },
@@ -4306,6 +4305,31 @@
     },
     {
       "label": "soccer_switzerland_superleague:double_chance",
+      "error": "Markets not supported by this endpoint: double_chance",
+      "statusCode": 422
+    },
+    {
+      "label": "soccer_concacaf_leagues_cup:base-combined",
+      "error": "Markets not supported by this endpoint: btts, double_chance, draw_no_bet",
+      "statusCode": 422
+    },
+    {
+      "label": "soccer_concacaf_leagues_cup:base-core",
+      "error": "Invalid commenceTimeFrom parameter. The format must be YYYY-MM-DDTHH:MM:SSZ, for example 2020-11-24T16:05:00Z",
+      "statusCode": 422
+    },
+    {
+      "label": "soccer_concacaf_leagues_cup:btts",
+      "error": "Markets not supported by this endpoint: btts",
+      "statusCode": 422
+    },
+    {
+      "label": "soccer_concacaf_leagues_cup:draw_no_bet",
+      "error": "Markets not supported by this endpoint: draw_no_bet",
+      "statusCode": 422
+    },
+    {
+      "label": "soccer_concacaf_leagues_cup:double_chance",
       "error": "Markets not supported by this endpoint: double_chance",
       "statusCode": 422
     },
@@ -4817,5 +4841,5 @@
   },
   "skipped": false,
   "skipReason": null,
-  "completedAt": "2026-08-09T07:20:40.657Z"
+  "completedAt": "2026-08-09T07:03:59.771Z"
 }
