@@ -1,6 +1,6 @@
 {
   "version": "v195",
-  "updated": "2026-08-09T01:45:07.335Z",
+  "updated": "2026-08-09T03:08:00.249Z",
   "summary": {
     "fixtures": 300,
     "qualified": 2,
@@ -2361,52 +2361,6 @@
       "reason": "Consensus rejected: support, independence or conflict threshold failed."
     },
     {
-      "id": 1523779,
-      "date": "2026-07-15",
-      "home": "Kahibah",
-      "away": "Maitland",
-      "league": "Northern NSW NPL",
-      "version": "v195",
-      "bet": false,
-      "market": "No Bet",
-      "candidate": "Away Team Over 0.5 Goals",
-      "score": 83.8,
-      "support": 1.75,
-      "supporters": [
-        "Trend",
-        "Streaks",
-        "League Bias"
-      ],
-      "independence": 3,
-      "exactSupport": 3,
-      "conflictIndex": 0,
-      "alternatives": [
-        {
-          "market": "Away Win",
-          "support": 0.85,
-          "engines": [
-            "PurePPG Normal",
-            "PurePPG Strict"
-          ]
-        },
-        {
-          "market": "Double Chance X2",
-          "support": 0.85,
-          "engines": [
-            "PurePPG Ultra"
-          ]
-        },
-        {
-          "market": "First Half Over 0.5",
-          "support": 0.75,
-          "engines": [
-            "Halves"
-          ]
-        }
-      ],
-      "reason": "Consensus rejected: support, independence or conflict threshold failed."
-    },
-    {
       "id": 1554956,
       "date": "2026-07-15",
       "home": "GKS Katowice",
@@ -3947,42 +3901,6 @@
       "supporters": [],
       "conflictIndex": 0,
       "independence": 0
-    },
-    {
-      "id": 1523791,
-      "date": "2026-07-19",
-      "home": "Charlestown City Blues",
-      "away": "Edgeworth Eagles",
-      "league": "Northern NSW NPL",
-      "version": "v195",
-      "bet": false,
-      "market": "No Bet",
-      "candidate": "Second Half Over 0.5",
-      "score": 76.2,
-      "support": 0.65,
-      "supporters": [
-        "Halves"
-      ],
-      "independence": 1,
-      "exactSupport": 1,
-      "conflictIndex": 0,
-      "alternatives": [
-        {
-          "market": "Away Team Over 0.5 Goals",
-          "support": 0.44,
-          "engines": [
-            "Trend"
-          ]
-        },
-        {
-          "market": "Home Team Over 0.5 Goals",
-          "support": 0.31,
-          "engines": [
-            "League Bias"
-          ]
-        }
-      ],
-      "reason": "Consensus rejected: support, independence or conflict threshold failed."
     },
     {
       "id": 1592158,
@@ -5600,6 +5518,36 @@
       "conflictIndex": 0,
       "alternatives": [],
       "reason": "Consensus rejected: support, independence or conflict threshold failed."
+    },
+    {
+      "id": 1589301,
+      "date": "2026-07-25",
+      "home": "Maritimo",
+      "away": "Machico",
+      "league": "Friendlies Clubs",
+      "version": "v195",
+      "bet": false,
+      "market": "No Bet",
+      "score": 0,
+      "reason": "No engine produced a qualified candidate.",
+      "supporters": [],
+      "conflictIndex": 0,
+      "independence": 0
+    },
+    {
+      "id": 1536240,
+      "date": "2026-07-25",
+      "home": "Nart Cherkessk",
+      "away": "PSK Dinskaya",
+      "league": "Second League - Group 1",
+      "version": "v195",
+      "bet": false,
+      "market": "No Bet",
+      "score": 0,
+      "reason": "No engine produced a qualified candidate.",
+      "supporters": [],
+      "conflictIndex": 0,
+      "independence": 0
     }
   ]
 }
