@@ -1,6 +1,6 @@
 {
   "version": "v251",
-  "generatedAt": "2026-08-09T00:10:16.430Z",
+  "generatedAt": "2026-08-09T00:02:13.005Z",
   "provider": "The Odds API v4",
   "keyPresent": true,
   "regions": "uk",
@@ -168,14 +168,6 @@
       "matches": 8
     },
     {
-      "league": "Brasiliense U20",
-      "country": "Brazil",
-      "sportKey": "soccer_brazil_campeonato",
-      "sportTitle": "Brazil Série A",
-      "score": 0.305,
-      "matches": 2
-    },
-    {
       "league": "Goiano - 2",
       "country": "Brazil",
       "sportKey": "soccer_brazil_campeonato",
@@ -205,15 +197,7 @@
       "sportKey": "soccer_spain_segunda_division",
       "sportTitle": "La Liga 2 - Spain",
       "score": 0.542,
-      "matches": 4
-    },
-    {
-      "league": "MLS Next Pro",
-      "country": "USA",
-      "sportKey": "soccer_usa_mls",
-      "sportTitle": "MLS",
-      "score": 1,
-      "matches": 17
+      "matches": 3
     },
     {
       "league": "NWSL Women",
@@ -232,30 +216,6 @@
       "matches": 1
     },
     {
-      "league": "Segunda División",
-      "country": "Peru",
-      "sportKey": "soccer_spain_segunda_division",
-      "sportTitle": "La Liga 2 - Spain",
-      "score": 0.542,
-      "matches": 2
-    },
-    {
-      "league": "Major League Soccer",
-      "country": "USA",
-      "sportKey": "soccer_usa_mls",
-      "sportTitle": "MLS",
-      "score": 1,
-      "matches": 1
-    },
-    {
-      "league": "Primera División",
-      "country": "Peru",
-      "sportKey": "soccer_argentina_primera_division",
-      "sportTitle": "Primera División - Argentina",
-      "score": 0.653,
-      "matches": 6
-    },
-    {
       "league": "Canadian Premier League",
       "country": "Canada",
       "sportKey": "soccer_epl",
@@ -264,12 +224,28 @@
       "matches": 2
     },
     {
-      "league": "Primera Division",
-      "country": "El-Salvador",
-      "sportKey": "soccer_spain_la_liga",
-      "sportTitle": "La Liga - Spain",
-      "score": 0.429,
-      "matches": 5
+      "league": "Primera División",
+      "country": "Bolivia",
+      "sportKey": "soccer_argentina_primera_division",
+      "sportTitle": "Primera División - Argentina",
+      "score": 0.653,
+      "matches": 6
+    },
+    {
+      "league": "Primera B",
+      "country": "Chile",
+      "sportKey": "soccer_chile_campeonato",
+      "sportTitle": "Primera División - Chile",
+      "score": 0.466,
+      "matches": 12
+    },
+    {
+      "league": "Primera División",
+      "country": "Chile",
+      "sportKey": "soccer_chile_campeonato",
+      "sportTitle": "Primera División - Chile",
+      "score": 1,
+      "matches": 7
     },
     {
       "league": "Primera División",
@@ -344,6 +320,14 @@
       "matches": 8
     },
     {
+      "league": "MLS Next Pro",
+      "country": "USA",
+      "sportKey": "soccer_usa_mls",
+      "sportTitle": "MLS",
+      "score": 1,
+      "matches": 16
+    },
+    {
       "league": "Primera Division",
       "country": "Nicaragua",
       "sportKey": "soccer_spain_la_liga",
@@ -416,6 +400,14 @@
       "matches": 3
     },
     {
+      "league": "Primera Division",
+      "country": "El-Salvador",
+      "sportKey": "soccer_spain_la_liga",
+      "sportTitle": "La Liga - Spain",
+      "score": 0.429,
+      "matches": 4
+    },
+    {
       "league": "USL Championship",
       "country": "USA",
       "sportKey": "soccer_usa_mls",
@@ -438,6 +430,14 @@
       "sportTitle": "Primera División - Argentina",
       "score": 0.606,
       "matches": 4
+    },
+    {
+      "league": "Primera División",
+      "country": "Peru",
+      "sportKey": "soccer_argentina_primera_division",
+      "sportTitle": "Primera División - Argentina",
+      "score": 0.653,
+      "matches": 5
     },
     {
       "league": "First League",
@@ -1129,6 +1129,22 @@
     },
     {
       "league": "Segunda División",
+      "country": "Peru",
+      "sportKey": "soccer_spain_segunda_division",
+      "sportTitle": "La Liga 2 - Spain",
+      "score": 0.542,
+      "matches": 1
+    },
+    {
+      "league": "Brasiliense U20",
+      "country": "Brazil",
+      "sportKey": "soccer_brazil_campeonato",
+      "sportTitle": "Brazil Série A",
+      "score": 0.305,
+      "matches": 1
+    },
+    {
+      "league": "Segunda División",
       "country": "Venezuela",
       "sportKey": "soccer_spain_segunda_division",
       "sportTitle": "La Liga 2 - Spain",
@@ -1656,7 +1672,7 @@
       "matches": 1
     }
   ],
-  "matchesConsidered": 1833,
+  "matchesConsidered": 1820,
   "matchesMatched": 0,
   "matchesUpdated": 0,
   "fieldsFilled": 0,
@@ -1792,24 +1808,6 @@
       "bestScore": 0.143
     },
     {
-      "league": "Liga Femenina",
-      "country": "Colombia",
-      "reason": "No matching soccer sport key",
-      "bestScore": 0.143
-    },
-    {
-      "league": "Liga Nacional",
-      "country": "Guatemala",
-      "reason": "No matching soccer sport key",
-      "bestScore": 0.143
-    },
-    {
-      "league": "Liga Nacional",
-      "country": "Honduras",
-      "reason": "No matching soccer sport key",
-      "bestScore": 0.143
-    },
-    {
       "league": "Primera A",
       "country": "Colombia",
       "reason": "No matching soccer sport key",
@@ -1828,6 +1826,12 @@
       "bestScore": 0.143
     },
     {
+      "league": "Liga Nacional",
+      "country": "Honduras",
+      "reason": "No matching soccer sport key",
+      "bestScore": 0.143
+    },
+    {
       "league": "Liga Panameña de Fútbol",
       "country": "Panama",
       "reason": "No matching soccer sport key",
@@ -1838,6 +1842,12 @@
       "country": "World",
       "reason": "No matching soccer sport key",
       "bestScore": 0.222
+    },
+    {
+      "league": "Liga Nacional",
+      "country": "Guatemala",
+      "reason": "No matching soccer sport key",
+      "bestScore": 0.143
     },
     {
       "league": "Northern NSW NPL",
@@ -2124,6 +2134,12 @@
     {
       "league": "Liga I",
       "country": "Romania",
+      "reason": "No matching soccer sport key",
+      "bestScore": 0.143
+    },
+    {
+      "league": "Liga Femenina",
+      "country": "Colombia",
       "reason": "No matching soccer sport key",
       "bestScore": 0.143
     },
@@ -3336,18 +3352,6 @@
       "market": "double_chance"
     },
     {
-      "sportKey": "soccer_spain_la_liga",
-      "market": "btts"
-    },
-    {
-      "sportKey": "soccer_spain_la_liga",
-      "market": "draw_no_bet"
-    },
-    {
-      "sportKey": "soccer_spain_la_liga",
-      "market": "double_chance"
-    },
-    {
       "sportKey": "soccer_chile_campeonato",
       "market": "btts"
     },
@@ -3360,6 +3364,18 @@
       "market": "double_chance"
     },
     {
+      "sportKey": "soccer_chile_campeonato",
+      "market": "btts"
+    },
+    {
+      "sportKey": "soccer_chile_campeonato",
+      "market": "draw_no_bet"
+    },
+    {
+      "sportKey": "soccer_chile_campeonato",
+      "market": "double_chance"
+    },
+    {
       "sportKey": "soccer_mexico_ligamx",
       "market": "btts"
     },
@@ -3369,6 +3385,18 @@
     },
     {
       "sportKey": "soccer_mexico_ligamx",
+      "market": "double_chance"
+    },
+    {
+      "sportKey": "soccer_spain_la_liga",
+      "market": "btts"
+    },
+    {
+      "sportKey": "soccer_spain_la_liga",
+      "market": "draw_no_bet"
+    },
+    {
+      "sportKey": "soccer_spain_la_liga",
       "market": "double_chance"
     },
     {
@@ -3988,27 +4016,27 @@
       "statusCode": 422
     },
     {
-      "label": "soccer_spain_la_liga:base-combined",
+      "label": "soccer_chile_campeonato:base-combined",
       "error": "Markets not supported by this endpoint: btts, double_chance, draw_no_bet",
       "statusCode": 422
     },
     {
-      "label": "soccer_spain_la_liga:base-core",
+      "label": "soccer_chile_campeonato:base-core",
       "error": "Invalid commenceTimeFrom parameter. The format must be YYYY-MM-DDTHH:MM:SSZ, for example 2020-11-24T16:05:00Z",
       "statusCode": 422
     },
     {
-      "label": "soccer_spain_la_liga:btts",
+      "label": "soccer_chile_campeonato:btts",
       "error": "Markets not supported by this endpoint: btts",
       "statusCode": 422
     },
     {
-      "label": "soccer_spain_la_liga:draw_no_bet",
+      "label": "soccer_chile_campeonato:draw_no_bet",
       "error": "Markets not supported by this endpoint: draw_no_bet",
       "statusCode": 422
     },
     {
-      "label": "soccer_spain_la_liga:double_chance",
+      "label": "soccer_chile_campeonato:double_chance",
       "error": "Markets not supported by this endpoint: double_chance",
       "statusCode": 422
     },
@@ -4059,6 +4087,31 @@
     },
     {
       "label": "soccer_mexico_ligamx:double_chance",
+      "error": "Markets not supported by this endpoint: double_chance",
+      "statusCode": 422
+    },
+    {
+      "label": "soccer_spain_la_liga:base-combined",
+      "error": "Markets not supported by this endpoint: btts, double_chance, draw_no_bet",
+      "statusCode": 422
+    },
+    {
+      "label": "soccer_spain_la_liga:base-core",
+      "error": "Invalid commenceTimeFrom parameter. The format must be YYYY-MM-DDTHH:MM:SSZ, for example 2020-11-24T16:05:00Z",
+      "statusCode": 422
+    },
+    {
+      "label": "soccer_spain_la_liga:btts",
+      "error": "Markets not supported by this endpoint: btts",
+      "statusCode": 422
+    },
+    {
+      "label": "soccer_spain_la_liga:draw_no_bet",
+      "error": "Markets not supported by this endpoint: draw_no_bet",
+      "statusCode": 422
+    },
+    {
+      "label": "soccer_spain_la_liga:double_chance",
       "error": "Markets not supported by this endpoint: double_chance",
       "statusCode": 422
     },
@@ -4620,5 +4673,5 @@
   },
   "skipped": false,
   "skipReason": null,
-  "completedAt": "2026-08-09T00:10:38.548Z"
+  "completedAt": "2026-08-09T00:02:20.943Z"
 }
