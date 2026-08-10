@@ -1,20 +1,12 @@
 {
   "version": "v251",
-  "generatedAt": "2026-08-10T04:50:18.329Z",
+  "generatedAt": "2026-08-10T05:00:15.053Z",
   "provider": "The Odds API v4",
   "keyPresent": true,
   "regions": "uk",
   "sportsAvailable": 73,
   "soccerSportsAvailable": 42,
   "sportMappings": [
-    {
-      "league": "Super Liga",
-      "country": "Slovakia",
-      "sportKey": "soccer_turkey_super_league",
-      "sportTitle": "Turkey Super League",
-      "score": 0.286,
-      "matches": 7
-    },
     {
       "league": "Northern Super League",
       "country": "Canada",
@@ -1553,6 +1545,14 @@
     },
     {
       "league": "Super Liga",
+      "country": "Slovakia",
+      "sportKey": "soccer_turkey_super_league",
+      "sportTitle": "Turkey Super League",
+      "score": 0.286,
+      "matches": 6
+    },
+    {
+      "league": "Super Liga",
       "country": "Serbia",
       "sportKey": "soccer_turkey_super_league",
       "sportTitle": "Turkey Super League",
@@ -1720,7 +1720,7 @@
       "matches": 1
     }
   ],
-  "matchesConsidered": 2947,
+  "matchesConsidered": 2945,
   "matchesMatched": 0,
   "matchesUpdated": 0,
   "fieldsFilled": 0,
@@ -1729,12 +1729,6 @@
   "derivedHtftMatches": 0,
   "bookmakerRows": 0,
   "unmatched": [
-    {
-      "league": "Africa Cup of Nations - Women",
-      "country": "World",
-      "reason": "No matching soccer sport key",
-      "bestScore": 0.111
-    },
     {
       "league": "Division 1",
       "country": "Kuwait",
@@ -1746,6 +1740,12 @@
       "country": "Romania",
       "reason": "No matching soccer sport key",
       "bestScore": 0.143
+    },
+    {
+      "league": "Africa Cup of Nations - Women",
+      "country": "World",
+      "reason": "No matching soccer sport key",
+      "bestScore": 0.111
     },
     {
       "league": "Liga de Ascenso",
@@ -2510,222 +2510,6 @@
       "bestScore": 0.125
     },
     {
-      "league": "Super Liga",
-      "home": "FK Košice",
-      "away": "Dunajska Streda",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Super Liga",
-      "home": "Dukla Banská Bystrica",
-      "away": "Žilina",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Super Liga",
-      "home": "Skalica",
-      "away": "FK Košice",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Super Liga",
-      "home": "Slovan Bratislava",
-      "away": "Ružomberok",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Super Liga",
-      "home": "Podbrezová",
-      "away": "AS Trencin",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Super Liga",
-      "home": "Spartak Trnava",
-      "away": "Zemplín Michalovce",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Super Liga",
-      "home": "Komárno",
-      "away": "Dunajska Streda",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "1. Lig",
-      "home": "Pendikspor",
-      "away": "Batman Petrolspor",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "1. Lig",
-      "home": "Esenler Erokspor",
-      "away": "Sarıyer",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "1. Lig",
-      "home": "İstanbulspor",
-      "away": "Bodrum FK",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "1. Lig",
-      "home": "Fatih Karagümrük",
-      "away": "Ümraniyespor",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "1. Lig",
-      "home": "Bursaspor",
-      "away": "Iğdır FK",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "1. Lig",
-      "home": "Manisa F.K.",
-      "away": "Vanspor FK",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "1. Lig",
-      "home": "Kayserispor",
-      "away": "Sivasspor",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "1. Lig",
-      "home": "Keçiörengücü",
-      "away": "Pendikspor",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "1. Lig",
-      "home": "Mardin 1969",
-      "away": "Antalyaspor",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "1. Lig",
-      "home": "Muğlaspor",
-      "away": "Bandırmaspor",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Süper Lig",
-      "home": "Galatasaray",
-      "away": "Çorum FK",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Süper Lig",
-      "home": "Kasımpaşa",
-      "away": "Trabzonspor",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Süper Lig",
-      "home": "Konyaspor",
-      "away": "Rizespor",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Süper Lig",
-      "home": "Gaziantep FK",
-      "away": "Alanyaspor",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Süper Lig",
-      "home": "Gençlerbirliği S.K.",
-      "away": "Fenerbahçe",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Süper Lig",
-      "home": "Başakşehir",
-      "away": "Kocaelispor",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Süper Lig",
-      "home": "Amed",
-      "away": "Erzurumspor FK",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Süper Lig",
-      "home": "Beşiktaş",
-      "away": "Eyüpspor",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Super Liga",
-      "home": "Politehnica UTM",
-      "away": "CSF Bălți",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Super Liga",
-      "home": "Dacia-Buiucani",
-      "away": "Petrocub",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Super Liga",
-      "home": "Sireți",
-      "away": "Sheriff Tiraspol",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Super Liga",
-      "home": "Zimbru",
-      "away": "Milsami Orhei",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Super Liga",
-      "home": "Novi Pazar",
-      "away": "Vojvodina",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Super Liga",
-      "home": "Radnik Surdulica",
-      "away": "Macva",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Super Liga",
-      "home": "Železničar Pančevo",
-      "away": "FK Crvena Zvezda",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Super Liga",
-      "home": "Cukaricki",
-      "away": "OFK Beograd",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Super Liga",
-      "home": "IMT Novi Beograd",
-      "away": "Radnicki NIS",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Super Liga",
-      "home": "FK Partizan",
-      "away": "Radnicki 1923",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Super Liga",
-      "home": "Zemun",
-      "away": "Mladost Lucani",
-      "reason": "No event/team match"
-    },
-    {
       "league": "Northern Super League",
       "home": "Ottawa Rapid W",
       "away": "AFC Toronto W",
@@ -3228,22 +3012,226 @@
       "home": "Lanús Res.",
       "away": "Defensa y Justicia Res.",
       "reason": "No event/team match"
+    },
+    {
+      "league": "Reserve League",
+      "home": "San Martín San Juan Res.",
+      "away": "Boca Juniors Res.",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Reserve League",
+      "home": "Argentinos Juniors Res.",
+      "away": "Gimnasia La Plata Res.",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Reserve League",
+      "home": "Independiente Riva. Res.",
+      "away": "Ferro 2",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Reserve League",
+      "home": "Quilmes 2",
+      "away": "Platense Res.",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Reserve League",
+      "home": "San Lorenzo Res.",
+      "away": "Barracas Central Res.",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Reserve League",
+      "home": "Tigre Res.",
+      "away": "Talleres Córdoba Res.",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Reserve League",
+      "home": "Central Córdoba SdE Res.",
+      "away": "Independiente Res.",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Torneo Promocional Amateur",
+      "home": "Everton La Plata",
+      "away": "Las Mandarinas",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Torneo Promocional Amateur",
+      "home": "Buenos Aires City",
+      "away": "Belgrano Zarate",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Torneo Promocional Amateur",
+      "home": "Ezeiza",
+      "away": "Alumni Los Hornos",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Torneo Promocional Amateur",
+      "home": "Barrancas UMET",
+      "away": "Uribelarrea",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Torneo Federal A",
+      "home": "Defensores de Belgrano VR",
+      "away": "Douglas Haig",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Torneo Federal A",
+      "home": "9 de Julio Rafaela",
+      "away": "Gimnasia Chivilcoy",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Torneo Federal A",
+      "home": "Alvarado",
+      "away": "Huracan Las Heras",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Torneo Federal A",
+      "home": "Atenas",
+      "away": "Kimberley Mar del Plata",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Torneo Federal A",
+      "home": "Cipolletti",
+      "away": "Argentino Monte Maíz",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Torneo Federal A",
+      "home": "Olimpo Bahia Blanca",
+      "away": "Villa Mitre",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Torneo Federal A",
+      "home": "San Martin Formosa",
+      "away": "Sportivo Belgrano",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Torneo Federal A",
+      "home": "Sarmiento de La Banda",
+      "away": "Sol de América",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Torneo Federal A",
+      "home": "Atletico Escobar",
+      "away": "Sportivo Las Parejas",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Torneo Federal A",
+      "home": "Defensores de Vilelas",
+      "away": "Tucuman Central",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Torneo Federal A",
+      "home": "Deportivo Rincon",
+      "away": "Circulo Deportivo",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Torneo Federal A",
+      "home": "El Linqueño",
+      "away": "Gimnasia Concepción",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Torneo Federal A",
+      "home": "Fundacion Amigos",
+      "away": "Costa Brava",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Torneo Federal A",
+      "home": "Germinal de Rawson",
+      "away": "Santamarina",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Torneo Federal A",
+      "home": "Guillermo Brown",
+      "away": "Juventud Unida Univ.",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Torneo Federal A",
+      "home": "Independiente De Chivilcoy",
+      "away": "Sarmiento Resistencia",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Torneo Federal A",
+      "home": "San Martín Mendoza",
+      "away": "Sol de Mayo",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Torneo Federal A",
+      "home": "Argentino Monte Maíz",
+      "away": "Olimpo Bahia Blanca",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Torneo Federal A",
+      "home": "Gimnasia Chivilcoy",
+      "away": "San Martin Formosa",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Torneo Federal A",
+      "home": "Douglas Haig",
+      "away": "Sarmiento de La Banda",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Torneo Federal A",
+      "home": "Huracan Las Heras",
+      "away": "Juventud Antoniana",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Torneo Federal A",
+      "home": "Kimberley Mar del Plata",
+      "away": "Cipolletti",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Torneo Federal A",
+      "home": "Sol de América",
+      "away": "Bartolomé Mitre",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Torneo Federal A",
+      "home": "Sportivo Belgrano",
+      "away": "Defensores de Belgrano VR",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Torneo Federal A",
+      "home": "Villa Mitre",
+      "away": "Alvarado",
+      "reason": "No event/team match"
     }
   ],
   "unsupportedMarkets": [
     {
-      "sportKey": "soccer_turkey_super_league",
-      "market": "btts"
-    },
-    {
-      "sportKey": "soccer_turkey_super_league",
-      "market": "draw_no_bet"
-    },
-    {
-      "sportKey": "soccer_turkey_super_league",
-      "market": "double_chance"
-    },
-    {
       "sportKey": "soccer_greece_super_league",
       "market": "btts"
     },
@@ -3409,6 +3397,18 @@
     },
     {
       "sportKey": "soccer_netherlands_eredivisie",
+      "market": "double_chance"
+    },
+    {
+      "sportKey": "soccer_turkey_super_league",
+      "market": "btts"
+    },
+    {
+      "sportKey": "soccer_turkey_super_league",
+      "market": "draw_no_bet"
+    },
+    {
+      "sportKey": "soccer_turkey_super_league",
       "market": "double_chance"
     },
     {
@@ -3689,31 +3689,6 @@
     }
   ],
   "requestErrors": [
-    {
-      "label": "soccer_turkey_super_league:base-combined",
-      "error": "Markets not supported by this endpoint: btts, double_chance, draw_no_bet",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_turkey_super_league:base-core",
-      "error": "Invalid commenceTimeFrom parameter. The format must be YYYY-MM-DDTHH:MM:SSZ, for example 2020-11-24T16:05:00Z",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_turkey_super_league:btts",
-      "error": "Markets not supported by this endpoint: btts",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_turkey_super_league:draw_no_bet",
-      "error": "Markets not supported by this endpoint: draw_no_bet",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_turkey_super_league:double_chance",
-      "error": "Markets not supported by this endpoint: double_chance",
-      "statusCode": 422
-    },
     {
       "label": "soccer_greece_super_league:base-combined",
       "error": "Markets not supported by this endpoint: btts, double_chance, draw_no_bet",
@@ -4061,6 +4036,31 @@
     },
     {
       "label": "soccer_netherlands_eredivisie:double_chance",
+      "error": "Markets not supported by this endpoint: double_chance",
+      "statusCode": 422
+    },
+    {
+      "label": "soccer_turkey_super_league:base-combined",
+      "error": "Markets not supported by this endpoint: btts, double_chance, draw_no_bet",
+      "statusCode": 422
+    },
+    {
+      "label": "soccer_turkey_super_league:base-core",
+      "error": "Invalid commenceTimeFrom parameter. The format must be YYYY-MM-DDTHH:MM:SSZ, for example 2020-11-24T16:05:00Z",
+      "statusCode": 422
+    },
+    {
+      "label": "soccer_turkey_super_league:btts",
+      "error": "Markets not supported by this endpoint: btts",
+      "statusCode": 422
+    },
+    {
+      "label": "soccer_turkey_super_league:draw_no_bet",
+      "error": "Markets not supported by this endpoint: draw_no_bet",
+      "statusCode": 422
+    },
+    {
+      "label": "soccer_turkey_super_league:double_chance",
       "error": "Markets not supported by this endpoint: double_chance",
       "statusCode": 422
     },
@@ -4647,5 +4647,5 @@
   },
   "skipped": false,
   "skipReason": null,
-  "completedAt": "2026-08-10T04:50:37.037Z"
+  "completedAt": "2026-08-10T05:00:23.384Z"
 }
