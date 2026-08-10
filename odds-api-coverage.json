@@ -1,6 +1,6 @@
 {
   "version": "v251",
-  "generatedAt": "2026-08-10T23:28:57.580Z",
+  "generatedAt": "2026-08-10T23:50:14.521Z",
   "provider": "The Odds API v4",
   "keyPresent": true,
   "regions": "uk",
@@ -3236,11 +3236,11 @@
       "market": "double_chance"
     },
     {
-      "sportKey": "soccer_england_league1",
+      "sportKey": "soccer_argentina_primera_division",
       "market": "btts"
     },
     {
-      "sportKey": "soccer_england_league1",
+      "sportKey": "soccer_argentina_primera_division",
       "market": "draw_no_bet"
     },
     {
@@ -3707,22 +3707,22 @@
       "statusCode": 422
     },
     {
-      "label": "soccer_england_league1:base-combined",
+      "label": "soccer_argentina_primera_division:base-combined",
       "error": "Markets not supported by this endpoint: btts, double_chance, draw_no_bet",
       "statusCode": 422
     },
     {
-      "label": "soccer_england_league1:base-core",
+      "label": "soccer_argentina_primera_division:base-core",
       "error": "Invalid commenceTimeFrom parameter. The format must be YYYY-MM-DDTHH:MM:SSZ, for example 2020-11-24T16:05:00Z",
       "statusCode": 422
     },
     {
-      "label": "soccer_england_league1:btts",
+      "label": "soccer_argentina_primera_division:btts",
       "error": "Markets not supported by this endpoint: btts",
       "statusCode": 422
     },
     {
-      "label": "soccer_england_league1:draw_no_bet",
+      "label": "soccer_argentina_primera_division:draw_no_bet",
       "error": "Markets not supported by this endpoint: draw_no_bet",
       "statusCode": 422
     },
@@ -4639,5 +4639,5 @@
   },
   "skipped": false,
   "skipReason": null,
-  "completedAt": "2026-08-10T23:29:13.073Z"
+  "completedAt": "2026-08-10T23:50:22.619Z"
 }
