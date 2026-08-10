@@ -1,6 +1,6 @@
 {
   "version": "v251",
-  "generatedAt": "2026-08-10T10:10:23.834Z",
+  "generatedAt": "2026-08-10T09:54:01.508Z",
   "provider": "The Odds API v4",
   "keyPresent": true,
   "regions": "uk",
@@ -317,6 +317,14 @@
       "sportKey": "soccer_concacaf_leagues_cup",
       "sportTitle": "Leagues Cup",
       "score": 0.52,
+      "matches": 1
+    },
+    {
+      "league": "National League Cup",
+      "country": "England",
+      "sportKey": "soccer_england_efl_cup",
+      "sportTitle": "EFL Cup",
+      "score": 0.68,
       "matches": 1
     },
     {
@@ -829,7 +837,7 @@
       "sportKey": "soccer_italy_serie_a",
       "sportTitle": "Serie A - Italy",
       "score": 0.323,
-      "matches": 10
+      "matches": 12
     },
     {
       "league": "Coppa Italia Serie C",
@@ -1720,7 +1728,7 @@
       "matches": 1
     }
   ],
-  "matchesConsidered": 2924,
+  "matchesConsidered": 2938,
   "matchesMatched": 0,
   "matchesUpdated": 0,
   "fieldsFilled": 0,
@@ -1988,6 +1996,12 @@
       "bestScore": 0
     },
     {
+      "league": "Africa Cup of Nations - Women",
+      "country": "World",
+      "reason": "No matching soccer sport key",
+      "bestScore": 0.111
+    },
+    {
       "league": "UEFA Super Cup",
       "country": "World",
       "reason": "No matching soccer sport key",
@@ -2076,6 +2090,12 @@
       "country": "Tanzania",
       "reason": "No matching soccer sport key",
       "bestScore": 0
+    },
+    {
+      "league": "Ligue A",
+      "country": "Burundi",
+      "reason": "No matching soccer sport key",
+      "bestScore": 0.143
     },
     {
       "league": "Western Australia NPL",
@@ -3183,12 +3203,6 @@
     },
     {
       "league": "3. Division - Girone 4",
-      "home": "Vindbjart",
-      "away": "Åkra",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "3. Division - Girone 4",
       "home": "Flekkerøy",
       "away": "Brodd",
       "reason": "No event/team match"
@@ -3197,6 +3211,12 @@
       "league": "3. Division - Girone 4",
       "home": "Våg",
       "away": "Mandalskameratene",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "3. Division - Girone 4",
+      "home": "Vindbjart",
+      "away": "Åkra",
       "reason": "No event/team match"
     },
     {
@@ -3215,18 +3235,6 @@
       "league": "3. Division - Girone 6",
       "home": "Lyn II",
       "away": "Fram",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "3. Division - Girone 6",
-      "home": "Oppsal",
-      "away": "Elverum",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "3. Division - Girone 6",
-      "home": "Ørn Horten",
-      "away": "Gjøvik-Lyn",
       "reason": "No event/team match"
     }
   ],
@@ -4647,5 +4655,5 @@
   },
   "skipped": false,
   "skipReason": null,
-  "completedAt": "2026-08-10T10:10:48.103Z"
+  "completedAt": "2026-08-10T09:54:09.867Z"
 }
