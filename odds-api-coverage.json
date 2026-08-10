@@ -1,6 +1,6 @@
 {
   "version": "v251",
-  "generatedAt": "2026-08-10T03:50:28.952Z",
+  "generatedAt": "2026-08-10T04:20:25.203Z",
   "provider": "The Odds API v4",
   "keyPresent": true,
   "regions": "uk",
@@ -732,14 +732,6 @@
       "country": "Russia",
       "sportKey": "soccer_russia_premier_league",
       "sportTitle": "Premier League - Russia",
-      "score": 0.323,
-      "matches": 8
-    },
-    {
-      "league": "Central Youth League",
-      "country": "Poland",
-      "sportKey": "soccer_poland_ekstraklasa",
-      "sportTitle": "Ekstraklasa - Poland",
       "score": 0.323,
       "matches": 8
     },
@@ -1728,7 +1720,7 @@
       "matches": 1
     }
   ],
-  "matchesConsidered": 2948,
+  "matchesConsidered": 2947,
   "matchesMatched": 0,
   "matchesUpdated": 0,
   "fieldsFilled": 0,
@@ -1737,12 +1729,6 @@
   "derivedHtftMatches": 0,
   "bookmakerRows": 0,
   "unmatched": [
-    {
-      "league": "Meistaradeildin",
-      "country": "Faroe-Islands",
-      "reason": "No matching soccer sport key",
-      "bestScore": 0
-    },
     {
       "league": "Africa Cup of Nations - Women",
       "country": "World",
@@ -1796,12 +1782,6 @@
       "country": "World",
       "reason": "No matching soccer sport key",
       "bestScore": 0.222
-    },
-    {
-      "league": "Primera A",
-      "country": "Colombia",
-      "reason": "No matching soccer sport key",
-      "bestScore": 0.143
     },
     {
       "league": "Pro League A",
@@ -1884,6 +1864,12 @@
     {
       "league": "Virsliga",
       "country": "Latvia",
+      "reason": "No matching soccer sport key",
+      "bestScore": 0
+    },
+    {
+      "league": "Meistaradeildin",
+      "country": "Faroe-Islands",
       "reason": "No matching soccer sport key",
       "bestScore": 0
     },
@@ -3904,56 +3890,6 @@
       "statusCode": 422
     },
     {
-      "label": "soccer_usa_mls:base-combined",
-      "error": "Markets not supported by this endpoint: btts, double_chance, draw_no_bet",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_usa_mls:base-core",
-      "error": "Invalid commenceTimeFrom parameter. The format must be YYYY-MM-DDTHH:MM:SSZ, for example 2020-11-24T16:05:00Z",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_usa_mls:btts",
-      "error": "Markets not supported by this endpoint: btts",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_usa_mls:draw_no_bet",
-      "error": "Markets not supported by this endpoint: draw_no_bet",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_usa_mls:double_chance",
-      "error": "Markets not supported by this endpoint: double_chance",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_epl:base-combined",
-      "error": "Markets not supported by this endpoint: btts, double_chance, draw_no_bet",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_epl:base-core",
-      "error": "Invalid commenceTimeFrom parameter. The format must be YYYY-MM-DDTHH:MM:SSZ, for example 2020-11-24T16:05:00Z",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_epl:btts",
-      "error": "Markets not supported by this endpoint: btts",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_epl:draw_no_bet",
-      "error": "Markets not supported by this endpoint: draw_no_bet",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_epl:double_chance",
-      "error": "Markets not supported by this endpoint: double_chance",
-      "statusCode": 422
-    },
-    {
       "label": "soccer_norway_eliteserien:base-combined",
       "error": "Markets not supported by this endpoint: btts, double_chance, draw_no_bet",
       "statusCode": 422
@@ -4711,5 +4647,5 @@
   },
   "skipped": false,
   "skipReason": null,
-  "completedAt": "2026-08-10T03:50:43.674Z"
+  "completedAt": "2026-08-10T04:20:49.687Z"
 }
