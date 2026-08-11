@@ -1,6 +1,6 @@
 {
   "version": "v251",
-  "generatedAt": "2026-08-11T23:10:16.141Z",
+  "generatedAt": "2026-08-11T22:57:32.170Z",
   "provider": "The Odds API v4",
   "keyPresent": true,
   "regions": "uk",
@@ -13,14 +13,6 @@
       "sportKey": "soccer_sweden_allsvenskan",
       "sportTitle": "Allsvenskan - Sweden",
       "score": 0.323,
-      "matches": 9
-    },
-    {
-      "league": "Torneo Promocional Amateur",
-      "country": "Argentina",
-      "sportKey": "soccer_argentina_primera_division",
-      "sportTitle": "Primera División - Argentina",
-      "score": 0.305,
       "matches": 9
     },
     {
@@ -37,7 +29,7 @@
       "sportKey": "soccer_brazil_serie_b",
       "sportTitle": "Brazil Série B",
       "score": 0.466,
-      "matches": 10
+      "matches": 5
     },
     {
       "league": "Paulista - U20",
@@ -48,36 +40,12 @@
       "matches": 22
     },
     {
-      "league": "Championship",
-      "country": "Northern-Ireland",
-      "sportKey": "soccer_efl_champ",
-      "sportTitle": "Championship",
-      "score": 0.463,
-      "matches": 16
-    },
-    {
-      "league": "Non League Premier - Isthmian",
-      "country": "England",
-      "sportKey": "soccer_england_efl_cup",
-      "sportTitle": "EFL Cup",
-      "score": 0.43,
-      "matches": 21
-    },
-    {
-      "league": "Non League Premier - Northern",
-      "country": "England",
-      "sportKey": "soccer_england_efl_cup",
-      "sportTitle": "EFL Cup",
-      "score": 0.43,
-      "matches": 22
-    },
-    {
-      "league": "Non League Premier - Southern Central",
-      "country": "England",
-      "sportKey": "soccer_england_efl_cup",
-      "sportTitle": "EFL Cup",
-      "score": 0.402,
-      "matches": 21
+      "league": "Liga Revelação U23",
+      "country": "Portugal",
+      "sportKey": "soccer_portugal_primeira_liga",
+      "sportTitle": "Primeira Liga - Portugal",
+      "score": 0.466,
+      "matches": 3
     },
     {
       "league": "Non League Premier - Southern South",
@@ -304,6 +272,14 @@
       "matches": 1
     },
     {
+      "league": "Torneo Promocional Amateur",
+      "country": "Argentina",
+      "sportKey": "soccer_argentina_primera_division",
+      "sportTitle": "Primera División - Argentina",
+      "score": 0.305,
+      "matches": 7
+    },
+    {
       "league": "Premier Soccer League",
       "country": "South-Africa",
       "sportKey": "soccer_epl",
@@ -326,6 +302,14 @@
       "sportTitle": "Brazil Série A",
       "score": 0.305,
       "matches": 10
+    },
+    {
+      "league": "Non League Premier - Southern South",
+      "country": "England",
+      "sportKey": "soccer_england_efl_cup",
+      "sportTitle": "EFL Cup",
+      "score": 0.402,
+      "matches": 12
     },
     {
       "league": "Cearense U20",
@@ -1064,6 +1048,14 @@
       "matches": 9
     },
     {
+      "league": "Non League Premier - Northern",
+      "country": "England",
+      "sportKey": "soccer_england_efl_cup",
+      "sportTitle": "EFL Cup",
+      "score": 0.43,
+      "matches": 11
+    },
+    {
       "league": "Premier League",
       "country": "Wales",
       "sportKey": "soccer_epl",
@@ -1480,6 +1472,14 @@
       "matches": 8
     },
     {
+      "league": "Championship",
+      "country": "Northern-Ireland",
+      "sportKey": "soccer_efl_champ",
+      "sportTitle": "Championship",
+      "score": 0.463,
+      "matches": 8
+    },
+    {
       "league": "League One",
       "country": "Scotland",
       "sportKey": "soccer_epl",
@@ -1510,6 +1510,22 @@
       "sportTitle": "EFL Cup",
       "score": 0.466,
       "matches": 12
+    },
+    {
+      "league": "Non League Premier - Isthmian",
+      "country": "England",
+      "sportKey": "soccer_england_efl_cup",
+      "sportTitle": "EFL Cup",
+      "score": 0.43,
+      "matches": 11
+    },
+    {
+      "league": "Non League Premier - Southern Central",
+      "country": "England",
+      "sportKey": "soccer_england_efl_cup",
+      "sportTitle": "EFL Cup",
+      "score": 0.402,
+      "matches": 11
     },
     {
       "league": "Second League - Group 1",
@@ -1776,7 +1792,7 @@
       "matches": 3
     }
   ],
-  "matchesConsidered": 2908,
+  "matchesConsidered": 2831,
   "matchesMatched": 0,
   "matchesUpdated": 0,
   "fieldsFilled": 0,
@@ -1790,18 +1806,6 @@
       "country": "World",
       "reason": "No matching soccer sport key",
       "bestScore": 0
-    },
-    {
-      "league": "Challenge Cup",
-      "country": "Scotland",
-      "reason": "No matching soccer sport key",
-      "bestScore": 0.167
-    },
-    {
-      "league": "Copa Paraguay",
-      "country": "Paraguay",
-      "reason": "No matching soccer sport key",
-      "bestScore": 0.2
     },
     {
       "league": "Copa Colombia",
@@ -1892,6 +1896,18 @@
       "country": "World",
       "reason": "No matching soccer sport key",
       "bestScore": 0.111
+    },
+    {
+      "league": "Copa Paraguay",
+      "country": "Paraguay",
+      "reason": "No matching soccer sport key",
+      "bestScore": 0.2
+    },
+    {
+      "league": "Challenge Cup",
+      "country": "Scotland",
+      "reason": "No matching soccer sport key",
+      "bestScore": 0.167
     },
     {
       "league": "UEFA Super Cup",
@@ -3106,183 +3122,183 @@
       "reason": "No event/team match"
     },
     {
-      "league": "Torneo Promocional Amateur",
-      "home": "Juventud de Bernal",
-      "away": "Atletico Pilar",
+      "league": "Regionalliga - North",
+      "home": "TSV St. Johann",
+      "away": "Kuchl",
       "reason": "No event/team match"
     },
     {
-      "league": "Torneo Promocional Amateur",
-      "home": "Everton La Plata",
-      "away": "Las Mandarinas",
+      "league": "Regionalliga - North",
+      "home": "Seekirchen",
+      "away": "Kuchl",
       "reason": "No event/team match"
     },
     {
-      "league": "Torneo Promocional Amateur",
-      "home": "Buenos Aires City",
-      "away": "Belgrano Zarate",
+      "league": "Regionalliga - North",
+      "home": "Gurten",
+      "away": "SK Vorwarts Steyr",
       "reason": "No event/team match"
     },
     {
-      "league": "Torneo Promocional Amateur",
-      "home": "Ezeiza",
-      "away": "Alumni Los Hornos",
+      "league": "Regionalliga - North",
+      "home": "Wallern / Marienkirchen",
+      "away": "Wohnbau Dietach",
       "reason": "No event/team match"
     },
     {
-      "league": "Torneo Promocional Amateur",
-      "home": "Barrancas UMET",
-      "away": "Uribelarrea",
+      "league": "Regionalliga - North",
+      "home": "UFC Hallein",
+      "away": "Bad Schallerbach",
       "reason": "No event/team match"
     },
     {
-      "league": "Torneo Promocional Amateur",
-      "home": "Atletico Pilar",
-      "away": "Provincial",
+      "league": "Regionalliga - North",
+      "home": "TSV St. Johann",
+      "away": "Pinzgau Saalfelden",
       "reason": "No event/team match"
     },
     {
-      "league": "Torneo Promocional Amateur",
-      "home": "Defensores Glew",
-      "away": "Estrella de Berisso",
+      "league": "Regionalliga - North",
+      "home": "Wals-Grünau",
+      "away": "LASK Juniors",
       "reason": "No event/team match"
     },
     {
-      "league": "Torneo Promocional Amateur",
-      "home": "Juventud de Bernal",
-      "away": "SAT Moreno",
+      "league": "Regionalliga - North",
+      "home": "Ried II",
+      "away": "Grödig",
       "reason": "No event/team match"
     },
     {
-      "league": "Torneo Promocional Amateur",
-      "home": "Nautico Hacoaj",
-      "away": "Deportivo Metalurgico",
+      "league": "Regionalliga - Ost",
+      "home": "Fach-Donaufeld",
+      "away": "Oberwart",
       "reason": "No event/team match"
     },
     {
-      "league": "Reserve League",
-      "home": "River Plate Res.",
-      "away": "Godoy Cruz Res.",
+      "league": "Regionalliga - Ost",
+      "home": "Leobendorf",
+      "away": "SV Horn",
       "reason": "No event/team match"
     },
     {
-      "league": "Reserve League",
-      "home": "Rosario Central Res.",
-      "away": "Banfield Res.",
+      "league": "Regionalliga - Ost",
+      "home": "Scheiblingkirchen",
+      "away": "Favoritner AC",
       "reason": "No event/team match"
     },
     {
-      "league": "Reserve League",
-      "home": "Belgrano Córdoba Res.",
-      "away": "Estudiantes Rio Cuarto 2",
+      "league": "Regionalliga - Ost",
+      "home": "Krems / Rehberg",
+      "away": "Parndorf",
       "reason": "No event/team match"
     },
     {
-      "league": "Reserve League",
-      "home": "Estudiantes La Plata Res",
-      "away": "Atl. Rafaela 2",
+      "league": "Regionalliga - Ost",
+      "home": "Wiener SC",
+      "away": "Gloggnitz",
       "reason": "No event/team match"
     },
     {
-      "league": "Reserve League",
-      "home": "Instituto Res.",
-      "away": "Aldosivi Res.",
+      "league": "Regionalliga - Ost",
+      "home": "Wienerberg",
+      "away": "Traiskirchen",
       "reason": "No event/team match"
     },
     {
-      "league": "Reserve League",
-      "home": "Lanús Res.",
-      "away": "Defensa y Justicia Res.",
+      "league": "Regionalliga - Ost",
+      "home": "Wiener Viktoria",
+      "away": "Mattersburg SV 2020",
       "reason": "No event/team match"
     },
     {
-      "league": "Reserve League",
-      "home": "San Martín San Juan Res.",
-      "away": "Boca Juniors Res.",
+      "league": "Regionalliga - Ost",
+      "home": "Donau",
+      "away": "Mannsdorf-Großenzersdorf",
       "reason": "No event/team match"
     },
     {
-      "league": "Reserve League",
-      "home": "Argentinos Juniors Res.",
-      "away": "Gimnasia La Plata Res.",
+      "league": "Regionalliga - West",
+      "home": "Wolfurt",
+      "away": "SVG Reichenau",
       "reason": "No event/team match"
     },
     {
-      "league": "Reserve League",
-      "home": "Independiente Riva. Res.",
-      "away": "Ferro 2",
+      "league": "Regionalliga - West",
+      "home": "Kitzbühel",
+      "away": "Röthis",
       "reason": "No event/team match"
     },
     {
-      "league": "Reserve League",
-      "home": "Quilmes 2",
-      "away": "Platense Res.",
+      "league": "Regionalliga - West",
+      "home": "Lochau",
+      "away": "Rheindorf Altach II",
       "reason": "No event/team match"
     },
     {
-      "league": "Reserve League",
-      "home": "San Lorenzo Res.",
-      "away": "Barracas Central Res.",
+      "league": "Regionalliga - West",
+      "home": "Imst",
+      "away": "Swarovski Tirol II",
       "reason": "No event/team match"
     },
     {
-      "league": "Reserve League",
-      "home": "Tigre Res.",
-      "away": "Talleres Córdoba Res.",
+      "league": "Regionalliga - West",
+      "home": "Lustenau",
+      "away": "Kufstein",
       "reason": "No event/team match"
     },
     {
-      "league": "Reserve League",
-      "home": "Central Córdoba SdE Res.",
-      "away": "Independiente Res.",
+      "league": "Regionalliga - West",
+      "home": "Lauterach",
+      "away": "Schwaz",
       "reason": "No event/team match"
     },
     {
-      "league": "Liga Profesional Argentina",
-      "home": "Talleres Cordoba",
-      "away": "Lanus",
+      "league": "Regionalliga - West",
+      "home": "SK St. Johann",
+      "away": "Dornbirn",
       "reason": "No event/team match"
     },
     {
-      "league": "Liga Profesional Argentina",
-      "home": "Racing Club",
-      "away": "Banfield",
+      "league": "Regionalliga - West",
+      "home": "Fügen",
+      "away": "Hohenems",
       "reason": "No event/team match"
     },
     {
-      "league": "Liga Profesional Argentina",
-      "home": "Aldosivi",
-      "away": "Tigre",
+      "league": "2. Liga",
+      "home": "WSPG Wels",
+      "away": "Rapid Wien II",
       "reason": "No event/team match"
     },
     {
-      "league": "Liga Profesional Argentina",
-      "home": "San Lorenzo",
-      "away": "Union Santa Fe",
+      "league": "2. Liga",
+      "home": "SKN ST. Polten",
+      "away": "FC BW Linz",
       "reason": "No event/team match"
     },
     {
-      "league": "Liga Profesional Argentina",
-      "home": "Estudiantes L.P.",
-      "away": "Gimnasia L.P.",
+      "league": "2. Liga",
+      "home": "Floridsdorfer AC",
+      "away": "SKU Amstetten",
       "reason": "No event/team match"
     },
     {
-      "league": "Liga Profesional Argentina",
-      "home": "Belgrano Cordoba",
-      "away": "Independ. Rivadavia",
+      "league": "2. Liga",
+      "home": "Sturm Graz II",
+      "away": "Admira Wacker",
       "reason": "No event/team match"
     },
     {
-      "league": "Liga Profesional Argentina",
-      "home": "Newells Old Boys",
-      "away": "Deportivo Riestra",
+      "league": "2. Liga",
+      "home": "Voitsberg",
+      "away": "Schwarz-Weiß Bregenz",
       "reason": "No event/team match"
     },
     {
-      "league": "Liga Profesional Argentina",
-      "home": "Platense",
-      "away": "Boca Juniors",
+      "league": "2. Liga",
+      "home": "Austria Vienna (Am)",
+      "away": "Austria Salzburg",
       "reason": "No event/team match"
     }
   ],
@@ -3300,18 +3316,6 @@
       "market": "double_chance"
     },
     {
-      "sportKey": "soccer_argentina_primera_division",
-      "market": "btts"
-    },
-    {
-      "sportKey": "soccer_argentina_primera_division",
-      "market": "draw_no_bet"
-    },
-    {
-      "sportKey": "soccer_argentina_primera_division",
-      "market": "double_chance"
-    },
-    {
       "sportKey": "soccer_austria_bundesliga",
       "market": "btts"
     },
@@ -3348,42 +3352,6 @@
       "market": "double_chance"
     },
     {
-      "sportKey": "soccer_efl_champ",
-      "market": "btts"
-    },
-    {
-      "sportKey": "soccer_efl_champ",
-      "market": "draw_no_bet"
-    },
-    {
-      "sportKey": "soccer_efl_champ",
-      "market": "double_chance"
-    },
-    {
-      "sportKey": "soccer_england_efl_cup",
-      "market": "btts"
-    },
-    {
-      "sportKey": "soccer_england_efl_cup",
-      "market": "draw_no_bet"
-    },
-    {
-      "sportKey": "soccer_england_efl_cup",
-      "market": "double_chance"
-    },
-    {
-      "sportKey": "soccer_uefa_nations_league",
-      "market": "btts"
-    },
-    {
-      "sportKey": "soccer_uefa_nations_league",
-      "market": "draw_no_bet"
-    },
-    {
-      "sportKey": "soccer_uefa_nations_league",
-      "market": "double_chance"
-    },
-    {
       "sportKey": "soccer_portugal_primeira_liga",
       "market": "btts"
     },
@@ -3417,6 +3385,18 @@
     },
     {
       "sportKey": "soccer_conmebol_copa_sudamericana",
+      "market": "double_chance"
+    },
+    {
+      "sportKey": "soccer_argentina_primera_division",
+      "market": "btts"
+    },
+    {
+      "sportKey": "soccer_argentina_primera_division",
+      "market": "draw_no_bet"
+    },
+    {
+      "sportKey": "soccer_argentina_primera_division",
       "market": "double_chance"
     },
     {
@@ -3516,6 +3496,18 @@
       "market": "double_chance"
     },
     {
+      "sportKey": "soccer_uefa_nations_league",
+      "market": "btts"
+    },
+    {
+      "sportKey": "soccer_uefa_nations_league",
+      "market": "draw_no_bet"
+    },
+    {
+      "sportKey": "soccer_uefa_nations_league",
+      "market": "double_chance"
+    },
+    {
       "sportKey": "soccer_greece_super_league",
       "market": "btts"
     },
@@ -3525,6 +3517,18 @@
     },
     {
       "sportKey": "soccer_greece_super_league",
+      "market": "double_chance"
+    },
+    {
+      "sportKey": "soccer_england_efl_cup",
+      "market": "btts"
+    },
+    {
+      "sportKey": "soccer_england_efl_cup",
+      "market": "draw_no_bet"
+    },
+    {
+      "sportKey": "soccer_england_efl_cup",
       "market": "double_chance"
     },
     {
@@ -3693,6 +3697,18 @@
     },
     {
       "sportKey": "soccer_france_ligue_two",
+      "market": "double_chance"
+    },
+    {
+      "sportKey": "soccer_efl_champ",
+      "market": "btts"
+    },
+    {
+      "sportKey": "soccer_efl_champ",
+      "market": "draw_no_bet"
+    },
+    {
+      "sportKey": "soccer_efl_champ",
       "market": "double_chance"
     },
     {
@@ -3755,31 +3771,6 @@
     },
     {
       "label": "soccer_sweden_allsvenskan:double_chance",
-      "error": "Markets not supported by this endpoint: double_chance",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_argentina_primera_division:base-combined",
-      "error": "Markets not supported by this endpoint: btts, double_chance, draw_no_bet",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_argentina_primera_division:base-core",
-      "error": "Invalid commenceTimeFrom parameter. The format must be YYYY-MM-DDTHH:MM:SSZ, for example 2020-11-24T16:05:00Z",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_argentina_primera_division:btts",
-      "error": "Markets not supported by this endpoint: btts",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_argentina_primera_division:draw_no_bet",
-      "error": "Markets not supported by this endpoint: draw_no_bet",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_argentina_primera_division:double_chance",
       "error": "Markets not supported by this endpoint: double_chance",
       "statusCode": 422
     },
@@ -3859,27 +3850,27 @@
       "statusCode": 422
     },
     {
-      "label": "soccer_efl_champ:base-combined",
+      "label": "soccer_portugal_primeira_liga:base-combined",
       "error": "Markets not supported by this endpoint: btts, double_chance, draw_no_bet",
       "statusCode": 422
     },
     {
-      "label": "soccer_efl_champ:base-core",
+      "label": "soccer_portugal_primeira_liga:base-core",
       "error": "Invalid commenceTimeFrom parameter. The format must be YYYY-MM-DDTHH:MM:SSZ, for example 2020-11-24T16:05:00Z",
       "statusCode": 422
     },
     {
-      "label": "soccer_efl_champ:btts",
+      "label": "soccer_portugal_primeira_liga:btts",
       "error": "Markets not supported by this endpoint: btts",
       "statusCode": 422
     },
     {
-      "label": "soccer_efl_champ:draw_no_bet",
+      "label": "soccer_portugal_primeira_liga:draw_no_bet",
       "error": "Markets not supported by this endpoint: draw_no_bet",
       "statusCode": 422
     },
     {
-      "label": "soccer_efl_champ:double_chance",
+      "label": "soccer_portugal_primeira_liga:double_chance",
       "error": "Markets not supported by this endpoint: double_chance",
       "statusCode": 422
     },
@@ -4005,6 +3996,31 @@
     },
     {
       "label": "soccer_conmebol_copa_sudamericana:double_chance",
+      "error": "Markets not supported by this endpoint: double_chance",
+      "statusCode": 422
+    },
+    {
+      "label": "soccer_argentina_primera_division:base-combined",
+      "error": "Markets not supported by this endpoint: btts, double_chance, draw_no_bet",
+      "statusCode": 422
+    },
+    {
+      "label": "soccer_argentina_primera_division:base-core",
+      "error": "Invalid commenceTimeFrom parameter. The format must be YYYY-MM-DDTHH:MM:SSZ, for example 2020-11-24T16:05:00Z",
+      "statusCode": 422
+    },
+    {
+      "label": "soccer_argentina_primera_division:btts",
+      "error": "Markets not supported by this endpoint: btts",
+      "statusCode": 422
+    },
+    {
+      "label": "soccer_argentina_primera_division:draw_no_bet",
+      "error": "Markets not supported by this endpoint: draw_no_bet",
+      "statusCode": 422
+    },
+    {
+      "label": "soccer_argentina_primera_division:double_chance",
       "error": "Markets not supported by this endpoint: double_chance",
       "statusCode": 422
     },
@@ -4209,6 +4225,31 @@
       "statusCode": 422
     },
     {
+      "label": "soccer_uefa_nations_league:base-combined",
+      "error": "Markets not supported by this endpoint: btts, double_chance, draw_no_bet",
+      "statusCode": 422
+    },
+    {
+      "label": "soccer_uefa_nations_league:base-core",
+      "error": "Invalid commenceTimeFrom parameter. The format must be YYYY-MM-DDTHH:MM:SSZ, for example 2020-11-24T16:05:00Z",
+      "statusCode": 422
+    },
+    {
+      "label": "soccer_uefa_nations_league:btts",
+      "error": "Markets not supported by this endpoint: btts",
+      "statusCode": 422
+    },
+    {
+      "label": "soccer_uefa_nations_league:draw_no_bet",
+      "error": "Markets not supported by this endpoint: draw_no_bet",
+      "statusCode": 422
+    },
+    {
+      "label": "soccer_uefa_nations_league:double_chance",
+      "error": "Markets not supported by this endpoint: double_chance",
+      "statusCode": 422
+    },
+    {
       "label": "soccer_greece_super_league:base-combined",
       "error": "Markets not supported by this endpoint: btts, double_chance, draw_no_bet",
       "statusCode": 422
@@ -4230,6 +4271,31 @@
     },
     {
       "label": "soccer_greece_super_league:double_chance",
+      "error": "Markets not supported by this endpoint: double_chance",
+      "statusCode": 422
+    },
+    {
+      "label": "soccer_england_efl_cup:base-combined",
+      "error": "Markets not supported by this endpoint: btts, double_chance, draw_no_bet",
+      "statusCode": 422
+    },
+    {
+      "label": "soccer_england_efl_cup:base-core",
+      "error": "Invalid commenceTimeFrom parameter. The format must be YYYY-MM-DDTHH:MM:SSZ, for example 2020-11-24T16:05:00Z",
+      "statusCode": 422
+    },
+    {
+      "label": "soccer_england_efl_cup:btts",
+      "error": "Markets not supported by this endpoint: btts",
+      "statusCode": 422
+    },
+    {
+      "label": "soccer_england_efl_cup:draw_no_bet",
+      "error": "Markets not supported by this endpoint: draw_no_bet",
+      "statusCode": 422
+    },
+    {
+      "label": "soccer_england_efl_cup:double_chance",
       "error": "Markets not supported by this endpoint: double_chance",
       "statusCode": 422
     },
@@ -4584,6 +4650,31 @@
       "statusCode": 422
     },
     {
+      "label": "soccer_efl_champ:base-combined",
+      "error": "Markets not supported by this endpoint: btts, double_chance, draw_no_bet",
+      "statusCode": 422
+    },
+    {
+      "label": "soccer_efl_champ:base-core",
+      "error": "Invalid commenceTimeFrom parameter. The format must be YYYY-MM-DDTHH:MM:SSZ, for example 2020-11-24T16:05:00Z",
+      "statusCode": 422
+    },
+    {
+      "label": "soccer_efl_champ:btts",
+      "error": "Markets not supported by this endpoint: btts",
+      "statusCode": 422
+    },
+    {
+      "label": "soccer_efl_champ:draw_no_bet",
+      "error": "Markets not supported by this endpoint: draw_no_bet",
+      "statusCode": 422
+    },
+    {
+      "label": "soccer_efl_champ:double_chance",
+      "error": "Markets not supported by this endpoint: double_chance",
+      "statusCode": 422
+    },
+    {
       "label": "soccer_spain_la_liga:base-combined",
       "error": "Markets not supported by this endpoint: btts, double_chance, draw_no_bet",
       "statusCode": 422
@@ -4666,5 +4757,5 @@
   },
   "skipped": false,
   "skipReason": null,
-  "completedAt": "2026-08-11T23:10:32.133Z"
+  "completedAt": "2026-08-11T22:57:46.905Z"
 }
