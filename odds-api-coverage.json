@@ -1,6 +1,6 @@
 {
   "version": "v251",
-  "generatedAt": "2026-08-11T15:50:17.119Z",
+  "generatedAt": "2026-08-11T15:34:49.510Z",
   "provider": "The Odds API v4",
   "keyPresent": true,
   "regions": "uk",
@@ -46,6 +46,14 @@
       "sportTitle": "Leagues Cup",
       "score": 0.52,
       "matches": 13
+    },
+    {
+      "league": "Cup",
+      "country": "Greece",
+      "sportKey": "soccer_concacaf_leagues_cup",
+      "sportTitle": "Leagues Cup",
+      "score": 0.52,
+      "matches": 4
     },
     {
       "league": "Cup",
@@ -1264,6 +1272,14 @@
       "matches": 8
     },
     {
+      "league": "U18 Premier League - South",
+      "country": "England",
+      "sportKey": "soccer_epl",
+      "sportTitle": "EPL",
+      "score": 0.667,
+      "matches": 7
+    },
+    {
       "league": "K League 1",
       "country": "South-Korea",
       "sportKey": "soccer_korea_kleague1",
@@ -1728,7 +1744,7 @@
       "matches": 1
     }
   ],
-  "matchesConsidered": 2981,
+  "matchesConsidered": 2986,
   "matchesMatched": 0,
   "matchesUpdated": 0,
   "fieldsFilled": 0,
@@ -1744,16 +1760,16 @@
       "bestScore": 0.167
     },
     {
-      "league": "AFC Champions League Elite",
-      "country": "World",
-      "reason": "No matching soccer sport key",
-      "bestScore": 0.222
-    },
-    {
       "league": "Friendlies Clubs",
       "country": "World",
       "reason": "No matching soccer sport key",
       "bestScore": 0
+    },
+    {
+      "league": "AFC Champions League Elite",
+      "country": "World",
+      "reason": "No matching soccer sport key",
+      "bestScore": 0.222
     },
     {
       "league": "Second League",
@@ -2711,30 +2727,6 @@
     },
     {
       "league": "Cup",
-      "home": "Trikala",
-      "away": "Larisa",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Cup",
-      "home": "Anagennisi Karditsas",
-      "away": "Aris Thessalonikis",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Cup",
-      "home": "Zakynthos",
-      "away": "Kifisia",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Cup",
-      "home": "Iraklis 1908",
-      "away": "Volos NFC",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Cup",
       "home": "Laagri",
       "away": "Tamper",
       "reason": "No event/team match"
@@ -2809,6 +2801,30 @@
       "league": "Cup",
       "home": "FC Tallinn",
       "away": "Harju JK Laagri U21",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Cup",
+      "home": "Trikala",
+      "away": "Larisa",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Cup",
+      "home": "Anagennisi Karditsas",
+      "away": "Aris Thessalonikis",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Cup",
+      "home": "Zakynthos",
+      "away": "Kifisia",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Cup",
+      "home": "Iraklis 1908",
+      "away": "Volos NFC",
       "reason": "No event/team match"
     },
     {
@@ -4655,5 +4671,5 @@
   },
   "skipped": false,
   "skipReason": null,
-  "completedAt": "2026-08-11T15:50:28.337Z"
+  "completedAt": "2026-08-11T15:35:12.983Z"
 }
