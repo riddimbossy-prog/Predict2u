@@ -1,6 +1,6 @@
 {
   "version": "v251",
-  "generatedAt": "2026-08-11T04:10:15.123Z",
+  "generatedAt": "2026-08-11T03:53:16.336Z",
   "provider": "The Odds API v4",
   "keyPresent": true,
   "regions": "uk",
@@ -32,14 +32,6 @@
       "matches": 7
     },
     {
-      "league": "Brasileiro U17",
-      "country": "Brazil",
-      "sportKey": "soccer_brazil_serie_b",
-      "sportTitle": "Brazil Série B",
-      "score": 0.466,
-      "matches": 11
-    },
-    {
       "league": "Brasileiro Women",
       "country": "Brazil",
       "sportKey": "soccer_brazil_serie_b",
@@ -54,22 +46,6 @@
       "sportTitle": "Liga MX",
       "score": 0.68,
       "matches": 9
-    },
-    {
-      "league": "Primera División",
-      "country": "Chile",
-      "sportKey": "soccer_chile_campeonato",
-      "sportTitle": "Primera División - Chile",
-      "score": 1,
-      "matches": 7
-    },
-    {
-      "league": "Liga Profesional Argentina",
-      "country": "Argentina",
-      "sportKey": "soccer_argentina_primera_division",
-      "sportTitle": "Primera División - Argentina",
-      "score": 0.78,
-      "matches": 16
     },
     {
       "league": "Liga Revelação U23",
@@ -93,7 +69,7 @@
       "sportKey": "soccer_concacaf_leagues_cup",
       "sportTitle": "Leagues Cup",
       "score": 0.52,
-      "matches": 8
+      "matches": 4
     },
     {
       "league": "National League Cup",
@@ -248,6 +224,14 @@
       "matches": 16
     },
     {
+      "league": "Brasileiro U17",
+      "country": "Brazil",
+      "sportKey": "soccer_brazil_serie_b",
+      "sportTitle": "Brazil Série B",
+      "score": 0.466,
+      "matches": 10
+    },
+    {
       "league": "Reserve League",
       "country": "Argentina",
       "sportKey": "soccer_argentina_primera_division",
@@ -342,6 +326,14 @@
       "sportTitle": "Leagues Cup",
       "score": 0.286,
       "matches": 8
+    },
+    {
+      "league": "Liga Profesional Argentina",
+      "country": "Argentina",
+      "sportKey": "soccer_argentina_primera_division",
+      "sportTitle": "Primera División - Argentina",
+      "score": 0.78,
+      "matches": 15
     },
     {
       "league": "Liga 3",
@@ -1152,6 +1144,14 @@
       "matches": 8
     },
     {
+      "league": "Primera División",
+      "country": "Chile",
+      "sportKey": "soccer_chile_campeonato",
+      "sportTitle": "Primera División - Chile",
+      "score": 1,
+      "matches": 6
+    },
+    {
       "league": "NWSL Women",
       "country": "USA",
       "sportKey": "soccer_usa_mls",
@@ -1712,7 +1712,7 @@
       "matches": 1
     }
   ],
-  "matchesConsidered": 3008,
+  "matchesConsidered": 2999,
   "matchesMatched": 0,
   "matchesUpdated": 0,
   "fieldsFilled": 0,
@@ -1736,12 +1736,6 @@
     {
       "league": "Primera A",
       "country": "Colombia",
-      "reason": "No matching soccer sport key",
-      "bestScore": 0.143
-    },
-    {
-      "league": "Liga Pro",
-      "country": "Ecuador",
       "reason": "No matching soccer sport key",
       "bestScore": 0.143
     },
@@ -2178,6 +2172,12 @@
       "bestScore": 0.125
     },
     {
+      "league": "Liga Pro",
+      "country": "Ecuador",
+      "reason": "No matching soccer sport key",
+      "bestScore": 0.143
+    },
+    {
       "league": "Tasmania Southern Championship",
       "country": "Australia",
       "reason": "No matching soccer sport key",
@@ -2610,102 +2610,6 @@
       "reason": "No event/team match"
     },
     {
-      "league": "Liga Profesional Argentina",
-      "home": "Union Santa Fe",
-      "away": "Central Cordoba de Santiago",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Liga Profesional Argentina",
-      "home": "Talleres Cordoba",
-      "away": "Lanus",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Liga Profesional Argentina",
-      "home": "Racing Club",
-      "away": "Banfield",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Liga Profesional Argentina",
-      "home": "Aldosivi",
-      "away": "Tigre",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Liga Profesional Argentina",
-      "home": "San Lorenzo",
-      "away": "Union Santa Fe",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Liga Profesional Argentina",
-      "home": "Estudiantes L.P.",
-      "away": "Gimnasia L.P.",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Liga Profesional Argentina",
-      "home": "Belgrano Cordoba",
-      "away": "Independ. Rivadavia",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Liga Profesional Argentina",
-      "home": "Newells Old Boys",
-      "away": "Deportivo Riestra",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Liga Profesional Argentina",
-      "home": "Platense",
-      "away": "Boca Juniors",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Liga Profesional Argentina",
-      "home": "Central Cordoba de Santiago",
-      "away": "Instituto Cordoba",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Liga Profesional Argentina",
-      "home": "Sarmiento Junin",
-      "away": "Huracan",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Liga Profesional Argentina",
-      "home": "River Plate",
-      "away": "Argentinos JRS",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Liga Profesional Argentina",
-      "home": "Barracas Central",
-      "away": "Rosario Central",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Liga Profesional Argentina",
-      "home": "Estudiantes de Rio Cuarto",
-      "away": "Atletico Tucuman",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Liga Profesional Argentina",
-      "home": "Lanus",
-      "away": "Independiente",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Liga Profesional Argentina",
-      "home": "Velez Sarsfield",
-      "away": "Defensa Y Justicia",
-      "reason": "No event/team match"
-    },
-    {
       "league": "Torneo Promocional Amateur",
       "home": "Juventud de Bernal",
       "away": "Atletico Pilar",
@@ -2868,6 +2772,96 @@
       "reason": "No event/team match"
     },
     {
+      "league": "Liga Profesional Argentina",
+      "home": "Talleres Cordoba",
+      "away": "Lanus",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Liga Profesional Argentina",
+      "home": "Racing Club",
+      "away": "Banfield",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Liga Profesional Argentina",
+      "home": "Aldosivi",
+      "away": "Tigre",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Liga Profesional Argentina",
+      "home": "San Lorenzo",
+      "away": "Union Santa Fe",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Liga Profesional Argentina",
+      "home": "Estudiantes L.P.",
+      "away": "Gimnasia L.P.",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Liga Profesional Argentina",
+      "home": "Belgrano Cordoba",
+      "away": "Independ. Rivadavia",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Liga Profesional Argentina",
+      "home": "Newells Old Boys",
+      "away": "Deportivo Riestra",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Liga Profesional Argentina",
+      "home": "Platense",
+      "away": "Boca Juniors",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Liga Profesional Argentina",
+      "home": "Central Cordoba de Santiago",
+      "away": "Instituto Cordoba",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Liga Profesional Argentina",
+      "home": "Sarmiento Junin",
+      "away": "Huracan",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Liga Profesional Argentina",
+      "home": "River Plate",
+      "away": "Argentinos JRS",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Liga Profesional Argentina",
+      "home": "Barracas Central",
+      "away": "Rosario Central",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Liga Profesional Argentina",
+      "home": "Estudiantes de Rio Cuarto",
+      "away": "Atletico Tucuman",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Liga Profesional Argentina",
+      "home": "Lanus",
+      "away": "Independiente",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Liga Profesional Argentina",
+      "home": "Velez Sarsfield",
+      "away": "Defensa Y Justicia",
+      "reason": "No event/team match"
+    },
+    {
       "league": "Torneo Federal A",
       "home": "Fundacion Amigos",
       "away": "Costa Brava",
@@ -2899,12 +2893,6 @@
     },
     {
       "league": "Torneo Federal A",
-      "home": "Defensores de Belgrano VR",
-      "away": "Douglas Haig",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Torneo Federal A",
       "home": "Alvarado",
       "away": "Huracan Las Heras",
       "reason": "No event/team match"
@@ -2913,6 +2901,12 @@
       "league": "Torneo Federal A",
       "home": "Cipolletti",
       "away": "Argentino Monte Maíz",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Torneo Federal A",
+      "home": "Defensores de Belgrano VR",
+      "away": "Douglas Haig",
       "reason": "No event/team match"
     },
     {
@@ -3220,6 +3214,12 @@
       "home": "Always Ready",
       "away": "Real Potosí",
       "reason": "No event/team match"
+    },
+    {
+      "league": "Primera División",
+      "home": "Nacional Potosí",
+      "away": "ABB",
+      "reason": "No event/team match"
     }
   ],
   "unsupportedMarkets": [
@@ -3272,18 +3272,6 @@
       "market": "double_chance"
     },
     {
-      "sportKey": "soccer_chile_campeonato",
-      "market": "btts"
-    },
-    {
-      "sportKey": "soccer_chile_campeonato",
-      "market": "draw_no_bet"
-    },
-    {
-      "sportKey": "soccer_chile_campeonato",
-      "market": "double_chance"
-    },
-    {
       "sportKey": "soccer_portugal_primeira_liga",
       "market": "btts"
     },
@@ -3473,6 +3461,18 @@
     },
     {
       "sportKey": "soccer_conmebol_copa_sudamericana",
+      "market": "double_chance"
+    },
+    {
+      "sportKey": "soccer_chile_campeonato",
+      "market": "btts"
+    },
+    {
+      "sportKey": "soccer_chile_campeonato",
+      "market": "draw_no_bet"
+    },
+    {
+      "sportKey": "soccer_chile_campeonato",
       "market": "double_chance"
     },
     {
@@ -3778,31 +3778,6 @@
     },
     {
       "label": "soccer_mexico_ligamx:double_chance",
-      "error": "Markets not supported by this endpoint: double_chance",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_chile_campeonato:base-combined",
-      "error": "Markets not supported by this endpoint: btts, double_chance, draw_no_bet",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_chile_campeonato:base-core",
-      "error": "Invalid commenceTimeFrom parameter. The format must be YYYY-MM-DDTHH:MM:SSZ, for example 2020-11-24T16:05:00Z",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_chile_campeonato:btts",
-      "error": "Markets not supported by this endpoint: btts",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_chile_campeonato:draw_no_bet",
-      "error": "Markets not supported by this endpoint: draw_no_bet",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_chile_campeonato:double_chance",
       "error": "Markets not supported by this endpoint: double_chance",
       "statusCode": 422
     },
@@ -4203,6 +4178,31 @@
     },
     {
       "label": "soccer_conmebol_copa_sudamericana:double_chance",
+      "error": "Markets not supported by this endpoint: double_chance",
+      "statusCode": 422
+    },
+    {
+      "label": "soccer_chile_campeonato:base-combined",
+      "error": "Markets not supported by this endpoint: btts, double_chance, draw_no_bet",
+      "statusCode": 422
+    },
+    {
+      "label": "soccer_chile_campeonato:base-core",
+      "error": "Invalid commenceTimeFrom parameter. The format must be YYYY-MM-DDTHH:MM:SSZ, for example 2020-11-24T16:05:00Z",
+      "statusCode": 422
+    },
+    {
+      "label": "soccer_chile_campeonato:btts",
+      "error": "Markets not supported by this endpoint: btts",
+      "statusCode": 422
+    },
+    {
+      "label": "soccer_chile_campeonato:draw_no_bet",
+      "error": "Markets not supported by this endpoint: draw_no_bet",
+      "statusCode": 422
+    },
+    {
+      "label": "soccer_chile_campeonato:double_chance",
       "error": "Markets not supported by this endpoint: double_chance",
       "statusCode": 422
     },
@@ -4639,5 +4639,5 @@
   },
   "skipped": false,
   "skipReason": null,
-  "completedAt": "2026-08-11T04:10:23.904Z"
+  "completedAt": "2026-08-11T03:53:28.868Z"
 }
