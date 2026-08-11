@@ -1,6 +1,6 @@
 {
   "version": "v251",
-  "generatedAt": "2026-08-11T21:30:40.846Z",
+  "generatedAt": "2026-08-11T22:00:15.562Z",
   "provider": "The Odds API v4",
   "keyPresent": true,
   "regions": "uk",
@@ -30,14 +30,6 @@
       "sportTitle": "Austrian Football Bundesliga",
       "score": 0.323,
       "matches": 8
-    },
-    {
-      "league": "UEFA Champions League",
-      "country": "World",
-      "sportKey": "soccer_uefa_champs_league_qualification",
-      "sportTitle": "UEFA Champions League Qualification",
-      "score": 0.695,
-      "matches": 6
     },
     {
       "league": "Brasileiro U17",
@@ -1744,7 +1736,7 @@
       "matches": 3
     }
   ],
-  "matchesConsidered": 2909,
+  "matchesConsidered": 2908,
   "matchesMatched": 0,
   "matchesUpdated": 0,
   "fieldsFilled": 0,
@@ -1753,12 +1745,6 @@
   "derivedHtftMatches": 0,
   "bookmakerRows": 0,
   "unmatched": [
-    {
-      "league": "AFC Challenge League",
-      "country": "World",
-      "reason": "No matching soccer sport key",
-      "bestScore": 0.167
-    },
     {
       "league": "Friendlies Clubs",
       "country": "World",
@@ -3252,6 +3238,12 @@
       "home": "Racing Club",
       "away": "Banfield",
       "reason": "No event/team match"
+    },
+    {
+      "league": "Liga Profesional Argentina",
+      "home": "Aldosivi",
+      "away": "Tigre",
+      "reason": "No event/team match"
     }
   ],
   "unsupportedMarkets": [
@@ -3289,18 +3281,6 @@
     },
     {
       "sportKey": "soccer_austria_bundesliga",
-      "market": "double_chance"
-    },
-    {
-      "sportKey": "soccer_uefa_champs_league_qualification",
-      "market": "btts"
-    },
-    {
-      "sportKey": "soccer_uefa_champs_league_qualification",
-      "market": "draw_no_bet"
-    },
-    {
-      "sportKey": "soccer_uefa_champs_league_qualification",
       "market": "double_chance"
     },
     {
@@ -3797,31 +3777,6 @@
     },
     {
       "label": "soccer_austria_bundesliga:double_chance",
-      "error": "Markets not supported by this endpoint: double_chance",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_uefa_champs_league_qualification:base-combined",
-      "error": "Markets not supported by this endpoint: btts, double_chance, draw_no_bet",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_uefa_champs_league_qualification:base-core",
-      "error": "Invalid commenceTimeFrom parameter. The format must be YYYY-MM-DDTHH:MM:SSZ, for example 2020-11-24T16:05:00Z",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_uefa_champs_league_qualification:btts",
-      "error": "Markets not supported by this endpoint: btts",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_uefa_champs_league_qualification:draw_no_bet",
-      "error": "Markets not supported by this endpoint: draw_no_bet",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_uefa_champs_league_qualification:double_chance",
       "error": "Markets not supported by this endpoint: double_chance",
       "statusCode": 422
     },
@@ -4708,5 +4663,5 @@
   },
   "skipped": false,
   "skipReason": null,
-  "completedAt": "2026-08-11T21:30:59.598Z"
+  "completedAt": "2026-08-11T22:00:24.444Z"
 }
