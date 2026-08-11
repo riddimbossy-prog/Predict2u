@@ -1,6 +1,6 @@
 {
   "version": "v251",
-  "generatedAt": "2026-08-11T22:57:32.170Z",
+  "generatedAt": "2026-08-11T23:20:23.368Z",
   "provider": "The Odds API v4",
   "keyPresent": true,
   "regions": "uk",
@@ -38,30 +38,6 @@
       "sportTitle": "Brazil Série A",
       "score": 0.305,
       "matches": 22
-    },
-    {
-      "league": "Liga Revelação U23",
-      "country": "Portugal",
-      "sportKey": "soccer_portugal_primeira_liga",
-      "sportTitle": "Primeira Liga - Portugal",
-      "score": 0.466,
-      "matches": 3
-    },
-    {
-      "league": "Non League Premier - Southern South",
-      "country": "England",
-      "sportKey": "soccer_england_efl_cup",
-      "sportTitle": "EFL Cup",
-      "score": 0.402,
-      "matches": 21
-    },
-    {
-      "league": "UEFA Champions League",
-      "country": "World",
-      "sportKey": "soccer_uefa_nations_league",
-      "sportTitle": "UEFA Nations League",
-      "score": 0.333,
-      "matches": 1
     },
     {
       "league": "Liga Revelação U23",
@@ -3875,81 +3851,6 @@
       "statusCode": 422
     },
     {
-      "label": "soccer_england_efl_cup:base-combined",
-      "error": "Markets not supported by this endpoint: btts, double_chance, draw_no_bet",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_england_efl_cup:base-core",
-      "error": "Invalid commenceTimeFrom parameter. The format must be YYYY-MM-DDTHH:MM:SSZ, for example 2020-11-24T16:05:00Z",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_england_efl_cup:btts",
-      "error": "Markets not supported by this endpoint: btts",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_england_efl_cup:draw_no_bet",
-      "error": "Markets not supported by this endpoint: draw_no_bet",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_england_efl_cup:double_chance",
-      "error": "Markets not supported by this endpoint: double_chance",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_uefa_nations_league:base-combined",
-      "error": "Markets not supported by this endpoint: btts, double_chance, draw_no_bet",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_uefa_nations_league:base-core",
-      "error": "Invalid commenceTimeFrom parameter. The format must be YYYY-MM-DDTHH:MM:SSZ, for example 2020-11-24T16:05:00Z",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_uefa_nations_league:btts",
-      "error": "Markets not supported by this endpoint: btts",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_uefa_nations_league:draw_no_bet",
-      "error": "Markets not supported by this endpoint: draw_no_bet",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_uefa_nations_league:double_chance",
-      "error": "Markets not supported by this endpoint: double_chance",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_portugal_primeira_liga:base-combined",
-      "error": "Markets not supported by this endpoint: btts, double_chance, draw_no_bet",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_portugal_primeira_liga:base-core",
-      "error": "Invalid commenceTimeFrom parameter. The format must be YYYY-MM-DDTHH:MM:SSZ, for example 2020-11-24T16:05:00Z",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_portugal_primeira_liga:btts",
-      "error": "Markets not supported by this endpoint: btts",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_portugal_primeira_liga:draw_no_bet",
-      "error": "Markets not supported by this endpoint: draw_no_bet",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_portugal_primeira_liga:double_chance",
-      "error": "Markets not supported by this endpoint: double_chance",
-      "statusCode": 422
-    },
-    {
       "label": "soccer_conmebol_copa_libertadores:base-combined",
       "error": "Markets not supported by this endpoint: btts, double_chance, draw_no_bet",
       "statusCode": 422
@@ -4757,5 +4658,5 @@
   },
   "skipped": false,
   "skipReason": null,
-  "completedAt": "2026-08-11T22:57:46.905Z"
+  "completedAt": "2026-08-11T23:20:34.927Z"
 }
