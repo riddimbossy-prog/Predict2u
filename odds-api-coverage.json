@@ -1,6 +1,6 @@
 {
   "version": "v251",
-  "generatedAt": "2026-08-11T20:03:15.674Z",
+  "generatedAt": "2026-08-11T20:30:19.618Z",
   "provider": "The Odds API v4",
   "keyPresent": true,
   "regions": "uk",
@@ -3260,18 +3260,6 @@
       "market": "double_chance"
     },
     {
-      "sportKey": "soccer_uefa_champs_league_qualification",
-      "market": "btts"
-    },
-    {
-      "sportKey": "soccer_uefa_champs_league_qualification",
-      "market": "draw_no_bet"
-    },
-    {
-      "sportKey": "soccer_uefa_champs_league_qualification",
-      "market": "double_chance"
-    },
-    {
       "sportKey": "soccer_germany_bundesliga",
       "market": "btts"
     },
@@ -3739,31 +3727,6 @@
     },
     {
       "label": "soccer_portugal_primeira_liga:double_chance",
-      "error": "Markets not supported by this endpoint: double_chance",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_uefa_champs_league_qualification:base-combined",
-      "error": "Markets not supported by this endpoint: btts, double_chance, draw_no_bet",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_uefa_champs_league_qualification:base-core",
-      "error": "Invalid commenceTimeFrom parameter. The format must be YYYY-MM-DDTHH:MM:SSZ, for example 2020-11-24T16:05:00Z",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_uefa_champs_league_qualification:btts",
-      "error": "Markets not supported by this endpoint: btts",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_uefa_champs_league_qualification:draw_no_bet",
-      "error": "Markets not supported by this endpoint: draw_no_bet",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_uefa_champs_league_qualification:double_chance",
       "error": "Markets not supported by this endpoint: double_chance",
       "statusCode": 422
     },
@@ -4700,5 +4663,5 @@
   },
   "skipped": false,
   "skipReason": null,
-  "completedAt": "2026-08-11T20:03:29.182Z"
+  "completedAt": "2026-08-11T20:30:38.478Z"
 }
