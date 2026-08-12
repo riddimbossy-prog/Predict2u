@@ -1,6 +1,6 @@
 {
   "version": "v251",
-  "generatedAt": "2026-08-12T06:20:16.882Z",
+  "generatedAt": "2026-08-12T06:13:56.794Z",
   "provider": "The Odds API v4",
   "keyPresent": true,
   "regions": "uk",
@@ -29,14 +29,6 @@
       "sportKey": "soccer_conmebol_copa_libertadores",
       "sportTitle": "Copa Libertadores",
       "score": 0.4,
-      "matches": 7
-    },
-    {
-      "league": "CONCACAF Central American Cup",
-      "country": "World",
-      "sportKey": "soccer_concacaf_leagues_cup",
-      "sportTitle": "Leagues Cup",
-      "score": 0.286,
       "matches": 7
     },
     {
@@ -288,6 +280,14 @@
       "matches": 4
     },
     {
+      "league": "Leagues Cup",
+      "country": "World",
+      "sportKey": "soccer_concacaf_leagues_cup",
+      "sportTitle": "Leagues Cup",
+      "score": 0.72,
+      "matches": 12
+    },
+    {
       "league": "MLS Next Pro",
       "country": "USA",
       "sportKey": "soccer_usa_mls",
@@ -302,6 +302,14 @@
       "sportTitle": "MLS",
       "score": 0.466,
       "matches": 9
+    },
+    {
+      "league": "CONCACAF Central American Cup",
+      "country": "World",
+      "sportKey": "soccer_concacaf_leagues_cup",
+      "sportTitle": "Leagues Cup",
+      "score": 0.286,
+      "matches": 5
     },
     {
       "league": "Second League - Group 2",
@@ -1792,7 +1800,7 @@
       "matches": 15
     }
   ],
-  "matchesConsidered": 2982,
+  "matchesConsidered": 2979,
   "matchesMatched": 0,
   "matchesUpdated": 0,
   "fieldsFilled": 0,
@@ -3290,15 +3298,15 @@
       "reason": "No event/team match"
     },
     {
-      "league": "CONCACAF Central American Cup",
-      "home": "Real Estelí",
-      "away": "Alianza",
+      "league": "Cup",
+      "home": "Avangard Kursk",
+      "away": "Kristall MEZ",
       "reason": "No event/team match"
     },
     {
-      "league": "CONCACAF Central American Cup",
-      "home": "Deportivo Saprissa",
-      "away": "Mixco",
+      "league": "Cup",
+      "home": "Volna Nizhegorodskaya",
+      "away": "Tyumen",
       "reason": "No event/team match"
     }
   ],
@@ -4682,5 +4690,5 @@
   },
   "skipped": false,
   "skipReason": null,
-  "completedAt": "2026-08-12T06:20:29.736Z"
+  "completedAt": "2026-08-12T06:14:17.944Z"
 }
