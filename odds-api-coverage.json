@@ -1,20 +1,12 @@
 {
   "version": "v251",
-  "generatedAt": "2026-08-12T12:20:15.405Z",
+  "generatedAt": "2026-08-12T12:30:15.350Z",
   "provider": "The Odds API v4",
   "keyPresent": true,
   "regions": "uk",
   "sportsAvailable": 81,
   "soccerSportsAvailable": 42,
   "sportMappings": [
-    {
-      "league": "CONMEBOL Libertadores",
-      "country": "World",
-      "sportKey": "soccer_conmebol_copa_libertadores",
-      "sportTitle": "Copa Libertadores",
-      "score": 0.4,
-      "matches": 7
-    },
     {
       "league": "Cup",
       "country": "Russia",
@@ -230,6 +222,14 @@
       "sportTitle": "Brazil Série A",
       "score": 0.305,
       "matches": 1
+    },
+    {
+      "league": "CONMEBOL Libertadores",
+      "country": "World",
+      "sportKey": "soccer_conmebol_copa_libertadores",
+      "sportTitle": "Copa Libertadores",
+      "score": 0.4,
+      "matches": 6
     },
     {
       "league": "CONMEBOL Sudamericana",
@@ -1800,7 +1800,7 @@
       "matches": 3
     }
   ],
-  "matchesConsidered": 2970,
+  "matchesConsidered": 2969,
   "matchesMatched": 0,
   "matchesUpdated": 0,
   "fieldsFilled": 0,
@@ -2590,48 +2590,6 @@
       "bestScore": 0.167
     },
     {
-      "league": "CONMEBOL Libertadores",
-      "home": "Deportes Tolima",
-      "away": "Independiente del Valle",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "CONMEBOL Libertadores",
-      "home": "Palmeiras",
-      "away": "Cerro Porteno",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "CONMEBOL Libertadores",
-      "home": "Platense",
-      "away": "Coquimbo Unido",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "CONMEBOL Libertadores",
-      "home": "Cruzeiro",
-      "away": "Flamengo",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "CONMEBOL Libertadores",
-      "home": "Mirassol",
-      "away": "LDU de Quito",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "CONMEBOL Libertadores",
-      "home": "Rosario Central",
-      "away": "Corinthians",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "CONMEBOL Libertadores",
-      "home": "Independ. Rivadavia",
-      "away": "Fluminense",
-      "reason": "No event/team match"
-    },
-    {
       "league": "Cup",
       "home": "Avangard Kursk",
       "away": "Kristall MEZ",
@@ -3308,22 +3266,52 @@
       "home": "Dinamo Tbilisi II",
       "away": "Iberia 2010",
       "reason": "No event/team match"
+    },
+    {
+      "league": "Liga 3",
+      "home": "Gonio",
+      "away": "Iveria Khashuri",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Liga 3",
+      "home": "Varketili",
+      "away": "Kolkheti Khobi",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "3. Liga",
+      "home": "Würzburger Kickers",
+      "away": "SV Wehen",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "3. Liga",
+      "home": "Fortuna Düsseldorf",
+      "away": "Hoffenheim II",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "3. Liga",
+      "home": "Fortuna Köln",
+      "away": "Alemannia Aachen",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "3. Liga",
+      "home": "SV Meppen",
+      "away": "SG Sonnenhof Grossaspach",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "3. Liga",
+      "home": "Preußen Münster",
+      "away": "FC Ingolstadt 04",
+      "reason": "No event/team match"
     }
   ],
   "unsupportedMarkets": [
     {
-      "sportKey": "soccer_conmebol_copa_libertadores",
-      "market": "btts"
-    },
-    {
-      "sportKey": "soccer_conmebol_copa_libertadores",
-      "market": "draw_no_bet"
-    },
-    {
-      "sportKey": "soccer_conmebol_copa_libertadores",
-      "market": "double_chance"
-    },
-    {
       "sportKey": "soccer_concacaf_leagues_cup",
       "market": "btts"
     },
@@ -3501,6 +3489,18 @@
     },
     {
       "sportKey": "soccer_chile_campeonato",
+      "market": "double_chance"
+    },
+    {
+      "sportKey": "soccer_conmebol_copa_libertadores",
+      "market": "btts"
+    },
+    {
+      "sportKey": "soccer_conmebol_copa_libertadores",
+      "market": "draw_no_bet"
+    },
+    {
+      "sportKey": "soccer_conmebol_copa_libertadores",
       "market": "double_chance"
     },
     {
@@ -3757,31 +3757,6 @@
     }
   ],
   "requestErrors": [
-    {
-      "label": "soccer_conmebol_copa_libertadores:base-combined",
-      "error": "Markets not supported by this endpoint: btts, double_chance, draw_no_bet",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_conmebol_copa_libertadores:base-core",
-      "error": "Invalid commenceTimeFrom parameter. The format must be YYYY-MM-DDTHH:MM:SSZ, for example 2020-11-24T16:05:00Z",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_conmebol_copa_libertadores:btts",
-      "error": "Markets not supported by this endpoint: btts",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_conmebol_copa_libertadores:draw_no_bet",
-      "error": "Markets not supported by this endpoint: draw_no_bet",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_conmebol_copa_libertadores:double_chance",
-      "error": "Markets not supported by this endpoint: double_chance",
-      "statusCode": 422
-    },
     {
       "label": "soccer_concacaf_leagues_cup:base-combined",
       "error": "Markets not supported by this endpoint: btts, double_chance, draw_no_bet",
@@ -4154,6 +4129,31 @@
     },
     {
       "label": "soccer_chile_campeonato:double_chance",
+      "error": "Markets not supported by this endpoint: double_chance",
+      "statusCode": 422
+    },
+    {
+      "label": "soccer_conmebol_copa_libertadores:base-combined",
+      "error": "Markets not supported by this endpoint: btts, double_chance, draw_no_bet",
+      "statusCode": 422
+    },
+    {
+      "label": "soccer_conmebol_copa_libertadores:base-core",
+      "error": "Invalid commenceTimeFrom parameter. The format must be YYYY-MM-DDTHH:MM:SSZ, for example 2020-11-24T16:05:00Z",
+      "statusCode": 422
+    },
+    {
+      "label": "soccer_conmebol_copa_libertadores:btts",
+      "error": "Markets not supported by this endpoint: btts",
+      "statusCode": 422
+    },
+    {
+      "label": "soccer_conmebol_copa_libertadores:draw_no_bet",
+      "error": "Markets not supported by this endpoint: draw_no_bet",
+      "statusCode": 422
+    },
+    {
+      "label": "soccer_conmebol_copa_libertadores:double_chance",
       "error": "Markets not supported by this endpoint: double_chance",
       "statusCode": 422
     },
@@ -4690,5 +4690,5 @@
   },
   "skipped": false,
   "skipReason": null,
-  "completedAt": "2026-08-12T12:20:23.539Z"
+  "completedAt": "2026-08-12T12:30:23.367Z"
 }
