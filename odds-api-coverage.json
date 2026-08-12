@@ -1,6 +1,6 @@
 {
   "version": "v251",
-  "generatedAt": "2026-08-12T03:30:17.134Z",
+  "generatedAt": "2026-08-12T03:18:35.834Z",
   "provider": "The Odds API v4",
   "keyPresent": true,
   "regions": "uk",
@@ -40,35 +40,11 @@
       "matches": 11
     },
     {
-      "league": "Primera B",
-      "country": "Chile",
-      "sportKey": "soccer_chile_campeonato",
-      "sportTitle": "Primera División - Chile",
-      "score": 0.466,
-      "matches": 16
-    },
-    {
       "league": "Leagues Cup",
       "country": "World",
       "sportKey": "soccer_concacaf_leagues_cup",
       "sportTitle": "Leagues Cup",
       "score": 0.72,
-      "matches": 18
-    },
-    {
-      "league": "CONCACAF Central American Cup",
-      "country": "World",
-      "sportKey": "soccer_concacaf_leagues_cup",
-      "sportTitle": "Leagues Cup",
-      "score": 0.286,
-      "matches": 8
-    },
-    {
-      "league": "Liga Profesional Argentina",
-      "country": "Argentina",
-      "sportKey": "soccer_argentina_primera_division",
-      "sportTitle": "Primera División - Argentina",
-      "score": 0.78,
       "matches": 16
     },
     {
@@ -86,6 +62,14 @@
       "sportTitle": "Copa Sudamericana",
       "score": 0.4,
       "matches": 8
+    },
+    {
+      "league": "CONCACAF Central American Cup",
+      "country": "World",
+      "sportKey": "soccer_concacaf_leagues_cup",
+      "sportTitle": "Leagues Cup",
+      "score": 0.286,
+      "matches": 7
     },
     {
       "league": "Cup",
@@ -272,6 +256,14 @@
       "matches": 12
     },
     {
+      "league": "Primera B",
+      "country": "Chile",
+      "sportKey": "soccer_chile_campeonato",
+      "sportTitle": "Primera División - Chile",
+      "score": 0.466,
+      "matches": 15
+    },
+    {
       "league": "Cearense U20",
       "country": "Brazil",
       "sportKey": "soccer_brazil_campeonato",
@@ -424,6 +416,14 @@
       "matches": 9
     },
     {
+      "league": "Professional Development League",
+      "country": "England",
+      "sportKey": "soccer_england_efl_cup",
+      "sportTitle": "EFL Cup",
+      "score": 0.466,
+      "matches": 6
+    },
+    {
       "league": "Carioca U20",
       "country": "Brazil",
       "sportKey": "soccer_brazil_campeonato",
@@ -446,14 +446,6 @@
       "sportTitle": "Saudi Pro League",
       "score": 0.286,
       "matches": 7
-    },
-    {
-      "league": "Professional Development League",
-      "country": "England",
-      "sportKey": "soccer_england_efl_cup",
-      "sportTitle": "EFL Cup",
-      "score": 0.466,
-      "matches": 6
     },
     {
       "league": "III Liga - Group 1",
@@ -1118,6 +1110,14 @@
       "sportTitle": "Primera División - Chile",
       "score": 1,
       "matches": 7
+    },
+    {
+      "league": "Liga Profesional Argentina",
+      "country": "Argentina",
+      "sportKey": "soccer_argentina_primera_division",
+      "sportTitle": "Primera División - Argentina",
+      "score": 0.78,
+      "matches": 15
     },
     {
       "league": "Brasileiro Women",
@@ -1792,7 +1792,7 @@
       "matches": 15
     }
   ],
-  "matchesConsidered": 3001,
+  "matchesConsidered": 2995,
   "matchesMatched": 0,
   "matchesUpdated": 0,
   "fieldsFilled": 0,
@@ -1818,12 +1818,6 @@
       "country": "Colombia",
       "reason": "No matching soccer sport key",
       "bestScore": 0.143
-    },
-    {
-      "league": "Canadian Championship",
-      "country": "Canada",
-      "reason": "No matching soccer sport key",
-      "bestScore": 0.167
     },
     {
       "league": "OFC Champions League",
@@ -2342,16 +2336,16 @@
       "bestScore": 0.143
     },
     {
-      "league": "1. Deild",
-      "country": "Faroe-Islands",
-      "reason": "No matching soccer sport key",
-      "bestScore": 0.111
-    },
-    {
       "league": "1. Division",
       "country": "Belarus",
       "reason": "No matching soccer sport key",
       "bestScore": 0.143
+    },
+    {
+      "league": "1. Deild",
+      "country": "Faroe-Islands",
+      "reason": "No matching soccer sport key",
+      "bestScore": 0.111
     },
     {
       "league": "ASEAN Championship",
@@ -3300,6 +3294,12 @@
       "home": "Gremio Prudente U20",
       "away": "RB Bragantino U20",
       "reason": "No event/team match"
+    },
+    {
+      "league": "Paulista - U20",
+      "home": "Itapirense U20",
+      "away": "Santos U20",
+      "reason": "No event/team match"
     }
   ],
   "unsupportedMarkets": [
@@ -3352,18 +3352,6 @@
       "market": "double_chance"
     },
     {
-      "sportKey": "soccer_chile_campeonato",
-      "market": "btts"
-    },
-    {
-      "sportKey": "soccer_chile_campeonato",
-      "market": "draw_no_bet"
-    },
-    {
-      "sportKey": "soccer_chile_campeonato",
-      "market": "double_chance"
-    },
-    {
       "sportKey": "soccer_concacaf_leagues_cup",
       "market": "btts"
     },
@@ -3373,18 +3361,6 @@
     },
     {
       "sportKey": "soccer_concacaf_leagues_cup",
-      "market": "double_chance"
-    },
-    {
-      "sportKey": "soccer_argentina_primera_division",
-      "market": "btts"
-    },
-    {
-      "sportKey": "soccer_argentina_primera_division",
-      "market": "draw_no_bet"
-    },
-    {
-      "sportKey": "soccer_argentina_primera_division",
       "market": "double_chance"
     },
     {
@@ -3445,6 +3421,18 @@
     },
     {
       "sportKey": "soccer_epl",
+      "market": "double_chance"
+    },
+    {
+      "sportKey": "soccer_argentina_primera_division",
+      "market": "btts"
+    },
+    {
+      "sportKey": "soccer_argentina_primera_division",
+      "market": "draw_no_bet"
+    },
+    {
+      "sportKey": "soccer_argentina_primera_division",
       "market": "double_chance"
     },
     {
@@ -3517,6 +3505,18 @@
     },
     {
       "sportKey": "soccer_england_efl_cup",
+      "market": "double_chance"
+    },
+    {
+      "sportKey": "soccer_chile_campeonato",
+      "market": "btts"
+    },
+    {
+      "sportKey": "soccer_chile_campeonato",
+      "market": "draw_no_bet"
+    },
+    {
+      "sportKey": "soccer_chile_campeonato",
       "market": "double_chance"
     },
     {
@@ -3850,31 +3850,6 @@
       "statusCode": 422
     },
     {
-      "label": "soccer_chile_campeonato:base-combined",
-      "error": "Markets not supported by this endpoint: btts, double_chance, draw_no_bet",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_chile_campeonato:base-core",
-      "error": "Invalid commenceTimeFrom parameter. The format must be YYYY-MM-DDTHH:MM:SSZ, for example 2020-11-24T16:05:00Z",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_chile_campeonato:btts",
-      "error": "Markets not supported by this endpoint: btts",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_chile_campeonato:draw_no_bet",
-      "error": "Markets not supported by this endpoint: draw_no_bet",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_chile_campeonato:double_chance",
-      "error": "Markets not supported by this endpoint: double_chance",
-      "statusCode": 422
-    },
-    {
       "label": "soccer_concacaf_leagues_cup:base-combined",
       "error": "Markets not supported by this endpoint: btts, double_chance, draw_no_bet",
       "statusCode": 422
@@ -3896,31 +3871,6 @@
     },
     {
       "label": "soccer_concacaf_leagues_cup:double_chance",
-      "error": "Markets not supported by this endpoint: double_chance",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_argentina_primera_division:base-combined",
-      "error": "Markets not supported by this endpoint: btts, double_chance, draw_no_bet",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_argentina_primera_division:base-core",
-      "error": "Invalid commenceTimeFrom parameter. The format must be YYYY-MM-DDTHH:MM:SSZ, for example 2020-11-24T16:05:00Z",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_argentina_primera_division:btts",
-      "error": "Markets not supported by this endpoint: btts",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_argentina_primera_division:draw_no_bet",
-      "error": "Markets not supported by this endpoint: draw_no_bet",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_argentina_primera_division:double_chance",
       "error": "Markets not supported by this endpoint: double_chance",
       "statusCode": 422
     },
@@ -4046,6 +3996,31 @@
     },
     {
       "label": "soccer_epl:double_chance",
+      "error": "Markets not supported by this endpoint: double_chance",
+      "statusCode": 422
+    },
+    {
+      "label": "soccer_argentina_primera_division:base-combined",
+      "error": "Markets not supported by this endpoint: btts, double_chance, draw_no_bet",
+      "statusCode": 422
+    },
+    {
+      "label": "soccer_argentina_primera_division:base-core",
+      "error": "Invalid commenceTimeFrom parameter. The format must be YYYY-MM-DDTHH:MM:SSZ, for example 2020-11-24T16:05:00Z",
+      "statusCode": 422
+    },
+    {
+      "label": "soccer_argentina_primera_division:btts",
+      "error": "Markets not supported by this endpoint: btts",
+      "statusCode": 422
+    },
+    {
+      "label": "soccer_argentina_primera_division:draw_no_bet",
+      "error": "Markets not supported by this endpoint: draw_no_bet",
+      "statusCode": 422
+    },
+    {
+      "label": "soccer_argentina_primera_division:double_chance",
       "error": "Markets not supported by this endpoint: double_chance",
       "statusCode": 422
     },
@@ -4196,6 +4171,31 @@
     },
     {
       "label": "soccer_england_efl_cup:double_chance",
+      "error": "Markets not supported by this endpoint: double_chance",
+      "statusCode": 422
+    },
+    {
+      "label": "soccer_chile_campeonato:base-combined",
+      "error": "Markets not supported by this endpoint: btts, double_chance, draw_no_bet",
+      "statusCode": 422
+    },
+    {
+      "label": "soccer_chile_campeonato:base-core",
+      "error": "Invalid commenceTimeFrom parameter. The format must be YYYY-MM-DDTHH:MM:SSZ, for example 2020-11-24T16:05:00Z",
+      "statusCode": 422
+    },
+    {
+      "label": "soccer_chile_campeonato:btts",
+      "error": "Markets not supported by this endpoint: btts",
+      "statusCode": 422
+    },
+    {
+      "label": "soccer_chile_campeonato:draw_no_bet",
+      "error": "Markets not supported by this endpoint: draw_no_bet",
+      "statusCode": 422
+    },
+    {
+      "label": "soccer_chile_campeonato:double_chance",
       "error": "Markets not supported by this endpoint: double_chance",
       "statusCode": 422
     },
@@ -4682,5 +4682,5 @@
   },
   "skipped": false,
   "skipReason": null,
-  "completedAt": "2026-08-12T03:30:31.774Z"
+  "completedAt": "2026-08-12T03:19:02.116Z"
 }
