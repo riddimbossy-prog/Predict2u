@@ -1,6 +1,6 @@
 {
   "version": "v251",
-  "generatedAt": "2026-08-12T05:00:14.622Z",
+  "generatedAt": "2026-08-12T04:45:12.591Z",
   "provider": "The Odds API v4",
   "keyPresent": true,
   "regions": "uk",
@@ -40,28 +40,28 @@
       "matches": 11
     },
     {
-      "league": "Leagues Cup",
-      "country": "World",
-      "sportKey": "soccer_concacaf_leagues_cup",
-      "sportTitle": "Leagues Cup",
-      "score": 0.72,
-      "matches": 16
-    },
-    {
       "league": "CONMEBOL Libertadores",
       "country": "World",
       "sportKey": "soccer_conmebol_copa_libertadores",
       "sportTitle": "Copa Libertadores",
       "score": 0.4,
-      "matches": 8
+      "matches": 7
     },
     {
-      "league": "CONMEBOL Sudamericana",
+      "league": "CONCACAF Central American Cup",
       "country": "World",
-      "sportKey": "soccer_conmebol_copa_sudamericana",
-      "sportTitle": "Copa Sudamericana",
-      "score": 0.4,
-      "matches": 8
+      "sportKey": "soccer_concacaf_leagues_cup",
+      "sportTitle": "Leagues Cup",
+      "score": 0.286,
+      "matches": 7
+    },
+    {
+      "league": "Leagues Cup",
+      "country": "World",
+      "sportKey": "soccer_concacaf_leagues_cup",
+      "sportTitle": "Leagues Cup",
+      "score": 0.72,
+      "matches": 13
     },
     {
       "league": "CONCACAF Central American Cup",
@@ -270,6 +270,14 @@
       "sportTitle": "Brazil Série A",
       "score": 0.305,
       "matches": 1
+    },
+    {
+      "league": "CONMEBOL Sudamericana",
+      "country": "World",
+      "sportKey": "soccer_conmebol_copa_sudamericana",
+      "sportTitle": "Copa Sudamericana",
+      "score": 0.4,
+      "matches": 7
     },
     {
       "league": "Copa Argentina",
@@ -664,6 +672,14 @@
       "matches": 7
     },
     {
+      "league": "Division 2 - Västra Götaland",
+      "country": "Sweden",
+      "sportKey": "soccer_sweden_allsvenskan",
+      "sportTitle": "Allsvenskan - Sweden",
+      "score": 0.305,
+      "matches": 7
+    },
+    {
       "league": "Oberliga - Bayern Süd",
       "country": "Germany",
       "sportKey": "soccer_germany_bundesliga",
@@ -936,6 +952,14 @@
       "matches": 8
     },
     {
+      "league": "Primera C",
+      "country": "Argentina",
+      "sportKey": "soccer_argentina_primera_division",
+      "sportTitle": "Primera División - Argentina",
+      "score": 0.513,
+      "matches": 14
+    },
+    {
       "league": "Primera Nacional",
       "country": "Argentina",
       "sportKey": "soccer_argentina_primera_division",
@@ -950,14 +974,6 @@
       "sportTitle": "La Liga 2 - Spain",
       "score": 0.542,
       "matches": 7
-    },
-    {
-      "league": "Primera C",
-      "country": "Argentina",
-      "sportKey": "soccer_argentina_primera_division",
-      "sportTitle": "Primera División - Argentina",
-      "score": 0.513,
-      "matches": 14
     },
     {
       "league": "1. Lig",
@@ -1568,20 +1584,20 @@
       "matches": 6
     },
     {
-      "league": "Paranaense - 3",
-      "country": "Brazil",
-      "sportKey": "soccer_brazil_campeonato",
-      "sportTitle": "Brazil Série A",
-      "score": 0.305,
-      "matches": 5
-    },
-    {
       "league": "Brasiliense U20",
       "country": "Brazil",
       "sportKey": "soccer_brazil_campeonato",
       "sportTitle": "Brazil Série A",
       "score": 0.305,
       "matches": 2
+    },
+    {
+      "league": "Paranaense - 3",
+      "country": "Brazil",
+      "sportKey": "soccer_brazil_campeonato",
+      "sportTitle": "Brazil Série A",
+      "score": 0.305,
+      "matches": 5
     },
     {
       "league": "Segunda División",
@@ -3270,36 +3286,6 @@
       "home": "Itapirense U20",
       "away": "Santos U20",
       "reason": "No event/team match"
-    },
-    {
-      "league": "Paulista - U20",
-      "home": "Oeste U20",
-      "away": "União São João U20",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Paulista - U20",
-      "home": "Capivariano U20",
-      "away": "Guarani U20",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Paulista - U20",
-      "home": "Sertãozinho U20",
-      "away": "Mirassol U20",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Copa Rio",
-      "home": "Madureira",
-      "away": "Portuguesa RJ",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Copa Rio",
-      "home": "Nova Iguaçu",
-      "away": "Olaria",
-      "reason": "No event/team match"
     }
   ],
   "unsupportedMarkets": [
@@ -3352,18 +3338,6 @@
       "market": "double_chance"
     },
     {
-      "sportKey": "soccer_concacaf_leagues_cup",
-      "market": "btts"
-    },
-    {
-      "sportKey": "soccer_concacaf_leagues_cup",
-      "market": "draw_no_bet"
-    },
-    {
-      "sportKey": "soccer_concacaf_leagues_cup",
-      "market": "double_chance"
-    },
-    {
       "sportKey": "soccer_conmebol_copa_libertadores",
       "market": "btts"
     },
@@ -3376,15 +3350,15 @@
       "market": "double_chance"
     },
     {
-      "sportKey": "soccer_conmebol_copa_sudamericana",
+      "sportKey": "soccer_concacaf_leagues_cup",
       "market": "btts"
     },
     {
-      "sportKey": "soccer_conmebol_copa_sudamericana",
+      "sportKey": "soccer_concacaf_leagues_cup",
       "market": "draw_no_bet"
     },
     {
-      "sportKey": "soccer_conmebol_copa_sudamericana",
+      "sportKey": "soccer_concacaf_leagues_cup",
       "market": "double_chance"
     },
     {
@@ -3517,6 +3491,18 @@
     },
     {
       "sportKey": "soccer_chile_campeonato",
+      "market": "double_chance"
+    },
+    {
+      "sportKey": "soccer_conmebol_copa_sudamericana",
+      "market": "btts"
+    },
+    {
+      "sportKey": "soccer_conmebol_copa_sudamericana",
+      "market": "draw_no_bet"
+    },
+    {
+      "sportKey": "soccer_conmebol_copa_sudamericana",
       "market": "double_chance"
     },
     {
@@ -3850,31 +3836,6 @@
       "statusCode": 422
     },
     {
-      "label": "soccer_concacaf_leagues_cup:base-combined",
-      "error": "Markets not supported by this endpoint: btts, double_chance, draw_no_bet",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_concacaf_leagues_cup:base-core",
-      "error": "Invalid commenceTimeFrom parameter. The format must be YYYY-MM-DDTHH:MM:SSZ, for example 2020-11-24T16:05:00Z",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_concacaf_leagues_cup:btts",
-      "error": "Markets not supported by this endpoint: btts",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_concacaf_leagues_cup:draw_no_bet",
-      "error": "Markets not supported by this endpoint: draw_no_bet",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_concacaf_leagues_cup:double_chance",
-      "error": "Markets not supported by this endpoint: double_chance",
-      "statusCode": 422
-    },
-    {
       "label": "soccer_conmebol_copa_libertadores:base-combined",
       "error": "Markets not supported by this endpoint: btts, double_chance, draw_no_bet",
       "statusCode": 422
@@ -3900,27 +3861,27 @@
       "statusCode": 422
     },
     {
-      "label": "soccer_conmebol_copa_sudamericana:base-combined",
+      "label": "soccer_concacaf_leagues_cup:base-combined",
       "error": "Markets not supported by this endpoint: btts, double_chance, draw_no_bet",
       "statusCode": 422
     },
     {
-      "label": "soccer_conmebol_copa_sudamericana:base-core",
+      "label": "soccer_concacaf_leagues_cup:base-core",
       "error": "Invalid commenceTimeFrom parameter. The format must be YYYY-MM-DDTHH:MM:SSZ, for example 2020-11-24T16:05:00Z",
       "statusCode": 422
     },
     {
-      "label": "soccer_conmebol_copa_sudamericana:btts",
+      "label": "soccer_concacaf_leagues_cup:btts",
       "error": "Markets not supported by this endpoint: btts",
       "statusCode": 422
     },
     {
-      "label": "soccer_conmebol_copa_sudamericana:draw_no_bet",
+      "label": "soccer_concacaf_leagues_cup:draw_no_bet",
       "error": "Markets not supported by this endpoint: draw_no_bet",
       "statusCode": 422
     },
     {
-      "label": "soccer_conmebol_copa_sudamericana:double_chance",
+      "label": "soccer_concacaf_leagues_cup:double_chance",
       "error": "Markets not supported by this endpoint: double_chance",
       "statusCode": 422
     },
@@ -4196,6 +4157,31 @@
     },
     {
       "label": "soccer_chile_campeonato:double_chance",
+      "error": "Markets not supported by this endpoint: double_chance",
+      "statusCode": 422
+    },
+    {
+      "label": "soccer_conmebol_copa_sudamericana:base-combined",
+      "error": "Markets not supported by this endpoint: btts, double_chance, draw_no_bet",
+      "statusCode": 422
+    },
+    {
+      "label": "soccer_conmebol_copa_sudamericana:base-core",
+      "error": "Invalid commenceTimeFrom parameter. The format must be YYYY-MM-DDTHH:MM:SSZ, for example 2020-11-24T16:05:00Z",
+      "statusCode": 422
+    },
+    {
+      "label": "soccer_conmebol_copa_sudamericana:btts",
+      "error": "Markets not supported by this endpoint: btts",
+      "statusCode": 422
+    },
+    {
+      "label": "soccer_conmebol_copa_sudamericana:draw_no_bet",
+      "error": "Markets not supported by this endpoint: draw_no_bet",
+      "statusCode": 422
+    },
+    {
+      "label": "soccer_conmebol_copa_sudamericana:double_chance",
       "error": "Markets not supported by this endpoint: double_chance",
       "statusCode": 422
     },
@@ -4682,5 +4668,5 @@
   },
   "skipped": false,
   "skipReason": null,
-  "completedAt": "2026-08-12T05:00:23.319Z"
+  "completedAt": "2026-08-12T04:45:21.074Z"
 }
