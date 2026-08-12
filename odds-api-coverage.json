@@ -1,6 +1,6 @@
 {
   "version": "v251",
-  "generatedAt": "2026-08-12T16:20:17.797Z",
+  "generatedAt": "2026-08-12T15:57:33.683Z",
   "provider": "The Odds API v4",
   "keyPresent": true,
   "regions": "uk",
@@ -13,7 +13,7 @@
       "sportKey": "soccer_concacaf_leagues_cup",
       "sportTitle": "Leagues Cup",
       "score": 0.52,
-      "matches": 25
+      "matches": 23
     },
     {
       "league": "Liga 3",
@@ -1616,6 +1616,14 @@
       "matches": 4
     },
     {
+      "league": "Primera División",
+      "country": "Venezuela",
+      "sportKey": "soccer_argentina_primera_division",
+      "sportTitle": "Primera División - Argentina",
+      "score": 0.653,
+      "matches": 7
+    },
+    {
       "league": "Liga MX",
       "country": "Mexico",
       "sportKey": "soccer_mexico_ligamx",
@@ -1800,7 +1808,7 @@
       "matches": 3
     }
   ],
-  "matchesConsidered": 2950,
+  "matchesConsidered": 2952,
   "matchesMatched": 0,
   "matchesUpdated": 0,
   "fieldsFilled": 0,
@@ -1816,10 +1824,10 @@
       "bestScore": 0
     },
     {
-      "league": "Friendlies Clubs",
-      "country": "World",
+      "league": "U19 League",
+      "country": "Ukraine",
       "reason": "No matching soccer sport key",
-      "bestScore": 0
+      "bestScore": 0.167
     },
     {
       "league": "U19 League",
@@ -1836,6 +1844,12 @@
     {
       "league": "NB III - Northeast",
       "country": "Hungary",
+      "reason": "No matching soccer sport key",
+      "bestScore": 0
+    },
+    {
+      "league": "Friendlies Clubs",
+      "country": "World",
       "reason": "No matching soccer sport key",
       "bestScore": 0
     },
@@ -2140,14 +2154,14 @@
       "bestScore": 0
     },
     {
-      "league": "Prva Liga",
-      "country": "Serbia",
+      "league": "Premijer Liga",
+      "country": "Bosnia",
       "reason": "No matching soccer sport key",
       "bestScore": 0.143
     },
     {
-      "league": "Premijer Liga",
-      "country": "Bosnia",
+      "league": "Prva Liga",
+      "country": "Serbia",
       "reason": "No matching soccer sport key",
       "bestScore": 0.143
     },
@@ -2585,12 +2599,6 @@
     },
     {
       "league": "Cup",
-      "home": "KDV",
-      "away": "Novosibirsk",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Cup",
       "home": "Angust Nazran",
       "away": "Druzhba",
       "reason": "No event/team match"
@@ -2599,12 +2607,6 @@
       "league": "Cup",
       "home": "Irtysh Omsk",
       "away": "Saturn Ramenskoye",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Cup",
-      "home": "Znamya Noginsk",
-      "away": "Dinamo Bryansk",
       "reason": "No event/team match"
     },
     {
@@ -3307,6 +3309,18 @@
       "league": "3. Liga",
       "home": "Stuttgart II",
       "away": "FC Viktoria Köln",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Nasjonal U19 Champions League",
+      "home": "Brann U19",
+      "away": "Vålerenga U19",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Nasjonal U19 Champions League",
+      "home": "Lyn U19",
+      "away": "Viking U19",
       "reason": "No event/team match"
     }
   ],
@@ -4690,5 +4704,5 @@
   },
   "skipped": false,
   "skipReason": null,
-  "completedAt": "2026-08-12T16:20:47.200Z"
+  "completedAt": "2026-08-12T15:57:46.067Z"
 }
