@@ -1,6 +1,6 @@
 {
   "version": "v251",
-  "generatedAt": "2026-08-12T03:18:35.834Z",
+  "generatedAt": "2026-08-12T03:40:16.496Z",
   "provider": "The Odds API v4",
   "keyPresent": true,
   "regions": "uk",
@@ -688,14 +688,6 @@
       "matches": 8
     },
     {
-      "league": "Division 2 - Västra Götaland",
-      "country": "Sweden",
-      "sportKey": "soccer_sweden_allsvenskan",
-      "sportTitle": "Allsvenskan - Sweden",
-      "score": 0.305,
-      "matches": 7
-    },
-    {
       "league": "1. Division",
       "country": "Denmark",
       "sportKey": "soccer_denmark_superliga",
@@ -733,6 +725,14 @@
       "sportKey": "soccer_sweden_allsvenskan",
       "sportTitle": "Allsvenskan - Sweden",
       "score": 0.38,
+      "matches": 7
+    },
+    {
+      "league": "Division 2 - Västra Götaland",
+      "country": "Sweden",
+      "sportKey": "soccer_sweden_allsvenskan",
+      "sportTitle": "Allsvenskan - Sweden",
+      "score": 0.305,
       "matches": 7
     },
     {
@@ -2402,12 +2402,6 @@
       "bestScore": 0
     },
     {
-      "league": "First League",
-      "country": "Macedonia",
-      "reason": "No matching soccer sport key",
-      "bestScore": 0.167
-    },
-    {
       "league": "Pro League U23",
       "country": "United-Arab-Emirates",
       "reason": "No matching soccer sport key",
@@ -2462,6 +2456,12 @@
       "bestScore": 0.143
     },
     {
+      "league": "First League",
+      "country": "Macedonia",
+      "reason": "No matching soccer sport key",
+      "bestScore": 0.167
+    },
+    {
       "league": "Premijer Liga",
       "country": "Bosnia",
       "reason": "No matching soccer sport key",
@@ -2498,12 +2498,6 @@
       "bestScore": 0
     },
     {
-      "league": "Second League",
-      "country": "Montenegro",
-      "reason": "No matching soccer sport key",
-      "bestScore": 0.167
-    },
-    {
       "league": "1. SNL",
       "country": "Slovenia",
       "reason": "No matching soccer sport key",
@@ -2529,6 +2523,12 @@
     },
     {
       "league": "First League",
+      "country": "Montenegro",
+      "reason": "No matching soccer sport key",
+      "bestScore": 0.167
+    },
+    {
+      "league": "Second League",
       "country": "Montenegro",
       "reason": "No matching soccer sport key",
       "bestScore": 0.167
@@ -2834,48 +2834,6 @@
       "reason": "No event/team match"
     },
     {
-      "league": "Division 2 - Västra Götaland",
-      "home": "Hestrafor",
-      "away": "Qviding FIF",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Division 2 - Västra Götaland",
-      "home": "Landvetter IS",
-      "away": "Galtabacks",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Division 2 - Västra Götaland",
-      "home": "Böljan",
-      "away": "Åstorp",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Division 2 - Västra Götaland",
-      "home": "Kongahälla",
-      "away": "Västra Frölunda",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Division 2 - Västra Götaland",
-      "home": "Lindome",
-      "away": "Astrio",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Division 2 - Västra Götaland",
-      "home": "Jonsered",
-      "away": "Onsala",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Division 2 - Västra Götaland",
-      "home": "Torslanda",
-      "away": "Dalstorps",
-      "reason": "No event/team match"
-    },
-    {
       "league": "Allsvenskan",
       "home": "IF Elfsborg",
       "away": "Vasteras SK FK",
@@ -2963,6 +2921,48 @@
       "league": "Damallsvenskan",
       "home": "Norrköping W",
       "away": "Kristianstad W",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Division 2 - Västra Götaland",
+      "home": "Landvetter IS",
+      "away": "Galtabacks",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Division 2 - Västra Götaland",
+      "home": "Böljan",
+      "away": "Åstorp",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Division 2 - Västra Götaland",
+      "home": "Hestrafor",
+      "away": "Qviding FIF",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Division 2 - Västra Götaland",
+      "home": "Kongahälla",
+      "away": "Västra Frölunda",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Division 2 - Västra Götaland",
+      "home": "Lindome",
+      "away": "Astrio",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Division 2 - Västra Götaland",
+      "home": "Jonsered",
+      "away": "Onsala",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Division 2 - Västra Götaland",
+      "home": "Torslanda",
+      "away": "Dalstorps",
       "reason": "No event/team match"
     },
     {
@@ -4682,5 +4682,5 @@
   },
   "skipped": false,
   "skipReason": null,
-  "completedAt": "2026-08-12T03:19:02.116Z"
+  "completedAt": "2026-08-12T03:40:38.997Z"
 }
