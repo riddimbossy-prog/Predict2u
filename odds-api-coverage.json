@@ -1,6 +1,6 @@
 {
   "version": "v251",
-  "generatedAt": "2026-08-13T05:30:19.061Z",
+  "generatedAt": "2026-08-13T05:12:11.570Z",
   "provider": "The Odds API v4",
   "keyPresent": true,
   "regions": "uk",
@@ -24,12 +24,12 @@
       "matches": 7
     },
     {
-      "league": "USL League One Cup",
-      "country": "USA",
-      "sportKey": "soccer_usa_mls",
-      "sportTitle": "MLS",
-      "score": 0.466,
-      "matches": 2
+      "league": "Leagues Cup",
+      "country": "World",
+      "sportKey": "soccer_concacaf_leagues_cup",
+      "sportTitle": "Leagues Cup",
+      "score": 0.72,
+      "matches": 9
     },
     {
       "league": "CONCACAF Central American Cup",
@@ -37,7 +37,7 @@
       "sportKey": "soccer_concacaf_leagues_cup",
       "sportTitle": "Leagues Cup",
       "score": 0.286,
-      "matches": 8
+      "matches": 7
     },
     {
       "league": "Leagues Cup",
@@ -1792,7 +1792,7 @@
       "matches": 1
     }
   ],
-  "matchesConsidered": 3001,
+  "matchesConsidered": 2997,
   "matchesMatched": 0,
   "matchesUpdated": 0,
   "fieldsFilled": 0,
@@ -1958,6 +1958,12 @@
       "bestScore": 0.167
     },
     {
+      "league": "Persian Gulf Pro League",
+      "country": "Iran",
+      "reason": "No matching soccer sport key",
+      "bestScore": 0.25
+    },
+    {
       "league": "1st League - FBiH",
       "country": "Bosnia",
       "reason": "No matching soccer sport key",
@@ -1974,12 +1980,6 @@
       "country": "Moldova",
       "reason": "No matching soccer sport key",
       "bestScore": 0.143
-    },
-    {
-      "league": "Persian Gulf Pro League",
-      "country": "Iran",
-      "reason": "No matching soccer sport key",
-      "bestScore": 0.25
     },
     {
       "league": "1 Lyga",
@@ -3177,14 +3177,14 @@
     },
     {
       "league": "Liga Profesional Argentina",
-      "home": "Central Cordoba de Santiago",
-      "away": "Instituto Cordoba",
+      "home": "Barracas Central",
+      "away": "Rosario Central",
       "reason": "No event/team match"
     },
     {
       "league": "Liga Profesional Argentina",
-      "home": "Barracas Central",
-      "away": "Rosario Central",
+      "home": "Central Cordoba de Santiago",
+      "away": "Instituto Cordoba",
       "reason": "No event/team match"
     },
     {
@@ -3328,18 +3328,6 @@
       "market": "double_chance"
     },
     {
-      "sportKey": "soccer_usa_mls",
-      "market": "btts"
-    },
-    {
-      "sportKey": "soccer_usa_mls",
-      "market": "draw_no_bet"
-    },
-    {
-      "sportKey": "soccer_usa_mls",
-      "market": "double_chance"
-    },
-    {
       "sportKey": "soccer_concacaf_leagues_cup",
       "market": "btts"
     },
@@ -3709,6 +3697,18 @@
     },
     {
       "sportKey": "soccer_efl_champ",
+      "market": "double_chance"
+    },
+    {
+      "sportKey": "soccer_usa_mls",
+      "market": "btts"
+    },
+    {
+      "sportKey": "soccer_usa_mls",
+      "market": "draw_no_bet"
+    },
+    {
+      "sportKey": "soccer_usa_mls",
       "market": "double_chance"
     },
     {
@@ -3820,31 +3820,6 @@
     },
     {
       "label": "soccer_conmebol_copa_sudamericana:double_chance",
-      "error": "Markets not supported by this endpoint: double_chance",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_usa_mls:base-combined",
-      "error": "Markets not supported by this endpoint: btts, double_chance, draw_no_bet",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_usa_mls:base-core",
-      "error": "Invalid commenceTimeFrom parameter. The format must be YYYY-MM-DDTHH:MM:SSZ, for example 2020-11-24T16:05:00Z",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_usa_mls:btts",
-      "error": "Markets not supported by this endpoint: btts",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_usa_mls:draw_no_bet",
-      "error": "Markets not supported by this endpoint: draw_no_bet",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_usa_mls:double_chance",
       "error": "Markets not supported by this endpoint: double_chance",
       "statusCode": 422
     },
@@ -4624,6 +4599,31 @@
       "statusCode": 422
     },
     {
+      "label": "soccer_usa_mls:base-combined",
+      "error": "Markets not supported by this endpoint: btts, double_chance, draw_no_bet",
+      "statusCode": 422
+    },
+    {
+      "label": "soccer_usa_mls:base-core",
+      "error": "Invalid commenceTimeFrom parameter. The format must be YYYY-MM-DDTHH:MM:SSZ, for example 2020-11-24T16:05:00Z",
+      "statusCode": 422
+    },
+    {
+      "label": "soccer_usa_mls:btts",
+      "error": "Markets not supported by this endpoint: btts",
+      "statusCode": 422
+    },
+    {
+      "label": "soccer_usa_mls:draw_no_bet",
+      "error": "Markets not supported by this endpoint: draw_no_bet",
+      "statusCode": 422
+    },
+    {
+      "label": "soccer_usa_mls:double_chance",
+      "error": "Markets not supported by this endpoint: double_chance",
+      "statusCode": 422
+    },
+    {
       "label": "soccer_spain_la_liga:base-combined",
       "error": "Markets not supported by this endpoint: btts, double_chance, draw_no_bet",
       "statusCode": 422
@@ -4756,5 +4756,5 @@
   },
   "skipped": false,
   "skipReason": null,
-  "completedAt": "2026-08-13T05:30:42.630Z"
+  "completedAt": "2026-08-13T05:12:19.758Z"
 }
