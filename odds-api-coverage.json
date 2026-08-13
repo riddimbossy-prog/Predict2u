@@ -1,11 +1,11 @@
 {
   "version": "v251",
-  "generatedAt": "2026-08-13T22:20:17.199Z",
+  "generatedAt": "2026-08-13T22:30:20.712Z",
   "provider": "The Odds API v4",
   "keyPresent": true,
   "regions": "uk",
-  "sportsAvailable": 82,
-  "soccerSportsAvailable": 44,
+  "sportsAvailable": 85,
+  "soccerSportsAvailable": 46,
   "sportMappings": [
     {
       "league": "Second League - Group 2",
@@ -298,17 +298,17 @@
     {
       "league": "Coppa Italia",
       "country": "Italy",
-      "sportKey": "soccer_italy_serie_a",
-      "sportTitle": "Serie A - Italy",
-      "score": 0.323,
+      "sportKey": "soccer_italy_coppa_italia",
+      "sportTitle": "Coppa Italia",
+      "score": 1,
       "matches": 16
     },
     {
       "league": "Coppa Italia Serie C",
       "country": "Italy",
-      "sportKey": "soccer_italy_serie_a",
-      "sportTitle": "Serie A - Italy",
-      "score": 0.43,
+      "sportKey": "soccer_italy_coppa_italia",
+      "sportTitle": "Coppa Italia",
+      "score": 0.609,
       "matches": 28
     },
     {
@@ -782,6 +782,14 @@
       "sportTitle": "Turkey Super League",
       "score": 0.513,
       "matches": 9
+    },
+    {
+      "league": "FAI Cup",
+      "country": "Ireland",
+      "sportKey": "soccer_league_of_ireland",
+      "sportTitle": "League of Ireland",
+      "score": 0.291,
+      "matches": 8
     },
     {
       "league": "Jupiler Pro League",
@@ -1881,7 +1889,7 @@
       "league": "Calcutta Premier Division",
       "country": "India",
       "reason": "No matching soccer sport key",
-      "bestScore": 0.125
+      "bestScore": 0.222
     },
     {
       "league": "New South Wales NPL",
@@ -2108,12 +2116,6 @@
     {
       "league": "FAW Championship",
       "country": "Wales",
-      "reason": "No matching soccer sport key",
-      "bestScore": 0.167
-    },
-    {
-      "league": "FAI Cup",
-      "country": "Ireland",
       "reason": "No matching soccer sport key",
       "bestScore": 0.167
     },
@@ -3316,6 +3318,12 @@
       "home": "Cerro",
       "away": "Albion FC",
       "reason": "No event/team match"
+    },
+    {
+      "league": "Primera División",
+      "home": "Juventud",
+      "away": "Atletico Torque",
+      "reason": "No event/team match"
     }
   ],
   "unsupportedMarkets": [
@@ -3548,15 +3556,15 @@
       "market": "double_chance"
     },
     {
-      "sportKey": "soccer_italy_serie_a",
+      "sportKey": "soccer_italy_coppa_italia",
       "market": "btts"
     },
     {
-      "sportKey": "soccer_italy_serie_a",
+      "sportKey": "soccer_italy_coppa_italia",
       "market": "draw_no_bet"
     },
     {
-      "sportKey": "soccer_italy_serie_a",
+      "sportKey": "soccer_italy_coppa_italia",
       "market": "double_chance"
     },
     {
@@ -3689,6 +3697,18 @@
     },
     {
       "sportKey": "soccer_turkey_super_league",
+      "market": "double_chance"
+    },
+    {
+      "sportKey": "soccer_league_of_ireland",
+      "market": "btts"
+    },
+    {
+      "sportKey": "soccer_league_of_ireland",
+      "market": "draw_no_bet"
+    },
+    {
+      "sportKey": "soccer_league_of_ireland",
       "market": "double_chance"
     },
     {
@@ -4265,27 +4285,27 @@
       "statusCode": 422
     },
     {
-      "label": "soccer_italy_serie_a:base-combined",
+      "label": "soccer_italy_coppa_italia:base-combined",
       "error": "Markets not supported by this endpoint: btts, double_chance, draw_no_bet",
       "statusCode": 422
     },
     {
-      "label": "soccer_italy_serie_a:base-core",
+      "label": "soccer_italy_coppa_italia:base-core",
       "error": "Invalid commenceTimeFrom parameter. The format must be YYYY-MM-DDTHH:MM:SSZ, for example 2020-11-24T16:05:00Z",
       "statusCode": 422
     },
     {
-      "label": "soccer_italy_serie_a:btts",
+      "label": "soccer_italy_coppa_italia:btts",
       "error": "Markets not supported by this endpoint: btts",
       "statusCode": 422
     },
     {
-      "label": "soccer_italy_serie_a:draw_no_bet",
+      "label": "soccer_italy_coppa_italia:draw_no_bet",
       "error": "Markets not supported by this endpoint: draw_no_bet",
       "statusCode": 422
     },
     {
-      "label": "soccer_italy_serie_a:double_chance",
+      "label": "soccer_italy_coppa_italia:double_chance",
       "error": "Markets not supported by this endpoint: double_chance",
       "statusCode": 422
     },
@@ -4565,6 +4585,31 @@
       "statusCode": 422
     },
     {
+      "label": "soccer_league_of_ireland:base-combined",
+      "error": "Markets not supported by this endpoint: btts, double_chance, draw_no_bet",
+      "statusCode": 422
+    },
+    {
+      "label": "soccer_league_of_ireland:base-core",
+      "error": "Invalid commenceTimeFrom parameter. The format must be YYYY-MM-DDTHH:MM:SSZ, for example 2020-11-24T16:05:00Z",
+      "statusCode": 422
+    },
+    {
+      "label": "soccer_league_of_ireland:btts",
+      "error": "Markets not supported by this endpoint: btts",
+      "statusCode": 422
+    },
+    {
+      "label": "soccer_league_of_ireland:draw_no_bet",
+      "error": "Markets not supported by this endpoint: draw_no_bet",
+      "statusCode": 422
+    },
+    {
+      "label": "soccer_league_of_ireland:double_chance",
+      "error": "Markets not supported by this endpoint: double_chance",
+      "statusCode": 422
+    },
+    {
       "label": "soccer_france_ligue_two:base-combined",
       "error": "Markets not supported by this endpoint: btts, double_chance, draw_no_bet",
       "statusCode": 422
@@ -4772,5 +4817,5 @@
   },
   "skipped": false,
   "skipReason": null,
-  "completedAt": "2026-08-13T22:20:32.791Z"
+  "completedAt": "2026-08-13T22:30:51.526Z"
 }
