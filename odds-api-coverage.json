@@ -1,20 +1,12 @@
 {
   "version": "v251",
-  "generatedAt": "2026-08-13T12:20:27.326Z",
+  "generatedAt": "2026-08-13T12:30:19.632Z",
   "provider": "The Odds API v4",
   "keyPresent": true,
   "regions": "uk",
   "sportsAvailable": 82,
   "soccerSportsAvailable": 44,
   "sportMappings": [
-    {
-      "league": "CONMEBOL Sudamericana",
-      "country": "World",
-      "sportKey": "soccer_conmebol_copa_sudamericana",
-      "sportTitle": "Copa Sudamericana",
-      "score": 0.4,
-      "matches": 7
-    },
     {
       "league": "Nasjonal U19 Champions League",
       "country": "Norway",
@@ -118,6 +110,14 @@
       "sportTitle": "Copa Libertadores",
       "score": 0.4,
       "matches": 7
+    },
+    {
+      "league": "CONMEBOL Sudamericana",
+      "country": "World",
+      "sportKey": "soccer_conmebol_copa_sudamericana",
+      "sportTitle": "Copa Sudamericana",
+      "score": 0.4,
+      "matches": 6
     },
     {
       "league": "Primera B",
@@ -1816,7 +1816,7 @@
       "matches": 1
     }
   ],
-  "matchesConsidered": 3019,
+  "matchesConsidered": 3018,
   "matchesMatched": 0,
   "matchesUpdated": 0,
   "fieldsFilled": 0,
@@ -2570,48 +2570,6 @@
       "bestScore": 0.25
     },
     {
-      "league": "CONMEBOL Sudamericana",
-      "home": "Santa Fe",
-      "away": "River Plate",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "CONMEBOL Sudamericana",
-      "home": "Santos",
-      "away": "Macara",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "CONMEBOL Sudamericana",
-      "home": "Vasco DA Gama",
-      "away": "Olimpia",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "CONMEBOL Sudamericana",
-      "home": "Cienciano",
-      "away": "Botafogo",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "CONMEBOL Sudamericana",
-      "home": "Deportivo Recoleta",
-      "away": "Boca Juniors",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "CONMEBOL Sudamericana",
-      "home": "Sao Paulo",
-      "away": "Bolívar",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "CONMEBOL Sudamericana",
-      "home": "Atletico-MG",
-      "away": "RB Bragantino",
-      "reason": "No event/team match"
-    },
-    {
       "league": "Nasjonal U19 Champions League",
       "home": "Lyn U19",
       "away": "Viking U19",
@@ -3324,22 +3282,52 @@
       "home": "Spartak Moskva U19",
       "away": "CSKA Moskva U19",
       "reason": "No event/team match"
+    },
+    {
+      "league": "First League",
+      "home": "FK Neftekhimik",
+      "away": "Shinnik Yaroslavl",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "First League",
+      "home": "Rotor Volgograd",
+      "away": "Ural",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "First League",
+      "home": "Ska-khabarovsk",
+      "away": "Veles",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "First League",
+      "home": "Enisey",
+      "away": "KAMAZ",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "First League",
+      "home": "Chelyabinsk",
+      "away": "Torpedo Moskva",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "First League",
+      "home": "Leningradets",
+      "away": "Arsenal Tula",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "First League",
+      "home": "Tekstilshchik",
+      "away": "Nizhny Novgorod",
+      "reason": "No event/team match"
     }
   ],
   "unsupportedMarkets": [
     {
-      "sportKey": "soccer_conmebol_copa_sudamericana",
-      "market": "btts"
-    },
-    {
-      "sportKey": "soccer_conmebol_copa_sudamericana",
-      "market": "draw_no_bet"
-    },
-    {
-      "sportKey": "soccer_conmebol_copa_sudamericana",
-      "market": "double_chance"
-    },
-    {
       "sportKey": "soccer_norway_eliteserien",
       "market": "btts"
     },
@@ -3493,6 +3481,18 @@
     },
     {
       "sportKey": "soccer_conmebol_copa_libertadores",
+      "market": "double_chance"
+    },
+    {
+      "sportKey": "soccer_conmebol_copa_sudamericana",
+      "market": "btts"
+    },
+    {
+      "sportKey": "soccer_conmebol_copa_sudamericana",
+      "market": "draw_no_bet"
+    },
+    {
+      "sportKey": "soccer_conmebol_copa_sudamericana",
       "market": "double_chance"
     },
     {
@@ -3797,31 +3797,6 @@
     }
   ],
   "requestErrors": [
-    {
-      "label": "soccer_conmebol_copa_sudamericana:base-combined",
-      "error": "Markets not supported by this endpoint: btts, double_chance, draw_no_bet",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_conmebol_copa_sudamericana:base-core",
-      "error": "Invalid commenceTimeFrom parameter. The format must be YYYY-MM-DDTHH:MM:SSZ, for example 2020-11-24T16:05:00Z",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_conmebol_copa_sudamericana:btts",
-      "error": "Markets not supported by this endpoint: btts",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_conmebol_copa_sudamericana:draw_no_bet",
-      "error": "Markets not supported by this endpoint: draw_no_bet",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_conmebol_copa_sudamericana:double_chance",
-      "error": "Markets not supported by this endpoint: double_chance",
-      "statusCode": 422
-    },
     {
       "label": "soccer_norway_eliteserien:base-combined",
       "error": "Markets not supported by this endpoint: btts, double_chance, draw_no_bet",
@@ -4144,6 +4119,31 @@
     },
     {
       "label": "soccer_conmebol_copa_libertadores:double_chance",
+      "error": "Markets not supported by this endpoint: double_chance",
+      "statusCode": 422
+    },
+    {
+      "label": "soccer_conmebol_copa_sudamericana:base-combined",
+      "error": "Markets not supported by this endpoint: btts, double_chance, draw_no_bet",
+      "statusCode": 422
+    },
+    {
+      "label": "soccer_conmebol_copa_sudamericana:base-core",
+      "error": "Invalid commenceTimeFrom parameter. The format must be YYYY-MM-DDTHH:MM:SSZ, for example 2020-11-24T16:05:00Z",
+      "statusCode": 422
+    },
+    {
+      "label": "soccer_conmebol_copa_sudamericana:btts",
+      "error": "Markets not supported by this endpoint: btts",
+      "statusCode": 422
+    },
+    {
+      "label": "soccer_conmebol_copa_sudamericana:draw_no_bet",
+      "error": "Markets not supported by this endpoint: draw_no_bet",
+      "statusCode": 422
+    },
+    {
+      "label": "soccer_conmebol_copa_sudamericana:double_chance",
       "error": "Markets not supported by this endpoint: double_chance",
       "statusCode": 422
     },
@@ -4780,5 +4780,5 @@
   },
   "skipped": false,
   "skipReason": null,
-  "completedAt": "2026-08-13T12:20:49.706Z"
+  "completedAt": "2026-08-13T12:30:48.671Z"
 }
