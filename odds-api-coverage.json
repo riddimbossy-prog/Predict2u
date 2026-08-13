@@ -1,6 +1,6 @@
 {
   "version": "v251",
-  "generatedAt": "2026-08-13T07:00:15.455Z",
+  "generatedAt": "2026-08-13T06:43:16.920Z",
   "provider": "The Odds API v4",
   "keyPresent": true,
   "regions": "uk",
@@ -21,22 +21,6 @@
       "sportKey": "soccer_conmebol_copa_sudamericana",
       "sportTitle": "Copa Sudamericana",
       "score": 0.4,
-      "matches": 7
-    },
-    {
-      "league": "Leagues Cup",
-      "country": "World",
-      "sportKey": "soccer_concacaf_leagues_cup",
-      "sportTitle": "Leagues Cup",
-      "score": 0.72,
-      "matches": 9
-    },
-    {
-      "league": "CONCACAF Central American Cup",
-      "country": "World",
-      "sportKey": "soccer_concacaf_leagues_cup",
-      "sportTitle": "Leagues Cup",
-      "score": 0.286,
       "matches": 7
     },
     {
@@ -150,6 +134,22 @@
       "sportTitle": "Primera División - Chile",
       "score": 0.466,
       "matches": 11
+    },
+    {
+      "league": "Leagues Cup",
+      "country": "World",
+      "sportKey": "soccer_concacaf_leagues_cup",
+      "sportTitle": "Leagues Cup",
+      "score": 0.72,
+      "matches": 5
+    },
+    {
+      "league": "CONCACAF Central American Cup",
+      "country": "World",
+      "sportKey": "soccer_concacaf_leagues_cup",
+      "sportTitle": "Leagues Cup",
+      "score": 0.286,
+      "matches": 6
     },
     {
       "league": "Liga de Expansión MX",
@@ -1784,7 +1784,7 @@
       "matches": 1
     }
   ],
-  "matchesConsidered": 2996,
+  "matchesConsidered": 2989,
   "matchesMatched": 0,
   "matchesUpdated": 0,
   "fieldsFilled": 0,
@@ -1806,18 +1806,6 @@
       "bestScore": 0.25
     },
     {
-      "league": "Friendlies Clubs",
-      "country": "World",
-      "reason": "No matching soccer sport key",
-      "bestScore": 0
-    },
-    {
-      "league": "OFC Champions League",
-      "country": "World",
-      "reason": "No matching soccer sport key",
-      "bestScore": 0.222
-    },
-    {
       "league": "Calcutta Premier Division",
       "country": "India",
       "reason": "No matching soccer sport key",
@@ -1834,6 +1822,12 @@
       "country": "Armenia",
       "reason": "No matching soccer sport key",
       "bestScore": 0.167
+    },
+    {
+      "league": "Friendlies Clubs",
+      "country": "World",
+      "reason": "No matching soccer sport key",
+      "bestScore": 0
     },
     {
       "league": "UEFA Europa League",
@@ -2140,6 +2134,12 @@
       "country": "Ecuador",
       "reason": "No matching soccer sport key",
       "bestScore": 0.143
+    },
+    {
+      "league": "OFC Champions League",
+      "country": "World",
+      "reason": "No matching soccer sport key",
+      "bestScore": 0.222
     },
     {
       "league": "Liga Panameña de Fútbol",
@@ -3320,18 +3320,6 @@
       "market": "double_chance"
     },
     {
-      "sportKey": "soccer_concacaf_leagues_cup",
-      "market": "btts"
-    },
-    {
-      "sportKey": "soccer_concacaf_leagues_cup",
-      "market": "draw_no_bet"
-    },
-    {
-      "sportKey": "soccer_concacaf_leagues_cup",
-      "market": "double_chance"
-    },
-    {
       "sportKey": "soccer_norway_eliteserien",
       "market": "btts"
     },
@@ -3485,6 +3473,18 @@
     },
     {
       "sportKey": "soccer_chile_campeonato",
+      "market": "double_chance"
+    },
+    {
+      "sportKey": "soccer_concacaf_leagues_cup",
+      "market": "btts"
+    },
+    {
+      "sportKey": "soccer_concacaf_leagues_cup",
+      "market": "draw_no_bet"
+    },
+    {
+      "sportKey": "soccer_concacaf_leagues_cup",
       "market": "double_chance"
     },
     {
@@ -3816,31 +3816,6 @@
       "statusCode": 422
     },
     {
-      "label": "soccer_concacaf_leagues_cup:base-combined",
-      "error": "Markets not supported by this endpoint: btts, double_chance, draw_no_bet",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_concacaf_leagues_cup:base-core",
-      "error": "Invalid commenceTimeFrom parameter. The format must be YYYY-MM-DDTHH:MM:SSZ, for example 2020-11-24T16:05:00Z",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_concacaf_leagues_cup:btts",
-      "error": "Markets not supported by this endpoint: btts",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_concacaf_leagues_cup:draw_no_bet",
-      "error": "Markets not supported by this endpoint: draw_no_bet",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_concacaf_leagues_cup:double_chance",
-      "error": "Markets not supported by this endpoint: double_chance",
-      "statusCode": 422
-    },
-    {
       "label": "soccer_norway_eliteserien:base-combined",
       "error": "Markets not supported by this endpoint: btts, double_chance, draw_no_bet",
       "statusCode": 422
@@ -4162,6 +4137,31 @@
     },
     {
       "label": "soccer_chile_campeonato:double_chance",
+      "error": "Markets not supported by this endpoint: double_chance",
+      "statusCode": 422
+    },
+    {
+      "label": "soccer_concacaf_leagues_cup:base-combined",
+      "error": "Markets not supported by this endpoint: btts, double_chance, draw_no_bet",
+      "statusCode": 422
+    },
+    {
+      "label": "soccer_concacaf_leagues_cup:base-core",
+      "error": "Invalid commenceTimeFrom parameter. The format must be YYYY-MM-DDTHH:MM:SSZ, for example 2020-11-24T16:05:00Z",
+      "statusCode": 422
+    },
+    {
+      "label": "soccer_concacaf_leagues_cup:btts",
+      "error": "Markets not supported by this endpoint: btts",
+      "statusCode": 422
+    },
+    {
+      "label": "soccer_concacaf_leagues_cup:draw_no_bet",
+      "error": "Markets not supported by this endpoint: draw_no_bet",
+      "statusCode": 422
+    },
+    {
+      "label": "soccer_concacaf_leagues_cup:double_chance",
       "error": "Markets not supported by this endpoint: double_chance",
       "statusCode": 422
     },
@@ -4748,5 +4748,5 @@
   },
   "skipped": false,
   "skipReason": null,
-  "completedAt": "2026-08-13T07:00:23.867Z"
+  "completedAt": "2026-08-13T06:43:40.842Z"
 }
