@@ -1,28 +1,12 @@
 {
   "version": "v251",
-  "generatedAt": "2026-08-14T04:00:15.764Z",
+  "generatedAt": "2026-08-14T03:42:20.080Z",
   "provider": "The Odds API v4",
   "keyPresent": true,
   "regions": "uk",
   "sportsAvailable": 85,
   "soccerSportsAvailable": 46,
   "sportMappings": [
-    {
-      "league": "Leagues Cup",
-      "country": "World",
-      "sportKey": "soccer_concacaf_leagues_cup",
-      "sportTitle": "Leagues Cup",
-      "score": 0.72,
-      "matches": 4
-    },
-    {
-      "league": "CONCACAF Central American Cup",
-      "country": "World",
-      "sportKey": "soccer_concacaf_leagues_cup",
-      "sportTitle": "Leagues Cup",
-      "score": 0.286,
-      "matches": 9
-    },
     {
       "league": "CONMEBOL Libertadores",
       "country": "World",
@@ -32,20 +16,12 @@
       "matches": 8
     },
     {
-      "league": "CONMEBOL Sudamericana",
+      "league": "Leagues Cup",
       "country": "World",
-      "sportKey": "soccer_conmebol_copa_sudamericana",
-      "sportTitle": "Copa Sudamericana",
-      "score": 0.4,
-      "matches": 8
-    },
-    {
-      "league": "Primera B",
-      "country": "Chile",
-      "sportKey": "soccer_chile_campeonato",
-      "sportTitle": "Primera División - Chile",
-      "score": 0.466,
-      "matches": 10
+      "sportKey": "soccer_concacaf_leagues_cup",
+      "sportTitle": "Leagues Cup",
+      "score": 0.72,
+      "matches": 3
     },
     {
       "league": "Liga de Expansión MX",
@@ -54,6 +30,14 @@
       "sportTitle": "Liga MX",
       "score": 0.555,
       "matches": 9
+    },
+    {
+      "league": "CONCACAF Central American Cup",
+      "country": "World",
+      "sportKey": "soccer_concacaf_leagues_cup",
+      "sportTitle": "Leagues Cup",
+      "score": 0.286,
+      "matches": 8
     },
     {
       "league": "Central Youth League",
@@ -1480,6 +1464,14 @@
       "matches": 5
     },
     {
+      "league": "Primera B",
+      "country": "Chile",
+      "sportKey": "soccer_chile_campeonato",
+      "sportTitle": "Primera División - Chile",
+      "score": 0.466,
+      "matches": 8
+    },
+    {
       "league": "Segunda División",
       "country": "Chile",
       "sportKey": "soccer_spain_segunda_division",
@@ -1768,6 +1760,14 @@
       "matches": 3
     },
     {
+      "league": "CONMEBOL Sudamericana",
+      "country": "World",
+      "sportKey": "soccer_conmebol_copa_sudamericana",
+      "sportTitle": "Copa Sudamericana",
+      "score": 0.4,
+      "matches": 7
+    },
+    {
       "league": "Emperor Cup",
       "country": "Japan",
       "sportKey": "soccer_japan_j_league",
@@ -1824,7 +1824,7 @@
       "matches": 1
     }
   ],
-  "matchesConsidered": 3067,
+  "matchesConsidered": 3062,
   "matchesMatched": 0,
   "matchesUpdated": 0,
   "fieldsFilled": 0,
@@ -2596,9 +2596,51 @@
       "bestScore": 0.2
     },
     {
-      "league": "Leagues Cup",
-      "home": "New York City FC",
-      "away": "Necaxa",
+      "league": "Stars League",
+      "country": "Qatar",
+      "reason": "No matching soccer sport key",
+      "bestScore": 0.167
+    },
+    {
+      "league": "CONMEBOL Libertadores",
+      "home": "Independ. Rivadavia",
+      "away": "Fluminense",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "CONMEBOL Libertadores",
+      "home": "Independiente del Valle",
+      "away": "Deportes Tolima",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "CONMEBOL Libertadores",
+      "home": "U. Catolica",
+      "away": "Estudiantes L.P.",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "CONMEBOL Libertadores",
+      "home": "Cerro Porteno",
+      "away": "Palmeiras",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "CONMEBOL Libertadores",
+      "home": "Coquimbo Unido",
+      "away": "Platense",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "CONMEBOL Libertadores",
+      "home": "Flamengo",
+      "away": "Cruzeiro",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "CONMEBOL Libertadores",
+      "home": "LDU de Quito",
+      "away": "Mirassol",
       "reason": "No event/team match"
     },
     {
@@ -2617,12 +2659,6 @@
       "league": "Leagues Cup",
       "home": "Portland Timbers",
       "away": "Club Tijuana",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "CONCACAF Central American Cup",
-      "home": "Alianza FC",
-      "away": "UMECIT",
       "reason": "No event/team match"
     },
     {
@@ -3332,6 +3368,114 @@
       "home": "Everton de Vina",
       "away": "A. Italiano",
       "reason": "No event/team match"
+    },
+    {
+      "league": "Liga de Expansión MX",
+      "home": "Cancún",
+      "away": "Durango",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Liga de Expansión MX",
+      "home": "Dorados",
+      "away": "Tlaxcala",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Liga de Expansión MX",
+      "home": "Leones Negros UDG",
+      "away": "CDS Tampico Madero",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Liga de Expansión MX",
+      "home": "Venados FC",
+      "away": "Dorados",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Liga MX Femenil",
+      "home": "Cruz Azul W",
+      "away": "Atlante W",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Liga MX Femenil",
+      "home": "América W",
+      "away": "Puebla W",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Liga MX Femenil",
+      "home": "Pachuca W",
+      "away": "Pumas UNAM W",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Liga MX Femenil",
+      "home": "Tigres UANL W",
+      "away": "Juárez W",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Liga MX Femenil",
+      "home": "Tijuana W",
+      "away": "Necaxa W",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Liga MX Femenil",
+      "home": "Guadalajara W",
+      "away": "Atlético San Luis W",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Liga MX Femenil",
+      "home": "León W",
+      "away": "Querétaro W",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Liga MX Femenil",
+      "home": "Toluca W",
+      "away": "Atlas W",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Liga MX Femenil",
+      "home": "Santos Laguna W",
+      "away": "Monterrey W",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Liga MX U21",
+      "home": "Atlas U21",
+      "away": "Tigres UANL U21",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Liga MX U21",
+      "home": "Monterrey U21",
+      "away": "Juarez U21",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Liga MX U21",
+      "home": "Atlante U21",
+      "away": "Toluca U21",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Liga MX U21",
+      "home": "Club America U21",
+      "away": "Atl. San Luis U21",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Liga MX U21",
+      "home": "UNAM Pumas U21",
+      "away": "Queretaro U21",
+      "reason": "No event/team match"
     }
   ],
   "unsupportedMarkets": [
@@ -3360,27 +3504,15 @@
       "market": "double_chance"
     },
     {
-      "sportKey": "soccer_conmebol_copa_sudamericana",
+      "sportKey": "soccer_concacaf_leagues_cup",
       "market": "btts"
     },
     {
-      "sportKey": "soccer_conmebol_copa_sudamericana",
+      "sportKey": "soccer_concacaf_leagues_cup",
       "market": "draw_no_bet"
     },
     {
-      "sportKey": "soccer_conmebol_copa_sudamericana",
-      "market": "double_chance"
-    },
-    {
-      "sportKey": "soccer_chile_campeonato",
-      "market": "btts"
-    },
-    {
-      "sportKey": "soccer_chile_campeonato",
-      "market": "draw_no_bet"
-    },
-    {
-      "sportKey": "soccer_chile_campeonato",
+      "sportKey": "soccer_concacaf_leagues_cup",
       "market": "double_chance"
     },
     {
@@ -3744,6 +3876,18 @@
       "market": "double_chance"
     },
     {
+      "sportKey": "soccer_chile_campeonato",
+      "market": "btts"
+    },
+    {
+      "sportKey": "soccer_chile_campeonato",
+      "market": "draw_no_bet"
+    },
+    {
+      "sportKey": "soccer_chile_campeonato",
+      "market": "double_chance"
+    },
+    {
       "sportKey": "soccer_spain_la_liga",
       "market": "btts"
     },
@@ -3801,6 +3945,18 @@
     },
     {
       "sportKey": "soccer_uefa_champs_league_qualification",
+      "market": "double_chance"
+    },
+    {
+      "sportKey": "soccer_conmebol_copa_sudamericana",
+      "market": "btts"
+    },
+    {
+      "sportKey": "soccer_conmebol_copa_sudamericana",
+      "market": "draw_no_bet"
+    },
+    {
+      "sportKey": "soccer_conmebol_copa_sudamericana",
       "market": "double_chance"
     },
     {
@@ -3868,52 +4024,27 @@
       "statusCode": 422
     },
     {
-      "label": "soccer_conmebol_copa_sudamericana:base-combined",
+      "label": "soccer_concacaf_leagues_cup:base-combined",
       "error": "Markets not supported by this endpoint: btts, double_chance, draw_no_bet",
       "statusCode": 422
     },
     {
-      "label": "soccer_conmebol_copa_sudamericana:base-core",
+      "label": "soccer_concacaf_leagues_cup:base-core",
       "error": "Invalid commenceTimeFrom parameter. The format must be YYYY-MM-DDTHH:MM:SSZ, for example 2020-11-24T16:05:00Z",
       "statusCode": 422
     },
     {
-      "label": "soccer_conmebol_copa_sudamericana:btts",
+      "label": "soccer_concacaf_leagues_cup:btts",
       "error": "Markets not supported by this endpoint: btts",
       "statusCode": 422
     },
     {
-      "label": "soccer_conmebol_copa_sudamericana:draw_no_bet",
+      "label": "soccer_concacaf_leagues_cup:draw_no_bet",
       "error": "Markets not supported by this endpoint: draw_no_bet",
       "statusCode": 422
     },
     {
-      "label": "soccer_conmebol_copa_sudamericana:double_chance",
-      "error": "Markets not supported by this endpoint: double_chance",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_chile_campeonato:base-combined",
-      "error": "Markets not supported by this endpoint: btts, double_chance, draw_no_bet",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_chile_campeonato:base-core",
-      "error": "Invalid commenceTimeFrom parameter. The format must be YYYY-MM-DDTHH:MM:SSZ, for example 2020-11-24T16:05:00Z",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_chile_campeonato:btts",
-      "error": "Markets not supported by this endpoint: btts",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_chile_campeonato:draw_no_bet",
-      "error": "Markets not supported by this endpoint: draw_no_bet",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_chile_campeonato:double_chance",
+      "label": "soccer_concacaf_leagues_cup:double_chance",
       "error": "Markets not supported by this endpoint: double_chance",
       "statusCode": 422
     },
@@ -4668,6 +4799,31 @@
       "statusCode": 422
     },
     {
+      "label": "soccer_chile_campeonato:base-combined",
+      "error": "Markets not supported by this endpoint: btts, double_chance, draw_no_bet",
+      "statusCode": 422
+    },
+    {
+      "label": "soccer_chile_campeonato:base-core",
+      "error": "Invalid commenceTimeFrom parameter. The format must be YYYY-MM-DDTHH:MM:SSZ, for example 2020-11-24T16:05:00Z",
+      "statusCode": 422
+    },
+    {
+      "label": "soccer_chile_campeonato:btts",
+      "error": "Markets not supported by this endpoint: btts",
+      "statusCode": 422
+    },
+    {
+      "label": "soccer_chile_campeonato:draw_no_bet",
+      "error": "Markets not supported by this endpoint: draw_no_bet",
+      "statusCode": 422
+    },
+    {
+      "label": "soccer_chile_campeonato:double_chance",
+      "error": "Markets not supported by this endpoint: double_chance",
+      "statusCode": 422
+    },
+    {
       "label": "soccer_spain_la_liga:base-combined",
       "error": "Markets not supported by this endpoint: btts, double_chance, draw_no_bet",
       "statusCode": 422
@@ -4793,6 +4949,31 @@
       "statusCode": 422
     },
     {
+      "label": "soccer_conmebol_copa_sudamericana:base-combined",
+      "error": "Markets not supported by this endpoint: btts, double_chance, draw_no_bet",
+      "statusCode": 422
+    },
+    {
+      "label": "soccer_conmebol_copa_sudamericana:base-core",
+      "error": "Invalid commenceTimeFrom parameter. The format must be YYYY-MM-DDTHH:MM:SSZ, for example 2020-11-24T16:05:00Z",
+      "statusCode": 422
+    },
+    {
+      "label": "soccer_conmebol_copa_sudamericana:btts",
+      "error": "Markets not supported by this endpoint: btts",
+      "statusCode": 422
+    },
+    {
+      "label": "soccer_conmebol_copa_sudamericana:draw_no_bet",
+      "error": "Markets not supported by this endpoint: draw_no_bet",
+      "statusCode": 422
+    },
+    {
+      "label": "soccer_conmebol_copa_sudamericana:double_chance",
+      "error": "Markets not supported by this endpoint: double_chance",
+      "statusCode": 422
+    },
+    {
       "label": "soccer_uefa_nations_league:base-combined",
       "error": "Markets not supported by this endpoint: btts, double_chance, draw_no_bet",
       "statusCode": 422
@@ -4825,5 +5006,5 @@
   },
   "skipped": false,
   "skipReason": null,
-  "completedAt": "2026-08-14T04:00:24.433Z"
+  "completedAt": "2026-08-14T03:42:48.966Z"
 }
