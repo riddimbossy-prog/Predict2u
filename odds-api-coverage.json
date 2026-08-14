@@ -1,6 +1,6 @@
 {
   "version": "v251",
-  "generatedAt": "2026-08-14T14:40:01.807Z",
+  "generatedAt": "2026-08-14T15:10:15.655Z",
   "provider": "The Odds API v4",
   "keyPresent": true,
   "regions": "uk",
@@ -70,6 +70,14 @@
       "sportTitle": "EFL Cup",
       "score": 0.466,
       "matches": 6
+    },
+    {
+      "league": "Pernambucano - U20",
+      "country": "Brazil",
+      "sportKey": "soccer_brazil_campeonato",
+      "sportTitle": "Brazil Série A",
+      "score": 0.305,
+      "matches": 7
     },
     {
       "league": "III Liga - Group 1",
@@ -1248,14 +1256,6 @@
       "matches": 6
     },
     {
-      "league": "Pernambucano - U20",
-      "country": "Brazil",
-      "sportKey": "soccer_brazil_campeonato",
-      "sportTitle": "Brazil Série A",
-      "score": 0.305,
-      "matches": 7
-    },
-    {
       "league": "Kakkonen - Lohko C",
       "country": "Finland",
       "sportKey": "soccer_finland_veikkausliiga",
@@ -1880,12 +1880,6 @@
       "country": "Armenia",
       "reason": "No matching soccer sport key",
       "bestScore": 0.167
-    },
-    {
-      "league": "Friendlies Clubs",
-      "country": "World",
-      "reason": "No matching soccer sport key",
-      "bestScore": 0
     },
     {
       "league": "Vysshaya Liga",
@@ -3361,354 +3355,6 @@
       "league": "Oberliga - Bayern Nord",
       "home": "Viktoria Aschaffenburg",
       "away": "Eintracht Bamberg",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Premier League Cup",
-      "home": "Southampton U21",
-      "away": "Blackburn Rovers U21",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Premier League Cup",
-      "home": "Stoke City U21",
-      "away": "Leeds United U21",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Premier League Cup",
-      "home": "Swansea City U21",
-      "away": "Birmingham City U21",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Premier League Cup",
-      "home": "Wolves U21",
-      "away": "Burnley U21",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Premier League Cup",
-      "home": "Leicester City U21",
-      "away": "Plymouth U21",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Premier League Cup",
-      "home": "Brentford U21",
-      "away": "Wycombe U21",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Premier League Cup",
-      "home": "Fleetwood Town U21",
-      "away": "Preston North End U21",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Premier League Cup",
-      "home": "Huddersfield Town U21",
-      "away": "Gillingham FC U21",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Premier League",
-      "home": "Airbus UK",
-      "away": "Ammanford AFC",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Premier League",
-      "home": "Cambrian & Clydach",
-      "away": "Flint Town United",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Premier League",
-      "home": "GAP Connah S Quay FC",
-      "away": "Trefelin",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Premier League",
-      "home": "Haverfordwest County AFC",
-      "away": "Penybont",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Premier League",
-      "home": "Llandudno",
-      "away": "Holywell",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Premier League",
-      "home": "The New Saints",
-      "away": "Briton Ferry",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Premier League",
-      "home": "Barry Town",
-      "away": "Cardiff MET",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Premier League",
-      "home": "Caernarfon Town",
-      "away": "Colwyn Bay",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Canadian Premier League",
-      "home": "Vancouver FC",
-      "away": "Pacific FC",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Canadian Premier League",
-      "home": "Cavalry FC",
-      "away": "Forge",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Canadian Premier League",
-      "home": "Supra du Quebec",
-      "away": "Atlético Ottawa",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Canadian Premier League",
-      "home": "York United",
-      "away": "HFX Wanderers FC",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Canadian Premier League",
-      "home": "Atlético Ottawa",
-      "away": "Vancouver FC",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Canadian Premier League",
-      "home": "Forge",
-      "away": "Supra du Quebec",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Queensland Premier League",
-      "home": "Redlands United",
-      "away": "Logan Lightning",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Queensland Premier League",
-      "home": "St George Willawong",
-      "away": "SC Wanderers",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Queensland Premier League",
-      "home": "Holland Park Hawks",
-      "away": "Brisbane Strikers",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Queensland Premier League",
-      "home": "Broadbeach United",
-      "away": "Ipswich",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Queensland Premier League",
-      "home": "Capalaba",
-      "away": "Robina City",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Queensland Premier League",
-      "home": "North Star",
-      "away": "Caboolture",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "U18 Premier League - North",
-      "home": "Burnley U18",
-      "away": "Stoke City U18",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "U18 Premier League - North",
-      "home": "Manchester City U18",
-      "away": "Liverpool U18",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "U18 Premier League - North",
-      "home": "Everton U18",
-      "away": "Leeds United U18",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "U18 Premier League - North",
-      "home": "Wolves U18",
-      "away": "Blackburn Rovers U18",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "U18 Premier League - North",
-      "home": "Middlesbrough U18",
-      "away": "Leicester City U18",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "U18 Premier League - North",
-      "home": "Newcastle United U18",
-      "away": "Derby County U18",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "U18 Premier League - South",
-      "home": "Aston Villa U18",
-      "away": "AFC Bournemouth U18",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "U18 Premier League - South",
-      "home": "Birmingham City U18",
-      "away": "Brighton U18",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "U18 Premier League - South",
-      "home": "Southampton U18",
-      "away": "Brentford U18",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "U18 Premier League - South",
-      "home": "Tottenham Hotspur U18",
-      "away": "Reading U18",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "U18 Premier League - South",
-      "home": "West Ham United U18",
-      "away": "Crystal Palace U18",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "U18 Premier League - South",
-      "home": "Ipswich Town U18",
-      "away": "Fulham U18",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "U18 Premier League - South",
-      "home": "West Bromwich Albion U18",
-      "away": "Arsenal U18",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "U18 Premier League - South",
-      "home": "Chelsea U18",
-      "away": "Norwich City U18",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Premier League",
-      "home": "Thimphu",
-      "away": "Transport United",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Premier League",
-      "home": "Ugyen Academy",
-      "away": "Tensung",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Premier League",
-      "home": "Tsirang",
-      "away": "Bhutan U19",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Premier League",
-      "home": "Drukpa",
-      "away": "Thimphu City",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Premier League",
-      "home": "Kairat Almaty",
-      "away": "Ulytau",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Premier League",
-      "home": "Zhenys",
-      "away": "Zhetysu",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Premier League",
-      "home": "Kaisar",
-      "away": "Aktobe",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Premier League",
-      "home": "Ordabasy",
-      "away": "Altay",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Premier League",
-      "home": "Irtysh",
-      "away": "FK Tobol Kostanay",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Premier League",
-      "home": "Kaspiy",
-      "away": "Yelimay Semey",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Premier League",
-      "home": "Kyzyl-Zhar",
-      "away": "FC Astana",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Premier League",
-      "home": "Atyrau",
-      "away": "Okzhetpes",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Premier League International Cup",
-      "home": "Sunderland U21",
-      "away": "Jong PSV U21",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "J1 League",
-      "home": "Tokyo Verdy",
-      "away": "Kashiwa Reysol",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "J1 League",
-      "home": "Kashima",
-      "away": "Nagoya Grampus",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "J1 League",
-      "home": "Mito Hollyhock",
-      "away": "Gamba Osaka",
       "reason": "No event/team match"
     }
   ],
@@ -5203,5 +4849,5 @@
   },
   "skipped": false,
   "skipReason": null,
-  "completedAt": "2026-08-14T14:40:17.998Z"
+  "completedAt": "2026-08-14T15:10:24.581Z"
 }
