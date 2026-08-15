@@ -1,6 +1,6 @@
 {
   "version": "v251",
-  "generatedAt": "2026-08-15T19:22:10.799Z",
+  "generatedAt": "2026-08-15T19:50:16.306Z",
   "provider": "The Odds API v4",
   "keyPresent": true,
   "regions": "uk",
@@ -278,102 +278,6 @@
       "sportTitle": "Bundesliga - Germany",
       "score": 0.347,
       "matches": 8
-    },
-    {
-      "league": "Segunda División",
-      "country": "Spain",
-      "sportKey": "soccer_spain_segunda_division",
-      "sportTitle": "La Liga 2 - Spain",
-      "score": 0.75,
-      "matches": 10
-    },
-    {
-      "league": "Segunda Liga",
-      "country": "Portugal",
-      "sportKey": "soccer_portugal_primeira_liga",
-      "sportTitle": "Primeira Liga - Portugal",
-      "score": 0.323,
-      "matches": 8
-    },
-    {
-      "league": "Super Liga",
-      "country": "Moldova",
-      "sportKey": "soccer_turkey_super_league",
-      "sportTitle": "Turkey Super League",
-      "score": 0.286,
-      "matches": 3
-    },
-    {
-      "league": "Ykkösliiga",
-      "country": "Finland",
-      "sportKey": "soccer_finland_veikkausliiga",
-      "sportTitle": "Veikkausliiga - Finland",
-      "score": 0.38,
-      "matches": 5
-    },
-    {
-      "league": "Bundesliga",
-      "country": "Austria",
-      "sportKey": "soccer_austria_bundesliga",
-      "sportTitle": "Austrian Football Bundesliga",
-      "score": 0.833,
-      "matches": 5
-    },
-    {
-      "league": "Championship",
-      "country": "England",
-      "sportKey": "soccer_efl_champ",
-      "sportTitle": "Championship",
-      "score": 0.487,
-      "matches": 4
-    },
-    {
-      "league": "Eredivisie",
-      "country": "Netherlands",
-      "sportKey": "soccer_netherlands_eredivisie",
-      "sportTitle": "Dutch Eredivisie",
-      "score": 1,
-      "matches": 7
-    },
-    {
-      "league": "League Cup",
-      "country": "Scotland",
-      "sportKey": "soccer_england_efl_cup",
-      "sportTitle": "EFL Cup",
-      "score": 0.653,
-      "matches": 5
-    },
-    {
-      "league": "Pro League",
-      "country": "United-Arab-Emirates",
-      "sportKey": "soccer_saudi_arabia_pro_league",
-      "sportTitle": "Saudi Pro League",
-      "score": 0.57,
-      "matches": 6
-    },
-    {
-      "league": "II Liga - East",
-      "country": "Poland",
-      "sportKey": "soccer_poland_ekstraklasa",
-      "sportTitle": "Ekstraklasa - Poland",
-      "score": 0.323,
-      "matches": 7
-    },
-    {
-      "league": "Premier League",
-      "country": "Belarus",
-      "sportKey": "soccer_epl",
-      "sportTitle": "EPL",
-      "score": 0.987,
-      "matches": 5
-    },
-    {
-      "league": "Primeira Liga",
-      "country": "Portugal",
-      "sportKey": "soccer_portugal_primeira_liga",
-      "sportTitle": "Primeira Liga - Portugal",
-      "score": 1,
-      "matches": 7
     },
     {
       "league": "Segunda División",
@@ -2252,12 +2156,6 @@
       "bestScore": 0.167
     },
     {
-      "league": "FNL",
-      "country": "Czech-Republic",
-      "reason": "No matching soccer sport key",
-      "bestScore": 0
-    },
-    {
       "league": "Persian Gulf Pro League",
       "country": "Iran",
       "reason": "No matching soccer sport key",
@@ -3682,11 +3580,11 @@
       "market": "double_chance"
     },
     {
-      "sportKey": "soccer_mexico_ligamx",
+      "sportKey": "soccer_austria_bundesliga",
       "market": "btts"
     },
     {
-      "sportKey": "soccer_mexico_ligamx",
+      "sportKey": "soccer_austria_bundesliga",
       "market": "draw_no_bet"
     },
     {
@@ -3718,15 +3616,15 @@
       "market": "double_chance"
     },
     {
-      "sportKey": "soccer_austria_bundesliga",
+      "sportKey": "soccer_portugal_primeira_liga",
       "market": "btts"
     },
     {
-      "sportKey": "soccer_austria_bundesliga",
+      "sportKey": "soccer_portugal_primeira_liga",
       "market": "draw_no_bet"
     },
     {
-      "sportKey": "soccer_austria_bundesliga",
+      "sportKey": "soccer_portugal_primeira_liga",
       "market": "double_chance"
     },
     {
@@ -3787,18 +3685,6 @@
     },
     {
       "sportKey": "soccer_epl",
-      "market": "double_chance"
-    },
-    {
-      "sportKey": "soccer_saudi_arabia_pro_league",
-      "market": "btts"
-    },
-    {
-      "sportKey": "soccer_saudi_arabia_pro_league",
-      "market": "draw_no_bet"
-    },
-    {
-      "sportKey": "soccer_saudi_arabia_pro_league",
       "market": "double_chance"
     },
     {
@@ -4319,22 +4205,22 @@
       "statusCode": 422
     },
     {
-      "label": "soccer_mexico_ligamx:base-combined",
+      "label": "soccer_austria_bundesliga:base-combined",
       "error": "Markets not supported by this endpoint: btts, double_chance, draw_no_bet",
       "statusCode": 422
     },
     {
-      "label": "soccer_mexico_ligamx:base-core",
+      "label": "soccer_austria_bundesliga:base-core",
       "error": "Invalid commenceTimeFrom parameter. The format must be YYYY-MM-DDTHH:MM:SSZ, for example 2020-11-24T16:05:00Z",
       "statusCode": 422
     },
     {
-      "label": "soccer_mexico_ligamx:btts",
+      "label": "soccer_austria_bundesliga:btts",
       "error": "Markets not supported by this endpoint: btts",
       "statusCode": 422
     },
     {
-      "label": "soccer_mexico_ligamx:draw_no_bet",
+      "label": "soccer_austria_bundesliga:draw_no_bet",
       "error": "Markets not supported by this endpoint: draw_no_bet",
       "statusCode": 422
     },
@@ -4394,27 +4280,27 @@
       "statusCode": 422
     },
     {
-      "label": "soccer_austria_bundesliga:base-combined",
+      "label": "soccer_portugal_primeira_liga:base-combined",
       "error": "Markets not supported by this endpoint: btts, double_chance, draw_no_bet",
       "statusCode": 422
     },
     {
-      "label": "soccer_austria_bundesliga:base-core",
+      "label": "soccer_portugal_primeira_liga:base-core",
       "error": "Invalid commenceTimeFrom parameter. The format must be YYYY-MM-DDTHH:MM:SSZ, for example 2020-11-24T16:05:00Z",
       "statusCode": 422
     },
     {
-      "label": "soccer_austria_bundesliga:btts",
+      "label": "soccer_portugal_primeira_liga:btts",
       "error": "Markets not supported by this endpoint: btts",
       "statusCode": 422
     },
     {
-      "label": "soccer_austria_bundesliga:draw_no_bet",
+      "label": "soccer_portugal_primeira_liga:draw_no_bet",
       "error": "Markets not supported by this endpoint: draw_no_bet",
       "statusCode": 422
     },
     {
-      "label": "soccer_austria_bundesliga:double_chance",
+      "label": "soccer_portugal_primeira_liga:double_chance",
       "error": "Markets not supported by this endpoint: double_chance",
       "statusCode": 422
     },
@@ -4540,31 +4426,6 @@
     },
     {
       "label": "soccer_epl:double_chance",
-      "error": "Markets not supported by this endpoint: double_chance",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_saudi_arabia_pro_league:base-combined",
-      "error": "Markets not supported by this endpoint: btts, double_chance, draw_no_bet",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_saudi_arabia_pro_league:base-core",
-      "error": "Invalid commenceTimeFrom parameter. The format must be YYYY-MM-DDTHH:MM:SSZ, for example 2020-11-24T16:05:00Z",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_saudi_arabia_pro_league:btts",
-      "error": "Markets not supported by this endpoint: btts",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_saudi_arabia_pro_league:draw_no_bet",
-      "error": "Markets not supported by this endpoint: draw_no_bet",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_saudi_arabia_pro_league:double_chance",
       "error": "Markets not supported by this endpoint: double_chance",
       "statusCode": 422
     },
@@ -5076,5 +4937,5 @@
   },
   "skipped": false,
   "skipReason": null,
-  "completedAt": "2026-08-15T19:22:34.398Z"
+  "completedAt": "2026-08-15T19:50:29.023Z"
 }
