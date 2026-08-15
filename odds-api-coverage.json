@@ -1,6 +1,6 @@
 {
   "version": "v251",
-  "generatedAt": "2026-08-15T01:16:35.474Z",
+  "generatedAt": "2026-08-15T01:50:17.205Z",
   "provider": "The Odds API v4",
   "keyPresent": true,
   "regions": "uk",
@@ -853,7 +853,7 @@
       "sportKey": "soccer_brazil_campeonato",
       "sportTitle": "Brazil Série A",
       "score": 0.305,
-      "matches": 6
+      "matches": 7
     },
     {
       "league": "Premier League",
@@ -1184,14 +1184,6 @@
       "matches": 5
     },
     {
-      "league": "FAI Cup",
-      "country": "Ireland",
-      "sportKey": "soccer_league_of_ireland",
-      "sportTitle": "League of Ireland",
-      "score": 0.291,
-      "matches": 5
-    },
-    {
       "league": "Liga MX U21",
       "country": "Mexico",
       "sportKey": "soccer_mexico_ligamx",
@@ -1246,22 +1238,6 @@
       "sportTitle": "Turkey Super League",
       "score": 0.323,
       "matches": 10
-    },
-    {
-      "league": "Coppa Italia",
-      "country": "Italy",
-      "sportKey": "soccer_italy_coppa_italia",
-      "sportTitle": "Coppa Italia",
-      "score": 1,
-      "matches": 12
-    },
-    {
-      "league": "Coppa Italia Serie C",
-      "country": "Italy",
-      "sportKey": "soccer_italy_coppa_italia",
-      "sportTitle": "Coppa Italia",
-      "score": 0.609,
-      "matches": 20
     },
     {
       "league": "Coppa Italia",
@@ -3624,11 +3600,11 @@
       "market": "btts"
     },
     {
-      "sportKey": "soccer_argentina_primera_division",
+      "sportKey": "soccer_brazil_serie_b",
       "market": "draw_no_bet"
     },
     {
-      "sportKey": "soccer_argentina_primera_division",
+      "sportKey": "soccer_brazil_serie_b",
       "market": "double_chance"
     },
     {
@@ -4188,31 +4164,6 @@
     },
     {
       "label": "soccer_brazil_serie_b:double_chance",
-      "error": "Markets not supported by this endpoint: double_chance",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_argentina_primera_division:base-combined",
-      "error": "Markets not supported by this endpoint: btts, double_chance, draw_no_bet",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_argentina_primera_division:base-core",
-      "error": "Invalid commenceTimeFrom parameter. The format must be YYYY-MM-DDTHH:MM:SSZ, for example 2020-11-24T16:05:00Z",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_argentina_primera_division:btts",
-      "error": "Markets not supported by this endpoint: btts",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_argentina_primera_division:draw_no_bet",
-      "error": "Markets not supported by this endpoint: draw_no_bet",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_argentina_primera_division:double_chance",
       "error": "Markets not supported by this endpoint: double_chance",
       "statusCode": 422
     },
@@ -5074,5 +5025,5 @@
   },
   "skipped": false,
   "skipReason": null,
-  "completedAt": "2026-08-15T01:16:51.803Z"
+  "completedAt": "2026-08-15T01:50:41.592Z"
 }
