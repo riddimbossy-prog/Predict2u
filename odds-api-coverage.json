@@ -1,12 +1,20 @@
 {
   "version": "v251",
-  "generatedAt": "2026-08-14T23:42:09.823Z",
+  "generatedAt": "2026-08-15T00:10:17.311Z",
   "provider": "The Odds API v4",
   "keyPresent": true,
   "regions": "uk",
   "sportsAvailable": 82,
   "soccerSportsAvailable": 45,
   "sportMappings": [
+    {
+      "league": "Pernambucano - U20",
+      "country": "Brazil",
+      "sportKey": "soccer_brazil_campeonato",
+      "sportTitle": "Brazil Série A",
+      "score": 0.305,
+      "matches": 7
+    },
     {
       "league": "III Liga - Group 3",
       "country": "Poland",
@@ -46,14 +54,6 @@
       "sportTitle": "MLS",
       "score": 1,
       "matches": 19
-    },
-    {
-      "league": "Capixaba B",
-      "country": "Brazil",
-      "sportKey": "soccer_brazil_serie_b",
-      "sportTitle": "Brazil Série B",
-      "score": 0.466,
-      "matches": 7
     },
     {
       "league": "Capixaba B",
@@ -862,14 +862,6 @@
       "sportTitle": "Austrian Football Bundesliga",
       "score": 0.347,
       "matches": 4
-    },
-    {
-      "league": "Pernambucano - U20",
-      "country": "Brazil",
-      "sportKey": "soccer_brazil_campeonato",
-      "sportTitle": "Brazil Série A",
-      "score": 0.305,
-      "matches": 7
     },
     {
       "league": "Premier League",
@@ -1832,7 +1824,7 @@
       "matches": 9
     }
   ],
-  "matchesConsidered": 2798,
+  "matchesConsidered": 2797,
   "matchesMatched": 0,
   "matchesUpdated": 0,
   "fieldsFilled": 0,
@@ -3132,141 +3124,21 @@
       "reason": "No event/team match"
     },
     {
-      "league": "Kansallinen Liiga",
-      "home": "Ilves W",
-      "away": "IF Gnistan",
+      "league": "Central Youth League",
+      "home": "Raków Częstochowa U19",
+      "away": "Arka Gdynia U19",
       "reason": "No event/team match"
     },
     {
-      "league": "Kansallinen Liiga",
-      "home": "JyPK W",
-      "away": "EBK W",
+      "league": "Central Youth League",
+      "home": "Wisła Kraków U19",
+      "away": "Korona Kielce U19",
       "reason": "No event/team match"
     },
     {
-      "league": "Kansallinen Liiga",
-      "home": "VIFK W",
-      "away": "Honka W",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Kansallinen Liiga",
-      "home": "Åland United W",
-      "away": "HPS W",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Kansallinen Liiga",
-      "home": "HJK W",
-      "away": "KuPS W",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Kakkonen - Lohko A",
-      "home": "HIFK Helsinki",
-      "away": "Atlantis",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Kakkonen - Lohko A",
-      "home": "HPS",
-      "away": "Union Plaani",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Kakkonen - Lohko A",
-      "home": "PuiU Helsinki",
-      "away": "Kiffen",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Kakkonen - Lohko A",
-      "home": "Reipas",
-      "away": "PEPO",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Kakkonen - Lohko B",
-      "home": "ÅIFK",
-      "away": "EPS",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Kakkonen - Lohko B",
-      "home": "Honka",
-      "away": "P-Iirot",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Kakkonen - Lohko B",
-      "home": "Musa",
-      "away": "EBK",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Kakkonen - Lohko B",
-      "home": "HJS Akatemia",
-      "away": "GrIFK",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Kakkonen - Lohko B",
-      "home": "Ilves II",
-      "away": "NJS",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Ykkönen",
-      "home": "SalPa",
-      "away": "FC jazz",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Ykkönen",
-      "home": "Tampere United",
-      "away": "TPV",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Ykkönen",
-      "home": "OLS",
-      "away": "Rops",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Ykkönen",
-      "home": "Inter Turku II",
-      "away": "KPV-j",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Ykkönen",
-      "home": "KuPS Akatemia",
-      "away": "PKKU",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Ykkönen",
-      "home": "VJS",
-      "away": "JJK",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Ykkösliiga",
-      "home": "JIPPO",
-      "away": "SJK Akatemia",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Ykkösliiga",
-      "home": "PK-35",
-      "away": "Klubi-04",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Ykkösliiga",
-      "home": "Kooteepee",
-      "away": "KäPa",
+      "league": "Central Youth League",
+      "home": "Escola Varsovia U19",
+      "away": "Stal Rzeszów U19",
       "reason": "No event/team match"
     },
     {
@@ -3463,6 +3335,18 @@
     }
   ],
   "unsupportedMarkets": [
+    {
+      "sportKey": "soccer_brazil_campeonato",
+      "market": "btts"
+    },
+    {
+      "sportKey": "soccer_brazil_campeonato",
+      "market": "draw_no_bet"
+    },
+    {
+      "sportKey": "soccer_brazil_campeonato",
+      "market": "double_chance"
+    },
     {
       "sportKey": "soccer_poland_ekstraklasa",
       "market": "btts"
@@ -3909,6 +3793,31 @@
     }
   ],
   "requestErrors": [
+    {
+      "label": "soccer_brazil_campeonato:base-combined",
+      "error": "Markets not supported by this endpoint: btts, double_chance, draw_no_bet",
+      "statusCode": 422
+    },
+    {
+      "label": "soccer_brazil_campeonato:base-core",
+      "error": "Invalid commenceTimeFrom parameter. The format must be YYYY-MM-DDTHH:MM:SSZ, for example 2020-11-24T16:05:00Z",
+      "statusCode": 422
+    },
+    {
+      "label": "soccer_brazil_campeonato:btts",
+      "error": "Markets not supported by this endpoint: btts",
+      "statusCode": 422
+    },
+    {
+      "label": "soccer_brazil_campeonato:draw_no_bet",
+      "error": "Markets not supported by this endpoint: draw_no_bet",
+      "statusCode": 422
+    },
+    {
+      "label": "soccer_brazil_campeonato:double_chance",
+      "error": "Markets not supported by this endpoint: double_chance",
+      "statusCode": 422
+    },
     {
       "label": "soccer_poland_ekstraklasa:base-combined",
       "error": "Markets not supported by this endpoint: btts, double_chance, draw_no_bet",
@@ -4842,5 +4751,5 @@
   },
   "skipped": false,
   "skipReason": null,
-  "completedAt": "2026-08-14T23:42:24.666Z"
+  "completedAt": "2026-08-15T00:10:45.269Z"
 }
