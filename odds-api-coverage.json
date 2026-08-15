@@ -1,6 +1,6 @@
 {
   "version": "v251",
-  "generatedAt": "2026-08-15T16:36:05.549Z",
+  "generatedAt": "2026-08-15T17:10:16.226Z",
   "provider": "The Odds API v4",
   "keyPresent": true,
   "regions": "uk",
@@ -104,14 +104,6 @@
       "matches": 6
     },
     {
-      "league": "Second League - Group 2",
-      "country": "Russia",
-      "sportKey": "soccer_russia_premier_league",
-      "sportTitle": "Premier League - Russia",
-      "score": 0.43,
-      "matches": 6
-    },
-    {
       "league": "Segunda División",
       "country": "Uruguay",
       "sportKey": "soccer_spain_segunda_division",
@@ -142,14 +134,6 @@
       "sportTitle": "Bundesliga - Germany",
       "score": 0.305,
       "matches": 3
-    },
-    {
-      "league": "Kvindeliga",
-      "country": "Denmark",
-      "sportKey": "soccer_denmark_superliga",
-      "sportTitle": "Denmark Superliga",
-      "score": 0.38,
-      "matches": 5
     },
     {
       "league": "1. Division",
@@ -2084,12 +2068,6 @@
       "bestScore": 0.143
     },
     {
-      "league": "1. Deild",
-      "country": "Faroe-Islands",
-      "reason": "No matching soccer sport key",
-      "bestScore": 0.111
-    },
-    {
       "league": "I Liga - Women",
       "country": "Slovakia",
       "reason": "No matching soccer sport key",
@@ -3706,30 +3684,6 @@
       "market": "double_chance"
     },
     {
-      "sportKey": "soccer_sweden_superettan",
-      "market": "btts"
-    },
-    {
-      "sportKey": "soccer_sweden_superettan",
-      "market": "draw_no_bet"
-    },
-    {
-      "sportKey": "soccer_sweden_superettan",
-      "market": "double_chance"
-    },
-    {
-      "sportKey": "soccer_efl_champ",
-      "market": "btts"
-    },
-    {
-      "sportKey": "soccer_efl_champ",
-      "market": "draw_no_bet"
-    },
-    {
-      "sportKey": "soccer_efl_champ",
-      "market": "double_chance"
-    },
-    {
       "sportKey": "soccer_spl",
       "market": "btts"
     },
@@ -4352,56 +4306,6 @@
     },
     {
       "label": "soccer_saudi_arabia_pro_league:double_chance",
-      "error": "Markets not supported by this endpoint: double_chance",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_efl_champ:base-combined",
-      "error": "Markets not supported by this endpoint: btts, double_chance, draw_no_bet",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_efl_champ:base-core",
-      "error": "Invalid commenceTimeFrom parameter. The format must be YYYY-MM-DDTHH:MM:SSZ, for example 2020-11-24T16:05:00Z",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_efl_champ:btts",
-      "error": "Markets not supported by this endpoint: btts",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_efl_champ:draw_no_bet",
-      "error": "Markets not supported by this endpoint: draw_no_bet",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_efl_champ:double_chance",
-      "error": "Markets not supported by this endpoint: double_chance",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_sweden_superettan:base-combined",
-      "error": "Markets not supported by this endpoint: btts, double_chance, draw_no_bet",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_sweden_superettan:base-core",
-      "error": "Invalid commenceTimeFrom parameter. The format must be YYYY-MM-DDTHH:MM:SSZ, for example 2020-11-24T16:05:00Z",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_sweden_superettan:btts",
-      "error": "Markets not supported by this endpoint: btts",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_sweden_superettan:draw_no_bet",
-      "error": "Markets not supported by this endpoint: draw_no_bet",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_sweden_superettan:double_chance",
       "error": "Markets not supported by this endpoint: double_chance",
       "statusCode": 422
     },
@@ -5113,5 +5017,5 @@
   },
   "skipped": false,
   "skipReason": null,
-  "completedAt": "2026-08-15T16:36:30.533Z"
+  "completedAt": "2026-08-15T17:10:25.509Z"
 }
