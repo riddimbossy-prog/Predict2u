@@ -1,6 +1,6 @@
 {
   "version": "v251",
-  "generatedAt": "2026-08-16T14:20:16.608Z",
+  "generatedAt": "2026-08-16T14:30:18.184Z",
   "provider": "The Odds API v4",
   "keyPresent": true,
   "regions": "uk",
@@ -8,20 +8,12 @@
   "soccerSportsAvailable": 45,
   "sportMappings": [
     {
-      "league": "Major League Soccer",
-      "country": "USA",
-      "sportKey": "soccer_usa_mls",
-      "sportTitle": "MLS",
-      "score": 1,
-      "matches": 21
-    },
-    {
       "league": "USL Championship",
       "country": "USA",
       "sportKey": "soccer_usa_mls",
       "sportTitle": "MLS",
       "score": 0.323,
-      "matches": 3
+      "matches": 2
     },
     {
       "league": "Liga MX",
@@ -1152,6 +1144,14 @@
       "matches": 2
     },
     {
+      "league": "Major League Soccer",
+      "country": "USA",
+      "sportKey": "soccer_usa_mls",
+      "sportTitle": "MLS",
+      "score": 1,
+      "matches": 19
+    },
+    {
       "league": "MLS Next Pro",
       "country": "USA",
       "sportKey": "soccer_usa_mls",
@@ -1888,7 +1888,7 @@
       "matches": 1
     }
   ],
-  "matchesConsidered": 1877,
+  "matchesConsidered": 1874,
   "matchesMatched": 0,
   "matchesUpdated": 0,
   "fieldsFilled": 0,
@@ -2618,15 +2618,15 @@
       "bestScore": 0.125
     },
     {
-      "league": "Major League Soccer",
-      "home": "Los Angeles FC",
-      "away": "San Diego",
+      "league": "USL Championship",
+      "home": "Sacramento Republic",
+      "away": "Lexington",
       "reason": "No event/team match"
     },
     {
-      "league": "Major League Soccer",
-      "home": "San Jose Earthquakes",
-      "away": "St. Louis City",
+      "league": "USL Championship",
+      "home": "Phoenix Rising",
+      "away": "Colorado Springs",
       "reason": "No event/team match"
     },
     {
@@ -2741,24 +2741,6 @@
       "league": "Major League Soccer",
       "home": "Portland Timbers",
       "away": "San Diego",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "USL Championship",
-      "home": "Las Vegas Lights",
-      "away": "Brooklyn",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "USL Championship",
-      "home": "Sacramento Republic",
-      "away": "Lexington",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "USL Championship",
-      "home": "Phoenix Rising",
-      "away": "Colorado Springs",
       "reason": "No event/team match"
     },
     {
@@ -3395,6 +3377,24 @@
       "league": "Regionalliga - North",
       "home": "Pinzgau Saalfelden",
       "away": "Seekirchen",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Regionalliga - North",
+      "home": "Bad Schallerbach",
+      "away": "Wohnbau Dietach",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Regionalliga - North",
+      "home": "Leonfelden",
+      "away": "UFC Hallein",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Regionalliga - North",
+      "home": "Wallern / Marienkirchen",
+      "away": "TSV St. Johann",
       "reason": "No event/team match"
     }
   ],
@@ -4889,5 +4889,5 @@
   },
   "skipped": false,
   "skipReason": null,
-  "completedAt": "2026-08-16T14:20:29.382Z"
+  "completedAt": "2026-08-16T14:30:42.562Z"
 }
