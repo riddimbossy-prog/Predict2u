@@ -1,20 +1,12 @@
 {
   "version": "v251",
-  "generatedAt": "2026-08-17T12:20:19.160Z",
+  "generatedAt": "2026-08-17T12:30:18.284Z",
   "provider": "The Odds API v4",
   "keyPresent": true,
   "regions": "uk",
   "sportsAvailable": 71,
   "soccerSportsAvailable": 44,
   "sportMappings": [
-    {
-      "league": "Major League Soccer",
-      "country": "USA",
-      "sportKey": "soccer_usa_mls",
-      "sportTitle": "MLS",
-      "score": 1,
-      "matches": 17
-    },
     {
       "league": "NWSL Women",
       "country": "USA",
@@ -38,6 +30,14 @@
       "sportTitle": "MLS",
       "score": 1,
       "matches": 9
+    },
+    {
+      "league": "Major League Soccer",
+      "country": "USA",
+      "sportKey": "soccer_usa_mls",
+      "sportTitle": "MLS",
+      "score": 1,
+      "matches": 16
     },
     {
       "league": "Professional Development League",
@@ -1312,7 +1312,7 @@
       "matches": 1
     }
   ],
-  "matchesConsidered": 1193,
+  "matchesConsidered": 1192,
   "matchesMatched": 0,
   "matchesUpdated": 0,
   "fieldsFilled": 0,
@@ -1928,9 +1928,75 @@
       "bestScore": 0.125
     },
     {
-      "league": "Major League Soccer",
-      "home": "Austin",
-      "away": "FC Dallas",
+      "league": "NWSL Women",
+      "home": "Angel City W",
+      "away": "Washington Spirit W",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "NWSL Women",
+      "home": "Racing Louisville W",
+      "away": "Seattle Reign FC W",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "NWSL Women",
+      "home": "Houston Dash W",
+      "away": "Chicago Red Stars W",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "MLS Next Pro",
+      "home": "Los Angeles FC II",
+      "away": "Tacoma Defiance",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "MLS Next Pro",
+      "home": "The Town",
+      "away": "St. Louis City II",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "MLS Next Pro",
+      "home": "Atlanta United II",
+      "away": "Chicago Fire II",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "MLS Next Pro",
+      "home": "New York City II",
+      "away": "FC Cincinnati II",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "MLS Next Pro",
+      "home": "Crown Legacy",
+      "away": "Connecticut FC",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "MLS Next Pro",
+      "home": "Houston Dynamo FC II",
+      "away": "The Town",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "MLS Next Pro",
+      "home": "Inter Miami II",
+      "away": "New England II",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "MLS Next Pro",
+      "home": "North Texas",
+      "away": "Austin II",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "MLS Next Pro",
+      "home": "Los Angeles FC II",
+      "away": "Sporting KC II",
       "reason": "No event/team match"
     },
     {
@@ -2027,78 +2093,6 @@
       "league": "Major League Soccer",
       "home": "Portland Timbers",
       "away": "San Diego",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "NWSL Women",
-      "home": "Angel City W",
-      "away": "Washington Spirit W",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "NWSL Women",
-      "home": "Racing Louisville W",
-      "away": "Seattle Reign FC W",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "NWSL Women",
-      "home": "Houston Dash W",
-      "away": "Chicago Red Stars W",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "MLS Next Pro",
-      "home": "Los Angeles FC II",
-      "away": "Tacoma Defiance",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "MLS Next Pro",
-      "home": "The Town",
-      "away": "St. Louis City II",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "MLS Next Pro",
-      "home": "Atlanta United II",
-      "away": "Chicago Fire II",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "MLS Next Pro",
-      "home": "New York City II",
-      "away": "FC Cincinnati II",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "MLS Next Pro",
-      "home": "Crown Legacy",
-      "away": "Connecticut FC",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "MLS Next Pro",
-      "home": "Houston Dynamo FC II",
-      "away": "The Town",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "MLS Next Pro",
-      "home": "Inter Miami II",
-      "away": "New England II",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "MLS Next Pro",
-      "home": "North Texas",
-      "away": "Austin II",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "MLS Next Pro",
-      "home": "Los Angeles FC II",
-      "away": "Sporting KC II",
       "reason": "No event/team match"
     },
     {
@@ -2819,6 +2813,12 @@
       "league": "National League Cup",
       "home": "Gateshead",
       "away": "Nottingham Forest U21",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "National League Cup",
+      "home": "AFC Hornchurch",
+      "away": "Norwich City U21",
       "reason": "No event/team match"
     }
   ],
@@ -4276,5 +4276,5 @@
   },
   "skipped": false,
   "skipReason": null,
-  "completedAt": "2026-08-17T12:20:42.803Z"
+  "completedAt": "2026-08-17T12:30:36.763Z"
 }
