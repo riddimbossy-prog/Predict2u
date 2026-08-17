@@ -1,20 +1,12 @@
 {
   "version": "v251",
-  "generatedAt": "2026-08-17T09:10:17.721Z",
+  "generatedAt": "2026-08-17T09:20:16.798Z",
   "provider": "The Odds API v4",
   "keyPresent": true,
   "regions": "uk",
   "sportsAvailable": 71,
   "soccerSportsAvailable": 44,
   "sportMappings": [
-    {
-      "league": "Primera División",
-      "country": "Bolivia",
-      "sportKey": "soccer_argentina_primera_division",
-      "sportTitle": "Primera División - Argentina",
-      "score": 0.653,
-      "matches": 3
-    },
     {
       "league": "Primera División",
       "country": "Chile",
@@ -166,6 +158,14 @@
       "sportTitle": "Primera División - Argentina",
       "score": 0.653,
       "matches": 3
+    },
+    {
+      "league": "Primera División",
+      "country": "Bolivia",
+      "sportKey": "soccer_argentina_primera_division",
+      "sportTitle": "Primera División - Argentina",
+      "score": 0.653,
+      "matches": 2
     },
     {
       "league": "Primera B",
@@ -1344,7 +1344,7 @@
       "matches": 1
     }
   ],
-  "matchesConsidered": 1234,
+  "matchesConsidered": 1232,
   "matchesMatched": 0,
   "matchesUpdated": 0,
   "fieldsFilled": 0,
@@ -1353,12 +1353,6 @@
   "derivedHtftMatches": 0,
   "bookmakerRows": 0,
   "unmatched": [
-    {
-      "league": "Liga Pro",
-      "country": "Ecuador",
-      "reason": "No matching soccer sport key",
-      "bestScore": 0.143
-    },
     {
       "league": "Division Profesional - Clausura",
       "country": "Paraguay",
@@ -1394,6 +1388,12 @@
       "country": "Panama",
       "reason": "No matching soccer sport key",
       "bestScore": 0.111
+    },
+    {
+      "league": "Liga Pro",
+      "country": "Ecuador",
+      "reason": "No matching soccer sport key",
+      "bestScore": 0.143
     },
     {
       "league": "AFC Women's Champions League",
@@ -1967,20 +1967,38 @@
     },
     {
       "league": "Primera División",
-      "home": "Nacional Potosí",
-      "away": "ABB",
+      "home": "Colo Colo",
+      "away": "O'Higgins",
       "reason": "No event/team match"
     },
     {
       "league": "Primera División",
-      "home": "Independiente Petrolero",
-      "away": "Gualberto Villarroel SJ",
+      "home": "Palestino",
+      "away": "Huachipato",
       "reason": "No event/team match"
     },
     {
-      "league": "Primera División",
-      "home": "The Strongest",
-      "away": "Universitario de Vinto",
+      "league": "Primera B",
+      "home": "Deportes Iquique",
+      "away": "Antofagasta",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Primera B",
+      "home": "Deportes Santa Cruz",
+      "away": "San Luis",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Primera B",
+      "home": "Deportes Copiapo",
+      "away": "Curico Unido",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Primera B",
+      "home": "Deportes Temuco",
+      "away": "Recoleta",
       "reason": "No event/team match"
     },
     {
@@ -2095,6 +2113,18 @@
       "league": "Primera División",
       "home": "Alianza Atletico",
       "away": "Sporting Cristal",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Primera División",
+      "home": "Independiente Petrolero",
+      "away": "Gualberto Villarroel SJ",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Primera División",
+      "home": "The Strongest",
+      "away": "Universitario de Vinto",
       "reason": "No event/team match"
     },
     {
@@ -2257,42 +2287,6 @@
       "league": "Copa Argentina",
       "home": "Racing Club",
       "away": "Belgrano Cordoba",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Primera División",
-      "home": "Colo Colo",
-      "away": "O'Higgins",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Primera División",
-      "home": "Palestino",
-      "away": "Huachipato",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Primera B",
-      "home": "Deportes Iquique",
-      "away": "Antofagasta",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Primera B",
-      "home": "Deportes Santa Cruz",
-      "away": "San Luis",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Primera B",
-      "home": "Deportes Copiapo",
-      "away": "Curico Unido",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Primera B",
-      "home": "Deportes Temuco",
-      "away": "Recoleta",
       "reason": "No event/team match"
     },
     {
@@ -2852,31 +2846,37 @@
       "home": "Inter Miami II",
       "away": "New England II",
       "reason": "No event/team match"
+    },
+    {
+      "league": "MLS Next Pro",
+      "home": "North Texas",
+      "away": "Austin II",
+      "reason": "No event/team match"
     }
   ],
   "unsupportedMarkets": [
     {
-      "sportKey": "soccer_argentina_primera_division",
+      "sportKey": "soccer_chile_campeonato",
       "market": "btts"
     },
     {
-      "sportKey": "soccer_argentina_primera_division",
+      "sportKey": "soccer_chile_campeonato",
       "market": "draw_no_bet"
     },
     {
-      "sportKey": "soccer_argentina_primera_division",
+      "sportKey": "soccer_chile_campeonato",
       "market": "double_chance"
     },
     {
-      "sportKey": "soccer_chile_campeonato",
+      "sportKey": "soccer_argentina_primera_division",
       "market": "btts"
     },
     {
-      "sportKey": "soccer_chile_campeonato",
+      "sportKey": "soccer_argentina_primera_division",
       "market": "draw_no_bet"
     },
     {
-      "sportKey": "soccer_chile_campeonato",
+      "sportKey": "soccer_argentina_primera_division",
       "market": "double_chance"
     },
     {
@@ -3326,31 +3326,6 @@
   ],
   "requestErrors": [
     {
-      "label": "soccer_argentina_primera_division:base-combined",
-      "error": "Markets not supported by this endpoint: btts, double_chance, draw_no_bet",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_argentina_primera_division:base-core",
-      "error": "Invalid commenceTimeFrom parameter. The format must be YYYY-MM-DDTHH:MM:SSZ, for example 2020-11-24T16:05:00Z",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_argentina_primera_division:btts",
-      "error": "Markets not supported by this endpoint: btts",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_argentina_primera_division:draw_no_bet",
-      "error": "Markets not supported by this endpoint: draw_no_bet",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_argentina_primera_division:double_chance",
-      "error": "Markets not supported by this endpoint: double_chance",
-      "statusCode": 422
-    },
-    {
       "label": "soccer_chile_campeonato:base-combined",
       "error": "Markets not supported by this endpoint: btts, double_chance, draw_no_bet",
       "statusCode": 422
@@ -3372,6 +3347,31 @@
     },
     {
       "label": "soccer_chile_campeonato:double_chance",
+      "error": "Markets not supported by this endpoint: double_chance",
+      "statusCode": 422
+    },
+    {
+      "label": "soccer_argentina_primera_division:base-combined",
+      "error": "Markets not supported by this endpoint: btts, double_chance, draw_no_bet",
+      "statusCode": 422
+    },
+    {
+      "label": "soccer_argentina_primera_division:base-core",
+      "error": "Invalid commenceTimeFrom parameter. The format must be YYYY-MM-DDTHH:MM:SSZ, for example 2020-11-24T16:05:00Z",
+      "statusCode": 422
+    },
+    {
+      "label": "soccer_argentina_primera_division:btts",
+      "error": "Markets not supported by this endpoint: btts",
+      "statusCode": 422
+    },
+    {
+      "label": "soccer_argentina_primera_division:draw_no_bet",
+      "error": "Markets not supported by this endpoint: draw_no_bet",
+      "statusCode": 422
+    },
+    {
+      "label": "soccer_argentina_primera_division:double_chance",
       "error": "Markets not supported by this endpoint: double_chance",
       "statusCode": 422
     },
@@ -4308,5 +4308,5 @@
   },
   "skipped": false,
   "skipReason": null,
-  "completedAt": "2026-08-17T09:10:45.563Z"
+  "completedAt": "2026-08-17T09:20:24.577Z"
 }
