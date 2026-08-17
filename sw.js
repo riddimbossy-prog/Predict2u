@@ -1,10 +1,10 @@
-/* Predict2U service worker v273 — fast core install, bounded caches,
+/* Predict2U service worker v279 — fast core install, bounded caches,
    native-install support, exact push deep links and recoverable offline navigation. */
-const VERSION='v273';
-const CACHE_VERSION='predict2u-v273';
+const VERSION='v279';
+const CACHE_VERSION='predict2u-v279';
 const APP_CACHE=CACHE_VERSION;
-const RUNTIME_CACHE='predict2u-runtime-v273';
-const IMAGE_CACHE='predict2u-images-v273';
+const RUNTIME_CACHE='predict2u-runtime-v279';
+const IMAGE_CACHE='predict2u-images-v279';
 const IMAGE_LIMIT=90;
 const RUNTIME_LIMIT=90;
 const NETWORK_TIMEOUT=2800;
@@ -15,7 +15,7 @@ const OFFLINE_URL='./offline.html';
 const CORE_SHELL=[
   './','./index.html','./board.html','./bankers.html','./engines.html','./all-engines.html','./engine.html','./news.html','./community.html','./offline.html','./manifest.webmanifest',
   './pwa-launch.js','./pwa-launch.css','./auto-picks-learning-v271.js','./auto-picks-learning-v271.css','./auto-picks-learning-guard-v271.js','./auto-picks-learning-public-v271.json','./auto-picks-gatekeeper-v272.js','./auto-picks-gatekeeper-v271.css','./controls-v267.css','./team-date-filter-v268.css','./team-auto-picks-v269.css','./mobile-responsive-v265.css','./app-launch-v264.js','./app-launch-v264.css','./first-run-v264.js','./first-run-v264.css','./data-freshness-v264.js','./data-freshness-v264.css','./engine-governance-v264.js','./stability-v264.css','./tailwind-lite-v264.css','./current-data.js','./data-meta.json','./pwa-splash-v264.jpg','./mobile-zfold-v257.css','./ui-polish-v259.css','./smart-alerts.js','./smart-alerts.css','./unified-shell-v227.css','./unified-shell-v227.js','./unified-shell-v245.css','./unified-shell-v245.js','./overview-engines-v245.css','./responsive-qa-v227.css','./mobile-board-v229.css','./mobile-card-compact-v230.css','./mobile-card-compact-v230.js','./fullboard-compact-v231.css','./fullboard-compact-v231.js','./simple-ui-v232.css','./simple-fullboard-v233.css','./mobile-picks-week-v235.css','./mobile-app-nav.js','./mobile-app-nav.css','./device-responsive-v207.css','./acca-mobile-v209.css','./mobile-polish-v211.css','./p2u-utilities-v218.css','./engines-rescue-v218.css','./slip.js',
-  './team-context-v273.js','./team-context-v273.css','./specialist-engines-v262.js','./team-rankings.html','./team-rankings.js','./team-rankings.css','./fixture-overlay.js','./odds-engine-guard.js','./fixture-feed-v247.css','./engine-experience-v249.js','./engine-page-v249.js','./engine-page-v249.css','./engine-bankers-v249.js','./engine-bankers-v249.css','./predict2u-logo.png','./predict2u-mark.png','./favicon.ico',
+  './team-context-v273.js','./team-context-v273.css','./specialist-engines-v262.js','./team-rankings.html','./team-rankings.js','./team-rankings.css','./market-intelligence-engine-v277.js','./market-intelligence-v277.js','./market-intelligence-v277.css','./cache-refresh-v278.js','./fixture-overlay.js','./odds-engine-guard.js','./fixture-feed-v247.css','./engine-experience-v249.js','./engine-page-v249.js','./engine-page-v249.css','./engine-bankers-v249.js','./engine-bankers-v249.css','./predict2u-logo.png','./predict2u-mark.png','./favicon.ico',
   './icon-192.png','./icon-512.png','./maskable-icon.png'
 ];
 
@@ -204,6 +204,12 @@ self.addEventListener('fetch',event=>{
   if(!sameOrigin(url))return;
 
   if(/(?:data\.js|current-data\.js|data-meta\.json|fixtures\.js|fixture-snapshot-report\.json|site-health\.json|push-event-snapshot\.json|engine-learning-report\.json|model-governance-report\.json|engine-consensus-report\.json|match-context-report\.json|odds-api-coverage\.json)$/.test(url.pathname)){
+    event.respondWith(networkFirst(request));
+    return;
+  }
+
+  // Team/Market Intelligence is release-critical. Never serve a stale JS/CSS copy first.
+  if(/(?:team-rankings\.js|market-intelligence-engine-v277\.js|market-intelligence-v277\.js|market-intelligence-v277\.css|cache-refresh-v278\.js)$/.test(url.pathname)){
     event.respondWith(networkFirst(request));
     return;
   }
