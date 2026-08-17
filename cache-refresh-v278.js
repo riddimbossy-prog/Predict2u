@@ -19,6 +19,13 @@
     }catch(_){ }
     mark();
     window.dispatchEvent(new CustomEvent('p2u:cache-refreshed',{detail:{version:'v278'}}));
+    try{
+      const url=new URL(location.href);
+      if(url.searchParams.get('refresh')!=='v278'){
+        url.searchParams.set('refresh','v278');
+        location.replace(url.href);
+      }
+    }catch(_){location.reload();}
   };
   clear();
 })();
