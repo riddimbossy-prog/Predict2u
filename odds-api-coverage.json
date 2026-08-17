@@ -1,20 +1,12 @@
 {
   "version": "v251",
-  "generatedAt": "2026-08-17T00:40:17.299Z",
+  "generatedAt": "2026-08-17T00:50:17.886Z",
   "provider": "The Odds API v4",
   "keyPresent": true,
   "regions": "uk",
   "sportsAvailable": 71,
   "soccerSportsAvailable": 44,
   "sportMappings": [
-    {
-      "league": "Ekstraklasa",
-      "country": "Poland",
-      "sportKey": "soccer_poland_ekstraklasa",
-      "sportTitle": "Ekstraklasa - Poland",
-      "score": 1,
-      "matches": 6
-    },
     {
       "league": "AXA Women’s Super League",
       "country": "Switzerland",
@@ -574,6 +566,14 @@
       "sportTitle": "Primeira Liga - Portugal",
       "score": 0.28,
       "matches": 7
+    },
+    {
+      "league": "Ekstraklasa",
+      "country": "Poland",
+      "sportKey": "soccer_poland_ekstraklasa",
+      "sportTitle": "Ekstraklasa - Poland",
+      "score": 1,
+      "matches": 5
     },
     {
       "league": "1. Lig",
@@ -1648,7 +1648,7 @@
       "matches": 1
     }
   ],
-  "matchesConsidered": 1681,
+  "matchesConsidered": 1680,
   "matchesMatched": 0,
   "matchesUpdated": 0,
   "fieldsFilled": 0,
@@ -2408,39 +2408,183 @@
       "bestScore": 0.125
     },
     {
-      "league": "Ekstraklasa",
-      "home": "Motor Lublin",
-      "away": "GKS Katowice",
+      "league": "AXA Women’s Super League",
+      "home": "St. Gallen W",
+      "away": "Yverdon W",
       "reason": "No event/team match"
     },
     {
-      "league": "Ekstraklasa",
-      "home": "Cracovia Krakow",
-      "away": "Raków Częstochowa",
+      "league": "AXA Women’s Super League",
+      "home": "Grasshopper W",
+      "away": "Rapperswil Jona W",
       "reason": "No event/team match"
     },
     {
-      "league": "Ekstraklasa",
-      "home": "Jagiellonia",
-      "away": "Pogon Szczecin",
+      "league": "AXA Women’s Super League",
+      "home": "Young Boys W",
+      "away": "Servette Chênois W",
       "reason": "No event/team match"
     },
     {
-      "league": "Ekstraklasa",
-      "home": "Gornik Zabrze",
-      "away": "Wisla Krakow",
+      "league": "Schweizer Cup",
+      "home": "Biel-Bienne",
+      "away": "FC Aarau",
       "reason": "No event/team match"
     },
     {
-      "league": "Ekstraklasa",
-      "home": "Wisla Plock",
-      "away": "Lech Poznan",
+      "league": "Schweizer Cup",
+      "home": "Buochs",
+      "away": "FC Luzern",
       "reason": "No event/team match"
     },
     {
-      "league": "Ekstraklasa",
-      "home": "Cracovia Krakow",
-      "away": "Wieczysta Kraków",
+      "league": "Schweizer Cup",
+      "home": "Kaufdorf",
+      "away": "Old Boys",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Schweizer Cup",
+      "home": "Kerzers",
+      "away": "FC Sion",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Schweizer Cup",
+      "home": "Köniz",
+      "away": "Münsingen",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Schweizer Cup",
+      "home": "Rebstein",
+      "away": "FC WIL 1900",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Schweizer Cup",
+      "home": "Terre Sainte",
+      "away": "Yverdon Sport",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Schweizer Cup",
+      "home": "Thalwil",
+      "away": "FC ST. Gallen",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Schweizer Cup",
+      "home": "Courrendlin-Courroux",
+      "away": "Grenchen",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Schweizer Cup",
+      "home": "Italien",
+      "away": "Stade Lausanne-Ouchy",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Schweizer Cup",
+      "home": "Saxon Sports",
+      "away": "FC Thun",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Schweizer Cup",
+      "home": "Vedeggio",
+      "away": "FC Lugano",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "1. Liga Classic - Group 1",
+      "home": "Azzurri",
+      "away": "Vevey Sports",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "1. Liga Classic - Group 3",
+      "home": "St. Gallen II",
+      "away": "Taverne",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "1. Liga Classic - Group 3",
+      "home": "Tuggen",
+      "away": "Dietikon",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "1. Liga Classic - Group 3",
+      "home": "Winterthur II",
+      "away": "Thalwil",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "1. Liga Promotion",
+      "home": "Bellinzona",
+      "away": "Basel II",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "1. Liga Promotion",
+      "home": "Zürich II",
+      "away": "Amical Saint-Prex",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "1. Liga Promotion",
+      "home": "Brühl",
+      "away": "Biel-Bienne",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "1. Liga Promotion",
+      "home": "Kreuzlingen",
+      "away": "Cham",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "1. Liga Promotion",
+      "home": "Grand-Saconnex",
+      "away": "FC Schaffhausen",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "1. Liga Promotion",
+      "home": "Breitenrain",
+      "away": "Young Boys II",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "1. Liga Promotion",
+      "home": "YF Juventus",
+      "away": "Bavois",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "1. Liga Classic - Group 2",
+      "home": "Buochs",
+      "away": "Bassecourt",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Challenge League",
+      "home": "Stade Nyonnais",
+      "away": "Étoile Carouge",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Challenge League",
+      "home": "Neuchatel Xamax FC",
+      "away": "Stade Lausanne-Ouchy",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Challenge League",
+      "home": "Rapperswil",
+      "away": "FC Winterthur",
       "reason": "No event/team match"
     },
     {
@@ -2507,6 +2651,36 @@
       "league": "I Liga",
       "home": "Lechia Gdansk",
       "away": "Pogoń Siedlce",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Ekstraklasa",
+      "home": "Cracovia Krakow",
+      "away": "Raków Częstochowa",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Ekstraklasa",
+      "home": "Jagiellonia",
+      "away": "Pogon Szczecin",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Ekstraklasa",
+      "home": "Gornik Zabrze",
+      "away": "Wisla Krakow",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Ekstraklasa",
+      "home": "Wisla Plock",
+      "away": "Lech Poznan",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Ekstraklasa",
+      "home": "Cracovia Krakow",
+      "away": "Wieczysta Kraków",
       "reason": "No event/team match"
     },
     {
@@ -2729,186 +2903,6 @@
       "league": "III Liga - Group 4",
       "home": "Wiślanie Jaśkowice",
       "away": "KSZO 1929",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "AXA Women’s Super League",
-      "home": "St. Gallen W",
-      "away": "Yverdon W",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "AXA Women’s Super League",
-      "home": "Grasshopper W",
-      "away": "Rapperswil Jona W",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "AXA Women’s Super League",
-      "home": "Young Boys W",
-      "away": "Servette Chênois W",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Schweizer Cup",
-      "home": "Biel-Bienne",
-      "away": "FC Aarau",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Schweizer Cup",
-      "home": "Buochs",
-      "away": "FC Luzern",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Schweizer Cup",
-      "home": "Kaufdorf",
-      "away": "Old Boys",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Schweizer Cup",
-      "home": "Kerzers",
-      "away": "FC Sion",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Schweizer Cup",
-      "home": "Köniz",
-      "away": "Münsingen",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Schweizer Cup",
-      "home": "Rebstein",
-      "away": "FC WIL 1900",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Schweizer Cup",
-      "home": "Terre Sainte",
-      "away": "Yverdon Sport",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Schweizer Cup",
-      "home": "Thalwil",
-      "away": "FC ST. Gallen",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Schweizer Cup",
-      "home": "Courrendlin-Courroux",
-      "away": "Grenchen",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Schweizer Cup",
-      "home": "Italien",
-      "away": "Stade Lausanne-Ouchy",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Schweizer Cup",
-      "home": "Saxon Sports",
-      "away": "FC Thun",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Schweizer Cup",
-      "home": "Vedeggio",
-      "away": "FC Lugano",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "1. Liga Classic - Group 1",
-      "home": "Azzurri",
-      "away": "Vevey Sports",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "1. Liga Classic - Group 3",
-      "home": "St. Gallen II",
-      "away": "Taverne",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "1. Liga Classic - Group 3",
-      "home": "Tuggen",
-      "away": "Dietikon",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "1. Liga Classic - Group 3",
-      "home": "Winterthur II",
-      "away": "Thalwil",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "1. Liga Promotion",
-      "home": "Bellinzona",
-      "away": "Basel II",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "1. Liga Promotion",
-      "home": "Zürich II",
-      "away": "Amical Saint-Prex",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "1. Liga Promotion",
-      "home": "Brühl",
-      "away": "Biel-Bienne",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "1. Liga Promotion",
-      "home": "Kreuzlingen",
-      "away": "Cham",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "1. Liga Promotion",
-      "home": "Grand-Saconnex",
-      "away": "FC Schaffhausen",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "1. Liga Promotion",
-      "home": "Breitenrain",
-      "away": "Young Boys II",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "1. Liga Promotion",
-      "home": "YF Juventus",
-      "away": "Bavois",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "1. Liga Classic - Group 2",
-      "home": "Buochs",
-      "away": "Bassecourt",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Challenge League",
-      "home": "Stade Nyonnais",
-      "away": "Étoile Carouge",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Challenge League",
-      "home": "Neuchatel Xamax FC",
-      "away": "Stade Lausanne-Ouchy",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Challenge League",
-      "home": "Rapperswil",
-      "away": "FC Winterthur",
       "reason": "No event/team match"
     },
     {
@@ -3156,31 +3150,37 @@
       "home": "Jednota Bánová",
       "away": "AS Trencin",
       "reason": "No event/team match"
+    },
+    {
+      "league": "Cup",
+      "home": "Lovca",
+      "away": "Dukla Banská Bystrica",
+      "reason": "No event/team match"
     }
   ],
   "unsupportedMarkets": [
     {
-      "sportKey": "soccer_poland_ekstraklasa",
+      "sportKey": "soccer_switzerland_superleague",
       "market": "btts"
     },
     {
-      "sportKey": "soccer_poland_ekstraklasa",
+      "sportKey": "soccer_switzerland_superleague",
       "market": "draw_no_bet"
     },
     {
-      "sportKey": "soccer_poland_ekstraklasa",
+      "sportKey": "soccer_switzerland_superleague",
       "market": "double_chance"
     },
     {
-      "sportKey": "soccer_switzerland_superleague",
+      "sportKey": "soccer_poland_ekstraklasa",
       "market": "btts"
     },
     {
-      "sportKey": "soccer_switzerland_superleague",
+      "sportKey": "soccer_poland_ekstraklasa",
       "market": "draw_no_bet"
     },
     {
-      "sportKey": "soccer_switzerland_superleague",
+      "sportKey": "soccer_poland_ekstraklasa",
       "market": "double_chance"
     },
     {
@@ -3630,31 +3630,6 @@
   ],
   "requestErrors": [
     {
-      "label": "soccer_poland_ekstraklasa:base-combined",
-      "error": "Markets not supported by this endpoint: btts, double_chance, draw_no_bet",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_poland_ekstraklasa:base-core",
-      "error": "Invalid commenceTimeFrom parameter. The format must be YYYY-MM-DDTHH:MM:SSZ, for example 2020-11-24T16:05:00Z",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_poland_ekstraklasa:btts",
-      "error": "Markets not supported by this endpoint: btts",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_poland_ekstraklasa:draw_no_bet",
-      "error": "Markets not supported by this endpoint: draw_no_bet",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_poland_ekstraklasa:double_chance",
-      "error": "Markets not supported by this endpoint: double_chance",
-      "statusCode": 422
-    },
-    {
       "label": "soccer_switzerland_superleague:base-combined",
       "error": "Markets not supported by this endpoint: btts, double_chance, draw_no_bet",
       "statusCode": 422
@@ -3676,6 +3651,31 @@
     },
     {
       "label": "soccer_switzerland_superleague:double_chance",
+      "error": "Markets not supported by this endpoint: double_chance",
+      "statusCode": 422
+    },
+    {
+      "label": "soccer_poland_ekstraklasa:base-combined",
+      "error": "Markets not supported by this endpoint: btts, double_chance, draw_no_bet",
+      "statusCode": 422
+    },
+    {
+      "label": "soccer_poland_ekstraklasa:base-core",
+      "error": "Invalid commenceTimeFrom parameter. The format must be YYYY-MM-DDTHH:MM:SSZ, for example 2020-11-24T16:05:00Z",
+      "statusCode": 422
+    },
+    {
+      "label": "soccer_poland_ekstraklasa:btts",
+      "error": "Markets not supported by this endpoint: btts",
+      "statusCode": 422
+    },
+    {
+      "label": "soccer_poland_ekstraklasa:draw_no_bet",
+      "error": "Markets not supported by this endpoint: draw_no_bet",
+      "statusCode": 422
+    },
+    {
+      "label": "soccer_poland_ekstraklasa:double_chance",
       "error": "Markets not supported by this endpoint: double_chance",
       "statusCode": 422
     },
@@ -4612,5 +4612,5 @@
   },
   "skipped": false,
   "skipReason": null,
-  "completedAt": "2026-08-17T00:40:39.500Z"
+  "completedAt": "2026-08-17T00:50:37.319Z"
 }
