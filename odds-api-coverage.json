@@ -1,20 +1,12 @@
 {
   "version": "v251",
-  "generatedAt": "2026-08-17T05:10:16.670Z",
+  "generatedAt": "2026-08-17T05:20:17.477Z",
   "provider": "The Odds API v4",
   "keyPresent": true,
   "regions": "uk",
   "sportsAvailable": 71,
   "soccerSportsAvailable": 44,
   "sportMappings": [
-    {
-      "league": "Jupiler Pro League",
-      "country": "Belgium",
-      "sportKey": "soccer_belgium_first_div",
-      "sportTitle": "Belgium First Div",
-      "score": 0.28,
-      "matches": 2
-    },
     {
       "league": "3. Liga",
       "country": "Germany",
@@ -1360,6 +1352,14 @@
       "matches": 4
     },
     {
+      "league": "Jupiler Pro League",
+      "country": "Belgium",
+      "sportKey": "soccer_belgium_first_div",
+      "sportTitle": "Belgium First Div",
+      "score": 0.28,
+      "matches": 1
+    },
+    {
       "league": "Ligue 1",
       "country": "France",
       "sportKey": "soccer_france_ligue_one",
@@ -1440,7 +1440,7 @@
       "matches": 1
     }
   ],
-  "matchesConsidered": 1357,
+  "matchesConsidered": 1355,
   "matchesMatched": 0,
   "matchesUpdated": 0,
   "fieldsFilled": 0,
@@ -1449,12 +1449,6 @@
   "derivedHtftMatches": 0,
   "bookmakerRows": 0,
   "unmatched": [
-    {
-      "league": "Eliteserien",
-      "country": "Norway",
-      "reason": "No matching soccer sport key",
-      "bestScore": 0
-    },
     {
       "league": "Friendlies Clubs",
       "country": "World",
@@ -2084,60 +2078,6 @@
       "country": "Dominican-Republic",
       "reason": "No matching soccer sport key",
       "bestScore": 0.125
-    },
-    {
-      "league": "Jupiler Pro League",
-      "home": "Lommel United",
-      "away": "Charleroi",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Jupiler Pro League",
-      "home": "Standard Liege",
-      "away": "RAAL La Louvière",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Challenger Pro League",
-      "home": "Liège",
-      "away": "Francs Borains",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Challenger Pro League",
-      "home": "RSC Anderlecht II",
-      "away": "Excelsior Virton",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Challenger Pro League",
-      "home": "Lokeren-Temse",
-      "away": "AS Eupen",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "First Division",
-      "home": "Finn Harps",
-      "away": "Cobh Ramblers",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "First Division",
-      "home": "Kerry",
-      "away": "UCD",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "First Division",
-      "home": "Treaty United",
-      "away": "Cork City",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "First Division",
-      "home": "Wexford",
-      "away": "Athlone Town",
-      "reason": "No event/team match"
     },
     {
       "league": "3. Liga",
@@ -2948,22 +2888,70 @@
       "home": "Drogheda United",
       "away": "St Patrick's Athl.",
       "reason": "No event/team match"
+    },
+    {
+      "league": "Premier Division",
+      "home": "Dundalk",
+      "away": "Galway United",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Premier Division",
+      "home": "Shamrock Rovers",
+      "away": "Shelbourne",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Premier Division",
+      "home": "Sligo Rovers",
+      "away": "Waterford",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Premier Division",
+      "home": "Hound Dogs",
+      "away": "College 1975",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Liga de Expansión MX",
+      "home": "Leones Negros UDG",
+      "away": "CDS Tampico Madero",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Liga de Expansión MX",
+      "home": "Venados FC",
+      "away": "Dorados",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Liga de Expansión MX",
+      "home": "Monarcas",
+      "away": "Correcaminos Uat",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Liga de Expansión MX",
+      "home": "Tepatitlán",
+      "away": "Tlaxcala",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Liga MX",
+      "home": "U.N.A.M. - Pumas",
+      "away": "Club Queretaro",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Liga MX",
+      "home": "Club America",
+      "away": "Atletico San Luis",
+      "reason": "No event/team match"
     }
   ],
   "unsupportedMarkets": [
     {
-      "sportKey": "soccer_belgium_first_div",
-      "market": "btts"
-    },
-    {
-      "sportKey": "soccer_belgium_first_div",
-      "market": "draw_no_bet"
-    },
-    {
-      "sportKey": "soccer_belgium_first_div",
-      "market": "double_chance"
-    },
-    {
       "sportKey": "soccer_germany_liga3",
       "market": "btts"
     },
@@ -3225,6 +3213,18 @@
     },
     {
       "sportKey": "soccer_denmark_superliga",
+      "market": "double_chance"
+    },
+    {
+      "sportKey": "soccer_belgium_first_div",
+      "market": "btts"
+    },
+    {
+      "sportKey": "soccer_belgium_first_div",
+      "market": "draw_no_bet"
+    },
+    {
+      "sportKey": "soccer_belgium_first_div",
       "market": "double_chance"
     },
     {
@@ -3421,31 +3421,6 @@
     }
   ],
   "requestErrors": [
-    {
-      "label": "soccer_belgium_first_div:base-combined",
-      "error": "Markets not supported by this endpoint: btts, double_chance, draw_no_bet",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_belgium_first_div:base-core",
-      "error": "Invalid commenceTimeFrom parameter. The format must be YYYY-MM-DDTHH:MM:SSZ, for example 2020-11-24T16:05:00Z",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_belgium_first_div:btts",
-      "error": "Markets not supported by this endpoint: btts",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_belgium_first_div:draw_no_bet",
-      "error": "Markets not supported by this endpoint: draw_no_bet",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_belgium_first_div:double_chance",
-      "error": "Markets not supported by this endpoint: double_chance",
-      "statusCode": 422
-    },
     {
       "label": "soccer_germany_liga3:base-combined",
       "error": "Markets not supported by this endpoint: btts, double_chance, draw_no_bet",
@@ -3997,6 +3972,31 @@
       "statusCode": 422
     },
     {
+      "label": "soccer_belgium_first_div:base-combined",
+      "error": "Markets not supported by this endpoint: btts, double_chance, draw_no_bet",
+      "statusCode": 422
+    },
+    {
+      "label": "soccer_belgium_first_div:base-core",
+      "error": "Invalid commenceTimeFrom parameter. The format must be YYYY-MM-DDTHH:MM:SSZ, for example 2020-11-24T16:05:00Z",
+      "statusCode": 422
+    },
+    {
+      "label": "soccer_belgium_first_div:btts",
+      "error": "Markets not supported by this endpoint: btts",
+      "statusCode": 422
+    },
+    {
+      "label": "soccer_belgium_first_div:draw_no_bet",
+      "error": "Markets not supported by this endpoint: draw_no_bet",
+      "statusCode": 422
+    },
+    {
+      "label": "soccer_belgium_first_div:double_chance",
+      "error": "Markets not supported by this endpoint: double_chance",
+      "statusCode": 422
+    },
+    {
       "label": "soccer_netherlands_eredivisie:base-combined",
       "error": "Markets not supported by this endpoint: btts, double_chance, draw_no_bet",
       "statusCode": 422
@@ -4404,5 +4404,5 @@
   },
   "skipped": false,
   "skipReason": null,
-  "completedAt": "2026-08-17T05:10:31.489Z"
+  "completedAt": "2026-08-17T05:20:36.871Z"
 }
