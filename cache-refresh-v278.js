@@ -1,7 +1,7 @@
-/* Predict2U v278 — one-time client cache refresh for Team/Market Intelligence rollout. */
+/* Predict2U v279 — one-time client cache refresh for Team/Market Intelligence rollout. */
 (function(){
   'use strict';
-  const KEY='p2u_cache_refresh_v278';
+  const KEY='p2u_cache_refresh_v279';
   try{if(localStorage.getItem(KEY)==='done')return;}catch(_){ }
   const mark=()=>{try{localStorage.setItem(KEY,'done');}catch(_){ }};
   const clear=async()=>{
@@ -18,11 +18,11 @@
       }
     }catch(_){ }
     mark();
-    window.dispatchEvent(new CustomEvent('p2u:cache-refreshed',{detail:{version:'v278'}}));
+    window.dispatchEvent(new CustomEvent('p2u:cache-refreshed',{detail:{version:'v279'}}));
     try{
       const url=new URL(location.href);
-      if(url.searchParams.get('refresh')!=='v278'){
-        url.searchParams.set('refresh','v278');
+      if(url.searchParams.get('refresh')!=='v279'){
+        url.searchParams.set('refresh','v279');
         location.replace(url.href);
       }
     }catch(_){location.reload();}
