@@ -1,20 +1,12 @@
 {
   "version": "v251",
-  "generatedAt": "2026-08-17T11:10:17.973Z",
+  "generatedAt": "2026-08-17T11:20:16.470Z",
   "provider": "The Odds API v4",
   "keyPresent": true,
   "regions": "uk",
   "sportsAvailable": 71,
   "soccerSportsAvailable": 44,
   "sportMappings": [
-    {
-      "league": "Liga Profesional Argentina",
-      "country": "Argentina",
-      "sportKey": "soccer_argentina_primera_division",
-      "sportTitle": "Primera División - Argentina",
-      "score": 0.78,
-      "matches": 8
-    },
     {
       "league": "Primera División",
       "country": "Peru",
@@ -214,6 +206,14 @@
       "sportTitle": "Allsvenskan - Sweden",
       "score": 0.305,
       "matches": 5
+    },
+    {
+      "league": "Liga Profesional Argentina",
+      "country": "Argentina",
+      "sportKey": "soccer_argentina_primera_division",
+      "sportTitle": "Primera División - Argentina",
+      "score": 0.78,
+      "matches": 6
     },
     {
       "league": "Challenger Pro League",
@@ -1312,7 +1312,7 @@
       "matches": 1
     }
   ],
-  "matchesConsidered": 1202,
+  "matchesConsidered": 1197,
   "matchesMatched": 0,
   "matchesUpdated": 0,
   "fieldsFilled": 0,
@@ -1322,16 +1322,10 @@
   "bookmakerRows": 0,
   "unmatched": [
     {
-      "league": "Liga Nacional",
-      "country": "Honduras",
+      "league": "Liga Pro",
+      "country": "Ecuador",
       "reason": "No matching soccer sport key",
       "bestScore": 0.143
-    },
-    {
-      "league": "Liga Panameña de Fútbol",
-      "country": "Panama",
-      "reason": "No matching soccer sport key",
-      "bestScore": 0.111
     },
     {
       "league": "Primera A",
@@ -1340,8 +1334,8 @@
       "bestScore": 0.143
     },
     {
-      "league": "Liga Pro",
-      "country": "Ecuador",
+      "league": "Liga Nacional",
+      "country": "Honduras",
       "reason": "No matching soccer sport key",
       "bestScore": 0.143
     },
@@ -1512,6 +1506,12 @@
       "country": "Colombia",
       "reason": "No matching soccer sport key",
       "bestScore": 0.143
+    },
+    {
+      "league": "Liga Panameña de Fútbol",
+      "country": "Panama",
+      "reason": "No matching soccer sport key",
+      "bestScore": 0.111
     },
     {
       "league": "Australia Cup",
@@ -1928,15 +1928,33 @@
       "bestScore": 0.125
     },
     {
-      "league": "Liga Profesional Argentina",
-      "home": "Barracas Central",
-      "away": "Rosario Central",
+      "league": "Primera División",
+      "home": "Cienciano",
+      "away": "Deportivo Garcilaso",
       "reason": "No event/team match"
     },
     {
-      "league": "Liga Profesional Argentina",
-      "home": "Central Cordoba de Santiago",
-      "away": "Instituto Cordoba",
+      "league": "Primera División",
+      "home": "FC Cajamarca",
+      "away": "Atletico Grau",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Primera División",
+      "home": "Alianza Atletico",
+      "away": "Sporting Cristal",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Primera División",
+      "home": "Independiente Petrolero",
+      "away": "Gualberto Villarroel SJ",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Primera División",
+      "home": "The Strongest",
+      "away": "Universitario de Vinto",
       "reason": "No event/team match"
     },
     {
@@ -1973,36 +1991,6 @@
       "league": "Liga Profesional Argentina",
       "home": "Estudiantes de Rio Cuarto",
       "away": "San Lorenzo",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Primera División",
-      "home": "Cienciano",
-      "away": "Deportivo Garcilaso",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Primera División",
-      "home": "FC Cajamarca",
-      "away": "Atletico Grau",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Primera División",
-      "home": "Alianza Atletico",
-      "away": "Sporting Cristal",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Primera División",
-      "home": "Independiente Petrolero",
-      "away": "Gualberto Villarroel SJ",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Primera División",
-      "home": "The Strongest",
-      "away": "Universitario de Vinto",
       "reason": "No event/team match"
     },
     {
@@ -2819,6 +2807,18 @@
       "league": "Cup",
       "home": "Tatran Krásno",
       "away": "Podkonice",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Cup",
+      "home": "Spartak Kvašov",
+      "away": "Fomat Martin",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Cup",
+      "home": "Slovan Vavrečka",
+      "away": "Tvrdošín",
       "reason": "No event/team match"
     }
   ],
@@ -4276,5 +4276,5 @@
   },
   "skipped": false,
   "skipReason": null,
-  "completedAt": "2026-08-17T11:10:31.084Z"
+  "completedAt": "2026-08-17T11:20:29.697Z"
 }
