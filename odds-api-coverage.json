@@ -1,28 +1,12 @@
 {
   "version": "v251",
-  "generatedAt": "2026-08-17T08:20:18.270Z",
+  "generatedAt": "2026-08-17T08:30:17.714Z",
   "provider": "The Odds API v4",
   "keyPresent": true,
   "regions": "uk",
   "sportsAvailable": 71,
   "soccerSportsAvailable": 44,
   "sportMappings": [
-    {
-      "league": "Primera División",
-      "country": "Peru",
-      "sportKey": "soccer_argentina_primera_division",
-      "sportTitle": "Primera División - Argentina",
-      "score": 0.653,
-      "matches": 4
-    },
-    {
-      "league": "Segunda División",
-      "country": "Peru",
-      "sportKey": "soccer_spain_segunda_division",
-      "sportTitle": "La Liga 2 - Spain",
-      "score": 0.542,
-      "matches": 4
-    },
     {
       "league": "Liga Profesional Argentina",
       "country": "Argentina",
@@ -184,6 +168,14 @@
       "matches": 1
     },
     {
+      "league": "Primera División",
+      "country": "Peru",
+      "sportKey": "soccer_argentina_primera_division",
+      "sportTitle": "Primera División - Argentina",
+      "score": 0.653,
+      "matches": 3
+    },
+    {
       "league": "Primera B",
       "country": "Chile",
       "sportKey": "soccer_chile_campeonato",
@@ -262,6 +254,14 @@
       "sportTitle": "EPL",
       "score": 0.987,
       "matches": 4
+    },
+    {
+      "league": "Segunda División",
+      "country": "Peru",
+      "sportKey": "soccer_spain_segunda_division",
+      "sportTitle": "La Liga 2 - Spain",
+      "score": 0.542,
+      "matches": 3
     },
     {
       "league": "First League",
@@ -1344,7 +1344,7 @@
       "matches": 1
     }
   ],
-  "matchesConsidered": 1245,
+  "matchesConsidered": 1243,
   "matchesMatched": 0,
   "matchesUpdated": 0,
   "fieldsFilled": 0,
@@ -1966,30 +1966,6 @@
       "bestScore": 0.125
     },
     {
-      "league": "Primera División",
-      "home": "FC Cajamarca",
-      "away": "Universitario",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Primera División",
-      "home": "Cienciano",
-      "away": "Deportivo Garcilaso",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Primera División",
-      "home": "FC Cajamarca",
-      "away": "Atletico Grau",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Primera División",
-      "home": "Alianza Atletico",
-      "away": "Sporting Cristal",
-      "reason": "No event/team match"
-    },
-    {
       "league": "Liga Profesional Argentina",
       "home": "River Plate",
       "away": "Argentinos JRS",
@@ -2158,6 +2134,24 @@
       "reason": "No event/team match"
     },
     {
+      "league": "Primera División",
+      "home": "Cienciano",
+      "away": "Deportivo Garcilaso",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Primera División",
+      "home": "FC Cajamarca",
+      "away": "Atletico Grau",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Primera División",
+      "home": "Alianza Atletico",
+      "away": "Sporting Cristal",
+      "reason": "No event/team match"
+    },
+    {
       "league": "Torneo Promocional Amateur",
       "home": "Uribelarrea",
       "away": "Ezeiza",
@@ -2287,60 +2281,6 @@
       "league": "Copa Argentina",
       "home": "Racing Club",
       "away": "Belgrano Cordoba",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Segunda División",
-      "home": "Carlos A. Mannucci",
-      "away": "Cesar Vallejo",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Segunda División",
-      "home": "Molinos El Pirata",
-      "away": "Union Comercio",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Segunda División",
-      "home": "Santos",
-      "away": "Alianza Universidad",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Segunda División",
-      "home": "Sport Huancayo 2",
-      "away": "Estudiantil CNI",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Segunda División",
-      "home": "Sporting Gijon",
-      "away": "Sabadell",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Segunda División",
-      "home": "Almeria",
-      "away": "Eldense",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Segunda División",
-      "home": "Cordoba",
-      "away": "Girona",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Segunda División",
-      "home": "Miramar",
-      "away": "Rentistas",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Segunda División",
-      "home": "Plaza Colonia",
-      "away": "Colón",
       "reason": "No event/team match"
     },
     {
@@ -2852,6 +2792,66 @@
       "home": "New York Red Bulls",
       "away": "Nashville SC",
       "reason": "No event/team match"
+    },
+    {
+      "league": "Major League Soccer",
+      "home": "Orlando City SC",
+      "away": "Chicago Fire",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Major League Soccer",
+      "home": "Toronto FC",
+      "away": "Charlotte",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Major League Soccer",
+      "home": "DC United",
+      "away": "New England Revolution",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Major League Soccer",
+      "home": "Sporting Kansas City",
+      "away": "St. Louis City",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Major League Soccer",
+      "home": "Minnesota United FC",
+      "away": "Atlanta United FC",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Major League Soccer",
+      "home": "Colorado Rapids",
+      "away": "Los Angeles FC",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Major League Soccer",
+      "home": "Seattle Sounders",
+      "away": "Austin",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Major League Soccer",
+      "home": "Real Salt Lake",
+      "away": "FC Dallas",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Major League Soccer",
+      "home": "Los Angeles Galaxy",
+      "away": "San Jose Earthquakes",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Major League Soccer",
+      "home": "Vancouver Whitecaps",
+      "away": "Houston Dynamo",
+      "reason": "No event/team match"
     }
   ],
   "unsupportedMarkets": [
@@ -2868,18 +2868,6 @@
       "market": "double_chance"
     },
     {
-      "sportKey": "soccer_spain_segunda_division",
-      "market": "btts"
-    },
-    {
-      "sportKey": "soccer_spain_segunda_division",
-      "market": "draw_no_bet"
-    },
-    {
-      "sportKey": "soccer_spain_segunda_division",
-      "market": "double_chance"
-    },
-    {
       "sportKey": "soccer_spain_la_liga",
       "market": "btts"
     },
@@ -2997,6 +2985,18 @@
     },
     {
       "sportKey": "soccer_italy_coppa_italia",
+      "market": "double_chance"
+    },
+    {
+      "sportKey": "soccer_spain_segunda_division",
+      "market": "btts"
+    },
+    {
+      "sportKey": "soccer_spain_segunda_division",
+      "market": "draw_no_bet"
+    },
+    {
+      "sportKey": "soccer_spain_segunda_division",
       "market": "double_chance"
     },
     {
@@ -3351,31 +3351,6 @@
       "statusCode": 422
     },
     {
-      "label": "soccer_spain_segunda_division:base-combined",
-      "error": "Markets not supported by this endpoint: btts, double_chance, draw_no_bet",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_spain_segunda_division:base-core",
-      "error": "Invalid commenceTimeFrom parameter. The format must be YYYY-MM-DDTHH:MM:SSZ, for example 2020-11-24T16:05:00Z",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_spain_segunda_division:btts",
-      "error": "Markets not supported by this endpoint: btts",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_spain_segunda_division:draw_no_bet",
-      "error": "Markets not supported by this endpoint: draw_no_bet",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_spain_segunda_division:double_chance",
-      "error": "Markets not supported by this endpoint: double_chance",
-      "statusCode": 422
-    },
-    {
       "label": "soccer_spain_la_liga:base-combined",
       "error": "Markets not supported by this endpoint: btts, double_chance, draw_no_bet",
       "statusCode": 422
@@ -3622,6 +3597,31 @@
     },
     {
       "label": "soccer_italy_coppa_italia:double_chance",
+      "error": "Markets not supported by this endpoint: double_chance",
+      "statusCode": 422
+    },
+    {
+      "label": "soccer_spain_segunda_division:base-combined",
+      "error": "Markets not supported by this endpoint: btts, double_chance, draw_no_bet",
+      "statusCode": 422
+    },
+    {
+      "label": "soccer_spain_segunda_division:base-core",
+      "error": "Invalid commenceTimeFrom parameter. The format must be YYYY-MM-DDTHH:MM:SSZ, for example 2020-11-24T16:05:00Z",
+      "statusCode": 422
+    },
+    {
+      "label": "soccer_spain_segunda_division:btts",
+      "error": "Markets not supported by this endpoint: btts",
+      "statusCode": 422
+    },
+    {
+      "label": "soccer_spain_segunda_division:draw_no_bet",
+      "error": "Markets not supported by this endpoint: draw_no_bet",
+      "statusCode": 422
+    },
+    {
+      "label": "soccer_spain_segunda_division:double_chance",
       "error": "Markets not supported by this endpoint: double_chance",
       "statusCode": 422
     },
@@ -4308,5 +4308,5 @@
   },
   "skipped": false,
   "skipReason": null,
-  "completedAt": "2026-08-17T08:20:45.342Z"
+  "completedAt": "2026-08-17T08:30:25.765Z"
 }
