@@ -1,10 +1,10 @@
 {
   "version": "v251",
-  "generatedAt": "2026-08-17T23:00:17.201Z",
+  "generatedAt": "2026-08-17T23:10:16.332Z",
   "provider": "The Odds API v4",
   "keyPresent": true,
   "regions": "uk",
-  "sportsAvailable": 71,
+  "sportsAvailable": 75,
   "soccerSportsAvailable": 44,
   "sportMappings": [
     {
@@ -66,10 +66,18 @@
     {
       "league": "Coppa Italia",
       "country": "Italy",
-      "sportKey": "soccer_italy_coppa_italia",
-      "sportTitle": "Coppa Italia",
-      "score": 1,
+      "sportKey": "soccer_italy_serie_a",
+      "sportTitle": "Serie A - Italy",
+      "score": 0.323,
       "matches": 4
+    },
+    {
+      "league": "King's Cup",
+      "country": "Saudi-Arabia",
+      "sportKey": "soccer_saudi_arabia_pro_league",
+      "sportTitle": "Saudi Pro League",
+      "score": 0.43,
+      "matches": 13
     },
     {
       "league": "Premier League",
@@ -162,9 +170,9 @@
     {
       "league": "Challenger Pro League",
       "country": "Belgium",
-      "sportKey": "soccer_belgium_first_div",
-      "sportTitle": "Belgium First Div",
-      "score": 0.28,
+      "sportKey": "soccer_saudi_arabia_pro_league",
+      "sportTitle": "Saudi Pro League",
+      "score": 0.286,
       "matches": 3
     },
     {
@@ -744,6 +752,14 @@
       "matches": 8
     },
     {
+      "league": "Pro League A",
+      "country": "Uzbekistan",
+      "sportKey": "soccer_saudi_arabia_pro_league",
+      "sportTitle": "Saudi Pro League",
+      "score": 0.286,
+      "matches": 7
+    },
+    {
       "league": "Ykkösliiga",
       "country": "Finland",
       "sportKey": "soccer_finland_veikkausliiga",
@@ -766,6 +782,14 @@
       "sportTitle": "Denmark Superliga",
       "score": 0.347,
       "matches": 4
+    },
+    {
+      "league": "Pro League",
+      "country": "Saudi-Arabia",
+      "sportKey": "soccer_saudi_arabia_pro_league",
+      "sportTitle": "Saudi Pro League",
+      "score": 1,
+      "matches": 5
     },
     {
       "league": "Ligue 3",
@@ -794,9 +818,9 @@
     {
       "league": "Coppa Italia Primavera",
       "country": "Italy",
-      "sportKey": "soccer_italy_coppa_italia",
-      "sportTitle": "Coppa Italia",
-      "score": 0.68,
+      "sportKey": "soccer_italy_serie_a",
+      "sportTitle": "Serie A - Italy",
+      "score": 0.305,
       "matches": 1
     },
     {
@@ -864,6 +888,14 @@
       "matches": 3
     },
     {
+      "league": "Pro League",
+      "country": "United-Arab-Emirates",
+      "sportKey": "soccer_saudi_arabia_pro_league",
+      "sportTitle": "Saudi Pro League",
+      "score": 0.57,
+      "matches": 2
+    },
+    {
       "league": "Premier League",
       "country": "Belarus",
       "sportKey": "soccer_epl",
@@ -894,6 +926,14 @@
       "sportTitle": "Veikkausliiga - Finland",
       "score": 0.38,
       "matches": 2
+    },
+    {
+      "league": "Division 1",
+      "country": "Saudi-Arabia",
+      "sportKey": "soccer_saudi_arabia_pro_league",
+      "sportTitle": "Saudi Pro League",
+      "score": 0.466,
+      "matches": 3
     },
     {
       "league": "Damallsvenskan",
@@ -1202,9 +1242,9 @@
     {
       "league": "Jupiler Pro League",
       "country": "Belgium",
-      "sportKey": "soccer_belgium_first_div",
-      "sportTitle": "Belgium First Div",
-      "score": 0.28,
+      "sportKey": "soccer_saudi_arabia_pro_league",
+      "sportTitle": "Saudi Pro League",
+      "score": 0.286,
       "matches": 1
     },
     {
@@ -1343,7 +1383,7 @@
       "league": "Pro League U23",
       "country": "United-Arab-Emirates",
       "reason": "No matching soccer sport key",
-      "bestScore": 0.111
+      "bestScore": 0.222
     },
     {
       "league": "2. liga",
@@ -1416,12 +1456,6 @@
       "country": "Czech-Republic",
       "reason": "No matching soccer sport key",
       "bestScore": 0
-    },
-    {
-      "league": "King's Cup",
-      "country": "Saudi-Arabia",
-      "reason": "No matching soccer sport key",
-      "bestScore": 0.111
     },
     {
       "league": "3. Division - Girone 1",
@@ -1541,7 +1575,7 @@
       "league": "Persian Gulf Pro League",
       "country": "Iran",
       "reason": "No matching soccer sport key",
-      "bestScore": 0.125
+      "bestScore": 0.25
     },
     {
       "league": "Liga Leumit",
@@ -1676,12 +1710,6 @@
       "bestScore": 0.2
     },
     {
-      "league": "Pro League A",
-      "country": "Uzbekistan",
-      "reason": "No matching soccer sport key",
-      "bestScore": 0.143
-    },
-    {
       "league": "Second League",
       "country": "Egypt",
       "reason": "No matching soccer sport key",
@@ -1704,12 +1732,6 @@
       "country": "Iraq",
       "reason": "No matching soccer sport key",
       "bestScore": 0.167
-    },
-    {
-      "league": "Pro League",
-      "country": "Saudi-Arabia",
-      "reason": "No matching soccer sport key",
-      "bestScore": 0.143
     },
     {
       "league": "Copa Ecuador",
@@ -1770,12 +1792,6 @@
       "country": "Hungary",
       "reason": "No matching soccer sport key",
       "bestScore": 0
-    },
-    {
-      "league": "Pro League",
-      "country": "United-Arab-Emirates",
-      "reason": "No matching soccer sport key",
-      "bestScore": 0.125
     },
     {
       "league": "1. Division",
@@ -1848,12 +1864,6 @@
       "country": "Croatia",
       "reason": "No matching soccer sport key",
       "bestScore": 0
-    },
-    {
-      "league": "Division 1",
-      "country": "Saudi-Arabia",
-      "reason": "No matching soccer sport key",
-      "bestScore": 0.125
     },
     {
       "league": "3. liga - CFL A",
@@ -2820,6 +2830,36 @@
       "home": "Necaxa",
       "away": "Leon",
       "reason": "No event/team match"
+    },
+    {
+      "league": "Liga MX",
+      "home": "CF Pachuca",
+      "away": "Puebla",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Liga de Expansión MX",
+      "home": "Venados FC",
+      "away": "Dorados",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Liga de Expansión MX",
+      "home": "Monarcas",
+      "away": "Correcaminos Uat",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Liga de Expansión MX",
+      "home": "Tepatitlán",
+      "away": "Tlaxcala",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Premier League",
+      "home": "Polessya",
+      "away": "Zorya Luhansk",
+      "reason": "No event/team match"
     }
   ],
   "unsupportedMarkets": [
@@ -2872,15 +2912,27 @@
       "market": "double_chance"
     },
     {
-      "sportKey": "soccer_italy_coppa_italia",
+      "sportKey": "soccer_italy_serie_a",
       "market": "btts"
     },
     {
-      "sportKey": "soccer_italy_coppa_italia",
+      "sportKey": "soccer_italy_serie_a",
       "market": "draw_no_bet"
     },
     {
-      "sportKey": "soccer_italy_coppa_italia",
+      "sportKey": "soccer_italy_serie_a",
+      "market": "double_chance"
+    },
+    {
+      "sportKey": "soccer_saudi_arabia_pro_league",
+      "market": "btts"
+    },
+    {
+      "sportKey": "soccer_saudi_arabia_pro_league",
+      "market": "draw_no_bet"
+    },
+    {
+      "sportKey": "soccer_saudi_arabia_pro_league",
       "market": "double_chance"
     },
     {
@@ -2965,18 +3017,6 @@
     },
     {
       "sportKey": "soccer_argentina_primera_division",
-      "market": "double_chance"
-    },
-    {
-      "sportKey": "soccer_belgium_first_div",
-      "market": "btts"
-    },
-    {
-      "sportKey": "soccer_belgium_first_div",
-      "market": "draw_no_bet"
-    },
-    {
-      "sportKey": "soccer_belgium_first_div",
       "market": "double_chance"
     },
     {
@@ -3232,18 +3272,6 @@
       "market": "double_chance"
     },
     {
-      "sportKey": "soccer_italy_serie_a",
-      "market": "btts"
-    },
-    {
-      "sportKey": "soccer_italy_serie_a",
-      "market": "draw_no_bet"
-    },
-    {
-      "sportKey": "soccer_italy_serie_a",
-      "market": "double_chance"
-    },
-    {
       "sportKey": "soccer_austria_bundesliga",
       "market": "btts"
     },
@@ -3277,6 +3305,18 @@
     },
     {
       "sportKey": "soccer_italy_serie_b",
+      "market": "double_chance"
+    },
+    {
+      "sportKey": "soccer_belgium_first_div",
+      "market": "btts"
+    },
+    {
+      "sportKey": "soccer_belgium_first_div",
+      "market": "draw_no_bet"
+    },
+    {
+      "sportKey": "soccer_belgium_first_div",
       "market": "double_chance"
     },
     {
@@ -3394,27 +3434,52 @@
       "statusCode": 422
     },
     {
-      "label": "soccer_italy_coppa_italia:base-combined",
+      "label": "soccer_italy_serie_a:base-combined",
       "error": "Markets not supported by this endpoint: btts, double_chance, draw_no_bet",
       "statusCode": 422
     },
     {
-      "label": "soccer_italy_coppa_italia:base-core",
+      "label": "soccer_italy_serie_a:base-core",
       "error": "Invalid commenceTimeFrom parameter. The format must be YYYY-MM-DDTHH:MM:SSZ, for example 2020-11-24T16:05:00Z",
       "statusCode": 422
     },
     {
-      "label": "soccer_italy_coppa_italia:btts",
+      "label": "soccer_italy_serie_a:btts",
       "error": "Markets not supported by this endpoint: btts",
       "statusCode": 422
     },
     {
-      "label": "soccer_italy_coppa_italia:draw_no_bet",
+      "label": "soccer_italy_serie_a:draw_no_bet",
       "error": "Markets not supported by this endpoint: draw_no_bet",
       "statusCode": 422
     },
     {
-      "label": "soccer_italy_coppa_italia:double_chance",
+      "label": "soccer_italy_serie_a:double_chance",
+      "error": "Markets not supported by this endpoint: double_chance",
+      "statusCode": 422
+    },
+    {
+      "label": "soccer_saudi_arabia_pro_league:base-combined",
+      "error": "Markets not supported by this endpoint: btts, double_chance, draw_no_bet",
+      "statusCode": 422
+    },
+    {
+      "label": "soccer_saudi_arabia_pro_league:base-core",
+      "error": "Invalid commenceTimeFrom parameter. The format must be YYYY-MM-DDTHH:MM:SSZ, for example 2020-11-24T16:05:00Z",
+      "statusCode": 422
+    },
+    {
+      "label": "soccer_saudi_arabia_pro_league:btts",
+      "error": "Markets not supported by this endpoint: btts",
+      "statusCode": 422
+    },
+    {
+      "label": "soccer_saudi_arabia_pro_league:draw_no_bet",
+      "error": "Markets not supported by this endpoint: draw_no_bet",
+      "statusCode": 422
+    },
+    {
+      "label": "soccer_saudi_arabia_pro_league:double_chance",
       "error": "Markets not supported by this endpoint: double_chance",
       "statusCode": 422
     },
@@ -3590,31 +3655,6 @@
     },
     {
       "label": "soccer_argentina_primera_division:double_chance",
-      "error": "Markets not supported by this endpoint: double_chance",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_belgium_first_div:base-combined",
-      "error": "Markets not supported by this endpoint: btts, double_chance, draw_no_bet",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_belgium_first_div:base-core",
-      "error": "Invalid commenceTimeFrom parameter. The format must be YYYY-MM-DDTHH:MM:SSZ, for example 2020-11-24T16:05:00Z",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_belgium_first_div:btts",
-      "error": "Markets not supported by this endpoint: btts",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_belgium_first_div:draw_no_bet",
-      "error": "Markets not supported by this endpoint: draw_no_bet",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_belgium_first_div:double_chance",
       "error": "Markets not supported by this endpoint: double_chance",
       "statusCode": 422
     },
@@ -4144,31 +4184,6 @@
       "statusCode": 422
     },
     {
-      "label": "soccer_italy_serie_a:base-combined",
-      "error": "Markets not supported by this endpoint: btts, double_chance, draw_no_bet",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_italy_serie_a:base-core",
-      "error": "Invalid commenceTimeFrom parameter. The format must be YYYY-MM-DDTHH:MM:SSZ, for example 2020-11-24T16:05:00Z",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_italy_serie_a:btts",
-      "error": "Markets not supported by this endpoint: btts",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_italy_serie_a:draw_no_bet",
-      "error": "Markets not supported by this endpoint: draw_no_bet",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_italy_serie_a:double_chance",
-      "error": "Markets not supported by this endpoint: double_chance",
-      "statusCode": 422
-    },
-    {
       "label": "soccer_austria_bundesliga:base-combined",
       "error": "Markets not supported by this endpoint: btts, double_chance, draw_no_bet",
       "statusCode": 422
@@ -4244,6 +4259,31 @@
       "statusCode": 422
     },
     {
+      "label": "soccer_belgium_first_div:base-combined",
+      "error": "Markets not supported by this endpoint: btts, double_chance, draw_no_bet",
+      "statusCode": 422
+    },
+    {
+      "label": "soccer_belgium_first_div:base-core",
+      "error": "Invalid commenceTimeFrom parameter. The format must be YYYY-MM-DDTHH:MM:SSZ, for example 2020-11-24T16:05:00Z",
+      "statusCode": 422
+    },
+    {
+      "label": "soccer_belgium_first_div:btts",
+      "error": "Markets not supported by this endpoint: btts",
+      "statusCode": 422
+    },
+    {
+      "label": "soccer_belgium_first_div:draw_no_bet",
+      "error": "Markets not supported by this endpoint: draw_no_bet",
+      "statusCode": 422
+    },
+    {
+      "label": "soccer_belgium_first_div:double_chance",
+      "error": "Markets not supported by this endpoint: double_chance",
+      "statusCode": 422
+    },
+    {
       "label": "soccer_league_of_ireland:base-combined",
       "error": "Markets not supported by this endpoint: btts, double_chance, draw_no_bet",
       "statusCode": 422
@@ -4276,5 +4316,5 @@
   },
   "skipped": false,
   "skipReason": null,
-  "completedAt": "2026-08-17T23:00:29.317Z"
+  "completedAt": "2026-08-17T23:10:24.991Z"
 }
