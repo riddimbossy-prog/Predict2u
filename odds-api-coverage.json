@@ -1,20 +1,12 @@
 {
   "version": "v251",
-  "generatedAt": "2026-08-17T10:40:18.317Z",
+  "generatedAt": "2026-08-17T10:50:19.252Z",
   "provider": "The Odds API v4",
   "keyPresent": true,
   "regions": "uk",
   "sportsAvailable": 71,
   "soccerSportsAvailable": 44,
   "sportMappings": [
-    {
-      "league": "Liga MX U21",
-      "country": "Mexico",
-      "sportKey": "soccer_mexico_ligamx",
-      "sportTitle": "Liga MX",
-      "score": 0.68,
-      "matches": 5
-    },
     {
       "league": "Liga MX",
       "country": "Mexico",
@@ -134,6 +126,14 @@
       "sportTitle": "EFL Cup",
       "score": 0.487,
       "matches": 1
+    },
+    {
+      "league": "Liga MX U21",
+      "country": "Mexico",
+      "sportKey": "soccer_mexico_ligamx",
+      "sportTitle": "Liga MX",
+      "score": 0.68,
+      "matches": 4
     },
     {
       "league": "Premier League",
@@ -1328,7 +1328,7 @@
       "matches": 1
     }
   ],
-  "matchesConsidered": 1213,
+  "matchesConsidered": 1212,
   "matchesMatched": 0,
   "matchesUpdated": 0,
   "fieldsFilled": 0,
@@ -1944,36 +1944,6 @@
       "bestScore": 0.125
     },
     {
-      "league": "Liga MX U21",
-      "home": "Club Tijuana U21",
-      "away": "Cruz Azul U21",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Liga MX U21",
-      "home": "Necaxa U21",
-      "away": "Club Leon U21",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Liga MX U21",
-      "home": "Pachuca U21",
-      "away": "Puebla U21",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Liga MX U21",
-      "home": "Juarez U21",
-      "away": "Club America U21",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Liga MX U21",
-      "home": "Puebla U21",
-      "away": "Santos Laguna U21",
-      "reason": "No event/team match"
-    },
-    {
       "league": "Liga MX",
       "home": "Club America",
       "away": "Atletico San Luis",
@@ -2031,6 +2001,30 @@
       "league": "Liga MX Femenil",
       "home": "Pumas UNAM W",
       "away": "Querétaro W",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Liga MX U21",
+      "home": "Necaxa U21",
+      "away": "Club Leon U21",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Liga MX U21",
+      "home": "Pachuca U21",
+      "away": "Puebla U21",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Liga MX U21",
+      "home": "Juarez U21",
+      "away": "Club America U21",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Liga MX U21",
+      "home": "Puebla U21",
+      "away": "Santos Laguna U21",
       "reason": "No event/team match"
     },
     {
@@ -2835,6 +2829,12 @@
       "league": "Cup",
       "home": "Sokol Borský Mikuláš",
       "away": "Beluša",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Cup",
+      "home": "Brezno",
+      "away": "Baník Kalinovo",
       "reason": "No event/team match"
     }
   ],
@@ -4292,5 +4292,5 @@
   },
   "skipped": false,
   "skipReason": null,
-  "completedAt": "2026-08-17T10:40:36.825Z"
+  "completedAt": "2026-08-17T10:50:42.514Z"
 }
