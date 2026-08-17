@@ -1,28 +1,12 @@
 {
   "version": "v251",
-  "generatedAt": "2026-08-17T06:40:20.172Z",
+  "generatedAt": "2026-08-17T06:50:17.871Z",
   "provider": "The Odds API v4",
   "keyPresent": true,
   "regions": "uk",
   "sportsAvailable": 71,
   "soccerSportsAvailable": 44,
   "sportMappings": [
-    {
-      "league": "Coppa Italia",
-      "country": "Italy",
-      "sportKey": "soccer_italy_coppa_italia",
-      "sportTitle": "Coppa Italia",
-      "score": 1,
-      "matches": 6
-    },
-    {
-      "league": "Trophée des Champions",
-      "country": "France",
-      "sportKey": "soccer_france_ligue_one",
-      "sportTitle": "Ligue 1 - France",
-      "score": 0.291,
-      "matches": 1
-    },
     {
       "league": "Coppa Italia Serie C",
       "country": "Italy",
@@ -125,6 +109,14 @@
       "sportKey": "soccer_argentina_primera_division",
       "sportTitle": "Primera División - Argentina",
       "score": 0.305,
+      "matches": 5
+    },
+    {
+      "league": "Coppa Italia",
+      "country": "Italy",
+      "sportKey": "soccer_italy_coppa_italia",
+      "sportTitle": "Coppa Italia",
+      "score": 1,
       "matches": 5
     },
     {
@@ -1408,7 +1400,7 @@
       "matches": 1
     }
   ],
-  "matchesConsidered": 1302,
+  "matchesConsidered": 1300,
   "matchesMatched": 0,
   "matchesUpdated": 0,
   "fieldsFilled": 0,
@@ -2042,42 +2034,6 @@
       "bestScore": 0.125
     },
     {
-      "league": "Coppa Italia",
-      "home": "Hellas Verona",
-      "away": "Virtus Entella",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Coppa Italia",
-      "home": "Lazio",
-      "away": "Mantova",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Coppa Italia",
-      "home": "Pisa",
-      "away": "Empoli",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Coppa Italia",
-      "home": "Sassuolo",
-      "away": "Cesena",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Coppa Italia",
-      "home": "Cremonese",
-      "away": "Sampdoria",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Coppa Italia",
-      "home": "Palermo",
-      "away": "Lecce",
-      "reason": "No event/team match"
-    },
-    {
       "league": "Coppa Italia Serie C",
       "home": "Alcione",
       "away": "Novara",
@@ -2132,75 +2088,39 @@
       "reason": "No event/team match"
     },
     {
+      "league": "Coppa Italia",
+      "home": "Lazio",
+      "away": "Mantova",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Coppa Italia",
+      "home": "Pisa",
+      "away": "Empoli",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Coppa Italia",
+      "home": "Sassuolo",
+      "away": "Cesena",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Coppa Italia",
+      "home": "Cremonese",
+      "away": "Sampdoria",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Coppa Italia",
+      "home": "Palermo",
+      "away": "Lecce",
+      "reason": "No event/team match"
+    },
+    {
       "league": "Coppa Italia Primavera",
       "home": "Sudtirol U19",
       "away": "Cosenza U19",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Trophée des Champions",
-      "home": "Lens",
-      "away": "Paris Saint Germain",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Ligue 3",
-      "home": "Bastia",
-      "away": "Versailles",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Ligue 3",
-      "home": "Bourg-en-bresse 01",
-      "away": "Thionville Lusitanos",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Ligue 3",
-      "home": "Caen",
-      "away": "Aubagne",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Ligue 3",
-      "home": "Concarneau",
-      "away": "Villefranche",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Ligue 3",
-      "home": "Fleury 91",
-      "away": "Orleans",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Ligue 3",
-      "home": "La Roche VF",
-      "away": "Cannes",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Ligue 3",
-      "home": "Le Puy Foot",
-      "away": "Amiens",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Ligue 3",
-      "home": "Gobelins",
-      "away": "Valenciennes",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Ligue 3",
-      "home": "Rouen",
-      "away": "Quevilly",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Ligue 1",
-      "home": "Marseille",
-      "away": "Strasbourg",
       "reason": "No event/team match"
     },
     {
@@ -2916,6 +2836,78 @@
       "home": "Vitoria",
       "away": "Botafogo",
       "reason": "No event/team match"
+    },
+    {
+      "league": "Serie A",
+      "home": "Corinthians",
+      "away": "Cruzeiro",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Serie A",
+      "home": "Internacional",
+      "away": "Remo",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Serie C",
+      "home": "Floresta",
+      "away": "Anápolis",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Serie C",
+      "home": "Caxias",
+      "away": "Figueirense",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Serie C",
+      "home": "Barra",
+      "away": "AO Itabaiana",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Serie C",
+      "home": "Confiança",
+      "away": "Maringá",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Serie C",
+      "home": "Ferroviária",
+      "away": "Paysandu",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Serie C",
+      "home": "Guarani Campinas",
+      "away": "Ypiranga-RS",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Serie D",
+      "home": "Gama",
+      "away": "Sao Jose",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Serie D",
+      "home": "ABC",
+      "away": "Nacional AM",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Serie D",
+      "home": "ASA",
+      "away": "Goiatuba EC",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Goiano - 2",
+      "home": "Rio Verde",
+      "away": "Goianésia",
+      "reason": "No event/team match"
     }
   ],
   "unsupportedMarkets": [
@@ -2932,18 +2924,6 @@
       "market": "double_chance"
     },
     {
-      "sportKey": "soccer_france_ligue_one",
-      "market": "btts"
-    },
-    {
-      "sportKey": "soccer_france_ligue_one",
-      "market": "draw_no_bet"
-    },
-    {
-      "sportKey": "soccer_france_ligue_one",
-      "market": "double_chance"
-    },
-    {
       "sportKey": "soccer_portugal_primeira_liga",
       "market": "btts"
     },
@@ -3313,6 +3293,18 @@
     },
     {
       "sportKey": "soccer_uefa_nations_league",
+      "market": "double_chance"
+    },
+    {
+      "sportKey": "soccer_france_ligue_one",
+      "market": "btts"
+    },
+    {
+      "sportKey": "soccer_france_ligue_one",
+      "market": "draw_no_bet"
+    },
+    {
+      "sportKey": "soccer_france_ligue_one",
       "market": "double_chance"
     },
     {
@@ -3411,31 +3403,6 @@
     },
     {
       "label": "soccer_italy_coppa_italia:double_chance",
-      "error": "Markets not supported by this endpoint: double_chance",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_france_ligue_one:base-combined",
-      "error": "Markets not supported by this endpoint: btts, double_chance, draw_no_bet",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_france_ligue_one:base-core",
-      "error": "Invalid commenceTimeFrom parameter. The format must be YYYY-MM-DDTHH:MM:SSZ, for example 2020-11-24T16:05:00Z",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_france_ligue_one:btts",
-      "error": "Markets not supported by this endpoint: btts",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_france_ligue_one:draw_no_bet",
-      "error": "Markets not supported by this endpoint: draw_no_bet",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_france_ligue_one:double_chance",
       "error": "Markets not supported by this endpoint: double_chance",
       "statusCode": 422
     },
@@ -4215,6 +4182,31 @@
       "statusCode": 422
     },
     {
+      "label": "soccer_france_ligue_one:base-combined",
+      "error": "Markets not supported by this endpoint: btts, double_chance, draw_no_bet",
+      "statusCode": 422
+    },
+    {
+      "label": "soccer_france_ligue_one:base-core",
+      "error": "Invalid commenceTimeFrom parameter. The format must be YYYY-MM-DDTHH:MM:SSZ, for example 2020-11-24T16:05:00Z",
+      "statusCode": 422
+    },
+    {
+      "label": "soccer_france_ligue_one:btts",
+      "error": "Markets not supported by this endpoint: btts",
+      "statusCode": 422
+    },
+    {
+      "label": "soccer_france_ligue_one:draw_no_bet",
+      "error": "Markets not supported by this endpoint: draw_no_bet",
+      "statusCode": 422
+    },
+    {
+      "label": "soccer_france_ligue_one:double_chance",
+      "error": "Markets not supported by this endpoint: double_chance",
+      "statusCode": 422
+    },
+    {
       "label": "soccer_germany_dfb_pokal:base-combined",
       "error": "Markets not supported by this endpoint: btts, double_chance, draw_no_bet",
       "statusCode": 422
@@ -4372,5 +4364,5 @@
   },
   "skipped": false,
   "skipReason": null,
-  "completedAt": "2026-08-17T06:40:43.596Z"
+  "completedAt": "2026-08-17T06:50:47.665Z"
 }
