@@ -1,20 +1,12 @@
 {
   "version": "v251",
-  "generatedAt": "2026-08-17T07:10:16.846Z",
+  "generatedAt": "2026-08-17T07:20:15.739Z",
   "provider": "The Odds API v4",
   "keyPresent": true,
   "regions": "uk",
   "sportsAvailable": 71,
   "soccerSportsAvailable": 44,
   "sportMappings": [
-    {
-      "league": "Coppa Italia",
-      "country": "Italy",
-      "sportKey": "soccer_italy_coppa_italia",
-      "sportTitle": "Coppa Italia",
-      "score": 1,
-      "matches": 5
-    },
     {
       "league": "Primeira Liga",
       "country": "Portugal",
@@ -310,6 +302,14 @@
       "sportTitle": "Veikkausliiga - Finland",
       "score": 0.347,
       "matches": 2
+    },
+    {
+      "league": "Coppa Italia",
+      "country": "Italy",
+      "sportKey": "soccer_italy_coppa_italia",
+      "sportTitle": "Coppa Italia",
+      "score": 1,
+      "matches": 4
     },
     {
       "league": "Premier League",
@@ -1376,7 +1376,7 @@
       "matches": 1
     }
   ],
-  "matchesConsidered": 1269,
+  "matchesConsidered": 1268,
   "matchesMatched": 0,
   "matchesUpdated": 0,
   "fieldsFilled": 0,
@@ -2002,42 +2002,6 @@
       "country": "Dominican-Republic",
       "reason": "No matching soccer sport key",
       "bestScore": 0.125
-    },
-    {
-      "league": "Coppa Italia",
-      "home": "Lazio",
-      "away": "Mantova",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Coppa Italia",
-      "home": "Pisa",
-      "away": "Empoli",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Coppa Italia",
-      "home": "Sassuolo",
-      "away": "Cesena",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Coppa Italia",
-      "home": "Cremonese",
-      "away": "Sampdoria",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Coppa Italia",
-      "home": "Palermo",
-      "away": "Lecce",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Coppa Italia Primavera",
-      "home": "Sudtirol U19",
-      "away": "Cosenza U19",
-      "reason": "No event/team match"
     },
     {
       "league": "Primeira Liga",
@@ -2884,22 +2848,46 @@
       "home": "Sol de América",
       "away": "Bartolomé Mitre",
       "reason": "No event/team match"
+    },
+    {
+      "league": "Primera División",
+      "home": "FC Cajamarca",
+      "away": "Universitario",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Primera División",
+      "home": "Cienciano",
+      "away": "Deportivo Garcilaso",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Primera División",
+      "home": "FC Cajamarca",
+      "away": "Atletico Grau",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Primera División",
+      "home": "Alianza Atletico",
+      "away": "Sporting Cristal",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Liga Profesional Argentina",
+      "home": "River Plate",
+      "away": "Argentinos JRS",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Liga Profesional Argentina",
+      "home": "Barracas Central",
+      "away": "Rosario Central",
+      "reason": "No event/team match"
     }
   ],
   "unsupportedMarkets": [
     {
-      "sportKey": "soccer_italy_coppa_italia",
-      "market": "btts"
-    },
-    {
-      "sportKey": "soccer_italy_coppa_italia",
-      "market": "draw_no_bet"
-    },
-    {
-      "sportKey": "soccer_italy_coppa_italia",
-      "market": "double_chance"
-    },
-    {
       "sportKey": "soccer_portugal_primeira_liga",
       "market": "btts"
     },
@@ -3041,6 +3029,18 @@
     },
     {
       "sportKey": "soccer_finland_veikkausliiga",
+      "market": "double_chance"
+    },
+    {
+      "sportKey": "soccer_italy_coppa_italia",
+      "market": "btts"
+    },
+    {
+      "sportKey": "soccer_italy_coppa_italia",
+      "market": "draw_no_bet"
+    },
+    {
+      "sportKey": "soccer_italy_coppa_italia",
       "market": "double_chance"
     },
     {
@@ -3358,31 +3358,6 @@
   ],
   "requestErrors": [
     {
-      "label": "soccer_italy_coppa_italia:base-combined",
-      "error": "Markets not supported by this endpoint: btts, double_chance, draw_no_bet",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_italy_coppa_italia:base-core",
-      "error": "Invalid commenceTimeFrom parameter. The format must be YYYY-MM-DDTHH:MM:SSZ, for example 2020-11-24T16:05:00Z",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_italy_coppa_italia:btts",
-      "error": "Markets not supported by this endpoint: btts",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_italy_coppa_italia:draw_no_bet",
-      "error": "Markets not supported by this endpoint: draw_no_bet",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_italy_coppa_italia:double_chance",
-      "error": "Markets not supported by this endpoint: double_chance",
-      "statusCode": 422
-    },
-    {
       "label": "soccer_portugal_primeira_liga:base-combined",
       "error": "Markets not supported by this endpoint: btts, double_chance, draw_no_bet",
       "statusCode": 422
@@ -3679,6 +3654,31 @@
     },
     {
       "label": "soccer_finland_veikkausliiga:double_chance",
+      "error": "Markets not supported by this endpoint: double_chance",
+      "statusCode": 422
+    },
+    {
+      "label": "soccer_italy_coppa_italia:base-combined",
+      "error": "Markets not supported by this endpoint: btts, double_chance, draw_no_bet",
+      "statusCode": 422
+    },
+    {
+      "label": "soccer_italy_coppa_italia:base-core",
+      "error": "Invalid commenceTimeFrom parameter. The format must be YYYY-MM-DDTHH:MM:SSZ, for example 2020-11-24T16:05:00Z",
+      "statusCode": 422
+    },
+    {
+      "label": "soccer_italy_coppa_italia:btts",
+      "error": "Markets not supported by this endpoint: btts",
+      "statusCode": 422
+    },
+    {
+      "label": "soccer_italy_coppa_italia:draw_no_bet",
+      "error": "Markets not supported by this endpoint: draw_no_bet",
+      "statusCode": 422
+    },
+    {
+      "label": "soccer_italy_coppa_italia:double_chance",
       "error": "Markets not supported by this endpoint: double_chance",
       "statusCode": 422
     },
@@ -4340,5 +4340,5 @@
   },
   "skipped": false,
   "skipReason": null,
-  "completedAt": "2026-08-17T07:10:39.150Z"
+  "completedAt": "2026-08-17T07:20:28.099Z"
 }
