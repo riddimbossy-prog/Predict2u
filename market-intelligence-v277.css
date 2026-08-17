@@ -1,0 +1,35 @@
+/* Predict2U v277 — Market Profile Intelligence */
+.p2u-market-profile-panel{margin-top:18px}
+.p2u-market-profile-hero{display:flex;justify-content:space-between;gap:22px;align-items:flex-start;padding:24px;border:1px solid rgba(139,190,234,.18);border-radius:22px;background:linear-gradient(145deg,rgba(9,24,39,.96),rgba(5,15,27,.96));box-shadow:0 22px 52px rgba(0,0,0,.18)}
+.p2u-market-profile-hero h2{margin:6px 0 8px;font-size:clamp(1.45rem,2.6vw,2.15rem);line-height:1.08}
+.p2u-market-profile-hero p{max-width:780px;margin:0;color:var(--muted,#91a4b8);line-height:1.62}
+.p2u-market-safety{flex:0 0 auto;padding:10px 13px;border:1px solid rgba(167,243,36,.35);border-radius:999px;background:rgba(167,243,36,.08);color:#c9ff64;font-size:.78rem;font-weight:800;letter-spacing:.04em;text-transform:uppercase}
+.p2u-market-profile-controls{margin-top:16px}
+.p2u-market-profile-tabs{flex-wrap:wrap}
+.p2u-market-profile-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+.p2u-market-profile-card,.p2u-market-season-card{min-width:0;border:1px solid rgba(139,190,234,.16);border-radius:20px;background:linear-gradient(155deg,rgba(8,20,34,.98),rgba(5,14,25,.98));box-shadow:0 16px 40px rgba(0,0,0,.15);overflow:hidden}
+.p2u-market-profile-card{padding:17px}
+.p2u-market-profile-top,.p2u-market-season-foot{display:flex;justify-content:space-between;gap:12px;color:#7f94aa;font-size:.76rem}
+.p2u-market-team-head{display:grid;grid-template-columns:minmax(0,1fr) auto minmax(0,1fr);gap:12px;align-items:center;margin:14px 0 15px}
+.p2u-market-team-head>div:last-child{text-align:right}
+.p2u-market-team-head strong,.p2u-market-season-head strong{display:block;color:#f6fbff;font-size:.98rem}
+.p2u-market-team-head small,.p2u-market-season-head small{display:block;margin-top:3px;color:#7f94aa;font-size:.72rem}
+.p2u-market-team-head>span{display:grid;place-items:center;width:34px;height:34px;border:1px solid rgba(139,190,234,.16);border-radius:50%;color:#7f94aa;font-size:.7rem;font-weight:800;text-transform:uppercase}
+.p2u-market-table-head,.p2u-market-metric{display:grid;grid-template-columns:minmax(0,1fr) 70px 70px;gap:8px;align-items:center}
+.p2u-market-table-head{padding:0 10px 8px;color:#688096;font-size:.68rem;font-weight:800;text-transform:uppercase;letter-spacing:.07em}
+.p2u-market-table-head b{text-align:right}
+.p2u-market-metric{padding:10px;border-top:1px solid rgba(139,190,234,.10)}
+.p2u-market-metric span{color:#b8c7d5;font-size:.82rem}
+.p2u-market-metric b{text-align:right;color:#f4f9fd;font-size:.94rem}
+.p2u-market-profile-note{margin:12px 0 0;color:#6f8499;font-size:.72rem;line-height:1.45}
+.p2u-market-season-card{padding:17px}
+.p2u-market-season-head{display:flex;align-items:center;gap:10px}
+.p2u-market-season-head img{width:36px;height:36px;object-fit:contain}
+.p2u-market-season-metrics{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px;margin:14px 0}
+.p2u-market-season-metrics span{padding:10px;border:1px solid rgba(139,190,234,.11);border-radius:12px;background:rgba(255,255,255,.018)}
+.p2u-market-season-metrics b,.p2u-market-season-metrics small{display:block}
+.p2u-market-season-metrics b{color:#f6fbff;font-size:1rem}
+.p2u-market-season-metrics small{margin-top:3px;color:#778ca1;font-size:.7rem}
+.p2u-market-season-foot{padding-top:12px;border-top:1px solid rgba(139,190,234,.10)}
+@media(max-width:820px){.p2u-market-profile-grid{grid-template-columns:1fr}.p2u-market-profile-hero{flex-direction:column}.p2u-market-safety{align-self:flex-start}}
+@media(max-width:560px){.p2u-market-profile-hero,.p2u-market-profile-card,.p2u-market-season-card{border-radius:16px}.p2u-market-profile-hero{padding:18px}.p2u-market-profile-card,.p2u-market-season-card{padding:14px}.p2u-market-table-head,.p2u-market-metric{grid-template-columns:minmax(0,1fr) 56px 56px}.p2u-market-team-head{gap:7px}.p2u-market-team-head strong{font-size:.88rem}.p2u-market-season-metrics{grid-template-columns:1fr 1fr}}
