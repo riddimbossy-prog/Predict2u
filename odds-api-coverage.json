@@ -1,11 +1,11 @@
 {
   "version": "v251",
-  "generatedAt": "2026-08-18T23:10:16.217Z",
+  "generatedAt": "2026-08-18T23:20:19.439Z",
   "provider": "The Odds API v4",
   "keyPresent": true,
   "regions": "uk",
-  "sportsAvailable": 75,
-  "soccerSportsAvailable": 44,
+  "sportsAvailable": 78,
+  "soccerSportsAvailable": 45,
   "sportMappings": [
     {
       "league": "Super League",
@@ -134,6 +134,14 @@
       "sportTitle": "Allsvenskan - Sweden",
       "score": 0.347,
       "matches": 19
+    },
+    {
+      "league": "3. Division - Girone 3",
+      "country": "Norway",
+      "sportKey": "soccer_norway_eliteserien",
+      "sportTitle": "Eliteserien - Norway",
+      "score": 0.323,
+      "matches": 1
     },
     {
       "league": "DBU Pokalen",
@@ -400,6 +408,14 @@
       "matches": 3
     },
     {
+      "league": "Toppserien",
+      "country": "Norway",
+      "sportKey": "soccer_norway_eliteserien",
+      "sportTitle": "Eliteserien - Norway",
+      "score": 0.38,
+      "matches": 3
+    },
+    {
       "league": "Regionalliga - Nord",
       "country": "Germany",
       "sportKey": "soccer_germany_bundesliga",
@@ -502,6 +518,14 @@
       "sportTitle": "MLS",
       "score": 0.323,
       "matches": 1
+    },
+    {
+      "league": "Nasjonal U19 Champions League",
+      "country": "Norway",
+      "sportKey": "soccer_norway_eliteserien",
+      "sportTitle": "Eliteserien - Norway",
+      "score": 0.305,
+      "matches": 2
     },
     {
       "league": "Premier League",
@@ -1314,12 +1338,6 @@
       "bestScore": 0.143
     },
     {
-      "league": "3. Division - Girone 3",
-      "country": "Norway",
-      "reason": "No matching soccer sport key",
-      "bestScore": 0.125
-    },
-    {
       "league": "Premiership Women",
       "country": "Northern-Ireland",
       "reason": "No matching soccer sport key",
@@ -1416,12 +1434,6 @@
       "bestScore": 0.143
     },
     {
-      "league": "Toppserien",
-      "country": "Norway",
-      "reason": "No matching soccer sport key",
-      "bestScore": 0
-    },
-    {
       "league": "2. Deild",
       "country": "Iceland",
       "reason": "No matching soccer sport key",
@@ -1468,12 +1480,6 @@
       "country": "Kazakhstan",
       "reason": "No matching soccer sport key",
       "bestScore": 0.143
-    },
-    {
-      "league": "Nasjonal U19 Champions League",
-      "country": "Norway",
-      "reason": "No matching soccer sport key",
-      "bestScore": 0.2
     },
     {
       "league": "Second League",
@@ -2764,6 +2770,24 @@
       "home": "Eastern",
       "away": "Shatin",
       "reason": "No event/team match"
+    },
+    {
+      "league": "Premier League",
+      "home": "Wadi Degla",
+      "away": "Masr",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Premier League",
+      "home": "Abu Qair Semad",
+      "away": "National Bank of Egypt",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Premier League",
+      "home": "Zamalek SC",
+      "away": "Al Ittihad",
+      "reason": "No event/team match"
     }
   ],
   "unsupportedMarkets": [
@@ -2897,6 +2921,18 @@
     },
     {
       "sportKey": "soccer_sweden_allsvenskan",
+      "market": "double_chance"
+    },
+    {
+      "sportKey": "soccer_norway_eliteserien",
+      "market": "btts"
+    },
+    {
+      "sportKey": "soccer_norway_eliteserien",
+      "market": "draw_no_bet"
+    },
+    {
+      "sportKey": "soccer_norway_eliteserien",
       "market": "double_chance"
     },
     {
@@ -3497,6 +3533,31 @@
     },
     {
       "label": "soccer_sweden_allsvenskan:double_chance",
+      "error": "Markets not supported by this endpoint: double_chance",
+      "statusCode": 422
+    },
+    {
+      "label": "soccer_norway_eliteserien:base-combined",
+      "error": "Markets not supported by this endpoint: btts, double_chance, draw_no_bet",
+      "statusCode": 422
+    },
+    {
+      "label": "soccer_norway_eliteserien:base-core",
+      "error": "Invalid commenceTimeFrom parameter. The format must be YYYY-MM-DDTHH:MM:SSZ, for example 2020-11-24T16:05:00Z",
+      "statusCode": 422
+    },
+    {
+      "label": "soccer_norway_eliteserien:btts",
+      "error": "Markets not supported by this endpoint: btts",
+      "statusCode": 422
+    },
+    {
+      "label": "soccer_norway_eliteserien:draw_no_bet",
+      "error": "Markets not supported by this endpoint: draw_no_bet",
+      "statusCode": 422
+    },
+    {
+      "label": "soccer_norway_eliteserien:double_chance",
       "error": "Markets not supported by this endpoint: double_chance",
       "statusCode": 422
     },
@@ -4183,5 +4244,5 @@
   },
   "skipped": false,
   "skipReason": null,
-  "completedAt": "2026-08-18T23:10:39.612Z"
+  "completedAt": "2026-08-18T23:20:27.552Z"
 }
