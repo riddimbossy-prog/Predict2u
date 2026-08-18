@@ -1,20 +1,12 @@
 {
   "version": "v251",
-  "generatedAt": "2026-08-18T03:20:17.762Z",
+  "generatedAt": "2026-08-18T03:30:17.177Z",
   "provider": "The Odds API v4",
   "keyPresent": true,
   "regions": "uk",
   "sportsAvailable": 75,
   "soccerSportsAvailable": 44,
   "sportMappings": [
-    {
-      "league": "Kansallinen Liiga",
-      "country": "Finland",
-      "sportKey": "soccer_finland_veikkausliiga",
-      "sportTitle": "Veikkausliiga - Finland",
-      "score": 0.347,
-      "matches": 2
-    },
     {
       "league": "Coppa Italia",
       "country": "Italy",
@@ -936,6 +928,14 @@
       "matches": 2
     },
     {
+      "league": "Kansallinen Liiga",
+      "country": "Finland",
+      "sportKey": "soccer_finland_veikkausliiga",
+      "sportTitle": "Veikkausliiga - Finland",
+      "score": 0.347,
+      "matches": 1
+    },
+    {
       "league": "Serie A Cup Women",
       "country": "Italy",
       "sportKey": "soccer_italy_serie_a",
@@ -1336,7 +1336,7 @@
       "matches": 1
     }
   ],
-  "matchesConsidered": 1154,
+  "matchesConsidered": 1151,
   "matchesMatched": 0,
   "matchesUpdated": 0,
   "fieldsFilled": 0,
@@ -1345,18 +1345,6 @@
   "derivedHtftMatches": 0,
   "bookmakerRows": 0,
   "unmatched": [
-    {
-      "league": "Liga I",
-      "country": "Romania",
-      "reason": "No matching soccer sport key",
-      "bestScore": 0.143
-    },
-    {
-      "league": "NB I",
-      "country": "Hungary",
-      "reason": "No matching soccer sport key",
-      "bestScore": 0
-    },
     {
       "league": "A Lyga",
       "country": "Lithuania",
@@ -1446,6 +1434,12 @@
       "country": "Iceland",
       "reason": "No matching soccer sport key",
       "bestScore": 0
+    },
+    {
+      "league": "Liga I",
+      "country": "Romania",
+      "reason": "No matching soccer sport key",
+      "bestScore": 0.143
     },
     {
       "league": "Division Intermedia",
@@ -1896,54 +1890,6 @@
       "country": "Dominican-Republic",
       "reason": "No matching soccer sport key",
       "bestScore": 0.125
-    },
-    {
-      "league": "Kansallinen Liiga",
-      "home": "HJK W",
-      "away": "KuPS W",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Kansallinen Liiga",
-      "home": "HPS W",
-      "away": "HJK W",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Ykkösliiga",
-      "home": "KäPa",
-      "away": "JIPPO",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Ykkösliiga",
-      "home": "Haka",
-      "away": "SJK Akatemia",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Ykkösliiga",
-      "home": "PK-35",
-      "away": "JäPS",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Ykkönen",
-      "home": "KPV-j",
-      "away": "KuPS Akatemia",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Ykkönen",
-      "home": "PKKU",
-      "away": "JJK",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Veikkausliiga",
-      "home": "SJK",
-      "away": "Lahti",
-      "reason": "No event/team match"
     },
     {
       "league": "Coppa Italia",
@@ -2844,22 +2790,64 @@
       "home": "Dolné Krškany",
       "away": "Nitra",
       "reason": "No event/team match"
+    },
+    {
+      "league": "Cup",
+      "home": "Nová Dedinka",
+      "away": "Petržalka",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Cup",
+      "home": "Oravan",
+      "away": "Považská Bystrica",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Cup",
+      "home": "Ostrovany",
+      "away": "Slovan Kendice",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Cup",
+      "home": "Raslavice",
+      "away": "FK Košice",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Cup",
+      "home": "Rohožník",
+      "away": "Šamorín",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Cup",
+      "home": "Rosina",
+      "away": "MFK Bytča",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Cup",
+      "home": "Rovnost Krajne",
+      "away": "Púchov",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Cup",
+      "home": "Rožňava",
+      "away": "Spartak Medzev",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Cup",
+      "home": "Rudňany",
+      "away": "Podbrezová",
+      "reason": "No event/team match"
     }
   ],
   "unsupportedMarkets": [
     {
-      "sportKey": "soccer_finland_veikkausliiga",
-      "market": "btts"
-    },
-    {
-      "sportKey": "soccer_finland_veikkausliiga",
-      "market": "draw_no_bet"
-    },
-    {
-      "sportKey": "soccer_finland_veikkausliiga",
-      "market": "double_chance"
-    },
-    {
       "sportKey": "soccer_italy_serie_a",
       "market": "btts"
     },
@@ -3217,6 +3205,18 @@
     },
     {
       "sportKey": "soccer_germany_liga3",
+      "market": "double_chance"
+    },
+    {
+      "sportKey": "soccer_finland_veikkausliiga",
+      "market": "btts"
+    },
+    {
+      "sportKey": "soccer_finland_veikkausliiga",
+      "market": "draw_no_bet"
+    },
+    {
+      "sportKey": "soccer_finland_veikkausliiga",
       "market": "double_chance"
     },
     {
@@ -3317,31 +3317,6 @@
     }
   ],
   "requestErrors": [
-    {
-      "label": "soccer_finland_veikkausliiga:base-combined",
-      "error": "Markets not supported by this endpoint: btts, double_chance, draw_no_bet",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_finland_veikkausliiga:base-core",
-      "error": "Invalid commenceTimeFrom parameter. The format must be YYYY-MM-DDTHH:MM:SSZ, for example 2020-11-24T16:05:00Z",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_finland_veikkausliiga:btts",
-      "error": "Markets not supported by this endpoint: btts",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_finland_veikkausliiga:draw_no_bet",
-      "error": "Markets not supported by this endpoint: draw_no_bet",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_finland_veikkausliiga:double_chance",
-      "error": "Markets not supported by this endpoint: double_chance",
-      "statusCode": 422
-    },
     {
       "label": "soccer_italy_serie_a:base-combined",
       "error": "Markets not supported by this endpoint: btts, double_chance, draw_no_bet",
@@ -4093,6 +4068,31 @@
       "statusCode": 422
     },
     {
+      "label": "soccer_finland_veikkausliiga:base-combined",
+      "error": "Markets not supported by this endpoint: btts, double_chance, draw_no_bet",
+      "statusCode": 422
+    },
+    {
+      "label": "soccer_finland_veikkausliiga:base-core",
+      "error": "Invalid commenceTimeFrom parameter. The format must be YYYY-MM-DDTHH:MM:SSZ, for example 2020-11-24T16:05:00Z",
+      "statusCode": 422
+    },
+    {
+      "label": "soccer_finland_veikkausliiga:btts",
+      "error": "Markets not supported by this endpoint: btts",
+      "statusCode": 422
+    },
+    {
+      "label": "soccer_finland_veikkausliiga:draw_no_bet",
+      "error": "Markets not supported by this endpoint: draw_no_bet",
+      "statusCode": 422
+    },
+    {
+      "label": "soccer_finland_veikkausliiga:double_chance",
+      "error": "Markets not supported by this endpoint: double_chance",
+      "statusCode": 422
+    },
+    {
       "label": "soccer_uefa_nations_league:base-combined",
       "error": "Markets not supported by this endpoint: btts, double_chance, draw_no_bet",
       "statusCode": 422
@@ -4300,5 +4300,5 @@
   },
   "skipped": false,
   "skipReason": null,
-  "completedAt": "2026-08-18T03:20:40.607Z"
+  "completedAt": "2026-08-18T03:30:31.860Z"
 }
