@@ -272,6 +272,8 @@
 
   function warningsFor(m,rawMarket){
     if(!m||!rawMarket)return [];
+    const marketState=norm(rawMarket);
+    if(/^(?:no qualified pick|analysis pending|no bet|pending|no pick)$/.test(marketState))return [];
     const out=[],marketCode=canonicalMarket(rawMarket);
     const mismatch=leagueMismatchWarning(m,marketCode,rawMarket);if(mismatch)out.push(mismatch);
     const early=isEarlySeason(m);if(early.yes)out.push({code:'EARLY_SEASON',label:'Early-season matchup — form and split samples can still move quickly.',detail:early.reason});
