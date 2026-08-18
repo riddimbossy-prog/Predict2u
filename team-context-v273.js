@@ -1,3 +1,13 @@
+/* Predict2U v280 bridge — load site-wide contextual caution flags wherever team context is used. */
+(function(){
+  'use strict';
+  if(!document.querySelector('link[data-p2u-context-flags-v280]')){
+    const css=document.createElement('link');css.rel='stylesheet';css.href='pick-context-flags-v280.css';css.dataset.p2uContextFlagsV280='true';document.head.appendChild(css);
+  }
+  if(!document.querySelector('script[data-p2u-context-flags-v280]')){
+    const js=document.createElement('script');js.src='pick-context-flags-v280.js';js.async=false;js.dataset.p2uContextFlagsV280='true';document.head.appendChild(js);
+  }
+})();
 /* Predict2U v273 — public team/fixture context popup. */
 (function(){
   'use strict';
