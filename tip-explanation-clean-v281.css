@@ -1,0 +1,53 @@
+/* Predict2U v281 — clean prediction surfaces. Keep the pick visible; keep the method one tap away. */
+.p2u-clean-v281 .p2u-standard-card .p2u-card-signals{display:none!important}
+.p2u-clean-v281 .p2u-standard-card>.p2u-fixture-context,
+.p2u-clean-v281 .p2u-fullboard-card>.p2u-fixture-context,
+.p2u-clean-v281 .engine-pick-card>.p2u-fixture-context,
+.p2u-clean-v281 .p2u-market-card>.p2u-fixture-context,
+.p2u-clean-v281 .p2u-auto-pick-card>.p2u-fixture-context,
+.p2u-clean-v281 .p2u-pick>.p2u-fixture-context{display:none!important}
+
+/* Individual engine cards: reasons are valuable, but no longer always open. */
+.p2u-clean-v281 .engine-pick-card .engine-reasons{display:none!important;margin-top:10px}
+.p2u-clean-v281 .engine-pick-card.p2u-explain-open .engine-reasons{display:block!important}
+.p2u-clean-v281 .engine-pick-card .p2u-clean-secondary-badge{display:none!important}
+
+/* Market Intelligence: keep market, score and odds up front; metrics/reasons sit behind one control. */
+.p2u-clean-v281 .p2u-market-card.is-edge .p2u-market-metrics,
+.p2u-clean-v281 .p2u-market-card.is-edge .p2u-market-reasons{display:none!important}
+.p2u-clean-v281 .p2u-market-card.is-edge.p2u-explain-open .p2u-market-metrics{display:grid!important}
+.p2u-clean-v281 .p2u-market-card.is-edge.p2u-explain-open .p2u-market-reasons{display:block!important}
+
+/* Daily Auto Picks: the route analysis remains available through Why this pick / Matchup Lab. */
+.p2u-clean-v281 .p2u-auto-pick-card .p2u-auto-profiles,
+.p2u-clean-v281 .p2u-auto-pick-card .p2u-auto-reasons{display:none!important}
+.p2u-clean-v281 .p2u-auto-pick-card .p2u-auto-market>div b:nth-child(n+3){display:none!important}
+.p2u-clean-v281 .p2u-auto-pick-card .p2u-auto-learning-pill{display:none!important}
+
+/* One consistent explanation control. */
+.p2u-clean-v281 .p2u-clean-why,
+.p2u-clean-v281 .p2u-clean-why-inline{display:inline-flex;align-items:center;justify-content:center;gap:6px;border:1px solid rgba(140,164,190,.22);background:rgba(8,18,29,.56);color:#dce7ef;border-radius:10px;padding:8px 11px;font:inherit;font-size:11px;font-weight:800;cursor:pointer;min-height:34px}
+.p2u-clean-v281 .p2u-clean-why:hover,
+.p2u-clean-v281 .p2u-clean-why-inline:hover{border-color:rgba(182,255,34,.35);color:#f2ffd6}
+.p2u-clean-v281 .p2u-clean-why{margin-top:10px}
+.p2u-clean-v281 .btn-info.p2u-clean-why-inline{width:auto!important;padding-inline:11px!important}
+
+/* Context cautions are now a small red flag first, details on demand. */
+.p2u-clean-v281 .p2u-context-flags-v280{padding:0!important;margin-top:9px!important;border:0!important;background:transparent!important}
+.p2u-clean-v281 .p2u-context-flags-v280 .p2u-context-flags-head{display:inline-flex!important;margin:0!important;padding:5px 8px!important;border:1px solid rgba(255,82,96,.28)!important;border-radius:999px!important;background:rgba(255,82,96,.07)!important;cursor:pointer;user-select:none}
+.p2u-clean-v281 .p2u-context-flags-v280 .p2u-context-red-flag{width:auto!important;height:auto!important;background:transparent!important;font-size:12px!important}
+.p2u-clean-v281 .p2u-context-flags-v280 .p2u-context-flags-head strong{font-size:9px!important;letter-spacing:.06em!important}
+.p2u-clean-v281 .p2u-context-flags-v280 .p2u-context-flags-list{display:none!important;margin-top:7px;padding:8px 9px;border:1px solid rgba(255,82,96,.18);border-radius:10px;background:rgba(255,82,96,.035)}
+.p2u-clean-v281 .p2u-context-flags-v280.is-open .p2u-context-flags-list{display:grid!important}
+.p2u-clean-v281 .p2u-context-flags-v280 .p2u-context-flag-item small{display:none!important}
+
+/* Full Board already has a collapsed panel; remove secondary diagnostic density inside it. */
+.p2u-clean-v281 .p2u-fullboard-card .coverage-line,
+.p2u-clean-v281 .p2u-fullboard-card .coverage-line+div{display:none!important}
+.p2u-clean-v281 .p2u-fullboard-card .p2u-fullboard-signals .ebadge:last-child{display:none!important}
+
+/* Dedicated analysis/proof surfaces are intentionally not stripped: that is where the methodology belongs. */
+@media(max-width:640px){
+  .p2u-clean-v281 .p2u-clean-why,.p2u-clean-v281 .p2u-clean-why-inline{min-height:36px;font-size:10.5px;padding:7px 10px}
+  .p2u-clean-v281 .p2u-context-flags-v280 .p2u-context-flags-list{padding:7px 8px}
+}
