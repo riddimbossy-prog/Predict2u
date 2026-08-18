@@ -1,20 +1,12 @@
 {
   "version": "v251",
-  "generatedAt": "2026-08-18T10:10:21.857Z",
+  "generatedAt": "2026-08-18T10:20:21.113Z",
   "provider": "The Odds API v4",
   "keyPresent": true,
   "regions": "uk",
   "sportsAvailable": 75,
   "soccerSportsAvailable": 44,
   "sportMappings": [
-    {
-      "league": "Liga Profesional Argentina",
-      "country": "Argentina",
-      "sportKey": "soccer_argentina_primera_division",
-      "sportTitle": "Primera División - Argentina",
-      "score": 0.78,
-      "matches": 4
-    },
     {
       "league": "Liga MX Femenil",
       "country": "Mexico",
@@ -38,6 +30,14 @@
       "sportTitle": "Brazil Série A",
       "score": 0.466,
       "matches": 2
+    },
+    {
+      "league": "Liga Profesional Argentina",
+      "country": "Argentina",
+      "sportKey": "soccer_argentina_primera_division",
+      "sportTitle": "Primera División - Argentina",
+      "score": 0.78,
+      "matches": 3
     },
     {
       "league": "Primera B",
@@ -1304,7 +1304,7 @@
       "matches": 1
     }
   ],
-  "matchesConsidered": 1072,
+  "matchesConsidered": 1071,
   "matchesMatched": 0,
   "matchesUpdated": 0,
   "fieldsFilled": 0,
@@ -1806,222 +1806,6 @@
       "bestScore": 0.125
     },
     {
-      "league": "Liga Profesional Argentina",
-      "home": "Velez Sarsfield",
-      "away": "Defensa Y Justicia",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Liga Profesional Argentina",
-      "home": "Gimnasia M.",
-      "away": "Talleres Cordoba",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Liga Profesional Argentina",
-      "home": "Aldosivi",
-      "away": "Union Santa Fe",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Liga Profesional Argentina",
-      "home": "Estudiantes de Rio Cuarto",
-      "away": "San Lorenzo",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Primera División",
-      "home": "Sporting San Jose",
-      "away": "Escorpiones Belén",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Torneo Promocional Amateur",
-      "home": "Uribelarrea",
-      "away": "Ezeiza",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Reserve League",
-      "home": "Godoy Cruz Res.",
-      "away": "Vélez Sársfield Res.",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Reserve League",
-      "home": "Newell's Old Boys Res.",
-      "away": "Lanús Res.",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Reserve League",
-      "home": "Unión Santa Fe Res.",
-      "away": "Racing Club Res.",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Reserve League",
-      "home": "Atlético Tucumán Res.",
-      "away": "River Plate Res.",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Reserve League",
-      "home": "Gimnasia La Plata Res.",
-      "away": "Sarmiento Res.",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Reserve League",
-      "home": "Banfield Res.",
-      "away": "Instituto Res.",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Reserve League",
-      "home": "Aldosivi Res.",
-      "away": "Argentinos Juniors Res.",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Reserve League",
-      "home": "Atl. Rafaela 2",
-      "away": "Quilmes 2",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Reserve League",
-      "home": "Ferro 2",
-      "away": "San Martín San Juan Res.",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Reserve League",
-      "home": "Huracán Res.",
-      "away": "Independiente Riva. Res.",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Reserve League",
-      "home": "Independiente Res.",
-      "away": "Estudiantes La Plata Res",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Reserve League",
-      "home": "Talleres Córdoba Res.",
-      "away": "Rosario Central Res.",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Reserve League",
-      "home": "Platense Res.",
-      "away": "Colón Res.",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Reserve League",
-      "home": "Barracas Central Res.",
-      "away": "Tigre Res.",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Reserve League",
-      "home": "Defensa y Justicia Res.",
-      "away": "Belgrano Córdoba Res.",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Reserve League",
-      "home": "Estudiantes Rio Cuarto 2",
-      "away": "Deportivo Riestra Res.",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Reserve League",
-      "home": "Gimnasia Mendoza 2",
-      "away": "San Lorenzo Res.",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Reserve League",
-      "home": "Boca Juniors Res.",
-      "away": "Central Córdoba SdE Res.",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Copa Argentina",
-      "home": "Deportivo Riestra",
-      "away": "Gimnasia L.P.",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Copa Argentina",
-      "home": "Banfield",
-      "away": "Midland",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Copa Argentina",
-      "home": "Racing Club",
-      "away": "Belgrano Cordoba",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Primera Nacional",
-      "home": "Chacarita Juniors",
-      "away": "Club Atlético Güemes",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Primera Nacional",
-      "home": "Acassuso",
-      "away": "Godoy Cruz",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Primera Nacional",
-      "home": "San Telmo",
-      "away": "Deportivo Moron",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Primera Nacional",
-      "home": "Deportivo Madryn",
-      "away": "Atletico Mitre",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Primera División",
-      "home": "FC Cajamarca",
-      "away": "Atletico Grau",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Primera División",
-      "home": "Alianza Atletico",
-      "away": "Sporting Cristal",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Primera División",
-      "home": "Albion FC",
-      "away": "Boston River",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Primera División",
-      "home": "Liverpool Montevideo",
-      "away": "Cerro",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Primera División",
-      "home": "The Strongest",
-      "away": "Universitario de Vinto",
-      "reason": "No event/team match"
-    },
-    {
       "league": "Liga MX Femenil",
       "home": "León W",
       "away": "Querétaro W",
@@ -2277,6 +2061,216 @@
       "league": "Paulista - U20",
       "home": "XV de Jaú U20",
       "away": "Porto Football U20",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Liga Profesional Argentina",
+      "home": "Gimnasia M.",
+      "away": "Talleres Cordoba",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Liga Profesional Argentina",
+      "home": "Aldosivi",
+      "away": "Union Santa Fe",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Liga Profesional Argentina",
+      "home": "Estudiantes de Rio Cuarto",
+      "away": "San Lorenzo",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Primera División",
+      "home": "Sporting San Jose",
+      "away": "Escorpiones Belén",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Torneo Promocional Amateur",
+      "home": "Uribelarrea",
+      "away": "Ezeiza",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Reserve League",
+      "home": "Godoy Cruz Res.",
+      "away": "Vélez Sársfield Res.",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Reserve League",
+      "home": "Newell's Old Boys Res.",
+      "away": "Lanús Res.",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Reserve League",
+      "home": "Unión Santa Fe Res.",
+      "away": "Racing Club Res.",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Reserve League",
+      "home": "Atlético Tucumán Res.",
+      "away": "River Plate Res.",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Reserve League",
+      "home": "Gimnasia La Plata Res.",
+      "away": "Sarmiento Res.",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Reserve League",
+      "home": "Banfield Res.",
+      "away": "Instituto Res.",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Reserve League",
+      "home": "Aldosivi Res.",
+      "away": "Argentinos Juniors Res.",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Reserve League",
+      "home": "Atl. Rafaela 2",
+      "away": "Quilmes 2",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Reserve League",
+      "home": "Ferro 2",
+      "away": "San Martín San Juan Res.",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Reserve League",
+      "home": "Huracán Res.",
+      "away": "Independiente Riva. Res.",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Reserve League",
+      "home": "Independiente Res.",
+      "away": "Estudiantes La Plata Res",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Reserve League",
+      "home": "Talleres Córdoba Res.",
+      "away": "Rosario Central Res.",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Reserve League",
+      "home": "Platense Res.",
+      "away": "Colón Res.",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Reserve League",
+      "home": "Barracas Central Res.",
+      "away": "Tigre Res.",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Reserve League",
+      "home": "Defensa y Justicia Res.",
+      "away": "Belgrano Córdoba Res.",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Reserve League",
+      "home": "Estudiantes Rio Cuarto 2",
+      "away": "Deportivo Riestra Res.",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Reserve League",
+      "home": "Gimnasia Mendoza 2",
+      "away": "San Lorenzo Res.",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Reserve League",
+      "home": "Boca Juniors Res.",
+      "away": "Central Córdoba SdE Res.",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Copa Argentina",
+      "home": "Deportivo Riestra",
+      "away": "Gimnasia L.P.",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Copa Argentina",
+      "home": "Banfield",
+      "away": "Midland",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Copa Argentina",
+      "home": "Racing Club",
+      "away": "Belgrano Cordoba",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Primera Nacional",
+      "home": "Chacarita Juniors",
+      "away": "Club Atlético Güemes",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Primera Nacional",
+      "home": "Acassuso",
+      "away": "Godoy Cruz",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Primera Nacional",
+      "home": "San Telmo",
+      "away": "Deportivo Moron",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Primera Nacional",
+      "home": "Deportivo Madryn",
+      "away": "Atletico Mitre",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Primera División",
+      "home": "FC Cajamarca",
+      "away": "Atletico Grau",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Primera División",
+      "home": "Alianza Atletico",
+      "away": "Sporting Cristal",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Primera División",
+      "home": "Albion FC",
+      "away": "Boston River",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Primera División",
+      "home": "Liverpool Montevideo",
+      "away": "Cerro",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Primera División",
+      "home": "The Strongest",
+      "away": "Universitario de Vinto",
       "reason": "No event/team match"
     },
     {
@@ -2812,22 +2806,16 @@
       "home": "Raslavice",
       "away": "FK Košice",
       "reason": "No event/team match"
+    },
+    {
+      "league": "Cup",
+      "home": "Rohožník",
+      "away": "Šamorín",
+      "reason": "No event/team match"
     }
   ],
   "unsupportedMarkets": [
     {
-      "sportKey": "soccer_argentina_primera_division",
-      "market": "btts"
-    },
-    {
-      "sportKey": "soccer_argentina_primera_division",
-      "market": "draw_no_bet"
-    },
-    {
-      "sportKey": "soccer_argentina_primera_division",
-      "market": "double_chance"
-    },
-    {
       "sportKey": "soccer_mexico_ligamx",
       "market": "btts"
     },
@@ -2849,6 +2837,18 @@
     },
     {
       "sportKey": "soccer_brazil_campeonato",
+      "market": "double_chance"
+    },
+    {
+      "sportKey": "soccer_argentina_primera_division",
+      "market": "btts"
+    },
+    {
+      "sportKey": "soccer_argentina_primera_division",
+      "market": "draw_no_bet"
+    },
+    {
+      "sportKey": "soccer_argentina_primera_division",
       "market": "double_chance"
     },
     {
@@ -3286,31 +3286,6 @@
   ],
   "requestErrors": [
     {
-      "label": "soccer_argentina_primera_division:base-combined",
-      "error": "Markets not supported by this endpoint: btts, double_chance, draw_no_bet",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_argentina_primera_division:base-core",
-      "error": "Invalid commenceTimeFrom parameter. The format must be YYYY-MM-DDTHH:MM:SSZ, for example 2020-11-24T16:05:00Z",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_argentina_primera_division:btts",
-      "error": "Markets not supported by this endpoint: btts",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_argentina_primera_division:draw_no_bet",
-      "error": "Markets not supported by this endpoint: draw_no_bet",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_argentina_primera_division:double_chance",
-      "error": "Markets not supported by this endpoint: double_chance",
-      "statusCode": 422
-    },
-    {
       "label": "soccer_mexico_ligamx:base-combined",
       "error": "Markets not supported by this endpoint: btts, double_chance, draw_no_bet",
       "statusCode": 422
@@ -3357,6 +3332,31 @@
     },
     {
       "label": "soccer_brazil_campeonato:double_chance",
+      "error": "Markets not supported by this endpoint: double_chance",
+      "statusCode": 422
+    },
+    {
+      "label": "soccer_argentina_primera_division:base-combined",
+      "error": "Markets not supported by this endpoint: btts, double_chance, draw_no_bet",
+      "statusCode": 422
+    },
+    {
+      "label": "soccer_argentina_primera_division:base-core",
+      "error": "Invalid commenceTimeFrom parameter. The format must be YYYY-MM-DDTHH:MM:SSZ, for example 2020-11-24T16:05:00Z",
+      "statusCode": 422
+    },
+    {
+      "label": "soccer_argentina_primera_division:btts",
+      "error": "Markets not supported by this endpoint: btts",
+      "statusCode": 422
+    },
+    {
+      "label": "soccer_argentina_primera_division:draw_no_bet",
+      "error": "Markets not supported by this endpoint: draw_no_bet",
+      "statusCode": 422
+    },
+    {
+      "label": "soccer_argentina_primera_division:double_chance",
       "error": "Markets not supported by this endpoint: double_chance",
       "statusCode": 422
     },
@@ -4268,5 +4268,5 @@
   },
   "skipped": false,
   "skipReason": null,
-  "completedAt": "2026-08-18T10:10:44.390Z"
+  "completedAt": "2026-08-18T10:20:49.982Z"
 }
