@@ -1,36 +1,12 @@
 {
   "version": "v251",
-  "generatedAt": "2026-08-18T06:50:19.019Z",
+  "generatedAt": "2026-08-18T07:00:16.395Z",
   "provider": "The Odds API v4",
   "keyPresent": true,
   "regions": "uk",
   "sportsAvailable": 75,
   "soccerSportsAvailable": 44,
   "sportMappings": [
-    {
-      "league": "Championship",
-      "country": "England",
-      "sportKey": "soccer_efl_champ",
-      "sportTitle": "Championship",
-      "score": 0.487,
-      "matches": 1
-    },
-    {
-      "league": "La Liga",
-      "country": "Spain",
-      "sportKey": "soccer_spain_la_liga",
-      "sportTitle": "La Liga - Spain",
-      "score": 1,
-      "matches": 4
-    },
-    {
-      "league": "Liga Revelação U23",
-      "country": "Portugal",
-      "sportKey": "soccer_portugal_primeira_liga",
-      "sportTitle": "Primeira Liga - Portugal",
-      "score": 0.466,
-      "matches": 10
-    },
     {
       "league": "Coppa Italia",
       "country": "Italy",
@@ -214,6 +190,14 @@
       "sportTitle": "EFL Cup",
       "score": 0.487,
       "matches": 8
+    },
+    {
+      "league": "Liga Revelação U23",
+      "country": "Portugal",
+      "sportKey": "soccer_portugal_primeira_liga",
+      "sportTitle": "Primeira Liga - Portugal",
+      "score": 0.466,
+      "matches": 9
     },
     {
       "league": "Torneo Promocional Amateur",
@@ -574,6 +558,14 @@
       "sportTitle": "Premiership - Scotland",
       "score": 0.305,
       "matches": 9
+    },
+    {
+      "league": "La Liga",
+      "country": "Spain",
+      "sportKey": "soccer_spain_la_liga",
+      "sportTitle": "La Liga - Spain",
+      "score": 1,
+      "matches": 3
     },
     {
       "league": "NWSL Women",
@@ -1328,7 +1320,7 @@
       "matches": 1
     }
   ],
-  "matchesConsidered": 1092,
+  "matchesConsidered": 1089,
   "matchesMatched": 0,
   "matchesUpdated": 0,
   "fieldsFilled": 0,
@@ -1848,51 +1840,63 @@
       "bestScore": 0.125
     },
     {
-      "league": "Championship",
-      "home": "Cardiff",
-      "away": "Wrexham",
+      "league": "Coppa Italia",
+      "home": "Palermo",
+      "away": "Lecce",
       "reason": "No event/team match"
     },
     {
-      "league": "Championship",
-      "home": "Inverness CT",
-      "away": "Partick",
+      "league": "Coppa Italia Primavera",
+      "home": "Sudtirol U19",
+      "away": "Cosenza U19",
       "reason": "No event/team match"
     },
     {
-      "league": "Championship",
-      "home": "Newry City AFC",
-      "away": "Warrenpoint Town",
+      "league": "Serie A Cup Women",
+      "home": "Como W",
+      "away": "Juventus W",
       "reason": "No event/team match"
     },
     {
-      "league": "La Liga",
-      "home": "Deportivo La Coruna",
-      "away": "Elche",
+      "league": "Serie A Cup Women",
+      "home": "Parma W",
+      "away": "Inter Milano W",
       "reason": "No event/team match"
     },
     {
-      "league": "La Liga",
-      "home": "Atletico Madrid",
-      "away": "Malaga",
+      "league": "Serie C - Girone A",
+      "home": "Alcione",
+      "away": "Renate",
       "reason": "No event/team match"
     },
     {
-      "league": "La Liga",
-      "home": "Rayo Vallecano",
-      "away": "Alaves",
+      "league": "Serie C - Girone A",
+      "home": "Union Brescia",
+      "away": "Athletic Carpi",
       "reason": "No event/team match"
     },
     {
-      "league": "La Liga",
-      "home": "Real Betis",
-      "away": "Real Sociedad",
+      "league": "Serie C - Girone C",
+      "home": "Bari",
+      "away": "Cavese",
       "reason": "No event/team match"
     },
     {
-      "league": "Liga Revelação U23",
-      "home": "União Leiria U23",
-      "away": "Santa Clara U23",
+      "league": "Serie C - Girone C",
+      "home": "Giugliano",
+      "away": "Scafatese",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Serie C - Girone C",
+      "home": "Potenza",
+      "away": "Casarano",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Primeira Liga",
+      "home": "Casa Pia",
+      "away": "Benfica",
       "reason": "No event/team match"
     },
     {
@@ -1950,12 +1954,6 @@
       "reason": "No event/team match"
     },
     {
-      "league": "Primeira Liga",
-      "home": "Casa Pia",
-      "away": "Benfica",
-      "reason": "No event/team match"
-    },
-    {
       "league": "Segunda Liga",
       "home": "Benfica B",
       "away": "Portimonense",
@@ -1971,60 +1969,6 @@
       "league": "Liga 3",
       "home": "Fafe",
       "away": "Guimaraes B",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Coppa Italia",
-      "home": "Palermo",
-      "away": "Lecce",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Coppa Italia Primavera",
-      "home": "Sudtirol U19",
-      "away": "Cosenza U19",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Serie A Cup Women",
-      "home": "Como W",
-      "away": "Juventus W",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Serie A Cup Women",
-      "home": "Parma W",
-      "away": "Inter Milano W",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Serie C - Girone A",
-      "home": "Alcione",
-      "away": "Renate",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Serie C - Girone A",
-      "home": "Union Brescia",
-      "away": "Athletic Carpi",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Serie C - Girone C",
-      "home": "Bari",
-      "away": "Cavese",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Serie C - Girone C",
-      "home": "Giugliano",
-      "away": "Scafatese",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Serie C - Girone C",
-      "home": "Potenza",
-      "away": "Casarano",
       "reason": "No event/team match"
     },
     {
@@ -2836,31 +2780,67 @@
       "home": "Wadi Degla",
       "away": "Masr",
       "reason": "No event/team match"
+    },
+    {
+      "league": "Premier League",
+      "home": "Abu Qair Semad",
+      "away": "National Bank of Egypt",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Premier League",
+      "home": "Zamalek SC",
+      "away": "Al Ittihad",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Premier League",
+      "home": "FC Minsk",
+      "away": "FC Vitebsk",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Premier League",
+      "home": "Floriana",
+      "away": "Sliema Wanderers",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Premier League",
+      "home": "Marsaxlokk",
+      "away": "Hibernians",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Premier League 2 Division One",
+      "home": "Aston Villa U21",
+      "away": "Brighton U21",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Premier League 2 Division One",
+      "home": "AFC Bournemouth U21",
+      "away": "Chelsea U21",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Premier League 2 Division One",
+      "home": "Everton U21",
+      "away": "Liverpool U21",
+      "reason": "No event/team match"
     }
   ],
   "unsupportedMarkets": [
     {
-      "sportKey": "soccer_efl_champ",
+      "sportKey": "soccer_italy_serie_a",
       "market": "btts"
     },
     {
-      "sportKey": "soccer_efl_champ",
+      "sportKey": "soccer_italy_serie_a",
       "market": "draw_no_bet"
     },
     {
-      "sportKey": "soccer_efl_champ",
-      "market": "double_chance"
-    },
-    {
-      "sportKey": "soccer_spain_la_liga",
-      "market": "btts"
-    },
-    {
-      "sportKey": "soccer_spain_la_liga",
-      "market": "draw_no_bet"
-    },
-    {
-      "sportKey": "soccer_spain_la_liga",
+      "sportKey": "soccer_italy_serie_a",
       "market": "double_chance"
     },
     {
@@ -2873,18 +2853,6 @@
     },
     {
       "sportKey": "soccer_portugal_primeira_liga",
-      "market": "double_chance"
-    },
-    {
-      "sportKey": "soccer_italy_serie_a",
-      "market": "btts"
-    },
-    {
-      "sportKey": "soccer_italy_serie_a",
-      "market": "draw_no_bet"
-    },
-    {
-      "sportKey": "soccer_italy_serie_a",
       "market": "double_chance"
     },
     {
@@ -3164,6 +3132,18 @@
       "market": "double_chance"
     },
     {
+      "sportKey": "soccer_spain_la_liga",
+      "market": "btts"
+    },
+    {
+      "sportKey": "soccer_spain_la_liga",
+      "market": "draw_no_bet"
+    },
+    {
+      "sportKey": "soccer_spain_la_liga",
+      "market": "double_chance"
+    },
+    {
       "sportKey": "soccer_germany_liga3",
       "market": "btts"
     },
@@ -3269,6 +3249,18 @@
     },
     {
       "sportKey": "soccer_turkey_super_league",
+      "market": "double_chance"
+    },
+    {
+      "sportKey": "soccer_efl_champ",
+      "market": "btts"
+    },
+    {
+      "sportKey": "soccer_efl_champ",
+      "market": "draw_no_bet"
+    },
+    {
+      "sportKey": "soccer_efl_champ",
       "market": "double_chance"
     },
     {
@@ -3310,52 +3302,27 @@
   ],
   "requestErrors": [
     {
-      "label": "soccer_efl_champ:base-combined",
+      "label": "soccer_italy_serie_a:base-combined",
       "error": "Markets not supported by this endpoint: btts, double_chance, draw_no_bet",
       "statusCode": 422
     },
     {
-      "label": "soccer_efl_champ:base-core",
+      "label": "soccer_italy_serie_a:base-core",
       "error": "Invalid commenceTimeFrom parameter. The format must be YYYY-MM-DDTHH:MM:SSZ, for example 2020-11-24T16:05:00Z",
       "statusCode": 422
     },
     {
-      "label": "soccer_efl_champ:btts",
+      "label": "soccer_italy_serie_a:btts",
       "error": "Markets not supported by this endpoint: btts",
       "statusCode": 422
     },
     {
-      "label": "soccer_efl_champ:draw_no_bet",
+      "label": "soccer_italy_serie_a:draw_no_bet",
       "error": "Markets not supported by this endpoint: draw_no_bet",
       "statusCode": 422
     },
     {
-      "label": "soccer_efl_champ:double_chance",
-      "error": "Markets not supported by this endpoint: double_chance",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_spain_la_liga:base-combined",
-      "error": "Markets not supported by this endpoint: btts, double_chance, draw_no_bet",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_spain_la_liga:base-core",
-      "error": "Invalid commenceTimeFrom parameter. The format must be YYYY-MM-DDTHH:MM:SSZ, for example 2020-11-24T16:05:00Z",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_spain_la_liga:btts",
-      "error": "Markets not supported by this endpoint: btts",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_spain_la_liga:draw_no_bet",
-      "error": "Markets not supported by this endpoint: draw_no_bet",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_spain_la_liga:double_chance",
+      "label": "soccer_italy_serie_a:double_chance",
       "error": "Markets not supported by this endpoint: double_chance",
       "statusCode": 422
     },
@@ -3381,31 +3348,6 @@
     },
     {
       "label": "soccer_portugal_primeira_liga:double_chance",
-      "error": "Markets not supported by this endpoint: double_chance",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_italy_serie_a:base-combined",
-      "error": "Markets not supported by this endpoint: btts, double_chance, draw_no_bet",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_italy_serie_a:base-core",
-      "error": "Invalid commenceTimeFrom parameter. The format must be YYYY-MM-DDTHH:MM:SSZ, for example 2020-11-24T16:05:00Z",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_italy_serie_a:btts",
-      "error": "Markets not supported by this endpoint: btts",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_italy_serie_a:draw_no_bet",
-      "error": "Markets not supported by this endpoint: draw_no_bet",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_italy_serie_a:double_chance",
       "error": "Markets not supported by this endpoint: double_chance",
       "statusCode": 422
     },
@@ -3985,6 +3927,31 @@
       "statusCode": 422
     },
     {
+      "label": "soccer_spain_la_liga:base-combined",
+      "error": "Markets not supported by this endpoint: btts, double_chance, draw_no_bet",
+      "statusCode": 422
+    },
+    {
+      "label": "soccer_spain_la_liga:base-core",
+      "error": "Invalid commenceTimeFrom parameter. The format must be YYYY-MM-DDTHH:MM:SSZ, for example 2020-11-24T16:05:00Z",
+      "statusCode": 422
+    },
+    {
+      "label": "soccer_spain_la_liga:btts",
+      "error": "Markets not supported by this endpoint: btts",
+      "statusCode": 422
+    },
+    {
+      "label": "soccer_spain_la_liga:draw_no_bet",
+      "error": "Markets not supported by this endpoint: draw_no_bet",
+      "statusCode": 422
+    },
+    {
+      "label": "soccer_spain_la_liga:double_chance",
+      "error": "Markets not supported by this endpoint: double_chance",
+      "statusCode": 422
+    },
+    {
       "label": "soccer_germany_liga3:base-combined",
       "error": "Markets not supported by this endpoint: btts, double_chance, draw_no_bet",
       "statusCode": 422
@@ -4210,6 +4177,31 @@
       "statusCode": 422
     },
     {
+      "label": "soccer_efl_champ:base-combined",
+      "error": "Markets not supported by this endpoint: btts, double_chance, draw_no_bet",
+      "statusCode": 422
+    },
+    {
+      "label": "soccer_efl_champ:base-core",
+      "error": "Invalid commenceTimeFrom parameter. The format must be YYYY-MM-DDTHH:MM:SSZ, for example 2020-11-24T16:05:00Z",
+      "statusCode": 422
+    },
+    {
+      "label": "soccer_efl_champ:btts",
+      "error": "Markets not supported by this endpoint: btts",
+      "statusCode": 422
+    },
+    {
+      "label": "soccer_efl_champ:draw_no_bet",
+      "error": "Markets not supported by this endpoint: draw_no_bet",
+      "statusCode": 422
+    },
+    {
+      "label": "soccer_efl_champ:double_chance",
+      "error": "Markets not supported by this endpoint: double_chance",
+      "statusCode": 422
+    },
+    {
       "label": "soccer_italy_serie_b:base-combined",
       "error": "Markets not supported by this endpoint: btts, double_chance, draw_no_bet",
       "statusCode": 422
@@ -4292,5 +4284,5 @@
   },
   "skipped": false,
   "skipReason": null,
-  "completedAt": "2026-08-18T06:50:38.361Z"
+  "completedAt": "2026-08-18T07:00:24.567Z"
 }
