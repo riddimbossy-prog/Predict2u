@@ -1,7 +1,13 @@
 /* Predict2U v170 — global mobile app navigation */
 (function(){
   "use strict";
-  const VERSION="v189";
+  const VERSION="v281";
+  if(!document.querySelector('link[data-p2u-tip-clean-v281]')){
+    const css=document.createElement('link');css.rel='stylesheet';css.href='tip-explanation-clean-v281.css';css.dataset.p2uTipCleanV281='true';document.head.appendChild(css);
+  }
+  if(!document.querySelector('script[data-p2u-tip-clean-v281]')){
+    const js=document.createElement('script');js.src='tip-explanation-clean-v281.js';js.async=false;js.dataset.p2uTipCleanV281='true';document.head.appendChild(js);
+  }
   const icons={
     board:'<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 6h11M9 12h11M9 18h11"/><path d="m3.5 6 1.2 1.2L7 4.8M3.5 12l1.2 1.2L7 10.8M3.5 18l1.2 1.2L7 16.8"/></svg>',
     games:'<svg viewBox="0 0 24 24" aria-hidden="true"><rect x="7" y="7" width="10" height="10" rx="2"/><path d="M9 1v3M15 1v3M9 20v3M15 20v3M20 9h3M20 15h3M1 9h3M1 15h3"/></svg>',
