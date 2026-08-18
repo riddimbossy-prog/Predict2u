@@ -8,6 +8,21 @@
     rescue.dataset.p2uMobileZfoldV257='true';
     document.head.appendChild(rescue);
   }
+  // v280: contextual tip cautions are a site-wide layer, not a Team Intelligence-only feature.
+  if(!document.querySelector('link[data-p2u-context-flags-v280]')){
+    const riskCss=document.createElement('link');
+    riskCss.rel='stylesheet';
+    riskCss.href='pick-context-flags-v280.css';
+    riskCss.dataset.p2uContextFlagsV280='true';
+    document.head.appendChild(riskCss);
+  }
+  if(!document.querySelector('script[data-p2u-context-flags-v280]')){
+    const riskJs=document.createElement('script');
+    riskJs.src='pick-context-flags-v280.js';
+    riskJs.async=false;
+    riskJs.dataset.p2uContextFlagsV280='true';
+    document.head.appendChild(riskJs);
+  }
   if(document.querySelector('.p2u-v245-nav-wrap')) return;
 
   document.querySelectorAll('.p2u-v227-nav-wrap,.p2u-v227-dock,.p2u-v227-more-backdrop,.p2u-phase2-nav-wrap,.p2u-phase2-dock,.p2u-mobile-app-nav').forEach(node=>node.remove());
