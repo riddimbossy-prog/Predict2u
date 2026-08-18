@@ -23,6 +23,21 @@
     riskJs.dataset.p2uContextFlagsV280='true';
     document.head.appendChild(riskJs);
   }
+  // v281: one clean explanation path across prediction surfaces.
+  if(!document.querySelector('link[data-p2u-tip-clean-v281]')){
+    const cleanCss=document.createElement('link');
+    cleanCss.rel='stylesheet';
+    cleanCss.href='tip-explanation-clean-v281.css';
+    cleanCss.dataset.p2uTipCleanV281='true';
+    document.head.appendChild(cleanCss);
+  }
+  if(!document.querySelector('script[data-p2u-tip-clean-v281]')){
+    const cleanJs=document.createElement('script');
+    cleanJs.src='tip-explanation-clean-v281.js';
+    cleanJs.async=false;
+    cleanJs.dataset.p2uTipCleanV281='true';
+    document.head.appendChild(cleanJs);
+  }
   if(document.querySelector('.p2u-v245-nav-wrap')) return;
 
   document.querySelectorAll('.p2u-v227-nav-wrap,.p2u-v227-dock,.p2u-v227-more-backdrop,.p2u-phase2-nav-wrap,.p2u-phase2-dock,.p2u-mobile-app-nav').forEach(node=>node.remove());
