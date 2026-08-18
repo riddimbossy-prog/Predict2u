@@ -1,6 +1,6 @@
 {
   "version": "v251",
-  "generatedAt": "2026-08-18T07:50:17.747Z",
+  "generatedAt": "2026-08-18T08:00:17.986Z",
   "provider": "The Odds API v4",
   "keyPresent": true,
   "regions": "uk",
@@ -8,28 +8,20 @@
   "soccerSportsAvailable": 44,
   "sportMappings": [
     {
-      "league": "Liga Profesional Argentina",
-      "country": "Argentina",
-      "sportKey": "soccer_argentina_primera_division",
-      "sportTitle": "Primera División - Argentina",
-      "score": 0.78,
-      "matches": 5
-    },
-    {
-      "league": "Segunda División",
-      "country": "Peru",
-      "sportKey": "soccer_spain_segunda_division",
-      "sportTitle": "La Liga 2 - Spain",
-      "score": 0.542,
-      "matches": 2
-    },
-    {
       "league": "Primera B",
       "country": "Chile",
       "sportKey": "soccer_chile_campeonato",
       "sportTitle": "Primera División - Chile",
       "score": 0.466,
       "matches": 3
+    },
+    {
+      "league": "Liga Profesional Argentina",
+      "country": "Argentina",
+      "sportKey": "soccer_argentina_primera_division",
+      "sportTitle": "Primera División - Argentina",
+      "score": 0.78,
+      "matches": 4
     },
     {
       "league": "Liga MX Femenil",
@@ -1288,6 +1280,14 @@
       "matches": 1
     },
     {
+      "league": "Segunda División",
+      "country": "Peru",
+      "sportKey": "soccer_spain_segunda_division",
+      "sportTitle": "La Liga 2 - Spain",
+      "score": 0.542,
+      "matches": 1
+    },
+    {
       "league": "Primera División",
       "country": "Bolivia",
       "sportKey": "soccer_argentina_primera_division",
@@ -1304,7 +1304,7 @@
       "matches": 1
     }
   ],
-  "matchesConsidered": 1081,
+  "matchesConsidered": 1076,
   "matchesMatched": 0,
   "matchesUpdated": 0,
   "fieldsFilled": 0,
@@ -1313,12 +1313,6 @@
   "derivedHtftMatches": 0,
   "bookmakerRows": 0,
   "unmatched": [
-    {
-      "league": "Liga Femenina",
-      "country": "Colombia",
-      "reason": "No matching soccer sport key",
-      "bestScore": 0.143
-    },
     {
       "league": "Primera A",
       "country": "Colombia",
@@ -1818,9 +1812,27 @@
       "bestScore": 0.125
     },
     {
-      "league": "Liga Profesional Argentina",
-      "home": "Lanus",
-      "away": "Independiente",
+      "league": "Primera B",
+      "home": "Deportes Santa Cruz",
+      "away": "San Luis",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Primera B",
+      "home": "Deportes Copiapo",
+      "away": "Curico Unido",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Primera B",
+      "home": "Deportes Temuco",
+      "away": "Recoleta",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Primera División",
+      "home": "Palestino",
+      "away": "Huachipato",
       "reason": "No event/team match"
     },
     {
@@ -2037,60 +2049,6 @@
       "league": "Primera División",
       "home": "The Strongest",
       "away": "Universitario de Vinto",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Segunda División",
-      "home": "Santos",
-      "away": "Alianza Universidad",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Segunda División",
-      "home": "Sport Huancayo 2",
-      "away": "Estudiantil CNI",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Segunda División",
-      "home": "Miramar",
-      "away": "Rentistas",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Segunda División",
-      "home": "Plaza Colonia",
-      "away": "Colón",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Segunda División",
-      "home": "Cordoba",
-      "away": "Girona",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Primera B",
-      "home": "Deportes Santa Cruz",
-      "away": "San Luis",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Primera B",
-      "home": "Deportes Copiapo",
-      "away": "Curico Unido",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Primera B",
-      "home": "Deportes Temuco",
-      "away": "Recoleta",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Primera División",
-      "home": "Palestino",
-      "away": "Huachipato",
       "reason": "No event/team match"
     },
     {
@@ -2812,43 +2770,73 @@
       "home": "Kováčová",
       "away": "Lokomotíva Zvolen",
       "reason": "No event/team match"
+    },
+    {
+      "league": "Cup",
+      "home": "Kovarce",
+      "away": "Slovan Duslo Šaľa",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Cup",
+      "home": "Tatran Krásno",
+      "away": "Podkonice",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Cup",
+      "home": "Spartak Kvašov",
+      "away": "Fomat Martin",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Cup",
+      "home": "Slovan Vavrečka",
+      "away": "Tvrdošín",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Cup",
+      "home": "Slovan Nitra-Chrenová",
+      "away": "Slovan Bratislava",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Cup",
+      "home": "Dolné Krškany",
+      "away": "Nitra",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Cup",
+      "home": "Nová Dedinka",
+      "away": "Petržalka",
+      "reason": "No event/team match"
     }
   ],
   "unsupportedMarkets": [
     {
-      "sportKey": "soccer_argentina_primera_division",
+      "sportKey": "soccer_chile_campeonato",
       "market": "btts"
     },
     {
-      "sportKey": "soccer_argentina_primera_division",
+      "sportKey": "soccer_chile_campeonato",
       "market": "draw_no_bet"
     },
     {
-      "sportKey": "soccer_argentina_primera_division",
+      "sportKey": "soccer_chile_campeonato",
       "market": "double_chance"
     },
     {
-      "sportKey": "soccer_spain_segunda_division",
+      "sportKey": "soccer_argentina_primera_division",
       "market": "btts"
     },
     {
-      "sportKey": "soccer_spain_segunda_division",
+      "sportKey": "soccer_argentina_primera_division",
       "market": "draw_no_bet"
     },
     {
-      "sportKey": "soccer_spain_segunda_division",
-      "market": "double_chance"
-    },
-    {
-      "sportKey": "soccer_chile_campeonato",
-      "market": "btts"
-    },
-    {
-      "sportKey": "soccer_chile_campeonato",
-      "market": "draw_no_bet"
-    },
-    {
-      "sportKey": "soccer_chile_campeonato",
+      "sportKey": "soccer_argentina_primera_division",
       "market": "double_chance"
     },
     {
@@ -3221,6 +3209,18 @@
     },
     {
       "sportKey": "soccer_netherlands_eredivisie",
+      "market": "double_chance"
+    },
+    {
+      "sportKey": "soccer_spain_segunda_division",
+      "market": "btts"
+    },
+    {
+      "sportKey": "soccer_spain_segunda_division",
+      "market": "draw_no_bet"
+    },
+    {
+      "sportKey": "soccer_spain_segunda_division",
       "market": "double_chance"
     },
     {
@@ -3286,56 +3286,6 @@
   ],
   "requestErrors": [
     {
-      "label": "soccer_argentina_primera_division:base-combined",
-      "error": "Markets not supported by this endpoint: btts, double_chance, draw_no_bet",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_argentina_primera_division:base-core",
-      "error": "Invalid commenceTimeFrom parameter. The format must be YYYY-MM-DDTHH:MM:SSZ, for example 2020-11-24T16:05:00Z",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_argentina_primera_division:btts",
-      "error": "Markets not supported by this endpoint: btts",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_argentina_primera_division:draw_no_bet",
-      "error": "Markets not supported by this endpoint: draw_no_bet",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_argentina_primera_division:double_chance",
-      "error": "Markets not supported by this endpoint: double_chance",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_spain_segunda_division:base-combined",
-      "error": "Markets not supported by this endpoint: btts, double_chance, draw_no_bet",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_spain_segunda_division:base-core",
-      "error": "Invalid commenceTimeFrom parameter. The format must be YYYY-MM-DDTHH:MM:SSZ, for example 2020-11-24T16:05:00Z",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_spain_segunda_division:btts",
-      "error": "Markets not supported by this endpoint: btts",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_spain_segunda_division:draw_no_bet",
-      "error": "Markets not supported by this endpoint: draw_no_bet",
-      "statusCode": 422
-    },
-    {
-      "label": "soccer_spain_segunda_division:double_chance",
-      "error": "Markets not supported by this endpoint: double_chance",
-      "statusCode": 422
-    },
-    {
       "label": "soccer_chile_campeonato:base-combined",
       "error": "Markets not supported by this endpoint: btts, double_chance, draw_no_bet",
       "statusCode": 422
@@ -3357,6 +3307,31 @@
     },
     {
       "label": "soccer_chile_campeonato:double_chance",
+      "error": "Markets not supported by this endpoint: double_chance",
+      "statusCode": 422
+    },
+    {
+      "label": "soccer_argentina_primera_division:base-combined",
+      "error": "Markets not supported by this endpoint: btts, double_chance, draw_no_bet",
+      "statusCode": 422
+    },
+    {
+      "label": "soccer_argentina_primera_division:base-core",
+      "error": "Invalid commenceTimeFrom parameter. The format must be YYYY-MM-DDTHH:MM:SSZ, for example 2020-11-24T16:05:00Z",
+      "statusCode": 422
+    },
+    {
+      "label": "soccer_argentina_primera_division:btts",
+      "error": "Markets not supported by this endpoint: btts",
+      "statusCode": 422
+    },
+    {
+      "label": "soccer_argentina_primera_division:draw_no_bet",
+      "error": "Markets not supported by this endpoint: draw_no_bet",
+      "statusCode": 422
+    },
+    {
+      "label": "soccer_argentina_primera_division:double_chance",
       "error": "Markets not supported by this endpoint: double_chance",
       "statusCode": 422
     },
@@ -4136,6 +4111,31 @@
       "statusCode": 422
     },
     {
+      "label": "soccer_spain_segunda_division:base-combined",
+      "error": "Markets not supported by this endpoint: btts, double_chance, draw_no_bet",
+      "statusCode": 422
+    },
+    {
+      "label": "soccer_spain_segunda_division:base-core",
+      "error": "Invalid commenceTimeFrom parameter. The format must be YYYY-MM-DDTHH:MM:SSZ, for example 2020-11-24T16:05:00Z",
+      "statusCode": 422
+    },
+    {
+      "label": "soccer_spain_segunda_division:btts",
+      "error": "Markets not supported by this endpoint: btts",
+      "statusCode": 422
+    },
+    {
+      "label": "soccer_spain_segunda_division:draw_no_bet",
+      "error": "Markets not supported by this endpoint: draw_no_bet",
+      "statusCode": 422
+    },
+    {
+      "label": "soccer_spain_segunda_division:double_chance",
+      "error": "Markets not supported by this endpoint: double_chance",
+      "statusCode": 422
+    },
+    {
       "label": "soccer_turkey_super_league:base-combined",
       "error": "Markets not supported by this endpoint: btts, double_chance, draw_no_bet",
       "statusCode": 422
@@ -4268,5 +4268,5 @@
   },
   "skipped": false,
   "skipReason": null,
-  "completedAt": "2026-08-18T07:50:32.356Z"
+  "completedAt": "2026-08-18T08:00:40.027Z"
 }
