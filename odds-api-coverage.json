@@ -1,28 +1,12 @@
 {
   "version": "v251",
-  "generatedAt": "2026-08-19T04:10:15.714Z",
+  "generatedAt": "2026-08-19T04:20:20.707Z",
   "provider": "The Odds API v4",
   "keyPresent": true,
   "regions": "uk",
   "sportsAvailable": 78,
   "soccerSportsAvailable": 45,
   "sportMappings": [
-    {
-      "league": "King's Cup",
-      "country": "Saudi-Arabia",
-      "sportKey": "soccer_saudi_arabia_pro_league",
-      "sportTitle": "Saudi Pro League",
-      "score": 0.43,
-      "matches": 7
-    },
-    {
-      "league": "Oberliga - Bayern Nord",
-      "country": "Germany",
-      "sportKey": "soccer_germany_bundesliga",
-      "sportTitle": "Bundesliga - Germany",
-      "score": 0.323,
-      "matches": 13
-    },
     {
       "league": "Division 2 - Södra Götaland",
       "country": "Sweden",
@@ -62,6 +46,14 @@
       "sportTitle": "Denmark Superliga",
       "score": 0.347,
       "matches": 2
+    },
+    {
+      "league": "Oberliga - Bayern Nord",
+      "country": "Germany",
+      "sportKey": "soccer_germany_bundesliga",
+      "sportTitle": "Bundesliga - Germany",
+      "score": 0.323,
+      "matches": 6
     },
     {
       "league": "Regionalliga - Bayern",
@@ -118,6 +110,14 @@
       "sportTitle": "EFL Cup",
       "score": 0.513,
       "matches": 7
+    },
+    {
+      "league": "King's Cup",
+      "country": "Saudi-Arabia",
+      "sportKey": "soccer_saudi_arabia_pro_league",
+      "sportTitle": "Saudi Pro League",
+      "score": 0.43,
+      "matches": 5
     },
     {
       "league": "National League Cup",
@@ -1256,7 +1256,7 @@
       "matches": 1
     }
   ],
-  "matchesConsidered": 1011,
+  "matchesConsidered": 1000,
   "matchesMatched": 0,
   "matchesUpdated": 0,
   "fieldsFilled": 0,
@@ -1266,16 +1266,16 @@
   "bookmakerRows": 0,
   "unmatched": [
     {
-      "league": "Persian Gulf Pro League",
-      "country": "Iran",
-      "reason": "No matching soccer sport key",
-      "bestScore": 0.25
-    },
-    {
       "league": "Liga Leumit",
       "country": "Israel",
       "reason": "No matching soccer sport key",
       "bestScore": 0.143
+    },
+    {
+      "league": "Persian Gulf Pro League",
+      "country": "Iran",
+      "reason": "No matching soccer sport key",
+      "bestScore": 0.25
     },
     {
       "league": "Friendlies Clubs",
@@ -1728,243 +1728,183 @@
       "bestScore": 0.125
     },
     {
-      "league": "King's Cup",
-      "home": "Al Jabalain",
-      "away": "Al-Ettifaq",
+      "league": "Division 2 - Södra Götaland",
+      "home": "Nosaby",
+      "away": "IFK Trelleborg",
       "reason": "No event/team match"
     },
     {
-      "league": "King's Cup",
-      "home": "Al Najma",
-      "away": "Al-Ittihad FC",
+      "league": "Division 2 - Södra Götaland",
+      "home": "Sölvesborg",
+      "away": "Karlshamn",
       "reason": "No event/team match"
     },
     {
-      "league": "King's Cup",
-      "home": "Al Diriyah",
-      "away": "Al-Nassr",
+      "league": "Svenska Cupen",
+      "home": "Böljan",
+      "away": "Varbergs BoIS FC",
       "reason": "No event/team match"
     },
     {
-      "league": "King's Cup",
-      "home": "Al-Faisaly FC",
-      "away": "NEOM",
+      "league": "Svenska Cupen",
+      "home": "Sollentuna",
+      "away": "Orebro SK",
       "reason": "No event/team match"
     },
     {
-      "league": "King's Cup",
-      "home": "Damac",
-      "away": "Al Taawon",
+      "league": "Svenska Cupen",
+      "home": "AFC Eskilstuna",
+      "away": "Oddevold",
       "reason": "No event/team match"
     },
     {
-      "league": "King's Cup",
-      "home": "Jeddah Club",
-      "away": "Al Kholood",
+      "league": "Svenska Cupen",
+      "home": "Karlberg",
+      "away": "IK brage",
       "reason": "No event/team match"
     },
     {
-      "league": "King's Cup",
-      "home": "Al Ula",
-      "away": "Al-Fateh",
+      "league": "Svenska Cupen",
+      "home": "IF Karlstad",
+      "away": "Sandviken",
       "reason": "No event/team match"
     },
     {
-      "league": "Pro League A",
-      "home": "Lochin",
-      "away": "Jayxun",
+      "league": "Svenska Cupen",
+      "home": "Västra Frölunda",
+      "away": "IF Elfsborg",
       "reason": "No event/team match"
     },
     {
-      "league": "Pro League A",
-      "home": "Qiziriq",
-      "away": "Metalourg",
+      "league": "Svenska Cupen",
+      "home": "IFK Skövde",
+      "away": "Falkenbergs FF",
       "reason": "No event/team match"
     },
     {
-      "league": "Pro League A",
-      "home": "Olimpik-Mobiuz",
-      "away": "Aral",
+      "league": "Svenska Cupen",
+      "home": "Växjö Norra",
+      "away": "IFK Varnamo",
       "reason": "No event/team match"
     },
     {
-      "league": "Pro League A",
-      "home": "Yaypan",
-      "away": "Pakhtakor II",
+      "league": "Svenska Cupen",
+      "home": "Högaborg",
+      "away": "Osters IF",
       "reason": "No event/team match"
     },
     {
-      "league": "Pro League A",
-      "home": "FarDu",
-      "away": "Shortan",
+      "league": "Svenska Cupen",
+      "home": "IFK Östersund",
+      "away": "Degerfors IF",
       "reason": "No event/team match"
     },
     {
-      "league": "Pro League A",
-      "home": "BuxDu",
-      "away": "Respublika FA",
+      "league": "Svenska Cupen",
+      "home": "Franke",
+      "away": "Ljungskile SK",
       "reason": "No event/team match"
     },
     {
-      "league": "Pro League A",
-      "home": "Kattaqurgon",
-      "away": "Gazalkent",
+      "league": "Svenska Cupen",
+      "home": "FBK Karlstad",
+      "away": "GIF Sundsvall",
       "reason": "No event/team match"
     },
     {
-      "league": "Pro League",
-      "home": "Al-Fayha",
-      "away": "Al-Hilal Saudi FC",
+      "league": "Svenska Cupen",
+      "home": "Enköping",
+      "away": "Vasteras SK FK",
       "reason": "No event/team match"
     },
     {
-      "league": "Pro League",
-      "home": "Al Riyadh",
-      "away": "Al-Nassr",
+      "league": "Svenska Cupen",
+      "home": "Angelholms FF",
+      "away": "Kalmar FF",
       "reason": "No event/team match"
     },
     {
-      "league": "Pro League",
-      "home": "Al-Hazm",
-      "away": "Al Diriyah",
+      "league": "Svenska Cupen",
+      "home": "Trollhättan",
+      "away": "Mjallby AIF",
       "reason": "No event/team match"
     },
     {
-      "league": "Pro League",
-      "home": "Al-Faisaly FC",
-      "away": "NEOM",
+      "league": "Svenska Cupen",
+      "home": "Vasalund",
+      "away": "IFK Norrkoping",
       "reason": "No event/team match"
     },
     {
-      "league": "Pro League",
-      "home": "Al-Qadisiyah FC",
-      "away": "Al-Ittihad FC",
+      "league": "Svenska Cupen",
+      "home": "Piteå",
+      "away": "AIK Stockholm",
       "reason": "No event/team match"
     },
     {
-      "league": "Pro League",
-      "home": "Al-Ittihad Kalba",
-      "away": "Al-Wasl FC",
+      "league": "Svenska Cupen",
+      "home": "Hässleholms IF",
+      "away": "Landskrona BoIS",
       "reason": "No event/team match"
     },
     {
-      "league": "Pro League",
-      "home": "Al Nasr",
-      "away": "Al Wahda FC",
+      "league": "Svenska Cupen",
+      "home": "Arlanda",
+      "away": "Ostersunds FK",
       "reason": "No event/team match"
     },
     {
-      "league": "Division 1",
-      "home": "Al Jeel",
-      "away": "Al Zulfi",
+      "league": "Damallsvenskan",
+      "home": "Malmö FF W",
+      "away": "Hammarby W",
       "reason": "No event/team match"
     },
     {
-      "league": "Division 1",
-      "home": "Al Bukayriyah",
-      "away": "Al Anwar",
+      "league": "Division 2 - Norra Götaland",
+      "home": "Kumla",
+      "away": "Husqvarna",
       "reason": "No event/team match"
     },
     {
-      "league": "Division 1",
-      "home": "Al Wehda Club",
-      "away": "Al-Adalah",
+      "league": "Division 2 - Norra Götaland",
+      "home": "Lidköping",
+      "away": "Ahlafors",
       "reason": "No event/team match"
     },
     {
-      "league": "Challenger Pro League",
-      "home": "RSC Anderlecht II",
-      "away": "Excelsior Virton",
+      "league": "Division 2 - Norra Götaland",
+      "home": "Herrestads",
+      "away": "Vänersborgs IF",
       "reason": "No event/team match"
     },
     {
-      "league": "Challenger Pro League",
-      "home": "Lokeren-Temse",
-      "away": "AS Eupen",
+      "league": "Division 2 - Norra Götaland",
+      "home": "Vänersborgs FK",
+      "away": "IFK Skövde",
       "reason": "No event/team match"
     },
     {
-      "league": "Jupiler Pro League",
-      "home": "Standard Liege",
-      "away": "RAAL La Louvière",
+      "league": "Elitettan",
+      "home": "Elfsborg W",
+      "away": "KIF Örebro W",
       "reason": "No event/team match"
     },
     {
-      "league": "Oberliga - Bayern Nord",
-      "home": "Bayern Hof",
-      "away": "Großbardorf",
+      "league": "Allsvenskan",
+      "home": "Sirius",
+      "away": "BK Hacken",
       "reason": "No event/team match"
     },
     {
-      "league": "Oberliga - Bayern Nord",
-      "home": "Fortuna Regensburg",
-      "away": "ASV Neumarkt",
+      "league": "Division 2 - Norrland",
+      "home": "Umea FF",
+      "away": "IFK Umeå",
       "reason": "No event/team match"
     },
     {
-      "league": "Oberliga - Bayern Nord",
-      "home": "Nordlingen",
-      "away": "Ingolstadt II",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Oberliga - Bayern Nord",
-      "home": "Jahn Regensburg II",
-      "away": "Cham",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Oberliga - Bayern Nord",
-      "home": "Weiden",
-      "away": "Kornburg",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Oberliga - Bayern Nord",
-      "home": "Würzburger FV",
-      "away": "Neudrossenfeld",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Oberliga - Bayern Nord",
-      "home": "Stadeln",
-      "away": "Ammerthal",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Oberliga - Bayern Nord",
-      "home": "Viktoria Aschaffenburg",
-      "away": "Eintracht Bamberg",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Oberliga - Bayern Nord",
-      "home": "Gebenbach",
-      "away": "DJK Bamberg",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Oberliga - Bayern Nord",
-      "home": "Eintracht Bamberg",
-      "away": "Würzburger FV",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Oberliga - Bayern Nord",
-      "home": "Cham",
-      "away": "Viktoria Aschaffenburg",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Oberliga - Bayern Nord",
-      "home": "DJK Bamberg",
-      "away": "Jahn Regensburg II",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Oberliga - Bayern Nord",
-      "home": "Kornburg",
-      "away": "Fortuna Regensburg",
+      "league": "Ettan - Norra",
+      "home": "Stockholm Internazionale",
+      "away": "Järfälla",
       "reason": "No event/team match"
     },
     {
@@ -2037,6 +1977,42 @@
       "league": "Oberliga - Bayern Süd",
       "home": "Sportfreunde Schwaig",
       "away": "Erlbach",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Oberliga - Bayern Nord",
+      "home": "Viktoria Aschaffenburg",
+      "away": "Eintracht Bamberg",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Oberliga - Bayern Nord",
+      "home": "Gebenbach",
+      "away": "DJK Bamberg",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Oberliga - Bayern Nord",
+      "home": "Eintracht Bamberg",
+      "away": "Würzburger FV",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Oberliga - Bayern Nord",
+      "home": "Cham",
+      "away": "Viktoria Aschaffenburg",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Oberliga - Bayern Nord",
+      "home": "DJK Bamberg",
+      "away": "Jahn Regensburg II",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Oberliga - Bayern Nord",
+      "home": "Kornburg",
+      "away": "Fortuna Regensburg",
       "reason": "No event/team match"
     },
     {
@@ -2334,186 +2310,6 @@
       "reason": "No event/team match"
     },
     {
-      "league": "Division 2 - Södra Götaland",
-      "home": "Nosaby",
-      "away": "IFK Trelleborg",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Division 2 - Södra Götaland",
-      "home": "Sölvesborg",
-      "away": "Karlshamn",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Svenska Cupen",
-      "home": "Böljan",
-      "away": "Varbergs BoIS FC",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Svenska Cupen",
-      "home": "Sollentuna",
-      "away": "Orebro SK",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Svenska Cupen",
-      "home": "AFC Eskilstuna",
-      "away": "Oddevold",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Svenska Cupen",
-      "home": "Karlberg",
-      "away": "IK brage",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Svenska Cupen",
-      "home": "IF Karlstad",
-      "away": "Sandviken",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Svenska Cupen",
-      "home": "Västra Frölunda",
-      "away": "IF Elfsborg",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Svenska Cupen",
-      "home": "IFK Skövde",
-      "away": "Falkenbergs FF",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Svenska Cupen",
-      "home": "Växjö Norra",
-      "away": "IFK Varnamo",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Svenska Cupen",
-      "home": "Högaborg",
-      "away": "Osters IF",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Svenska Cupen",
-      "home": "IFK Östersund",
-      "away": "Degerfors IF",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Svenska Cupen",
-      "home": "Franke",
-      "away": "Ljungskile SK",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Svenska Cupen",
-      "home": "FBK Karlstad",
-      "away": "GIF Sundsvall",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Svenska Cupen",
-      "home": "Enköping",
-      "away": "Vasteras SK FK",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Svenska Cupen",
-      "home": "Angelholms FF",
-      "away": "Kalmar FF",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Svenska Cupen",
-      "home": "Trollhättan",
-      "away": "Mjallby AIF",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Svenska Cupen",
-      "home": "Vasalund",
-      "away": "IFK Norrkoping",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Svenska Cupen",
-      "home": "Piteå",
-      "away": "AIK Stockholm",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Svenska Cupen",
-      "home": "Hässleholms IF",
-      "away": "Landskrona BoIS",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Svenska Cupen",
-      "home": "Arlanda",
-      "away": "Ostersunds FK",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Damallsvenskan",
-      "home": "Malmö FF W",
-      "away": "Hammarby W",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Division 2 - Norra Götaland",
-      "home": "Kumla",
-      "away": "Husqvarna",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Division 2 - Norra Götaland",
-      "home": "Lidköping",
-      "away": "Ahlafors",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Division 2 - Norra Götaland",
-      "home": "Herrestads",
-      "away": "Vänersborgs IF",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Division 2 - Norra Götaland",
-      "home": "Vänersborgs FK",
-      "away": "IFK Skövde",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Elitettan",
-      "home": "Elfsborg W",
-      "away": "KIF Örebro W",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Allsvenskan",
-      "home": "Sirius",
-      "away": "BK Hacken",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Division 2 - Norrland",
-      "home": "Umea FF",
-      "away": "IFK Umeå",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Ettan - Norra",
-      "home": "Stockholm Internazionale",
-      "away": "Järfälla",
-      "reason": "No event/team match"
-    },
-    {
       "league": "3. Division - Girone 3",
       "home": "Sogndal II",
       "away": "Varegg",
@@ -2764,19 +2560,223 @@
       "home": "Scunthorpe",
       "away": "Stoke City U21",
       "reason": "No event/team match"
+    },
+    {
+      "league": "National League Cup",
+      "home": "Solihull Moors",
+      "away": "Middlesbrough U21",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "National League Cup",
+      "home": "Sutton Utd",
+      "away": "Leicester City U21",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "National League Cup",
+      "home": "Truro City",
+      "away": "Southampton U21",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "National League Cup",
+      "home": "Wealdstone",
+      "away": "Wolves U21",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "National League Cup",
+      "home": "Braintree",
+      "away": "Ipswich Town U21",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "National League Cup",
+      "home": "Worthing",
+      "away": "West Ham United U21",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "National League Cup",
+      "home": "Aldershot Town",
+      "away": "Fulham U21",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "National League Cup",
+      "home": "Tamworth",
+      "away": "Newcastle United U21",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "National League Cup",
+      "home": "Woking",
+      "away": "West Bromwich Albion U21",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "National League - North",
+      "home": "Bedford Town",
+      "away": "Buxton",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "National League - North",
+      "home": "Brackley Town",
+      "away": "King's Lynn Town",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "National League - North",
+      "home": "Darlington 1883",
+      "away": "Chester",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "National League - North",
+      "home": "Hebburn Town",
+      "away": "Worksop Town",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "National League - North",
+      "home": "Hednesford Town",
+      "away": "Southport",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "National League - North",
+      "home": "Hereford",
+      "away": "Radcliffe",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "National League - North",
+      "home": "Marine",
+      "away": "Chorley",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "National League - North",
+      "home": "Merthyr Town",
+      "away": "AFC Telford United",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "National League - North",
+      "home": "Morecambe",
+      "away": "South Shields",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "National League - North",
+      "home": "Oxford City",
+      "away": "Harborough Town",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "National League - North",
+      "home": "Scarborough Athletic",
+      "away": "Spennymoor Town",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "National League - North",
+      "home": "Spalding United",
+      "away": "Macclesfield",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "National League - South",
+      "home": "AFC Totton",
+      "away": "Dorking Wanderers",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "National League - South",
+      "home": "Dover",
+      "away": "Tonbridge Angels",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "National League - South",
+      "home": "Hemel Hempstead Town",
+      "away": "Maidenhead",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "National League - South",
+      "home": "Horsham",
+      "away": "Hampton & Richmond",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "National League - South",
+      "home": "Maidstone Utd",
+      "away": "Folkestone Invicta",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "National League - South",
+      "home": "Slough Town",
+      "away": "Farnham Town",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "National League - South",
+      "home": "Torquay",
+      "away": "Weston-super-Mare",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "National League - South",
+      "home": "Walton & Hersham",
+      "away": "Dagenham & Redbridge",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "National League - South",
+      "home": "Farnborough",
+      "away": "Chesham United",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Non League Premier - Northern",
+      "home": "Ashton United",
+      "away": "Whitby Town",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Non League Premier - Northern",
+      "home": "Cleethorpes Town",
+      "away": "Alfreton Town",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Non League Premier - Northern",
+      "home": "Curzon Ashton",
+      "away": "Bamber Bridge",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Non League Premier - Northern",
+      "home": "Gainsborough Trinity",
+      "away": "Stockton Town",
+      "reason": "No event/team match"
     }
   ],
   "unsupportedMarkets": [
     {
-      "sportKey": "soccer_saudi_arabia_pro_league",
+      "sportKey": "soccer_sweden_allsvenskan",
       "market": "btts"
     },
     {
-      "sportKey": "soccer_saudi_arabia_pro_league",
+      "sportKey": "soccer_sweden_allsvenskan",
       "market": "draw_no_bet"
     },
     {
-      "sportKey": "soccer_saudi_arabia_pro_league",
+      "sportKey": "soccer_sweden_allsvenskan",
       "market": "double_chance"
     },
     {
@@ -2789,18 +2789,6 @@
     },
     {
       "sportKey": "soccer_germany_bundesliga",
-      "market": "double_chance"
-    },
-    {
-      "sportKey": "soccer_sweden_allsvenskan",
-      "market": "btts"
-    },
-    {
-      "sportKey": "soccer_sweden_allsvenskan",
-      "market": "draw_no_bet"
-    },
-    {
-      "sportKey": "soccer_sweden_allsvenskan",
       "market": "double_chance"
     },
     {
@@ -2861,6 +2849,18 @@
     },
     {
       "sportKey": "soccer_brazil_serie_b",
+      "market": "double_chance"
+    },
+    {
+      "sportKey": "soccer_saudi_arabia_pro_league",
+      "market": "btts"
+    },
+    {
+      "sportKey": "soccer_saudi_arabia_pro_league",
+      "market": "draw_no_bet"
+    },
+    {
+      "sportKey": "soccer_saudi_arabia_pro_league",
       "market": "double_chance"
     },
     {
@@ -3238,27 +3238,27 @@
   ],
   "requestErrors": [
     {
-      "label": "soccer_saudi_arabia_pro_league:base-combined",
+      "label": "soccer_sweden_allsvenskan:base-combined",
       "error": "API key is deactivated. This could be due to cancelation or a failed payment",
       "statusCode": 401
     },
     {
-      "label": "soccer_saudi_arabia_pro_league:base-core",
+      "label": "soccer_sweden_allsvenskan:base-core",
       "error": "API key is deactivated. This could be due to cancelation or a failed payment",
       "statusCode": 401
     },
     {
-      "label": "soccer_saudi_arabia_pro_league:btts",
+      "label": "soccer_sweden_allsvenskan:btts",
       "error": "API key is deactivated. This could be due to cancelation or a failed payment",
       "statusCode": 401
     },
     {
-      "label": "soccer_saudi_arabia_pro_league:draw_no_bet",
+      "label": "soccer_sweden_allsvenskan:draw_no_bet",
       "error": "API key is deactivated. This could be due to cancelation or a failed payment",
       "statusCode": 401
     },
     {
-      "label": "soccer_saudi_arabia_pro_league:double_chance",
+      "label": "soccer_sweden_allsvenskan:double_chance",
       "error": "API key is deactivated. This could be due to cancelation or a failed payment",
       "statusCode": 401
     },
@@ -3284,31 +3284,6 @@
     },
     {
       "label": "soccer_germany_bundesliga:double_chance",
-      "error": "API key is deactivated. This could be due to cancelation or a failed payment",
-      "statusCode": 401
-    },
-    {
-      "label": "soccer_sweden_allsvenskan:base-combined",
-      "error": "API key is deactivated. This could be due to cancelation or a failed payment",
-      "statusCode": 401
-    },
-    {
-      "label": "soccer_sweden_allsvenskan:base-core",
-      "error": "API key is deactivated. This could be due to cancelation or a failed payment",
-      "statusCode": 401
-    },
-    {
-      "label": "soccer_sweden_allsvenskan:btts",
-      "error": "API key is deactivated. This could be due to cancelation or a failed payment",
-      "statusCode": 401
-    },
-    {
-      "label": "soccer_sweden_allsvenskan:draw_no_bet",
-      "error": "API key is deactivated. This could be due to cancelation or a failed payment",
-      "statusCode": 401
-    },
-    {
-      "label": "soccer_sweden_allsvenskan:double_chance",
       "error": "API key is deactivated. This could be due to cancelation or a failed payment",
       "statusCode": 401
     },
@@ -3434,6 +3409,31 @@
     },
     {
       "label": "soccer_brazil_serie_b:double_chance",
+      "error": "API key is deactivated. This could be due to cancelation or a failed payment",
+      "statusCode": 401
+    },
+    {
+      "label": "soccer_saudi_arabia_pro_league:base-combined",
+      "error": "API key is deactivated. This could be due to cancelation or a failed payment",
+      "statusCode": 401
+    },
+    {
+      "label": "soccer_saudi_arabia_pro_league:base-core",
+      "error": "API key is deactivated. This could be due to cancelation or a failed payment",
+      "statusCode": 401
+    },
+    {
+      "label": "soccer_saudi_arabia_pro_league:btts",
+      "error": "API key is deactivated. This could be due to cancelation or a failed payment",
+      "statusCode": 401
+    },
+    {
+      "label": "soccer_saudi_arabia_pro_league:draw_no_bet",
+      "error": "API key is deactivated. This could be due to cancelation or a failed payment",
+      "statusCode": 401
+    },
+    {
+      "label": "soccer_saudi_arabia_pro_league:double_chance",
       "error": "API key is deactivated. This could be due to cancelation or a failed payment",
       "statusCode": 401
     },
@@ -4220,5 +4220,5 @@
   },
   "skipped": false,
   "skipReason": null,
-  "completedAt": "2026-08-19T04:10:22.804Z"
+  "completedAt": "2026-08-19T04:20:43.948Z"
 }
