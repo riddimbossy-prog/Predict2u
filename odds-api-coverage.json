@@ -1,20 +1,12 @@
 {
   "version": "v251",
-  "generatedAt": "2026-08-19T03:20:18.473Z",
+  "generatedAt": "2026-08-19T03:30:15.761Z",
   "provider": "The Odds API v4",
   "keyPresent": true,
   "regions": "uk",
   "sportsAvailable": 78,
   "soccerSportsAvailable": 45,
   "sportMappings": [
-    {
-      "league": "Cup",
-      "country": "Russia",
-      "sportKey": "soccer_england_efl_cup",
-      "sportTitle": "EFL Cup",
-      "score": 0.487,
-      "matches": 8
-    },
     {
       "league": "Cup",
       "country": "Greece",
@@ -102,6 +94,14 @@
       "sportTitle": "Bundesliga - Germany",
       "score": 0.347,
       "matches": 7
+    },
+    {
+      "league": "Cup",
+      "country": "Russia",
+      "sportKey": "soccer_england_efl_cup",
+      "sportTitle": "EFL Cup",
+      "score": 0.487,
+      "matches": 6
     },
     {
       "league": "1. Liga Promotion",
@@ -1264,7 +1264,7 @@
       "matches": 1
     }
   ],
-  "matchesConsidered": 1025,
+  "matchesConsidered": 1022,
   "matchesMatched": 0,
   "matchesUpdated": 0,
   "fieldsFilled": 0,
@@ -1273,12 +1273,6 @@
   "derivedHtftMatches": 0,
   "bookmakerRows": 0,
   "unmatched": [
-    {
-      "league": "Second League",
-      "country": "Bulgaria",
-      "reason": "No matching soccer sport key",
-      "bestScore": 0.167
-    },
     {
       "league": "Friendlies Clubs",
       "country": "World",
@@ -1302,6 +1296,12 @@
       "country": "Israel",
       "reason": "No matching soccer sport key",
       "bestScore": 0.143
+    },
+    {
+      "league": "Second League",
+      "country": "Bulgaria",
+      "reason": "No matching soccer sport key",
+      "bestScore": 0.167
     },
     {
       "league": "Premiership Women",
@@ -1737,14 +1737,32 @@
     },
     {
       "league": "Cup",
-      "home": "CSKA Moscow",
-      "away": "Akron",
+      "home": "Atromitos",
+      "away": "Pyrgos 1968",
       "reason": "No event/team match"
     },
     {
       "league": "Cup",
-      "home": "Rodina Moskva",
-      "away": "FC Orenburg",
+      "home": "Levadiakos",
+      "away": "Asteras Tripolis",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Cup",
+      "home": "Nestos Chrisoupolis",
+      "away": "Apollon Pontou",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Cup",
+      "home": "Niki Volos",
+      "away": "Panionios",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Cup",
+      "home": "Kalamata",
+      "away": "Panetolikos",
       "reason": "No event/team match"
     },
     {
@@ -1781,36 +1799,6 @@
       "league": "Cup",
       "home": "Baltika",
       "away": "Dinamo Makhachkala",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Cup",
-      "home": "Atromitos",
-      "away": "Pyrgos 1968",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Cup",
-      "home": "Levadiakos",
-      "away": "Asteras Tripolis",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Cup",
-      "home": "Nestos Chrisoupolis",
-      "away": "Apollon Pontou",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Cup",
-      "home": "Niki Volos",
-      "away": "Panionios",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Cup",
-      "home": "Kalamata",
-      "away": "Panetolikos",
       "reason": "No event/team match"
     },
     {
@@ -2771,6 +2759,18 @@
       "league": "King's Cup",
       "home": "Damac",
       "away": "Al Taawon",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "King's Cup",
+      "home": "Jeddah Club",
+      "away": "Al Kholood",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "King's Cup",
+      "home": "Al Ula",
+      "away": "Al-Fateh",
       "reason": "No event/team match"
     }
   ],
@@ -4228,5 +4228,5 @@
   },
   "skipped": false,
   "skipReason": null,
-  "completedAt": "2026-08-19T03:20:40.953Z"
+  "completedAt": "2026-08-19T03:30:23.560Z"
 }
