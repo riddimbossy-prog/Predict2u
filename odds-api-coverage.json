@@ -1,20 +1,12 @@
 {
   "version": "v251",
-  "generatedAt": "2026-08-19T10:20:15.826Z",
+  "generatedAt": "2026-08-19T10:30:28.991Z",
   "provider": "The Odds API v4",
   "keyPresent": true,
   "regions": "uk",
   "sportsAvailable": 78,
   "soccerSportsAvailable": 45,
   "sportMappings": [
-    {
-      "league": "Serie B",
-      "country": "Brazil",
-      "sportKey": "soccer_brazil_serie_b",
-      "sportTitle": "Brazil Série B",
-      "score": 1,
-      "matches": 10
-    },
     {
       "league": "Capixaba B",
       "country": "Brazil",
@@ -54,6 +46,14 @@
       "sportTitle": "Copa Sudamericana",
       "score": 0.4,
       "matches": 7
+    },
+    {
+      "league": "Serie B",
+      "country": "Brazil",
+      "sportKey": "soccer_brazil_serie_b",
+      "sportTitle": "Brazil Série B",
+      "score": 1,
+      "matches": 9
     },
     {
       "league": "Emperor Cup",
@@ -1224,7 +1224,7 @@
       "matches": 1
     }
   ],
-  "matchesConsidered": 874,
+  "matchesConsidered": 873,
   "matchesMatched": 0,
   "matchesUpdated": 0,
   "fieldsFilled": 0,
@@ -1678,9 +1678,21 @@
       "bestScore": 0.125
     },
     {
-      "league": "Serie B",
-      "home": "Londrina",
-      "away": "Atletico Goianiense",
+      "league": "Capixaba B",
+      "home": "CTE Colatina",
+      "away": "Audax São Mateus",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Capixaba B",
+      "home": "Tupy",
+      "away": "Sport Brasil ES",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Capixaba B",
+      "home": "Pinheiros",
+      "away": "Estrela do Norte",
       "reason": "No event/team match"
     },
     {
@@ -1735,24 +1747,6 @@
       "league": "Serie B",
       "home": "Novorizontino",
       "away": "America Mineiro",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Capixaba B",
-      "home": "CTE Colatina",
-      "away": "Audax São Mateus",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Capixaba B",
-      "home": "Tupy",
-      "away": "Sport Brasil ES",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Capixaba B",
-      "home": "Pinheiros",
-      "away": "Estrela do Norte",
       "reason": "No event/team match"
     },
     {
@@ -2731,6 +2725,12 @@
       "league": "III Liga - Group 2",
       "home": "Polonia Środa",
       "away": "Stargard Szczeciński",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "III Liga - Group 3",
+      "home": "Rakow II",
+      "away": "Stilon Gorzów",
       "reason": "No event/team match"
     }
   ],
@@ -4188,5 +4188,5 @@
   },
   "skipped": false,
   "skipReason": null,
-  "completedAt": "2026-08-19T10:20:22.432Z"
+  "completedAt": "2026-08-19T10:30:42.771Z"
 }
