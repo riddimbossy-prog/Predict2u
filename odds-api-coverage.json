@@ -1,6 +1,6 @@
 {
   "version": "v251",
-  "generatedAt": "2026-08-19T19:50:18.940Z",
+  "generatedAt": "2026-08-19T20:00:18.192Z",
   "provider": "The Odds API v4",
   "keyPresent": true,
   "regions": "uk",
@@ -13,7 +13,7 @@
       "sportKey": "soccer_japan_j_league",
       "sportTitle": "J League",
       "score": 0.347,
-      "matches": 24
+      "matches": 23
     },
     {
       "league": "U19 Bundesliga",
@@ -1224,7 +1224,7 @@
       "matches": 1
     }
   ],
-  "matchesConsidered": 859,
+  "matchesConsidered": 857,
   "matchesMatched": 0,
   "matchesUpdated": 0,
   "fieldsFilled": 0,
@@ -1233,12 +1233,6 @@
   "derivedHtftMatches": 0,
   "bookmakerRows": 0,
   "unmatched": [
-    {
-      "league": "U19 League",
-      "country": "Ukraine",
-      "reason": "No matching soccer sport key",
-      "bestScore": 0.167
-    },
     {
       "league": "Friendlies Clubs",
       "country": "World",
@@ -1250,6 +1244,12 @@
       "country": "Hungary",
       "reason": "No matching soccer sport key",
       "bestScore": 0
+    },
+    {
+      "league": "U19 League",
+      "country": "Ukraine",
+      "reason": "No matching soccer sport key",
+      "bestScore": 0.167
     },
     {
       "league": "Australia Cup",
@@ -1676,12 +1676,6 @@
       "country": "Dominican-Republic",
       "reason": "No matching soccer sport key",
       "bestScore": 0.125
-    },
-    {
-      "league": "Emperor Cup",
-      "home": "Arterivo Wakayama",
-      "away": "Azul Claro Numazu",
-      "reason": "No event/team match"
     },
     {
       "league": "Emperor Cup",
@@ -2731,6 +2725,12 @@
       "league": "Cup",
       "home": "Hranovnica",
       "away": "Harichovce",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Cup",
+      "home": "Geča",
+      "away": "Spišská Nová Ves",
       "reason": "No event/team match"
     }
   ],
@@ -4188,5 +4188,5 @@
   },
   "skipped": false,
   "skipReason": null,
-  "completedAt": "2026-08-19T19:50:56.125Z"
+  "completedAt": "2026-08-19T20:00:36.778Z"
 }
