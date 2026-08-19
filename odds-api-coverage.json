@@ -1,36 +1,12 @@
 {
   "version": "v251",
-  "generatedAt": "2026-08-19T22:50:18.948Z",
+  "generatedAt": "2026-08-19T23:00:16.981Z",
   "provider": "The Odds API v4",
   "keyPresent": true,
   "regions": "uk",
   "sportsAvailable": 78,
   "soccerSportsAvailable": 45,
   "sportMappings": [
-    {
-      "league": "Cup",
-      "country": "Kazakhstan",
-      "sportKey": "soccer_england_efl_cup",
-      "sportTitle": "EFL Cup",
-      "score": 0.487,
-      "matches": 2
-    },
-    {
-      "league": "Premier League International Cup",
-      "country": "World",
-      "sportKey": "soccer_epl",
-      "sportTitle": "EPL",
-      "score": 0.667,
-      "matches": 1
-    },
-    {
-      "league": "U19 Bundesliga",
-      "country": "Germany",
-      "sportKey": "soccer_germany_bundesliga",
-      "sportTitle": "Bundesliga - Germany",
-      "score": 0.68,
-      "matches": 22
-    },
     {
       "league": "Super League",
       "country": "China",
@@ -46,6 +22,14 @@
       "sportTitle": "EPL",
       "score": 0.667,
       "matches": 1
+    },
+    {
+      "league": "U19 Bundesliga",
+      "country": "Germany",
+      "sportKey": "soccer_germany_bundesliga",
+      "sportTitle": "Bundesliga - Germany",
+      "score": 0.68,
+      "matches": 19
     },
     {
       "league": "III Liga - Group 3",
@@ -86,6 +70,14 @@
       "sportTitle": "EFL Cup",
       "score": 0.487,
       "matches": 4
+    },
+    {
+      "league": "Cup",
+      "country": "Kazakhstan",
+      "sportKey": "soccer_england_efl_cup",
+      "sportTitle": "EFL Cup",
+      "score": 0.487,
+      "matches": 1
     },
     {
       "league": "Cup",
@@ -1216,7 +1208,7 @@
       "matches": 1
     }
   ],
-  "matchesConsidered": 814,
+  "matchesConsidered": 804,
   "matchesMatched": 0,
   "matchesUpdated": 0,
   "fieldsFilled": 0,
@@ -1226,10 +1218,22 @@
   "bookmakerRows": 0,
   "unmatched": [
     {
+      "league": "First League",
+      "country": "Armenia",
+      "reason": "No matching soccer sport key",
+      "bestScore": 0.167
+    },
+    {
       "league": "Friendlies Clubs",
       "country": "World",
       "reason": "No matching soccer sport key",
       "bestScore": 0
+    },
+    {
+      "league": "ASEAN Championship",
+      "country": "World",
+      "reason": "No matching soccer sport key",
+      "bestScore": 0.167
     },
     {
       "league": "Ligi kuu Bara",
@@ -1242,24 +1246,6 @@
       "country": "Burundi",
       "reason": "No matching soccer sport key",
       "bestScore": 0.143
-    },
-    {
-      "league": "U19 League",
-      "country": "Ukraine",
-      "reason": "No matching soccer sport key",
-      "bestScore": 0.167
-    },
-    {
-      "league": "First League",
-      "country": "Armenia",
-      "reason": "No matching soccer sport key",
-      "bestScore": 0.167
-    },
-    {
-      "league": "ASEAN Championship",
-      "country": "World",
-      "reason": "No matching soccer sport key",
-      "bestScore": 0.167
     },
     {
       "league": "Cupa României",
@@ -1652,399 +1638,9 @@
       "bestScore": 0.125
     },
     {
-      "league": "Cup",
-      "home": "Altay",
-      "away": "Ordabasy",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Cup",
-      "home": "Zhenys",
-      "away": "Kaisar",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Cup",
-      "home": "Krylia Sovetov",
-      "away": "Zenit",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Cup",
-      "home": "Rubin",
-      "away": "Spartak Moscow",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Cup",
-      "home": "Dynamo",
-      "away": "FC Krasnodar",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Cup",
-      "home": "Baltika",
-      "away": "Dinamo Makhachkala",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Cup",
-      "home": "Nestos Chrisoupolis",
-      "away": "Apollon Pontou",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Cup",
-      "home": "Niki Volos",
-      "away": "Panionios",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Cup",
-      "home": "Kalamata",
-      "away": "Panetolikos",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Cup",
-      "home": "Jednota Bánová",
-      "away": "AS Trencin",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Cup",
-      "home": "Lovca",
-      "away": "Dukla Banská Bystrica",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Cup",
-      "home": "Jakubov",
-      "away": "Inter Bratislava",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Cup",
-      "home": "Nové Mesto nad Váhom",
-      "away": "Skalica",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Cup",
-      "home": "Bernolákovo",
-      "away": "Rača",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Cup",
-      "home": "Sokol Borský Mikuláš",
-      "away": "Beluša",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Cup",
-      "home": "Brezno",
-      "away": "Baník Kalinovo",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Cup",
-      "home": "Cicarovce",
-      "away": "MSK Tesla Stropkov",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Cup",
-      "home": "Družstevník Čirč",
-      "away": "Tatran Prešov",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Cup",
-      "home": "Dynamo Diviaky",
-      "away": "Nová Baňa",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Cup",
-      "home": "Čaňa",
-      "away": "Lokomotíva Košice",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Cup",
-      "home": "Hronec",
-      "away": "Fiľakovo",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Cup",
-      "home": "Holíč",
-      "away": "Spartak Myjava",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Cup",
-      "home": "Jelka",
-      "away": "Kostolné Kračany",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Cup",
-      "home": "Kopčany",
-      "away": "Piešťany",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Cup",
-      "home": "Kysučan Korňa",
-      "away": "Čadca",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Cup",
-      "home": "Kováčová",
-      "away": "Lokomotíva Zvolen",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Cup",
-      "home": "Kovarce",
-      "away": "Slovan Duslo Šaľa",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Cup",
-      "home": "Tatran Krásno",
-      "away": "Podkonice",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Cup",
-      "home": "Spartak Kvašov",
-      "away": "Fomat Martin",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Cup",
-      "home": "Slovan Vavrečka",
-      "away": "Tvrdošín",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Cup",
-      "home": "Slovan Nitra-Chrenová",
-      "away": "Slovan Bratislava",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Cup",
-      "home": "Dolné Krškany",
-      "away": "Nitra",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Cup",
-      "home": "Nová Dedinka",
-      "away": "Petržalka",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Cup",
-      "home": "Oravan",
-      "away": "Považská Bystrica",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Cup",
-      "home": "Ostrovany",
-      "away": "Slovan Kendice",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Cup",
-      "home": "Raslavice",
-      "away": "FK Košice",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Cup",
-      "home": "Rohožník",
-      "away": "Šamorín",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Cup",
-      "home": "Rosina",
-      "away": "MFK Bytča",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Cup",
-      "home": "Rovnost Krajne",
-      "away": "Púchov",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Cup",
-      "home": "Rožňava",
-      "away": "Spartak Medzev",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Cup",
-      "home": "Rudňany",
-      "away": "Podbrezová",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Cup",
-      "home": "Šenkvice",
-      "away": "Dunajská Lužná",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Cup",
-      "home": "Šoporňa",
-      "away": "Malženice",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Cup",
-      "home": "Svätý Jur",
-      "away": "Malinovo",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Cup",
-      "home": "Svaty Peter",
-      "away": "Dunajska Streda",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Cup",
-      "home": "Tomášov",
-      "away": "Gabčíkovo",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Cup",
-      "home": "Trebatice",
-      "away": "Boleráz",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Cup",
-      "home": "Vinohrad Čebovce",
-      "away": "Druzstevnik Latky",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Cup",
-      "home": "Vycapy Opatovce",
-      "away": "Galanta",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Cup",
-      "home": "Závažná Poruba",
-      "away": "Kysucké Nové Mesto",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Cup",
-      "home": "Zitavany",
-      "away": "Veľké Ludince",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Cup",
-      "home": "Kechnec",
-      "away": "Slávia TU Košice",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Cup",
-      "home": "Hranovnica",
-      "away": "Harichovce",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Cup",
-      "home": "Geča",
-      "away": "Spišská Nová Ves",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Cup",
-      "home": "Zahradne",
-      "away": "Vranov nad Topľou",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Cup",
-      "home": "Slovan Tomášovce",
-      "away": "Komárno",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Cup",
-      "home": "Spartak Trnava",
-      "away": "Trenčianske Stankovce",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Cup",
-      "home": "Kozlovice",
-      "away": "Slavičín",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Cup",
-      "home": "Hiiumaa",
-      "away": "Nõmme United",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Cup",
-      "home": "Olympic",
-      "away": "Saku Sporting",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Cup",
-      "home": "Keila",
-      "away": "Flora III",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "EFL Trophy",
-      "home": "Mansfield Town",
-      "away": "Manchester City U21",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "National League - South",
-      "home": "Farnborough",
-      "away": "Chesham United",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Non League Premier - Northern",
-      "home": "Avro",
-      "away": "Workington",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "League One",
-      "home": "Sheffield Wednesday",
-      "away": "Bradford",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Premier League International Cup",
-      "home": "Sunderland U21",
-      "away": "Jong PSV U21",
+      "league": "Super League",
+      "home": "SHANGHAI SIPG",
+      "away": "Dalian Zhixing",
       "reason": "No event/team match"
     },
     {
@@ -2261,24 +1857,6 @@
       "league": "Premier League",
       "home": "Arsenal",
       "away": "Coventry",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "U19 Bundesliga",
-      "home": "Greuther Fürth U19",
-      "away": "RB Leipzig U19",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "U19 Bundesliga",
-      "home": "Heidenheim U19",
-      "away": "Stuttgarter K'rs U19",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "U19 Bundesliga",
-      "home": "Karlsruher SC U19",
-      "away": "Freiburg U19",
       "reason": "No event/team match"
     },
     {
@@ -2594,12 +2172,6 @@
       "reason": "No event/team match"
     },
     {
-      "league": "Super League",
-      "home": "SHANGHAI SIPG",
-      "away": "Dalian Zhixing",
-      "reason": "No event/team match"
-    },
-    {
       "league": "III Liga - Group 3",
       "home": "Rakow II",
       "away": "Stilon Gorzów",
@@ -2724,19 +2296,439 @@
       "home": "Korona Kielce II",
       "away": "Hetman Zamosc",
       "reason": "No event/team match"
+    },
+    {
+      "league": "III Liga - Group 4",
+      "home": "KS Wieczysta Krakow II",
+      "away": "Sokół Kolb.",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "III Liga - Group 4",
+      "home": "Moravia Morawica",
+      "away": "Naprzód",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "III Liga - Group 4",
+      "home": "Siarka Tarnobrzeg",
+      "away": "Jarosław",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "III Liga - Group 4",
+      "home": "Podlasie Biała Podlaska",
+      "away": "Busko-Zdroj",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "III Liga - Group 4",
+      "home": "Star Starachowice",
+      "away": "Czarni Połaniec",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "III Liga - Group 4",
+      "home": "Wiślanie Jaśkowice",
+      "away": "KSZO 1929",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "III Liga - Group 2",
+      "home": "Kalisz",
+      "away": "Noteć Czarnków",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "III Liga - Group 2",
+      "home": "Luzino",
+      "away": "Chemik Bydgoszcz",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "III Liga - Group 2",
+      "home": "Flota Świnoujście",
+      "away": "Victoria Września",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "III Liga - Group 2",
+      "home": "Wda Świecie",
+      "away": "Grom Nowy Staw",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "III Liga - Group 2",
+      "home": "Elana Toruń",
+      "away": "Unia Swarzędz",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "III Liga - Group 2",
+      "home": "Kluczevia Stargard",
+      "away": "Gedania Gdansk",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "III Liga - Group 2",
+      "home": "Kotwica Kórnik",
+      "away": "Bałtyk Koszalin",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "III Liga - Group 2",
+      "home": "Polonia Środa",
+      "away": "Stargard Szczeciński",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "I Liga",
+      "home": "Chrobry Głogów",
+      "away": "Warta Poznań",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "I Liga",
+      "home": "Lechia Gdansk",
+      "away": "Pogoń Siedlce",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "II Liga - East",
+      "home": "Sandecja Nowy Sącz",
+      "away": "Górnik Łęczna",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "II Liga - East",
+      "home": "Chojniczanka Chojnice",
+      "away": "Stal Stalowa Wola",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Ekstraklasa",
+      "home": "Cracovia Krakow",
+      "away": "Wieczysta Kraków",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Pernambucano - U20",
+      "home": "Nautico U20",
+      "away": "Academica Vitoria U20",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Pernambucano - U20",
+      "home": "CA Porto U20",
+      "away": "Santa Cruz U20",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Cearense U20",
+      "home": "Fortaleza U20",
+      "away": "Quixadá U20",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Cearense U20",
+      "home": "Tirol U20",
+      "away": "Ceará U20",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Copa Paulista",
+      "home": "União São João",
+      "away": "Noroeste",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Mineiro U20",
+      "home": "Boston City U20",
+      "away": "Itabirito U20",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Mineiro U20",
+      "home": "Coimbra U20",
+      "away": "América Mineiro U20",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Paulista - U20",
+      "home": "Água Santa U20",
+      "away": "Tanabi SP U20",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Paulista - U20",
+      "home": "Bandeirante U20",
+      "away": "Botafogo SP U20",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Paulista - U20",
+      "home": "Corinthians U20",
+      "away": "Juventus U20",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Paulista - U20",
+      "home": "EC São Bernardo U20",
+      "away": "Velo Clube U20",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Paulista - U20",
+      "home": "Ferroviária U20",
+      "away": "Jabaquara U20",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Paulista - U20",
+      "home": "Flamengo SP U20",
+      "away": "Capivariano U20",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Paulista - U20",
+      "home": "Guarani U20",
+      "away": "Ituano U20",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Paulista - U20",
+      "home": "Ibrachina U20",
+      "away": "Desportivo Brasil U20",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Paulista - U20",
+      "home": "Novorizontino U20",
+      "away": "Oeste U20",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Paulista - U20",
+      "home": "Osasco Audax U20",
+      "away": "Gremio Prudente U20",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Paulista - U20",
+      "home": "Ponte Preta U20",
+      "away": "Sertãozinho U20",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Paulista - U20",
+      "home": "Portuguesa Santista U20",
+      "away": "São Bento U20",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Paulista - U20",
+      "home": "Portuguesa U20",
+      "away": "Mirassol U20",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Paulista - U20",
+      "home": "RB Bragantino U20",
+      "away": "Mauá U20",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Paulista - U20",
+      "home": "Referencia U20",
+      "away": "Palmeiras U20",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Paulista - U20",
+      "home": "Santo André U20",
+      "away": "São Caetano U20",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Paulista - U20",
+      "home": "Santos U20",
+      "away": "América-SP U20",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Paulista - U20",
+      "home": "São Paulo U20",
+      "away": "SC Paulinense SP U20",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Paulista - U20",
+      "home": "União São João U20",
+      "away": "XV de Piracicaba U20",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Paulista - U20",
+      "home": "União Suzano U20",
+      "away": "Itapirense U20",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Paulista - U20",
+      "home": "XV de Jaú U20",
+      "away": "Porto Football U20",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Cup",
+      "home": "Krylia Sovetov",
+      "away": "Zenit",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Cup",
+      "home": "Rubin",
+      "away": "Spartak Moscow",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Cup",
+      "home": "Dynamo",
+      "away": "FC Krasnodar",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Cup",
+      "home": "Baltika",
+      "away": "Dinamo Makhachkala",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Cup",
+      "home": "Zhenys",
+      "away": "Kaisar",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Cup",
+      "home": "Nestos Chrisoupolis",
+      "away": "Apollon Pontou",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Cup",
+      "home": "Niki Volos",
+      "away": "Panionios",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Cup",
+      "home": "Kalamata",
+      "away": "Panetolikos",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Cup",
+      "home": "Jednota Bánová",
+      "away": "AS Trencin",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Cup",
+      "home": "Lovca",
+      "away": "Dukla Banská Bystrica",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Cup",
+      "home": "Jakubov",
+      "away": "Inter Bratislava",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Cup",
+      "home": "Nové Mesto nad Váhom",
+      "away": "Skalica",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Cup",
+      "home": "Bernolákovo",
+      "away": "Rača",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Cup",
+      "home": "Sokol Borský Mikuláš",
+      "away": "Beluša",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Cup",
+      "home": "Brezno",
+      "away": "Baník Kalinovo",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Cup",
+      "home": "Cicarovce",
+      "away": "MSK Tesla Stropkov",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Cup",
+      "home": "Družstevník Čirč",
+      "away": "Tatran Prešov",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Cup",
+      "home": "Dynamo Diviaky",
+      "away": "Nová Baňa",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Cup",
+      "home": "Čaňa",
+      "away": "Lokomotíva Košice",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Cup",
+      "home": "Hronec",
+      "away": "Fiľakovo",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Cup",
+      "home": "Holíč",
+      "away": "Spartak Myjava",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Cup",
+      "home": "Jelka",
+      "away": "Kostolné Kračany",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Cup",
+      "home": "Kopčany",
+      "away": "Piešťany",
+      "reason": "No event/team match"
     }
   ],
   "unsupportedMarkets": [
     {
-      "sportKey": "soccer_england_efl_cup",
+      "sportKey": "soccer_china_superleague",
       "market": "btts"
     },
     {
-      "sportKey": "soccer_england_efl_cup",
+      "sportKey": "soccer_china_superleague",
       "market": "draw_no_bet"
     },
     {
-      "sportKey": "soccer_england_efl_cup",
+      "sportKey": "soccer_china_superleague",
       "market": "double_chance"
     },
     {
@@ -2764,18 +2756,6 @@
       "market": "double_chance"
     },
     {
-      "sportKey": "soccer_china_superleague",
-      "market": "btts"
-    },
-    {
-      "sportKey": "soccer_china_superleague",
-      "market": "draw_no_bet"
-    },
-    {
-      "sportKey": "soccer_china_superleague",
-      "market": "double_chance"
-    },
-    {
       "sportKey": "soccer_poland_ekstraklasa",
       "market": "btts"
     },
@@ -2797,6 +2777,18 @@
     },
     {
       "sportKey": "soccer_brazil_campeonato",
+      "market": "double_chance"
+    },
+    {
+      "sportKey": "soccer_england_efl_cup",
+      "market": "btts"
+    },
+    {
+      "sportKey": "soccer_england_efl_cup",
+      "market": "draw_no_bet"
+    },
+    {
+      "sportKey": "soccer_england_efl_cup",
       "market": "double_chance"
     },
     {
@@ -3198,27 +3190,27 @@
   ],
   "requestErrors": [
     {
-      "label": "soccer_england_efl_cup:base-combined",
+      "label": "soccer_china_superleague:base-combined",
       "error": "API key is deactivated. This could be due to cancelation or a failed payment",
       "statusCode": 401
     },
     {
-      "label": "soccer_england_efl_cup:base-core",
+      "label": "soccer_china_superleague:base-core",
       "error": "API key is deactivated. This could be due to cancelation or a failed payment",
       "statusCode": 401
     },
     {
-      "label": "soccer_england_efl_cup:btts",
+      "label": "soccer_china_superleague:btts",
       "error": "API key is deactivated. This could be due to cancelation or a failed payment",
       "statusCode": 401
     },
     {
-      "label": "soccer_england_efl_cup:draw_no_bet",
+      "label": "soccer_china_superleague:draw_no_bet",
       "error": "API key is deactivated. This could be due to cancelation or a failed payment",
       "statusCode": 401
     },
     {
-      "label": "soccer_england_efl_cup:double_chance",
+      "label": "soccer_china_superleague:double_chance",
       "error": "API key is deactivated. This could be due to cancelation or a failed payment",
       "statusCode": 401
     },
@@ -3273,31 +3265,6 @@
       "statusCode": 401
     },
     {
-      "label": "soccer_china_superleague:base-combined",
-      "error": "API key is deactivated. This could be due to cancelation or a failed payment",
-      "statusCode": 401
-    },
-    {
-      "label": "soccer_china_superleague:base-core",
-      "error": "API key is deactivated. This could be due to cancelation or a failed payment",
-      "statusCode": 401
-    },
-    {
-      "label": "soccer_china_superleague:btts",
-      "error": "API key is deactivated. This could be due to cancelation or a failed payment",
-      "statusCode": 401
-    },
-    {
-      "label": "soccer_china_superleague:draw_no_bet",
-      "error": "API key is deactivated. This could be due to cancelation or a failed payment",
-      "statusCode": 401
-    },
-    {
-      "label": "soccer_china_superleague:double_chance",
-      "error": "API key is deactivated. This could be due to cancelation or a failed payment",
-      "statusCode": 401
-    },
-    {
       "label": "soccer_poland_ekstraklasa:base-combined",
       "error": "API key is deactivated. This could be due to cancelation or a failed payment",
       "statusCode": 401
@@ -3344,6 +3311,31 @@
     },
     {
       "label": "soccer_brazil_campeonato:double_chance",
+      "error": "API key is deactivated. This could be due to cancelation or a failed payment",
+      "statusCode": 401
+    },
+    {
+      "label": "soccer_england_efl_cup:base-combined",
+      "error": "API key is deactivated. This could be due to cancelation or a failed payment",
+      "statusCode": 401
+    },
+    {
+      "label": "soccer_england_efl_cup:base-core",
+      "error": "API key is deactivated. This could be due to cancelation or a failed payment",
+      "statusCode": 401
+    },
+    {
+      "label": "soccer_england_efl_cup:btts",
+      "error": "API key is deactivated. This could be due to cancelation or a failed payment",
+      "statusCode": 401
+    },
+    {
+      "label": "soccer_england_efl_cup:draw_no_bet",
+      "error": "API key is deactivated. This could be due to cancelation or a failed payment",
+      "statusCode": 401
+    },
+    {
+      "label": "soccer_england_efl_cup:double_chance",
       "error": "API key is deactivated. This could be due to cancelation or a failed payment",
       "statusCode": 401
     },
@@ -4180,5 +4172,5 @@
   },
   "skipped": false,
   "skipReason": null,
-  "completedAt": "2026-08-19T22:50:37.510Z"
+  "completedAt": "2026-08-19T23:00:24.906Z"
 }
