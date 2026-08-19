@@ -1,6 +1,6 @@
 {
   "version": "v251",
-  "generatedAt": "2026-08-19T21:20:17.118Z",
+  "generatedAt": "2026-08-19T21:30:15.421Z",
   "provider": "The Odds API v4",
   "keyPresent": true,
   "regions": "uk",
@@ -13,7 +13,7 @@
       "sportKey": "soccer_japan_j_league",
       "sportTitle": "J League",
       "score": 0.347,
-      "matches": 21
+      "matches": 16
     },
     {
       "league": "III Liga - Group 2",
@@ -1224,7 +1224,7 @@
       "matches": 1
     }
   ],
-  "matchesConsidered": 851,
+  "matchesConsidered": 843,
   "matchesMatched": 0,
   "matchesUpdated": 0,
   "fieldsFilled": 0,
@@ -1233,18 +1233,6 @@
   "derivedHtftMatches": 0,
   "bookmakerRows": 0,
   "unmatched": [
-    {
-      "league": "Australia Cup",
-      "country": "Australia",
-      "reason": "No matching soccer sport key",
-      "bestScore": 0.167
-    },
-    {
-      "league": "Calcutta Premier Division",
-      "country": "India",
-      "reason": "No matching soccer sport key",
-      "bestScore": 0.222
-    },
     {
       "league": "FA Cup",
       "country": "South-Korea",
@@ -1388,6 +1376,12 @@
       "country": "World",
       "reason": "No matching soccer sport key",
       "bestScore": 0.2
+    },
+    {
+      "league": "Calcutta Premier Division",
+      "country": "India",
+      "reason": "No matching soccer sport key",
+      "bestScore": 0.222
     },
     {
       "league": "Esiliiga A",
@@ -1670,36 +1664,6 @@
       "country": "Dominican-Republic",
       "reason": "No matching soccer sport key",
       "bestScore": 0.125
-    },
-    {
-      "league": "Emperor Cup",
-      "home": "Suzuka Unlimited",
-      "away": "Basara Hyogo",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Emperor Cup",
-      "home": "FC Tokushima",
-      "away": "Kawasoe Club",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Emperor Cup",
-      "home": "FC Gifu",
-      "away": "Toyama Shinjo",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Emperor Cup",
-      "home": "Grulla Morioka",
-      "away": "Sapporo University",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "Emperor Cup",
-      "home": "SRC Hiroshima",
-      "away": "Maruyasu Okazaki",
-      "reason": "No event/team match"
     },
     {
       "league": "Emperor Cup",
@@ -2731,6 +2695,42 @@
       "league": "U19 Bundesliga",
       "home": "Rot-Weiß Erfurt U19",
       "away": "Nürnberg U19",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "U19 Bundesliga",
+      "home": "Augsburg U19",
+      "away": "Ulm U19",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "U19 Bundesliga",
+      "home": "Borussia M'bach U19",
+      "away": "Bayer Leverkusen U19",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "U19 Bundesliga",
+      "home": "Fortuna Köln U19",
+      "away": "Köln U19",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "U19 Bundesliga",
+      "home": "FSV Frankfurt U19",
+      "away": "Darmstadt 98 U19",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "U19 Bundesliga",
+      "home": "Hallescher FC U19",
+      "away": "Energie Cottbus U19",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "U19 Bundesliga",
+      "home": "1860 München U19",
+      "away": "SGV Freiberg Fussball U19",
       "reason": "No event/team match"
     }
   ],
@@ -4188,5 +4188,5 @@
   },
   "skipped": false,
   "skipReason": null,
-  "completedAt": "2026-08-19T21:20:25.645Z"
+  "completedAt": "2026-08-19T21:30:23.087Z"
 }
