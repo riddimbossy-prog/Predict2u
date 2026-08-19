@@ -1,20 +1,12 @@
 {
   "version": "v251",
-  "generatedAt": "2026-08-19T06:20:17.507Z",
+  "generatedAt": "2026-08-19T06:30:16.558Z",
   "provider": "The Odds API v4",
   "keyPresent": true,
   "regions": "uk",
   "sportsAvailable": 78,
   "soccerSportsAvailable": 45,
   "sportMappings": [
-    {
-      "league": "National League Cup",
-      "country": "England",
-      "sportKey": "soccer_england_efl_cup",
-      "sportTitle": "EFL Cup",
-      "score": 0.68,
-      "matches": 5
-    },
     {
       "league": "EFL Trophy",
       "country": "England",
@@ -46,6 +38,14 @@
       "sportTitle": "EFL Cup",
       "score": 0.466,
       "matches": 9
+    },
+    {
+      "league": "National League Cup",
+      "country": "England",
+      "sportKey": "soccer_england_efl_cup",
+      "sportTitle": "EFL Cup",
+      "score": 0.68,
+      "matches": 3
     },
     {
       "league": "Non League Premier - Northern",
@@ -1240,7 +1240,7 @@
       "matches": 1
     }
   ],
-  "matchesConsidered": 928,
+  "matchesConsidered": 926,
   "matchesMatched": 0,
   "matchesUpdated": 0,
   "fieldsFilled": 0,
@@ -1700,36 +1700,6 @@
       "bestScore": 0.125
     },
     {
-      "league": "National League Cup",
-      "home": "Braintree",
-      "away": "Ipswich Town U21",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "National League Cup",
-      "home": "Worthing",
-      "away": "West Ham United U21",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "National League Cup",
-      "home": "Aldershot Town",
-      "away": "Fulham U21",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "National League Cup",
-      "home": "Tamworth",
-      "away": "Newcastle United U21",
-      "reason": "No event/team match"
-    },
-    {
-      "league": "National League Cup",
-      "home": "Woking",
-      "away": "West Bromwich Albion U21",
-      "reason": "No event/team match"
-    },
-    {
       "league": "EFL Trophy",
       "home": "Barnet",
       "away": "Arsenal U21",
@@ -1865,6 +1835,24 @@
       "league": "National League - South",
       "home": "Farnborough",
       "away": "Chesham United",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "National League Cup",
+      "home": "Aldershot Town",
+      "away": "Fulham U21",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "National League Cup",
+      "home": "Tamworth",
+      "away": "Newcastle United U21",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "National League Cup",
+      "home": "Woking",
+      "away": "West Bromwich Albion U21",
       "reason": "No event/team match"
     },
     {
@@ -2747,6 +2735,18 @@
       "league": "Primera División",
       "home": "Liverpool Montevideo",
       "away": "Cerro",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "Primera División",
+      "home": "The Strongest",
+      "away": "Universitario de Vinto",
+      "reason": "No event/team match"
+    },
+    {
+      "league": "CONMEBOL Libertadores",
+      "home": "Independ. Rivadavia",
+      "away": "Fluminense",
       "reason": "No event/team match"
     }
   ],
@@ -4204,5 +4204,5 @@
   },
   "skipped": false,
   "skipReason": null,
-  "completedAt": "2026-08-19T06:20:29.600Z"
+  "completedAt": "2026-08-19T06:30:28.627Z"
 }
