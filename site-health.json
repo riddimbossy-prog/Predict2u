@@ -1,17 +1,17 @@
 {
-  "generatedAt": "2026-08-16T01:10:21.458Z",
-  "version": "v273",
-  "label": "Operational",
-  "status": "operational",
-  "dataUpdated": "2026-08-16T01:10:01.008Z",
-  "scoresUpdated": "2026-08-16T01:10:01.008Z",
-  "engineCount": 22,
+  "generatedAt": "2026-08-22T04:57:26.671Z",
+  "version": "v283",
+  "label": "Engine registry check needed",
+  "status": "degraded",
+  "dataUpdated": "2026-08-22T04:57:18.300Z",
+  "scoresUpdated": "2026-08-22T04:57:18.300Z",
+  "engineCount": 6,
   "expectedEngineCount": 22,
   "multiEngineCount": 4,
-  "matchCount": 15767,
-  "liveMatches": 347,
+  "matchCount": 9408,
+  "liveMatches": 146,
   "components": {
-    "baseEngines": 18,
+    "baseEngines": 2,
     "multiEngineSuite": 4,
     "decisionCore": "orchestrator",
     "oddsApi": {
@@ -19,7 +19,7 @@
       "matchesUpdated": 0,
       "actualHtftMatches": 0,
       "derivedHtftMatches": 0,
-      "quotaRemaining": 99696
+      "quotaRemaining": null
     }
   }
 }
