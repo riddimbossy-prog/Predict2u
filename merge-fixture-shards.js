@@ -8,12 +8,16 @@
  * data.js. Enriched shard rows are layered over the exact raw discovery rows.
  * If enrichment cannot produce a full statistical record for a future match,
  * the fixture still appears as a fixture-only row instead of disappearing.
+ *
+ * History outside the discovery window is kept only for P2U_DATA_RETENTION_DAYS
+ * (default 14). Older rows were pushing data.js past GitHub's 100 MB hard limit.
  */
 
 const fs = require("fs");
 const path = require("path");
 
 const ROOT = __dirname;
+const RETENTION_DAYS = Number(process.env.P2U_DATA_RETENTION_DAYS || 14);
 const shardRoot = path.resolve(process.argv[2] || "shards");
 const discoveryPath = path.resolve(process.argv[3] || "discovery/all-games-discovery.json");
 const rawDiscoveryPath = path.resolve(
@@ -53,6 +57,20 @@ function dateOf(item) {
 function uniqueKey(item) {
   if (item && item.id != null) return `id:${item.id}`;
   return `match:${dateOf(item)}|${item && item.kickoff || ""}|${item && (item.home || item.homeTeam) || ""}|${item && (item.away || item.awayTeam) || ""}`;
+}
+
+function retentionCutoffIso(days) {
+  const cutoff = new Date();
+  cutoff.setUTCHours(0, 0, 0, 0);
+  cutoff.setUTCDate(cutoff.getUTCDate() - days);
+  return cutoff.toISOString().slice(0, 10);
+}
+
+function stripPerMatchBloat(item) {
+  if (!item || typeof item !== "object") return item;
+  const copy = { ...item };
+  delete copy.governanceContext;
+  return copy;
 }
 
 function neutralStatDefaults() {
@@ -166,10 +184,21 @@ if (fs.existsSync(rootData)) {
   catch (error) { console.warn(error.message); }
 }
 
-// Preserve settled/history rows outside this run's date window.
+const cutoffIso = retentionCutoffIso(RETENTION_DAYS);
+let preservedHistory = 0;
+let droppedHistory = 0;
+
+// Preserve recent history outside this run's date window. Drop anything older
+// than the retention cutoff, including stale NS rows that were never settled.
 for (const item of existing) {
   const itemDate = dateOf(item);
-  if (!windowDates.has(itemDate)) mergedByKey.set(uniqueKey(item), { ...item, matchDate: itemDate || item.matchDate });
+  if (windowDates.has(itemDate)) continue;
+  if (!itemDate || itemDate < cutoffIso) {
+    droppedHistory += 1;
+    continue;
+  }
+  mergedByKey.set(uniqueKey(item), stripPerMatchBloat({ ...item, matchDate: itemDate || item.matchDate }));
+  preservedHistory += 1;
 }
 
 // Seed the active window with every exact fixture from discovery.
@@ -188,7 +217,7 @@ for (const file of shardFiles) {
   for (const item of rows) {
     const itemDate = dateOf(item);
     if (!windowDates.has(itemDate)) continue;
-    const normalized = { ...item, matchDate: itemDate };
+    const normalized = stripPerMatchBloat({ ...item, matchDate: itemDate });
     const key = uniqueKey(normalized);
     const base = mergedByKey.get(key) || neutralStatDefaults();
     mergedByKey.set(key, {
@@ -258,6 +287,8 @@ console.log(`Enriched fixtures: ${enrichedCount}.`);
 console.log(`Fixture-only fallbacks kept visible: ${fixtureOnlyCount}.`);
 console.log(`Final active-window rows: ${activeRows.length} (${coverageReport.finalCoveragePercent}% of exact discovery).`);
 console.log(`Raw shard rows examined: ${shardRowsExamined}.`);
+console.log(`History retention ${RETENTION_DAYS}d (cutoff ${cutoffIso}): kept ${preservedHistory}, dropped ${droppedHistory}.`);
+console.log(`Total rows written: ${merged.length}.`);
 
 if (activeRows.length < discoveredCount) {
   throw new Error(`Fixture-safe merge failed: ${discoveredCount - activeRows.length} discovered fixture(s) are still missing.`);
