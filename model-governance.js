@@ -21,7 +21,36 @@ function enginePolicy(name,rows){const sp=split(rows),train=accuracy(sp.train),v
 function build(log){const rows=settled(log),seen=new Set(),duplicates=[];const quality={};for(const p of rows){const k=key(p);if(seen.has(k))duplicates.push(k);seen.add(k);for(const i of dq(p))quality[i]=(quality[i]||0)+1}const groups={};rows.forEach(p=>(groups[p.engine||"Unknown"]||(groups[p.engine||"Unknown"]=[])).push(p));const policies={};for(const [name,r] of Object.entries(groups))policies[name]=enginePolicy(name,r);const marketGroups={};rows.forEach(p=>{const k=family(p.market);(marketGroups[k]||(marketGroups[k]=[])).push(p)});const marketScorecards=Object.entries(marketGroups).map(([marketFamily,r])=>({marketFamily,...accuracy(r),calibrationError:ece(r)})).sort((a,b)=>b.sample-a.sample);const leagueGroups={};rows.forEach(p=>{const k=p.league||"Unknown";(leagueGroups[k]||(leagueGroups[k]=[])).push(p)});const leagueScorecards=Object.entries(leagueGroups).map(([league,r])=>({league,...accuracy(r)})).sort((a,b)=>b.sample-a.sample).slice(0,50);const all=accuracy(rows);const noBet=rows.filter(p=>safe(p.market)==="No Bet"||p.bet===false);return {version:VERSION,updated:new Date().toISOString(),summary:{settled:all.sample,winRate:all.rate,engines:Object.keys(policies).length,approved:Object.values(policies).filter(x=>x.state==="APPROVED").length,shadow:Object.values(policies).filter(x=>x.state==="SHADOW").length,hold:Object.values(policies).filter(x=>x.state==="HOLD").length,rollback:Object.values(policies).filter(x=>x.state==="ROLLBACK").length,dataQualityFailures:Object.values(quality).reduce((a,b)=>a+b,0),duplicateDecisions:duplicates.length,noBetSample:noBet.length},enginePolicies:policies,marketScorecards,leagueScorecards,dataQuality:Object.entries(quality).map(([issue,count])=>({issue,count})).sort((a,b)=>b.count-a.count),duplicates:duplicates.slice(0,50),method:{split:"Oldest 70% train / newest 30% validation",minimumApproval:35,calibration:"Expected calibration error",defaultPolicy:"SHADOW",rollbackSupported:true}}}
 function parseMatches(raw){const m=raw.match(/window\.MATCHES\s*=\s*([\s\S]*?);\s*$/m);return m?JSON.parse(m[1]):null}
 function writeMatches(raw,matches){return raw.replace(/window\.MATCHES\s*=\s*[\s\S]*?;\s*$/m,`window.MATCHES = ${JSON.stringify(matches)};\n`)}
-function attach(matches,report){for(const m of matches)m.governanceContext={version:VERSION,defaultPolicy:"SHADOW",enginePolicies:report.enginePolicies,generatedAt:report.updated};return matches.length}
-function runBuild(){const report=build(load(FILES.log,{picks:[]}));fs.writeFileSync(FILES.report,JSON.stringify(report,null,2)+"\n");const audit=load(FILES.audit,{version:VERSION,events:[]});const snapshot=Object.values(report.enginePolicies).map(x=>({engine:x.engine,state:x.state,reason:x.reason}));const prev=audit.events[0]&&audit.events[0].policies||[];if(JSON.stringify(prev)!==JSON.stringify(snapshot)){audit.events.unshift({at:report.updated,policies:snapshot});audit.events=audit.events.slice(0,100);fs.writeFileSync(FILES.audit,JSON.stringify(audit,null,2)+"\n")}let attached=0;if(fs.existsSync(FILES.data)){const raw=fs.readFileSync(FILES.data,"utf8"),matches=parseMatches(raw);if(matches){attached=attach(matches,report);fs.writeFileSync(FILES.data,writeMatches(raw,matches))}}return {report,attached}}
+function sharedPolicy(report){return {version:VERSION,defaultPolicy:"SHADOW",enginePolicies:report.enginePolicies,generatedAt:report.updated}}
+function attach(matches,report){
+  // Shared policy lives once on window.P2U_GOVERNANCE_CONTEXT. Copying it onto
+  // every match previously added 50–80 MB and breached GitHub's 100 MB limit.
+  for(const m of matches){ if(m && m.governanceContext) delete m.governanceContext; }
+  return matches.length;
+}
+function hoistGlobal(raw,report){
+  const policy = `window.P2U_GOVERNANCE_CONTEXT = ${JSON.stringify(sharedPolicy(report))};\n`;
+  const marker = raw.indexOf("window.P2U_GOVERNANCE_CONTEXT");
+  if(marker < 0){
+    const matchesAt = raw.indexOf("window.MATCHES");
+    if(matchesAt < 0) return raw + policy;
+    return raw.slice(0, matchesAt) + policy + raw.slice(matchesAt);
+  }
+  const equals = raw.indexOf("=", marker);
+  const start = raw.indexOf("{", equals);
+  if(equals < 0 || start < 0) return raw;
+  let depth=0, quote=null, escaped=false, end=-1;
+  for(let i=start;i<raw.length;i++){
+    const ch=raw[i];
+    if(quote){ if(escaped) escaped=false; else if(ch==="\\") escaped=true; else if(ch===quote) quote=null; continue; }
+    if(ch==="\""||ch==="'"){ quote=ch; continue; }
+    if(ch==="{") depth++;
+    else if(ch==="}"){ depth--; if(depth===0){ end=i+1; break; } }
+  }
+  if(end<0) return raw;
+  let statementEnd=end; while(statementEnd<raw.length && /[;\s]/.test(raw[statementEnd])) statementEnd++;
+  return raw.slice(0, marker) + policy + raw.slice(statementEnd);
+}
+function runBuild(){const report=build(load(FILES.log,{picks:[]}));fs.writeFileSync(FILES.report,JSON.stringify(report,null,2)+"\n");const audit=load(FILES.audit,{version:VERSION,events:[]});const snapshot=Object.values(report.enginePolicies).map(x=>({engine:x.engine,state:x.state,reason:x.reason}));const prev=audit.events[0]&&audit.events[0].policies||[];if(JSON.stringify(prev)!==JSON.stringify(snapshot)){audit.events.unshift({at:report.updated,policies:snapshot});audit.events=audit.events.slice(0,100);fs.writeFileSync(FILES.audit,JSON.stringify(audit,null,2)+"\n")}let attached=0;if(fs.existsSync(FILES.data)){const raw=fs.readFileSync(FILES.data,"utf8"),matches=parseMatches(raw);if(matches){attached=attach(matches,report);fs.writeFileSync(FILES.data,hoistGlobal(writeMatches(raw,matches),report))}}return {report,attached}}
 if(require.main===module){const r=runBuild();console.log(`Model governance ${VERSION}: ${r.report.summary.engines} engines, ${r.report.summary.approved} approved, ${r.attached} fixtures attached.`)}
-module.exports={VERSION,settled,dq,accuracy,ece,drift,enginePolicy,build,attach,runBuild};
+module.exports={VERSION,settled,dq,accuracy,ece,drift,enginePolicy,build,attach,runBuild,sharedPolicy};
