@@ -2,12 +2,15 @@
 "use strict";
 
 /**
- * Predict2U v276 generated-data compactor.
+ * Predict2U generated-data compactor (size-safe).
  *
- * The governance report is identical for every match. Older builds embedded
- * the full policy object on every row, adding roughly 50–80 MB to data.js.
- * This compactor hoists that shared object to one global assignment while
- * preserving the public window.MATCHES API and every match-specific field.
+ * 1. Hoists the shared governance policy once to window.P2U_GOVERNANCE_CONTEXT
+ *    (removes the per-match duplicate that previously added 50–80 MB).
+ * 2. Prunes matches older than RETENTION_DAYS so the committed data.js cannot
+ *    grow without bound. The public bundle (current-data.js) already uses a
+ *    tighter ±7 day window; this retention only protects the full data.js
+ *    that GitHub must accept (< 100 MB hard limit).
+ * 3. Enforces a 95 MB operating ceiling before publication.
  */
 
 const fs = require("fs");
@@ -15,6 +18,8 @@ const path = require("path");
 
 const HARD_LIMIT_BYTES = 100 * 1024 * 1024;
 const OPERATING_LIMIT_BYTES = 95 * 1024 * 1024;
+// Keep finished matches for this many days + every upcoming fixture.
+const RETENTION_DAYS = Number(process.env.P2U_DATA_RETENTION_DAYS || 21);
 
 function findBalancedEnd(text, start, open, close) {
   let depth = 0;
@@ -74,25 +79,64 @@ function removeExistingGlobal(prefix) {
   return prefix.slice(0, marker) + prefix.slice(statementEnd);
 }
 
+function matchDateOf(item) {
+  const direct = String(item && item.matchDate || "").slice(0, 10);
+  if (/^\d{4}-\d{2}-\d{2}$/.test(direct)) return direct;
+  const kickoff = String(item && item.kickoff || "").slice(0, 10);
+  return /^\d{4}-\d{2}-\d{2}$/.test(kickoff) ? kickoff : "";
+}
+
+function isFinished(item) {
+  const status = String(item && item.status || "").toUpperCase();
+  return ["FT", "AET", "PEN", "AWD", "WO", "CANC", "ABD", "PST"].includes(status)
+    || (item && item.homeGoals != null && item.awayGoals != null);
+}
+
+function pruneOldMatches(matches, retentionDays) {
+  const cutoff = new Date();
+  cutoff.setUTCHours(0, 0, 0, 0);
+  cutoff.setUTCDate(cutoff.getUTCDate() - retentionDays);
+  const cutoffIso = cutoff.toISOString().slice(0, 10);
+
+  let kept = 0;
+  let dropped = 0;
+  const pruned = [];
+  for (const match of matches) {
+    const d = matchDateOf(match);
+    // Always keep upcoming / live; only drop finished rows older than the window.
+    if (!d || d >= cutoffIso || !isFinished(match)) {
+      pruned.push(match);
+      kept += 1;
+    } else {
+      dropped += 1;
+    }
+  }
+  return { pruned, kept, dropped, cutoffIso };
+}
+
 function compactFile(file) {
   if (!fs.existsSync(file)) throw new Error(`${path.basename(file)} was not found`);
   const raw = fs.readFileSync(file, "utf8");
   const parsed = parseAssignment(raw, "MATCHES", "[", "]");
   if (!parsed || !Array.isArray(parsed.value)) throw new Error("window.MATCHES is not an array");
 
-  const matches = parsed.value;
+  let matches = parsed.value;
   const contexts = [];
-  let removed = 0;
+  let removedGovernance = 0;
   for (const match of matches) {
     if (!match || typeof match !== "object" || !match.governanceContext) continue;
     contexts.push(match.governanceContext);
     delete match.governanceContext;
-    removed += 1;
+    removedGovernance += 1;
   }
 
   const existingGlobal = parseAssignment(raw, "P2U_GOVERNANCE_CONTEXT", "{", "}");
   const governance = newestGovernance(contexts) || (existingGlobal && existingGlobal.value) || null;
+
   const before = Buffer.byteLength(raw);
+  const { pruned, kept, dropped, cutoffIso } = pruneOldMatches(matches, RETENTION_DAYS);
+  matches = pruned;
+
   const prefix = removeExistingGlobal(raw.slice(0, parsed.marker));
   const globalLine = governance
     ? `window.P2U_GOVERNANCE_CONTEXT = ${JSON.stringify(governance)};\n`
@@ -106,18 +150,37 @@ function compactFile(file) {
   const saved = before - after;
   console.log(
     `Compacted ${path.basename(file)}: ${(before / 1048576).toFixed(2)} MB -> ` +
-    `${(after / 1048576).toFixed(2)} MB (saved ${(saved / 1048576).toFixed(2)} MB; ` +
-    `hoisted governance from ${removed} match rows).`
+    `${(after / 1048576).toFixed(2)} MB (saved ${(saved / 1048576).toFixed(2)} MB).`
+  );
+  console.log(
+    `Governance hoisted from ${removedGovernance} rows; ` +
+    `retention ${RETENTION_DAYS}d (cutoff ${cutoffIso}): kept ${kept}, dropped ${dropped} finished matches.`
   );
 
   if (after >= HARD_LIMIT_BYTES) {
-    throw new Error(`${path.basename(file)} is still at or above GitHub's 100 MB hard limit after governance hoisting`);
+    throw new Error(
+      `${path.basename(file)} is still at or above GitHub's 100 MB hard limit ` +
+      `after governance hoisting and ${RETENTION_DAYS}-day retention prune. ` +
+      `Lower P2U_DATA_RETENTION_DAYS or strip additional heavy fields.`
+    );
   }
   if (after >= OPERATING_LIMIT_BYTES) {
-    throw new Error(`${path.basename(file)} exceeds Predict2U's 95 MB operating ceiling; archive or trim historical rows before publishing`);
+    throw new Error(
+      `${path.basename(file)} exceeds Predict2U's 95 MB operating ceiling ` +
+      `(${(after / 1048576).toFixed(2)} MB). Reduce retention or archive older rows.`
+    );
   }
 
-  return { before, after, saved, removed, matches: matches.length, governance: !!governance };
+  return {
+    before,
+    after,
+    saved,
+    removedGovernance,
+    matches: matches.length,
+    dropped,
+    cutoffIso,
+    governance: !!governance
+  };
 }
 
 function main() {
@@ -133,4 +196,4 @@ if (require.main === module) {
   }
 }
 
-module.exports = { compactFile, findBalancedEnd, parseAssignment };
+module.exports = { compactFile, findBalancedEnd, parseAssignment, pruneOldMatches };
