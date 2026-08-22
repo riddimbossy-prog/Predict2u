@@ -4,13 +4,10 @@
 /**
  * Predict2U generated-data compactor (size-safe).
  *
- * 1. Hoists the shared governance policy once to window.P2U_GOVERNANCE_CONTEXT
- *    (removes the per-match duplicate that previously added 50–80 MB).
- * 2. Prunes matches older than RETENTION_DAYS so the committed data.js cannot
- *    grow without bound. The public bundle (current-data.js) already uses a
- *    tighter ±7 day window; this retention only protects the full data.js
- *    that GitHub must accept (< 100 MB hard limit).
- * 3. Enforces a 95 MB operating ceiling before publication.
+ * 1. Hoists the shared governance policy once to window.P2U_GOVERNANCE_CONTEXT.
+ * 2. Drops every match older than RETENTION_DAYS (including stale NS rows).
+ * 3. If still over the operating ceiling, strips bulky per-match fields, then
+ *    tightens retention until data.js is under 95 MB / GitHub's 100 MB limit.
  */
 
 const fs = require("fs");
@@ -18,8 +15,17 @@ const path = require("path");
 
 const HARD_LIMIT_BYTES = 100 * 1024 * 1024;
 const OPERATING_LIMIT_BYTES = 95 * 1024 * 1024;
-// Keep finished matches for this many days + every upcoming fixture.
-const RETENTION_DAYS = Number(process.env.P2U_DATA_RETENTION_DAYS || 21);
+const DEFAULT_RETENTION_DAYS = Number(process.env.P2U_DATA_RETENTION_DAYS || 14);
+const HEAVY_KEYS = [
+  "homeStats",
+  "awayStats",
+  "h2h",
+  "leagueTrends",
+  "homeStreaks",
+  "awayStreaks",
+  "venue",
+  "governanceContext"
+];
 
 function findBalancedEnd(text, start, open, close) {
   let depth = 0;
@@ -86,32 +92,51 @@ function matchDateOf(item) {
   return /^\d{4}-\d{2}-\d{2}$/.test(kickoff) ? kickoff : "";
 }
 
-function isFinished(item) {
-  const status = String(item && item.status || "").toUpperCase();
-  return ["FT", "AET", "PEN", "AWD", "WO", "CANC", "ABD", "PST"].includes(status)
-    || (item && item.homeGoals != null && item.awayGoals != null);
-}
-
-function pruneOldMatches(matches, retentionDays) {
+function cutoffIso(days) {
   const cutoff = new Date();
   cutoff.setUTCHours(0, 0, 0, 0);
-  cutoff.setUTCDate(cutoff.getUTCDate() - retentionDays);
-  const cutoffIso = cutoff.toISOString().slice(0, 10);
+  cutoff.setUTCDate(cutoff.getUTCDate() - days);
+  return cutoff.toISOString().slice(0, 10);
+}
 
-  let kept = 0;
-  let dropped = 0;
+function pruneByDate(matches, days) {
+  const iso = cutoffIso(days);
   const pruned = [];
+  let dropped = 0;
   for (const match of matches) {
     const d = matchDateOf(match);
-    // Always keep upcoming / live; only drop finished rows older than the window.
-    if (!d || d >= cutoffIso || !isFinished(match)) {
-      pruned.push(match);
-      kept += 1;
-    } else {
-      dropped += 1;
+    if (d && d >= iso) pruned.push(match);
+    else dropped += 1;
+  }
+  return { pruned, dropped, cutoffIso: iso };
+}
+
+function stripHeavy(matches) {
+  let stripped = 0;
+  for (const match of matches) {
+    if (!match || typeof match !== "object") continue;
+    for (const key of HEAVY_KEYS) {
+      if (match[key] != null) {
+        delete match[key];
+        stripped += 1;
+      }
+    }
+    if (match.learningContext && match.learningContext.engineRules) {
+      delete match.learningContext.engineRules;
+      stripped += 1;
     }
   }
-  return { pruned, kept, dropped, cutoffIso };
+  return stripped;
+}
+
+function serialize(raw, parsed, matches, governance) {
+  const prefix = removeExistingGlobal(raw.slice(0, parsed.marker));
+  const globalLine = governance
+    ? `window.P2U_GOVERNANCE_CONTEXT = ${JSON.stringify(governance)};\n`
+    : "";
+  const assignmentPrefix = raw.slice(parsed.marker, parsed.start);
+  const suffix = raw.slice(parsed.end);
+  return `${prefix}${globalLine}${assignmentPrefix}${JSON.stringify(matches)}${suffix}`;
 }
 
 function compactFile(file) {
@@ -132,21 +157,34 @@ function compactFile(file) {
 
   const existingGlobal = parseAssignment(raw, "P2U_GOVERNANCE_CONTEXT", "{", "}");
   const governance = newestGovernance(contexts) || (existingGlobal && existingGlobal.value) || null;
-
   const before = Buffer.byteLength(raw);
-  const { pruned, kept, dropped, cutoffIso } = pruneOldMatches(matches, RETENTION_DAYS);
+
+  let retention = DEFAULT_RETENTION_DAYS;
+  let { pruned, dropped, cutoffIso: iso } = pruneByDate(matches, retention);
   matches = pruned;
+  let strippedFields = 0;
 
-  const prefix = removeExistingGlobal(raw.slice(0, parsed.marker));
-  const globalLine = governance
-    ? `window.P2U_GOVERNANCE_CONTEXT = ${JSON.stringify(governance)};\n`
-    : "";
-  const assignmentPrefix = raw.slice(parsed.marker, parsed.start);
-  const suffix = raw.slice(parsed.end);
-  const compact = `${prefix}${globalLine}${assignmentPrefix}${JSON.stringify(matches)}${suffix}`;
+  let compact = serialize(raw, parsed, matches, governance);
+  let after = Buffer.byteLength(compact);
+
+  if (after >= OPERATING_LIMIT_BYTES) {
+    strippedFields = stripHeavy(matches);
+    compact = serialize(raw, parsed, matches, governance);
+    after = Buffer.byteLength(compact);
+    console.log(`Stripped ${strippedFields} heavy field(s) after date prune.`);
+  }
+
+  for (const tighter of [10, 7]) {
+    if (after < OPERATING_LIMIT_BYTES) break;
+    retention = tighter;
+    ({ pruned, dropped, cutoffIso: iso } = pruneByDate(matches, retention));
+    matches = pruned;
+    compact = serialize(raw, parsed, matches, governance);
+    after = Buffer.byteLength(compact);
+    console.log(`Tightened retention to ${retention}d (${matches.length} matches, ${(after / 1048576).toFixed(2)} MB).`);
+  }
+
   fs.writeFileSync(file, compact, "utf8");
-
-  const after = Buffer.byteLength(compact);
   const saved = before - after;
   console.log(
     `Compacted ${path.basename(file)}: ${(before / 1048576).toFixed(2)} MB -> ` +
@@ -154,20 +192,19 @@ function compactFile(file) {
   );
   console.log(
     `Governance hoisted from ${removedGovernance} rows; ` +
-    `retention ${RETENTION_DAYS}d (cutoff ${cutoffIso}): kept ${kept}, dropped ${dropped} finished matches.`
+    `retention ${retention}d (cutoff ${iso}): kept ${matches.length}, dropped ${dropped}.`
   );
 
   if (after >= HARD_LIMIT_BYTES) {
     throw new Error(
       `${path.basename(file)} is still at or above GitHub's 100 MB hard limit ` +
-      `after governance hoisting and ${RETENTION_DAYS}-day retention prune. ` +
-      `Lower P2U_DATA_RETENTION_DAYS or strip additional heavy fields.`
+      `after governance hoisting, heavy-field strip and ${retention}-day prune.`
     );
   }
   if (after >= OPERATING_LIMIT_BYTES) {
     throw new Error(
       `${path.basename(file)} exceeds Predict2U's 95 MB operating ceiling ` +
-      `(${(after / 1048576).toFixed(2)} MB). Reduce retention or archive older rows.`
+      `(${(after / 1048576).toFixed(2)} MB) after ${retention}-day prune.`
     );
   }
 
@@ -178,7 +215,9 @@ function compactFile(file) {
     removedGovernance,
     matches: matches.length,
     dropped,
-    cutoffIso,
+    cutoffIso: iso,
+    retention,
+    strippedFields,
     governance: !!governance
   };
 }
@@ -196,4 +235,4 @@ if (require.main === module) {
   }
 }
 
-module.exports = { compactFile, findBalancedEnd, parseAssignment, pruneOldMatches };
+module.exports = { compactFile, findBalancedEnd, parseAssignment, pruneByDate };
