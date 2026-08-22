@@ -1,6 +1,6 @@
 /* Predict2U service worker v282 — fast core install, bounded caches,
    native-install support, exact push deep links and recoverable offline navigation.
-   v282: current-data.js is 20–30 MB and must not share the 2.8s UI timeout. */} 
+   v282: current-data.js is 20–30 MB and must not share the 2.8s UI timeout. */
 const VERSION='v282';
 const CACHE_VERSION='predict2u-v282';
 const APP_CACHE=CACHE_VERSION;
