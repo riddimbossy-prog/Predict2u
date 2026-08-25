@@ -1,11 +1,19 @@
 {
-  "generatedAt": "2026-08-25T13:05:36.853Z",
+  "generatedAt": "2026-08-25T18:52:24.469Z",
   "windowStart": "2026-08-25",
   "windowEnd": "2026-08-31",
   "totalFixtures": 3621,
   "daysRequested": 7,
   "requestGapMs": 13000,
-  "staleFallbackDates": [],
+  "staleFallbackDates": [
+    "2026-08-25",
+    "2026-08-26",
+    "2026-08-27",
+    "2026-08-28",
+    "2026-08-29",
+    "2026-08-30",
+    "2026-08-31"
+  ],
   "unresolvedDates": [],
   "dateCounts": {
     "2026-08-25": 204,
@@ -16,42 +24,78 @@
     "2026-08-30": 839,
     "2026-08-31": 241
   },
-  "apiFailedDates": [],
+  "apiFailedDates": [
+    {
+      "date": "2026-08-25",
+      "recoveredWithPreviousSnapshot": true,
+      "error": "API error for /fixtures?date=2026-08-25&timezone=UTC: {\"requests\":\"You have reached the request limit for the day, Go to https://dashboard.api-football.com to upgrade your plan.\"}"
+    },
+    {
+      "date": "2026-08-26",
+      "recoveredWithPreviousSnapshot": true,
+      "error": "API error for /fixtures?date=2026-08-26&timezone=UTC: {\"requests\":\"You have reached the request limit for the day, Go to https://dashboard.api-football.com to upgrade your plan.\"}"
+    },
+    {
+      "date": "2026-08-27",
+      "recoveredWithPreviousSnapshot": true,
+      "error": "API error for /fixtures?date=2026-08-27&timezone=UTC: {\"plan\":\"Free plans do not have access to this date, try from 2026-08-24 to 2026-08-26.\"}"
+    },
+    {
+      "date": "2026-08-28",
+      "recoveredWithPreviousSnapshot": true,
+      "error": "API error for /fixtures?date=2026-08-28&timezone=UTC: {\"plan\":\"Free plans do not have access to this date, try from 2026-08-24 to 2026-08-26.\"}"
+    },
+    {
+      "date": "2026-08-29",
+      "recoveredWithPreviousSnapshot": true,
+      "error": "API error for /fixtures?date=2026-08-29&timezone=UTC: {\"plan\":\"Free plans do not have access to this date, try from 2026-08-24 to 2026-08-26.\"}"
+    },
+    {
+      "date": "2026-08-30",
+      "recoveredWithPreviousSnapshot": true,
+      "error": "API error for /fixtures?date=2026-08-30&timezone=UTC: {\"plan\":\"Free plans do not have access to this date, try from 2026-08-24 to 2026-08-26.\"}"
+    },
+    {
+      "date": "2026-08-31",
+      "recoveredWithPreviousSnapshot": true,
+      "error": "API error for /fixtures?date=2026-08-31&timezone=UTC: {\"plan\":\"Free plans do not have access to this date, try from 2026-08-24 to 2026-08-26.\"}"
+    }
+  ],
   "dates": [
     {
       "date": "2026-08-25",
       "games": 204,
-      "source": "api"
+      "source": "stale-fallback"
     },
     {
       "date": "2026-08-26",
       "games": 340,
-      "source": "api"
+      "source": "stale-fallback"
     },
     {
       "date": "2026-08-27",
       "games": 138,
-      "source": "api"
+      "source": "stale-fallback"
     },
     {
       "date": "2026-08-28",
       "games": 415,
-      "source": "api"
+      "source": "stale-fallback"
     },
     {
       "date": "2026-08-29",
       "games": 1444,
-      "source": "api"
+      "source": "stale-fallback"
     },
     {
       "date": "2026-08-30",
       "games": 839,
-      "source": "api"
+      "source": "stale-fallback"
     },
     {
       "date": "2026-08-31",
       "games": 241,
-      "source": "api"
+      "source": "stale-fallback"
     }
   ],
   "leagues": [
