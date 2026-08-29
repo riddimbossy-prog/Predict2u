@@ -8,7 +8,6 @@
     rescue.dataset.p2uMobileZfoldV257='true';
     document.head.appendChild(rescue);
   }
-  // v280: contextual tip cautions are a site-wide layer, not a Team Intelligence-only feature.
   if(!document.querySelector('link[data-p2u-context-flags-v280]')){
     const riskCss=document.createElement('link');
     riskCss.rel='stylesheet';
@@ -23,7 +22,6 @@
     riskJs.dataset.p2uContextFlagsV280='true';
     document.head.appendChild(riskJs);
   }
-  // v281: one clean explanation path across prediction surfaces.
   if(!document.querySelector('link[data-p2u-tip-clean-v281]')){
     const cleanCss=document.createElement('link');
     cleanCss.rel='stylesheet';
@@ -37,6 +35,13 @@
     cleanJs.async=false;
     cleanJs.dataset.p2uTipCleanV281='true';
     document.head.appendChild(cleanJs);
+  }
+  if(!document.querySelector('link[data-p2u-ui-scale-v282]')){
+    const scale=document.createElement('link');
+    scale.rel='stylesheet';
+    scale.href='ui-scale-v282.css';
+    scale.dataset.p2uUiScaleV282='true';
+    document.head.appendChild(scale);
   }
   if(document.querySelector('.p2u-v245-nav-wrap')) return;
 
@@ -66,31 +71,28 @@
   };
 
   const desktopLinks=[
-    {href:'index.html',label:'Home',icon:'overview'},
-    {href:'board.html',label:'Today',icon:'picks'},
-    {href:'bankers.html',label:'Bankers',icon:'bankers'},
+    {href:'index.html',label:'Home',icon:'rankings'},
+    {href:'news.html',label:'News',icon:'news'},
     {href:'all-engines.html',label:'Engines',icon:'engines'},
     {href:'proof.html',label:'Proof',icon:'proof'}
   ];
   const mobileLinks=[
-    {href:'index.html',label:'Home',icon:'overview'},
-    {href:'board.html',label:'Today',icon:'picks'},
-    {href:'bankers.html',label:'Bankers',icon:'bankers'},
+    {href:'index.html',label:'Home',icon:'rankings'},
+    {href:'news.html',label:'News',icon:'news'},
     {href:'all-engines.html',label:'Engines',icon:'engines'}
   ];
   const moreLinks=[
-    {href:'team-rankings.html',label:'Teams',icon:'rankings'},
+    {href:'board.html',label:'Today',icon:'picks'},
     {href:'proof.html',label:'Proof',icon:'proof'},
     {href:'engines.html',label:'Full Board',icon:'fullboard'},
     {href:'scorecards.html',label:'Scorecards',icon:'score'},
     {href:'league-dna.html',label:'League DNA',icon:'dna'},
-    {href:'news.html',label:'News',icon:'news'},
     {href:'community.html',label:'Community',icon:'community'},
     {href:'trust.html',label:'Trust Center',icon:'trust'},
     {href:'account.html',label:'Account',icon:'account'},
     {href:'index.html?tour=1',label:'Replay walkthrough',icon:'overview'}
   ];
-  const isActive=item=>active===item.href;
+  const isActive=item=>{if(item.href==='index.html')return active==='index.html'||active==='team-rankings.html'||active==='';return active===item.href;};
   const moreActive=moreLinks.some(isActive);
 
   const nav=document.createElement('nav');
@@ -123,14 +125,15 @@
   backdrop.id='p2u-v245-more-panel';
   backdrop.setAttribute('aria-hidden','true');
   backdrop.innerHTML=`<section class="p2u-v245-more-panel" role="dialog" aria-modal="true" aria-label="More navigation">
-    <div class="p2u-v245-more-head"><div><strong>More</strong><small>Teams, full board, records and account tools</small></div><button type="button" class="p2u-v245-more-close" aria-label="Close">×</button></div>
+    <div class="p2u-v245-more-head"><div><strong>More</strong><small>Today, records and account tools</small></div><button type="button" class="p2u-v245-more-close" aria-label="Close">×</button></div>
     <div class="p2u-v245-more-grid">${moreLinks.map(item=>`<a href="${item.href}" class="${isActive(item)?'is-active':''}">${svg(item.icon)}<span>${item.label}</span></a>`).join('')}</div>
   </section>`;
   document.body.appendChild(backdrop);
 
   const moreButton=dock.querySelector('#p2u-v245-more');
   const close=()=>{backdrop.classList.remove('is-open');backdrop.setAttribute('aria-hidden','true');moreButton.setAttribute('aria-expanded','false');document.body.classList.remove('p2u-v245-menu-open');};
-  const open=()=>{backdrop.classList.add('is-open');backdrop.setAttribute('aria-hidden','false');moreButton.setAttribute('aria-expanded','true');document.body.classList.add('p2u-v245-menu-open');};
+  const open=()=>{backdrop.classList.add('is-open');backdrop.setAttribute('aria-hidden','false');moreButton.setAttribute('aria-expanded','true');document.body.classList.add('p2u-v245-menu-open');
+};
   moreButton.addEventListener('click',()=>backdrop.classList.contains('is-open')?close():open());
   backdrop.addEventListener('click',event=>{if(event.target===backdrop||event.target.closest('.p2u-v245-more-close'))close();});
   document.addEventListener('keydown',event=>{if(event.key==='Escape')close();});
