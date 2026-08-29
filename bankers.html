@@ -16,7 +16,7 @@
   <link rel="stylesheet" href="mobile-responsive-v265.css">
   <link rel="stylesheet" href="controls-v267.css">
   <link rel="stylesheet" href="ui-scale-v282.css">
-  <link rel="stylesheet" href="bankers-of-the-day-v283.css">
+  <link rel="stylesheet" href="bankers-of-the-day-v285.css">
 </head>
 <body>
 <script src="unified-shell-v234.js"></script>
@@ -25,7 +25,7 @@
   <section class="p2u-bankers-hero">
     <span class="p2u-bankers-kicker">PREDICT2U BANKERS</span>
     <h1>Bankers of the Day</h1>
-    <p>Two shortlists from the same board. Safest stays on short, high-agreement lines. Value takes the longer price when the numbers still stand up.</p>
+    <p>Two shortlists from the same board. Safest stays on short Double Chance and goals-cover lines. Value takes 1X2, Over 2.5 and GG when the split stats still stand up.</p>
     <div class="p2u-bankers-meta" id="bankers-meta">Reading today’s fixtures…</div>
   </section>
 
@@ -33,8 +33,8 @@
     <label>
       <span>Kickoff window</span>
       <select id="bankers-window">
-        <option value="today">Today</option>
-        <option value="36h" selected>Next 36 hours</option>
+        <option value="today" selected>Today</option>
+        <option value="36h">Next 36 hours</option>
         <option value="weekend">This weekend</option>
       </select>
     </label>
@@ -42,14 +42,19 @@
       <span>League</span>
       <select id="bankers-league"><option value="all">All leagues</option></select>
     </label>
-    <p class="p2u-bankers-note">Markets follow SportyBet-style lines: 1X2, Double Chance, Over/Under and GG/NG. Prices are the current Predict2U board odds until a live SportyBet feed is connected.</p>
+    <p class="p2u-bankers-note">Markets use SportyBet-style lines: 1 / X / 2, 1X / X2 / 12, Over/Under and GG / NG. Prices come from the current Predict2U board. If a market is missing, Double Chance is built from 1X2.</p>
   </section>
 
   <section class="p2u-bankers-columns">
     <article class="p2u-bankers-col is-safe">
       <header>
-        <span>SAFEST</span>
-        <h2>Safest bankers</h2>
+        <div class="p2u-bankers-head-row">
+          <div>
+            <span>SAFEST</span>
+            <h2>Safest bankers</h2>
+          </div>
+          <button type="button" class="p2u-bankers-acca" data-banker-acca="safe">Add all to slip</button>
+        </div>
         <p>Short prices. High venue agreement. Built to survive a messy scoreline.</p>
         <strong id="safe-acca">Combined —</strong>
       </header>
@@ -57,9 +62,14 @@
     </article>
     <article class="p2u-bankers-col is-value">
       <header>
-        <span>VALUE</span>
-        <h2>Value bankers</h2>
-        <p>Longer odds where the split stats still beat the implied chance.</p>
+        <div class="p2u-bankers-head-row">
+          <div>
+            <span>VALUE</span>
+            <h2>Value bankers</h2>
+          </div>
+          <button type="button" class="p2u-bankers-acca" data-banker-acca="value">Add all to slip</button>
+        </div>
+        <p>Longer-paying markets — wins, Over 2.5 and GG — where the splits still beat the price.</p>
         <strong id="value-acca">Combined —</strong>
       </header>
       <div id="value-list" class="p2u-bankers-list"><div class="p2u-bankers-empty">Scanning value lines…</div></div>
@@ -69,6 +79,6 @@
 <script src="current-data.js"></script>
 <script src="slip.js"></script>
 <script src="market-intelligence-engine-v277.js"></script>
-<script src="bankers-of-the-day-v283.js"></script>
+<script src="bankers-of-the-day-v285.js"></script>
 </body>
 </html>

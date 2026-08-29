@@ -1,7 +1,7 @@
-/* Predict2U v284 — client cache refresh for Bankers of the Day. */
+/* Predict2U v285 — client cache refresh for Bankers of the Day. */
 (function(){
   'use strict';
-  const KEY='p2u_cache_refresh_v284';
+  const KEY='p2u_cache_refresh_v285';
   try{if(localStorage.getItem(KEY)==='done')return;}catch(_){ }
   const mark=()=>{try{localStorage.setItem(KEY,'done');}catch(_){ }};
   const clear=async()=>{
@@ -18,11 +18,11 @@
       }
     }catch(_){ }
     mark();
-    window.dispatchEvent(new CustomEvent('p2u:cache-refreshed',{detail:{version:'v284'}}));
+    window.dispatchEvent(new CustomEvent('p2u:cache-refreshed',{detail:{version:'v285'}}));
     try{
       const url=new URL(location.href);
-      if(url.searchParams.get('refresh')!=='v284'){
-        url.searchParams.set('refresh','v284');
+      if(url.searchParams.get('refresh')!=='v285'){
+        url.searchParams.set('refresh','v285');
         location.replace(url.href);
       }
     }catch(_){location.reload();}
