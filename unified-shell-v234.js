@@ -73,12 +73,14 @@
   const desktopLinks=[
     {href:'index.html',label:'Home',icon:'rankings'},
     {href:'news.html',label:'News',icon:'news'},
+    {href:'community.html',label:'Community',icon:'community'},
     {href:'all-engines.html',label:'Engines',icon:'engines'},
     {href:'proof.html',label:'Proof',icon:'proof'}
   ];
   const mobileLinks=[
     {href:'index.html',label:'Home',icon:'rankings'},
     {href:'news.html',label:'News',icon:'news'},
+    {href:'community.html',label:'Community',icon:'community'},
     {href:'all-engines.html',label:'Engines',icon:'engines'}
   ];
   const moreLinks=[
@@ -87,7 +89,6 @@
     {href:'engines.html',label:'Full Board',icon:'fullboard'},
     {href:'scorecards.html',label:'Scorecards',icon:'score'},
     {href:'league-dna.html',label:'League DNA',icon:'dna'},
-    {href:'community.html',label:'Community',icon:'community'},
     {href:'trust.html',label:'Trust Center',icon:'trust'},
     {href:'account.html',label:'Account',icon:'account'},
     {href:'index.html?tour=1',label:'Replay walkthrough',icon:'overview'}

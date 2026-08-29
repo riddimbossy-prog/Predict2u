@@ -1,7 +1,7 @@
-/* Predict2U v279 — one-time client cache refresh for Team/Market Intelligence rollout. */
+/* Predict2U v283 — client cache refresh for Community nav + Why this pick restore. */
 (function(){
   'use strict';
-  const KEY='p2u_cache_refresh_v279';
+  const KEY='p2u_cache_refresh_v283';
   try{if(localStorage.getItem(KEY)==='done')return;}catch(_){ }
   const mark=()=>{try{localStorage.setItem(KEY,'done');}catch(_){ }};
   const clear=async()=>{
@@ -18,11 +18,11 @@
       }
     }catch(_){ }
     mark();
-    window.dispatchEvent(new CustomEvent('p2u:cache-refreshed',{detail:{version:'v279'}}));
+    window.dispatchEvent(new CustomEvent('p2u:cache-refreshed',{detail:{version:'v283'}}));
     try{
       const url=new URL(location.href);
-      if(url.searchParams.get('refresh')!=='v279'){
-        url.searchParams.set('refresh','v279');
+      if(url.searchParams.get('refresh')!=='v283'){
+        url.searchParams.set('refresh','v283');
         location.replace(url.href);
       }
     }catch(_){location.reload();}
