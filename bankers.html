@@ -1,12 +1,74 @@
 <!doctype html>
 <html lang="en">
 <head>
-<meta charset="utf-8"/>
-<title>Predict2U</title>
-<meta http-equiv="refresh" content="0; url=index.html"/>
-<script>location.replace("index.html");</script>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <title>Predict2U • Bankers of the Day</title>
+  <meta name="description" content="Safest bankers and value bankers for today, explained in plain English.">
+  <meta name="theme-color" content="#07111d">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="icon" href="favicon-32x32.png">
+  <link rel="stylesheet" href="intelligence.css">
+  <link rel="stylesheet" href="brand-experience.css">
+  <link rel="stylesheet" href="unified-shell-v245.css">
+  <link rel="stylesheet" href="mobile-zfold-v257.css">
+  <link rel="stylesheet" href="stability-v264.css">
+  <link rel="stylesheet" href="mobile-responsive-v265.css">
+  <link rel="stylesheet" href="controls-v267.css">
+  <link rel="stylesheet" href="ui-scale-v282.css">
+  <link rel="stylesheet" href="bankers-of-the-day-v283.css">
 </head>
 <body>
-<p><a href="index.html">Home</a></p>
+<script src="unified-shell-v234.js"></script>
+<script src="cache-refresh-v278.js"></script>
+<main class="p2u-bankers-page">
+  <section class="p2u-bankers-hero">
+    <span class="p2u-bankers-kicker">PREDICT2U BANKERS</span>
+    <h1>Bankers of the Day</h1>
+    <p>Two shortlists from the same board. Safest stays on short, high-agreement lines. Value takes the longer price when the numbers still stand up.</p>
+    <div class="p2u-bankers-meta" id="bankers-meta">Reading today’s fixtures…</div>
+  </section>
+
+  <section class="p2u-bankers-toolbar">
+    <label>
+      <span>Kickoff window</span>
+      <select id="bankers-window">
+        <option value="today">Today</option>
+        <option value="36h" selected>Next 36 hours</option>
+        <option value="weekend">This weekend</option>
+      </select>
+    </label>
+    <label>
+      <span>League</span>
+      <select id="bankers-league"><option value="all">All leagues</option></select>
+    </label>
+    <p class="p2u-bankers-note">Markets follow SportyBet-style lines: 1X2, Double Chance, Over/Under and GG/NG. Prices are the current Predict2U board odds until a live SportyBet feed is connected.</p>
+  </section>
+
+  <section class="p2u-bankers-columns">
+    <article class="p2u-bankers-col is-safe">
+      <header>
+        <span>SAFEST</span>
+        <h2>Safest bankers</h2>
+        <p>Short prices. High venue agreement. Built to survive a messy scoreline.</p>
+        <strong id="safe-acca">Combined —</strong>
+      </header>
+      <div id="safe-list" class="p2u-bankers-list"><div class="p2u-bankers-empty">Scanning safest lines…</div></div>
+    </article>
+    <article class="p2u-bankers-col is-value">
+      <header>
+        <span>VALUE</span>
+        <h2>Value bankers</h2>
+        <p>Longer odds where the split stats still beat the implied chance.</p>
+        <strong id="value-acca">Combined —</strong>
+      </header>
+      <div id="value-list" class="p2u-bankers-list"><div class="p2u-bankers-empty">Scanning value lines…</div></div>
+    </article>
+  </section>
+</main>
+<script src="current-data.js"></script>
+<script src="slip.js"></script>
+<script src="market-intelligence-engine-v277.js"></script>
+<script src="bankers-of-the-day-v283.js"></script>
 </body>
 </html>
