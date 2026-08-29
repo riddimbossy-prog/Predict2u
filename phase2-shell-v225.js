@@ -3,13 +3,13 @@
   const path = (location.pathname.split('/').pop() || 'index.html').toLowerCase();
   const links = [
     {href:'index.html',label:'Overview',icon:'fa-solid fa-compass'},
-    {href:'board.html',label:"Today's Board",icon:'fa-regular fa-calendar-check'},
+    {href:'news.html',label:'News',icon:'fa-regular fa-newspaper'},
     {href:'engines.html',label:'Full Board',icon:'fa-solid fa-table-cells-large'},
     {href:'proof.html',label:'Proof',icon:'fa-solid fa-shield-halved'},
     {href:'scorecards.html',label:'Scorecards',icon:'fa-solid fa-chart-column'},
     {href:'league-dna.html',label:'League DNA',icon:'fa-solid fa-dna'},
     {href:'community.html',label:'Community',icon:'fa-solid fa-users'},
-    {href:'news.html',label:'News',icon:'fa-regular fa-newspaper'}
+    {href:'board.html',label:'Board',icon:'fa-regular fa-calendar-check'}
   ];
   const moreLinks = [
     ...links,
@@ -45,7 +45,7 @@
   const dock = document.createElement('div');
   dock.className = 'p2u-phase2-dock';
   const dockLinks = [links[0],links[1],links[2],links[3]];
-  dock.innerHTML = dockLinks.map(l=>`<a href="${l.href}" class="${activeHref===l.href?'is-active':''}"><i class="${l.icon}"></i><span>${l.label.replace("Today's ",'')}</span></a>`).join('') + `<button type="button" id="p2u-phase2-more"><i class="fa-solid fa-ellipsis"></i><span>More</span></button>`;
+  dock.innerHTML = dockLinks.map(l=>`<a href="${l.href}" class="${activeHref===l.href?'is-active':''}"><i class="${l.icon}"></i><span>${l.label}</span></a>`).join('') + `<button type="button" id="p2u-phase2-more"><i class="fa-solid fa-ellipsis"></i><span>More</span></button>`;
   document.body.appendChild(dock);
 
   const more = document.createElement('div');
