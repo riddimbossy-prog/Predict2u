@@ -1,7 +1,7 @@
 {
   "name": "predict2u-site-quality",
   "private": true,
-  "version": "2.7.6",
+  "version": "2.8.6",
   "scripts": {
     "health": "node generate-site-health.js",
     "audit": "node audit-site.js",
@@ -31,7 +31,9 @@
     "fixtures:snapshot": "node fetch-fixtures-snapshot.js",
     "verify:fixtures": "node verify-fixture-snapshot.js",
     "odds:enrich": "node enrich-odds-api.js",
+    "odds:sportybet": "node enrich-sportybet-odds.js",
     "test:odds": "node tests/odds-api-integration.test.js",
+    "test:sportybet": "node tests/sportybet-collect.test.js",
     "quality:odds": "npm run test:odds",
     "audit:odds-engines": "node audit-odds-engines-v251.js",
     "build:public": "node build-public-data.js",

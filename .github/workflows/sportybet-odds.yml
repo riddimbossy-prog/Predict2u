@@ -1,0 +1,45 @@
+name: Predict2U SportyBet Odds
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "19 */3 * * *"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: predict2u-sportybet-odds
+  cancel-in-progress: false
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+      - name: Collect SportyBet markets and odds
+        env:
+          SPORTYBET_COUNTRY: "gh"
+          SPORTYBET_TIMELINE: "192"
+          APP_TIMEZONE: "Africa/Accra"
+        run: node enrich-sportybet-odds.js
+      - name: Commit SportyBet overlay
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name "Predict2U SportyBet Bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add -f -- sportybet-odds.js sportybet-odds-coverage.json
+          if git diff --cached --quiet; then
+            echo "SportyBet overlay already matches the repository."
+            exit 0
+          fi
+          git commit -m "Refresh SportyBet markets and odds overlay"
+          git pull --rebase -X theirs origin "${GITHUB_REF_NAME}"
+          git push origin "HEAD:${GITHUB_REF_NAME}"

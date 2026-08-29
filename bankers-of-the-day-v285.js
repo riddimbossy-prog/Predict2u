@@ -1,9 +1,9 @@
-/* Predict2U v285 — Safest vs Value bankers of the day. */
+/* Predict2U v286 — Safest vs Value bankers of the day (SportyBet prices). */
 (function(){
   'use strict';
   const Engine=window.P2UMarketIntelligenceV277;
   const $=id=>document.getElementById(id);
-  const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&','<':'<','>':'>','"':'"',"'":'&#39;'}[c]));
+  const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
   const num=v=>v===null||v===undefined||v===''||!Number.isFinite(Number(v))?null:Number(v);
   const fmt=v=>{const n=num(v);return n===null?'—':n.toFixed(2);};
   const implied=odds=>odds>1?1/odds:null;
@@ -74,7 +74,14 @@
     return null;
   }
 
+  function hasSporty(m){
+    return !!(m&&((m.oddsSources&&m.oddsSources.sportybet)||(m.oddsMeta&&m.oddsMeta.provider==='sportybet')||m.sportyEventId));
+  }
+
   function resolveOdds(m,key){
+    const sporty=m&&m.oddsSources&&m.oddsSources.sportybet;
+    const sportyHit=pickOdds(sporty,ALIAS[key]||[key]);
+    if(sportyHit!==null)return sportyHit;
     const bag=m&&m.odds||{};
     const direct=pickOdds(bag,ALIAS[key]||[key]);
     if(direct!==null)return direct;
@@ -86,6 +93,7 @@
   }
 
   function hasBook(m){
+    if(hasSporty(m))return true;
     const bag=m&&m.odds;
     if(!bag||typeof bag!=='object')return false;
     return Object.keys(bag).some(k=>num(bag[k])>1);
@@ -168,11 +176,11 @@
   }
 
   function explain(row){
-    if(row.why&&!/Price is still loading/i.test(row.why))return row.why;
+    if(row.why&&!/Price is still loading/i.test(row.why)&&!/Board price/i.test(row.why))return row.why;
     const bits=(row.reasons||[]).filter(Boolean);
     const price=row.odds;
     const market=sportyLabel(row);
-    const priceBit=price?` Board price ${fmt(price)}.`:'';
+    const priceBit=price?` SportyBet ${fmt(price)}.`:'';
     const m=row.match||{};
     if(/1X/.test(market))return `${m.home} are hard to beat at home on the current split. ${bits[0]||''} ${bits[1]||''}${priceBit} That is a safest-style Double Chance, not a straight win.`.replace(/\s+/g,' ').trim();
     if(/X2/.test(market))return `${m.away} travel well enough that laying the home win makes sense. ${bits.join(' ')}${priceBit}`.replace(/\s+/g,' ').trim();
@@ -213,9 +221,10 @@
 
   function rank(row){
     const booked=row.odds?18:0;
+    const sporty=hasSporty(row.match)?12:0;
     const league=leagueWeight(row.match&&row.match.league);
     const edge=(row.edge||0)*24;
-    return row.score+booked+league+edge;
+    return row.score+booked+sporty+league+edge;
   }
 
   function build(){
@@ -259,7 +268,7 @@
 
   function card(row,idx){
     const m=row.match;
-    const priceLabel=row.odds?(row.booked?'BOARD':'GUIDE'):'TBD';
+    const priceLabel=row.odds?(hasSporty(m)?'SPORTYBET':row.booked?'BOARD':'GUIDE'):'TBD';
     return `<article class="p2u-bankers-card is-${row.lane}">
       <div class="p2u-bankers-card-top">
         <div>
@@ -300,7 +309,9 @@
   function render(){
     const {safe,value,pool,priced}=build();
     fillLeagues((Array.isArray(window.MATCHES)?window.MATCHES:[]).filter(unresolved).filter(windowOk));
-    if($('bankers-meta'))$('bankers-meta').textContent=`${pool} upcoming fixtures · ${priced} with board odds · ${safe.length} safest · ${value.length} value`;
+    const merge=window.P2U_SPORTYBET_MERGE;
+    const sportyBit=merge?` · ${merge.matched} matched to SportyBet`:'';
+    if($('bankers-meta'))$('bankers-meta').textContent=`${pool} upcoming fixtures · ${priced} with SportyBet odds · ${safe.length} safest · ${value.length} value${sportyBit}`;
     if($('safe-acca'))$('safe-acca').textContent=acca(safe);
     if($('value-acca'))$('value-acca').textContent=acca(value);
     if($('safe-list'))$('safe-list').innerHTML=safe.length?safe.map((row,i)=>card(row,i)).join(''):'<div class="p2u-bankers-empty">No safest banker cleared the short-odds gate for this window.</div>';
@@ -332,6 +343,8 @@
       $('bankers-window').addEventListener('change',e=>{state.window=e.target.value;render();});
     }
     if($('bankers-league'))$('bankers-league').addEventListener('change',e=>{state.league=e.target.value;render();});
+    window.addEventListener('p2u:sportybet-merged',render);
+    if(window.P2USportyBetMerge&&typeof window.P2USportyBetMerge.apply==='function')window.P2USportyBetMerge.apply();
     render();
   }
   if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',init);else init();
