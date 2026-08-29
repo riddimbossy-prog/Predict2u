@@ -82,7 +82,8 @@
     {href:'all-engines.html',label:'Engines',icon:'engines'}
   ];
   const moreLinks=[
-    {href:'board.html',label:'Today',icon:'picks'},
+    {href:'news.html',label:'News',icon:'news'},
+    {href:'board.html',label:'Board',icon:'picks'},
     {href:'proof.html',label:'Proof',icon:'proof'},
     {href:'engines.html',label:'Full Board',icon:'fullboard'},
     {href:'scorecards.html',label:'Scorecards',icon:'score'},
@@ -92,8 +93,9 @@
     {href:'account.html',label:'Account',icon:'account'},
     {href:'index.html?tour=1',label:'Replay walkthrough',icon:'overview'}
   ];
-  const isActive=item=>{if(item.href==='index.html')return active==='index.html'||active==='team-rankings.html'||active==='';return active===item.href;};
-  const moreActive=moreLinks.some(isActive);
+  const isActive=item=>{if(item.href==='index.html')return active==='index.html'||active==='team-rankings.html'||active==='';return active===item.href.split('?')[0];};
+  const primaryHrefs=new Set([...desktopLinks,...mobileLinks].map(item=>item.href));
+  const moreActive=moreLinks.some(item=>isActive(item)&&!primaryHrefs.has(item.href));
 
   const nav=document.createElement('nav');
   nav.className='p2u-v245-nav-wrap';
@@ -125,7 +127,7 @@
   backdrop.id='p2u-v245-more-panel';
   backdrop.setAttribute('aria-hidden','true');
   backdrop.innerHTML=`<section class="p2u-v245-more-panel" role="dialog" aria-modal="true" aria-label="More navigation">
-    <div class="p2u-v245-more-head"><div><strong>More</strong><small>Today, records and account tools</small></div><button type="button" class="p2u-v245-more-close" aria-label="Close">×</button></div>
+    <div class="p2u-v245-more-head"><div><strong>More</strong><small>News, records and account tools</small></div><button type="button" class="p2u-v245-more-close" aria-label="Close">×</button></div>
     <div class="p2u-v245-more-grid">${moreLinks.map(item=>`<a href="${item.href}" class="${isActive(item)?'is-active':''}">${svg(item.icon)}<span>${item.label}</span></a>`).join('')}</div>
   </section>`;
   document.body.appendChild(backdrop);
