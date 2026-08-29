@@ -72,6 +72,7 @@
 
   const desktopLinks=[
     {href:'index.html',label:'Home',icon:'rankings'},
+    {href:'bankers.html',label:'Bankers',icon:'bankers'},
     {href:'news.html',label:'News',icon:'news'},
     {href:'community.html',label:'Community',icon:'community'},
     {href:'all-engines.html',label:'Engines',icon:'engines'},
@@ -79,11 +80,12 @@
   ];
   const mobileLinks=[
     {href:'index.html',label:'Home',icon:'rankings'},
+    {href:'bankers.html',label:'Bankers',icon:'bankers'},
     {href:'news.html',label:'News',icon:'news'},
-    {href:'community.html',label:'Community',icon:'community'},
-    {href:'all-engines.html',label:'Engines',icon:'engines'}
+    {href:'community.html',label:'Community',icon:'community'}
   ];
   const moreLinks=[
+    {href:'all-engines.html',label:'Engines',icon:'engines'},
     {href:'board.html',label:'Board',icon:'picks'},
     {href:'proof.html',label:'Proof',icon:'proof'},
     {href:'engines.html',label:'Full Board',icon:'fullboard'},
