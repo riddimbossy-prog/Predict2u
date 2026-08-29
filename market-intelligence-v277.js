@@ -4,7 +4,7 @@
   const Engine=window.P2UMarketIntelligenceV277;
   if(!Engine)return;
   const $=id=>document.getElementById(id);
-  const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({"&":"&","<":"<",">":">",'"':'"',"'":'&#39;'}[c]));
+  const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':'&quot;',"'":'&#39;'}[c]));
   const num=v=>v===null||v===undefined||v===''||!Number.isFinite(Number(v))?null:Number(v);
   const fmt=v=>{const n=num(v);return n===null?'—':n.toFixed(2);};
   const metricValue=(label,v)=>{
@@ -88,12 +88,18 @@
 
   function gradeBadge(score){const elite=score>=Engine.ELITE;return `<span class="p2u-market-grade ${elite?'is-elite':'is-strong'}"><small>${elite?'ELITE EDGE':'STRONG EDGE'}</small><b>${Math.round(score)}</b></span>`;}
 
+  function metricCards(metrics){
+    return `<div class="p2u-market-metrics">${(metrics||[]).slice(0,3).map(([label,value])=>`<span><small>${esc(label)}</small><b>${esc(metricValue(label,value))}</b></span>`).join('')}</div>`;
+  }
+
   function edgeCard(row,key){
     const m=row.match,price=row.odds;
     return `<article class="p2u-market-card is-edge" data-market-fixture="${esc(key)}">
       <div class="p2u-market-card-top"><div><span>${esc(m.league||'Football')}</span><small>${esc(Engine.dateOf(m))}${displayTime(m)?` · ${esc(displayTime(m))}`:''}</small></div>${gradeBadge(row.score)}</div>
       <div class="p2u-market-match"><strong>${esc(m.home)}</strong><i>vs</i><strong>${esc(m.away)}</strong></div>
       <div class="p2u-market-pick"><span>NEXT MATCH MARKET</span><h3>${esc(row.market)}</h3><div><b>Odds ${price?fmt(price):'—'}</b><b>${esc(groupLabels[row.group]||row.group)}</b></div></div>
+      ${metricCards(row.metrics)}
+      <ul class="p2u-market-reasons">${(row.reasons||[]).slice(0,3).map(x=>`<li>${esc(x)}</li>`).join('')}</ul>
       <div class="p2u-market-actions"><button type="button" data-market-slip="${esc(key)}">+ Add to Slip</button></div>
     </article>`;
   }
@@ -104,6 +110,8 @@
       <div class="p2u-market-card-top"><div><span>${esc(p.league)}</span><small>${p.side==='home'?'HOME SPLIT':'AWAY SPLIT'} · ${p.games} matches</small></div>${gradeBadge(row.score)}</div>
       <div class="p2u-market-season-team"><h3>${esc(p.team)}</h3></div>
       <div class="p2u-market-pick"><span>SEASON MARKET POWER</span><h3>${esc(row.market)}</h3><div><b>Odds ${price?fmt(price):'—'}</b><b>${esc(groupLabels[row.group]||row.group)}</b></div></div>
+      ${metricCards(row.metrics)}
+      <ul class="p2u-market-reasons">${(row.reasons||[]).slice(0,2).map(x=>`<li>${esc(x)}</li>`).join('')}</ul>
     </article>`;
   }
 
