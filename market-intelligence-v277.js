@@ -4,7 +4,7 @@
   const Engine=window.P2UMarketIntelligenceV277;
   if(!Engine)return;
   const $=id=>document.getElementById(id);
-  const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':'&quot;',"'":'&#39;'}[c]));
+  const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({"&":"&","<":"<",">":">",'"':'"',"'":'&#39;'}[c]));
   const num=v=>v===null||v===undefined||v===''||!Number.isFinite(Number(v))?null:Number(v);
   const fmt=v=>{const n=num(v);return n===null?'—':n.toFixed(2);};
   const metricValue=(label,v)=>{
@@ -17,7 +17,7 @@
   const preKickoff=m=>{const t=Date.parse(m&&m.kickoff||'');return !Number.isFinite(t)||t>Date.now()+10*60000;};
   const allMatches=()=>Array.isArray(window.MATCHES)?window.MATCHES:[];
 
-  const state={mode:new URLSearchParams(location.search).get('intelligence')==='markets'?'markets':'teams',group:'best',view:new URLSearchParams(location.search).get('view')==='season'?'season':'edge'};
+  const params=new URLSearchParams(location.search);const state={mode:params.get('intelligence')==='teams'?'teams':'markets',group:params.get('market')&&['best','result','double','goals','btts','firsthalf'].includes(params.get('market'))?params.get('market'):'double',view:params.get('view')==='season'?'season':'edge'};
   const groupLabels={best:'Best',result:'Result',double:'Double Chance',goals:'Goals',btts:'GG / NG',firsthalf:'1st Half'};
   let edgeRegistry=new Map();
 
@@ -52,7 +52,7 @@
     if(categoryCluster)toolbar.insertBefore(marketCluster,categoryCluster.nextSibling);else toolbar.appendChild(marketCluster);
 
     const note=document.createElement('div');note.className='p2u-market-rule-strip';note.id='p2u-market-rule-strip';note.hidden=true;
-    note.innerHTML='<span><b>82+</b> Strong Edge</span><span><b>90+</b> Elite Edge</span><span>Home/away split agreement required</span><span>No forced markets</span>';
+    note.innerHTML='<span><b>82+</b> Strong Edge</span><span><b>90+</b> Elite Edge</span>';
     const controls=document.querySelector('.p2u-team-rank-controls');if(controls)controls.appendChild(note);
 
     document.querySelectorAll('[data-intelligence]').forEach(b=>b.addEventListener('click',()=>setMode(b.dataset.intelligence)));
@@ -86,11 +86,7 @@
     return d.toLocaleTimeString([],{hour:'2-digit',minute:'2-digit',hour12:false});
   }
 
-  function gradeBadge(score){const elite=score>=Engine.ELITE;return `<span class="p2u-market-grade ${elite?'is-elite':'is-strong'}"><small>${elite?'ELITE EDGE':'STRONG EDGE'}</small><b>${Math.round(score)}</b><em>/100</em></span>`;}
-
-  function metricCards(metrics){
-    return `<div class="p2u-market-metrics">${(metrics||[]).slice(0,3).map(([label,value])=>`<span><small>${esc(label)}</small><b>${esc(metricValue(label,value))}</b></span>`).join('')}</div>`;
-  }
+  function gradeBadge(score){const elite=score>=Engine.ELITE;return `<span class="p2u-market-grade ${elite?'is-elite':'is-strong'}"><small>${elite?'ELITE EDGE':'STRONG EDGE'}</small><b>${Math.round(score)}</b></span>`;}
 
   function edgeCard(row,key){
     const m=row.match,price=row.odds;
@@ -98,8 +94,6 @@
       <div class="p2u-market-card-top"><div><span>${esc(m.league||'Football')}</span><small>${esc(Engine.dateOf(m))}${displayTime(m)?` · ${esc(displayTime(m))}`:''}</small></div>${gradeBadge(row.score)}</div>
       <div class="p2u-market-match"><strong>${esc(m.home)}</strong><i>vs</i><strong>${esc(m.away)}</strong></div>
       <div class="p2u-market-pick"><span>NEXT MATCH MARKET</span><h3>${esc(row.market)}</h3><div><b>Odds ${price?fmt(price):'—'}</b><b>${esc(groupLabels[row.group]||row.group)}</b></div></div>
-      ${metricCards(row.metrics)}
-      <ul class="p2u-market-reasons">${(row.reasons||[]).slice(0,3).map(x=>`<li>${esc(x)}</li>`).join('')}</ul>
       <div class="p2u-market-actions"><button type="button" data-market-slip="${esc(key)}">+ Add to Slip</button></div>
     </article>`;
   }
@@ -108,10 +102,8 @@
     const p=row.profile,price=Engine.oddsValue(p.fixture,row.oddsKey);
     return `<article class="p2u-market-card is-season">
       <div class="p2u-market-card-top"><div><span>${esc(p.league)}</span><small>${p.side==='home'?'HOME SPLIT':'AWAY SPLIT'} · ${p.games} matches</small></div>${gradeBadge(row.score)}</div>
-      <div class="p2u-market-season-team"><h3>${esc(p.team)}</h3><span>${p.side==='home'?'Home':'Away'} market profile</span></div>
-      <div class="p2u-market-pick"><span>SEASON MARKET POWER</span><h3>${esc(row.market)}</h3><div><b>Next odds ${price?fmt(price):'—'}</b><b>${esc(groupLabels[row.group]||row.group)}</b></div></div>
-      ${metricCards(row.metrics)}
-      <ul class="p2u-market-reasons">${(row.reasons||[]).slice(0,2).map(x=>`<li>${esc(x)}</li>`).join('')}<li>Next opponent: ${esc(p.opponent||'—')}</li></ul>
+      <div class="p2u-market-season-team"><h3>${esc(p.team)}</h3></div>
+      <div class="p2u-market-pick"><span>SEASON MARKET POWER</span><h3>${esc(row.market)}</h3><div><b>Odds ${price?fmt(price):'—'}</b><b>${esc(groupLabels[row.group]||row.group)}</b></div></div>
     </article>`;
   }
 
@@ -133,19 +125,16 @@
     let rows=state.view==='edge'?Engine.buildEdgeRows(pool,state.group):Engine.buildSeasonRows(pool,state.group);
     rows=filteredRows(rows,state.view);
     const title=state.view==='edge'?`${groupLabels[state.group]} Market Edges`:`${groupLabels[state.group]} Season Market Power`;
-    const copy=state.view==='edge'
-      ?'Ranks the strongest prediction market for each upcoming fixture only when the home split and away split agree. Extreme odds disagreement can veto a candidate.'
-      :'Ranks each team’s strongest home/away venue market tendency from reliable split samples. This is historical market power, not an opponent-specific pick.';
     if($('team-rank-title'))$('team-rank-title').textContent=title;
-    if($('team-rank-copy'))$('team-rank-copy').textContent=copy;
-    if($('team-rank-count'))$('team-rank-count').textContent=`${rows.length} qualified · ${Engine.QUALIFY}+ only`;
+    if($('team-rank-copy'))$('team-rank-copy').textContent='';
+    if($('team-rank-count'))$('team-rank-count').textContent=`${rows.length} qualified`;
     edgeRegistry=new Map();
     if(state.view==='edge')rows.forEach((row,i)=>edgeRegistry.set(String(i),row));
     if($('team-rank-grid')){
       $('team-rank-grid').classList.add('p2u-market-intelligence-grid');
       $('team-rank-grid').innerHTML=rows.length
         ?rows.slice(0,100).map((r,i)=>state.view==='edge'?edgeCard(r,String(i)):seasonCard(r)).join('')
-        :'<div class="p2u-team-rank-empty">No prediction market reaches the 82/100 qualification gate for this view. Predict2U will not force a market.</div>';
+        :'<div class="p2u-team-rank-empty">No edges for this filter.</div>';
     }
     document.querySelectorAll('[data-market-slip]').forEach(button=>button.onclick=()=>addToSlip(button.dataset.marketSlip));
     syncControls();
