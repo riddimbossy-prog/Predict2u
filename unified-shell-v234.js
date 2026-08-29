@@ -82,7 +82,6 @@
     {href:'all-engines.html',label:'Engines',icon:'engines'}
   ];
   const moreLinks=[
-    {href:'news.html',label:'News',icon:'news'},
     {href:'board.html',label:'Board',icon:'picks'},
     {href:'proof.html',label:'Proof',icon:'proof'},
     {href:'engines.html',label:'Full Board',icon:'fullboard'},
@@ -127,7 +126,7 @@
   backdrop.id='p2u-v245-more-panel';
   backdrop.setAttribute('aria-hidden','true');
   backdrop.innerHTML=`<section class="p2u-v245-more-panel" role="dialog" aria-modal="true" aria-label="More navigation">
-    <div class="p2u-v245-more-head"><div><strong>More</strong><small>News, records and account tools</small></div><button type="button" class="p2u-v245-more-close" aria-label="Close">×</button></div>
+    <div class="p2u-v245-more-head"><div><strong>More</strong><small>Board, records and account tools</small></div><button type="button" class="p2u-v245-more-close" aria-label="Close">×</button></div>
     <div class="p2u-v245-more-grid">${moreLinks.map(item=>`<a href="${item.href}" class="${isActive(item)?'is-active':''}">${svg(item.icon)}<span>${item.label}</span></a>`).join('')}</div>
   </section>`;
   document.body.appendChild(backdrop);
