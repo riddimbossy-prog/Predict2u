@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
   <title>Predict2U • Bankers of the Day</title>
-  <meta name="description" content="Safest bankers and value bankers for today, fed live from Stats2Pitch.">
+  <meta name="description" content="Safest bankers and value bankers for today.">
   <meta name="theme-color" content="#07111d">
   <link rel="manifest" href="manifest.webmanifest">
   <link rel="icon" href="favicon-32x32.png">
@@ -25,8 +25,8 @@
   <section class="p2u-bankers-hero">
     <span class="p2u-bankers-kicker">PREDICT2U BANKERS</span>
     <h1>Bankers of the Day</h1>
-    <p>Fed live from Stats2Pitch banker-totals-v1. Safest is favourite-win, favourite 2+ and Over 1.5. Value is Over 2.5 and Draw or Over 2.5.</p>
-    <div class="p2u-bankers-meta" id="bankers-meta">Reading Stats2Pitch bankers…</div>
+    <p>Two shortlists from the same board. Safest is favourite-win, favourite 2+ and Over 1.5. Value is Over 2.5 and Draw or Over 2.5.</p>
+    <div class="p2u-bankers-meta" id="bankers-meta">Reading today’s bankers…</div>
   </section>
 
   <section class="p2u-bankers-toolbar">
@@ -42,7 +42,7 @@
       <span>League</span>
       <select id="bankers-league"><option value="all">All leagues</option></select>
     </label>
-    <p class="p2u-bankers-note">This page no longer picks its own bankers. It publishes the same Stats2Pitch board as stats2pitch.com/daily-bankers. Combined odds use those SportyBet prices.</p>
+    <p class="p2u-bankers-note">Markets and prices come from SportyBet: 1 / X / 2, Over/Under and team totals. Combined odds use those SportyBet prices.</p>
   </section>
 
   <section class="p2u-bankers-columns">
@@ -55,10 +55,10 @@
           </div>
           <button type="button" class="p2u-bankers-acca" data-banker-acca="safe">Add all to slip</button>
         </div>
-        <p>Favourite to win, favourite 2+, and Over 1.5 from the Stats2Pitch streak board.</p>
+        <p>Favourite to win, favourite 2+, and Over 1.5.</p>
         <strong id="safe-acca">Combined —</strong>
       </header>
-      <div id="safe-list" class="p2u-bankers-list"><div class="p2u-bankers-empty">Reading Stats2Pitch safest bankers…</div></div>
+      <div id="safe-list" class="p2u-bankers-list"><div class="p2u-bankers-empty">Scanning safest lines…</div></div>
     </article>
     <article class="p2u-bankers-col is-value">
       <header>
@@ -69,14 +69,14 @@
           </div>
           <button type="button" class="p2u-bankers-acca" data-banker-acca="value">Add all to slip</button>
         </div>
-        <p>Over 2.5 and Draw or Over 2.5 from the Stats2Pitch value routes.</p>
+        <p>Over 2.5 and Draw or Over 2.5.</p>
         <strong id="value-acca">Combined —</strong>
       </header>
-      <div id="value-list" class="p2u-bankers-list"><div class="p2u-bankers-empty">Reading Stats2Pitch value bankers…</div></div>
+      <div id="value-list" class="p2u-bankers-list"><div class="p2u-bankers-empty">Scanning value lines…</div></div>
     </article>
   </section>
 </main>
 <script src="slip.js"></script>
-<script src="stats2pitch-bankers-feed-v287.js"></script>
+<script src="p2u-bankers-feed-v287.js"></script>
 </body>
 </html>
