@@ -46,13 +46,13 @@
   if(!document.querySelector('link[data-p2u-s2p-ad-v288]')){
     const adCss=document.createElement('link');
     adCss.rel='stylesheet';
-    adCss.href='p2u-s2p-ad-v288.css';
+    adCss.href='p2u-s2p-ad-v288.css?v=289';
     adCss.dataset.p2uS2pAdV288='true';
     document.head.appendChild(adCss);
   }
   if(!document.querySelector('script[data-p2u-s2p-ad-v288]')){
     const adJs=document.createElement('script');
-    adJs.src='p2u-s2p-ad-v288.js';
+    adJs.src='p2u-s2p-ad-v288.js?v=289';
     adJs.async=true;
     adJs.dataset.p2uS2pAdV288='true';
     document.head.appendChild(adJs);
