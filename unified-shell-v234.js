@@ -43,6 +43,20 @@
     scale.dataset.p2uUiScaleV282='true';
     document.head.appendChild(scale);
   }
+  if(!document.querySelector('link[data-p2u-s2p-ad-v288]')){
+    const adCss=document.createElement('link');
+    adCss.rel='stylesheet';
+    adCss.href='p2u-s2p-ad-v288.css';
+    adCss.dataset.p2uS2pAdV288='true';
+    document.head.appendChild(adCss);
+  }
+  if(!document.querySelector('script[data-p2u-s2p-ad-v288]')){
+    const adJs=document.createElement('script');
+    adJs.src='p2u-s2p-ad-v288.js';
+    adJs.async=true;
+    adJs.dataset.p2uS2pAdV288='true';
+    document.head.appendChild(adJs);
+  }
   if(document.querySelector('.p2u-v245-nav-wrap')) return;
 
   document.querySelectorAll('.p2u-v227-nav-wrap,.p2u-v227-dock,.p2u-v227-more-backdrop,.p2u-phase2-nav-wrap,.p2u-phase2-dock,.p2u-mobile-app-nav').forEach(node=>node.remove());
