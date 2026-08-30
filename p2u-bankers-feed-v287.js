@@ -2,7 +2,7 @@
 (function(){
   'use strict';
   const $=id=>document.getElementById(id);
-  const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+  const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&','<':'<','>':'>','"':'"',"'":'&#39;'}[c]));
   const num=v=>v===null||v===undefined||v===''||!Number.isFinite(Number(v))?null:Number(v);
   const fmt=v=>{const n=num(v);return n===null?'—':n.toFixed(2);};
   const FEED_URL='https://olfoahrqvwrpfesfgjqk.supabase.co/functions/v1/stats2pitch-bankers';
@@ -70,10 +70,6 @@
     if(/under 3\.5/.test(sel))return 'under35';
     return 'home';
   }
-  function whyText(pick){
-    const bits=Array.isArray(pick.reasons)?pick.reasons:Array.isArray(pick.why)?pick.why:[];
-    return bits.join(' ')||String(pick.whyText||pick.why||'Published banker.');
-  }
   function asMatch(pick){
     const book=pick.oddsBook||{};
     return {
@@ -107,7 +103,7 @@
       market:label,
       code:marketCode(pick),
       oddsKey:oddsKey(pick),
-      why:whyText(pick),
+      why:'',
       score:lane==='safe'?94:88,
       booked:true,
       rule:pick.rule||''
@@ -178,7 +174,6 @@
         <span>${row.code?esc(row.code)+' · ':''}${row.lane==='safe'?'SAFEST MARKET':'VALUE MARKET'}</span>
         <strong>${esc(row.label)}</strong>
       </div>
-      <p class="p2u-bankers-why">${esc(row.why)}</p>
       <div class="p2u-bankers-actions"><button type="button" data-banker-slip="${row.lane}-${idx}">+ Add to Slip</button></div>
     </article>`;
   }
