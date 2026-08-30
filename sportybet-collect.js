@@ -2,7 +2,7 @@
 'use strict';
 
 /**
- * Predict2U SportyBet collector — same factsCenter structure as Stats2Pitch.
+ * Predict2U SportyBet collector.
  * Public JSON: /api/{country}/factsCenter/pcUpcomingEvents
  * Markets: 1X2, Double Chance, DNB, Over/Under, Home/Away O/U, GG/NG.
  */
