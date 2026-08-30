@@ -1,7 +1,7 @@
-/* Predict2U v290 — cinematic Stats2Pitch promo */
+/* Predict2U v291 — Stats2Pitch ad template */
 (function(){
   'use strict';
-  const KEY='p2u-s2p-ad-v290';
+  const KEY='p2u-s2p-ad-v291';
   const DEST='https://stats2pitch.com/daily-bankers.html';
   const FEED='https://olfoahrqvwrpfesfgjqk.supabase.co/functions/v1/stats2pitch-bankers';
   const FEED_KEY='sb_publishable_xle6S4IZ_djboDdfGfG4Rg_HXPYENZY';
@@ -12,13 +12,18 @@
   const fmt=v=>{const n=Number(v);return Number.isFinite(n)?n.toFixed(2):'—';};
   const today=()=>new Intl.DateTimeFormat('en-CA',{timeZone:'Africa/Accra',year:'numeric',month:'2-digit',day:'2-digit'}).format(new Date());
   function addDays(stamp,n){const d=new Date(stamp+'T12:00:00Z');d.setUTCDate(d.getUTCDate()+n);return d.toISOString().slice(0,10);}
-  const fallback=[
-    {home:'Free bankers',away:'live board',pick:'Open the daily board',odds:null},
-    {home:'No signup',away:'no paywall',pick:'Same SportyBet prices',odds:null}
-  ];
+  const fallback={home:'Whitecaps FC 2',away:'Sporting Kansas City II',pick:'Over 2.5',odds:1.33};
 
-  function rowHtml(picks){
-    return picks.map(p=>`<div class="p2u-s2p-ad-row"><div><small>${esc(p.home)} vs ${esc(p.away)}</small><strong>${esc(p.pick)}</strong></div><em>${p.odds?fmt(p.odds):'FREE'}</em></div>`).join('');
+  function pickHtml(p){
+    const match=((p.home||'')+' vs '+(p.away||'')).trim();
+    return `<div class="p2u-s2p-ad-match">
+      <span class="p2u-s2p-ad-ball" aria-hidden="true"></span>
+      <strong>${esc(match)}</strong>
+    </div>
+    <div class="p2u-s2p-ad-split">
+      <div><small>Pick</small><b>${esc(p.pick||'Open board')}</b></div>
+      <div><small>Odds</small><em>${p.odds?fmt(p.odds):'FREE'}</em></div>
+    </div>`;
   }
 
   function shards(card){
@@ -31,17 +36,17 @@
         const w=r.width/cols, h=r.height/rows;
         Object.assign(s.style,{
           width:w+'px',height:h+'px',left:(r.left+x*w)+'px',top:(r.top+y*h)+'px',
-          background: y===0 ? '#163325' : '#0b1210',
-          outline:'1px solid rgba(212,175,55,.28)'
+          background:y<2?'#102418':'#070b10',
+          outline:'1px solid rgba(212,175,55,.22)'
         });
-        const dx=(x-2)*180+(Math.random()*160-80);
-        const dy=(y-1.2)*230-90-Math.random()*280;
+        const dx=(x-2)*190+(Math.random()*150-75);
+        const dy=(y-1.2)*240-80-Math.random()*260;
         const rot=(Math.random()*980-490);
         document.body.appendChild(s);
         s.animate([
-          {transform:'translate(0,0) rotate(0) scale(1)',opacity:1,filter:'brightness(1.9)'},
+          {transform:'translate(0,0) rotate(0) scale(1)',opacity:1,filter:'brightness(1.8)'},
           {transform:`translate(${dx}px,${dy}px) rotate(${rot}deg) scale(${.12+Math.random()*.28})`,opacity:0,filter:'brightness(.5)'}
-        ],{duration:680+Math.random()*280,easing:'cubic-bezier(.12,.82,.2,1)',fill:'forwards'});
+        ],{duration:680+Math.random()*260,easing:'cubic-bezier(.12,.82,.2,1)',fill:'forwards'});
         setTimeout(()=>s.remove(),1000);
       }
     }
@@ -52,7 +57,7 @@
       Object.assign(p.style,{
         width:size+'px',height:size+'px',borderRadius:'50%',
         left:(r.left+r.width/2)+'px',top:(r.top+r.height/2)+'px',
-        background:i%2?'#d4af37':'#39e57a',boxShadow:'0 0 14px currentColor'
+        background:i%2?'#d4af37':'#22c55e',boxShadow:'0 0 14px currentColor'
       });
       const ang=Math.random()*Math.PI*2, dist=160+Math.random()*280;
       document.body.appendChild(p);
@@ -64,24 +69,32 @@
     }
   }
 
-  function mount(picks){
+  function mount(pick){
     if(document.querySelector('.p2u-s2p-ad-backdrop'))return;
     const wrap=document.createElement('div');
     wrap.className='p2u-s2p-ad-backdrop is-on';
     wrap.innerHTML=`<span class="p2u-s2p-ad-shock"></span>
       <article class="p2u-s2p-ad-card" role="dialog" aria-modal="true" aria-label="Stats2Pitch free picks">
-      <button type="button" class="p2u-s2p-ad-close" aria-label="Close">×</button>
-      <div class="p2u-s2p-ad-art" aria-hidden="true">
-        <div class="p2u-s2p-ad-art-copy"><b>stats2pitch</b><span>Free Picks</span></div>
-      </div>
-      <div class="p2u-s2p-ad-body">
-        <span class="p2u-s2p-ad-kicker">Check Stats2Pitch.com</span>
-        <p class="p2u-s2p-ad-copy">Free bankers. Same board. No signup.</p>
-        <div class="p2u-s2p-ad-rows">${rowHtml(picks)}</div>
+        <button type="button" class="p2u-s2p-ad-close" aria-label="Close">×</button>
+        <div class="p2u-s2p-ad-mark" aria-hidden="true">
+          <svg viewBox="0 0 64 48" fill="none" stroke="#fff" stroke-width="2.2">
+            <rect x="8" y="6" width="48" height="36"/>
+            <line x1="32" y1="6" x2="32" y2="42"/>
+            <rect x="8" y="16" width="8" height="16"/>
+            <rect x="48" y="16" width="8" height="16"/>
+            <circle cx="32" cy="24" r="8"/>
+          </svg>
+          <b>2</b>
+        </div>
+        <h2>stats2pitch</h2>
+        <p class="p2u-s2p-ad-free">Free Picks</p>
+        <p class="p2u-s2p-ad-check"><i></i> Check stats2pitch.com</p>
+        <p class="p2u-s2p-ad-copy">Free bankers. <em>Same board.</em> No signup.</p>
+        <div class="p2u-s2p-ad-panel">${pickHtml(pick)}</div>
         <a class="p2u-s2p-ad-cta" href="${DEST}">See free bankers</a>
-        <div class="p2u-s2p-ad-foot"><span>18+</span><button type="button" data-s2p-go="1">Open board</button></div>
-      </div>
-    </article>`;
+        <button type="button" class="p2u-s2p-ad-open" data-s2p-go="1">Open board</button>
+        <span class="p2u-s2p-ad-age">18+</span>
+      </article>`;
     document.body.appendChild(wrap);
     document.body.classList.add('p2u-s2p-ad-lock');
 
@@ -110,12 +123,12 @@
     });
   }
 
-  function fill(picks){
-    const box=document.querySelector('.p2u-s2p-ad-rows');
-    if(box)box.innerHTML=rowHtml(picks);
+  function fill(pick){
+    const box=document.querySelector('.p2u-s2p-ad-panel');
+    if(box)box.innerHTML=pickHtml(pick);
   }
 
-  async function loadPicks(){
+  async function loadPick(){
     const ctrl=new AbortController();
     const timer=setTimeout(()=>ctrl.abort(),1800);
     try{
@@ -126,7 +139,8 @@
         const pack=[...(body&&body.safestBankers||[]),...(body&&body.valueBankers||[])].filter(p=>p&&p.home&&p.away);
         if(pack.length){
           clearTimeout(timer);
-          return pack.slice(0,2).map(p=>({home:p.home,away:p.away,pick:p.displaySelection||p.pick||p.selection,odds:p.odds}));
+          const p=pack[0];
+          return {home:p.home,away:p.away,pick:p.displaySelection||p.pick||p.selection,odds:p.odds};
         }
       }
     }catch{}
@@ -136,7 +150,7 @@
 
   function boot(){
     mount(fallback);
-    loadPicks().then(picks=>{if(picks&&picks!==fallback)fill(picks);});
+    loadPick().then(pick=>{if(pick)fill(pick);});
   }
   if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',boot);else boot();
 })();
