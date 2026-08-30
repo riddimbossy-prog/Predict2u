@@ -1,11 +1,14 @@
 /* Predict2U v282 — homepage as market edges, larger type */
-html{font-size:18px;}
+html{font-size:20px;}
+body,button,input,select,textarea{font-size:inherit;}
 .p2u-auto-learning p,
 .p2u-auto-learning small,
 .p2u-auto-picks-rules,
 .p2u-team-rank-hero p:empty{display:none!important;}
-.p2u-team-rank-hero h1{font-size:2.15rem;}
-.p2u-market-pick h3{font-size:1.15rem;}
-.p2u-v245-link span,.p2u-v245-dock span{font-size:15px;}
+.p2u-team-rank-hero h1{font-size:2.3rem;}
+.p2u-market-pick h3{font-size:1.28rem;}
+.p2u-v245-link span,.p2u-v245-dock span{font-size:17px;}
+.p2u-bankers-card h3,.p2u-bankers-card strong,.p2u-bankers-why,
+.p2u-team-rank-grid,.p2u-team-rank-copy,.p2u-team-rank-count{font-size:inherit;}
 #p2u-market-rule-strip span:nth-child(n+3),
 #team-auto-learning{display:none!important;}
