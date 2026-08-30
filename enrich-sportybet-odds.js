@@ -3,9 +3,9 @@
 
 /**
  * Predict2U SportyBet odds overlay.
- * Collects SportyBet markets the same way Stats2Pitch does, then writes a
- * compact browser feed (sportybet-odds.js). Matching onto MATCHES happens
- * client-side so we do not rewrite the 40MB+ current-data.js bundle.
+ * Collects SportyBet markets, then writes a compact browser feed
+ * (sportybet-odds.js). Matching onto MATCHES happens client-side so we
+ * do not rewrite the 40MB+ current-data.js bundle.
  */
 
 const fs = require('fs');
