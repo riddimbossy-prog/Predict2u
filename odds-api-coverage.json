@@ -1,13 +1,13 @@
 {
   "version": "v251",
-  "generatedAt": "2026-08-26T00:14:14.383Z",
+  "generatedAt": "2026-09-01T11:00:18.146Z",
   "provider": "The Odds API v4",
   "keyPresent": true,
   "regions": "uk",
   "sportsAvailable": 0,
   "soccerSportsAvailable": 0,
   "sportMappings": [],
-  "matchesConsidered": 3601,
+  "matchesConsidered": 0,
   "matchesMatched": 0,
   "matchesUpdated": 0,
   "fieldsFilled": 0,
@@ -17,23 +17,12 @@
   "bookmakerRows": 0,
   "unmatched": [],
   "unsupportedMarkets": [],
-  "requestErrors": [
-    {
-      "label": "sports",
-      "error": "API key is deactivated. This could be due to cancelation or a failed payment",
-      "statusCode": 401
-    },
-    {
-      "label": "fatal",
-      "error": "The Odds API sports list was unavailable."
-    }
-  ],
+  "requestErrors": [],
   "quota": {
     "remaining": null,
     "used": null,
     "last": null
   },
-  "skipped": false,
-  "skipReason": null,
-  "completedAt": "2026-08-26T00:14:15.365Z"
+  "skipped": true,
+  "skipReason": "No upcoming matches in the active window."
 }
