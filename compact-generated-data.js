@@ -146,6 +146,9 @@ function compactFile(file) {
   if (!parsed || !Array.isArray(parsed.value)) throw new Error("window.MATCHES is not an array");
 
   let matches = parsed.value;
+  if (!matches.length) {
+    console.warn("window.MATCHES is already empty — compact will not invent fixtures. Discovery must refill data.js.");
+  }
   const contexts = [];
   let removedGovernance = 0;
   for (const match of matches) {
@@ -161,6 +164,12 @@ function compactFile(file) {
 
   let retention = DEFAULT_RETENTION_DAYS;
   let { pruned, dropped, cutoffIso: iso } = pruneByDate(matches, retention);
+  if (parsed.value.length && !pruned.length) {
+    throw new Error(
+      "Compact refused to drop every match. Date pruning would have emptied the board " +
+      `(cutoff ${iso}). Keep at least the current API-plan window.`
+    );
+  }
   matches = pruned;
   let strippedFields = 0;
 

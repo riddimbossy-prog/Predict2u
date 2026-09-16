@@ -27,6 +27,7 @@ const consensusReport = require("./consensus-report.js");
 const contextReport = require("./context-report.js");
 const { buildTeamAdvanced } = require("./advanced-data");
 const { attachModelCalibration } = require("./model-calibration");
+const { parsePlanWindow, isPlanWindowError, dateInWindow } = require("./api-plan-window");
 const HERE = __dirname;
 
 
@@ -440,6 +441,11 @@ const FINISHED = new Set(["FT","AET","PEN"]);
             gotForThisDate = true;
           }
         } catch (e) {
+          if (isPlanWindowError(e.message)) {
+            const window = parsePlanWindow(e.message);
+            console.log(`${date}: skipped (API plan window${window ? ` ${window.from} to ${window.to}` : ""}).`);
+            break;
+          }
           if (e.message === "RATE_LIMIT") { console.log("RATE LIMIT — wait a minute and run again."); }
           else if (!firstError) firstError = e.message;
         }

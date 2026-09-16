@@ -16,6 +16,13 @@
 
 const fs = require("fs");
 const https = require("https");
+const {
+  flattenErrors,
+  parsePlanWindow,
+  isPlanWindowError,
+  dateInWindow,
+  orderDatesNearToday
+} = require("./api-plan-window.js");
 
 const API_KEY = String(process.env.API_FOOTBALL_KEY || process.env.API_KEY || "").trim();
 const DAYS_BACK = clampInt(process.env.DAYS_BACK, 0, 7, 0);
@@ -91,10 +98,7 @@ function requestOnce(path) {
 }
 
 function stringifyErrors(errors) {
-  if (!errors) return "";
-  if (typeof errors === "string") return errors;
-  try { return JSON.stringify(errors); }
-  catch (_) { return String(errors); }
+  return flattenErrors(errors);
 }
 
 function hasApiErrors(errors) {
@@ -177,7 +181,9 @@ async function apiRequest(path) {
     }
 
     if (hasApiErrors(errors)) {
-      throw new Error(`API error for ${path}: ${stringifyErrors(errors)}`);
+      const error = new Error(`API error for ${path}: ${stringifyErrors(errors)}`);
+      error.planWindow = parsePlanWindow(errors) || parsePlanWindow(error.message);
+      throw error;
     }
 
     return payload;
@@ -311,29 +317,60 @@ function preserveRow(row, requestedDate) {
   const previousFixtures = loadPreviousFixtures();
   console.log(`Fetching fixture snapshot: ${dates[0]} through ${dates[dates.length - 1]}`);
   console.log(`Rate guard: concurrency=${CONCURRENCY}, gap=${REQUEST_GAP_MS}ms, retries=${MAX_RETRIES}.`);
+  console.log("Out-of-plan dates (API-Football free window) are skipped instead of emptying the board.");
 
-  const perDay = await pool(dates, CONCURRENCY, async date => {
+  let planWindow = null;
+  const perDay = [];
+  for (const date of orderDatesNearToday(dates)) {
+    if (planWindow && !dateInWindow(date, planWindow.from, planWindow.to)) {
+      const fallbackRows = previousFixtures
+        .map(row => preserveRow(row, date))
+        .filter(Boolean);
+      if (fallbackRows.length) {
+        console.warn(`${date}: outside API plan window ${planWindow.from}–${planWindow.to}; keeping ${fallbackRows.length} previous fixture(s).`);
+        perDay.push({ date, rows: fallbackRows, source: "stale-fallback", error: "plan-window" });
+      } else {
+        console.warn(`${date}: skipped, outside API plan window ${planWindow.from}–${planWindow.to}.`);
+        perDay.push({ date, rows: [], source: "plan-skipped", error: "plan-window" });
+      }
+      continue;
+    }
+
     const endpoint = `/fixtures?date=${encodeURIComponent(date)}&timezone=UTC`;
     try {
       const payload = await apiRequest(endpoint);
       const response = Array.isArray(payload && payload.response) ? payload.response : [];
       const rows = response.map(item => normalize(item, date)).filter(Boolean);
       console.log(`${date}: ${rows.length} fixture(s) from API.`);
-      return { date, rows, source: "api", error: null };
+      perDay.push({ date, rows, source: "api", error: null });
     } catch (error) {
+      const window = error.planWindow || parsePlanWindow(error.message);
+      if (window) {
+        planWindow = window;
+        console.warn(`API plan window is ${window.from} to ${window.to}.`);
+      }
       const fallbackRows = previousFixtures
         .map(row => preserveRow(row, date))
         .filter(Boolean);
+      if (window && !dateInWindow(date, window.from, window.to) && !fallbackRows.length) {
+        console.warn(`${date}: skipped, outside API plan window.`);
+        perDay.push({ date, rows: [], source: "plan-skipped", error: error.message });
+        continue;
+      }
       console.warn(`${date}: API unavailable after retries: ${error.message}`);
       if (fallbackRows.length) {
         console.warn(`${date}: preserving ${fallbackRows.length} fixture(s) from the previous snapshot.`);
-        return { date, rows: fallbackRows, source: "stale-fallback", error: error.message };
+        perDay.push({ date, rows: fallbackRows, source: "stale-fallback", error: error.message });
+      } else if (window) {
+        perDay.push({ date, rows: [], source: "plan-skipped", error: error.message });
+      } else {
+        perDay.push({ date, rows: [], source: "unresolved", error: error.message });
       }
-      return { date, rows: [], source: "unresolved", error: error.message };
     }
-  });
+  }
 
   const unresolvedDates = perDay.filter(day => day.source === "unresolved").map(day => day.date);
+  const planSkippedDates = perDay.filter(day => day.source === "plan-skipped").map(day => day.date);
   if (unresolvedDates.length) {
     throw new Error(`Could not retrieve or preserve fixtures for: ${unresolvedDates.join(", ")}`);
   }
@@ -377,6 +414,8 @@ function preserveRow(row, requestedDate) {
     daysRequested: dates.length,
     requestGapMs: REQUEST_GAP_MS,
     staleFallbackDates,
+    planSkippedDates,
+    planWindow,
     unresolvedDates: [],
     dateCounts
   };
@@ -407,6 +446,9 @@ function preserveRow(row, requestedDate) {
   }, null, 2) + "\n", "utf8");
 
   console.log(`Published ${fixtures.length} fixture(s) to fixtures.js.`);
+  if (planSkippedDates.length) {
+    console.warn(`API plan skipped: ${planSkippedDates.join(", ")}.`);
+  }
   if (staleFallbackDates.length) {
     console.warn(`Stale fallback used for: ${staleFallbackDates.join(", ")}.`);
   }

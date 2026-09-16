@@ -15,6 +15,14 @@
 
 const fs = require("fs");
 const https = require("https");
+const {
+  flattenErrors,
+  parsePlanWindow,
+  isPlanWindowError,
+  dateInWindow,
+  clampDates,
+  orderDatesNearToday
+} = require("./api-plan-window.js");
 
 const API_KEY = String(process.env.API_FOOTBALL_KEY || process.env.API_KEY || "").trim();
 const DAYS_BACK = Math.max(0, Math.min(14, Number.parseInt(process.env.DAYS_BACK || "0", 10) || 0));
@@ -37,14 +45,6 @@ for (let offset = -DAYS_BACK; offset <= DAYS_FWD; offset += 1) {
   date.setUTCHours(12, 0, 0, 0);
   date.setUTCDate(date.getUTCDate() + offset);
   dates.push(isoDate(date));
-}
-
-function flattenErrors(value) {
-  if (!value) return "";
-  if (typeof value === "string") return value;
-  if (Array.isArray(value)) return value.map(flattenErrors).filter(Boolean).join("; ");
-  if (typeof value === "object") return Object.values(value).map(flattenErrors).filter(Boolean).join("; ");
-  return String(value);
 }
 
 function isRateLimitMessage(message) {
@@ -254,11 +254,19 @@ async function fetchDate(date) {
       if (result.statusCode < 200 || result.statusCode >= 300) {
         throw new Error(`HTTP ${result.statusCode}: ${String(result.body || "").slice(0, 300)}`);
       }
-      if (errorText) throw new Error(errorText);
+      if (errorText) {
+        if (isPlanWindowError(errorText)) {
+          const error = new Error(errorText);
+          error.planWindow = parsePlanWindow(errorText);
+          throw error;
+        }
+        throw new Error(errorText);
+      }
 
       return Array.isArray(payload && payload.response) ? payload.response : [];
     } catch (error) {
       lastError = error;
+      if (isPlanWindowError(error && error.message)) throw error;
       if (attempt >= MAX_RETRIES) break;
       const wait = Math.min(30000, 3000 * (attempt + 1));
       console.warn(`${date}: ${error.message}; retrying in ${Math.round(wait / 1000)}s (${attempt + 1}/${MAX_RETRIES}).`);
@@ -272,24 +280,50 @@ async function fetchDate(date) {
 (async () => {
   console.log(`Discovering every fixture across ${dates.length} day(s): ${dates[0]} to ${dates[dates.length - 1]}`);
   console.log(`Discovery policy: 1 request/date, ${REQUEST_GAP_MS}ms minimum gap, ${Math.round(RATE_LIMIT_WAIT_MS / 1000)}s rate-limit wait.`);
+  console.log("Dates are probed nearest-to-today first so a free-plan window is detected before out-of-range days fail the run.");
 
   const localByDate = buildLocalFallback();
   const perDate = [];
   const fallbackDates = [];
+  const skippedPlanDates = [];
   const apiDateCounts = {};
   const localFallbackCounts = {};
+  let planWindow = null;
+  const probeOrder = orderDatesNearToday(dates);
 
-  for (const date of dates) {
+  for (const date of probeOrder) {
     const localMap = localByDate.get(date) || new Map();
     let apiFixtures = [];
     let usedFallback = false;
-    try {
-      apiFixtures = await fetchDate(date);
-    } catch (error) {
-      if (!localMap.size) throw error;
-      usedFallback = true;
-      fallbackDates.push(date);
-      console.warn(`${date}: API discovery failed after retries; preserving ${localMap.size} fixture(s) from the published local feed. Reason: ${error.message}`);
+    let skippedPlan = false;
+
+    if (planWindow && !dateInWindow(date, planWindow.from, planWindow.to)) {
+      skippedPlan = true;
+      usedFallback = localMap.size > 0;
+      skippedPlanDates.push(date);
+      if (usedFallback) fallbackDates.push(date);
+      console.warn(`${date}: skipped (API plan window ${planWindow.from} to ${planWindow.to})${usedFallback ? `; keeping ${localMap.size} local fixture(s)` : ""}.`);
+    } else {
+      try {
+        apiFixtures = await fetchDate(date);
+      } catch (error) {
+        const window = error.planWindow || parsePlanWindow(error.message);
+        if (window) {
+          planWindow = window;
+          skippedPlan = !dateInWindow(date, window.from, window.to);
+          console.warn(`API plan window is ${window.from} to ${window.to}. Dates outside that range will be skipped instead of failing the board.`);
+          if (skippedPlan) skippedPlanDates.push(date);
+        }
+        if (!apiFixtures.length && localMap.size) {
+          usedFallback = true;
+          fallbackDates.push(date);
+          console.warn(`${date}: API discovery failed; preserving ${localMap.size} fixture(s) from the published local feed. Reason: ${error.message}`);
+        } else if (!window && !localMap.size) {
+          throw error;
+        } else if (!localMap.size) {
+          console.warn(`${date}: no fixtures available inside the API plan window.`);
+        }
+      }
     }
 
     const combined = new Map();
@@ -298,8 +332,8 @@ async function fetchDate(date) {
 
     apiDateCounts[date] = apiFixtures.length;
     localFallbackCounts[date] = localMap.size;
-    perDate.push({ date, fixtures: [...combined.values()], usedFallback });
-    console.log(`${date}: ${combined.size} fixture(s) (${apiFixtures.length} API, ${localMap.size} local${usedFallback ? ", fallback active" : ""})`);
+    perDate.push({ date, fixtures: [...combined.values()], usedFallback, skippedPlan });
+    console.log(`${date}: ${combined.size} fixture(s) (${apiFixtures.length} API, ${localMap.size} local${usedFallback ? ", fallback active" : ""}${skippedPlan ? ", plan-skipped" : ""})`);
   }
 
   const leagueWeights = new Map();
@@ -351,6 +385,8 @@ async function fetchDate(date) {
     apiDateCounts,
     localFallbackCounts,
     fallbackDates,
+    skippedPlanDates,
+    planWindow,
     activeLeagueCount: leagueWeights.size,
     shardCount: include.length,
     requestPolicy: {
@@ -374,6 +410,7 @@ async function fetchDate(date) {
   fs.writeFileSync("all-games-matrix.json", JSON.stringify({ include }) + "\n");
 
   console.log(`Discovered ${fixtureCount} unique fixture(s) in ${leagueWeights.size} active league(s), balanced across ${include.length} shard(s).`);
+  if (planWindow) console.log(`API plan window used: ${planWindow.from} to ${planWindow.to}. Skipped ${skippedPlanDates.length} out-of-plan date(s).`);
   if (fallbackDates.length) console.log(`Local fallback protected ${fallbackDates.length} date(s): ${fallbackDates.join(", ")}`);
 })().catch(error => {
   console.error(error && error.stack ? error.stack : error);

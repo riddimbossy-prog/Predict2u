@@ -39,6 +39,9 @@ if (Number(report.totalFixtures) !== fixtures.length) throw new Error("Snapshot 
 if (Array.isArray(report.unresolvedDates) && report.unresolvedDates.length) {
   throw new Error(`Snapshot has unresolved dates: ${report.unresolvedDates.join(", ")}`);
 }
+if (Array.isArray(report.planSkippedDates) && report.planSkippedDates.length) {
+  console.warn(`API plan skipped dates: ${report.planSkippedDates.join(", ")}.`);
+}
 for (const fixture of fixtures) {
   if (!fixture.home || !fixture.away) throw new Error("A fixture is missing a team name.");
   if (!/^\d{4}-\d{2}-\d{2}$/.test(String(fixture.matchDate || ""))) throw new Error("A fixture has an invalid matchDate.");
