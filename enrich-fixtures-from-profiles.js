@@ -422,7 +422,7 @@ function writeSmtBundle(matches, now = new Date()) {
     "window.P2U_SMT_META=" + JSON.stringify({
       generatedAt: now.toISOString(),
       count: rows.length,
-      version: "smt-v291"
+      version: "smt-v292"
     }) + ";\n";
   fs.writeFileSync(path.join(ROOT, "smt-data.js"), body, "utf8");
   return rows.length;

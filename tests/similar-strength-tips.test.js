@@ -131,6 +131,12 @@ const smtRows = peer.buildSmtRows(matches.map(m => ({...m, matchDate:'2026-09-21
 assert.ok(smtRows.length, "SMT board should list suspected tips for open fixtures");
 assert.ok(smtRows.every(r => r.market && r.note), "each SMT row has a suspected tip");
 assert.ok(smtRows[0].evidence.length, "SMT row lists the similar-strength games");
+assert.ok(typeof peer.buildReason === "function", "reason builder is exported");
+assert.ok(smtRows.every(r => r.reason && Array.isArray(r.points) && r.points.length >= 2), "each SMT row carries written reasoning");
+assert.ok(smtRows.some(r => /Alpha FC|Beta FC/.test(r.reason)), "reason names the fixture teams");
+assert.ok(smtRows[0].evidence.some(e => e.opp && e.gf != null && e.line && e.meaning), "evidence rows include opponent, score and market meaning");
+assert.ok(smtRows.every(r => r.points.some(p => /landed in \d+\/\d+/.test(p))), "reason states hit count against the band");
+
 
 const enriched = [
   { id: "t3", home: "Alpha FC", away: "Beta FC", league, homeVenueGames: 12, homeWinRate: 0.6, awayVenueGames: 12, awayWinRate: 0.4 }

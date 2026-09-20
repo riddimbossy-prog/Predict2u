@@ -1,4 +1,4 @@
-/* Predict2U v291 — SMT Similar Market Tips */
+/* Predict2U v292 — SMT Similar Market Tips */
 .p2u-team-mode-tabs-5{grid-template-columns:repeat(5,minmax(0,1fr))}
 .p2u-team-mode-tabs a{display:flex;align-items:center;justify-content:center;min-height:40px;padding:0 14px;border:1px solid var(--tr-line);border-radius:12px;background:#091522;color:#aebac8;font:800 11px/1 inherit;text-decoration:none;white-space:nowrap}
 .p2u-team-mode-tabs a.is-active{background:rgba(183,239,49,.12);border-color:rgba(183,239,49,.48);color:#d6ff72}
@@ -19,22 +19,34 @@
 .p2u-smt-card h3{margin:0;font-size:20px;letter-spacing:-.03em}
 .p2u-smt-card h3 i{color:#718399;font-style:normal;font-size:13px}
 .p2u-smt-meta{margin:4px 0 0;color:#7f91a6;font-size:11px}
+.p2u-smt-facts{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.p2u-smt-facts div{padding:10px 12px;border:1px solid rgba(139,176,211,.12);border-radius:12px;background:#07131f}
+.p2u-smt-facts span{display:block;color:#7f91a6;font-size:9px;font-weight:850;letter-spacing:.08em;text-transform:uppercase;margin-bottom:4px}
+.p2u-smt-facts b{display:block;font-size:12px;font-weight:800;color:#e8eef5;line-height:1.35}
 .p2u-smt-tip{padding:14px;border:1px solid rgba(183,239,49,.28);border-radius:14px;background:radial-gradient(circle at 0 0,rgba(183,239,49,.1),transparent 40%),#07131f}
 .p2u-smt-tip>span{color:var(--tr-accent);font-size:9px;font-weight:900;letter-spacing:.12em}
 .p2u-smt-tip strong{display:block;margin:6px 0 8px;font-size:22px;letter-spacing:-.03em}
 .p2u-smt-tip p{margin:0;color:#9db0c3;font-size:12px;line-height:1.5}
 .p2u-smt-tip-stats{display:flex;flex-wrap:wrap;gap:6px;margin-top:10px}
 .p2u-smt-tip-stats b{padding:6px 8px;border-radius:999px;background:rgba(183,239,49,.1);color:#d7ff79;font-size:10px}
+.p2u-smt-why{padding:12px 14px;border:1px solid rgba(139,176,211,.14);border-radius:14px;background:rgba(7,19,31,.85)}
+.p2u-smt-why h4{margin:0 0 8px;color:#d7ff79;font-size:11px;letter-spacing:.04em}
+.p2u-smt-why ol{margin:0;padding:0 0 0 18px;display:grid;gap:7px}
+.p2u-smt-why li{color:#c5d0db;font-size:12px;line-height:1.55}
 .p2u-smt-evidence{display:grid;gap:6px}
 .p2u-smt-evidence h4{margin:0;color:#d7ff79;font-size:11px;letter-spacing:.04em}
-.p2u-smt-evidence li{display:grid;grid-template-columns:64px 18px 1fr auto;gap:8px;align-items:center;padding:7px 0;border-top:1px solid rgba(139,176,211,.1);color:#c5d0db;font-size:11px;list-style:none}
 .p2u-smt-evidence ul{margin:0;padding:0}
-.p2u-smt-evidence .is-miss{opacity:.55}
-.p2u-smt-hit{width:18px;height:18px;border-radius:50%;background:rgba(183,239,49,.16);color:#d7ff79;font:900 9px/18px inherit;text-align:center}
+.p2u-smt-evidence li{display:grid;grid-template-columns:52px 44px minmax(0,1fr);gap:8px;align-items:start;padding:8px 0;border-top:1px solid rgba(139,176,211,.1);color:#c5d0db;font-size:11px;list-style:none}
+.p2u-smt-ev-day{color:#8fa3b7;font-weight:800;padding-top:2px}
+.p2u-smt-evidence .is-miss{opacity:.62}
+.p2u-smt-hit{min-width:36px;height:18px;padding:0 6px;border-radius:999px;background:rgba(183,239,49,.16);color:#d7ff79;font:900 9px/18px inherit;text-align:center;letter-spacing:.04em}
 .p2u-smt-evidence .is-miss .p2u-smt-hit{background:rgba(255,188,75,.12);color:#ffbd4a}
+.p2u-smt-ev-body{display:grid;gap:2px;min-width:0}
+.p2u-smt-ev-body strong{font-size:12px;color:#e8eef5;font-weight:800}
+.p2u-smt-ev-body em{color:#8fa3b7;font-style:normal;font-size:11px;line-height:1.4}
 .p2u-smt-actions{display:flex;gap:8px;flex-wrap:wrap}
 .p2u-smt-actions button,.p2u-smt-actions a{min-height:40px;padding:0 14px;border-radius:12px;font:900 11px/1 inherit;text-decoration:none;display:inline-flex;align-items:center}
 .p2u-smt-add{border:1px solid var(--tr-accent);background:var(--tr-accent);color:#071005;cursor:pointer}
 .p2u-smt-lab{border:1px solid var(--tr-line);background:#091522;color:#d6ff72}
-@media(max-width:920px){.p2u-smt-grid,.p2u-smt-fields{grid-template-columns:1fr}.p2u-team-mode-tabs-5{grid-template-columns:repeat(5,minmax(108px,1fr));overflow-x:auto}}
-@media(max-width:620px){.p2u-smt-card{padding:15px}.p2u-smt-tip strong{font-size:18px}.p2u-smt-evidence li{grid-template-columns:54px 18px 1fr;gap:6px}}
+@media(max-width:920px){.p2u-smt-grid,.p2u-smt-fields,.p2u-smt-facts{grid-template-columns:1fr}.p2u-team-mode-tabs-5{grid-template-columns:repeat(5,minmax(108px,1fr));overflow-x:auto}}
+@media(max-width:620px){.p2u-smt-card{padding:15px}.p2u-smt-tip strong{font-size:18px}.p2u-smt-evidence li{grid-template-columns:46px 40px minmax(0,1fr);gap:6px}}

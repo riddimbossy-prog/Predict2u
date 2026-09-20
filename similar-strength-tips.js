@@ -1,4 +1,4 @@
-/* Predict2U v291 — similar-strength / similar-position tips + SMT board.
+/* Predict2U v292 — similar-strength / similar-position tips + SMT board.
    Historical game rows have no opponent field. Opponents are recovered only
    from uniquely complementary scorelines in the same league and date.
    Ambiguous days are skipped. Auto Picks gates are not changed. */
@@ -8,7 +8,7 @@
   if(typeof window!=='undefined')window.P2USimilarStrengthV290=api;
 })(function(){
   'use strict';
-  const VERSION='peer-v291';
+  const VERSION='peer-v292';
   const MIN_PEER=4;
   const MIN_LEAGUE=6;
   const PPG_BAND=0.35;
@@ -132,8 +132,15 @@
     return{rate:(h[key]*hn+a[key]*an)/(hn+an),n:hn+an};
   }
 
-  function packGame(g,team){
-    return{d:g.d,team:team||'',opp:g.oppName||'',v:g.venue,gf:g.gf,ga:g.ga,res:g.gf>g.ga?'W':g.gf===g.ga?'D':'L'};
+  function packGame(g,team,leagueSize){
+    const gf=Number(g.gf),ga=Number(g.ga);
+    return{
+      d:g.d,team:team||'',opp:g.oppName||'',v:g.venue,gf,ga,tot:gf+ga,
+      res:gf>ga?'W':gf===ga?'D':'L',
+      oppPpg:g.oppPpg!=null?round2(g.oppPpg):null,
+      oppRank:g.oppRank!=null?g.oppRank:null,
+      leagueSize:leagueSize||g.leagueSize||null
+    };
   }
 
   function marketHit(id,g){
@@ -149,13 +156,42 @@
     return false;
   }
 
-  function evidenceForTip(id,homePeer,awayPeer,homeName,awayName){
+  function fmtScore(e){return `${e.team} ${e.gf}-${e.ga} ${e.opp}`;}
+  function fmtWhen(e){
+    const day=String(e.d||'').slice(5).replace('-','/');
+    const venue=e.v==='A'?'away':'home';
+    const rank=e.oppRank!=null?`${e.oppRank}${e.leagueSize?`/${e.leagueSize}`:''}`:'';
+    const ppg=e.oppPpg!=null?`${Number(e.oppPpg).toFixed(2)} PPG`:'';
+    const opp=rank||ppg?` (${[rank,ppg].filter(Boolean).join(', ')})`:'';
+    return `${day} ${fmtScore(e)} ${venue}${opp}`;
+  }
+  function marketLine(id,e){
+    const tot=e.tot!=null?e.tot:Number(e.gf)+Number(e.ga);
+    const goals=`${tot} goal${tot===1?'':'s'}`;
+    if(id==='OVER15')return `${goals}${tot>=2?' · cleared 1.5':' · stayed under 1.5'}`;
+    if(id==='OVER25')return `${goals}${tot>=3?' · cleared 2.5':' · stayed under 2.5'}`;
+    if(id==='OVER35')return `${goals}${tot>=4?' · cleared 3.5':' · stayed under 3.5'}`;
+    if(id==='UNDER25')return `${goals}${tot<=2?' · under 2.5':' · over 2.5'}`;
+    if(id==='BTTS_YES'||id==='BTTS_NO')return e.gf>0&&e.ga>0?'both sides scored':'one or both blanks';
+    if(e.res==='W')return `won ${e.gf}-${e.ga}`;
+    if(e.res==='D')return `drew ${e.gf}-${e.ga}`;
+    return `lost ${e.gf}-${e.ga}`;
+  }
+
+  function evidenceForTip(id,homePeer,awayPeer,homeName,awayName,leagueSize){
     const bags=id==='HOME_WIN'||id==='DC1X'?[[homePeer,homeName]]:id==='AWAY_WIN'||id==='DCX2'?[[awayPeer,awayName]]:[[homePeer,homeName],[awayPeer,awayName]];
     const rows=[];
+    const seen=new Set();
     for(const [games,team] of bags){
       for(const g of games||[]){
-        const row=packGame(g,team);
+        const row=packGame(g,team,leagueSize);
         row.hit=marketHit(id,g);
+        row.meaning=marketLine(id,row);
+        row.line=`${fmtWhen(row)} · ${row.meaning}`;
+        const names=[row.team,row.opp].map(s=>String(s||'').toLowerCase()).sort();
+        const key=`${row.d}|${names[0]}|${names[1]}`;
+        if(seen.has(key))continue;
+        seen.add(key);
         rows.push(row);
       }
     }
@@ -163,12 +199,47 @@
     return rows.slice(0,8);
   }
 
+  function kickoffLabel(match){
+    const raw=String(match&&(match.kickoff||match.matchDate)||'');
+    if(/T\d{2}:\d{2}/.test(raw))return `${raw.slice(0,10)} ${raw.slice(11,16)} UTC`;
+    return raw.slice(0,10)||'';
+  }
+
+  function buildReason(match,intel,tip){
+    const home=match.home,away=match.away;
+    const points=[];
+    const ko=kickoffLabel(match);
+    if(intel.homeRank&&intel.awayRank&&intel.leagueSize){
+      points.push(`Tonight: ${home} ${intel.homeRank}/${intel.leagueSize} (${intel.homePpg!=null?intel.homePpg.toFixed(2):'—'} PPG) vs ${away} ${intel.awayRank}/${intel.leagueSize} (${intel.awayPpg!=null?intel.awayPpg.toFixed(2):'—'} PPG)${ko?`, kick-off ${ko}`:''}.`);
+    }else if(intel.homePpg!=null&&intel.awayPpg!=null){
+      points.push(`Tonight: ${home} ${intel.homePpg.toFixed(2)} PPG vs ${away} ${intel.awayPpg.toFixed(2)} PPG${ko?`, kick-off ${ko}`:''}.`);
+    }else if(ko){
+      points.push(`Tonight: ${home} vs ${away}, kick-off ${ko}.`);
+    }
+    const gap=Math.abs(intel.ppgGap||0).toFixed(2);
+    if(intel.similar)points.push(`Similar-strength matchup — gap ${gap} PPG, inside ±${PPG_BAND} PPG or nearby league rank.`);
+    else if(intel.class==='home-stronger')points.push(`${home} are the stronger side by ${gap} PPG. Evidence is games vs sides in ${away}'s band${intel.awayRank?` (${intel.awayRank}/${intel.leagueSize}, ${intel.awayPpg!=null?intel.awayPpg.toFixed(2):'—'} PPG)`:''}.`);
+    else if(intel.class==='away-stronger')points.push(`${away} are the stronger side by ${gap} PPG. Evidence is games vs sides in ${home}'s band${intel.homeRank?` (${intel.homeRank}/${intel.leagueSize}, ${intel.homePpg!=null?intel.homePpg.toFixed(2):'—'} PPG)`:''}.`);
+    const homeN=intel.home&&intel.home.sample||0;
+    const awayN=intel.away&&intel.away.sample||0;
+    if(homeN||awayN)points.push(`Peer sample: ${home} ${homeN} uniquely paired game${homeN===1?'':'s'} vs this band, ${away} ${awayN}.`);
+    const hits=(tip.evidence||[]).filter(e=>e.hit);
+    const misses=(tip.evidence||[]).filter(e=>!e.hit);
+    points.push(`${tip.market} landed in ${Math.round((tip.rate||0)*(tip.sample||0))}/${tip.sample} uniquely paired games against that band (${Math.round((tip.rate||0)*100)}%).`);
+    if(hits.length)points.push(`Hits: ${hits.slice(0,4).map(e=>e.line||`${fmtWhen(e)} · ${marketLine(tip.id,e)}`).join('; ')}.`);
+    if(misses.length)points.push(`Misses: ${misses.slice(0,2).map(e=>e.line||`${fmtWhen(e)} · ${marketLine(tip.id,e)}`).join('; ')}.`);
+    const price=oddsForTip(match,tip.id);
+    if(price!=null)points.push(`Current price ${price.toFixed(2)}.`);
+    else points.push('No price loaded for this market.');
+    return{points,text:points.join(' ')};
+  }
+
   function buildTips(homeRates,awayRates,extra){
     const tips=[];
     const add=(id,market,settle,rate,sample,side,note)=>{
       if(sample<MIN_PEER||rate==null)return;
       const tip={id,market,settle,rate:round2(rate),sample,side,note,family:FAMILY[id]||'other'};
-      if(extra)tip.evidence=evidenceForTip(id,extra.homePeer,extra.awayPeer,extra.homeName,extra.awayName);
+      if(extra)tip.evidence=evidenceForTip(id,extra.homePeer,extra.awayPeer,extra.homeName,extra.awayName,extra.leagueSize);
       tips.push(tip);
     };
     if(homeRates&&homeRates.n>=MIN_PEER){
@@ -278,7 +349,7 @@
       homePpg:round2(hs.ppg),awayPpg:round2(as_.ppg),
       home:packRates(homeRates,homePaired.length),
       away:packRates(awayRates,awayPaired.length),
-      tips:buildTips(homeRates,awayRates,{homePeer,awayPeer,homeName:h.name,awayName:a.name}),
+      tips:buildTips(homeRates,awayRates,{homePeer,awayPeer,homeName:h.name,awayName:a.name,leagueSize}),
       notes
     };
   }
@@ -344,6 +415,7 @@
       for(const tip of intel.tips){
         const hits=(tip.evidence||[]).filter(e=>e.hit).length;
         const shown=(tip.evidence||[]).length;
+        const why=buildReason(m,intel,tip);
         rows.push({
           fixtureId:m.id,date:fixtureDate(m),kickoff:m.kickoff||'',
           league:m.league||'',country:m.country||'',
@@ -351,11 +423,15 @@
           class:intel.class,similar:!!intel.similar,
           homeRank:intel.homeRank,awayRank:intel.awayRank,leagueSize:intel.leagueSize,
           homePpg:intel.homePpg,awayPpg:intel.awayPpg,ppgGap:intel.ppgGap,
+          homeSample:intel.home&&intel.home.sample||0,
+          awaySample:intel.away&&intel.away.sample||0,
           id:tip.id,market:tip.market,settle:tip.settle,family:tip.family||FAMILY[tip.id]||'other',
           rate:tip.rate,sample:tip.sample,side:tip.side,note:tip.note,
           odds:oddsForTip(m,tip.id),
           hits,shown,
-          evidence:tip.evidence||[]
+          evidence:tip.evidence||[],
+          reason:why.text,
+          points:why.points
         });
       }
     }
@@ -366,6 +442,6 @@
   return{
     VERSION,MIN_PEER,MIN_LEAGUE,PPG_BAND,FAMILY,ODDS_KEY,rankTol,teamStrength,isSimilarStrength,
     pairLeagueGames,peerSlice,marketHit,evidenceForTip,buildTips,buildContext,analyseMatchup,
-    attachPeerIntel,fromFixture,oddsForTip,buildSmtRows
+    attachPeerIntel,fromFixture,oddsForTip,buildSmtRows,buildReason,fmtWhen,marketLine,fmtScore
   };
 });
