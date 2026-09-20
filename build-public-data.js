@@ -76,10 +76,17 @@ function run(now=new Date()){
   rows.sort((a,b)=>dateOf(a).localeCompare(dateOf(b))||String(a.kickoff||'').localeCompare(String(b.kickoff||'')));
   let profileEnrichment=null;
   try{
-    const {enrichMatches,loadLedger}=require('./enrich-fixtures-from-profiles.js');
+    const {enrichMatches,loadLedger,writeSmtBundle}=require('./enrich-fixtures-from-profiles.js');
     profileEnrichment=enrichMatches(rows,loadLedger());
     if(profileEnrichment&&profileEnrichment.bothReady){
       console.warn(`Profile ledger attached to ${profileEnrichment.bothReady}/${rows.length} fixture(s) so Market Edges and Auto Picks can publish.`);
+    }
+    try{
+      const smtRows=writeSmtBundle(rows);
+      if(profileEnrichment)profileEnrichment.smtRows=smtRows;
+      console.warn(`SMT board: ${smtRows} similar-market tip(s).`);
+    }catch(error){
+      console.warn(`SMT board skipped: ${error&&error.message?error.message:error}`);
     }
   }catch(error){
     console.warn(`Profile enrich skipped: ${error&&error.message?error.message:error}`);

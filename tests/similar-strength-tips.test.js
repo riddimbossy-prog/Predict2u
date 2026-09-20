@@ -122,6 +122,15 @@ assert.ok(matches[0].peerIntel, "fixture receives peerIntel");
 assert.ok(["similar", "home-stronger", "away-stronger"].includes(matches[0].peerIntel.class));
 assert.ok(matches[0].peerIntel.tips.length, "similar matchup with unique pairs should publish at least one peer tip");
 assert.ok(matches[0].peerIntel.tips.every(t => t.sample >= peer.MIN_PEER), "every published tip meets the sample floor");
+assert.ok(matches[0].peerIntel.tips.some(t => Array.isArray(t.evidence) && t.evidence.length), "tips must carry historical evidence rows");
+assert.ok(peer.marketHit('OVER15', {gf:1, ga:1}) === true);
+assert.ok(peer.marketHit('UNDER25', {gf:1, ga:1}) === true);
+assert.ok(peer.marketHit('BTTS_NO', {gf:1, ga:0}) === true);
+
+const smtRows = peer.buildSmtRows(matches.map(m => ({...m, matchDate:'2026-09-21', status:'NS'})), '2026-09-20');
+assert.ok(smtRows.length, "SMT board should list suspected tips for open fixtures");
+assert.ok(smtRows.every(r => r.market && r.note), "each SMT row has a suspected tip");
+assert.ok(smtRows[0].evidence.length, "SMT row lists the similar-strength games");
 
 const enriched = [
   { id: "t3", home: "Alpha FC", away: "Beta FC", league, homeVenueGames: 12, homeWinRate: 0.6, awayVenueGames: 12, awayWinRate: 0.4 }

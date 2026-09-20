@@ -213,7 +213,7 @@ function hydrateFixturesFile(now = new Date()) {
     sportyCurrentCount: merged.sportyCount
   });
   try {
-    const { enrichMatches, loadLedger } = require("./enrich-fixtures-from-profiles.js");
+    const { enrichMatches, loadLedger, writeSmtBundle } = require("./enrich-fixtures-from-profiles.js");
     const stats = enrichMatches(merged.fixtures, loadLedger());
     if (stats && stats.attached) {
       writeFixturesJs(merged.fixtures, {
@@ -222,6 +222,12 @@ function hydrateFixturesFile(now = new Date()) {
         profileAttached: stats.attached
       });
       console.log(`SportyBet fixture hydrate: attached profile rates to ${stats.bothReady}/${merged.fixtures.length} fixture(s).`);
+    }
+    try {
+      const smtRows = writeSmtBundle(merged.fixtures);
+      console.log(`SMT board: ${smtRows} similar-market tip(s).`);
+    } catch (error) {
+      console.warn(`SMT board skipped: ${error && error.message ? error.message : error}`);
     }
   } catch (error) {
     console.warn(`Profile enrich after SportyBet hydrate skipped: ${error && error.message ? error.message : error}`);

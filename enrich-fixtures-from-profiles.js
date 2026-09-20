@@ -413,6 +413,21 @@ function rewriteArrayFile(file, name, rows) {
   fs.writeFileSync(file, next, "utf8");
 }
 
+function writeSmtBundle(matches, now = new Date()) {
+  const peer = require("./similar-strength-tips.js");
+  const rows = peer.buildSmtRows(matches, now.toISOString().slice(0, 10));
+  const body =
+    "/* Predict2U SMT similar market tips */\n" +
+    "window.P2U_SMT=" + JSON.stringify(rows) + ";\n" +
+    "window.P2U_SMT_META=" + JSON.stringify({
+      generatedAt: now.toISOString(),
+      count: rows.length,
+      version: "smt-v291"
+    }) + ";\n";
+  fs.writeFileSync(path.join(ROOT, "smt-data.js"), body, "utf8");
+  return rows.length;
+}
+
 function enrichFile(file, name, ledger) {
   if (!fs.existsSync(file)) return null;
   const raw = fs.readFileSync(file, "utf8");
@@ -420,7 +435,7 @@ function enrichFile(file, name, ledger) {
   if (!parsed || !Array.isArray(parsed.value)) return null;
   const stats = enrichMatches(parsed.value, ledger);
   rewriteArrayFile(file, name, parsed.value);
-  return { file: path.basename(file), count: parsed.value.length, ...stats };
+  return { file: path.basename(file), count: parsed.value.length, rows: parsed.value, ...stats };
 }
 
 function enrichPublishedFiles(now = new Date()) {
@@ -432,6 +447,11 @@ function enrichPublishedFiles(now = new Date()) {
   if (fs.existsSync(fixtures)) results.push(enrichFile(fixtures, "FIXTURES", ledger));
   if (fs.existsSync(current)) results.push(enrichFile(current, "MATCHES", ledger));
   else if (fs.existsSync(dataFile)) results.push(enrichFile(dataFile, "MATCHES", ledger));
+  const smtSource = results.filter(Boolean).slice(-1)[0];
+  if (smtSource && Array.isArray(smtSource.rows)) {
+    try { smtSource.smtRows = writeSmtBundle(smtSource.rows, now); }
+    catch (error) { smtSource.smtError = error && error.message; }
+  }
   return { generatedAt: now.toISOString(), ledgerUpdated: ledger.updated || null, results: results.filter(Boolean) };
 }
 
@@ -468,6 +488,7 @@ module.exports = {
   lookup,
   enrichMatches,
   enrichPublishedFiles,
+  writeSmtBundle,
   parseAssignment,
   loadLedger
 };

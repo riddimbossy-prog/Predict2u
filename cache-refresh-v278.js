@@ -1,7 +1,7 @@
-/* Predict2U v290 — client cache refresh after similar-strength Lab tips. */
+/* Predict2U v291 — client cache refresh after SMT similar market tips. */
 (function(){
   'use strict';
-  const KEY='p2u_cache_refresh_v290';
+  const KEY='p2u_cache_refresh_v291';
   try{if(localStorage.getItem(KEY)==='done')return;}catch(_){ }
   const mark=()=>{try{localStorage.setItem(KEY,'done');}catch(_){ }};
   const clear=async()=>{
@@ -18,11 +18,11 @@
       }
     }catch(_){ }
     mark();
-    window.dispatchEvent(new CustomEvent('p2u:cache-refreshed',{detail:{version:'v290'}}));
+    window.dispatchEvent(new CustomEvent('p2u:cache-refreshed',{detail:{version:'v291'}}));
     try{
       const url=new URL(location.href);
-      if(url.searchParams.get('refresh')!=='v290'){
-        url.searchParams.set('refresh','v290');
+      if(url.searchParams.get('refresh')!=='v291'){
+        url.searchParams.set('refresh','v291');
         location.replace(url.href);
       }
     }catch(_){location.reload();}
