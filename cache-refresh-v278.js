@@ -1,7 +1,7 @@
-/* Predict2U v289 — client cache refresh after Matchup Lab upgrade. */
+/* Predict2U v290 — client cache refresh after similar-strength Lab tips. */
 (function(){
   'use strict';
-  const KEY='p2u_cache_refresh_v289';
+  const KEY='p2u_cache_refresh_v290';
   try{if(localStorage.getItem(KEY)==='done')return;}catch(_){ }
   const mark=()=>{try{localStorage.setItem(KEY,'done');}catch(_){ }};
   const clear=async()=>{
@@ -18,11 +18,11 @@
       }
     }catch(_){ }
     mark();
-    window.dispatchEvent(new CustomEvent('p2u:cache-refreshed',{detail:{version:'v289'}}));
+    window.dispatchEvent(new CustomEvent('p2u:cache-refreshed',{detail:{version:'v290'}}));
     try{
       const url=new URL(location.href);
-      if(url.searchParams.get('refresh')!=='v289'){
-        url.searchParams.set('refresh','v289');
+      if(url.searchParams.get('refresh')!=='v290'){
+        url.searchParams.set('refresh','v290');
         location.replace(url.href);
       }
     }catch(_){location.reload();}

@@ -347,6 +347,7 @@
     addCandidate('NO_DRAW','No Draw — 12','Double Chance 12',(noDrawStrength??0)*88+Math.min(10,(h.noDraw+a.noDraw)*1.2),'dc12',[`Home no-draw run ${h.noDraw}`,`Away no-draw run ${a.noDraw}`,`Combined no-draw profile ${pct(noDrawStrength)}`],[(h.draw??1)>.22,(a.draw??1)>.22,h.noDraw+a.noDraw<6]);
     const drawPressure=average([h.draw,a.draw,leagueRate(m,'Draw')]);
     addSignal('DRAW_PRESSURE',(drawPressure??0)*100+Math.max(0,10-(h.noDraw+a.noDraw)),[`Combined draw pressure ${pct(drawPressure)}`]);
+    if(lab)applyPeerTips(candidates,m);
     candidates.sort((x,y)=>y.score-x.score);
     const decision=Gate.select({m,h,a,homeTrait,awayTrait,candidates,meta:window.P2U_DATA_META||{},today,automatic:!!options.automatic,lab});
     const primary=decision.primary;
@@ -382,7 +383,7 @@
     const resolved=resolveLabTraits(h0,a0,rawH,rawA);
     const result=analyseMatch(m,resolved.homeTrait,resolved.awayTrait,{lab:true});
     const {h,a,primary,supporting,warnings,quality,route,rejected,rejectedMarkets,observation,evaluated}=result;
-    labCurrent={m,...result};
+    labCurrent={m,...result,peerIntel:peerIntelOf(m)};
     const ht=result.homeTrait,at=result.awayTrait;
     const traitLabel=key=>key&&trends[key]?trends[key].label:(route&&route.source==='open'?'Open scan':'No qualifying profile');
     const qGrade=quality&&quality.grade||0;
@@ -396,9 +397,10 @@
     const boardHtml=boardRows.length?`<div class="p2u-lab-board"><h3>Market board</h3>${boardRows.map(row=>`<div class="${row.status==='cleared'?'is-clear':'is-hold'}"><b>${esc(row.market||row.id)}</b><span>${row.status==='cleared'?`Grade ${Math.round(row.grade)}`:`${rejectLabel(row)}${row.grade!=null?` · ${Math.round(row.grade)}`:''}`}</span><em>${row.odds!=null?fmt(row.odds):'—'}</em></div>`).join('')}</div>`:'';
     const warnHtml=warnings.length?`<div class="p2u-lab-warnings"><strong>Data notes</strong>${warnings.map(x=>`<p>${esc(x)}</p>`).join('')}</div>`:'';
     const qualityHtml=`<div class="p2u-lab-quality"><span>Data ${Math.round(qGrade)}/100</span><span>Sample ${result.sample||0}</span><span>Odds ${quality&&quality.oddsCount||0}</span><span>${esc(routeLabel)}</span></div>`;
-    $('lab-result').innerHTML=`<div class="p2u-lab-result-head"><div><span>${esc(m.league||'')}</span><h2>${esc(h.team)} <i>vs</i> ${esc(a.team)}</h2><p>${esc(m.matchDate||'')} · projected total ${fmt(result.projection)}</p></div>${qualityHtml}</div><div class="p2u-lab-profiles">${profileBox(h,ht)}${profileBox(a,at)}</div>${primaryHtml}${supportHtml}${boardHtml}${warnHtml}<p class="p2u-lab-disclaimer">This is a statistical match classification, not a guarantee. Lab can publish a read on any loaded fixture; Daily Auto Picks stay on the stricter approved-route gate.</p>`;
+    $('lab-result').innerHTML=`<div class="p2u-lab-result-head"><div><span>${esc(m.league||'')}</span><h2>${esc(h.team)} <i>vs</i> ${esc(a.team)}</h2><p>${esc(m.matchDate||'')} · projected total ${fmt(result.projection)}</p></div>${qualityHtml}</div><div class="p2u-lab-profiles">${profileBox(h,ht)}${profileBox(a,at)}</div>${renderPeerPanel(m)}${primaryHtml}${supportHtml}${boardHtml}${warnHtml}<p class="p2u-lab-disclaimer">This is a statistical match classification, not a guarantee. Lab can publish a read on any loaded fixture; Daily Auto Picks stay on the stricter approved-route gate. Similar-strength tips only use uniquely paired historical scorelines.</p>`;
     const slipBtn=$('lab-add-slip');
     if(slipBtn)slipBtn.onclick=addLabToSlip;
+    document.querySelectorAll('[data-peer-tip]').forEach(btn=>{btn.onclick=()=>addPeerTipToSlip(Number(btn.dataset.peerTip));});
   }
   function analyseSelected(){
     const rows=labFixtureRows();
@@ -409,6 +411,36 @@
     if(!labCurrent||!labCurrent.primary||!window.P2USlip)return;
     const p=labCurrent.primary;
     window.P2USlip.add(labCurrent.m,p.settleMarket||p.canonical||p.market,'Team Intelligence Matchup Lab');
+  }
+  function addPeerTipToSlip(i){
+    const tip=labCurrent&&labCurrent.peerIntel&&labCurrent.peerIntel.tips&&labCurrent.peerIntel.tips[i];
+    if(!tip||!labCurrent.m||!window.P2USlip)return;
+    window.P2USlip.add(labCurrent.m,tip.settle||tip.market,'Matchup Lab · similar strength');
+  }
+  function applyPeerTips(candidates,m){
+    const intel=peerIntelOf(m);if(!intel||!Array.isArray(intel.tips)||!intel.tips.length)return;
+    const byId=new Map(candidates.map(c=>[c.id,c]));
+    for(const tip of intel.tips){
+      const c=byId.get(tip.id);if(!c)continue;
+      c.score=clamp((c.score||0)+Math.min(6,2+(Number(tip.sample)||0)*0.4));
+      c.reasons=[...(c.reasons||[]),tip.note];
+    }
+  }
+  function peerIntelOf(m){
+    const api=window.P2USimilarStrengthV290;
+    if(api&&typeof api.fromFixture==='function')return api.fromFixture(m);
+    return m&&m.peerIntel||null;
+  }
+  function renderPeerPanel(m){
+    const intel=peerIntelOf(m);if(!intel)return'';
+    const cls=intel.class||'unknown';
+    const title=cls==='similar'?'Similar-strength matchup':cls==='home-stronger'?'Home is the stronger side':cls==='away-stronger'?'Away is the stronger side':'Strength band unknown';
+    const rank=intel.homeRank&&intel.awayRank&&intel.leagueSize?`${intel.homeRank} vs ${intel.awayRank} of ${intel.leagueSize}`:'';
+    const gap=intel.ppgGap==null?'':`PPG gap ${intel.ppgGap>0?'+':''}${fmt(intel.ppgGap)}`;
+    const sideBox=(label,row,ppg)=>`<article><span>${esc(label)}</span><b>${row&&row.sample||0} peer games</b><div><small>PPG <strong>${fmt(ppg)}</strong></small><small>Win <strong>${pct(row&&row.win)}</strong></small><small>Over 2.5 <strong>${pct(row&&row.over25)}</strong></small><small>BTTS <strong>${pct(row&&row.btts)}</strong></small></div></article>`;
+    const tips=(intel.tips||[]).slice(0,4).map((t,i)=>`<button type="button" class="p2u-lab-peer-tip" data-peer-tip="${i}"><b>${esc(t.market)}</b><span>${Math.round((t.rate||0)*100)}% · ${t.sample} games</span></button>`).join('');
+    const notes=(intel.notes||[]).slice(0,3).map(n=>`<p>${esc(n)}</p>`).join('');
+    return `<section class="p2u-lab-peer" data-peer-class="${esc(cls)}"><span>VS SIMILAR STRENGTH</span><h3>${esc(title)}</h3><p>${[rank,gap,intel.homePpg!=null&&intel.awayPpg!=null?`${fmt(intel.homePpg)} vs ${fmt(intel.awayPpg)} PPG`:''].filter(Boolean).join(' · ')||'Classed from venue PPG until historical opponents attach.'}</p><div class="p2u-lab-peer-grid">${sideBox('HOME vs this band',intel.home,intel.homePpg)}${sideBox('AWAY vs this band',intel.away,intel.awayPpg)}</div>${tips?`<div class="p2u-lab-peer-tips">${tips}</div>`:''}${notes?`<div class="p2u-lab-peer-notes">${notes}</div>`:''}<small>Peer tips count uniquely paired historical scorelines against sides within 0.35 PPG or nearby league rank. Ambiguous days are skipped. This is not the live official table.</small></section>`;
   }
 
   function traitStrength(r,key){

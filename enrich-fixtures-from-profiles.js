@@ -387,6 +387,21 @@ function enrichMatches(matches, ledger) {
       match.profileEnriched = true;
     }
   }
+  try {
+    const peer = require("./similar-strength-tips.js");
+    const peerStats = peer.attachPeerIntel(matches, ledger, {
+      lookup,
+      buildIndex,
+      ratesFromGames,
+      poissonRates
+    });
+    stats.peerRanked = peerStats.ranked;
+    stats.peerTipped = peerStats.tipped;
+    stats.peerSimilar = peerStats.similar;
+    stats.peerAttached = peerStats.attached;
+  } catch (error) {
+    stats.peerError = error && error.message;
+  }
   return stats;
 }
 
@@ -425,7 +440,8 @@ function main() {
   for (const row of report.results) {
     console.log(
       `Profile enrich ${row.file}: ${row.bothReady}/${row.count} fixtures ready for picks, ` +
-      `${row.attached} side(s) attached, ${row.unmatched} unmatched, ${row.skippedExisting} already had stats.`
+      `${row.attached} side(s) attached, ${row.unmatched} unmatched, ${row.skippedExisting} already had stats` +
+      (row.peerTipped!=null?`, ${row.peerTipped} similar-strength tip sheet(s).` : '.')
     );
   }
   if (!report.results.length) {
