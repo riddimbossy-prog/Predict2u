@@ -212,6 +212,20 @@ function hydrateFixturesFile(now = new Date()) {
     addedFromSportybet: merged.added,
     sportyCurrentCount: merged.sportyCount
   });
+  try {
+    const { enrichMatches, loadLedger } = require("./enrich-fixtures-from-profiles.js");
+    const stats = enrichMatches(merged.fixtures, loadLedger());
+    if (stats && stats.attached) {
+      writeFixturesJs(merged.fixtures, {
+        ...meta,
+        profileReady: stats.bothReady,
+        profileAttached: stats.attached
+      });
+      console.log(`SportyBet fixture hydrate: attached profile rates to ${stats.bothReady}/${merged.fixtures.length} fixture(s).`);
+    }
+  } catch (error) {
+    console.warn(`Profile enrich after SportyBet hydrate skipped: ${error && error.message ? error.message : error}`);
+  }
   return { skipped: false, added: merged.added, total: merged.fixtures.length, meta };
 }
 

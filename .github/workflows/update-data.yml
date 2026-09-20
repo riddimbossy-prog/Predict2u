@@ -93,6 +93,9 @@ jobs:
       - name: Hydrate current fixtures from SportyBet if API data is stale
         run: node hydrate-fixtures-from-sportybet.js
 
+      - name: Attach team-profile rates so picks can publish
+        run: node enrich-fixtures-from-profiles.js
+
       - name: Build compact public data bundle
         run: node build-public-data.js
 

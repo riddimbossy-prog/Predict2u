@@ -31,6 +31,8 @@ jobs:
         run: node enrich-sportybet-odds.js
       - name: Hydrate current fixtures from SportyBet
         run: node hydrate-fixtures-from-sportybet.js
+      - name: Attach team-profile rates so picks can publish
+        run: node enrich-fixtures-from-profiles.js
       - name: Rebuild compact public data bundle
         run: node build-public-data.js
       - name: Refuse to publish an empty live window
@@ -49,6 +51,7 @@ jobs:
           git commit -m "Refresh SportyBet markets, odds and live fixtures"
           git pull --rebase -X theirs origin "${GITHUB_REF_NAME}"
           node hydrate-fixtures-from-sportybet.js
+          node enrich-fixtures-from-profiles.js
           node build-public-data.js
           node assert-matches-present.js
           git add -f -- sportybet-odds.js sportybet-odds-coverage.json fixtures.js current-data.js data-meta.json

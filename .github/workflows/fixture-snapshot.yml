@@ -52,6 +52,9 @@ jobs:
       - name: Hydrate any missing current dates from SportyBet
         run: node hydrate-fixtures-from-sportybet.js
 
+      - name: Attach team-profile rates so picks can publish
+        run: node enrich-fixtures-from-profiles.js
+
       - name: Verify fixture snapshot
         run: node verify-fixture-snapshot.js
 

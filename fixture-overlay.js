@@ -26,16 +26,26 @@
     ].join("|");
   };
 
+  const alreadyAnalysed = item => {
+    if (!item) return false;
+    if (item.profileEnriched === true) return true;
+    if (item.enrichmentStatus === "profile-ledger" || item.enrichmentStatus === "analysed") return true;
+    const homeReady = Number(item.homeVenueGames) >= 8 && item.homeWinRate != null;
+    const awayReady = Number(item.awayVenueGames) >= 8 && item.awayWinRate != null;
+    return homeReady && awayReady;
+  };
+
   const merged = new Map();
   for (const fixture of fixtures) {
     const matchDate = dateOf(fixture);
+    const analysed = alreadyAnalysed(fixture);
     const row = {
       ...fixture,
       matchDate,
-      fixtureOnly: true,
-      analysisPending: true,
-      enrichmentStatus: fixture.enrichmentStatus || "fixture-only",
-      dataCoverage: Number.isFinite(Number(fixture.dataCoverage)) ? Number(fixture.dataCoverage) : 0
+      fixtureOnly: analysed ? false : true,
+      analysisPending: analysed ? false : true,
+      enrichmentStatus: fixture.enrichmentStatus || (analysed ? "profile-ledger" : "fixture-only"),
+      dataCoverage: Number.isFinite(Number(fixture.dataCoverage)) ? Number(fixture.dataCoverage) : (analysed ? 70 : 0)
     };
     merged.set(keyOf(row), row);
   }
@@ -43,10 +53,13 @@
   for (const analysis of analysed) {
     const key = keyOf(analysis);
     const existing = merged.get(key) || {};
-    const explicitlyFixtureOnly = analysis && (analysis.fixtureOnly === true || analysis.enrichmentStatus === "fixture-only");
+    const mergedRow = { ...existing, ...analysis };
+    const explicitlyFixtureOnly = analysis && (
+      (analysis.fixtureOnly === true || analysis.enrichmentStatus === "fixture-only" || analysis.enrichmentStatus === "sportybet-fixture") &&
+      !alreadyAnalysed(mergedRow)
+    );
     const row = {
-      ...existing,
-      ...analysis,
+      ...mergedRow,
       matchDate: dateOf(analysis) || dateOf(existing),
       fixtureOnly: explicitlyFixtureOnly,
       analysisPending: explicitlyFixtureOnly,
