@@ -12,7 +12,7 @@
   <link rel="stylesheet" href="brand-experience.css">
   <link rel="stylesheet" href="unified-shell-v245.css">
   <link rel="stylesheet" href="mobile-zfold-v257.css">
-  <link rel="stylesheet" href="team-rankings.css">
+  <link rel="stylesheet" href="team-rankings.css?v=289">
   <link rel="stylesheet" href="data-freshness-v264.css">
   <link rel="stylesheet" href="stability-v264.css">
   <link rel="stylesheet" href="mobile-responsive-v265.css" data-p2u-responsive-v265="true">
@@ -27,7 +27,7 @@
 </head>
 <body>
 <script src="unified-shell-v234.js"></script>
-<script src="cache-refresh-v278.js?v=288"></script>
+<script src="cache-refresh-v278.js?v=289"></script>
 <main class="p2u-team-rank-page">
   <section class="p2u-team-rank-hero">
     <span class="p2u-team-rank-kicker">PREDICT2U</span>
@@ -114,17 +114,19 @@
       <div class="p2u-matchup-lab-head">
         <span class="p2u-team-rank-kicker">MATCHUP LAB</span>
         <h2>Matchup Lab</h2>
+        <p>Pick any loaded fixture. The Lab detects the strongest profile route, scores every priced market, and publishes a classification when the evidence clears. Daily Auto Picks stay on the stricter gate.</p>
       </div>
-      <div class="p2u-matchup-builder">
-        <label><span>Home-team profile</span><select id="lab-home-trait"></select></label>
-        <label><span>Away-team profile</span><select id="lab-away-trait"></select></label>
-        <label><span>Home team</span><select id="lab-home-team"></select></label>
+      <div class="p2u-matchup-builder p2u-matchup-builder-v289">
+        <label class="p2u-lab-search-field"><span>Search fixtures</span><input id="lab-search" class="p2u-team-rank-search" type="search" placeholder="Search team, league or date…" autocomplete="off"></label>
+        <label><span>Fixture</span><select id="lab-home-team" aria-label="Lab fixture"></select></label>
         <label><span>Away team</span><select id="lab-away-team" disabled></select></label>
+        <label><span>Home profile</span><select id="lab-home-trait"></select></label>
+        <label><span>Away profile</span><select id="lab-away-trait"></select></label>
         <button id="lab-analyse" type="button">Analyse matchup</button>
       </div>
       <div id="lab-match-count" class="p2u-lab-match-count"></div>
     </section>
-    <section id="lab-result" class="p2u-lab-result" aria-live="polite"><div class="p2u-team-rank-empty">Select two profiles and a fixture.</div></section>
+    <section id="lab-result" class="p2u-lab-result" aria-live="polite"><div class="p2u-team-rank-empty">Loading fixtures…</div></section>
   </section>
 
   <section id="team-panel-auto" class="p2u-team-panel" data-team-panel="auto" hidden>
@@ -157,17 +159,17 @@
     <section id="team-auto-grid" class="p2u-auto-date-list"><div class="p2u-team-rank-empty">Scanning fixtures…</div></section>
   </section>
 </main>
-<script src="fixtures.js?v=288"></script>
-<script src="current-data.js?v=288"></script>
-<script src="fixture-overlay.js?v=288"></script>
+<script src="fixtures.js?v=289"></script>
+<script src="current-data.js?v=289"></script>
+<script src="fixture-overlay.js?v=289"></script>
 <script src="sportybet-odds.js"></script>
 <script src="sportybet-odds-merge-v286.js"></script>
 <script src="data-freshness-v264.js"></script>
 <script src="slip.js"></script>
 <script src="auto-picks-learning-guard-v271.js"></script>
 <script src="auto-picks-learning-v271.js"></script>
-<script src="auto-picks-gatekeeper-v272.js"></script>
-<script src="team-rankings.js"></script>
+<script src="auto-picks-gatekeeper-v272.js?v=289"></script>
+<script src="team-rankings.js?v=289"></script>
 <script src="market-intelligence-engine-v277.js"></script>
 <script src="market-intelligence-v277.js"></script>
 <script src="football-assets.js" defer></script>

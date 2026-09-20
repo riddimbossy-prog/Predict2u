@@ -1,5 +1,6 @@
-/* Predict2U v272 — Auto Picks Gatekeeper v2.1.
-   Public bundle exposes only release mechanics. Private learning policy remains server-side. */
+/* Predict2U v289 — Auto Picks Gatekeeper v2.1 + Matchup Lab mode.
+   Public bundle exposes only release mechanics. Private learning policy remains server-side.
+   Lab mode (`select({lab:true})`) classifies any fixture and never changes automatic gates. */
 (function(factory){
   const api=factory();
   if(typeof module!=='undefined'&&module.exports)module.exports=api;
@@ -7,6 +8,7 @@
 })(function(){
   'use strict';
   const MODEL_VERSION='Auto Profile v2.1';
+  const LAB_MODE='Matchup Lab v289';
   const clamp=(n,min=0,max=100)=>Math.max(min,Math.min(max,Number(n)||0));
   const num=v=>v===null||v===undefined||v===''||!Number.isFinite(Number(v))?null:Number(v);
   const validDate=d=>/^\d{4}-\d{2}-\d{2}$/.test(String(d||''));
@@ -141,7 +143,73 @@
 
   function candidateGrade(candidate,quality){return Math.round(clamp((num(candidate.score)||0)*.78+quality.grade*.22));}
 
-  function select({m,h,a,homeTrait,awayTrait,candidates,meta,today,automatic=false}){
+  function labBand(rule,thin=false){
+    return{
+      minOdds:Math.max(1.08,Number((rule.minOdds-0.10).toFixed(2))),
+      maxOdds:Number((rule.maxOdds+0.45).toFixed(2)),
+      minGrade:Math.max(76,rule.minGrade-6)+(thin?4:0),
+      minMargin:Math.max(3,rule.minMargin-3)
+    };
+  }
+
+  function observationFrom(byId,quality){
+    const rows=[...byId.values()].filter(c=>num(c.odds)!==null).map(c=>{
+      const grade=candidateGrade(c,quality);
+      return{...c,grade,score:grade};
+    }).sort((x,y)=>y.grade-x.grade||y.odds-x.odds);
+    return rows[0]||null;
+  }
+
+  function selectLab({m,h,a,homeTrait,awayTrait,candidates,meta,today}){
+    const approved=approvedRoute(homeTrait,awayTrait);
+    const route=approved?{...approved,source:'approved'}:{id:'open-lab',allowed:Object.keys(MARKET_RULES),source:'open'};
+    const quality=dataQuality({m,h,a,meta,today,automatic:false});
+    const warnings=[...quality.reasons,...quality.blocks];
+    if(route.source==='open')warnings.push('No approved Auto Picks route for this profile pair; Lab opened a full-market scan.');
+    const thin=quality.sample<8;
+    if(thin)warnings.push('Venue sample is thin; Lab raises the publish grade and will not force a pick.');
+    const byId=new Map((candidates||[]).map(c=>[c.id,c]));
+    const evaluated=[],rejectedMarkets=[];
+    for(const id of route.allowed){
+      const c=byId.get(id),rule=MARKET_RULES[id];
+      if(!rule)continue;
+      if(!c||num(c.odds)===null){
+        rejectedMarkets.push({id,ok:false,reason:'NO_CANDIDATE',market:c&&c.market||id,odds:null,grade:null,reasons:['No priced candidate for this market']});
+        continue;
+      }
+      const odds=Number(c.odds),band=labBand(rule,thin),notes=[];
+      const recent=recentConfirmation(c,h,a);
+      if(!recent.pass)notes.push(recent.label);
+      const calibration=calibrationFor(m,c.canonical||rule.settle,odds);
+      if(!calibration.pass)notes.push('Price-band history does not support this market');
+      const grade=candidateGrade(c,quality);
+      const conflict=(rule.conflicts||[]).map(k=>byId.get(k)).filter(Boolean).sort((x,y)=>candidateGrade(y,quality)-candidateGrade(x,quality))[0]||null;
+      const conflictGrade=conflict?candidateGrade(conflict,quality):0;
+      const margin=grade-conflictGrade;
+      let reason=null;
+      if(odds<band.minOdds||odds>band.maxOdds)reason='ODDS_BAND';
+      else if(grade<band.minGrade)reason='GRADE_SHORT';
+      else if(margin<band.minMargin)reason='MARGIN_SHORT';
+      if(reason){
+        const why=reason==='ODDS_BAND'?`Odds ${odds.toFixed(2)} outside ${band.minOdds.toFixed(2)}–${band.maxOdds.toFixed(2)}`
+          :reason==='GRADE_SHORT'?`Grade ${grade} below Lab minimum ${band.minGrade}`
+          :`Conflict margin ${margin} below ${band.minMargin}`;
+        rejectedMarkets.push({id,ok:false,reason,market:c.market,odds,grade,margin,reasons:[why,...notes]});
+        continue;
+      }
+      const valueNote=calibration.available?`Historical price-band check ${calibration.edge>=0?'supports':'does not weaken'} this market`:'No mature price-band sample; Lab does not apply the Auto Picks +2 penalty';
+      evaluated.push({...c,score:grade,rawScore:num(c.score)||0,grade,margin,rule,routeId:route.id,quality,calibration,recent,valueNote,settleMarket:rule.settle,labNotes:notes,lab:true});
+    }
+    evaluated.sort((x,y)=>y.grade-x.grade||y.margin-x.margin||y.odds-x.odds);
+    rejectedMarkets.sort((x,y)=>(y.grade||0)-(x.grade||0));
+    const primary=evaluated[0]||null;
+    const observation=primary||observationFrom(byId,quality);
+    if(!primary)return{primary:null,route,quality,warnings,rejected:'NO_MARKET_CLEARED',evaluated,rejectedMarkets,observation,lab:true};
+    return{primary,route,quality,warnings,rejected:null,evaluated,rejectedMarkets,observation,lab:true};
+  }
+
+  function select({m,h,a,homeTrait,awayTrait,candidates,meta,today,automatic=false,lab=false}){
+    if(lab&&!automatic)return selectLab({m,h,a,homeTrait,awayTrait,candidates,meta,today});
     const route=approvedRoute(homeTrait,awayTrait);
     const quality=dataQuality({m,h,a,meta,today,automatic});
     const warnings=[...quality.reasons];
@@ -188,5 +256,5 @@
     return selected.length>=3?selected:[];
   }
 
-  return{MODEL_VERSION,MARKET_RULES,approvedRoute,priceBand,calibrationFor,formStats,dataQuality,recentConfirmation,candidateGrade,select,buildDailyCore};
+  return{MODEL_VERSION,LAB_MODE,MARKET_RULES,approvedRoute,priceBand,calibrationFor,formStats,dataQuality,recentConfirmation,candidateGrade,labBand,select,selectLab,buildDailyCore};
 });
