@@ -29,17 +29,30 @@ jobs:
           SPORTYBET_TIMELINE: "192"
           APP_TIMEZONE: "Africa/Accra"
         run: node enrich-sportybet-odds.js
+      - name: Hydrate current fixtures from SportyBet
+        run: node hydrate-fixtures-from-sportybet.js
+      - name: Rebuild compact public data bundle
+        run: node build-public-data.js
+      - name: Refuse to publish an empty live window
+        run: node assert-matches-present.js
       - name: Commit SportyBet overlay
         shell: bash
         run: |
           set -euo pipefail
           git config user.name "Predict2U SportyBet Bot"
           git config user.email "actions@users.noreply.github.com"
-          git add -f -- sportybet-odds.js sportybet-odds-coverage.json
+          git add -f -- sportybet-odds.js sportybet-odds-coverage.json fixtures.js current-data.js data-meta.json
           if git diff --cached --quiet; then
             echo "SportyBet overlay already matches the repository."
             exit 0
           fi
-          git commit -m "Refresh SportyBet markets and odds overlay"
+          git commit -m "Refresh SportyBet markets, odds and live fixtures"
           git pull --rebase -X theirs origin "${GITHUB_REF_NAME}"
+          node hydrate-fixtures-from-sportybet.js
+          node build-public-data.js
+          node assert-matches-present.js
+          git add -f -- sportybet-odds.js sportybet-odds-coverage.json fixtures.js current-data.js data-meta.json
+          if ! git diff --cached --quiet; then
+            git commit --amend --no-edit
+          fi
           git push origin "HEAD:${GITHUB_REF_NAME}"

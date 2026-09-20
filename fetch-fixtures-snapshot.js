@@ -20,9 +20,16 @@ const {
   flattenErrors,
   parsePlanWindow,
   isPlanWindowError,
+  isPermanentProviderError,
   dateInWindow,
   orderDatesNearToday
 } = require("./api-plan-window.js");
+const {
+  readSportybetRows,
+  sportyRowToFixture,
+  mergeCurrentFixtures,
+  hasCurrentDates
+} = require("./hydrate-fixtures-from-sportybet.js");
 
 const API_KEY = String(process.env.API_FOOTBALL_KEY || process.env.API_KEY || "").trim();
 const DAYS_BACK = clampInt(process.env.DAYS_BACK, 0, 7, 0);
@@ -160,6 +167,12 @@ async function apiRequest(path) {
     }
 
     const errors = payload && payload.errors;
+    const errorText = stringifyErrors(errors) || String(response.body || "");
+    if (isPermanentProviderError(errorText) || isPermanentProviderError(response.body)) {
+      const error = new Error(`API error for ${path}: ${errorText || `HTTP ${response.statusCode}`}`);
+      error.permanent = true;
+      throw error;
+    }
     const rateLimited = isRateLimitError(response.statusCode, errors, response.body);
     const retryableStatus = response.statusCode === 429 || response.statusCode >= 500;
     const retryablePayload = rateLimited;
@@ -183,6 +196,7 @@ async function apiRequest(path) {
     if (hasApiErrors(errors)) {
       const error = new Error(`API error for ${path}: ${stringifyErrors(errors)}`);
       error.planWindow = parsePlanWindow(errors) || parsePlanWindow(error.message);
+      error.permanent = isPermanentProviderError(errors) || isPermanentProviderError(error.message);
       throw error;
     }
 
@@ -320,19 +334,26 @@ function preserveRow(row, requestedDate) {
   console.log("Out-of-plan dates (API-Football free window) are skipped instead of emptying the board.");
 
   let planWindow = null;
+  let providerDown = false;
+  const sportyFixtures = readSportybetRows().map(sportyRowToFixture);
+  const sportyByDate = new Map();
+  for (const row of sportyFixtures) {
+    const date = String(row.matchDate || "").slice(0, 10);
+    if (!sportyByDate.has(date)) sportyByDate.set(date, []);
+    sportyByDate.get(date).push(row);
+  }
   const perDay = [];
   for (const date of orderDatesNearToday(dates)) {
-    if (planWindow && !dateInWindow(date, planWindow.from, planWindow.to)) {
+    const sportyRows = sportyByDate.get(date) || [];
+    if (providerDown || (planWindow && !dateInWindow(date, planWindow.from, planWindow.to))) {
       const fallbackRows = previousFixtures
         .map(row => preserveRow(row, date))
         .filter(Boolean);
-      if (fallbackRows.length) {
-        console.warn(`${date}: outside API plan window ${planWindow.from}–${planWindow.to}; keeping ${fallbackRows.length} previous fixture(s).`);
-        perDay.push({ date, rows: fallbackRows, source: "stale-fallback", error: "plan-window" });
-      } else {
-        console.warn(`${date}: skipped, outside API plan window ${planWindow.from}–${planWindow.to}.`);
-        perDay.push({ date, rows: [], source: "plan-skipped", error: "plan-window" });
-      }
+      const rows = sportyRows.length ? sportyRows : fallbackRows;
+      const source = sportyRows.length ? "sportybet" : fallbackRows.length ? "stale-fallback" : "plan-skipped";
+      const reason = providerDown ? "provider-outage" : "plan-window";
+      console.warn(`${date}: ${reason}; using ${rows.length} ${source} fixture(s).`);
+      perDay.push({ date, rows, source, error: reason });
       continue;
     }
 
@@ -344,6 +365,10 @@ function preserveRow(row, requestedDate) {
       console.log(`${date}: ${rows.length} fixture(s) from API.`);
       perDay.push({ date, rows, source: "api", error: null });
     } catch (error) {
+      if (error.permanent || isPermanentProviderError(error.message)) {
+        providerDown = true;
+        console.warn(`API-Football is unavailable (${error.message}). Remaining dates will use SportyBet / previous snapshot.`);
+      }
       const window = error.planWindow || parsePlanWindow(error.message);
       if (window) {
         planWindow = window;
@@ -352,6 +377,11 @@ function preserveRow(row, requestedDate) {
       const fallbackRows = previousFixtures
         .map(row => preserveRow(row, date))
         .filter(Boolean);
+      if (sportyRows.length) {
+        console.warn(`${date}: API unavailable; using ${sportyRows.length} SportyBet fixture(s).`);
+        perDay.push({ date, rows: sportyRows, source: "sportybet", error: error.message });
+        continue;
+      }
       if (window && !dateInWindow(date, window.from, window.to) && !fallbackRows.length) {
         console.warn(`${date}: skipped, outside API plan window.`);
         perDay.push({ date, rows: [], source: "plan-skipped", error: error.message });
@@ -361,8 +391,8 @@ function preserveRow(row, requestedDate) {
       if (fallbackRows.length) {
         console.warn(`${date}: preserving ${fallbackRows.length} fixture(s) from the previous snapshot.`);
         perDay.push({ date, rows: fallbackRows, source: "stale-fallback", error: error.message });
-      } else if (window) {
-        perDay.push({ date, rows: [], source: "plan-skipped", error: error.message });
+      } else if (window || providerDown) {
+        perDay.push({ date, rows: [], source: providerDown ? "provider-outage" : "plan-skipped", error: error.message });
       } else {
         perDay.push({ date, rows: [], source: "unresolved", error: error.message });
       }
@@ -370,9 +400,12 @@ function preserveRow(row, requestedDate) {
   }
 
   const unresolvedDates = perDay.filter(day => day.source === "unresolved").map(day => day.date);
-  const planSkippedDates = perDay.filter(day => day.source === "plan-skipped").map(day => day.date);
-  if (unresolvedDates.length) {
+  const planSkippedDates = perDay.filter(day => day.source === "plan-skipped" || day.source === "provider-outage").map(day => day.date);
+  if (unresolvedDates.length && !sportyFixtures.length) {
     throw new Error(`Could not retrieve or preserve fixtures for: ${unresolvedDates.join(", ")}`);
+  }
+  if (unresolvedDates.length) {
+    console.warn(`Unresolved API dates filled or skipped because SportyBet has ${sportyFixtures.length} current fixture(s): ${unresolvedDates.join(", ")}`);
   }
 
   const map = new Map();
@@ -390,11 +423,17 @@ function preserveRow(row, requestedDate) {
     }
   }
 
-  const fixtures = [...map.values()].sort((a, b) =>
+  let fixtures = [...map.values()].sort((a, b) =>
     String(a.matchDate).localeCompare(String(b.matchDate)) ||
     String(a.kickoff || "").localeCompare(String(b.kickoff || "")) ||
     String(a.league || "").localeCompare(String(b.league || ""))
   );
+
+  if (!hasCurrentDates(fixtures) && sportyFixtures.length) {
+    const merged = mergeCurrentFixtures(fixtures, readSportybetRows());
+    fixtures = merged.fixtures;
+    console.warn(`Snapshot had no current dates — merged ${merged.added} SportyBet fixture(s).`);
+  }
 
   if (!fixtures.length) throw new Error("The fixture snapshot contains zero fixtures.");
 

@@ -96,8 +96,10 @@
   function apply(){
     const feed=window.P2U_SPORTYBET;
     const matches=Array.isArray(window.MATCHES)?window.MATCHES:[];
-    if(!feed||!Array.isArray(feed.rows)||!matches.length)return {matched:0,considered:0};
-    const byDate=indexFeed(feed.rows);
+    const rows=feed&&Array.isArray(feed.rows)?feed.rows:[];
+    if(!feed||!rows.length)return {matched:0,considered:matches.length,hydrated:0};
+    const byDate=indexFeed(rows);
+    const used=new Set();
     let matched=0;
     for(const match of matches){
       const d=dateOf(match.matchDate||match.kickoff);
@@ -110,13 +112,56 @@
       if(!hit)continue;
       hit.row._score=hit.score;
       applyOdds(match,hit.row,hit.swapped);
+      used.add(hit.row);
       matched+=1;
     }
-    window.P2U_SPORTYBET_MERGE={matched,considered:matches.length,generatedAt:feed.generatedAt,priced:feed.priced||feed.rows.length};
+    const today=new Date().toISOString().slice(0,10);
+    const hasCurrent=matches.some(m=>dateOf(m.matchDate||m.kickoff)>=today);
+    let hydrated=0;
+    if(!hasCurrent){
+      const seen=new Set(matches.map(m=>`${dateOf(m.matchDate||m.kickoff)}|${normalize(m.home)}|${normalize(m.away)}`));
+      for(const row of rows){
+        if(used.has(row))continue;
+        const d=dateOf(row.matchDate||row.kickoff);
+        if(!d||d<today)continue;
+        const key=`${d}|${normalize(row.home)}|${normalize(row.away)}`;
+        if(seen.has(key))continue;
+        matches.push({
+          id:row.eventId||row.gameId||key,
+          home:row.home,
+          away:row.away,
+          league:row.league||'Football',
+          country:row.country||'',
+          kickoff:row.kickoff,
+          matchDate:d,
+          status:'NS',
+          statusLong:'Not Started',
+          homeGoals:null,
+          awayGoals:null,
+          fixtureOnly:true,
+          analysisPending:true,
+          enrichmentStatus:'sportybet-fixture',
+          dataCoverage:0,
+          odds:row.odds||{},
+          sportyEventId:row.eventId||null,
+          sportyGameId:row.gameId||null,
+          source:'sportybet'
+        });
+        seen.add(key);
+        hydrated+=1;
+      }
+      if(hydrated){
+        matches.sort((a,b)=>dateOf(a.matchDate||a.kickoff).localeCompare(dateOf(b.matchDate||b.kickoff))||String(a.kickoff||'').localeCompare(String(b.kickoff||'')));
+        window.MATCHES=matches;
+      }
+    }
+    window.P2U_SPORTYBET_MERGE={matched,considered:matches.length,hydrated,generatedAt:feed.generatedAt,priced:feed.priced||rows.length};
     window.dispatchEvent(new CustomEvent('p2u:sportybet-merged',{detail:window.P2U_SPORTYBET_MERGE}));
     return window.P2U_SPORTYBET_MERGE;
   }
   window.P2USportyBetMerge={apply};
+  // Apply immediately so later page scripts (date strip, board, auto picks)
+  // see SportyBet-hydrated MATCHES. Safe to call twice: current dates skip re-hydrate.
+  apply();
   if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',apply);
-  else apply();
 })();

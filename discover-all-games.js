@@ -19,6 +19,7 @@ const {
   flattenErrors,
   parsePlanWindow,
   isPlanWindowError,
+  isPermanentProviderError,
   dateInWindow,
   clampDates,
   orderDatesNearToday
@@ -255,6 +256,11 @@ async function fetchDate(date) {
         throw new Error(`HTTP ${result.statusCode}: ${String(result.body || "").slice(0, 300)}`);
       }
       if (errorText) {
+        if (isPermanentProviderError(errorText)) {
+          const error = new Error(errorText);
+          error.permanent = true;
+          throw error;
+        }
         if (isPlanWindowError(errorText)) {
           const error = new Error(errorText);
           error.planWindow = parsePlanWindow(errorText);
@@ -266,7 +272,7 @@ async function fetchDate(date) {
       return Array.isArray(payload && payload.response) ? payload.response : [];
     } catch (error) {
       lastError = error;
-      if (isPlanWindowError(error && error.message)) throw error;
+      if (isPlanWindowError(error && error.message) || error.permanent || isPermanentProviderError(error && error.message)) throw error;
       if (attempt >= MAX_RETRIES) break;
       const wait = Math.min(30000, 3000 * (attempt + 1));
       console.warn(`${date}: ${error.message}; retrying in ${Math.round(wait / 1000)}s (${attempt + 1}/${MAX_RETRIES}).`);
@@ -289,6 +295,7 @@ async function fetchDate(date) {
   const apiDateCounts = {};
   const localFallbackCounts = {};
   let planWindow = null;
+  let providerDown = false;
   const probeOrder = orderDatesNearToday(dates);
 
   for (const date of probeOrder) {
@@ -297,17 +304,21 @@ async function fetchDate(date) {
     let usedFallback = false;
     let skippedPlan = false;
 
-    if (planWindow && !dateInWindow(date, planWindow.from, planWindow.to)) {
-      skippedPlan = true;
+    if (providerDown || (planWindow && !dateInWindow(date, planWindow.from, planWindow.to))) {
+      skippedPlan = !providerDown;
       usedFallback = localMap.size > 0;
-      skippedPlanDates.push(date);
+      if (skippedPlan) skippedPlanDates.push(date);
       if (usedFallback) fallbackDates.push(date);
-      console.warn(`${date}: skipped (API plan window ${planWindow.from} to ${planWindow.to})${usedFallback ? `; keeping ${localMap.size} local fixture(s)` : ""}.`);
+      console.warn(`${date}: ${providerDown ? "API-Football outage" : `skipped (API plan window ${planWindow.from} to ${planWindow.to})`}${usedFallback ? `; keeping ${localMap.size} local fixture(s)` : ""}.`);
     } else {
       try {
         apiFixtures = await fetchDate(date);
       } catch (error) {
         const window = error.planWindow || parsePlanWindow(error.message);
+        if (error.permanent || isPermanentProviderError(error.message)) {
+          providerDown = true;
+          console.warn(`API-Football is unavailable (${error.message}). Remaining dates will use local fallback.`);
+        }
         if (window) {
           planWindow = window;
           skippedPlan = !dateInWindow(date, window.from, window.to);
@@ -318,10 +329,10 @@ async function fetchDate(date) {
           usedFallback = true;
           fallbackDates.push(date);
           console.warn(`${date}: API discovery failed; preserving ${localMap.size} fixture(s) from the published local feed. Reason: ${error.message}`);
-        } else if (!window && !localMap.size) {
+        } else if (!window && !localMap.size && !providerDown) {
           throw error;
         } else if (!localMap.size) {
-          console.warn(`${date}: no fixtures available inside the API plan window.`);
+          console.warn(`${date}: no fixtures available from API or local fallback.`);
         }
       }
     }
@@ -358,6 +369,14 @@ async function fetchDate(date) {
   }
 
   if (!leagueWeights.size) {
+    try {
+      const hydrated = require("./hydrate-fixtures-from-sportybet.js").hydrateFixturesFile();
+      if (hydrated && !hydrated.skipped) {
+        console.warn(`SportyBet published ${hydrated.total} fixture(s) locally; API discovery still found no leagues.`);
+      }
+    } catch (error) {
+      console.warn(`SportyBet hydrate during empty discovery: ${error.message}`);
+    }
     throw new Error("No active leagues were found in the requested window.");
   }
 

@@ -16,7 +16,7 @@ jobs:
   snapshot:
     name: Pull and publish seven-day fixtures
     runs-on: ubuntu-latest
-    timeout-minutes: 30
+    timeout-minutes: 40
 
     steps:
       - name: Checkout repository
@@ -29,6 +29,14 @@ jobs:
         with:
           node-version: "24"
 
+      - name: Refresh SportyBet overlay first
+        env:
+          SPORTYBET_COUNTRY: "gh"
+          SPORTYBET_TIMELINE: "192"
+          APP_TIMEZONE: "Africa/Accra"
+        run: node enrich-sportybet-odds.js
+        continue-on-error: true
+
       - name: Pull every fixture by date safely
         env:
           API_FOOTBALL_KEY: ${{ secrets.API_FOOTBALL_KEY }}
@@ -38,11 +46,20 @@ jobs:
           FIXTURE_CONCURRENCY: "1"
           FIXTURE_REQUEST_GAP_MS: "13000"
           FIXTURE_RATE_LIMIT_WAIT_MS: "65000"
-          FIXTURE_MAX_RETRIES: "6"
+          FIXTURE_MAX_RETRIES: "2"
         run: node fetch-fixtures-snapshot.js
+
+      - name: Hydrate any missing current dates from SportyBet
+        run: node hydrate-fixtures-from-sportybet.js
 
       - name: Verify fixture snapshot
         run: node verify-fixture-snapshot.js
+
+      - name: Rebuild compact public data bundle
+        run: node build-public-data.js
+
+      - name: Refuse to publish an empty live window
+        run: node assert-matches-present.js
 
       - name: Commit fixture feed
         shell: bash
@@ -51,7 +68,7 @@ jobs:
           git config user.name "Predict2U Fixture Snapshot Bot"
           git config user.email "actions@users.noreply.github.com"
 
-          git add -f -- fixtures.js fixture-snapshot-report.json
+          git add -f -- fixtures.js fixture-snapshot-report.json current-data.js data-meta.json sportybet-odds.js sportybet-odds-coverage.json
           if git diff --cached --quiet; then
             echo "Fixture snapshot already matches the repository."
             exit 0
@@ -61,6 +78,13 @@ jobs:
 
           for attempt in 1 2 3; do
             git pull --rebase origin "${GITHUB_REF_NAME}"
+            node hydrate-fixtures-from-sportybet.js
+            node build-public-data.js
+            node assert-matches-present.js
+            git add -f -- fixtures.js fixture-snapshot-report.json current-data.js data-meta.json sportybet-odds.js sportybet-odds-coverage.json
+            if ! git diff --cached --quiet; then
+              git commit --amend --no-edit
+            fi
             if git push origin "HEAD:${GITHUB_REF_NAME}"; then
               exit 0
             fi

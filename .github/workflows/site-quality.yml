@@ -27,6 +27,8 @@ jobs:
           test -f current-data.js
       - name: Build rolling public data
         run: node build-public-data.js
+      - name: Refuse an empty live window
+        run: node assert-matches-present.js
       - name: Block leaked keys and unsafe release files
         run: node release-security-scan.js
       - name: Run stabilized product release gate
@@ -43,6 +45,8 @@ jobs:
         run: node model-governance-selftest.js
       - name: Validate Odds API integration
         run: node tests/odds-api-integration.test.js
+      - name: Validate SportyBet fixture hydrate
+        run: node tests/fixture-hydrate-sportybet.test.js
       - name: Run repository consistency audit
         run: node audit-site.js
       - name: Upload deterministic reports on failure

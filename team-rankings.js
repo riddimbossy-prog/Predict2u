@@ -20,12 +20,12 @@
   const terminal=new Set(['FT','AET','PEN','PST','CANC','ABD','AWD','WO']);
   const unresolved=m=>m&&m.homeGoals==null&&!terminal.has(String(m.status||'').toUpperCase());
   const currentFixture=m=>{const d=dateOf(m);return unresolved(m)&&validDate(d)&&d>=today&&d<=windowEnd;};
-  const allMatches=Array.isArray(window.MATCHES)?window.MATCHES:[];
-  const currentPool=allMatches.filter(currentFixture);
-  const loadedPool=allMatches.filter(unresolved).sort((a,b)=>String(dateOf(b)).localeCompare(String(dateOf(a))));
-  const fixturePool=currentPool.length?currentPool:loadedPool;
-  const usingFallback=!currentPool.length&&loadedPool.length>0;
-  const availableDates=[...new Set(fixturePool.map(dateOf).filter(validDate))].sort();
+  const allMatches=()=>Array.isArray(window.MATCHES)?window.MATCHES:[];
+  let currentPool=allMatches().filter(currentFixture);
+  let loadedPool=allMatches().filter(unresolved).sort((a,b)=>String(dateOf(b)).localeCompare(String(dateOf(a))));
+  let fixturePool=currentPool.length?currentPool:loadedPool;
+  let usingFallback=!currentPool.length&&loadedPool.length>0;
+  let availableDates=[...new Set(fixturePool.map(dateOf).filter(validDate))].sort();
   const requestedDate=new URLSearchParams(location.search).get('date');
   let selectedDate=validDate(requestedDate)&&availableDates.includes(requestedDate)?requestedDate:'all';
   const selectedFixturePool=()=>selectedDate==='all'?fixturePool:fixturePool.filter(m=>dateOf(m)===selectedDate);
@@ -35,6 +35,14 @@
     if(selectedDate!=='all')pool=pool.filter(m=>dateOf(m)===selectedDate);
     return pool;
   };
+  function refreshMatchPools(){
+    currentPool=allMatches().filter(currentFixture);
+    loadedPool=allMatches().filter(unresolved).sort((a,b)=>String(dateOf(b)).localeCompare(String(dateOf(a))));
+    fixturePool=currentPool.length?currentPool:loadedPool;
+    usingFallback=!currentPool.length&&loadedPool.length>0;
+    availableDates=[...new Set(fixturePool.map(dateOf).filter(validDate))].sort();
+    if(selectedDate!=='all'&&!availableDates.includes(selectedDate))selectedDate='all';
+  }
 
   function sideRow(m,side){
     const home=side==='home',st=m&&m[`${side}Streaks`]||{},htft=st.htft||{},advanced=st.advanced||{};
@@ -167,7 +175,6 @@
   const fixtureKey=m=>m&&m.id!=null?`f${m.id}`:`${m&&m.home||''}|${m&&m.away||''}|${dateOf(m)}`;
   function learningDecision(m){const e=learningGuard.fixtures&&learningGuard.fixtures[fixtureKey(m)]||null;if(!e)return{state:'monitor',delta:0};const state=e.s==='b'?'block':e.s==='w'?'watch':e.s==='p'?'boost':'stable';return{state,delta:Number(e.d)||0};}
   const rankKey=()=>category==='attack'?`attack${polarity}`:category==='defence'?`defence${polarity}`:category;
-  const allProfiles=latestProfiles(fixturePool);
   const activeProfiles=()=>latestProfiles(selectedFixturePool());
 
   function setOptions(select,values,current='all'){
@@ -409,6 +416,7 @@
     const url=new URL(location.href);url.searchParams.set('mode',mode);history.replaceState(null,'',url);
   }
   function init(){
+    refreshMatchPools();
     populateDateFilter();refreshLeagueFilters();updateDateSummary();
     $('team-trend-chips').innerHTML=Object.entries(trends).map(([key,cfg])=>`<button data-trend="${key}">${esc(cfg.label)}</button>`).join('');
     const traitOptions=Object.entries(trends).map(([key,cfg])=>`<option value="${key}">${esc(cfg.label)}</option>`).join('');$('lab-home-trait').innerHTML=traitOptions;$('lab-away-trait').innerHTML=traitOptions;$('lab-home-trait').value='winless';$('lab-away-trait').value='nodraws';
@@ -431,6 +439,8 @@
     document.querySelectorAll('[data-auto-view]').forEach(b=>b.onclick=()=>{autoView=b.dataset.autoView;renderAutoPicks();});
     if($('team-auto-add-core'))$('team-auto-add-core').onclick=addCoreToSlip;
     window.addEventListener('p2u:auto-learning-loaded',()=>{if(autoView==='settled')renderAutoPicks();});
+    window.addEventListener('p2u:sportybet-merged',()=>{refreshMatchPools();populateDateFilter();refreshLeagueFilters();updateDateSummary();renderRankings();renderTrends();populateLabMatches();renderAutoPicks();});
+    window.addEventListener('p2u:fixtures-ready',()=>{refreshMatchPools();populateDateFilter();refreshLeagueFilters();updateDateSummary();renderRankings();renderTrends();populateLabMatches();renderAutoPicks();});
     renderRankings();renderTrends();populateLabMatches();renderAutoPicks();setMode(mode);
   }
   if(window.P2U_HEADLESS_AUTO_V271){window.P2UAutoHeadlessV271={modelVersion:AUTO_MODEL_VERSION,automaticSelections,autoFixturePool,selectedFixturePool,sideRow,dateOf,fixtureKey,dailyCoreRows};return;}

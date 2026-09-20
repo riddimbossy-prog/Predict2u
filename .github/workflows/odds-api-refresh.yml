@@ -47,8 +47,14 @@ jobs:
       - name: Compact generated match data
         run: node compact-generated-data.js
 
+      - name: Hydrate current fixtures from SportyBet if API data is stale
+        run: node hydrate-fixtures-from-sportybet.js
+
       - name: Rebuild compact public data bundle
         run: node build-public-data.js
+
+      - name: Refuse to publish an empty live window
+        run: node assert-matches-present.js
 
       - name: Save Odds API cache outside Git
         if: ${{ hashFiles('odds-api-cache.json') != '' }}
@@ -64,11 +70,18 @@ jobs:
           git config user.name "Predict2U Odds Bot"
           git config user.email "actions@users.noreply.github.com"
           git rm --cached -f --ignore-unmatch odds-api-cache.json 2>/dev/null || true
-          git add -f -- data.js current-data.js data-meta.json odds-api-coverage.json
+          git add -f -- data.js current-data.js data-meta.json fixtures.js odds-api-coverage.json
           if git diff --cached --quiet; then
             echo "Odds data already matches the repository."
             exit 0
           fi
           git commit -m "Refresh multi-book odds and HTFT signals"
           git pull --rebase -X theirs origin "${GITHUB_REF_NAME}"
+          node hydrate-fixtures-from-sportybet.js
+          node build-public-data.js
+          node assert-matches-present.js
+          git add -f -- data.js current-data.js data-meta.json fixtures.js odds-api-coverage.json
+          if ! git diff --cached --quiet; then
+            git commit --amend --no-edit
+          fi
           git push origin "HEAD:${GITHUB_REF_NAME}"

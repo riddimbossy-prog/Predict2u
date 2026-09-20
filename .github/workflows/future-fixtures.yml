@@ -292,6 +292,9 @@ jobs:
       - name: Compact generated match data
         run: node compact-generated-data.js
 
+      - name: Hydrate current fixtures from SportyBet if API data is stale
+        run: node hydrate-fixtures-from-sportybet.js
+
       - name: Build compact public data bundle
         run: node build-public-data.js
 
@@ -312,6 +315,7 @@ jobs:
             data.js \
             current-data.js \
             data-meta.json \
+            fixtures.js \
             all-games-discovery.json \
             week-fixture-report.json \
             fixture-coverage-report.json
@@ -354,10 +358,11 @@ jobs:
             fi
             node repair-generated-conflicts.js
             node compact-generated-data.js
+            node hydrate-fixtures-from-sportybet.js
             node build-public-data.js
             node assert-matches-present.js
             git rm --cached -f --ignore-unmatch api-cache.json 2>/dev/null || true
-            git add -f -- data.js current-data.js data-meta.json track-log.json 2>/dev/null || true
+            git add -f -- data.js current-data.js data-meta.json fixtures.js track-log.json 2>/dev/null || true
             if ! git diff --cached --quiet; then
               git commit --amend --no-edit
             fi

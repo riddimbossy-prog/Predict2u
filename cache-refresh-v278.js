@@ -1,7 +1,7 @@
-/* Predict2U v286 — client cache refresh for SportyBet odds overlay. */
+/* Predict2U v287 — client cache refresh for SportyBet fixture hydrate. */
 (function(){
   'use strict';
-  const KEY='p2u_cache_refresh_v286';
+  const KEY='p2u_cache_refresh_v287';
   try{if(localStorage.getItem(KEY)==='done')return;}catch(_){ }
   const mark=()=>{try{localStorage.setItem(KEY,'done');}catch(_){ }};
   const clear=async()=>{
@@ -18,11 +18,11 @@
       }
     }catch(_){ }
     mark();
-    window.dispatchEvent(new CustomEvent('p2u:cache-refreshed',{detail:{version:'v286'}}));
+    window.dispatchEvent(new CustomEvent('p2u:cache-refreshed',{detail:{version:'v287'}}));
     try{
       const url=new URL(location.href);
-      if(url.searchParams.get('refresh')!=='v286'){
-        url.searchParams.set('refresh','v286');
+      if(url.searchParams.get('refresh')!=='v287'){
+        url.searchParams.set('refresh','v287');
         location.replace(url.href);
       }
     }catch(_){location.reload();}

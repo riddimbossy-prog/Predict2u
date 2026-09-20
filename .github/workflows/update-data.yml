@@ -90,8 +90,14 @@ jobs:
       - name: Compact generated match data
         run: node compact-generated-data.js
 
+      - name: Hydrate current fixtures from SportyBet if API data is stale
+        run: node hydrate-fixtures-from-sportybet.js
+
       - name: Build compact public data bundle
         run: node build-public-data.js
+
+      - name: Refuse to publish an empty live window
+        run: node assert-matches-present.js
 
       - name: Commit updated data.js (if changed)
         run: |

@@ -10,9 +10,14 @@
  * Paid plans never emit this error, so paid keys keep the full DAYS_BACK/DAYS_FWD
  * window. Free keys must skip out-of-window dates instead of retrying them to
  * death and publishing an empty board.
+ *
+ * Permanent provider outages (suspended account, invalid key) must not be
+ * retried and must not empty the public date strip — callers fall back to
+ * SportyBet / the last good snapshot instead.
  */
 
 const PLAN_WINDOW_RE = /free plans do not have access to this date[,\s]*try from\s+(\d{4}-\d{2}-\d{2})\s+to\s+(\d{4}-\d{2}-\d{2})/i;
+const PERMANENT_PROVIDER_RE = /account is suspended|invalid api(?:\s|-)?key|ip (?:is )?banned|not subscribed|unsubscribed|this action is not allowed for your plan/i;
 
 function flattenErrors(value) {
   if (!value) return "";
@@ -31,6 +36,10 @@ function parsePlanWindow(message) {
 
 function isPlanWindowError(message) {
   return PLAN_WINDOW_RE.test(flattenErrors(message));
+}
+
+function isPermanentProviderError(message) {
+  return PERMANENT_PROVIDER_RE.test(flattenErrors(message));
 }
 
 function isIsoDate(value) {
@@ -68,6 +77,7 @@ module.exports = {
   flattenErrors,
   parsePlanWindow,
   isPlanWindowError,
+  isPermanentProviderError,
   isIsoDate,
   dateInWindow,
   clampDates,
