@@ -1,7 +1,7 @@
-/* Predict2U v287 — client cache refresh for SportyBet fixture hydrate. */
+/* Predict2U v288 — client cache refresh after profile-backed picks. */
 (function(){
   'use strict';
-  const KEY='p2u_cache_refresh_v287';
+  const KEY='p2u_cache_refresh_v288';
   try{if(localStorage.getItem(KEY)==='done')return;}catch(_){ }
   const mark=()=>{try{localStorage.setItem(KEY,'done');}catch(_){ }};
   const clear=async()=>{
@@ -18,11 +18,11 @@
       }
     }catch(_){ }
     mark();
-    window.dispatchEvent(new CustomEvent('p2u:cache-refreshed',{detail:{version:'v287'}}));
+    window.dispatchEvent(new CustomEvent('p2u:cache-refreshed',{detail:{version:'v288'}}));
     try{
       const url=new URL(location.href);
-      if(url.searchParams.get('refresh')!=='v287'){
-        url.searchParams.set('refresh','v287');
+      if(url.searchParams.get('refresh')!=='v288'){
+        url.searchParams.set('refresh','v288');
         location.replace(url.href);
       }
     }catch(_){location.reload();}
