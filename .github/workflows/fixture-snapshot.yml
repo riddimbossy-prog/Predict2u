@@ -80,6 +80,7 @@ jobs:
           git commit -m "Refresh seven-day fixture snapshot"
 
           for attempt in 1 2 3; do
+            git checkout -- .
             git pull --rebase origin "${GITHUB_REF_NAME}"
             node hydrate-fixtures-from-sportybet.js
             node build-public-data.js
