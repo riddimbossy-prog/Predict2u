@@ -50,6 +50,24 @@ function run(now=new Date()){
     }
   }
   let rows=sourceMatches.filter(m=>inWindow(m,from,to));
+  if(!rows.some(m=>dateOf(m)>=today)){
+    const fixtureRows=readFixtures().filter(m=>inWindow(m,from,to)&&dateOf(m)>=today);
+    if(fixtureRows.length){
+      const seen=new Set(rows.map(m=>`${dateOf(m)}|${String(m.home||'').toLowerCase()}|${String(m.away||'').toLowerCase()}`));
+      let added=0;
+      for(const row of fixtureRows){
+        const key=`${dateOf(row)}|${String(row.home||'').toLowerCase()}|${String(row.away||'').toLowerCase()}`;
+        if(seen.has(key))continue;
+        rows.push(row);
+        seen.add(key);
+        added++;
+      }
+      if(added){
+        hydratedFromFixtures=true;
+        console.warn(`Public bundle pulled ${added} current fixture(s) from fixtures.js.`);
+      }
+    }
+  }
   const sporty=readSportybet();
   const sportyCurrent=sporty.filter(m=>inWindow(m,from,to));
   if((!rows.length||!rows.some(m=>dateOf(m)>=today))&&sportyCurrent.length){

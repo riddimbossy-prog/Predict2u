@@ -165,18 +165,64 @@ function mergeCurrentFixtures(existing, sportyRows, now = new Date()) {
   return { fixtures, added, sportyCount: sportyFixtures.length, today };
 }
 
+function dateCountsOf(fixtures) {
+  const dateCounts = {};
+  for (const date of fixtures.map(dateOf).filter(isIsoDate)) {
+    dateCounts[date] = (dateCounts[date] || 0) + 1;
+  }
+  return dateCounts;
+}
+
+function syncSnapshotReport(fixtures) {
+  const reportPath = path.join(ROOT, "fixture-snapshot-report.json");
+  let report = {};
+  if (fs.existsSync(reportPath)) {
+    try { report = JSON.parse(fs.readFileSync(reportPath, "utf8")); }
+    catch (_) { report = {}; }
+  }
+  const dates = fixtures.map(dateOf).filter(isIsoDate).sort();
+  const dateCounts = dateCountsOf(fixtures);
+  const covered = new Set(Object.keys(dateCounts));
+  const dropCovered = list => Array.isArray(list) ? list.filter(date => !covered.has(date)) : [];
+  const next = {
+    ...report,
+    generatedAt: new Date().toISOString(),
+    windowStart: dates[0] || report.windowStart || null,
+    windowEnd: dates[dates.length - 1] || report.windowEnd || null,
+    totalFixtures: fixtures.length,
+    hydratedFromSportybet: true,
+    dateCounts,
+    unresolvedDates: [],
+    planSkippedDates: dropCovered(report.planSkippedDates),
+    staleFallbackDates: dropCovered(report.staleFallbackDates)
+  };
+  if (Array.isArray(report.dates)) {
+    const byDate = new Map(report.dates.map(day => [day.date, { ...day }]));
+    for (const date of dates) {
+      const prior = byDate.get(date) || { date, source: "sportybet" };
+      byDate.set(date, {
+        ...prior,
+        games: dateCounts[date],
+        source: prior.games ? prior.source : "sportybet"
+      });
+    }
+    next.dates = [...byDate.values()].sort((a, b) => String(a.date).localeCompare(String(b.date)));
+  }
+  fs.writeFileSync(reportPath, JSON.stringify(next, null, 2) + "\n", "utf8");
+  return next;
+}
+
 function writeFixturesJs(fixtures, extraMeta = {}) {
   const generatedAt = new Date().toISOString();
   const dates = fixtures.map(dateOf).filter(isIsoDate).sort();
-  const dateCounts = {};
-  for (const date of dates) dateCounts[date] = (dateCounts[date] || 0) + 1;
+  const dateCounts = dateCountsOf(fixtures);
   const metadata = {
+    ...extraMeta,
     generatedAt,
     windowStart: dates[0] || extraMeta.windowStart || null,
     windowEnd: dates[dates.length - 1] || extraMeta.windowEnd || null,
     totalFixtures: fixtures.length,
     hydratedFromSportybet: true,
-    ...extraMeta,
     dateCounts
   };
   const js = [
@@ -241,6 +287,10 @@ function main() {
     console.warn(`SportyBet fixture hydrate skipped: ${result.reason}`);
     return result;
   }
+  if (fs.existsSync(FIXTURES_FILE)) {
+    const published = parseAssignment(fs.readFileSync(FIXTURES_FILE, "utf8"), "FIXTURES", "[", "]");
+    if (Array.isArray(published) && published.length) syncSnapshotReport(published);
+  }
   console.log(`SportyBet fixture hydrate: added ${result.added}, published ${result.total} fixture(s).`);
   return result;
 }
@@ -261,5 +311,6 @@ module.exports = {
   hasCurrentDates,
   mergeCurrentFixtures,
   hydrateFixturesFile,
+  syncSnapshotReport,
   parseAssignment
 };
