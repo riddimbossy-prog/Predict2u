@@ -1,8 +1,8 @@
 {
-  "generatedAt": "2026-10-12T15:11:47.641Z",
-  "windowStart": "2026-10-12",
+  "generatedAt": "2026-10-13T00:32:28.063Z",
+  "windowStart": "2026-10-13",
   "windowEnd": "2026-10-20",
-  "totalFixtures": 1129,
+  "totalFixtures": 1123,
   "daysRequested": 7,
   "requestGapMs": 13000,
   "staleFallbackDates": [],
@@ -10,26 +10,20 @@
   "planWindow": null,
   "unresolvedDates": [],
   "dateCounts": {
-    "2026-10-12": 115,
-    "2026-10-13": 225,
-    "2026-10-14": 77,
-    "2026-10-15": 66,
-    "2026-10-16": 87,
-    "2026-10-17": 351,
-    "2026-10-18": 181,
-    "2026-10-19": 25,
-    "2026-10-20": 2
+    "2026-10-13": 252,
+    "2026-10-14": 90,
+    "2026-10-15": 82,
+    "2026-10-16": 93,
+    "2026-10-17": 370,
+    "2026-10-18": 197,
+    "2026-10-19": 32,
+    "2026-10-20": 7
   },
   "apiFailedDates": [
     {
-      "date": "2026-10-12",
-      "recoveredWithPreviousSnapshot": false,
-      "error": "API error for /fixtures?date=2026-10-12&timezone=UTC: Your account is suspended, check on https://dashboard.api-football.com."
-    },
-    {
       "date": "2026-10-13",
       "recoveredWithPreviousSnapshot": false,
-      "error": "provider-outage"
+      "error": "API error for /fixtures?date=2026-10-13&timezone=UTC: Your account is suspended, check on https://dashboard.api-football.com."
     },
     {
       "date": "2026-10-14",
@@ -53,62 +47,62 @@
     },
     {
       "date": "2026-10-18",
+      "recoveredWithPreviousSnapshot": false,
+      "error": "provider-outage"
+    },
+    {
+      "date": "2026-10-19",
       "recoveredWithPreviousSnapshot": false,
       "error": "provider-outage"
     }
   ],
   "dates": [
     {
-      "date": "2026-10-12",
-      "games": 115,
-      "source": "sportybet"
-    },
-    {
       "date": "2026-10-13",
-      "games": 225,
+      "games": 252,
       "source": "sportybet"
     },
     {
       "date": "2026-10-14",
-      "games": 77,
+      "games": 90,
       "source": "sportybet"
     },
     {
       "date": "2026-10-15",
-      "games": 66,
+      "games": 82,
       "source": "sportybet"
     },
     {
       "date": "2026-10-16",
-      "games": 87,
+      "games": 93,
       "source": "sportybet"
     },
     {
       "date": "2026-10-17",
-      "games": 351,
+      "games": 370,
       "source": "sportybet"
     },
     {
       "date": "2026-10-18",
-      "games": 181,
+      "games": 197,
       "source": "sportybet"
     },
     {
       "date": "2026-10-19",
-      "source": "sportybet",
-      "games": 25
+      "games": 32,
+      "source": "sportybet"
     },
     {
       "date": "2026-10-20",
       "source": "sportybet",
-      "games": 2
+      "games": 7
     }
   ],
   "leagues": [
     {
       "leagueId": null,
       "league": "Premier League",
-      "games": 53
+      "games": 59
     },
     {
       "leagueId": null,
@@ -133,17 +127,17 @@
     {
       "leagueId": null,
       "league": "Ligue 2",
-      "games": 21
+      "games": 24
     },
     {
       "leagueId": null,
       "league": "Division 2",
-      "games": 19
+      "games": 18
     },
     {
       "leagueId": null,
       "league": "Primera Nacional",
-      "games": 19
+      "games": 18
     },
     {
       "leagueId": null,
@@ -197,18 +191,8 @@
     },
     {
       "leagueId": null,
-      "league": "Liga 2",
-      "games": 14
-    },
-    {
-      "leagueId": null,
       "league": "1st Division",
-      "games": 13
-    },
-    {
-      "leagueId": null,
-      "league": "AFC Champions League Elite",
-      "games": 13
+      "games": 14
     },
     {
       "leagueId": null,
@@ -217,17 +201,7 @@
     },
     {
       "leagueId": null,
-      "league": "Brasileiro Serie A",
-      "games": 12
-    },
-    {
-      "leagueId": null,
       "league": "FIFA World Cup, Women, Qualification, UEFA",
-      "games": 12
-    },
-    {
-      "leagueId": null,
-      "league": "LALIGA HYPERMOTION",
       "games": 12
     },
     {
@@ -242,12 +216,37 @@
     },
     {
       "leagueId": null,
-      "league": "Primera C",
+      "league": "1. Lig",
       "games": 11
     },
     {
       "leagueId": null,
-      "league": "1. Lig",
+      "league": "LALIGA HYPERMOTION",
+      "games": 11
+    },
+    {
+      "leagueId": null,
+      "league": "Liga 2",
+      "games": 11
+    },
+    {
+      "leagueId": null,
+      "league": "Liga DIMAYOR",
+      "games": 11
+    },
+    {
+      "leagueId": null,
+      "league": "AFC Champions League Elite",
+      "games": 10
+    },
+    {
+      "leagueId": null,
+      "league": "Brasileiro Serie A",
+      "games": 10
+    },
+    {
+      "leagueId": null,
+      "league": "Brasileiro Serie B",
       "games": 10
     },
     {
@@ -257,7 +256,7 @@
     },
     {
       "leagueId": null,
-      "league": "Ekstraklasa",
+      "league": "Eerste Divisie",
       "games": 10
     },
     {
@@ -302,12 +301,7 @@
     },
     {
       "leagueId": null,
-      "league": "Allsvenskan",
-      "games": 9
-    },
-    {
-      "leagueId": null,
-      "league": "Eliteserien",
+      "league": "Ekstraklasa",
       "games": 9
     },
     {
@@ -323,6 +317,11 @@
     {
       "leagueId": null,
       "league": "Liga de Expansion MX",
+      "games": 9
+    },
+    {
+      "leagueId": null,
+      "league": "Liga MX",
       "games": 9
     },
     {
@@ -347,6 +346,11 @@
     },
     {
       "leagueId": null,
+      "league": "UEFA Champions League SRL",
+      "games": 9
+    },
+    {
+      "leagueId": null,
       "league": "UEFA Youth League",
       "games": 9
     },
@@ -357,7 +361,22 @@
     },
     {
       "leagueId": null,
+      "league": "Allsvenskan",
+      "games": 8
+    },
+    {
+      "leagueId": null,
       "league": "Chinese Super League",
+      "games": 8
+    },
+    {
+      "leagueId": null,
+      "league": "Division Profesional",
+      "games": 8
+    },
+    {
+      "leagueId": null,
+      "league": "Eliteserien",
       "games": 8
     },
     {
@@ -367,7 +386,7 @@
     },
     {
       "leagueId": null,
-      "league": "Liga MX",
+      "league": "LigaPro Primera A",
       "games": 8
     },
     {
@@ -387,6 +406,11 @@
     },
     {
       "leagueId": null,
+      "league": "Superettan",
+      "games": 8
+    },
+    {
+      "leagueId": null,
       "league": "U23 Liga Next Gen",
       "games": 8
     },
@@ -402,27 +426,22 @@
     },
     {
       "leagueId": null,
-      "league": "Eerste Divisie",
+      "league": "CAF Olympic Qualification, Women",
       "games": 7
     },
     {
       "leagueId": null,
-      "league": "LigaPro Primera A",
+      "league": "Int. Friendly Games W",
+      "games": 7
+    },
+    {
+      "leagueId": null,
+      "league": "Premier Division",
       "games": 7
     },
     {
       "leagueId": null,
       "league": "Super League Women",
-      "games": 7
-    },
-    {
-      "leagueId": null,
-      "league": "Superettan",
-      "games": 7
-    },
-    {
-      "leagueId": null,
-      "league": "Veikkausliiga",
       "games": 7
     },
     {
@@ -437,12 +456,12 @@
     },
     {
       "leagueId": null,
-      "league": "CAF Olympic Qualification, Women",
+      "league": "AFC Champions League Two",
       "games": 6
     },
     {
       "leagueId": null,
-      "league": "Canadian Premier League",
+      "league": "Division de Honor",
       "games": 6
     },
     {
@@ -452,22 +471,12 @@
     },
     {
       "leagueId": null,
-      "league": "Ettan",
-      "games": 6
-    },
-    {
-      "leagueId": null,
-      "league": "II Liga",
-      "games": 6
-    },
-    {
-      "leagueId": null,
-      "league": "Isthmian League, Pr. Div",
-      "games": 6
-    },
-    {
-      "leagueId": null,
       "league": "K-League 1",
+      "games": 6
+    },
+    {
+      "leagueId": null,
+      "league": "Liga Nacional",
       "games": 6
     },
     {
@@ -477,12 +486,22 @@
     },
     {
       "leagueId": null,
-      "league": "Premier Division",
+      "league": "Premium Liiga",
       "games": 6
     },
     {
       "leagueId": null,
-      "league": "Premium Liiga",
+      "league": "Super League 2",
+      "games": 6
+    },
+    {
+      "leagueId": null,
+      "league": "Torneo DIMAYOR",
+      "games": 6
+    },
+    {
+      "leagueId": null,
+      "league": "Veikkausliiga",
       "games": 6
     },
     {
@@ -502,12 +521,7 @@
     },
     {
       "leagueId": null,
-      "league": "Brasileiro Serie B",
-      "games": 5
-    },
-    {
-      "leagueId": null,
-      "league": "Division 1",
+      "league": "Ettan",
       "games": 5
     },
     {
@@ -522,6 +536,16 @@
     },
     {
       "leagueId": null,
+      "league": "II Liga",
+      "games": 5
+    },
+    {
+      "leagueId": null,
+      "league": "Isthmian League, Pr. Div",
+      "games": 5
+    },
+    {
+      "leagueId": null,
       "league": "League 1",
       "games": 5
     },
@@ -532,12 +556,7 @@
     },
     {
       "leagueId": null,
-      "league": "Liga DIMAYOR",
-      "games": 5
-    },
-    {
-      "leagueId": null,
-      "league": "Primera B",
+      "league": "Primera LPF, Reserves",
       "games": 5
     },
     {
@@ -552,16 +571,6 @@
     },
     {
       "leagueId": null,
-      "league": "Tercera Division, Reserves",
-      "games": 5
-    },
-    {
-      "leagueId": null,
-      "league": "U21 Elite League",
-      "games": 5
-    },
-    {
-      "leagueId": null,
       "league": "Ykkosliiga",
       "games": 5
     },
@@ -572,7 +581,7 @@
     },
     {
       "leagueId": null,
-      "league": "Botola Pro D1",
+      "league": "Canadian Premier League",
       "games": 4
     },
     {
@@ -582,12 +591,12 @@
     },
     {
       "leagueId": null,
-      "league": "Int. Friendly Games W",
+      "league": "Division 1",
       "games": 4
     },
     {
       "leagueId": null,
-      "league": "Primera LPF, Reserves",
+      "league": "Regionalliga Bavaria",
       "games": 4
     },
     {
@@ -597,17 +606,22 @@
     },
     {
       "leagueId": null,
-      "league": "3. Division, Group 2",
+      "league": "U21 Elite League",
+      "games": 4
+    },
+    {
+      "leagueId": null,
+      "league": "Botola Pro D1",
       "games": 3
     },
     {
       "leagueId": null,
-      "league": "3. Division, Group 6",
+      "league": "Copa Uruguay",
       "games": 3
     },
     {
       "leagueId": null,
-      "league": "Bangalore Super Division",
+      "league": "Esiliiga",
       "games": 3
     },
     {
@@ -617,22 +631,7 @@
     },
     {
       "leagueId": null,
-      "league": "National League",
-      "games": 3
-    },
-    {
-      "leagueId": null,
-      "league": "Premier League Cup",
-      "games": 3
-    },
-    {
-      "leagueId": null,
       "league": "Pro League",
-      "games": 3
-    },
-    {
-      "leagueId": null,
-      "league": "Serie C, Group C",
       "games": 3
     },
     {
@@ -642,7 +641,7 @@
     },
     {
       "leagueId": null,
-      "league": "State Cup",
+      "league": "Tercera Division",
       "games": 3
     },
     {
@@ -652,12 +651,12 @@
     },
     {
       "leagueId": null,
-      "league": "U21 Professional Development League",
+      "league": "U19 European Championship, Women, Qualification",
       "games": 3
     },
     {
       "leagueId": null,
-      "league": "U23 Friendly Games, Women",
+      "league": "U21 Professional Development League",
       "games": 3
     },
     {
@@ -672,7 +671,7 @@
     },
     {
       "leagueId": null,
-      "league": "AFC Champions League Two",
+      "league": "Bangalore Super Division",
       "games": 2
     },
     {
@@ -687,52 +686,32 @@
     },
     {
       "leagueId": null,
+      "league": "Copa DIMAYOR",
+      "games": 2
+    },
+    {
+      "leagueId": null,
       "league": "County Antrim Shield",
       "games": 2
     },
     {
       "leagueId": null,
-      "league": "Division de Honor",
+      "league": "Federation Cup",
       "games": 2
     },
     {
       "leagueId": null,
-      "league": "Division Profesional",
+      "league": "Mizoram Premier League",
       "games": 2
     },
     {
       "leagueId": null,
-      "league": "NB II",
-      "games": 2
-    },
-    {
-      "leagueId": null,
-      "league": "Primera Division Reserve, Clausura",
-      "games": 2
-    },
-    {
-      "leagueId": null,
-      "league": "Primera Federacion",
+      "league": "Tercera Division, Reserves",
       "games": 2
     },
     {
       "leagueId": null,
       "league": "TOPLYGA",
-      "games": 2
-    },
-    {
-      "leagueId": null,
-      "league": "Torneo DIMAYOR",
-      "games": 2
-    },
-    {
-      "leagueId": null,
-      "league": "U20 Paulista",
-      "games": 2
-    },
-    {
-      "leagueId": null,
-      "league": "UEFA Champions League SRL",
       "games": 2
     },
     {
@@ -747,27 +726,12 @@
     },
     {
       "leagueId": null,
-      "league": "3. Division, Group 4",
-      "games": 1
-    },
-    {
-      "leagueId": null,
-      "league": "Carioca, Serie B2",
-      "games": 1
-    },
-    {
-      "leagueId": null,
       "league": "China League 2",
       "games": 1
     },
     {
       "leagueId": null,
-      "league": "Copa do Brasil, Women",
-      "games": 1
-    },
-    {
-      "leagueId": null,
-      "league": "Druga NL",
+      "league": "CONCACAF Caribbean Cup",
       "games": 1
     },
     {
@@ -777,12 +741,12 @@
     },
     {
       "leagueId": null,
-      "league": "Esiliiga",
+      "league": "Girabola",
       "games": 1
     },
     {
       "leagueId": null,
-      "league": "Girabola",
+      "league": "League Cup, National",
       "games": 1
     },
     {
@@ -797,17 +761,7 @@
     },
     {
       "leagueId": null,
-      "league": "Liga Portugal 2",
-      "games": 1
-    },
-    {
-      "leagueId": null,
       "league": "Liga Premier Serie A",
-      "games": 1
-    },
-    {
-      "leagueId": null,
-      "league": "Mizoram Premier League",
       "games": 1
     },
     {
@@ -822,7 +776,7 @@
     },
     {
       "leagueId": null,
-      "league": "Parva Liga",
+      "league": "NB II",
       "games": 1
     },
     {
@@ -847,37 +801,32 @@
     },
     {
       "leagueId": null,
-      "league": "Regionalliga North",
-      "games": 1
-    },
-    {
-      "leagueId": null,
       "league": "Serie C, Group A",
       "games": 1
     },
     {
       "leagueId": null,
-      "league": "Serie C, Group B",
+      "league": "Serie C, Group C",
       "games": 1
     },
     {
       "leagueId": null,
-      "league": "Super League 2",
-      "games": 1
-    },
-    {
-      "leagueId": null,
-      "league": "Tercera Division",
-      "games": 1
-    },
-    {
-      "leagueId": null,
-      "league": "U19 European Championship, Women, Qualification",
+      "league": "State Cup",
       "games": 1
     },
     {
       "leagueId": null,
       "league": "U19 League",
+      "games": 1
+    },
+    {
+      "leagueId": null,
+      "league": "U19 Premier League",
+      "games": 1
+    },
+    {
+      "leagueId": null,
+      "league": "U20 Pernambucano",
       "games": 1
     },
     {
@@ -888,11 +837,6 @@
     {
       "leagueId": null,
       "league": "Vtora Liga",
-      "games": 1
-    },
-    {
-      "leagueId": null,
-      "league": "Ykkonen",
       "games": 1
     }
   ],
